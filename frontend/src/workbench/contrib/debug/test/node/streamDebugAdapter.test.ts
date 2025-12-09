@@ -6,12 +6,12 @@
 import assert from 'assert';
 import * as crypto from 'crypto';
 import * as net from 'net';
-import * as platform from '../../../../../base/common/platform.js';
+import * as platform from '../../../../../base/common/platform.ts';
 import { tmpdir } from 'os';
-import { join } from '../../../../../base/common/path.js';
-import * as ports from '../../../../../base/node/ports.js';
-import { SocketDebugAdapter, NamedPipeDebugAdapter, StreamDebugAdapter } from '../../node/debugAdapter.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { join } from '../../../../../base/common/path.ts';
+import * as ports from '../../../../../base/node/ports.ts';
+import { SocketDebugAdapter, NamedPipeDebugAdapter, StreamDebugAdapter } from '../../node/debugAdapter.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 
 function sendInitializeRequest(debugAdapter: StreamDebugAdapter): Promise<DebugProtocol.Response> {

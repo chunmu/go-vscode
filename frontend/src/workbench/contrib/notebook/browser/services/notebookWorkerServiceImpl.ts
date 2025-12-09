@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore, dispose, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IWebWorkerClient, Proxied } from '../../../../../base/common/worker/webWorker.js';
-import { WebWorkerDescriptor } from '../../../../../platform/webWorker/browser/webWorkerDescriptor.js';
-import { IWebWorkerService } from '../../../../../platform/webWorker/browser/webWorkerService.js';
-import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.js';
-import { CellUri, IMainCellDto, INotebookDiffResult, NotebookCellsChangeType, NotebookRawContentEventDto } from '../../common/notebookCommon.js';
-import { INotebookService } from '../../common/notebookService.js';
-import { NotebookWorker } from '../../common/services/notebookWebWorker.js';
-import { INotebookEditorWorkerService } from '../../common/services/notebookWorkerService.js';
-import { IModelService } from '../../../../../editor/common/services/model.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { TextModel } from '../../../../../editor/common/model/textModel.js';
-import { FileAccess, Schemas } from '../../../../../base/common/network.js';
-import { isEqual } from '../../../../../base/common/resources.js';
+import { Disposable, DisposableStore, dispose, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IWebWorkerClient, Proxied } from '../../../../../base/common/worker/webWorker.ts';
+import { WebWorkerDescriptor } from '../../../../../platform/webWorker/browser/webWorkerDescriptor.ts';
+import { IWebWorkerService } from '../../../../../platform/webWorker/browser/webWorkerService.ts';
+import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.ts';
+import { CellUri, IMainCellDto, INotebookDiffResult, NotebookCellsChangeType, NotebookRawContentEventDto } from '../../common/notebookCommon.ts';
+import { INotebookService } from '../../common/notebookService.ts';
+import { NotebookWorker } from '../../common/services/notebookWebWorker.ts';
+import { INotebookEditorWorkerService } from '../../common/services/notebookWorkerService.ts';
+import { IModelService } from '../../../../../editor/common/services/model.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { TextModel } from '../../../../../editor/common/model/textModel.ts';
+import { FileAccess, Schemas } from '../../../../../base/common/network.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
 
 export class NotebookEditorWorkerServiceImpl extends Disposable implements INotebookEditorWorkerService {
 	declare readonly _serviceBrand: undefined;

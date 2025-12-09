@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import { URI } from '../../../base/common/uri.js';
-import * as pfs from '../../../base/node/pfs.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IExtHostConfiguration } from '../common/extHostConfiguration.js';
-import { IExtHostInitDataService } from '../common/extHostInitDataService.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
-import { ExtHostSearch, reviveQuery } from '../common/extHostSearch.js';
-import { IURITransformerService } from '../common/extHostUriTransformerService.js';
-import { IFileQuery, IRawFileQuery, ISearchCompleteStats, ISerializedSearchProgressItem, isSerializedFileMatch, ITextQuery } from '../../services/search/common/search.js';
-import { TextSearchManager } from '../../services/search/common/textSearchManager.js';
-import { SearchService } from '../../services/search/node/rawSearchService.js';
-import { RipgrepSearchProvider } from '../../services/search/node/ripgrepSearchProvider.js';
-import { OutputChannel } from '../../services/search/node/ripgrepSearchUtils.js';
-import { NativeTextSearchManager } from '../../services/search/node/textSearchManager.js';
+import { DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { URI } from '../../../base/common/uri.ts';
+import * as pfs from '../../../base/node/pfs.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IExtHostConfiguration } from '../common/extHostConfiguration.ts';
+import { IExtHostInitDataService } from '../common/extHostInitDataService.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
+import { ExtHostSearch, reviveQuery } from '../common/extHostSearch.ts';
+import { IURITransformerService } from '../common/extHostUriTransformerService.ts';
+import { IFileQuery, IRawFileQuery, ISearchCompleteStats, ISerializedSearchProgressItem, isSerializedFileMatch, ITextQuery } from '../../services/search/common/search.ts';
+import { TextSearchManager } from '../../services/search/common/textSearchManager.ts';
+import { SearchService } from '../../services/search/node/rawSearchService.ts';
+import { RipgrepSearchProvider } from '../../services/search/node/ripgrepSearchProvider.ts';
+import { OutputChannel } from '../../services/search/node/ripgrepSearchUtils.ts';
+import { NativeTextSearchManager } from '../../services/search/node/textSearchManager.ts';
 import type * as vscode from 'vscode';
 
 export class NativeExtHostSearch extends ExtHostSearch implements IDisposable {

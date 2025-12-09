@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../base/common/codicons.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { alert } from '../../../../base/browser/ui/aria/aria.js';
-import { AuxiliaryBarMaximizedContext, AuxiliaryBarVisibleContext, IsAuxiliaryWindowContext } from '../../../common/contextkeys.js';
-import { ViewContainerLocation, ViewContainerLocationToString } from '../../../common/views.js';
-import { ActivityBarPosition, IWorkbenchLayoutService, LayoutSettings, Parts } from '../../../services/layout/browser/layoutService.js';
-import { IPaneCompositePartService } from '../../../services/panecomposite/browser/panecomposite.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { SwitchCompositeViewAction } from '../compositeBarActions.js';
-import { closeIcon as panelCloseIcon } from '../panel/panelActions.js';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { alert } from '../../../../base/browser/ui/aria/aria.ts';
+import { AuxiliaryBarMaximizedContext, AuxiliaryBarVisibleContext, IsAuxiliaryWindowContext } from '../../../common/contextkeys.ts';
+import { ViewContainerLocation, ViewContainerLocationToString } from '../../../common/views.ts';
+import { ActivityBarPosition, IWorkbenchLayoutService, LayoutSettings, Parts } from '../../../services/layout/browser/layoutService.ts';
+import { IPaneCompositePartService } from '../../../services/panecomposite/browser/panecomposite.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { SwitchCompositeViewAction } from '../compositeBarActions.ts';
+import { closeIcon as panelCloseIcon } from '../panel/panelActions.ts';
 
 const maximizeIcon = registerIcon('auxiliarybar-maximize', Codicon.screenFull, localize('maximizeIcon', 'Icon to maximize the secondary side bar.'));
 const closeIcon = registerIcon('auxiliarybar-close', panelCloseIcon, localize('closeIcon', 'Icon to close the secondary side bar.'));

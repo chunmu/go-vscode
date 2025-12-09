@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { fromNow } from '../../../../../base/common/date.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { EditorInput } from '../../../../common/editor/editorInput.js';
-import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IChatService } from '../../common/chatService.js';
-import { IChatSessionItem, IChatSessionItemProvider, localChatSessionType } from '../../common/chatSessionsService.js';
-import { IChatWidgetService } from '../chat.js';
-import { ChatEditorInput } from '../chatEditorInput.js';
+import { fromNow } from '../../../../../base/common/date.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { EditorInput } from '../../../../common/editor/editorInput.ts';
+import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { IChatSessionItem, IChatSessionItemProvider, localChatSessionType } from '../../common/chatSessionsService.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { ChatEditorInput } from '../chatEditorInput.ts';
 
 
 export const NEW_CHAT_SESSION_ACTION_ID = 'workbench.action.chat.openNewSessionEditor';

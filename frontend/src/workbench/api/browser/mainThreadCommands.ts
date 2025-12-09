@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableMap, IDisposable } from '../../../base/common/lifecycle.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { CommandsRegistry, ICommandMetadata, ICommandService } from '../../../platform/commands/common/commands.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { Dto, SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostCommandsShape, ExtHostContext, MainContext, MainThreadCommandsShape } from '../common/extHost.protocol.js';
-import { isString } from '../../../base/common/types.js';
+import { DisposableMap, IDisposable } from '../../../base/common/lifecycle.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { CommandsRegistry, ICommandMetadata, ICommandService } from '../../../platform/commands/common/commands.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { Dto, SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostCommandsShape, ExtHostContext, MainContext, MainThreadCommandsShape } from '../common/extHost.protocol.ts';
+import { isString } from '../../../base/common/types.ts';
 
 
 @extHostNamedCustomer(MainContext.MainThreadCommands)

@@ -6,8 +6,8 @@
 /* eslint-disable local/code-no-native-private */
 
 import type * as vscode from 'vscode';
-import { MarkdownString as BaseMarkdownString, MarkdownStringTrustedOptions } from '../../../../base/common/htmlContent.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
+import { MarkdownString as BaseMarkdownString, MarkdownStringTrustedOptions } from '../../../../base/common/htmlContent.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
 
 @es5ClassCompat
 export class MarkdownString implements vscode.MarkdownString {

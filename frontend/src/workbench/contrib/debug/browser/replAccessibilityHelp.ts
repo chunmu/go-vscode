@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ServicesAccessor } from '../../../../editor/browser/editorExtensions.js';
-import { AccessibleViewProviderId, AccessibleViewType, IAccessibleViewContentProvider } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { getReplView, Repl } from './repl.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { localize } from '../../../../nls.js';
+import { ServicesAccessor } from '../../../../editor/browser/editorExtensions.ts';
+import { AccessibleViewProviderId, AccessibleViewType, IAccessibleViewContentProvider } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { getReplView, Repl } from './repl.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { localize } from '../../../../nls.ts';
 
 export class ReplAccessibilityHelp implements IAccessibleViewImplementation {
 	priority = 120;

@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { localize } from '../../../nls.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { raceCancellationError } from '../../../base/common/async.js';
-import { IEditSessionIdentityCreateParticipant, IEditSessionIdentityService } from '../../../platform/workspace/common/editSessions.js';
-import { ExtHostContext, ExtHostWorkspaceShape } from '../common/extHost.protocol.js';
-import { WorkspaceFolder } from '../../../platform/workspace/common/workspace.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { localize } from '../../../nls.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { raceCancellationError } from '../../../base/common/async.ts';
+import { IEditSessionIdentityCreateParticipant, IEditSessionIdentityService } from '../../../platform/workspace/common/editSessions.ts';
+import { ExtHostContext, ExtHostWorkspaceShape } from '../common/extHost.protocol.ts';
+import { WorkspaceFolder } from '../../../platform/workspace/common/workspace.ts';
 
 class ExtHostEditSessionIdentityCreateParticipant implements IEditSessionIdentityCreateParticipant {
 

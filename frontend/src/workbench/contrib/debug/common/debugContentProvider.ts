@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI as uri } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { getMimeTypes } from '../../../../editor/common/services/languagesAssociations.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { ITextModelService, ITextModelContentProvider } from '../../../../editor/common/services/resolverService.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { DEBUG_SCHEME, IDebugService, IDebugSession } from './debug.js';
-import { Source } from './debugSource.js';
-import { IEditorWorkerService } from '../../../../editor/common/services/editorWorker.js';
-import { EditOperation } from '../../../../editor/common/core/editOperation.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { CancellationTokenSource } from '../../../../base/common/cancellation.js';
-import { PLAINTEXT_LANGUAGE_ID } from '../../../../editor/common/languages/modesRegistry.js';
-import { ErrorNoTelemetry } from '../../../../base/common/errors.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
+import { URI as uri } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { getMimeTypes } from '../../../../editor/common/services/languagesAssociations.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { ITextModelService, ITextModelContentProvider } from '../../../../editor/common/services/resolverService.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { DEBUG_SCHEME, IDebugService, IDebugSession } from './debug.ts';
+import { Source } from './debugSource.ts';
+import { IEditorWorkerService } from '../../../../editor/common/services/editorWorker.ts';
+import { EditOperation } from '../../../../editor/common/core/editOperation.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { CancellationTokenSource } from '../../../../base/common/cancellation.ts';
+import { PLAINTEXT_LANGUAGE_ID } from '../../../../editor/common/languages/modesRegistry.ts';
+import { ErrorNoTelemetry } from '../../../../base/common/errors.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
 
 /**
  * Debug URI format

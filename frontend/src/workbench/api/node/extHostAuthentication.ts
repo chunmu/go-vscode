@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../nls.js';
+import * as nls from '../../../nls.ts';
 import type * as vscode from 'vscode';
 import { URL } from 'url';
-import { ExtHostAuthentication, DynamicAuthProvider, IExtHostAuthentication } from '../common/extHostAuthentication.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
-import { IExtHostInitDataService } from '../common/extHostInitDataService.js';
-import { IExtHostWindow } from '../common/extHostWindow.js';
-import { IExtHostUrlsService } from '../common/extHostUrls.js';
-import { ILoggerService, ILogService } from '../../../platform/log/common/log.js';
-import { MainThreadAuthenticationShape } from '../common/extHost.protocol.js';
-import { IAuthorizationServerMetadata, IAuthorizationProtectedResourceMetadata, IAuthorizationTokenResponse, IAuthorizationDeviceResponse, isAuthorizationDeviceResponse, isAuthorizationTokenResponse, IAuthorizationDeviceTokenErrorResponse, AuthorizationErrorType, AuthorizationDeviceCodeErrorType } from '../../../base/common/oauth.js';
-import { Emitter } from '../../../base/common/event.js';
-import { raceCancellationError } from '../../../base/common/async.js';
-import { IExtHostProgress } from '../common/extHostProgress.js';
-import { IProgressStep } from '../../../platform/progress/common/progress.js';
-import { CancellationError, isCancellationError } from '../../../base/common/errors.js';
-import { URI } from '../../../base/common/uri.js';
-import { LoopbackAuthServer } from './loopbackServer.js';
+import { ExtHostAuthentication, DynamicAuthProvider, IExtHostAuthentication } from '../common/extHostAuthentication.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
+import { IExtHostInitDataService } from '../common/extHostInitDataService.ts';
+import { IExtHostWindow } from '../common/extHostWindow.ts';
+import { IExtHostUrlsService } from '../common/extHostUrls.ts';
+import { ILoggerService, ILogService } from '../../../platform/log/common/log.ts';
+import { MainThreadAuthenticationShape } from '../common/extHost.protocol.ts';
+import { IAuthorizationServerMetadata, IAuthorizationProtectedResourceMetadata, IAuthorizationTokenResponse, IAuthorizationDeviceResponse, isAuthorizationDeviceResponse, isAuthorizationTokenResponse, IAuthorizationDeviceTokenErrorResponse, AuthorizationErrorType, AuthorizationDeviceCodeErrorType } from '../../../base/common/oauth.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { raceCancellationError } from '../../../base/common/async.ts';
+import { IExtHostProgress } from '../common/extHostProgress.ts';
+import { IProgressStep } from '../../../platform/progress/common/progress.ts';
+import { CancellationError, isCancellationError } from '../../../base/common/errors.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { LoopbackAuthServer } from './loopbackServer.ts';
 
 export class NodeDynamicAuthProvider extends DynamicAuthProvider {
 

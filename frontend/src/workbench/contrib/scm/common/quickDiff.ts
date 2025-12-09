@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
+import * as nls from '../../../../nls.ts';
 
-import { URI } from '../../../../base/common/uri.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { LanguageSelector } from '../../../../editor/common/languageSelector.js';
-import { Event } from '../../../../base/common/event.js';
-import { LineRangeMapping } from '../../../../editor/common/diff/rangeMapping.js';
-import { IChange } from '../../../../editor/common/diff/legacyLinesDiffComputer.js';
-import { IColorTheme } from '../../../../platform/theme/common/themeService.js';
-import { Color } from '../../../../base/common/color.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { LanguageSelector } from '../../../../editor/common/languageSelector.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { LineRangeMapping } from '../../../../editor/common/diff/rangeMapping.ts';
+import { IChange } from '../../../../editor/common/diff/legacyLinesDiffComputer.ts';
+import { IColorTheme } from '../../../../platform/theme/common/themeService.ts';
+import { Color } from '../../../../base/common/color.ts';
 import {
 	darken, editorBackground, editorForeground, listInactiveSelectionBackground, opaque,
 	editorErrorForeground, registerColor, transparent,
 	lighten
-} from '../../../../platform/theme/common/colorRegistry.js';
+} from '../../../../platform/theme/common/colorRegistry.ts';
 
 export const IQuickDiffService = createDecorator<IQuickDiffService>('quickDiff');
 

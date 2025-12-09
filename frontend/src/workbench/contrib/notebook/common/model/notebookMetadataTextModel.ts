@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { toFormattedString } from '../../../../../base/common/jsonFormatter.js';
-import { INotebookDocumentMetadataTextModel, INotebookTextModel, NotebookCellMetadata, NotebookCellsChangeType, NotebookDocumentMetadata, NotebookMetadataUri, TransientDocumentMetadata } from '../notebookCommon.js';
-import { StringSHA1 } from '../../../../../base/common/hash.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { DefaultEndOfLine, EndOfLinePreference, ITextBuffer } from '../../../../../editor/common/model.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { createTextBuffer } from '../../../../../editor/common/model/textModel.js';
+import { toFormattedString } from '../../../../../base/common/jsonFormatter.ts';
+import { INotebookDocumentMetadataTextModel, INotebookTextModel, NotebookCellMetadata, NotebookCellsChangeType, NotebookDocumentMetadata, NotebookMetadataUri, TransientDocumentMetadata } from '../notebookCommon.ts';
+import { StringSHA1 } from '../../../../../base/common/hash.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { DefaultEndOfLine, EndOfLinePreference, ITextBuffer } from '../../../../../editor/common/model.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { createTextBuffer } from '../../../../../editor/common/model/textModel.ts';
 
 export function getFormattedNotebookMetadataJSON(transientMetadata: TransientDocumentMetadata | undefined, metadata: NotebookDocumentMetadata) {
 	let filteredMetadata: { [key: string]: any } = {};

@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $ } from '../../../../../base/browser/dom.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Iterable } from '../../../../../base/common/iterator.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { markAsSingleton } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { IActionViewItemService } from '../../../../../platform/actions/browser/actionViewItemService.js';
-import { MenuEntryActionViewItem } from '../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { Action2, MenuId, MenuItemAction, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../../common/contributions.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ConfirmedReason, IChatToolInvocation, ToolConfirmKind } from '../../common/chatService.js';
-import { isResponseVM } from '../../common/chatViewModel.js';
-import { ChatModeKind } from '../../common/constants.js';
-import { IChatWidget, IChatWidgetService } from '../chat.js';
-import { ToolsScope } from '../chatSelectedTools.js';
-import { CHAT_CATEGORY } from './chatActions.js';
-import { showToolsPicker } from './chatToolPicker.js';
+import { $ } from '../../../../../base/browser/dom.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Iterable } from '../../../../../base/common/iterator.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { markAsSingleton } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { IActionViewItemService } from '../../../../../platform/actions/browser/actionViewItemService.ts';
+import { MenuEntryActionViewItem } from '../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { Action2, MenuId, MenuItemAction, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../../common/contributions.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ConfirmedReason, IChatToolInvocation, ToolConfirmKind } from '../../common/chatService.ts';
+import { isResponseVM } from '../../common/chatViewModel.ts';
+import { ChatModeKind } from '../../common/constants.ts';
+import { IChatWidget, IChatWidgetService } from '../chat.ts';
+import { ToolsScope } from '../chatSelectedTools.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
+import { showToolsPicker } from './chatToolPicker.ts';
 
 
 type SelectedToolData = {

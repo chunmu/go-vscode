@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import * as nls from '../../../../nls.js';
-import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { Memento } from '../../../common/memento.js';
-import { CustomEditorPriority, CustomEditorDescriptor, CustomEditorInfo } from './customEditor.js';
-import { customEditorsExtensionPoint, ICustomEditorsExtensionPoint } from './extensionPoint.js';
-import { RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.js';
-import { IExtensionPointUser } from '../../../services/extensions/common/extensionsRegistry.js';
+import { Emitter } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import * as nls from '../../../../nls.ts';
+import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { Memento } from '../../../common/memento.ts';
+import { CustomEditorPriority, CustomEditorDescriptor, CustomEditorInfo } from './customEditor.ts';
+import { customEditorsExtensionPoint, ICustomEditorsExtensionPoint } from './extensionPoint.ts';
+import { RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.ts';
+import { IExtensionPointUser } from '../../../services/extensions/common/extensionsRegistry.ts';
 
 interface CustomEditorsMemento {
 	editors?: CustomEditorDescriptor[];

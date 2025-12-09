@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../nls.js';
-import * as objects from '../../../base/common/objects.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { IJSONSchema } from '../../../base/common/jsonSchema.js';
-import { ExtensionsRegistry, IExtensionPointUser } from '../../services/extensions/common/extensionsRegistry.js';
-import { IConfigurationNode, IConfigurationRegistry, Extensions, validateProperty, ConfigurationScope, OVERRIDE_PROPERTY_REGEX, IConfigurationDefaults, configurationDefaultsSchemaId, IConfigurationDelta, getDefaultValue, getAllConfigurationProperties, parseScope, EXTENSION_UNIFICATION_EXTENSION_IDS } from '../../../platform/configuration/common/configurationRegistry.js';
-import { IJSONContributionRegistry, Extensions as JSONExtensions } from '../../../platform/jsonschemas/common/jsonContributionRegistry.js';
-import { workspaceSettingsSchemaId, launchSchemaId, tasksSchemaId, mcpSchemaId } from '../../services/configuration/common/configuration.js';
-import { isObject, isUndefined } from '../../../base/common/types.js';
-import { ExtensionIdentifierMap, IExtensionManifest } from '../../../platform/extensions/common/extensions.js';
-import { IStringDictionary } from '../../../base/common/collections.js';
-import { Extensions as ExtensionFeaturesExtensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../services/extensionManagement/common/extensionFeatures.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';
-import { MarkdownString } from '../../../base/common/htmlContent.js';
-import product from '../../../platform/product/common/product.js';
+import * as nls from '../../../nls.ts';
+import * as objects from '../../../base/common/objects.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { IJSONSchema } from '../../../base/common/jsonSchema.ts';
+import { ExtensionsRegistry, IExtensionPointUser } from '../../services/extensions/common/extensionsRegistry.ts';
+import { IConfigurationNode, IConfigurationRegistry, Extensions, validateProperty, ConfigurationScope, OVERRIDE_PROPERTY_REGEX, IConfigurationDefaults, configurationDefaultsSchemaId, IConfigurationDelta, getDefaultValue, getAllConfigurationProperties, parseScope, EXTENSION_UNIFICATION_EXTENSION_IDS } from '../../../platform/configuration/common/configurationRegistry.ts';
+import { IJSONContributionRegistry, Extensions as JSONExtensions } from '../../../platform/jsonschemas/common/jsonContributionRegistry.ts';
+import { workspaceSettingsSchemaId, launchSchemaId, tasksSchemaId, mcpSchemaId } from '../../services/configuration/common/configuration.ts';
+import { isObject, isUndefined } from '../../../base/common/types.ts';
+import { ExtensionIdentifierMap, IExtensionManifest } from '../../../platform/extensions/common/extensions.ts';
+import { IStringDictionary } from '../../../base/common/collections.ts';
+import { Extensions as ExtensionFeaturesExtensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../services/extensionManagement/common/extensionFeatures.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.ts';
+import { MarkdownString } from '../../../base/common/htmlContent.ts';
+import product from '../../../platform/product/common/product.ts';
 
 const jsonRegistry = Registry.as<IJSONContributionRegistry>(JSONExtensions.JSONContribution);
 const configurationRegistry = Registry.as<IConfigurationRegistry>(Extensions.Configuration);

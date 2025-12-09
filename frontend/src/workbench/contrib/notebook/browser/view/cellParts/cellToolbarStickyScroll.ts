@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { combinedDisposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { clamp } from '../../../../../../base/common/numbers.js';
-import { ICellViewModel, INotebookEditor } from '../../notebookBrowser.js';
+import { combinedDisposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { clamp } from '../../../../../../base/common/numbers.ts';
+import { ICellViewModel, INotebookEditor } from '../../notebookBrowser.ts';
 
 export function registerCellToolbarStickyScroll(notebookEditor: INotebookEditor, cell: ICellViewModel, element: HTMLElement, opts?: { extraOffset?: number; min?: number }): IDisposable {
 	const extraOffset = opts?.extraOffset ?? 0;

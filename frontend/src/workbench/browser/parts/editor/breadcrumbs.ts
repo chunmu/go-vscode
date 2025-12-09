@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { BreadcrumbsWidget } from '../../../../base/browser/ui/breadcrumbs/breadcrumbsWidget.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import * as glob from '../../../../base/common/glob.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationOverrides, IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { Extensions, IConfigurationRegistry, ConfigurationScope } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { GroupIdentifier, IEditorPartOptions } from '../../../common/editor.js';
+import { BreadcrumbsWidget } from '../../../../base/browser/ui/breadcrumbs/breadcrumbsWidget.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import * as glob from '../../../../base/common/glob.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationOverrides, IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { Extensions, IConfigurationRegistry, ConfigurationScope } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { GroupIdentifier, IEditorPartOptions } from '../../../common/editor.ts';
 
 export const IBreadcrumbsService = createDecorator<IBreadcrumbsService>('IEditorBreadcrumbsService');
 

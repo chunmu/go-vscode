@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { computeLevenshteinDistance } from '../../../../../base/common/diff/diff.js';
-import { CellKind } from '../notebookCommon.js';
+import { computeLevenshteinDistance } from '../../../../../base/common/diff/diff.ts';
+import { CellKind } from '../notebookCommon.ts';
 
 
 type EditCount = number;

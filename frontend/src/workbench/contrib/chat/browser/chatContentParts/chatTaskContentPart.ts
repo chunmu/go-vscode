@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Event } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IChatProgressRenderableResponseContent } from '../../common/chatModel.js';
-import { IChatTask, IChatTaskSerialized } from '../../common/chatService.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { ChatProgressContentPart } from './chatProgressContentPart.js';
-import { ChatCollapsibleListContentPart, CollapsibleListPool } from './chatReferencesContentPart.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatProgressRenderableResponseContent } from '../../common/chatModel.ts';
+import { IChatTask, IChatTaskSerialized } from '../../common/chatService.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { ChatProgressContentPart } from './chatProgressContentPart.ts';
+import { ChatCollapsibleListContentPart, CollapsibleListPool } from './chatReferencesContentPart.ts';
 
 export class ChatTaskContentPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

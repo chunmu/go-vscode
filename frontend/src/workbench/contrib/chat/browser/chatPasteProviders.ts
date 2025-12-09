@@ -2,32 +2,32 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { createStringDataTransferItem, IDataTransferItem, IReadonlyVSDataTransfer, VSDataTransfer } from '../../../../base/common/dataTransfer.js';
-import { HierarchicalKind } from '../../../../base/common/hierarchicalKind.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { revive } from '../../../../base/common/marshalling.js';
-import { Mimes } from '../../../../base/common/mime.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { basename, joinPath } from '../../../../base/common/resources.js';
-import { URI, UriComponents } from '../../../../base/common/uri.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { DocumentPasteContext, DocumentPasteEdit, DocumentPasteEditProvider, DocumentPasteEditsSession } from '../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { ILanguageFeaturesService } from '../../../../editor/common/services/languageFeatures.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { localize } from '../../../../nls.js';
-import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IExtensionService, isProposedApiEnabled } from '../../../services/extensions/common/extensions.js';
-import { IChatRequestPasteVariableEntry, IChatRequestVariableEntry } from '../common/chatVariableEntries.js';
-import { IChatVariablesService, IDynamicVariable } from '../common/chatVariables.js';
-import { IChatWidgetService } from './chat.js';
-import { ChatDynamicVariableModel } from './contrib/chatDynamicVariables.js';
-import { cleanupOldImages, createFileForMedia, resizeImage } from './imageUtils.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { createStringDataTransferItem, IDataTransferItem, IReadonlyVSDataTransfer, VSDataTransfer } from '../../../../base/common/dataTransfer.ts';
+import { HierarchicalKind } from '../../../../base/common/hierarchicalKind.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { revive } from '../../../../base/common/marshalling.ts';
+import { Mimes } from '../../../../base/common/mime.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { basename, joinPath } from '../../../../base/common/resources.ts';
+import { URI, UriComponents } from '../../../../base/common/uri.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { DocumentPasteContext, DocumentPasteEdit, DocumentPasteEditProvider, DocumentPasteEditsSession } from '../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { ILanguageFeaturesService } from '../../../../editor/common/services/languageFeatures.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { localize } from '../../../../nls.ts';
+import { IEnvironmentService } from '../../../../platform/environment/common/environment.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IExtensionService, isProposedApiEnabled } from '../../../services/extensions/common/extensions.ts';
+import { IChatRequestPasteVariableEntry, IChatRequestVariableEntry } from '../common/chatVariableEntries.ts';
+import { IChatVariablesService, IDynamicVariable } from '../common/chatVariables.ts';
+import { IChatWidgetService } from './chat.ts';
+import { ChatDynamicVariableModel } from './contrib/chatDynamicVariables.ts';
+import { cleanupOldImages, createFileForMedia, resizeImage } from './imageUtils.ts';
 
 const COPY_MIME_TYPES = 'application/vnd.code.additional-editor-data';
 

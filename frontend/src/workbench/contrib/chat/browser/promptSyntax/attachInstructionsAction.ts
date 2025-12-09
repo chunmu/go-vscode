@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ChatViewId, IChatWidget, IChatWidgetService } from '../chat.js';
-import { CHAT_CATEGORY, CHAT_CONFIG_MENU_ID } from '../actions/chatActions.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
-import { PromptFilePickers } from './pickers/promptFilePickers.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IChatContextPickerItem, IChatContextPickerPickItem, IChatContextPicker } from '../chatContextPickService.js';
-import { IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { getCleanPromptName } from '../../common/promptSyntax/config/promptFileLocations.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { INSTRUCTIONS_LANGUAGE_ID, PromptsType } from '../../common/promptSyntax/promptTypes.js';
-import { compare } from '../../../../../base/common/strings.js';
-import { IPromptFileVariableEntry, PromptFileVariableKind, toPromptFileVariableEntry } from '../../common/chatVariableEntries.js';
-import { KeyMod, KeyCode } from '../../../../../base/common/keyCodes.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
+import { ChatViewId, IChatWidget, IChatWidgetService } from '../chat.ts';
+import { CHAT_CATEGORY, CHAT_CONFIG_MENU_ID } from '../actions/chatActions.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
+import { PromptFilePickers } from './pickers/promptFilePickers.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatContextPickerItem, IChatContextPickerPickItem, IChatContextPicker } from '../chatContextPickService.ts';
+import { IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { getCleanPromptName } from '../../common/promptSyntax/config/promptFileLocations.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { INSTRUCTIONS_LANGUAGE_ID, PromptsType } from '../../common/promptSyntax/promptTypes.ts';
+import { compare } from '../../../../../base/common/strings.ts';
+import { IPromptFileVariableEntry, PromptFileVariableKind, toPromptFileVariableEntry } from '../../common/chatVariableEntries.ts';
+import { KeyMod, KeyCode } from '../../../../../base/common/keyCodes.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
 
 /**
  * Action ID for the `Attach Instruction` action.

@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtHostNotebookEditorsShape, INotebookEditorPropertiesChangeData, INotebookEditorViewColumnInfo } from './extHost.protocol.js';
-import { ExtHostNotebookController } from './extHostNotebook.js';
-import * as typeConverters from './extHostTypeConverters.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtHostNotebookEditorsShape, INotebookEditorPropertiesChangeData, INotebookEditorViewColumnInfo } from './extHost.protocol.ts';
+import { ExtHostNotebookController } from './extHostNotebook.ts';
+import * as typeConverters from './extHostTypeConverters.ts';
 import type * as vscode from 'vscode';
 
 

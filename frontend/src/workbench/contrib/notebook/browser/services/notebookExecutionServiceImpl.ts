@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationTokenSource } from '../../../../../base/common/cancellation.js';
-import { IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import * as nls from '../../../../../nls.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IWorkspaceTrustRequestService } from '../../../../../platform/workspace/common/workspaceTrust.js';
-import { KernelPickerMRUStrategy } from '../viewParts/notebookKernelQuickPickStrategy.js';
-import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.js';
-import { CellKind, INotebookTextModel, NotebookCellExecutionState } from '../../common/notebookCommon.js';
-import { INotebookExecutionService, ICellExecutionParticipant } from '../../common/notebookExecutionService.js';
-import { INotebookCellExecution, INotebookExecutionStateService } from '../../common/notebookExecutionStateService.js';
-import { INotebookKernelHistoryService, INotebookKernelService } from '../../common/notebookKernelService.js';
-import { INotebookLoggingService } from '../../common/notebookLoggingService.js';
+import { CancellationTokenSource } from '../../../../../base/common/cancellation.ts';
+import { IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import * as nls from '../../../../../nls.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IWorkspaceTrustRequestService } from '../../../../../platform/workspace/common/workspaceTrust.ts';
+import { KernelPickerMRUStrategy } from '../viewParts/notebookKernelQuickPickStrategy.ts';
+import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.ts';
+import { CellKind, INotebookTextModel, NotebookCellExecutionState } from '../../common/notebookCommon.ts';
+import { INotebookExecutionService, ICellExecutionParticipant } from '../../common/notebookExecutionService.ts';
+import { INotebookCellExecution, INotebookExecutionStateService } from '../../common/notebookExecutionStateService.ts';
+import { INotebookKernelHistoryService, INotebookKernelService } from '../../common/notebookKernelService.ts';
+import { INotebookLoggingService } from '../../common/notebookLoggingService.ts';
 
 
 export class NotebookExecutionService implements INotebookExecutionService, IDisposable {

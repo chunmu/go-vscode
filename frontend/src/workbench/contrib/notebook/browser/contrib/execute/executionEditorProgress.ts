@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { throttle } from '../../../../../../base/common/decorators.js';
-import { Disposable, MutableDisposable } from '../../../../../../base/common/lifecycle.js';
-import { INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { NotebookCellExecutionState } from '../../../common/notebookCommon.js';
-import { INotebookCellExecution, INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
-import { IUserActivityService } from '../../../../../services/userActivity/common/userActivityService.js';
+import { throttle } from '../../../../../../base/common/decorators.ts';
+import { Disposable, MutableDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { NotebookCellExecutionState } from '../../../common/notebookCommon.ts';
+import { INotebookCellExecution, INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
+import { IUserActivityService } from '../../../../../services/userActivity/common/userActivityService.ts';
 
 export class ExecutionEditorProgressController extends Disposable implements INotebookEditorContribution {
 	static id: string = 'workbench.notebook.executionEditorProgress';

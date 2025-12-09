@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { localize } from '../../../../nls.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { localize } from '../../../../nls.ts';
 
-import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { IChatContextService } from './chatContextService.js';
-import { isProposedApiEnabled } from '../../../services/extensions/common/extensions.js';
-import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.js';
+import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { IChatContextService } from './chatContextService.ts';
+import { isProposedApiEnabled } from '../../../services/extensions/common/extensions.ts';
+import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.ts';
 
 interface IChatContextExtensionPoint {
 	id: string;

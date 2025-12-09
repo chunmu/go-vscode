@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IStorageService, IStorageValueChangeEvent, StorageScope, StorageTarget } from '../../platform/storage/common/storage.js';
-import { isEmptyObject } from '../../base/common/types.js';
-import { onUnexpectedError } from '../../base/common/errors.js';
-import { DisposableStore } from '../../base/common/lifecycle.js';
-import { Event } from '../../base/common/event.js';
+import { IStorageService, IStorageValueChangeEvent, StorageScope, StorageTarget } from '../../platform/storage/common/storage.ts';
+import { isEmptyObject } from '../../base/common/types.ts';
+import { onUnexpectedError } from '../../base/common/errors.ts';
+import { DisposableStore } from '../../base/common/lifecycle.ts';
+import { Event } from '../../base/common/event.ts';
 
 export class Memento<T extends object> {
 

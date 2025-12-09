@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
-import { EditorInputCapabilities, IUntypedEditorInput } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
+import { EditorInputCapabilities, IUntypedEditorInput } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
 
 const processExplorerEditorIcon = registerIcon('process-explorer-editor-label-icon', Codicon.serverProcess, localize('processExplorerEditorLabelIcon', 'Icon of the process explorer editor label.'));
 

@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { assertNever } from '../../../../../base/common/assert.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Iterable } from '../../../../../base/common/iterator.js';
-import { ResourceSet } from '../../../../../base/common/map.js';
-import { extname } from '../../../../../base/common/path.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IWebContentExtractorService, WebContentExtractResult } from '../../../../../platform/webContentExtractor/common/webContentExtractor.js';
-import { detectEncodingFromBuffer } from '../../../../services/textfile/common/encoding.js';
-import { ITrustedDomainService } from '../../../url/browser/trustedDomainService.js';
-import { IChatService } from '../../common/chatService.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
-import { ChatImageMimeType } from '../../common/languageModels.js';
-import { CountTokensCallback, IPreparedToolInvocation, IToolData, IToolImpl, IToolInvocation, IToolInvocationPreparationContext, IToolResult, IToolResultDataPart, IToolResultTextPart, ToolDataSource, ToolProgress } from '../../common/languageModelToolsService.js';
-import { InternalFetchWebPageToolId } from '../../common/tools/tools.js';
+import { assertNever } from '../../../../../base/common/assert.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Iterable } from '../../../../../base/common/iterator.ts';
+import { ResourceSet } from '../../../../../base/common/map.ts';
+import { extname } from '../../../../../base/common/path.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IWebContentExtractorService, WebContentExtractResult } from '../../../../../platform/webContentExtractor/common/webContentExtractor.ts';
+import { detectEncodingFromBuffer } from '../../../../services/textfile/common/encoding.ts';
+import { ITrustedDomainService } from '../../../url/browser/trustedDomainService.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
+import { ChatImageMimeType } from '../../common/languageModels.ts';
+import { CountTokensCallback, IPreparedToolInvocation, IToolData, IToolImpl, IToolInvocation, IToolInvocationPreparationContext, IToolResult, IToolResultDataPart, IToolResultTextPart, ToolDataSource, ToolProgress } from '../../common/languageModelToolsService.ts';
+import { InternalFetchWebPageToolId } from '../../common/tools/tools.ts';
 
 export const FetchWebPageToolData: IToolData = {
 	id: InternalFetchWebPageToolId,

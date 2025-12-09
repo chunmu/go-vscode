@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { GroupIdentifier, IWorkbenchEditorConfiguration, IEditorIdentifier, IEditorCloseEvent, IEditorPartOptions, IEditorPartOptionsChangeEvent, SideBySideEditor, EditorCloseContext, IEditorPane, IEditorPartLimitOptions, IEditorPartDecorationOptions, IEditorWillOpenEvent, EditorInputWithOptions } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { IEditorGroup, GroupDirection, IMergeGroupOptions, GroupsOrder, GroupsArrangement, IAuxiliaryEditorPart, IEditorPart } from '../../../services/editor/common/editorGroupsService.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { Dimension } from '../../../../base/browser/dom.js';
-import { Event } from '../../../../base/common/event.js';
-import { IConfigurationChangeEvent, IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { ISerializableView } from '../../../../base/browser/ui/grid/grid.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { isObject } from '../../../../base/common/types.js';
-import { IEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { IWindowsConfiguration } from '../../../../platform/window/common/window.js';
-import { BooleanVerifier, EnumVerifier, NumberVerifier, ObjectVerifier, SetVerifier, verifyObject } from '../../../../base/common/verifier.js';
-import { IAuxiliaryWindowOpenOptions } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.js';
-import { ContextKeyValue, IContextKey, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { coalesce } from '../../../../base/common/arrays.js';
+import { GroupIdentifier, IWorkbenchEditorConfiguration, IEditorIdentifier, IEditorCloseEvent, IEditorPartOptions, IEditorPartOptionsChangeEvent, SideBySideEditor, EditorCloseContext, IEditorPane, IEditorPartLimitOptions, IEditorPartDecorationOptions, IEditorWillOpenEvent, EditorInputWithOptions } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { IEditorGroup, GroupDirection, IMergeGroupOptions, GroupsOrder, GroupsArrangement, IAuxiliaryEditorPart, IEditorPart } from '../../../services/editor/common/editorGroupsService.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { Dimension } from '../../../../base/browser/dom.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IConfigurationChangeEvent, IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { ISerializableView } from '../../../../base/browser/ui/grid/grid.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { isObject } from '../../../../base/common/types.ts';
+import { IEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { IWindowsConfiguration } from '../../../../platform/window/common/window.ts';
+import { BooleanVerifier, EnumVerifier, NumberVerifier, ObjectVerifier, SetVerifier, verifyObject } from '../../../../base/common/verifier.ts';
+import { IAuxiliaryWindowOpenOptions } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.ts';
+import { ContextKeyValue, IContextKey, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { coalesce } from '../../../../base/common/arrays.ts';
 
 export interface IEditorPartCreationOptions {
 	readonly restorePreviousState: boolean;

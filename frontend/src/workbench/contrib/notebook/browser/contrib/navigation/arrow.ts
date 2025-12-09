@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { timeout } from '../../../../../../base/common/async.js';
-import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { EditorExtensionsRegistry } from '../../../../../../editor/browser/editorExtensions.js';
-import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.js';
-import { localize, localize2 } from '../../../../../../nls.js';
-import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../../../platform/accessibility/common/accessibility.js';
-import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../../../platform/configuration/common/configurationRegistry.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { InputFocusedContextKey, IsWindowsContext } from '../../../../../../platform/contextkey/common/contextkeys.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { InlineChatController } from '../../../../inlineChat/browser/inlineChatController.js';
-import { INotebookActionContext, INotebookCellActionContext, NotebookAction, NotebookCellAction, NOTEBOOK_EDITOR_WIDGET_ACTION_WEIGHT, findTargetCellEditor } from '../../controller/coreActions.js';
-import { CellEditState } from '../../notebookBrowser.js';
-import { CellKind, NOTEBOOK_EDITOR_CURSOR_BOUNDARY, NOTEBOOK_EDITOR_CURSOR_LINE_BOUNDARY } from '../../../common/notebookCommon.js';
-import { NOTEBOOK_CELL_HAS_OUTPUTS, NOTEBOOK_CELL_MARKDOWN_EDIT_MODE, NOTEBOOK_CELL_TYPE, NOTEBOOK_CURSOR_NAVIGATION_MODE, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_OUTPUT_INPUT_FOCUSED, NOTEBOOK_OUTPUT_FOCUSED, NOTEBOOK_CELL_EDITOR_FOCUSED, IS_COMPOSITE_NOTEBOOK, NOTEBOOK_OR_COMPOSITE_IS_ACTIVE_EDITOR } from '../../../common/notebookContextKeys.js';
+import { timeout } from '../../../../../../base/common/async.ts';
+import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { EditorExtensionsRegistry } from '../../../../../../editor/browser/editorExtensions.ts';
+import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.ts';
+import { localize, localize2 } from '../../../../../../nls.ts';
+import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../../../platform/accessibility/common/accessibility.ts';
+import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../../../platform/configuration/common/configurationRegistry.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { InputFocusedContextKey, IsWindowsContext } from '../../../../../../platform/contextkey/common/contextkeys.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { InlineChatController } from '../../../../inlineChat/browser/inlineChatController.ts';
+import { INotebookActionContext, INotebookCellActionContext, NotebookAction, NotebookCellAction, NOTEBOOK_EDITOR_WIDGET_ACTION_WEIGHT, findTargetCellEditor } from '../../controller/coreActions.ts';
+import { CellEditState } from '../../notebookBrowser.ts';
+import { CellKind, NOTEBOOK_EDITOR_CURSOR_BOUNDARY, NOTEBOOK_EDITOR_CURSOR_LINE_BOUNDARY } from '../../../common/notebookCommon.ts';
+import { NOTEBOOK_CELL_HAS_OUTPUTS, NOTEBOOK_CELL_MARKDOWN_EDIT_MODE, NOTEBOOK_CELL_TYPE, NOTEBOOK_CURSOR_NAVIGATION_MODE, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_OUTPUT_INPUT_FOCUSED, NOTEBOOK_OUTPUT_FOCUSED, NOTEBOOK_CELL_EDITOR_FOCUSED, IS_COMPOSITE_NOTEBOOK, NOTEBOOK_OR_COMPOSITE_IS_ACTIVE_EDITOR } from '../../../common/notebookContextKeys.ts';
 
 const NOTEBOOK_FOCUS_TOP = 'notebook.focusTop';
 const NOTEBOOK_FOCUS_BOTTOM = 'notebook.focusBottom';

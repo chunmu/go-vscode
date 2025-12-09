@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../nls.js';
-import { ITelemetryData } from '../../../platform/telemetry/common/telemetry.js';
-import { IWorkspaceContextService, WorkbenchState, IWorkspaceFolder, hasWorkspaceFileExtension } from '../../../platform/workspace/common/workspace.js';
-import { IWorkspaceEditingService } from '../../services/workspaces/common/workspaceEditing.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { ICommandService } from '../../../platform/commands/common/commands.js';
-import { ADD_ROOT_FOLDER_COMMAND_ID, ADD_ROOT_FOLDER_LABEL, PICK_WORKSPACE_FOLDER_COMMAND_ID, SET_ROOT_FOLDER_COMMAND_ID } from './workspaceCommands.js';
-import { IFileDialogService } from '../../../platform/dialogs/common/dialogs.js';
-import { MenuRegistry, MenuId, Action2, registerAction2 } from '../../../platform/actions/common/actions.js';
-import { EmptyWorkspaceSupportContext, EnterMultiRootWorkspaceSupportContext, OpenFolderWorkspaceSupportContext, WorkbenchStateContext, WorkspaceFolderCountContext } from '../../common/contextkeys.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { IHostService } from '../../services/host/browser/host.js';
-import { KeyChord, KeyCode, KeyMod } from '../../../base/common/keyCodes.js';
-import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { IWorkspacesService } from '../../../platform/workspaces/common/workspaces.js';
-import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IsMacNativeContext } from '../../../platform/contextkey/common/contextkeys.js';
-import { ILocalizedString } from '../../../platform/action/common/action.js';
-import { Categories } from '../../../platform/action/common/actionCommonCategories.js';
+import { localize, localize2 } from '../../../nls.ts';
+import { ITelemetryData } from '../../../platform/telemetry/common/telemetry.ts';
+import { IWorkspaceContextService, WorkbenchState, IWorkspaceFolder, hasWorkspaceFileExtension } from '../../../platform/workspace/common/workspace.ts';
+import { IWorkspaceEditingService } from '../../services/workspaces/common/workspaceEditing.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { ICommandService } from '../../../platform/commands/common/commands.ts';
+import { ADD_ROOT_FOLDER_COMMAND_ID, ADD_ROOT_FOLDER_LABEL, PICK_WORKSPACE_FOLDER_COMMAND_ID, SET_ROOT_FOLDER_COMMAND_ID } from './workspaceCommands.ts';
+import { IFileDialogService } from '../../../platform/dialogs/common/dialogs.ts';
+import { MenuRegistry, MenuId, Action2, registerAction2 } from '../../../platform/actions/common/actions.ts';
+import { EmptyWorkspaceSupportContext, EnterMultiRootWorkspaceSupportContext, OpenFolderWorkspaceSupportContext, WorkbenchStateContext, WorkspaceFolderCountContext } from '../../common/contextkeys.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { IHostService } from '../../services/host/browser/host.ts';
+import { KeyChord, KeyCode, KeyMod } from '../../../base/common/keyCodes.ts';
+import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { IWorkspacesService } from '../../../platform/workspaces/common/workspaces.ts';
+import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IsMacNativeContext } from '../../../platform/contextkey/common/contextkeys.ts';
+import { ILocalizedString } from '../../../platform/action/common/action.ts';
+import { Categories } from '../../../platform/action/common/actionCommonCategories.ts';
 
 const workspacesCategory: ILocalizedString = localize2('workspaces', 'Workspaces');
 

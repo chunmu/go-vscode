@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../base/common/event.js';
-import severity from '../../../../base/common/severity.js';
-import { isObject, isString } from '../../../../base/common/types.js';
-import { generateUuid } from '../../../../base/common/uuid.js';
-import * as nls from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IDebugConfiguration, IDebugSession, IExpression, INestingReplElement, IReplElement, IReplElementSource, IStackFrame } from './debug.js';
-import { ExpressionContainer } from './debugModel.js';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import severity from '../../../../base/common/severity.ts';
+import { isObject, isString } from '../../../../base/common/types.ts';
+import { generateUuid } from '../../../../base/common/uuid.ts';
+import * as nls from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IDebugConfiguration, IDebugSession, IExpression, INestingReplElement, IReplElement, IReplElementSource, IStackFrame } from './debug.ts';
+import { ExpressionContainer } from './debugModel.ts';
 
 let topReplElementCounter = 0;
 const getUniqueId = () => `topReplElement:${topReplElementCounter++}`;

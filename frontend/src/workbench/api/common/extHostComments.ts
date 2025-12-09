@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { asPromise } from '../../../base/common/async.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { debounce } from '../../../base/common/decorators.js';
-import { Emitter } from '../../../base/common/event.js';
-import { DisposableStore, MutableDisposable } from '../../../base/common/lifecycle.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IRange } from '../../../editor/common/core/range.js';
-import * as languages from '../../../editor/common/languages.js';
-import { ExtensionIdentifierMap, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import * as extHostTypeConverter from './extHostTypeConverters.js';
-import * as types from './extHostTypes.js';
+import { asPromise } from '../../../base/common/async.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { debounce } from '../../../base/common/decorators.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { DisposableStore, MutableDisposable } from '../../../base/common/lifecycle.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IRange } from '../../../editor/common/core/range.ts';
+import * as languages from '../../../editor/common/languages.ts';
+import { ExtensionIdentifierMap, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import * as extHostTypeConverter from './extHostTypeConverters.ts';
+import * as types from './extHostTypes.ts';
 import type * as vscode from 'vscode';
-import { ExtHostCommentsShape, IMainContext, MainContext, CommentThreadChanges, CommentChanges } from './extHost.protocol.js';
-import { ExtHostCommands } from './extHostCommands.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { MarshalledCommentThread } from '../../common/comments.js';
+import { ExtHostCommentsShape, IMainContext, MainContext, CommentThreadChanges, CommentChanges } from './extHost.protocol.ts';
+import { ExtHostCommands } from './extHostCommands.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { MarshalledCommentThread } from '../../common/comments.ts';
 
 type ProviderHandle = number;
 

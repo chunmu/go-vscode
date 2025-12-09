@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IBulkEditService, ResourceEdit, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.js';
-import { IPosition, Position } from '../../../../../editor/common/core/position.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { EndOfLinePreference, IReadonlyTextBuffer } from '../../../../../editor/common/model.js';
-import { PLAINTEXT_LANGUAGE_ID } from '../../../../../editor/common/languages/modesRegistry.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { ResourceNotebookCellEdit } from '../../../bulkEdit/browser/bulkCellEdits.js';
-import { INotebookActionContext, INotebookCellActionContext } from './coreActions.js';
-import { CellEditState, CellFocusMode, expandCellRangesWithHiddenCells, IActiveNotebookEditor, ICellViewModel } from '../notebookBrowser.js';
-import { CellViewModel, NotebookViewModel } from '../viewModel/notebookViewModelImpl.js';
-import { cloneNotebookCellTextModel } from '../../common/model/notebookCellTextModel.js';
-import { CellEditType, CellKind, ICellEditOperation, ICellReplaceEdit, IOutputDto, ISelectionState, NotebookCellMetadata, SelectionStateType } from '../../common/notebookCommon.js';
-import { cellRangeContains, cellRangesToIndexes, ICellRange } from '../../common/notebookRange.js';
-import { localize } from '../../../../../nls.js';
-import { INotificationService } from '../../../../../platform/notification/common/notification.js';
-import { INotebookKernelHistoryService } from '../../common/notebookKernelService.js';
+import { IBulkEditService, ResourceEdit, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.ts';
+import { IPosition, Position } from '../../../../../editor/common/core/position.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { EndOfLinePreference, IReadonlyTextBuffer } from '../../../../../editor/common/model.ts';
+import { PLAINTEXT_LANGUAGE_ID } from '../../../../../editor/common/languages/modesRegistry.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { ResourceNotebookCellEdit } from '../../../bulkEdit/browser/bulkCellEdits.ts';
+import { INotebookActionContext, INotebookCellActionContext } from './coreActions.ts';
+import { CellEditState, CellFocusMode, expandCellRangesWithHiddenCells, IActiveNotebookEditor, ICellViewModel } from '../notebookBrowser.ts';
+import { CellViewModel, NotebookViewModel } from '../viewModel/notebookViewModelImpl.ts';
+import { cloneNotebookCellTextModel } from '../../common/model/notebookCellTextModel.ts';
+import { CellEditType, CellKind, ICellEditOperation, ICellReplaceEdit, IOutputDto, ISelectionState, NotebookCellMetadata, SelectionStateType } from '../../common/notebookCommon.ts';
+import { cellRangeContains, cellRangesToIndexes, ICellRange } from '../../common/notebookRange.ts';
+import { localize } from '../../../../../nls.ts';
+import { INotificationService } from '../../../../../platform/notification/common/notification.ts';
+import { INotebookKernelHistoryService } from '../../common/notebookKernelService.ts';
 
 export async function changeCellToKind(kind: CellKind, context: INotebookActionContext, language?: string, mime?: string): Promise<void> {
 	const { notebookEditor } = context;

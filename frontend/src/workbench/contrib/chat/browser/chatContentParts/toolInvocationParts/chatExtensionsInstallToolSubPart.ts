@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { Emitter } from '../../../../../../base/common/event.js';
-import { toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../../nls.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IExtensionManagementService } from '../../../../../../platform/extensionManagement/common/extensionManagement.js';
-import { areSameExtensions } from '../../../../../../platform/extensionManagement/common/extensionManagementUtil.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { ChatContextKeys } from '../../../common/chatContextKeys.js';
-import { ConfirmedReason, IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.js';
-import { CancelChatActionId } from '../../actions/chatExecuteActions.js';
-import { AcceptToolConfirmationActionId } from '../../actions/chatToolActions.js';
-import { IChatWidgetService } from '../../chat.js';
-import { ChatConfirmationWidget, IChatConfirmationButton } from '../chatConfirmationWidget.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { ChatExtensionsContentPart } from '../chatExtensionsContentPart.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { Emitter } from '../../../../../../base/common/event.ts';
+import { toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IExtensionManagementService } from '../../../../../../platform/extensionManagement/common/extensionManagement.ts';
+import { areSameExtensions } from '../../../../../../platform/extensionManagement/common/extensionManagementUtil.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { ChatContextKeys } from '../../../common/chatContextKeys.ts';
+import { ConfirmedReason, IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.ts';
+import { CancelChatActionId } from '../../actions/chatExecuteActions.ts';
+import { AcceptToolConfirmationActionId } from '../../actions/chatToolActions.ts';
+import { IChatWidgetService } from '../../chat.ts';
+import { ChatConfirmationWidget, IChatConfirmationButton } from '../chatConfirmationWidget.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { ChatExtensionsContentPart } from '../chatExtensionsContentPart.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
 
 export class ExtensionsInstallConfirmationWidgetSubPart extends BaseChatToolInvocationSubPart {
 	public readonly domNode: HTMLElement;

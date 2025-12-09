@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { generateUuid } from '../../../base/common/uuid.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
-import { BaseExtHostTerminalService, ExtHostTerminal, ITerminalInternalOptions } from '../common/extHostTerminalService.js';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
+import { BaseExtHostTerminalService, ExtHostTerminal, ITerminalInternalOptions } from '../common/extHostTerminalService.ts';
 import type * as vscode from 'vscode';
-import { IExtHostCommands } from '../common/extHostCommands.js';
+import { IExtHostCommands } from '../common/extHostCommands.ts';
 
 export class ExtHostTerminalService extends BaseExtHostTerminalService {
 

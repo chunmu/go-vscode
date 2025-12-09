@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DEFAULT_EDITOR_ASSOCIATION, GroupIdentifier, IRevertOptions, isResourceEditorInput, IUntypedEditorInput } from '../editor.js';
-import { EditorInput } from './editorInput.js';
-import { AbstractResourceEditorInput } from './resourceEditorInput.js';
-import { URI } from '../../../base/common/uri.js';
-import { ITextFileService, ITextFileSaveOptions, ILanguageSupport } from '../../services/textfile/common/textfiles.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { IFileService } from '../../../platform/files/common/files.js';
-import { ILabelService } from '../../../platform/label/common/label.js';
-import { Schemas } from '../../../base/common/network.js';
-import { isEqual } from '../../../base/common/resources.js';
-import { ITextEditorModel, ITextModelService } from '../../../editor/common/services/resolverService.js';
-import { TextResourceEditorModel } from './textResourceEditorModel.js';
-import { IReference } from '../../../base/common/lifecycle.js';
-import { createTextBufferFactory } from '../../../editor/common/model/textModel.js';
-import { IFilesConfigurationService } from '../../services/filesConfiguration/common/filesConfigurationService.js';
-import { ITextResourceConfigurationService } from '../../../editor/common/services/textResourceConfiguration.js';
-import { ICustomEditorLabelService } from '../../services/editor/common/customEditorLabelService.js';
+import { DEFAULT_EDITOR_ASSOCIATION, GroupIdentifier, IRevertOptions, isResourceEditorInput, IUntypedEditorInput } from '../editor.ts';
+import { EditorInput } from './editorInput.ts';
+import { AbstractResourceEditorInput } from './resourceEditorInput.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ITextFileService, ITextFileSaveOptions, ILanguageSupport } from '../../services/textfile/common/textfiles.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { IFileService } from '../../../platform/files/common/files.ts';
+import { ILabelService } from '../../../platform/label/common/label.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { isEqual } from '../../../base/common/resources.ts';
+import { ITextEditorModel, ITextModelService } from '../../../editor/common/services/resolverService.ts';
+import { TextResourceEditorModel } from './textResourceEditorModel.ts';
+import { IReference } from '../../../base/common/lifecycle.ts';
+import { createTextBufferFactory } from '../../../editor/common/model/textModel.ts';
+import { IFilesConfigurationService } from '../../services/filesConfiguration/common/filesConfigurationService.ts';
+import { ITextResourceConfigurationService } from '../../../editor/common/services/textResourceConfiguration.ts';
+import { ICustomEditorLabelService } from '../../services/editor/common/customEditorLabelService.ts';
 
 /**
  * The base class for all editor inputs that open in text editors.

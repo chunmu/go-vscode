@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { ISettableObservable, observableValue } from '../../../../base/common/observable.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { IDebugModel, IEvaluate, IExpression } from './debug.js';
-import { Breakpoint, DataBreakpoint, ExceptionBreakpoint, Expression, FunctionBreakpoint } from './debugModel.js';
-import { ITextFileService } from '../../../services/textfile/common/textfiles.js';
-import { mapValues } from '../../../../base/common/objects.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { ISettableObservable, observableValue } from '../../../../base/common/observable.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { IDebugModel, IEvaluate, IExpression } from './debug.ts';
+import { Breakpoint, DataBreakpoint, ExceptionBreakpoint, Expression, FunctionBreakpoint } from './debugModel.ts';
+import { ITextFileService } from '../../../services/textfile/common/textfiles.ts';
+import { mapValues } from '../../../../base/common/objects.ts';
 
 const DEBUG_BREAKPOINTS_KEY = 'debug.breakpoint';
 const DEBUG_FUNCTION_BREAKPOINTS_KEY = 'debug.functionbreakpoint';

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { INotebookRendererMessagingService, IScopedRendererMessaging } from '../../common/notebookRendererMessagingService.js';
-import { IExtensionService } from '../../../../services/extensions/common/extensions.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { INotebookRendererMessagingService, IScopedRendererMessaging } from '../../common/notebookRendererMessagingService.ts';
+import { IExtensionService } from '../../../../services/extensions/common/extensions.ts';
 
 type MessageToSend = { editorId: string; rendererId: string; message: unknown };
 

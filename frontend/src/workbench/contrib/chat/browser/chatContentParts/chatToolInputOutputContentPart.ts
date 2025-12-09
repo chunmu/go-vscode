@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.js';
-import { HoverStyle } from '../../../../../base/browser/ui/hover/hover.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { autorun, ISettableObservable, observableValue } from '../../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { localize } from '../../../../../nls.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IHoverService } from '../../../../../platform/hover/browser/hover.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { LanguageModelPartAudience } from '../../common/languageModels.js';
-import { ChatTreeItem, IChatCodeBlockInfo } from '../chat.js';
-import { CodeBlockPart, ICodeBlockData, ICodeBlockRenderOptions } from '../codeBlockPart.js';
-import { IDisposableReference } from './chatCollections.js';
-import { ChatQueryTitlePart } from './chatConfirmationWidget.js';
-import { IChatContentPartRenderContext } from './chatContentParts.js';
-import { ChatToolOutputContentSubPart } from './chatToolOutputContentSubPart.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.ts';
+import { HoverStyle } from '../../../../../base/browser/ui/hover/hover.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun, ISettableObservable, observableValue } from '../../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { localize } from '../../../../../nls.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IHoverService } from '../../../../../platform/hover/browser/hover.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { LanguageModelPartAudience } from '../../common/languageModels.ts';
+import { ChatTreeItem, IChatCodeBlockInfo } from '../chat.ts';
+import { CodeBlockPart, ICodeBlockData, ICodeBlockRenderOptions } from '../codeBlockPart.ts';
+import { IDisposableReference } from './chatCollections.ts';
+import { ChatQueryTitlePart } from './chatConfirmationWidget.ts';
+import { IChatContentPartRenderContext } from './chatContentParts.ts';
+import { ChatToolOutputContentSubPart } from './chatToolOutputContentSubPart.ts';
 
 export interface IChatCollapsibleIOCodePart {
 	kind: 'code';

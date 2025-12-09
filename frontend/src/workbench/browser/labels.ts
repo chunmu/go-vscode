@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../nls.js';
-import { URI } from '../../base/common/uri.js';
-import { dirname, isEqual, basenameOrAuthority } from '../../base/common/resources.js';
-import { IconLabel, IIconLabelValueOptions, IIconLabelCreationOptions } from '../../base/browser/ui/iconLabel/iconLabel.js';
-import { ILanguageService } from '../../editor/common/languages/language.js';
-import { IWorkspaceContextService } from '../../platform/workspace/common/workspace.js';
-import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
-import { IModelService } from '../../editor/common/services/model.js';
-import { ITextFileService } from '../services/textfile/common/textfiles.js';
-import { IDecoration, IDecorationsService, IResourceDecorationChangeEvent } from '../services/decorations/common/decorations.js';
-import { Schemas } from '../../base/common/network.js';
-import { FileKind, FILES_ASSOCIATIONS_CONFIG } from '../../platform/files/common/files.js';
-import { ITextModel } from '../../editor/common/model.js';
-import { IThemeService } from '../../platform/theme/common/themeService.js';
-import { Event, Emitter } from '../../base/common/event.js';
-import { ILabelService } from '../../platform/label/common/label.js';
-import { getIconClasses } from '../../editor/common/services/getIconClasses.js';
-import { Disposable, dispose, IDisposable, MutableDisposable } from '../../base/common/lifecycle.js';
-import { IInstantiationService } from '../../platform/instantiation/common/instantiation.js';
-import { normalizeDriveLetter } from '../../base/common/labels.js';
-import { IRange } from '../../editor/common/core/range.js';
-import { ThemeIcon } from '../../base/common/themables.js';
-import { INotebookDocumentService, extractCellOutputDetails } from '../services/notebook/common/notebookDocumentService.js';
+import { localize } from '../../nls.ts';
+import { URI } from '../../base/common/uri.ts';
+import { dirname, isEqual, basenameOrAuthority } from '../../base/common/resources.ts';
+import { IconLabel, IIconLabelValueOptions, IIconLabelCreationOptions } from '../../base/browser/ui/iconLabel/iconLabel.ts';
+import { ILanguageService } from '../../editor/common/languages/language.ts';
+import { IWorkspaceContextService } from '../../platform/workspace/common/workspace.ts';
+import { IConfigurationService } from '../../platform/configuration/common/configuration.ts';
+import { IModelService } from '../../editor/common/services/model.ts';
+import { ITextFileService } from '../services/textfile/common/textfiles.ts';
+import { IDecoration, IDecorationsService, IResourceDecorationChangeEvent } from '../services/decorations/common/decorations.ts';
+import { Schemas } from '../../base/common/network.ts';
+import { FileKind, FILES_ASSOCIATIONS_CONFIG } from '../../platform/files/common/files.ts';
+import { ITextModel } from '../../editor/common/model.ts';
+import { IThemeService } from '../../platform/theme/common/themeService.ts';
+import { Event, Emitter } from '../../base/common/event.ts';
+import { ILabelService } from '../../platform/label/common/label.ts';
+import { getIconClasses } from '../../editor/common/services/getIconClasses.ts';
+import { Disposable, dispose, IDisposable, MutableDisposable } from '../../base/common/lifecycle.ts';
+import { IInstantiationService } from '../../platform/instantiation/common/instantiation.ts';
+import { normalizeDriveLetter } from '../../base/common/labels.ts';
+import { IRange } from '../../editor/common/core/range.ts';
+import { ThemeIcon } from '../../base/common/themables.ts';
+import { INotebookDocumentService, extractCellOutputDetails } from '../services/notebook/common/notebookDocumentService.ts';
 
 export interface IResourceLabelProps {
 	resource?: URI | { primary?: URI; secondary?: URI };

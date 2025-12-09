@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { status } from '../../../../../../base/browser/ui/aria/aria.js';
-import { IMarkdownString, MarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { autorun } from '../../../../../../base/common/observable.js';
-import { IMarkdownRenderer } from '../../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IChatProgressMessage, IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../../common/chatService.js';
-import { AccessibilityWorkbenchSettingId } from '../../../../accessibility/browser/accessibilityConfiguration.js';
-import { IChatCodeBlockInfo } from '../../chat.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { ChatProgressContentPart } from '../chatProgressContentPart.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { status } from '../../../../../../base/browser/ui/aria/aria.ts';
+import { IMarkdownString, MarkdownString } from '../../../../../../base/common/htmlContent.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
+import { IMarkdownRenderer } from '../../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatProgressMessage, IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../../common/chatService.ts';
+import { AccessibilityWorkbenchSettingId } from '../../../../accessibility/browser/accessibilityConfiguration.ts';
+import { IChatCodeBlockInfo } from '../../chat.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { ChatProgressContentPart } from '../chatProgressContentPart.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
 
 export class ChatToolProgressSubPart extends BaseChatToolInvocationSubPart {
 	public readonly domNode: HTMLElement;

@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { ILanguageModelToolsService, ToolDataSource, VSCodeToolReference } from '../../common/languageModelToolsService.js';
-import { ConfirmationTool, ConfirmationToolData } from './confirmationTool.js';
-import { EditTool, EditToolData } from './editFileTool.js';
-import { createManageTodoListToolData, ManageTodoListTool, TodoListToolDescriptionFieldSettingId, TodoListToolWriteOnlySettingId } from './manageTodoListTool.js';
-import { RunSubagentTool } from './runSubagentTool.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { ILanguageModelToolsService, ToolDataSource, VSCodeToolReference } from '../../common/languageModelToolsService.ts';
+import { ConfirmationTool, ConfirmationToolData } from './confirmationTool.ts';
+import { EditTool, EditToolData } from './editFileTool.ts';
+import { createManageTodoListToolData, ManageTodoListTool, TodoListToolDescriptionFieldSettingId, TodoListToolWriteOnlySettingId } from './manageTodoListTool.ts';
+import { RunSubagentTool } from './runSubagentTool.ts';
 
 export class BuiltinToolsContribution extends Disposable implements IWorkbenchContribution {
 

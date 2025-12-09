@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { alert } from '../../../../base/browser/ui/aria/aria.js';
-import { localize } from '../../../../nls.js';
-import { INotificationViewItem, INotificationsModel, NotificationChangeType, INotificationChangeEvent, NotificationViewItemContentChangeKind } from '../../../common/notifications.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { toErrorMessage } from '../../../../base/common/errorMessage.js';
-import { NotificationPriority, Severity } from '../../../../platform/notification/common/notification.js';
-import { Event } from '../../../../base/common/event.js';
+import { alert } from '../../../../base/browser/ui/aria/aria.ts';
+import { localize } from '../../../../nls.ts';
+import { INotificationViewItem, INotificationsModel, NotificationChangeType, INotificationChangeEvent, NotificationViewItemContentChangeKind } from '../../../common/notifications.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { toErrorMessage } from '../../../../base/common/errorMessage.ts';
+import { NotificationPriority, Severity } from '../../../../platform/notification/common/notification.ts';
+import { Event } from '../../../../base/common/event.ts';
 
 export class NotificationsAlerts extends Disposable {
 

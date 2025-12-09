@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ILoggerOptions, ILoggerResource, ILoggerService, ILogService, isLogLevel, log, LogLevel, LogLevelToString, parseLogLevel } from '../../../platform/log/common/log.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { ExtHostContext, MainThreadLoggerShape, MainContext } from '../common/extHost.protocol.js';
-import { UriComponents, URI, UriDto } from '../../../base/common/uri.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { CommandsRegistry } from '../../../platform/commands/common/commands.js';
-import { IEnvironmentService } from '../../../platform/environment/common/environment.js';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ILoggerOptions, ILoggerResource, ILoggerService, ILogService, isLogLevel, log, LogLevel, LogLevelToString, parseLogLevel } from '../../../platform/log/common/log.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { ExtHostContext, MainThreadLoggerShape, MainContext } from '../common/extHost.protocol.ts';
+import { UriComponents, URI, UriDto } from '../../../base/common/uri.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { CommandsRegistry } from '../../../platform/commands/common/commands.ts';
+import { IEnvironmentService } from '../../../platform/environment/common/environment.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadLogger)
 export class MainThreadLoggerService implements MainThreadLoggerShape {

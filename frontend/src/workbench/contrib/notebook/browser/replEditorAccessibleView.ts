@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ServicesAccessor } from '../../../../editor/browser/editorExtensions.js';
-import { AccessibleViewType, AccessibleContentProvider, AccessibleViewProviderId } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { isReplEditorControl } from '../../replNotebook/browser/replEditor.js';
-import { IS_COMPOSITE_NOTEBOOK, NOTEBOOK_CELL_LIST_FOCUSED } from '../common/notebookContextKeys.js';
-import { getAllOutputsText } from './viewModel/cellOutputTextHelper.js';
+import { ServicesAccessor } from '../../../../editor/browser/editorExtensions.ts';
+import { AccessibleViewType, AccessibleContentProvider, AccessibleViewProviderId } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { isReplEditorControl } from '../../replNotebook/browser/replEditor.ts';
+import { IS_COMPOSITE_NOTEBOOK, NOTEBOOK_CELL_LIST_FOCUSED } from '../common/notebookContextKeys.ts';
+import { getAllOutputsText } from './viewModel/cellOutputTextHelper.ts';
 
 /**
  * The REPL input is already accessible, so we can show a view for the most recent execution output.

@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { combinedDisposable, Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { NotebookTextModel } from '../../common/model/notebookTextModel.js';
-import { CellEditType, CellUri, ICellEditOperation, NotebookCellExecutionState, NotebookCellInternalMetadata, NotebookExecutionState, NotebookTextModelWillAddRemoveEvent } from '../../common/notebookCommon.js';
-import { CellExecutionUpdateType, INotebookExecutionService } from '../../common/notebookExecutionService.js';
-import { ICellExecuteUpdate, ICellExecutionComplete, ICellExecutionStateChangedEvent, ICellExecutionStateUpdate, IExecutionStateChangedEvent, IFailedCellInfo, INotebookCellExecution, INotebookExecution, INotebookExecutionStateService, INotebookFailStateChangedEvent, NotebookExecutionType } from '../../common/notebookExecutionStateService.js';
-import { INotebookKernelService } from '../../common/notebookKernelService.js';
-import { INotebookService } from '../../common/notebookService.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { combinedDisposable, Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { NotebookTextModel } from '../../common/model/notebookTextModel.ts';
+import { CellEditType, CellUri, ICellEditOperation, NotebookCellExecutionState, NotebookCellInternalMetadata, NotebookExecutionState, NotebookTextModelWillAddRemoveEvent } from '../../common/notebookCommon.ts';
+import { CellExecutionUpdateType, INotebookExecutionService } from '../../common/notebookExecutionService.ts';
+import { ICellExecuteUpdate, ICellExecutionComplete, ICellExecutionStateChangedEvent, ICellExecutionStateUpdate, IExecutionStateChangedEvent, IFailedCellInfo, INotebookCellExecution, INotebookExecution, INotebookExecutionStateService, INotebookFailStateChangedEvent, NotebookExecutionType } from '../../common/notebookExecutionStateService.ts';
+import { INotebookKernelService } from '../../common/notebookKernelService.ts';
+import { INotebookService } from '../../common/notebookService.ts';
 
 export class NotebookExecutionStateService extends Disposable implements INotebookExecutionStateService {
 	declare _serviceBrand: undefined;

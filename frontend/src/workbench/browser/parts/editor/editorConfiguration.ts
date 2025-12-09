@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions, IConfigurationNode, ConfigurationScope } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { workbenchConfigurationNodeBase } from '../../../common/configuration.js';
-import { IEditorResolverService, RegisteredEditorInfo, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.js';
-import { IJSONSchemaMap } from '../../../../base/common/jsonSchema.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { coalesce } from '../../../../base/common/arrays.js';
-import { Event } from '../../../../base/common/event.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { ByteSize, getLargeFileConfirmationLimit } from '../../../../platform/files/common/files.js';
+import { localize } from '../../../../nls.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions, IConfigurationNode, ConfigurationScope } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { workbenchConfigurationNodeBase } from '../../../common/configuration.ts';
+import { IEditorResolverService, RegisteredEditorInfo, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.ts';
+import { IJSONSchemaMap } from '../../../../base/common/jsonSchema.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { ByteSize, getLargeFileConfirmationLimit } from '../../../../platform/files/common/files.ts';
 
 export class DynamicEditorConfigurations extends Disposable implements IWorkbenchContribution {
 

@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.js';
-import { localize } from '../../../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { NotebookSetting } from '../../../common/notebookCommon.js';
+import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.ts';
+import { localize } from '../../../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { NotebookSetting } from '../../../common/notebookCommon.ts';
 
 export enum NotebookProfileType {
 	default = 'default',

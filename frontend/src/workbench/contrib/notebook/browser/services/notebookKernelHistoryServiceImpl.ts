@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { LinkedMap, Touch } from '../../../../../base/common/map.js';
-import { localize2 } from '../../../../../nls.js';
-import { Categories } from '../../../../../platform/action/common/actionCommonCategories.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
-import { INotebookKernel, INotebookKernelHistoryService, INotebookKernelService, INotebookTextModelLike } from '../../common/notebookKernelService.js';
-import { INotebookLoggingService } from '../../common/notebookLoggingService.js';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { LinkedMap, Touch } from '../../../../../base/common/map.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { Categories } from '../../../../../platform/action/common/actionCommonCategories.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
+import { INotebookKernel, INotebookKernelHistoryService, INotebookKernelService, INotebookTextModelLike } from '../../common/notebookKernelService.ts';
+import { INotebookLoggingService } from '../../common/notebookLoggingService.ts';
 
 interface ISerializedKernelsListPerType {
 	entries: string[];

@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { Event } from '../../../../base/common/event.js';
-import Severity from '../../../../base/common/severity.js';
-import { localize } from '../../../../nls.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
-import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
-import { ConfigurationTarget, IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { INotificationHandle, INotificationService, NotificationPriority } from '../../../../platform/notification/common/notification.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IStatusbarEntryAccessor, IStatusbarService, StatusbarAlignment } from '../../../services/statusbar/browser/statusbar.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
+import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { Event } from '../../../../base/common/event.ts';
+import Severity from '../../../../base/common/severity.ts';
+import { localize } from '../../../../nls.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.ts';
+import { ConfigurationTarget, IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { INotificationHandle, INotificationService, NotificationPriority } from '../../../../platform/notification/common/notification.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IStatusbarEntryAccessor, IStatusbarService, StatusbarAlignment } from '../../../services/statusbar/browser/statusbar.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
 
 export class AccessibilityStatus extends Disposable implements IWorkbenchContribution {
 

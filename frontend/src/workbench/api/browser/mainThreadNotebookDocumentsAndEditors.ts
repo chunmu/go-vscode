@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { diffMaps, diffSets } from '../../../base/common/collections.js';
-import { combinedDisposable, DisposableStore, DisposableMap } from '../../../base/common/lifecycle.js';
-import { URI } from '../../../base/common/uri.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { MainThreadNotebookDocuments } from './mainThreadNotebookDocuments.js';
-import { NotebookDto } from './mainThreadNotebookDto.js';
-import { MainThreadNotebookEditors } from './mainThreadNotebookEditors.js';
-import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.js';
-import { getNotebookEditorFromEditorPane, IActiveNotebookEditor, INotebookEditor } from '../../contrib/notebook/browser/notebookBrowser.js';
-import { INotebookEditorService } from '../../contrib/notebook/browser/services/notebookEditorService.js';
-import { NotebookTextModel } from '../../contrib/notebook/common/model/notebookTextModel.js';
-import { INotebookService } from '../../contrib/notebook/common/notebookService.js';
-import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { ExtHostContext, ExtHostNotebookShape, INotebookDocumentsAndEditorsDelta, INotebookEditorAddData, INotebookModelAddedData, MainContext } from '../common/extHost.protocol.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { diffMaps, diffSets } from '../../../base/common/collections.ts';
+import { combinedDisposable, DisposableStore, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { MainThreadNotebookDocuments } from './mainThreadNotebookDocuments.ts';
+import { NotebookDto } from './mainThreadNotebookDto.ts';
+import { MainThreadNotebookEditors } from './mainThreadNotebookEditors.ts';
+import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.ts';
+import { getNotebookEditorFromEditorPane, IActiveNotebookEditor, INotebookEditor } from '../../contrib/notebook/browser/notebookBrowser.ts';
+import { INotebookEditorService } from '../../contrib/notebook/browser/services/notebookEditorService.ts';
+import { NotebookTextModel } from '../../contrib/notebook/common/model/notebookTextModel.ts';
+import { INotebookService } from '../../contrib/notebook/common/notebookService.ts';
+import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { ExtHostContext, ExtHostNotebookShape, INotebookDocumentsAndEditorsDelta, INotebookEditorAddData, INotebookModelAddedData, MainContext } from '../common/extHost.protocol.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 
 interface INotebookAndEditorDelta {
 	removedDocuments: URI[];

@@ -4,12 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { ExtHostChatOutputRendererShape, IMainContext, MainContext, MainThreadChatOutputRendererShape } from './extHost.protocol.js';
-import { Disposable } from './extHostTypes.js';
-import { ExtHostWebviews } from './extHostWebview.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { ExtHostChatOutputRendererShape, IMainContext, MainContext, MainThreadChatOutputRendererShape } from './extHost.protocol.ts';
+import { Disposable } from './extHostTypes.ts';
+import { ExtHostWebviews } from './extHostWebview.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
 
 export class ExtHostChatOutputRenderer implements ExtHostChatOutputRendererShape {
 

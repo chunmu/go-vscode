@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { Queue } from '../../../../base/common/async.js';
-import * as json from '../../../../base/common/json.js';
-import * as objects from '../../../../base/common/objects.js';
-import { setProperty } from '../../../../base/common/jsonEdit.js';
-import { Edit } from '../../../../base/common/jsonFormatter.js';
-import { Disposable, IReference } from '../../../../base/common/lifecycle.js';
-import { EditOperation } from '../../../../editor/common/core/editOperation.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { ITextModelService, IResolvedTextEditorModel } from '../../../../editor/common/services/resolverService.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IUserFriendlyKeybinding } from '../../../../platform/keybinding/common/keybinding.js';
-import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.js';
-import { ITextFileService } from '../../textfile/common/textfiles.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IUserDataProfileService } from '../../userDataProfile/common/userDataProfile.js';
+import { localize } from '../../../../nls.ts';
+import { Queue } from '../../../../base/common/async.ts';
+import * as json from '../../../../base/common/json.ts';
+import * as objects from '../../../../base/common/objects.ts';
+import { setProperty } from '../../../../base/common/jsonEdit.ts';
+import { Edit } from '../../../../base/common/jsonFormatter.ts';
+import { Disposable, IReference } from '../../../../base/common/lifecycle.ts';
+import { EditOperation } from '../../../../editor/common/core/editOperation.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { ITextModelService, IResolvedTextEditorModel } from '../../../../editor/common/services/resolverService.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IUserFriendlyKeybinding } from '../../../../platform/keybinding/common/keybinding.ts';
+import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
+import { ITextFileService } from '../../textfile/common/textfiles.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IUserDataProfileService } from '../../userDataProfile/common/userDataProfile.ts';
 
 export const IKeybindingEditingService = createDecorator<IKeybindingEditingService>('keybindingEditingService');
 

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ConfirmedReason } from '../../common/chatService.js';
-import { ILanguageModelToolConfirmationActions, ILanguageModelToolConfirmationContribution, ILanguageModelToolConfirmationRef, ILanguageModelToolsConfirmationService } from '../../common/languageModelToolsConfirmationService.js';
-import { IToolData } from '../../common/languageModelToolsService.js';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ConfirmedReason } from '../../common/chatService.ts';
+import { ILanguageModelToolConfirmationActions, ILanguageModelToolConfirmationContribution, ILanguageModelToolConfirmationRef, ILanguageModelToolsConfirmationService } from '../../common/languageModelToolsConfirmationService.ts';
+import { IToolData } from '../../common/languageModelToolsService.ts';
 
 export class MockLanguageModelToolsConfirmationService implements ILanguageModelToolsConfirmationService {
 	manageConfirmationPreferences(tools: Readonly<IToolData>[], options?: { defaultScope?: 'workspace' | 'profile' | 'session' }): void {

@@ -4,27 +4,27 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { coalesce } from '../../../base/common/arrays.js';
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { CancellationError } from '../../../base/common/errors.js';
-import { Disposable, DisposableStore } from '../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../base/common/map.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IChatAgentRequest, IChatAgentResult } from '../../contrib/chat/common/chatAgents.js';
-import { ChatSessionStatus, IChatSessionItem } from '../../contrib/chat/common/chatSessionsService.js';
-import { ChatAgentLocation } from '../../contrib/chat/common/constants.js';
-import { Proxied } from '../../services/extensions/common/proxyIdentifier.js';
-import { ChatSessionDto, ExtHostChatSessionsShape, IChatAgentProgressShape, IChatSessionProviderOptions, MainContext, MainThreadChatSessionsShape } from './extHost.protocol.js';
-import { ChatAgentResponseStream } from './extHostChatAgents2.js';
-import { CommandsConverter, ExtHostCommands } from './extHostCommands.js';
-import { ExtHostLanguageModels } from './extHostLanguageModels.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import * as typeConvert from './extHostTypeConverters.js';
-import * as extHostTypes from './extHostTypes.js';
+import { coalesce } from '../../../base/common/arrays.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { CancellationError } from '../../../base/common/errors.ts';
+import { Disposable, DisposableStore } from '../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../base/common/map.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IChatAgentRequest, IChatAgentResult } from '../../contrib/chat/common/chatAgents.ts';
+import { ChatSessionStatus, IChatSessionItem } from '../../contrib/chat/common/chatSessionsService.ts';
+import { ChatAgentLocation } from '../../contrib/chat/common/constants.ts';
+import { Proxied } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ChatSessionDto, ExtHostChatSessionsShape, IChatAgentProgressShape, IChatSessionProviderOptions, MainContext, MainThreadChatSessionsShape } from './extHost.protocol.ts';
+import { ChatAgentResponseStream } from './extHostChatAgents2.ts';
+import { CommandsConverter, ExtHostCommands } from './extHostCommands.ts';
+import { ExtHostLanguageModels } from './extHostLanguageModels.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import * as typeConvert from './extHostTypeConverters.ts';
+import * as extHostTypes from './extHostTypes.ts';
 
 class ExtHostChatSession {
 	private _stream: ChatAgentResponseStream;

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { addDisposableListener, isActiveElement } from '../../../../../base/browser/dom.js';
-import { Disposable, IDisposable, combinedDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';
-import { InlineAnchorWidget } from '../chatInlineAnchorWidget.js';
+import { addDisposableListener, isActiveElement } from '../../../../../base/browser/dom.ts';
+import { Disposable, IDisposable, combinedDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { InlineAnchorWidget } from '../chatInlineAnchorWidget.ts';
 
 
 export const IChatMarkdownAnchorService = createDecorator<IChatMarkdownAnchorService>('chatMarkdownAnchorService');

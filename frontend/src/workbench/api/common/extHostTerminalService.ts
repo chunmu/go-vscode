@@ -4,31 +4,31 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { Event, Emitter } from '../../../base/common/event.js';
-import { ExtHostTerminalServiceShape, MainContext, MainThreadTerminalServiceShape, ITerminalDimensionsDto, ITerminalLinkDto, ExtHostTerminalIdentifier, ICommandDto, ITerminalQuickFixOpenerDto, ITerminalQuickFixTerminalCommandDto, TerminalCommandMatchResultDto, ITerminalCommandDto, ITerminalCompletionContextDto, TerminalCompletionListDto } from './extHost.protocol.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { URI } from '../../../base/common/uri.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { IDisposable, DisposableStore, Disposable, MutableDisposable } from '../../../base/common/lifecycle.js';
-import { Disposable as VSCodeDisposable, EnvironmentVariableMutatorType, TerminalExitReason, TerminalCompletionItem } from './extHostTypes.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { localize } from '../../../nls.js';
-import { NotSupportedError } from '../../../base/common/errors.js';
-import { serializeEnvironmentDescriptionMap, serializeEnvironmentVariableCollection } from '../../../platform/terminal/common/environmentVariableShared.js';
-import { CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { IEnvironmentVariableCollectionDescription, IEnvironmentVariableMutator, ISerializableEnvironmentVariableCollection } from '../../../platform/terminal/common/environmentVariable.js';
-import { ICreateContributedTerminalProfileOptions, IProcessReadyEvent, IShellLaunchConfigDto, ITerminalChildProcess, ITerminalLaunchError, ITerminalProfile, TerminalIcon, TerminalLocation, IProcessProperty, ProcessPropertyType, IProcessPropertyMap, TerminalShellType, WindowsShellType } from '../../../platform/terminal/common/terminal.js';
-import { TerminalDataBufferer } from '../../../platform/terminal/common/terminalDataBuffering.js';
-import { ThemeColor } from '../../../base/common/themables.js';
-import { Promises } from '../../../base/common/async.js';
-import { EditorGroupColumn } from '../../services/editor/common/editorGroupColumn.js';
-import { TerminalCompletionList, TerminalQuickFix, ViewColumn } from './extHostTypeConverters.js';
-import { IExtHostCommands } from './extHostCommands.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { ISerializedTerminalInstanceContext } from '../../contrib/terminal/common/terminal.js';
-import { isWindows } from '../../../base/common/platform.js';
-import { hasKey } from '../../../base/common/types.js';
+import { Event, Emitter } from '../../../base/common/event.ts';
+import { ExtHostTerminalServiceShape, MainContext, MainThreadTerminalServiceShape, ITerminalDimensionsDto, ITerminalLinkDto, ExtHostTerminalIdentifier, ICommandDto, ITerminalQuickFixOpenerDto, ITerminalQuickFixTerminalCommandDto, TerminalCommandMatchResultDto, ITerminalCommandDto, ITerminalCompletionContextDto, TerminalCompletionListDto } from './extHost.protocol.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { IDisposable, DisposableStore, Disposable, MutableDisposable } from '../../../base/common/lifecycle.ts';
+import { Disposable as VSCodeDisposable, EnvironmentVariableMutatorType, TerminalExitReason, TerminalCompletionItem } from './extHostTypes.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { localize } from '../../../nls.ts';
+import { NotSupportedError } from '../../../base/common/errors.ts';
+import { serializeEnvironmentDescriptionMap, serializeEnvironmentVariableCollection } from '../../../platform/terminal/common/environmentVariableShared.ts';
+import { CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { IEnvironmentVariableCollectionDescription, IEnvironmentVariableMutator, ISerializableEnvironmentVariableCollection } from '../../../platform/terminal/common/environmentVariable.ts';
+import { ICreateContributedTerminalProfileOptions, IProcessReadyEvent, IShellLaunchConfigDto, ITerminalChildProcess, ITerminalLaunchError, ITerminalProfile, TerminalIcon, TerminalLocation, IProcessProperty, ProcessPropertyType, IProcessPropertyMap, TerminalShellType, WindowsShellType } from '../../../platform/terminal/common/terminal.ts';
+import { TerminalDataBufferer } from '../../../platform/terminal/common/terminalDataBuffering.ts';
+import { ThemeColor } from '../../../base/common/themables.ts';
+import { Promises } from '../../../base/common/async.ts';
+import { EditorGroupColumn } from '../../services/editor/common/editorGroupColumn.ts';
+import { TerminalCompletionList, TerminalQuickFix, ViewColumn } from './extHostTypeConverters.ts';
+import { IExtHostCommands } from './extHostCommands.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { ISerializedTerminalInstanceContext } from '../../contrib/terminal/common/terminal.ts';
+import { isWindows } from '../../../base/common/platform.ts';
+import { hasKey } from '../../../base/common/types.ts';
 
 export interface IExtHostTerminalService extends ExtHostTerminalServiceShape, IDisposable {
 

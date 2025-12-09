@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { toAction } from '../../../base/common/actions.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { SerializedError, transformErrorFromSerialization } from '../../../base/common/errors.js';
-import { FileAccess } from '../../../base/common/network.js';
-import Severity from '../../../base/common/severity.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { ICommandService } from '../../../platform/commands/common/commands.js';
-import { ILocalExtension } from '../../../platform/extensionManagement/common/extensionManagement.js';
-import { areSameExtensions } from '../../../platform/extensionManagement/common/extensionManagementUtil.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { INotificationService } from '../../../platform/notification/common/notification.js';
-import { IRemoteConnectionData, ManagedRemoteConnection, RemoteConnection, RemoteConnectionType, ResolvedAuthority, WebSocketRemoteConnection } from '../../../platform/remote/common/remoteAuthorityResolver.js';
-import { ExtHostContext, ExtHostExtensionServiceShape, MainContext, MainThreadExtensionServiceShape } from '../common/extHost.protocol.js';
-import { IExtension, IExtensionsWorkbenchService } from '../../contrib/extensions/common/extensions.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { EnablementState, IWorkbenchExtensionEnablementService } from '../../services/extensionManagement/common/extensionManagement.js';
-import { ExtensionHostKind } from '../../services/extensions/common/extensionHostKind.js';
-import { IExtensionDescriptionDelta } from '../../services/extensions/common/extensionHostProtocol.js';
-import { IExtensionHostProxy, IResolveAuthorityResult } from '../../services/extensions/common/extensionHostProxy.js';
-import { ActivationKind, ExtensionActivationReason, IExtensionService, IInternalExtensionService, MissingExtensionDependency } from '../../services/extensions/common/extensions.js';
-import { extHostNamedCustomer, IExtHostContext, IInternalExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { Dto } from '../../services/extensions/common/proxyIdentifier.js';
-import { IHostService } from '../../services/host/browser/host.js';
-import { ITimerService } from '../../services/timer/browser/timerService.js';
+import { toAction } from '../../../base/common/actions.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { SerializedError, transformErrorFromSerialization } from '../../../base/common/errors.ts';
+import { FileAccess } from '../../../base/common/network.ts';
+import Severity from '../../../base/common/severity.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { ICommandService } from '../../../platform/commands/common/commands.ts';
+import { ILocalExtension } from '../../../platform/extensionManagement/common/extensionManagement.ts';
+import { areSameExtensions } from '../../../platform/extensionManagement/common/extensionManagementUtil.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { INotificationService } from '../../../platform/notification/common/notification.ts';
+import { IRemoteConnectionData, ManagedRemoteConnection, RemoteConnection, RemoteConnectionType, ResolvedAuthority, WebSocketRemoteConnection } from '../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { ExtHostContext, ExtHostExtensionServiceShape, MainContext, MainThreadExtensionServiceShape } from '../common/extHost.protocol.ts';
+import { IExtension, IExtensionsWorkbenchService } from '../../contrib/extensions/common/extensions.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { EnablementState, IWorkbenchExtensionEnablementService } from '../../services/extensionManagement/common/extensionManagement.ts';
+import { ExtensionHostKind } from '../../services/extensions/common/extensionHostKind.ts';
+import { IExtensionDescriptionDelta } from '../../services/extensions/common/extensionHostProtocol.ts';
+import { IExtensionHostProxy, IResolveAuthorityResult } from '../../services/extensions/common/extensionHostProxy.ts';
+import { ActivationKind, ExtensionActivationReason, IExtensionService, IInternalExtensionService, MissingExtensionDependency } from '../../services/extensions/common/extensions.ts';
+import { extHostNamedCustomer, IExtHostContext, IInternalExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { Dto } from '../../services/extensions/common/proxyIdentifier.ts';
+import { IHostService } from '../../services/host/browser/host.ts';
+import { ITimerService } from '../../services/timer/browser/timerService.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadExtensionService)
 export class MainThreadExtensionService implements MainThreadExtensionServiceShape {

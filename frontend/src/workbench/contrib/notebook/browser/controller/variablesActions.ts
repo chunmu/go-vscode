@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize2 } from '../../../../../nls.js';
-import { MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IViewsService } from '../../../../services/views/common/viewsService.js';
-import { KERNEL_HAS_VARIABLE_PROVIDER } from '../../common/notebookContextKeys.js';
-import { NOTEBOOK_VARIABLE_VIEW_ENABLED } from '../contrib/notebookVariables/notebookVariableContextKeys.js';
-import * as icons from '../notebookIcons.js';
+import { localize2 } from '../../../../../nls.ts';
+import { MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IViewsService } from '../../../../services/views/common/viewsService.ts';
+import { KERNEL_HAS_VARIABLE_PROVIDER } from '../../common/notebookContextKeys.ts';
+import { NOTEBOOK_VARIABLE_VIEW_ENABLED } from '../contrib/notebookVariables/notebookVariableContextKeys.ts';
+import * as icons from '../notebookIcons.ts';
 
-import { INotebookActionContext, NotebookAction } from './coreActions.js';
+import { INotebookActionContext, NotebookAction } from './coreActions.ts';
 
 const OPEN_VARIABLES_VIEW_COMMAND_ID = 'notebook.openVariablesView';
 

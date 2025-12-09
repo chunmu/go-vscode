@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ExtHostChatContextShape, MainContext, MainThreadChatContextShape } from './extHost.protocol.js';
-import { DocumentSelector } from './extHostTypeConverters.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { IChatContextItem } from '../../contrib/chat/common/chatContext.js';
-import { Disposable, DisposableStore } from '../../../base/common/lifecycle.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ExtHostChatContextShape, MainContext, MainThreadChatContextShape } from './extHost.protocol.ts';
+import { DocumentSelector } from './extHostTypeConverters.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { IChatContextItem } from '../../contrib/chat/common/chatContext.ts';
+import { Disposable, DisposableStore } from '../../../base/common/lifecycle.ts';
 
 export class ExtHostChatContext extends Disposable implements ExtHostChatContextShape {
 	declare _serviceBrand: undefined;

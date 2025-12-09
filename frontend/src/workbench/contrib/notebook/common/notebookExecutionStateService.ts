@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../../base/common/uri.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { NotebookCellExecutionState, NotebookExecutionState } from './notebookCommon.js';
-import { CellExecutionUpdateType, ICellExecuteOutputEdit, ICellExecuteOutputItemEdit } from './notebookExecutionService.js';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../../base/common/uri.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { NotebookCellExecutionState, NotebookExecutionState } from './notebookCommon.ts';
+import { CellExecutionUpdateType, ICellExecuteOutputEdit, ICellExecuteOutputItemEdit } from './notebookExecutionService.ts';
 
 export type ICellExecuteUpdate = ICellExecuteOutputEdit | ICellExecuteOutputItemEdit | ICellExecutionStateUpdate;
 

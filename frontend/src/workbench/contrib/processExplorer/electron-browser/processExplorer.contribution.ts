@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { EditorPaneDescriptor, IEditorPaneRegistry } from '../../../browser/editor.js';
-import { EditorExtensions } from '../../../common/editor.js';
-import { NativeProcessExplorerEditor } from './processExplorerEditor.js';
-import { ProcessExplorerEditorInput } from '../browser/processExplorerEditorInput.js';
+import { localize } from '../../../../nls.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { EditorPaneDescriptor, IEditorPaneRegistry } from '../../../browser/editor.ts';
+import { EditorExtensions } from '../../../common/editor.ts';
+import { NativeProcessExplorerEditor } from './processExplorerEditor.ts';
+import { ProcessExplorerEditorInput } from '../browser/processExplorerEditorInput.ts';
 
 Registry.as<IEditorPaneRegistry>(EditorExtensions.EditorPane).registerEditorPane(
 	EditorPaneDescriptor.create(NativeProcessExplorerEditor, NativeProcessExplorerEditor.ID, localize('processExplorer', "Process Explorer")),

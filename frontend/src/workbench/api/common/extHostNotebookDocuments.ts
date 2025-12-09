@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import * as extHostProtocol from './extHost.protocol.js';
-import { ExtHostNotebookController } from './extHostNotebook.js';
-import { NotebookDocumentMetadata } from '../../contrib/notebook/common/notebookCommon.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import * as extHostProtocol from './extHost.protocol.ts';
+import { ExtHostNotebookController } from './extHostNotebook.ts';
+import { NotebookDocumentMetadata } from '../../contrib/notebook/common/notebookCommon.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 import type * as vscode from 'vscode';
 
 export class ExtHostNotebookDocuments implements extHostProtocol.ExtHostNotebookDocumentsShape {

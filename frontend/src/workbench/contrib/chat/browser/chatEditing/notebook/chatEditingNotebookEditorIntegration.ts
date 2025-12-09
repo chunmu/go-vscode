@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ActionViewItem } from '../../../../../../base/browser/ui/actionbar/actionViewItems.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { autorun, debouncedObservable, IObservable, ISettableObservable, observableFromEvent, observableValue } from '../../../../../../base/common/observable.js';
-import { basename } from '../../../../../../base/common/resources.js';
-import { assertType } from '../../../../../../base/common/types.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { LineRange } from '../../../../../../editor/common/core/ranges/lineRange.js';
-import { nullDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.js';
-import { PrefixSumComputer } from '../../../../../../editor/common/model/prefixSumComputer.js';
-import { localize } from '../../../../../../nls.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { MenuId } from '../../../../../../platform/actions/common/actions.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../../../platform/log/common/log.js';
-import { IEditorPane, IResourceDiffEditorInput } from '../../../../../common/editor.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { NotebookDeletedCellDecorator } from '../../../../notebook/browser/diff/inlineDiff/notebookDeletedCellDecorator.js';
-import { NotebookInsertedCellDecorator } from '../../../../notebook/browser/diff/inlineDiff/notebookInsertedCellDecorator.js';
-import { NotebookModifiedCellDecorator } from '../../../../notebook/browser/diff/inlineDiff/notebookModifiedCellDecorator.js';
-import { INotebookTextDiffEditor } from '../../../../notebook/browser/diff/notebookDiffEditorBrowser.js';
-import { CellEditState, getNotebookEditorFromEditorPane, ICellViewModel, INotebookEditor } from '../../../../notebook/browser/notebookBrowser.js';
-import { INotebookEditorService } from '../../../../notebook/browser/services/notebookEditorService.js';
-import { NotebookCellTextModel } from '../../../../notebook/common/model/notebookCellTextModel.js';
-import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.js';
-import { CellKind } from '../../../../notebook/common/notebookCommon.js';
-import { IModifiedFileEntryChangeHunk, IModifiedFileEntryEditorIntegration } from '../../../common/chatEditingService.js';
-import { ChatEditingCodeEditorIntegration, IDocumentDiff2 } from '../chatEditingCodeEditorIntegration.js';
-import { ChatEditingModifiedNotebookEntry } from '../chatEditingModifiedNotebookEntry.js';
-import { countChanges, ICellDiffInfo, sortCellChanges } from './notebookCellChanges.js';
-import { OverlayToolbarDecorator } from './overlayToolbarDecorator.js';
+import { ActionViewItem } from '../../../../../../base/browser/ui/actionbar/actionViewItems.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { autorun, debouncedObservable, IObservable, ISettableObservable, observableFromEvent, observableValue } from '../../../../../../base/common/observable.ts';
+import { basename } from '../../../../../../base/common/resources.ts';
+import { assertType } from '../../../../../../base/common/types.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { LineRange } from '../../../../../../editor/common/core/ranges/lineRange.ts';
+import { nullDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.ts';
+import { PrefixSumComputer } from '../../../../../../editor/common/model/prefixSumComputer.ts';
+import { localize } from '../../../../../../nls.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { MenuId } from '../../../../../../platform/actions/common/actions.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../../../platform/log/common/log.ts';
+import { IEditorPane, IResourceDiffEditorInput } from '../../../../../common/editor.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { NotebookDeletedCellDecorator } from '../../../../notebook/browser/diff/inlineDiff/notebookDeletedCellDecorator.ts';
+import { NotebookInsertedCellDecorator } from '../../../../notebook/browser/diff/inlineDiff/notebookInsertedCellDecorator.ts';
+import { NotebookModifiedCellDecorator } from '../../../../notebook/browser/diff/inlineDiff/notebookModifiedCellDecorator.ts';
+import { INotebookTextDiffEditor } from '../../../../notebook/browser/diff/notebookDiffEditorBrowser.ts';
+import { CellEditState, getNotebookEditorFromEditorPane, ICellViewModel, INotebookEditor } from '../../../../notebook/browser/notebookBrowser.ts';
+import { INotebookEditorService } from '../../../../notebook/browser/services/notebookEditorService.ts';
+import { NotebookCellTextModel } from '../../../../notebook/common/model/notebookCellTextModel.ts';
+import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.ts';
+import { CellKind } from '../../../../notebook/common/notebookCommon.ts';
+import { IModifiedFileEntryChangeHunk, IModifiedFileEntryEditorIntegration } from '../../../common/chatEditingService.ts';
+import { ChatEditingCodeEditorIntegration, IDocumentDiff2 } from '../chatEditingCodeEditorIntegration.ts';
+import { ChatEditingModifiedNotebookEntry } from '../chatEditingModifiedNotebookEntry.ts';
+import { countChanges, ICellDiffInfo, sortCellChanges } from './notebookCellChanges.ts';
+import { OverlayToolbarDecorator } from './overlayToolbarDecorator.ts';
 
 export class ChatEditingNotebookEditorIntegration extends Disposable implements IModifiedFileEntryEditorIntegration {
 	private integration: ChatEditingNotebookEditorWidgetIntegration;

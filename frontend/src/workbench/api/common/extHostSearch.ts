@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
+import { IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
 import type * as vscode from 'vscode';
-import { ExtHostSearchShape, MainThreadSearchShape, MainContext } from './extHost.protocol.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { FileSearchManager } from '../../services/search/common/fileSearchManager.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { IURITransformerService } from './extHostUriTransformerService.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IRawFileQuery, ISearchCompleteStats, IFileQuery, IRawTextQuery, IRawQuery, ITextQuery, IFolderQuery, IRawAITextQuery, IAITextQuery } from '../../services/search/common/search.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { TextSearchManager } from '../../services/search/common/textSearchManager.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { OldFileSearchProviderConverter, OldTextSearchProviderConverter } from '../../services/search/common/searchExtConversionTypes.js';
+import { ExtHostSearchShape, MainThreadSearchShape, MainContext } from './extHost.protocol.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { FileSearchManager } from '../../services/search/common/fileSearchManager.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { IURITransformerService } from './extHostUriTransformerService.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IRawFileQuery, ISearchCompleteStats, IFileQuery, IRawTextQuery, IRawQuery, ITextQuery, IFolderQuery, IRawAITextQuery, IAITextQuery } from '../../services/search/common/search.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { TextSearchManager } from '../../services/search/common/textSearchManager.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { OldFileSearchProviderConverter, OldTextSearchProviderConverter } from '../../services/search/common/searchExtConversionTypes.ts';
 
 export interface IExtHostSearch extends ExtHostSearchShape {
 	registerTextSearchProviderOld(scheme: string, provider: vscode.TextSearchProvider): IDisposable;

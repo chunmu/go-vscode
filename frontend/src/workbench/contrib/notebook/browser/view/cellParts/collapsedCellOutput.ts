@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { localize } from '../../../../../../nls.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { EXPAND_CELL_OUTPUT_COMMAND_ID, INotebookEditor } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { EXPAND_CELL_OUTPUT_COMMAND_ID, INotebookEditor } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
 
 const $ = DOM.$;
 

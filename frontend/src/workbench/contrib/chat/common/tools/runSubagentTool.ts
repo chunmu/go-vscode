@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { IChatAgentRequest, IChatAgentService } from '../chatAgents.js';
-import { ChatModel, IChatRequestModeInstructions } from '../chatModel.js';
-import { IChatModeService } from '../chatModes.js';
-import { IChatProgress, IChatService } from '../chatService.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../constants.js';
-import { ILanguageModelChatMetadata, ILanguageModelsService } from '../languageModels.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { IChatAgentRequest, IChatAgentService } from '../chatAgents.ts';
+import { ChatModel, IChatRequestModeInstructions } from '../chatModel.ts';
+import { IChatModeService } from '../chatModes.ts';
+import { IChatProgress, IChatService } from '../chatService.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../constants.ts';
+import { ILanguageModelChatMetadata, ILanguageModelsService } from '../languageModels.ts';
 import {
 	CountTokensCallback,
 	ILanguageModelToolsService,
@@ -30,9 +30,9 @@ import {
 	ToolProgress,
 	ToolSet,
 	VSCodeToolReference
-} from '../languageModelToolsService.js';
-import { ManageTodoListToolToolId } from './manageTodoListTool.js';
-import { createToolSimpleTextResult } from './toolHelpers.js';
+} from '../languageModelToolsService.ts';
+import { ManageTodoListToolToolId } from './manageTodoListTool.ts';
+import { createToolSimpleTextResult } from './toolHelpers.ts';
 
 export const RunSubagentToolId = 'runSubagent';
 

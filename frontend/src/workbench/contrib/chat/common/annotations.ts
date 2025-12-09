@@ -2,13 +2,13 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { findLastIdx } from '../../../../base/common/arraysFind.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { basename } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { IChatProgressRenderableResponseContent, IChatProgressResponseContent, appendMarkdownString, canMergeMarkdownStrings } from './chatModel.js';
-import { IChatAgentVulnerabilityDetails, IChatMarkdownContent } from './chatService.js';
+import { findLastIdx } from '../../../../base/common/arraysFind.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { basename } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { IChatProgressRenderableResponseContent, IChatProgressResponseContent, appendMarkdownString, canMergeMarkdownStrings } from './chatModel.ts';
+import { IChatAgentVulnerabilityDetails, IChatMarkdownContent } from './chatService.ts';
 
 export const contentRefUrl = 'http://_vscodecontentref_'; // must be lowercase for URI
 

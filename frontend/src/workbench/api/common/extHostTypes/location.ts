@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { URI } from '../../../../base/common/uri.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Position } from './position.js';
-import { Range } from './range.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Position } from './position.ts';
+import { Range } from './range.ts';
 
 @es5ClassCompat
 export class Location {

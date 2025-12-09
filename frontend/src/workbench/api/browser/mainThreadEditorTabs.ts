@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { DisposableMap, DisposableStore } from '../../../base/common/lifecycle.js';
-import { isEqual } from '../../../base/common/resources.js';
-import { URI } from '../../../base/common/uri.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { AnyInputDto, ExtHostContext, IEditorTabDto, IEditorTabGroupDto, IExtHostEditorTabsShape, MainContext, MainThreadEditorTabsShape, TabInputKind, TabModelOperationKind, TextDiffInputDto } from '../common/extHost.protocol.js';
-import { EditorResourceAccessor, GroupModelChangeKind, SideBySideEditor } from '../../common/editor.js';
-import { DiffEditorInput } from '../../common/editor/diffEditorInput.js';
-import { isGroupEditorMoveEvent } from '../../common/editor/editorGroupModel.js';
-import { EditorInput } from '../../common/editor/editorInput.js';
-import { SideBySideEditorInput } from '../../common/editor/sideBySideEditorInput.js';
-import { AbstractTextResourceEditorInput } from '../../common/editor/textResourceEditorInput.js';
-import { ChatEditorInput } from '../../contrib/chat/browser/chatEditorInput.js';
-import { CustomEditorInput } from '../../contrib/customEditor/browser/customEditorInput.js';
-import { InteractiveEditorInput } from '../../contrib/interactive/browser/interactiveEditorInput.js';
-import { MergeEditorInput } from '../../contrib/mergeEditor/browser/mergeEditorInput.js';
-import { MultiDiffEditorInput } from '../../contrib/multiDiffEditor/browser/multiDiffEditorInput.js';
-import { NotebookEditorInput } from '../../contrib/notebook/common/notebookEditorInput.js';
-import { TerminalEditorInput } from '../../contrib/terminal/browser/terminalEditorInput.js';
-import { WebviewInput } from '../../contrib/webviewPanel/browser/webviewEditorInput.js';
-import { columnToEditorGroup, EditorGroupColumn, editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.js';
-import { GroupDirection, IEditorGroup, IEditorGroupsService, preferredSideBySideGroupDirection } from '../../services/editor/common/editorGroupsService.js';
-import { IEditorsChangeEvent, IEditorService, SIDE_GROUP } from '../../services/editor/common/editorService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
+import { Event } from '../../../base/common/event.ts';
+import { DisposableMap, DisposableStore } from '../../../base/common/lifecycle.ts';
+import { isEqual } from '../../../base/common/resources.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { AnyInputDto, ExtHostContext, IEditorTabDto, IEditorTabGroupDto, IExtHostEditorTabsShape, MainContext, MainThreadEditorTabsShape, TabInputKind, TabModelOperationKind, TextDiffInputDto } from '../common/extHost.protocol.ts';
+import { EditorResourceAccessor, GroupModelChangeKind, SideBySideEditor } from '../../common/editor.ts';
+import { DiffEditorInput } from '../../common/editor/diffEditorInput.ts';
+import { isGroupEditorMoveEvent } from '../../common/editor/editorGroupModel.ts';
+import { EditorInput } from '../../common/editor/editorInput.ts';
+import { SideBySideEditorInput } from '../../common/editor/sideBySideEditorInput.ts';
+import { AbstractTextResourceEditorInput } from '../../common/editor/textResourceEditorInput.ts';
+import { ChatEditorInput } from '../../contrib/chat/browser/chatEditorInput.ts';
+import { CustomEditorInput } from '../../contrib/customEditor/browser/customEditorInput.ts';
+import { InteractiveEditorInput } from '../../contrib/interactive/browser/interactiveEditorInput.ts';
+import { MergeEditorInput } from '../../contrib/mergeEditor/browser/mergeEditorInput.ts';
+import { MultiDiffEditorInput } from '../../contrib/multiDiffEditor/browser/multiDiffEditorInput.ts';
+import { NotebookEditorInput } from '../../contrib/notebook/common/notebookEditorInput.ts';
+import { TerminalEditorInput } from '../../contrib/terminal/browser/terminalEditorInput.ts';
+import { WebviewInput } from '../../contrib/webviewPanel/browser/webviewEditorInput.ts';
+import { columnToEditorGroup, EditorGroupColumn, editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.ts';
+import { GroupDirection, IEditorGroup, IEditorGroupsService, preferredSideBySideGroupDirection } from '../../services/editor/common/editorGroupsService.ts';
+import { IEditorsChangeEvent, IEditorService, SIDE_GROUP } from '../../services/editor/common/editorService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
 
 interface TabInfo {
 	tab: IEditorTabDto;

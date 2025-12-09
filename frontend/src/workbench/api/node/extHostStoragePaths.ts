@@ -4,14 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as fs from 'fs';
-import * as path from '../../../base/common/path.js';
-import { URI } from '../../../base/common/uri.js';
-import { ExtensionStoragePaths as CommonExtensionStoragePaths } from '../common/extHostStoragePaths.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import { IntervalTimer, timeout } from '../../../base/common/async.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { Promises } from '../../../base/node/pfs.js';
+import * as path from '../../../base/common/path.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ExtensionStoragePaths as CommonExtensionStoragePaths } from '../common/extHostStoragePaths.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { IntervalTimer, timeout } from '../../../base/common/async.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { Promises } from '../../../base/node/pfs.ts';
 
 export class ExtensionStoragePaths extends CommonExtensionStoragePaths {
 

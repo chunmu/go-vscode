@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $ } from '../../../../base/browser/dom.js';
-import { IRenderedMarkdown, MarkdownRenderOptions } from '../../../../base/browser/markdownRenderer.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { IMarkdownRenderer, IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import product from '../../../../platform/product/common/product.js';
+import { $ } from '../../../../base/browser/dom.ts';
+import { IRenderedMarkdown, MarkdownRenderOptions } from '../../../../base/browser/markdownRenderer.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { IMarkdownRenderer, IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import product from '../../../../platform/product/common/product.ts';
 
 export const allowedChatMarkdownHtmlTags = Object.freeze([
 	'b',

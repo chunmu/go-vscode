@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IChatTransferService } from '../../common/chatTransferService.js';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IChatTransferService } from '../../common/chatTransferService.ts';
 
 export class ChatTransferContribution extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'workbench.contrib.chatTransfer';

@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../base/common/network.js';
-import { URI } from '../../../base/common/uri.js';
-import * as extHostProtocol from './extHost.protocol.js';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
-import * as extHostTypeConverters from './extHostTypeConverters.js';
-import { NotebookRange } from './extHostTypes.js';
-import * as notebookCommon from '../../contrib/notebook/common/notebookCommon.js';
+import { Schemas } from '../../../base/common/network.ts';
+import { URI } from '../../../base/common/uri.ts';
+import * as extHostProtocol from './extHost.protocol.ts';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
+import * as extHostTypeConverters from './extHostTypeConverters.ts';
+import { NotebookRange } from './extHostTypes.ts';
+import * as notebookCommon from '../../contrib/notebook/common/notebookCommon.ts';
 import * as vscode from 'vscode';
-import { isTextStreamMime } from '../../../base/common/mime.js';
+import { isTextStreamMime } from '../../../base/common/mime.ts';
 
 class RawContentChangeEvent {
 

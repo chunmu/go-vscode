@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { CountTokensCallback, ILanguageModelToolsService, IToolInvocation, IToolProgressStep, IToolResult, ToolProgress, toolResultHasBuffers } from '../../contrib/chat/common/languageModelToolsService.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { Dto, SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostContext, ExtHostLanguageModelToolsShape, IToolDataDto, MainContext, MainThreadLanguageModelToolsShape } from '../common/extHost.protocol.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Disposable, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { CountTokensCallback, ILanguageModelToolsService, IToolInvocation, IToolProgressStep, IToolResult, ToolProgress, toolResultHasBuffers } from '../../contrib/chat/common/languageModelToolsService.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { Dto, SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostContext, ExtHostLanguageModelToolsShape, IToolDataDto, MainContext, MainThreadLanguageModelToolsShape } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadLanguageModelTools)
 export class MainThreadLanguageModelTools extends Disposable implements MainThreadLanguageModelToolsShape {

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AccessibleContentProvider, AccessibleViewProviderId, AccessibleViewType } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { ChatContextKeys } from '../common/chatContextKeys.js';
-import { ITerminalChatService } from '../../terminal/browser/terminal.js';
+import { AccessibleContentProvider, AccessibleViewProviderId, AccessibleViewType } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { ChatContextKeys } from '../common/chatContextKeys.ts';
+import { ITerminalChatService } from '../../terminal/browser/terminal.ts';
 
 export class ChatTerminalOutputAccessibleView implements IAccessibleViewImplementation {
 	readonly priority = 115;

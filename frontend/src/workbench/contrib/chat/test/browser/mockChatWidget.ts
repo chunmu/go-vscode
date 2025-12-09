@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IChatWidget, IChatWidgetService } from '../../browser/chat.js';
-import { ChatAgentLocation } from '../../common/constants.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IChatWidget, IChatWidgetService } from '../../browser/chat.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
 
 export class MockChatWidgetService implements IChatWidgetService {
 	readonly onDidAddWidget: Event<IChatWidget> = Event.None;

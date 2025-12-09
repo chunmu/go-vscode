@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { getDomNodePagePosition } from '../../../../base/browser/dom.js';
-import { toAction } from '../../../../base/common/actions.js';
-import { KeyChord, KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { EditorAction, IActionOptions, registerEditorAction } from '../../../../editor/browser/editorExtensions.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { Position } from '../../../../editor/common/core/position.js';
-import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.js';
-import { ILanguageFeaturesService } from '../../../../editor/common/services/languageFeatures.js';
-import { MessageController } from '../../../../editor/contrib/message/browser/messageController.js';
-import * as nls from '../../../../nls.js';
-import { ILocalizedString } from '../../../../platform/action/common/action.js';
-import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { PanelFocusContext } from '../../../common/contextkeys.js';
-import { ChatContextKeys } from '../../chat/common/chatContextKeys.js';
-import { openBreakpointSource } from './breakpointsView.js';
-import { DisassemblyView, IDisassembledInstructionEntry } from './disassemblyView.js';
-import { Repl } from './repl.js';
-import { BREAKPOINT_EDITOR_CONTRIBUTION_ID, BreakpointWidgetContext, CONTEXT_CALLSTACK_ITEM_TYPE, CONTEXT_DEBUG_STATE, CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DISASSEMBLE_REQUEST_SUPPORTED, CONTEXT_DISASSEMBLY_VIEW_FOCUS, CONTEXT_EXCEPTION_WIDGET_VISIBLE, CONTEXT_FOCUSED_STACK_FRAME_HAS_INSTRUCTION_POINTER_REFERENCE, CONTEXT_IN_DEBUG_MODE, CONTEXT_LANGUAGE_SUPPORTS_DISASSEMBLE_REQUEST, CONTEXT_STEP_INTO_TARGETS_SUPPORTED, EDITOR_CONTRIBUTION_ID, IBreakpointEditorContribution, IDebugConfiguration, IDebugEditorContribution, IDebugService, REPL_VIEW_ID, WATCH_VIEW_ID } from '../common/debug.js';
-import { getEvaluatableExpressionAtPosition } from '../common/debugUtils.js';
-import { DisassemblyViewInput } from '../common/disassemblyViewInput.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { TOGGLE_BREAKPOINT_ID } from '../../../../workbench/contrib/debug/browser/debugCommands.js';
+import { getDomNodePagePosition } from '../../../../base/browser/dom.ts';
+import { toAction } from '../../../../base/common/actions.ts';
+import { KeyChord, KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { EditorAction, IActionOptions, registerEditorAction } from '../../../../editor/browser/editorExtensions.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { Position } from '../../../../editor/common/core/position.ts';
+import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.ts';
+import { ILanguageFeaturesService } from '../../../../editor/common/services/languageFeatures.ts';
+import { MessageController } from '../../../../editor/contrib/message/browser/messageController.ts';
+import * as nls from '../../../../nls.ts';
+import { ILocalizedString } from '../../../../platform/action/common/action.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { PanelFocusContext } from '../../../common/contextkeys.ts';
+import { ChatContextKeys } from '../../chat/common/chatContextKeys.ts';
+import { openBreakpointSource } from './breakpointsView.ts';
+import { DisassemblyView, IDisassembledInstructionEntry } from './disassemblyView.ts';
+import { Repl } from './repl.ts';
+import { BREAKPOINT_EDITOR_CONTRIBUTION_ID, BreakpointWidgetContext, CONTEXT_CALLSTACK_ITEM_TYPE, CONTEXT_DEBUG_STATE, CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DISASSEMBLE_REQUEST_SUPPORTED, CONTEXT_DISASSEMBLY_VIEW_FOCUS, CONTEXT_EXCEPTION_WIDGET_VISIBLE, CONTEXT_FOCUSED_STACK_FRAME_HAS_INSTRUCTION_POINTER_REFERENCE, CONTEXT_IN_DEBUG_MODE, CONTEXT_LANGUAGE_SUPPORTS_DISASSEMBLE_REQUEST, CONTEXT_STEP_INTO_TARGETS_SUPPORTED, EDITOR_CONTRIBUTION_ID, IBreakpointEditorContribution, IDebugConfiguration, IDebugEditorContribution, IDebugService, REPL_VIEW_ID, WATCH_VIEW_ID } from '../common/debug.ts';
+import { getEvaluatableExpressionAtPosition } from '../common/debugUtils.ts';
+import { DisassemblyViewInput } from '../common/disassemblyViewInput.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { TOGGLE_BREAKPOINT_ID } from '../../../../workbench/contrib/debug/browser/debugCommands.ts';
 
 class ToggleBreakpointAction extends Action2 {
 	constructor() {

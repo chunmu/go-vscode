@@ -2,19 +2,19 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { Event } from '../../../../../base/common/event.js';
-import { DisposableMap, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { autorun, constObservable, derived, IObservable, observableFromEvent } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { IContextKey, RawContextKey } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { EditorResourceAccessor, SideBySideEditor } from '../../../../common/editor.js';
-import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { IInlineChatSessionService } from '../../../inlineChat/browser/inlineChatSessionService.js';
-import { IChatEditingService, IChatEditingSession, IModifiedFileEntry, ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { IChatService } from '../../common/chatService.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { DisposableMap, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { autorun, constObservable, derived, IObservable, observableFromEvent } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { IContextKey, RawContextKey } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { EditorResourceAccessor, SideBySideEditor } from '../../../../common/editor.ts';
+import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { IInlineChatSessionService } from '../../../inlineChat/browser/inlineChatSessionService.ts';
+import { IChatEditingService, IChatEditingSession, IModifiedFileEntry, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { IChatService } from '../../common/chatService.ts';
 
 export const ctxIsGlobalEditingSession = new RawContextKey<boolean>('chatEdits.isGlobalEditingSession', undefined, localize('chat.ctxEditSessionIsGlobal', "The current editor is part of the global edit session"));
 export const ctxHasEditorModification = new RawContextKey<boolean>('chatEdits.hasEditorModifications', undefined, localize('chat.hasEditorModifications', "The current editor contains chat modifications"));

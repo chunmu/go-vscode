@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { FuzzyScore } from '../../../../base/common/filters.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
+import { FuzzyScore } from '../../../../base/common/filters.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
 
 export interface CompletionItemLabel {
 	label: string;

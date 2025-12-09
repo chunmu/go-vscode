@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CharCode } from '../../../../base/common/charCode.js';
-import { KeyCode, KeyCodeUtils, IMMUTABLE_CODE_TO_KEY_CODE, ScanCode, ScanCodeUtils, NATIVE_WINDOWS_KEY_CODE_TO_KEY_CODE } from '../../../../base/common/keyCodes.js';
-import { ResolvedKeybinding, KeyCodeChord, SingleModifierChord, ScanCodeChord, Keybinding, Chord } from '../../../../base/common/keybindings.js';
-import { UILabelProvider } from '../../../../base/common/keybindingLabels.js';
-import { OperatingSystem } from '../../../../base/common/platform.js';
-import { IKeyboardEvent } from '../../../../platform/keybinding/common/keybinding.js';
-import { IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.js';
-import { BaseResolvedKeybinding } from '../../../../platform/keybinding/common/baseResolvedKeybinding.js';
-import { toEmptyArrayIfContainsNull } from '../../../../platform/keybinding/common/resolvedKeybindingItem.js';
-import { IWindowsKeyboardMapping } from '../../../../platform/keyboardLayout/common/keyboardLayout.js';
+import { CharCode } from '../../../../base/common/charCode.ts';
+import { KeyCode, KeyCodeUtils, IMMUTABLE_CODE_TO_KEY_CODE, ScanCode, ScanCodeUtils, NATIVE_WINDOWS_KEY_CODE_TO_KEY_CODE } from '../../../../base/common/keyCodes.ts';
+import { ResolvedKeybinding, KeyCodeChord, SingleModifierChord, ScanCodeChord, Keybinding, Chord } from '../../../../base/common/keybindings.ts';
+import { UILabelProvider } from '../../../../base/common/keybindingLabels.ts';
+import { OperatingSystem } from '../../../../base/common/platform.ts';
+import { IKeyboardEvent } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.ts';
+import { BaseResolvedKeybinding } from '../../../../platform/keybinding/common/baseResolvedKeybinding.ts';
+import { toEmptyArrayIfContainsNull } from '../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
+import { IWindowsKeyboardMapping } from '../../../../platform/keyboardLayout/common/keyboardLayout.ts';
 
 const LOG = false;
 function log(str: string): void {

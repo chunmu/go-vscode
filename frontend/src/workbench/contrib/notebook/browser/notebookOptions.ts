@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { PixelRatio } from '../../../../base/browser/pixelRatio.js';
-import { CodeWindow } from '../../../../base/browser/window.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { observableValue } from '../../../../base/common/observable.js';
-import { isObject } from '../../../../base/common/types.js';
-import { URI } from '../../../../base/common/uri.js';
+import { PixelRatio } from '../../../../base/browser/pixelRatio.ts';
+import { CodeWindow } from '../../../../base/browser/window.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { observableValue } from '../../../../base/common/observable.ts';
+import { isObject } from '../../../../base/common/types.ts';
+import { URI } from '../../../../base/common/uri.ts';
 import { FontMeasurements } from '../../../../editor/browser/config/fontMeasurements.js';
 import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
 import { IEditorOptions } from '../../../../editor/common/config/editorOptions.js';

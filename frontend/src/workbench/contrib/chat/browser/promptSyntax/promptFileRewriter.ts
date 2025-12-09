@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { EditOperation } from '../../../../../editor/common/core/editOperation.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { ILanguageModelToolsService, IToolAndToolSetEnablementMap } from '../../common/languageModelToolsService.js';
-import { PromptHeaderAttributes } from '../../common/promptSyntax/promptFileParser.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { EditOperation } from '../../../../../editor/common/core/editOperation.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { ILanguageModelToolsService, IToolAndToolSetEnablementMap } from '../../common/languageModelToolsService.ts';
+import { PromptHeaderAttributes } from '../../common/promptSyntax/promptFileParser.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
 
 export class PromptFileRewriter {
 	constructor(

@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../../nls.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import * as extensionsRegistry from '../../../../services/extensions/common/extensionsRegistry.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { joinPath, isEqualOrParent } from '../../../../../base/common/resources.js';
-import { IPromptsService } from './service/promptsService.js';
-import { PromptsType } from './promptTypes.js';
-import { DisposableMap } from '../../../../../base/common/lifecycle.js';
+import { localize } from '../../../../../nls.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import * as extensionsRegistry from '../../../../services/extensions/common/extensionsRegistry.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { joinPath, isEqualOrParent } from '../../../../../base/common/resources.ts';
+import { IPromptsService } from './service/promptsService.ts';
+import { PromptsType } from './promptTypes.ts';
+import { DisposableMap } from '../../../../../base/common/lifecycle.ts';
 
 interface IRawChatFileContribution {
 	readonly name: string;

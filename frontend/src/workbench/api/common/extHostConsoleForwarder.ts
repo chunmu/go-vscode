@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IStackArgument } from '../../../base/common/console.js';
-import { safeStringify } from '../../../base/common/objects.js';
-import { MainContext, MainThreadConsoleShape } from './extHost.protocol.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
+import { IStackArgument } from '../../../base/common/console.ts';
+import { safeStringify } from '../../../base/common/objects.ts';
+import { MainContext, MainThreadConsoleShape } from './extHost.protocol.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
 
 export abstract class AbstractExtHostConsoleForwarder {
 

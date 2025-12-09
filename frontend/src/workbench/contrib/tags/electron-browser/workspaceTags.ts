@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onUnexpectedError } from '../../../../base/common/errors.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IFileService, IFileStat } from '../../../../platform/files/common/files.js';
-import { ITelemetryService, TelemetryLevel } from '../../../../platform/telemetry/common/telemetry.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { ITextFileService, } from '../../../services/textfile/common/textfiles.js';
-import { IWorkspaceTagsService, Tags, getHashedRemotesFromConfig as baseGetHashedRemotesFromConfig } from '../common/workspaceTags.js';
-import { IDiagnosticsService, IWorkspaceInformation } from '../../../../platform/diagnostics/common/diagnostics.js';
-import { IRequestService } from '../../../../platform/request/common/request.js';
-import { isWindows } from '../../../../base/common/platform.js';
-import { AllowedSecondLevelDomains, getDomainsOfRemotes } from '../../../../platform/extensionManagement/common/configRemotes.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { hashAsync } from '../../../../base/common/hash.js';
+import { onUnexpectedError } from '../../../../base/common/errors.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IFileService, IFileStat } from '../../../../platform/files/common/files.ts';
+import { ITelemetryService, TelemetryLevel } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { ITextFileService, } from '../../../services/textfile/common/textfiles.ts';
+import { IWorkspaceTagsService, Tags, getHashedRemotesFromConfig as baseGetHashedRemotesFromConfig } from '../common/workspaceTags.ts';
+import { IDiagnosticsService, IWorkspaceInformation } from '../../../../platform/diagnostics/common/diagnostics.ts';
+import { IRequestService } from '../../../../platform/request/common/request.ts';
+import { isWindows } from '../../../../base/common/platform.ts';
+import { AllowedSecondLevelDomains, getDomainsOfRemotes } from '../../../../platform/extensionManagement/common/configRemotes.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { hashAsync } from '../../../../base/common/hash.ts';
 
 export async function getHashedRemotesFromConfig(text: string, stripEndingDotGit: boolean = false): Promise<string[]> {
 	return baseGetHashedRemotesFromConfig(text, stripEndingDotGit, hashAsync);

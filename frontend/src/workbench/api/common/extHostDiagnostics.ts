@@ -5,21 +5,21 @@
 
 /* eslint-disable local/code-no-native-private */
 
-import { localize } from '../../../nls.js';
-import { IMarkerData, MarkerSeverity } from '../../../platform/markers/common/markers.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
+import { localize } from '../../../nls.ts';
+import { IMarkerData, MarkerSeverity } from '../../../platform/markers/common/markers.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
 import type * as vscode from 'vscode';
-import { MainContext, MainThreadDiagnosticsShape, ExtHostDiagnosticsShape, IMainContext } from './extHost.protocol.js';
-import { DiagnosticSeverity } from './extHostTypes.js';
-import * as converter from './extHostTypeConverters.js';
-import { Event, Emitter, DebounceEmitter } from '../../../base/common/event.js';
-import { coalesce } from '../../../base/common/arrays.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ResourceMap } from '../../../base/common/map.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { IExtHostFileSystemInfo } from './extHostFileSystemInfo.js';
-import { IExtUri } from '../../../base/common/resources.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
+import { MainContext, MainThreadDiagnosticsShape, ExtHostDiagnosticsShape, IMainContext } from './extHost.protocol.ts';
+import { DiagnosticSeverity } from './extHostTypes.ts';
+import * as converter from './extHostTypeConverters.ts';
+import { Event, Emitter, DebounceEmitter } from '../../../base/common/event.ts';
+import { coalesce } from '../../../base/common/arrays.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ResourceMap } from '../../../base/common/map.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { IExtHostFileSystemInfo } from './extHostFileSystemInfo.ts';
+import { IExtUri } from '../../../base/common/resources.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
 
 export class DiagnosticCollection implements vscode.DiagnosticCollection {
 

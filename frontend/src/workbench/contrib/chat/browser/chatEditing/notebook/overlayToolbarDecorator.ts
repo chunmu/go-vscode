@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ActionViewItem } from '../../../../../../base/browser/ui/actionbar/actionViewItems.js';
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { MenuWorkbenchToolBar, HiddenItemStrategy } from '../../../../../../platform/actions/browser/toolbar.js';
-import { MenuId } from '../../../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../../../platform/instantiation/common/serviceCollection.js';
-import { CellEditState, INotebookEditor } from '../../../../notebook/browser/notebookBrowser.js';
-import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.js';
-import { CellKind } from '../../../../notebook/common/notebookCommon.js';
-import { IModifiedFileEntryChangeHunk } from '../../../common/chatEditingService.js';
-import { ICellDiffInfo } from './notebookCellChanges.js';
+import { ActionViewItem } from '../../../../../../base/browser/ui/actionbar/actionViewItems.ts';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { MenuWorkbenchToolBar, HiddenItemStrategy } from '../../../../../../platform/actions/browser/toolbar.ts';
+import { MenuId } from '../../../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../../../platform/instantiation/common/serviceCollection.ts';
+import { CellEditState, INotebookEditor } from '../../../../notebook/browser/notebookBrowser.ts';
+import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.ts';
+import { CellKind } from '../../../../notebook/common/notebookCommon.ts';
+import { IModifiedFileEntryChangeHunk } from '../../../common/chatEditingService.ts';
+import { ICellDiffInfo } from './notebookCellChanges.ts';
 
 
 export class OverlayToolbarDecorator extends Disposable {

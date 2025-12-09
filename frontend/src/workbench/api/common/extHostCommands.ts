@@ -5,34 +5,34 @@
 
 /* eslint-disable local/code-no-native-private */
 
-import { validateConstraint } from '../../../base/common/types.js';
-import { ICommandMetadata } from '../../../platform/commands/common/commands.js';
-import * as extHostTypes from './extHostTypes.js';
-import * as extHostTypeConverter from './extHostTypeConverters.js';
-import { cloneAndChange } from '../../../base/common/objects.js';
-import { MainContext, MainThreadCommandsShape, ExtHostCommandsShape, ICommandDto, ICommandMetadataDto, MainThreadTelemetryShape } from './extHost.protocol.js';
-import { isNonEmptyArray } from '../../../base/common/arrays.js';
-import * as languages from '../../../editor/common/languages.js';
+import { validateConstraint } from '../../../base/common/types.ts';
+import { ICommandMetadata } from '../../../platform/commands/common/commands.ts';
+import * as extHostTypes from './extHostTypes.ts';
+import * as extHostTypeConverter from './extHostTypeConverters.ts';
+import { cloneAndChange } from '../../../base/common/objects.ts';
+import { MainContext, MainThreadCommandsShape, ExtHostCommandsShape, ICommandDto, ICommandMetadataDto, MainThreadTelemetryShape } from './extHost.protocol.ts';
+import { isNonEmptyArray } from '../../../base/common/arrays.ts';
+import * as languages from '../../../editor/common/languages.ts';
 import type * as vscode from 'vscode';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { IRange, Range } from '../../../editor/common/core/range.js';
-import { IPosition, Position } from '../../../editor/common/core/position.js';
-import { URI } from '../../../base/common/uri.js';
-import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { ISelection } from '../../../editor/common/core/selection.js';
-import { TestItemImpl } from './extHostTestItem.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { toErrorMessage } from '../../../base/common/errorMessage.js';
-import { StopWatch } from '../../../base/common/stopwatch.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { TelemetryTrustedValue } from '../../../platform/telemetry/common/telemetryUtils.js';
-import { IExtHostTelemetry } from './extHostTelemetry.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { isCancellationError } from '../../../base/common/errors.js';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { IRange, Range } from '../../../editor/common/core/range.ts';
+import { IPosition, Position } from '../../../editor/common/core/position.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { ISelection } from '../../../editor/common/core/selection.ts';
+import { TestItemImpl } from './extHostTestItem.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { toErrorMessage } from '../../../base/common/errorMessage.ts';
+import { StopWatch } from '../../../base/common/stopwatch.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { TelemetryTrustedValue } from '../../../platform/telemetry/common/telemetryUtils.ts';
+import { IExtHostTelemetry } from './extHostTelemetry.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { isCancellationError } from '../../../base/common/errors.ts';
 
 interface CommandHandler {
 	callback: Function;

@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { findLast } from '../../../../base/common/arraysFind.js';
-import { timeout } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { Iterable } from '../../../../base/common/iterator.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { revive, Revived } from '../../../../base/common/marshalling.js';
-import { IObservable, observableValue } from '../../../../base/common/observable.js';
-import { equalsIgnoreCase } from '../../../../base/common/strings.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { Command } from '../../../../editor/common/languages.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { asJson, IRequestService } from '../../../../platform/request/common/request.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { ChatContextKeys } from './chatContextKeys.js';
-import { IChatAgentEditedFileEvent, IChatProgressHistoryResponseContent, IChatRequestModeInstructions, IChatRequestVariableData, ISerializableChatAgentData } from './chatModel.js';
-import { IRawChatCommandContribution } from './chatParticipantContribTypes.js';
-import { IChatFollowup, IChatLocationData, IChatProgress, IChatResponseErrorDetails, IChatTaskDto } from './chatService.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from './constants.js';
+import { findLast } from '../../../../base/common/arraysFind.ts';
+import { timeout } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { revive, Revived } from '../../../../base/common/marshalling.ts';
+import { IObservable, observableValue } from '../../../../base/common/observable.ts';
+import { equalsIgnoreCase } from '../../../../base/common/strings.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { Command } from '../../../../editor/common/languages.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { asJson, IRequestService } from '../../../../platform/request/common/request.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { ChatContextKeys } from './chatContextKeys.ts';
+import { IChatAgentEditedFileEvent, IChatProgressHistoryResponseContent, IChatRequestModeInstructions, IChatRequestVariableData, ISerializableChatAgentData } from './chatModel.ts';
+import { IRawChatCommandContribution } from './chatParticipantContribTypes.ts';
+import { IChatFollowup, IChatLocationData, IChatProgress, IChatResponseErrorDetails, IChatTaskDto } from './chatService.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from './constants.ts';
 
 //#region agent service, commands etc
 

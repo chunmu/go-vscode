@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../nls.js';
-import { IQuickInputService, IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { Action2, MenuId } from '../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILanguagePackItem, ILanguagePackService } from '../../../../platform/languagePacks/common/languagePacks.js';
-import { ILocaleService } from '../../../services/localization/common/locale.js';
-import { IExtensionsWorkbenchService } from '../../extensions/common/extensions.js';
+import { localize, localize2 } from '../../../../nls.ts';
+import { IQuickInputService, IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { Action2, MenuId } from '../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILanguagePackItem, ILanguagePackService } from '../../../../platform/languagePacks/common/languagePacks.ts';
+import { ILocaleService } from '../../../services/localization/common/locale.ts';
+import { IExtensionsWorkbenchService } from '../../extensions/common/extensions.ts';
 
 export class ConfigureDisplayLanguageAction extends Action2 {
 	public static readonly ID = 'workbench.action.configureLocale';

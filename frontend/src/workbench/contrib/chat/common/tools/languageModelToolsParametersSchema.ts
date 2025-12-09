@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IJSONSchema } from '../../../../../base/common/jsonSchema.js';
-import { Extensions as JSONExtensions, IJSONContributionRegistry } from '../../../../../platform/jsonschemas/common/jsonContributionRegistry.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
+import { IJSONSchema } from '../../../../../base/common/jsonSchema.ts';
+import { Extensions as JSONExtensions, IJSONContributionRegistry } from '../../../../../platform/jsonschemas/common/jsonContributionRegistry.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
 
 /**
  * A schema for parametersSchema

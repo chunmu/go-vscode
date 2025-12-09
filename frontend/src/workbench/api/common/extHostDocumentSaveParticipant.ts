@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { illegalState } from '../../../base/common/errors.js';
-import { ExtHostDocumentSaveParticipantShape, IWorkspaceEditDto, MainThreadBulkEditsShape } from './extHost.protocol.js';
-import { TextEdit } from './extHostTypes.js';
-import { Range, TextDocumentSaveReason, EndOfLine } from './extHostTypeConverters.js';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import { SaveReason } from '../../common/editor.js';
+import { Event } from '../../../base/common/event.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { illegalState } from '../../../base/common/errors.ts';
+import { ExtHostDocumentSaveParticipantShape, IWorkspaceEditDto, MainThreadBulkEditsShape } from './extHost.protocol.ts';
+import { TextEdit } from './extHostTypes.ts';
+import { Range, TextDocumentSaveReason, EndOfLine } from './extHostTypeConverters.ts';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import { SaveReason } from '../../common/editor.ts';
 import type * as vscode from 'vscode';
-import { LinkedList } from '../../../base/common/linkedList.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { LinkedList } from '../../../base/common/linkedList.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 
 type Listener = [Function, unknown, IExtensionDescription];
 

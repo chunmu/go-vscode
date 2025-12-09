@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { extUri, isEqual } from '../../../../../../base/common/resources.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.js';
-import { localize } from '../../../../../../nls.js';
-import { ILabelService } from '../../../../../../platform/label/common/label.js';
-import { IOpenerService } from '../../../../../../platform/opener/common/opener.js';
-import { PROMPT_DOCUMENTATION_URL, PromptsType } from '../../../common/promptSyntax/promptTypes.js';
-import { IPickOptions, IQuickInputService, IQuickPickItem } from '../../../../../../platform/quickinput/common/quickInput.js';
-import { IWorkspaceContextService } from '../../../../../../platform/workspace/common/workspace.js';
-import { IPromptPath, IPromptsService, PromptsStorage } from '../../../common/promptSyntax/service/promptsService.js';
+import { extUri, isEqual } from '../../../../../../base/common/resources.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.ts';
+import { localize } from '../../../../../../nls.ts';
+import { ILabelService } from '../../../../../../platform/label/common/label.ts';
+import { IOpenerService } from '../../../../../../platform/opener/common/opener.ts';
+import { PROMPT_DOCUMENTATION_URL, PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
+import { IPickOptions, IQuickInputService, IQuickPickItem } from '../../../../../../platform/quickinput/common/quickInput.ts';
+import { IWorkspaceContextService } from '../../../../../../platform/workspace/common/workspace.ts';
+import { IPromptPath, IPromptsService, PromptsStorage } from '../../../common/promptSyntax/service/promptsService.ts';
 
 
 interface IFolderQuickPickItem extends IQuickPickItem {

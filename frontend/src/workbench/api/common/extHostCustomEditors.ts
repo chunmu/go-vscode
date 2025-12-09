@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { hash } from '../../../base/common/hash.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import { joinPath } from '../../../base/common/resources.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import { IExtensionStoragePaths } from './extHostStoragePaths.js';
-import * as typeConverters from './extHostTypeConverters.js';
-import { ExtHostWebviews, shouldSerializeBuffersForPostMessage, toExtensionData } from './extHostWebview.js';
-import { ExtHostWebviewPanels } from './extHostWebviewPanels.js';
-import { EditorGroupColumn } from '../../services/editor/common/editorGroupColumn.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { hash } from '../../../base/common/hash.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { joinPath } from '../../../base/common/resources.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import { IExtensionStoragePaths } from './extHostStoragePaths.ts';
+import * as typeConverters from './extHostTypeConverters.ts';
+import { ExtHostWebviews, shouldSerializeBuffersForPostMessage, toExtensionData } from './extHostWebview.ts';
+import { ExtHostWebviewPanels } from './extHostWebviewPanels.ts';
+import { EditorGroupColumn } from '../../services/editor/common/editorGroupColumn.ts';
 import type * as vscode from 'vscode';
-import { Cache } from './cache.js';
-import * as extHostProtocol from './extHost.protocol.js';
-import * as extHostTypes from './extHostTypes.js';
+import { Cache } from './cache.ts';
+import * as extHostProtocol from './extHost.protocol.ts';
+import * as extHostTypes from './extHostTypes.ts';
 
 
 class CustomDocumentStoreEntry {

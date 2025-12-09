@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { SnippetString } from './snippetString.js';
-import { Position } from './position.js';
-import { Range } from './range.js';
+import { SnippetString } from './snippetString.ts';
+import { Position } from './position.ts';
+import { Range } from './range.ts';
 
 export class SnippetTextEdit implements vscode.SnippetTextEdit {
 

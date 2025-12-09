@@ -5,35 +5,35 @@
 
 // allow-any-unicode-comment-file
 
-import { localize } from '../../../../../../nls.js';
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { raceCancellation } from '../../../../../../base/common/async.js';
-import { CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { Event } from '../../../../../../base/common/event.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { clamp } from '../../../../../../base/common/numbers.js';
-import * as strings from '../../../../../../base/common/strings.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { EditorOption } from '../../../../../../editor/common/config/editorOptions.js';
-import { IDimension } from '../../../../../../editor/common/core/2d/dimension.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { tokenizeToStringSync } from '../../../../../../editor/common/languages/textToHtmlTokenizer.js';
-import { IReadonlyTextBuffer, ITextModel } from '../../../../../../editor/common/model.js';
-import { CodeActionController } from '../../../../../../editor/contrib/codeAction/browser/codeActionController.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
-import { CellFocusMode, EXPAND_CELL_INPUT_COMMAND_ID, IActiveNotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CodeCellViewModel, outputDisplayLimit } from '../../viewModel/codeCellViewModel.js';
-import { CellPartsCollection } from '../cellPart.js';
-import { NotebookCellEditorPool } from '../notebookCellEditorPool.js';
-import { CodeCellRenderTemplate, collapsedCellTTPolicy } from '../notebookRenderingCommon.js';
-import { CellEditorOptions } from './cellEditorOptions.js';
-import { CellOutputContainer } from './cellOutput.js';
-import { CollapsedCodeCellExecutionIcon } from './codeCellExecutionIcon.js';
-import { INotebookLoggingService } from '../../../common/notebookLoggingService.js';
+import { localize } from '../../../../../../nls.ts';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { raceCancellation } from '../../../../../../base/common/async.ts';
+import { CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { Event } from '../../../../../../base/common/event.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { clamp } from '../../../../../../base/common/numbers.ts';
+import * as strings from '../../../../../../base/common/strings.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { EditorOption } from '../../../../../../editor/common/config/editorOptions.ts';
+import { IDimension } from '../../../../../../editor/common/core/2d/dimension.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { tokenizeToStringSync } from '../../../../../../editor/common/languages/textToHtmlTokenizer.ts';
+import { IReadonlyTextBuffer, ITextModel } from '../../../../../../editor/common/model.ts';
+import { CodeActionController } from '../../../../../../editor/contrib/codeAction/browser/codeActionController.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
+import { CellFocusMode, EXPAND_CELL_INPUT_COMMAND_ID, IActiveNotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CodeCellViewModel, outputDisplayLimit } from '../../viewModel/codeCellViewModel.ts';
+import { CellPartsCollection } from '../cellPart.ts';
+import { NotebookCellEditorPool } from '../notebookCellEditorPool.ts';
+import { CodeCellRenderTemplate, collapsedCellTTPolicy } from '../notebookRenderingCommon.ts';
+import { CellEditorOptions } from './cellEditorOptions.ts';
+import { CellOutputContainer } from './cellOutput.ts';
+import { CollapsedCodeCellExecutionIcon } from './codeCellExecutionIcon.ts';
+import { INotebookLoggingService } from '../../../common/notebookLoggingService.ts';
 
 
 export class CodeCell extends Disposable {

@@ -4,33 +4,33 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/actions.css';
-import { URI } from '../../../base/common/uri.js';
-import { localize, localize2 } from '../../../nls.js';
-import { ApplyZoomTarget, MAX_ZOOM_LEVEL, MIN_ZOOM_LEVEL, applyZoom } from '../../../platform/window/electron-browser/window.js';
-import { IKeybindingService } from '../../../platform/keybinding/common/keybinding.js';
-import { getZoomLevel } from '../../../base/browser/browser.js';
-import { FileKind } from '../../../platform/files/common/files.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../editor/common/languages/language.js';
-import { IQuickInputService, IQuickInputButton, IQuickPickItem, QuickPickInput } from '../../../platform/quickinput/common/quickInput.js';
-import { getIconClasses } from '../../../editor/common/services/getIconClasses.js';
-import { ICommandHandler } from '../../../platform/commands/common/commands.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { INativeHostService } from '../../../platform/native/common/native.js';
-import { Codicon } from '../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { isSingleFolderWorkspaceIdentifier, isWorkspaceIdentifier } from '../../../platform/workspace/common/workspace.js';
-import { Action2, MenuId } from '../../../platform/actions/common/actions.js';
-import { Categories } from '../../../platform/action/common/actionCommonCategories.js';
-import { KeyCode, KeyMod } from '../../../base/common/keyCodes.js';
-import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { isMacintosh } from '../../../base/common/platform.js';
-import { getActiveWindow } from '../../../base/browser/dom.js';
-import { IOpenedAuxiliaryWindow, IOpenedMainWindow, isOpenedAuxiliaryWindow } from '../../../platform/window/common/window.js';
-import { IsAuxiliaryWindowContext, IsAuxiliaryWindowFocusedContext, IsWindowAlwaysOnTopContext } from '../../common/contextkeys.js';
-import { isAuxiliaryWindow } from '../../../base/browser/window.js';
-import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.js';
+import { URI } from '../../../base/common/uri.ts';
+import { localize, localize2 } from '../../../nls.ts';
+import { ApplyZoomTarget, MAX_ZOOM_LEVEL, MIN_ZOOM_LEVEL, applyZoom } from '../../../platform/window/electron-browser/window.ts';
+import { IKeybindingService } from '../../../platform/keybinding/common/keybinding.ts';
+import { getZoomLevel } from '../../../base/browser/browser.ts';
+import { FileKind } from '../../../platform/files/common/files.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../editor/common/languages/language.ts';
+import { IQuickInputService, IQuickInputButton, IQuickPickItem, QuickPickInput } from '../../../platform/quickinput/common/quickInput.ts';
+import { getIconClasses } from '../../../editor/common/services/getIconClasses.ts';
+import { ICommandHandler } from '../../../platform/commands/common/commands.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { INativeHostService } from '../../../platform/native/common/native.ts';
+import { Codicon } from '../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { isSingleFolderWorkspaceIdentifier, isWorkspaceIdentifier } from '../../../platform/workspace/common/workspace.ts';
+import { Action2, MenuId } from '../../../platform/actions/common/actions.ts';
+import { Categories } from '../../../platform/action/common/actionCommonCategories.ts';
+import { KeyCode, KeyMod } from '../../../base/common/keyCodes.ts';
+import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { isMacintosh } from '../../../base/common/platform.ts';
+import { getActiveWindow } from '../../../base/browser/dom.ts';
+import { IOpenedAuxiliaryWindow, IOpenedMainWindow, isOpenedAuxiliaryWindow } from '../../../platform/window/common/window.ts';
+import { IsAuxiliaryWindowContext, IsAuxiliaryWindowFocusedContext, IsWindowAlwaysOnTopContext } from '../../common/contextkeys.ts';
+import { isAuxiliaryWindow } from '../../../base/browser/window.ts';
+import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.ts';
 
 export class CloseWindowAction extends Action2 {
 

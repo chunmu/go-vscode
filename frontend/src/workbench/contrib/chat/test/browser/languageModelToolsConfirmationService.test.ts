@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { IStorageService, InMemoryStorageService } from '../../../../../platform/storage/common/storage.js';
-import { LanguageModelToolsConfirmationService } from '../../browser/languageModelToolsConfirmationService.js';
-import { ToolConfirmKind } from '../../common/chatService.js';
-import { ILanguageModelToolConfirmationActions, ILanguageModelToolConfirmationContribution, ILanguageModelToolConfirmationRef } from '../../common/languageModelToolsConfirmationService.js';
-import { ToolDataSource } from '../../common/languageModelToolsService.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { IStorageService, InMemoryStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { LanguageModelToolsConfirmationService } from '../../browser/languageModelToolsConfirmationService.ts';
+import { ToolConfirmKind } from '../../common/chatService.ts';
+import { ILanguageModelToolConfirmationActions, ILanguageModelToolConfirmationContribution, ILanguageModelToolConfirmationRef } from '../../common/languageModelToolsConfirmationService.ts';
+import { ToolDataSource } from '../../common/languageModelToolsService.ts';
 
 suite('LanguageModelToolsConfirmationService', () => {
 	const store = ensureNoDisposablesAreLeakedInTestSuite();

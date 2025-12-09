@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IJSONSchema, TypeFromJsonSchema } from '../../../base/common/jsonSchema.js';
-import { DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { localize } from '../../../nls.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { ExtensionsRegistry } from '../../services/extensions/common/extensionsRegistry.js';
-import { IStatusbarService, StatusbarAlignment as MainThreadStatusBarAlignment, IStatusbarEntryAccessor, IStatusbarEntry, StatusbarAlignment, IStatusbarEntryPriority, StatusbarEntryKind } from '../../services/statusbar/browser/statusbar.js';
-import { ThemeColor } from '../../../base/common/themables.js';
-import { Command } from '../../../editor/common/languages.js';
-import { IAccessibilityInformation, isAccessibilityInformation } from '../../../platform/accessibility/common/accessibility.js';
-import { IMarkdownString, isMarkdownString } from '../../../base/common/htmlContent.js';
-import { getCodiconAriaLabel } from '../../../base/common/iconLabels.js';
-import { hash } from '../../../base/common/hash.js';
-import { Event, Emitter } from '../../../base/common/event.js';
-import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.js';
-import { Iterable } from '../../../base/common/iterator.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { asStatusBarItemIdentifier } from '../common/extHostTypes.js';
-import { STATUS_BAR_ERROR_ITEM_BACKGROUND, STATUS_BAR_WARNING_ITEM_BACKGROUND } from '../../common/theme.js';
-import { IManagedHoverTooltipMarkdownString } from '../../../base/browser/ui/hover/hover.js';
+import { IJSONSchema, TypeFromJsonSchema } from '../../../base/common/jsonSchema.ts';
+import { DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { localize } from '../../../nls.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { ExtensionsRegistry } from '../../services/extensions/common/extensionsRegistry.ts';
+import { IStatusbarService, StatusbarAlignment as MainThreadStatusBarAlignment, IStatusbarEntryAccessor, IStatusbarEntry, StatusbarAlignment, IStatusbarEntryPriority, StatusbarEntryKind } from '../../services/statusbar/browser/statusbar.ts';
+import { ThemeColor } from '../../../base/common/themables.ts';
+import { Command } from '../../../editor/common/languages.ts';
+import { IAccessibilityInformation, isAccessibilityInformation } from '../../../platform/accessibility/common/accessibility.ts';
+import { IMarkdownString, isMarkdownString } from '../../../base/common/htmlContent.ts';
+import { getCodiconAriaLabel } from '../../../base/common/iconLabels.ts';
+import { hash } from '../../../base/common/hash.ts';
+import { Event, Emitter } from '../../../base/common/event.ts';
+import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.ts';
+import { Iterable } from '../../../base/common/iterator.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { asStatusBarItemIdentifier } from '../common/extHostTypes.ts';
+import { STATUS_BAR_ERROR_ITEM_BACKGROUND, STATUS_BAR_WARNING_ITEM_BACKGROUND } from '../../common/theme.ts';
+import { IManagedHoverTooltipMarkdownString } from '../../../base/browser/ui/hover/hover.ts';
 
 
 // --- service

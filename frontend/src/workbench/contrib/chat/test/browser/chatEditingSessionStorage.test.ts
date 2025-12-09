@@ -4,18 +4,18 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as assert from 'assert';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { cloneAndChange } from '../../../../../base/common/objects.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { FileService } from '../../../../../platform/files/common/fileService.js';
-import { InMemoryFileSystemProvider } from '../../../../../platform/files/common/inMemoryFilesystemProvider.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { TestEnvironmentService } from '../../../../test/browser/workbenchTestServices.js';
-import { ChatEditingSessionStorage, IChatEditingSessionStop, StoredSessionState } from '../../browser/chatEditing/chatEditingSessionStorage.js';
-import { ChatEditingSnapshotTextModelContentProvider } from '../../browser/chatEditing/chatEditingTextModelContentProviders.js';
-import { ISnapshotEntry, ModifiedFileEntryState } from '../../common/chatEditingService.js';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { cloneAndChange } from '../../../../../base/common/objects.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { FileService } from '../../../../../platform/files/common/fileService.ts';
+import { InMemoryFileSystemProvider } from '../../../../../platform/files/common/inMemoryFilesystemProvider.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { TestEnvironmentService } from '../../../../test/browser/workbenchTestServices.ts';
+import { ChatEditingSessionStorage, IChatEditingSessionStop, StoredSessionState } from '../../browser/chatEditing/chatEditingSessionStorage.ts';
+import { ChatEditingSnapshotTextModelContentProvider } from '../../browser/chatEditing/chatEditingTextModelContentProviders.ts';
+import { ISnapshotEntry, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
 
 suite('ChatEditingSessionStorage', () => {
 	const ds = ensureNoDisposablesAreLeakedInTestSuite();

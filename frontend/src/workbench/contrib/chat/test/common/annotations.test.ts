@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { assertSnapshot } from '../../../../../base/test/common/snapshot.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IChatMarkdownContent } from '../../common/chatService.js';
-import { annotateSpecialMarkdownContent, extractVulnerabilitiesFromText } from '../../common/annotations.js';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { assertSnapshot } from '../../../../../base/test/common/snapshot.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IChatMarkdownContent } from '../../common/chatService.ts';
+import { annotateSpecialMarkdownContent, extractVulnerabilitiesFromText } from '../../common/annotations.ts';
 
 function content(str: string): IChatMarkdownContent {
 	return { kind: 'markdownContent', content: new MarkdownString(str) };

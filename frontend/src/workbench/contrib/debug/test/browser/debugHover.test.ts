@@ -4,14 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { findExpressionInStackFrame } from '../../browser/debugHover.js';
-import type { IExpression, IScope } from '../../common/debug.js';
-import { Scope, StackFrame, Thread, Variable } from '../../common/debugModel.js';
-import { Source } from '../../common/debugSource.js';
-import { createTestSession } from './callStack.test.js';
-import { createMockDebugModel, mockUriIdentityService } from './mockDebugModel.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { findExpressionInStackFrame } from '../../browser/debugHover.ts';
+import type { IExpression, IScope } from '../../common/debug.ts';
+import { Scope, StackFrame, Thread, Variable } from '../../common/debugModel.ts';
+import { Source } from '../../common/debugSource.ts';
+import { createTestSession } from './callStack.test.ts';
+import { createMockDebugModel, mockUriIdentityService } from './mockDebugModel.ts';
 
 suite('Debug - Hover', () => {
 	const disposables = ensureNoDisposablesAreLeakedInTestSuite();

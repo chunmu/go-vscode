@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IIdentifiedSingleEditOperation, IModelDecorationOptions, IModelDeltaDecoration, ITextModel, IValidEditOperation, TrackedRangeStickiness } from '../../../../editor/common/model.js';
-import { CTX_INLINE_CHAT_HAS_STASHED_SESSION } from '../common/inlineChat.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import { ModelDecorationOptions } from '../../../../editor/common/model/textModel.js';
-import { EditOperation, ISingleEditOperation } from '../../../../editor/common/core/editOperation.js';
-import { DetailedLineRangeMapping, LineRangeMapping, RangeMapping } from '../../../../editor/common/diff/rangeMapping.js';
-import { IInlineChatSessionService } from './inlineChatSessionService.js';
-import { LineRange } from '../../../../editor/common/core/ranges/lineRange.js';
-import { IEditorWorkerService } from '../../../../editor/common/services/editorWorker.js';
-import { coalesceInPlace } from '../../../../base/common/arrays.js';
-import { Iterable } from '../../../../base/common/iterator.js';
-import { IModelContentChangedEvent } from '../../../../editor/common/textModelEvents.js';
-import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { ChatModel, IChatRequestModel, IChatTextEditGroupState } from '../../chat/common/chatModel.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { IChatAgent } from '../../chat/common/chatAgents.js';
-import { IDocumentDiff } from '../../../../editor/common/diff/documentDiffProvider.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IIdentifiedSingleEditOperation, IModelDecorationOptions, IModelDeltaDecoration, ITextModel, IValidEditOperation, TrackedRangeStickiness } from '../../../../editor/common/model.ts';
+import { CTX_INLINE_CHAT_HAS_STASHED_SESSION } from '../common/inlineChat.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import { ModelDecorationOptions } from '../../../../editor/common/model/textModel.ts';
+import { EditOperation, ISingleEditOperation } from '../../../../editor/common/core/editOperation.ts';
+import { DetailedLineRangeMapping, LineRangeMapping, RangeMapping } from '../../../../editor/common/diff/rangeMapping.ts';
+import { IInlineChatSessionService } from './inlineChatSessionService.ts';
+import { LineRange } from '../../../../editor/common/core/ranges/lineRange.ts';
+import { IEditorWorkerService } from '../../../../editor/common/services/editorWorker.ts';
+import { coalesceInPlace } from '../../../../base/common/arrays.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
+import { IModelContentChangedEvent } from '../../../../editor/common/textModelEvents.ts';
+import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { ChatModel, IChatRequestModel, IChatTextEditGroupState } from '../../chat/common/chatModel.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { IChatAgent } from '../../chat/common/chatAgents.ts';
+import { IDocumentDiff } from '../../../../editor/common/diff/documentDiffProvider.ts';
 
 
 export type TelemetryData = {

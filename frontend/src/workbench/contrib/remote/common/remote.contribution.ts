@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution, IWorkbenchContributionsRegistry, WorkbenchPhase, Extensions as WorkbenchExtensions, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { ILabelService, ResourceLabelFormatting } from '../../../../platform/label/common/label.js';
-import { OperatingSystem, isWeb, OS } from '../../../../base/common/platform.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { IRemoteAgentService } from '../../../services/remote/common/remoteAgentService.js';
-import { ILoggerService } from '../../../../platform/log/common/log.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { IJSONSchema } from '../../../../base/common/jsonSchema.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { IDialogService, IFileDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { PersistentConnection } from '../../../../platform/remote/common/remoteAgentConnection.js';
-import { IDownloadService } from '../../../../platform/download/common/download.js';
-import { DownloadServiceChannel } from '../../../../platform/download/common/downloadIpc.js';
-import { RemoteLoggerChannelClient } from '../../../../platform/log/common/logIpc.js';
-import { REMOTE_DEFAULT_IF_LOCAL_EXTENSIONS } from '../../../../platform/remote/common/remote.js';
-import product from '../../../../platform/product/common/product.js';
+import { IWorkbenchContribution, IWorkbenchContributionsRegistry, WorkbenchPhase, Extensions as WorkbenchExtensions, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { ILabelService, ResourceLabelFormatting } from '../../../../platform/label/common/label.ts';
+import { OperatingSystem, isWeb, OS } from '../../../../base/common/platform.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IRemoteAgentService } from '../../../services/remote/common/remoteAgentService.ts';
+import { ILoggerService } from '../../../../platform/log/common/log.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { IJSONSchema } from '../../../../base/common/jsonSchema.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { IDialogService, IFileDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { PersistentConnection } from '../../../../platform/remote/common/remoteAgentConnection.ts';
+import { IDownloadService } from '../../../../platform/download/common/download.ts';
+import { DownloadServiceChannel } from '../../../../platform/download/common/downloadIpc.ts';
+import { RemoteLoggerChannelClient } from '../../../../platform/log/common/logIpc.ts';
+import { REMOTE_DEFAULT_IF_LOCAL_EXTENSIONS } from '../../../../platform/remote/common/remote.ts';
+import product from '../../../../platform/product/common/product.ts';
 
 
 const EXTENSION_IDENTIFIER_PATTERN = '([a-z0-9A-Z][a-z0-9-A-Z]*)\\.([a-z0-9A-Z][a-z0-9-A-Z]*)$';

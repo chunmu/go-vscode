@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Dimension } from '../../../../base/browser/dom.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { EditorPane } from '../../../browser/parts/editor/editorPane.js';
-import { IEditorGroup } from '../../../services/editor/common/editorGroupsService.js';
-import { BrowserProcessExplorerControl, ProcessExplorerControl } from './processExplorerControl.js';
+import { Dimension } from '../../../../base/browser/dom.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { EditorPane } from '../../../browser/parts/editor/editorPane.ts';
+import { IEditorGroup } from '../../../services/editor/common/editorGroupsService.ts';
+import { BrowserProcessExplorerControl, ProcessExplorerControl } from './processExplorerControl.ts';
 
 export class ProcessExplorerEditor extends EditorPane {
 

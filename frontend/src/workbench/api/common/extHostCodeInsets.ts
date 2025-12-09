@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostTextEditor } from './extHostTextEditor.js';
-import { ExtHostEditors } from './extHostTextEditors.js';
-import { asWebviewUri, webviewGenericCspSource, WebviewRemoteInfo } from '../../contrib/webview/common/webview.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostTextEditor } from './extHostTextEditor.ts';
+import { ExtHostEditors } from './extHostTextEditors.ts';
+import { asWebviewUri, webviewGenericCspSource, WebviewRemoteInfo } from '../../contrib/webview/common/webview.ts';
 import type * as vscode from 'vscode';
-import { ExtHostEditorInsetsShape, MainThreadEditorInsetsShape } from './extHost.protocol.js';
+import { ExtHostEditorInsetsShape, MainThreadEditorInsetsShape } from './extHost.protocol.ts';
 
 export class ExtHostEditorInsets implements ExtHostEditorInsetsShape {
 

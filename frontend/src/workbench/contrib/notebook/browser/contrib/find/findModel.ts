@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { findFirstIdxMonotonousOrArrLen } from '../../../../../../base/common/arraysFind.js';
-import { CancelablePromise, createCancelablePromise, Delayer } from '../../../../../../base/common/async.js';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { FindMatch } from '../../../../../../editor/common/model.js';
-import { PrefixSumComputer } from '../../../../../../editor/common/model/prefixSumComputer.js';
-import { FindReplaceState, FindReplaceStateChangedEvent } from '../../../../../../editor/contrib/find/browser/findState.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { NotebookFindFilters } from './findFilters.js';
-import { FindMatchDecorationModel } from './findMatchDecorationModel.js';
-import { CellEditState, CellFindMatchWithIndex, CellWebviewFindMatch, ICellViewModel, INotebookEditor } from '../../notebookBrowser.js';
-import { NotebookViewModel } from '../../viewModel/notebookViewModelImpl.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { CellKind, INotebookFindOptions, NotebookCellsChangeType } from '../../../common/notebookCommon.js';
-import { hasKey } from '../../../../../../base/common/types.js';
+import { findFirstIdxMonotonousOrArrLen } from '../../../../../../base/common/arraysFind.ts';
+import { CancelablePromise, createCancelablePromise, Delayer } from '../../../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { FindMatch } from '../../../../../../editor/common/model.ts';
+import { PrefixSumComputer } from '../../../../../../editor/common/model/prefixSumComputer.ts';
+import { FindReplaceState, FindReplaceStateChangedEvent } from '../../../../../../editor/contrib/find/browser/findState.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { NotebookFindFilters } from './findFilters.ts';
+import { FindMatchDecorationModel } from './findMatchDecorationModel.ts';
+import { CellEditState, CellFindMatchWithIndex, CellWebviewFindMatch, ICellViewModel, INotebookEditor } from '../../notebookBrowser.ts';
+import { NotebookViewModel } from '../../viewModel/notebookViewModelImpl.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { CellKind, INotebookFindOptions, NotebookCellsChangeType } from '../../../common/notebookCommon.ts';
+import { hasKey } from '../../../../../../base/common/types.ts';
 
 export class CellFindMatchModel implements CellFindMatchWithIndex {
 	readonly cell: ICellViewModel;

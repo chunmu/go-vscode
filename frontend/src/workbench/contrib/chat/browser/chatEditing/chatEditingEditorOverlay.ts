@@ -4,35 +4,35 @@
  *--------------------------------------------------------------------------------------------*/
 
 import '../media/chatEditingEditorOverlay.css';
-import { combinedDisposable, Disposable, DisposableMap, DisposableStore, MutableDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { autorun, derived, derivedOpts, IObservable, observableFromEvent, observableFromEventOpts, observableSignalFromEvent, observableValue, transaction } from '../../../../../base/common/observable.js';
-import { HiddenItemStrategy, MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IChatEditingService, IChatEditingSession, IModifiedFileEntry, ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { MenuId } from '../../../../../platform/actions/common/actions.js';
-import { ActionViewItem } from '../../../../../base/browser/ui/actionbar/actionViewItems.js';
-import { IActionRunner } from '../../../../../base/common/actions.js';
-import { $, addDisposableGenericMouseMoveListener, append } from '../../../../../base/browser/dom.js';
-import { assertType } from '../../../../../base/common/types.js';
-import { localize } from '../../../../../nls.js';
-import { AcceptAction, navigationBearingFakeActionId, RejectAction } from './chatEditingEditorActions.js';
-import { IChatService } from '../../common/chatService.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { EditorGroupView } from '../../../../browser/parts/editor/editorGroupView.js';
-import { Event } from '../../../../../base/common/event.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { EditorResourceAccessor, SideBySideEditor } from '../../../../common/editor.js';
-import { IInlineChatSessionService } from '../../../inlineChat/browser/inlineChatSessionService.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { ObservableEditorSession } from './chatEditingEditorContextKeys.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import * as arrays from '../../../../../base/common/arrays.js';
-import { renderAsPlaintext } from '../../../../../base/browser/markdownRenderer.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
+import { combinedDisposable, Disposable, DisposableMap, DisposableStore, MutableDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun, derived, derivedOpts, IObservable, observableFromEvent, observableFromEventOpts, observableSignalFromEvent, observableValue, transaction } from '../../../../../base/common/observable.ts';
+import { HiddenItemStrategy, MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatEditingService, IChatEditingSession, IModifiedFileEntry, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { ActionViewItem } from '../../../../../base/browser/ui/actionbar/actionViewItems.ts';
+import { IActionRunner } from '../../../../../base/common/actions.ts';
+import { $, addDisposableGenericMouseMoveListener, append } from '../../../../../base/browser/dom.ts';
+import { assertType } from '../../../../../base/common/types.ts';
+import { localize } from '../../../../../nls.ts';
+import { AcceptAction, navigationBearingFakeActionId, RejectAction } from './chatEditingEditorActions.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { EditorGroupView } from '../../../../browser/parts/editor/editorGroupView.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { EditorResourceAccessor, SideBySideEditor } from '../../../../common/editor.ts';
+import { IInlineChatSessionService } from '../../../inlineChat/browser/inlineChatSessionService.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { ObservableEditorSession } from './chatEditingEditorContextKeys.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import * as arrays from '../../../../../base/common/arrays.ts';
+import { renderAsPlaintext } from '../../../../../base/browser/markdownRenderer.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
 
 class ChatEditorOverlayWidget extends Disposable {
 

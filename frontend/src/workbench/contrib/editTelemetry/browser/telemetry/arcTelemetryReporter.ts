@@ -2,14 +2,14 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { TimeoutTimer } from '../../../../../base/common/async.js';
-import { Disposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { IObservableWithChange, IObservable, runOnChange } from '../../../../../base/common/observable.js';
-import { BaseStringEdit } from '../../../../../editor/common/core/edits/stringEdit.js';
-import { StringText } from '../../../../../editor/common/core/text/abstractText.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { ArcTracker } from '../../common/arcTracker.js';
-import type { ScmRepoAdapter } from './scmAdapter.js';
+import { TimeoutTimer } from '../../../../../base/common/async.ts';
+import { Disposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IObservableWithChange, IObservable, runOnChange } from '../../../../../base/common/observable.ts';
+import { BaseStringEdit } from '../../../../../editor/common/core/edits/stringEdit.ts';
+import { StringText } from '../../../../../editor/common/core/text/abstractText.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { ArcTracker } from '../../common/arcTracker.ts';
+import type { ScmRepoAdapter } from './scmAdapter.ts';
 
 export class ArcTelemetryReporter extends Disposable {
 	private readonly _arcTracker;

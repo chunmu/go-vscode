@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ChatViewId, IChatWidget, IChatWidgetService } from '../chat.js';
-import { ACTION_ID_NEW_CHAT, CHAT_CATEGORY, CHAT_CONFIG_MENU_ID } from '../actions/chatActions.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { OS } from '../../../../../base/common/platform.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { assertDefined } from '../../../../../base/common/types.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { PromptsType, PROMPT_LANGUAGE_ID } from '../../common/promptSyntax/promptTypes.js';
-import { ILocalizedString, localize, localize2 } from '../../../../../nls.js';
-import { UILabelProvider } from '../../../../../base/common/keybindingLabels.js';
-import { ICommandAction } from '../../../../../platform/action/common/action.js';
-import { PromptFilePickers } from './pickers/promptFilePickers.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ResourceContextKey } from '../../../../common/contextkeys.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
+import { ChatViewId, IChatWidget, IChatWidgetService } from '../chat.ts';
+import { ACTION_ID_NEW_CHAT, CHAT_CATEGORY, CHAT_CONFIG_MENU_ID } from '../actions/chatActions.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { OS } from '../../../../../base/common/platform.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { assertDefined } from '../../../../../base/common/types.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { PromptsType, PROMPT_LANGUAGE_ID } from '../../common/promptSyntax/promptTypes.ts';
+import { ILocalizedString, localize, localize2 } from '../../../../../nls.ts';
+import { UILabelProvider } from '../../../../../base/common/keybindingLabels.ts';
+import { ICommandAction } from '../../../../../platform/action/common/action.ts';
+import { PromptFilePickers } from './pickers/promptFilePickers.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ResourceContextKey } from '../../../../common/contextkeys.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
 
 /**
  * Condition for the `Run Current Prompt` action.

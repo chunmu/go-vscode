@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostEmbeddingsShape, IMainContext, MainContext, MainThreadEmbeddingsShape } from './extHost.protocol.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostEmbeddingsShape, IMainContext, MainContext, MainThreadEmbeddingsShape } from './extHost.protocol.ts';
 import type * as vscode from 'vscode';
 
 

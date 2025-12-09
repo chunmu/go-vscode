@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { decodeBase64, VSBuffer } from '../../../../base/common/buffer.js';
-import { joinPath } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
+import { decodeBase64, VSBuffer } from '../../../../base/common/buffer.ts';
+import { joinPath } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
 
 /**
  * Resizes an image provided as a UInt8Array string. Resizing is based on Open AI's algorithm for tokenzing images.

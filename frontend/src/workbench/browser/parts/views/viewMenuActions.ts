@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction } from '../../../../base/common/actions.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { getActionBarActions, PrimaryAndSecondaryActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { MenuId, IMenuActionOptions, IMenuService, IMenu } from '../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IViewDescriptorService, ViewContainer, ViewContainerLocationToString } from '../../../common/views.js';
+import { IAction } from '../../../../base/common/actions.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { getActionBarActions, PrimaryAndSecondaryActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { MenuId, IMenuActionOptions, IMenuService, IMenu } from '../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IViewDescriptorService, ViewContainer, ViewContainerLocationToString } from '../../../common/views.ts';
 
 export class ViewMenuActions extends Disposable {
 

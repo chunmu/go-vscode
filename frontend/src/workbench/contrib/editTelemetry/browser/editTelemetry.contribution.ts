@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { EditTelemetryContribution } from './editTelemetryContribution.js';
-import { EDIT_TELEMETRY_SETTING_ID, AI_STATS_SETTING_ID } from './settingIds.js';
-import { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { localize } from '../../../../nls.js';
-import { EDIT_TELEMETRY_DETAILS_SETTING_ID, EDIT_TELEMETRY_SHOW_DECORATIONS, EDIT_TELEMETRY_SHOW_STATUS_BAR } from './settings.js';
-import { registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IAiEditTelemetryService } from './telemetry/aiEditTelemetry/aiEditTelemetryService.js';
-import { AiEditTelemetryServiceImpl } from './telemetry/aiEditTelemetry/aiEditTelemetryServiceImpl.js';
-import { IRandomService, RandomService } from './randomService.js';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { EditTelemetryContribution } from './editTelemetryContribution.ts';
+import { EDIT_TELEMETRY_SETTING_ID, AI_STATS_SETTING_ID } from './settingIds.ts';
+import { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { localize } from '../../../../nls.ts';
+import { EDIT_TELEMETRY_DETAILS_SETTING_ID, EDIT_TELEMETRY_SHOW_DECORATIONS, EDIT_TELEMETRY_SHOW_STATUS_BAR } from './settings.ts';
+import { registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IAiEditTelemetryService } from './telemetry/aiEditTelemetry/aiEditTelemetryService.ts';
+import { AiEditTelemetryServiceImpl } from './telemetry/aiEditTelemetry/aiEditTelemetryServiceImpl.ts';
+import { IRandomService, RandomService } from './randomService.ts';
 
 registerWorkbenchContribution2('EditTelemetryContribution', EditTelemetryContribution, WorkbenchPhase.AfterRestored);
 

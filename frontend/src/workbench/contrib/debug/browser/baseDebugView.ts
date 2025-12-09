@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { IKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
-import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.js';
-import { HighlightedLabel, IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { IInputValidationOptions, InputBox } from '../../../../base/browser/ui/inputbox/inputBox.js';
-import { IKeyboardNavigationLabelProvider } from '../../../../base/browser/ui/list/list.js';
-import { IAsyncDataSource, ITreeNode, ITreeRenderer } from '../../../../base/browser/ui/tree/tree.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { FuzzyScore, createMatches } from '../../../../base/common/filters.js';
-import { createSingleCallFunction } from '../../../../base/common/functional.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import { DisposableStore, IDisposable, dispose, toDisposable } from '../../../../base/common/lifecycle.js';
-import { removeAnsiEscapeCodes } from '../../../../base/common/strings.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { localize } from '../../../../nls.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IContextViewService } from '../../../../platform/contextview/browser/contextView.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { defaultInputBoxStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { IDebugService, IExpression, IScope } from '../common/debug.js';
-import { Variable } from '../common/debugModel.js';
-import { IDebugVisualizerService } from '../common/debugVisualizers.js';
-import { LinkDetector } from './linkDetector.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { IKeyboardEvent } from '../../../../base/browser/keyboardEvent.ts';
+import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.ts';
+import { HighlightedLabel, IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { IInputValidationOptions, InputBox } from '../../../../base/browser/ui/inputbox/inputBox.ts';
+import { IKeyboardNavigationLabelProvider } from '../../../../base/browser/ui/list/list.ts';
+import { IAsyncDataSource, ITreeNode, ITreeRenderer } from '../../../../base/browser/ui/tree/tree.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { FuzzyScore, createMatches } from '../../../../base/common/filters.ts';
+import { createSingleCallFunction } from '../../../../base/common/functional.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import { DisposableStore, IDisposable, dispose, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { removeAnsiEscapeCodes } from '../../../../base/common/strings.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { localize } from '../../../../nls.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IContextViewService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { defaultInputBoxStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { IDebugService, IExpression, IScope } from '../common/debug.ts';
+import { Variable } from '../common/debugModel.ts';
+import { IDebugVisualizerService } from '../common/debugVisualizers.ts';
+import { LinkDetector } from './linkDetector.ts';
 
 const $ = dom.$;
 

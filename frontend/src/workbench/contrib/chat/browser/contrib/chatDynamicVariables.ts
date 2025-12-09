@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce } from '../../../../../base/common/arrays.js';
-import { IMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, dispose, isDisposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IRange, Range } from '../../../../../editor/common/core/range.js';
-import { IDecorationOptions } from '../../../../../editor/common/editorCommon.js';
-import { Command, isLocation } from '../../../../../editor/common/languages.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { IChatRequestVariableValue, IDynamicVariable } from '../../common/chatVariables.js';
-import { IChatWidget } from '../chat.js';
-import { IChatWidgetContrib } from '../chatWidget.js';
+import { coalesce } from '../../../../../base/common/arrays.ts';
+import { IMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, dispose, isDisposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IRange, Range } from '../../../../../editor/common/core/range.ts';
+import { IDecorationOptions } from '../../../../../editor/common/editorCommon.ts';
+import { Command, isLocation } from '../../../../../editor/common/languages.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { IChatRequestVariableValue, IDynamicVariable } from '../../common/chatVariables.ts';
+import { IChatWidget } from '../chat.ts';
+import { IChatWidgetContrib } from '../chatWidget.ts';
 
 export const dynamicVariableDecorationType = 'chat-dynamic-variable';
 

@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize2 } from '../../../../../nls.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { CommandsRegistry } from '../../../../../platform/commands/common/commands.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ActiveEditorContext } from '../../../../common/contextkeys.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IChatEditingSession } from '../../common/chatEditingService.js';
-import { IChatService } from '../../common/chatService.js';
-import { ChatAgentLocation, ChatModeKind } from '../../common/constants.js';
-import { ChatViewId, IChatWidgetService } from '../chat.js';
-import { EditingSessionAction, getEditingSessionContext } from '../chatEditing/chatEditingActions.js';
-import { ChatEditorInput } from '../chatEditorInput.js';
-import { ACTION_ID_NEW_CHAT, ACTION_ID_NEW_EDIT_SESSION, CHAT_CATEGORY, handleCurrentEditingSession } from './chatActions.js';
-import { clearChatEditor } from './chatClear.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { CommandsRegistry } from '../../../../../platform/commands/common/commands.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ActiveEditorContext } from '../../../../common/contextkeys.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IChatEditingSession } from '../../common/chatEditingService.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { ChatAgentLocation, ChatModeKind } from '../../common/constants.ts';
+import { ChatViewId, IChatWidgetService } from '../chat.ts';
+import { EditingSessionAction, getEditingSessionContext } from '../chatEditing/chatEditingActions.ts';
+import { ChatEditorInput } from '../chatEditorInput.ts';
+import { ACTION_ID_NEW_CHAT, ACTION_ID_NEW_EDIT_SESSION, CHAT_CATEGORY, handleCurrentEditingSession } from './chatActions.ts';
+import { clearChatEditor } from './chatClear.ts';
 
 export interface INewEditSessionActionContext {
 

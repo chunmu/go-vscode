@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../nls.js';
-import { Event } from '../../base/common/event.js';
-import { DeepRequiredNonNullable, assertReturnsDefined } from '../../base/common/types.js';
-import { URI } from '../../base/common/uri.js';
-import { Disposable, IDisposable, toDisposable } from '../../base/common/lifecycle.js';
-import { ICodeEditorViewState, IDiffEditor, IDiffEditorViewState, IEditor, IEditorViewState } from '../../editor/common/editorCommon.js';
-import { IEditorOptions, IResourceEditorInput, ITextResourceEditorInput, IBaseTextResourceEditorInput, IBaseUntypedEditorInput, ITextEditorOptions } from '../../platform/editor/common/editor.js';
-import type { EditorInput } from './editor/editorInput.js';
-import { IInstantiationService, IConstructorSignature, ServicesAccessor, BrandedService } from '../../platform/instantiation/common/instantiation.js';
-import { IContextKeyService } from '../../platform/contextkey/common/contextkey.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { IEncodingSupport, ILanguageSupport } from '../services/textfile/common/textfiles.js';
-import { IEditorGroup } from '../services/editor/common/editorGroupsService.js';
-import { ICompositeControl, IComposite } from './composite.js';
-import { FileType, IFileReadLimits, IFileService } from '../../platform/files/common/files.js';
-import { IPathData } from '../../platform/window/common/window.js';
-import { IExtUri } from '../../base/common/resources.js';
-import { Schemas } from '../../base/common/network.js';
-import { IEditorService } from '../services/editor/common/editorService.js';
-import { ILogService } from '../../platform/log/common/log.js';
-import { IErrorWithActions, createErrorWithActions, isErrorWithActions } from '../../base/common/errorMessage.js';
-import { IAction, toAction } from '../../base/common/actions.js';
-import Severity from '../../base/common/severity.js';
-import { IPreferencesService } from '../services/preferences/common/preferences.js';
-import { IReadonlyEditorGroupModel } from './editor/editorGroupModel.js';
+import { localize } from '../../nls.ts';
+import { Event } from '../../base/common/event.ts';
+import { DeepRequiredNonNullable, assertReturnsDefined } from '../../base/common/types.ts';
+import { URI } from '../../base/common/uri.ts';
+import { Disposable, IDisposable, toDisposable } from '../../base/common/lifecycle.ts';
+import { ICodeEditorViewState, IDiffEditor, IDiffEditorViewState, IEditor, IEditorViewState } from '../../editor/common/editorCommon.ts';
+import { IEditorOptions, IResourceEditorInput, ITextResourceEditorInput, IBaseTextResourceEditorInput, IBaseUntypedEditorInput, ITextEditorOptions } from '../../platform/editor/common/editor.ts';
+import type { EditorInput } from './editor/editorInput.ts';
+import { IInstantiationService, IConstructorSignature, ServicesAccessor, BrandedService } from '../../platform/instantiation/common/instantiation.ts';
+import { IContextKeyService } from '../../platform/contextkey/common/contextkey.ts';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { IEncodingSupport, ILanguageSupport } from '../services/textfile/common/textfiles.ts';
+import { IEditorGroup } from '../services/editor/common/editorGroupsService.ts';
+import { ICompositeControl, IComposite } from './composite.ts';
+import { FileType, IFileReadLimits, IFileService } from '../../platform/files/common/files.ts';
+import { IPathData } from '../../platform/window/common/window.ts';
+import { IExtUri } from '../../base/common/resources.ts';
+import { Schemas } from '../../base/common/network.ts';
+import { IEditorService } from '../services/editor/common/editorService.ts';
+import { ILogService } from '../../platform/log/common/log.ts';
+import { IErrorWithActions, createErrorWithActions, isErrorWithActions } from '../../base/common/errorMessage.ts';
+import { IAction, toAction } from '../../base/common/actions.ts';
+import Severity from '../../base/common/severity.ts';
+import { IPreferencesService } from '../services/preferences/common/preferences.ts';
+import { IReadonlyEditorGroupModel } from './editor/editorGroupModel.ts';
 
 // Static values for editor contributions
 export const EditorExtensions = {

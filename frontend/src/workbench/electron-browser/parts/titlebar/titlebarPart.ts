@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../base/common/event.js';
-import { getZoomFactor } from '../../../../base/browser/browser.js';
-import { $, addDisposableListener, append, EventType, getWindow, getWindowId, hide, show } from '../../../../base/browser/dom.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IConfigurationService, IConfigurationChangeEvent } from '../../../../platform/configuration/common/configuration.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { isMacintosh, isWindows, isLinux, isBigSurOrNewer } from '../../../../base/common/platform.js';
-import { IMenuService, MenuId } from '../../../../platform/actions/common/actions.js';
-import { BrowserTitlebarPart, BrowserTitleService, IAuxiliaryTitlebarPart } from '../../../browser/parts/titlebar/titlebarPart.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { hasNativeTitlebar, useWindowControlsOverlay, DEFAULT_CUSTOM_TITLEBAR_HEIGHT, hasNativeMenu } from '../../../../platform/window/common/window.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { NativeMenubarControl } from './menubarControl.js';
-import { IEditorGroupsContainer, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { CodeWindow, mainWindow } from '../../../../base/browser/window.js';
-import { IsWindowAlwaysOnTopContext } from '../../../common/contextkeys.js';
+import { Event } from '../../../../base/common/event.ts';
+import { getZoomFactor } from '../../../../base/browser/browser.ts';
+import { $, addDisposableListener, append, EventType, getWindow, getWindowId, hide, show } from '../../../../base/browser/dom.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IConfigurationService, IConfigurationChangeEvent } from '../../../../platform/configuration/common/configuration.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { isMacintosh, isWindows, isLinux, isBigSurOrNewer } from '../../../../base/common/platform.ts';
+import { IMenuService, MenuId } from '../../../../platform/actions/common/actions.ts';
+import { BrowserTitlebarPart, BrowserTitleService, IAuxiliaryTitlebarPart } from '../../../browser/parts/titlebar/titlebarPart.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { hasNativeTitlebar, useWindowControlsOverlay, DEFAULT_CUSTOM_TITLEBAR_HEIGHT, hasNativeMenu } from '../../../../platform/window/common/window.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { NativeMenubarControl } from './menubarControl.ts';
+import { IEditorGroupsContainer, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { CodeWindow, mainWindow } from '../../../../base/browser/window.ts';
+import { IsWindowAlwaysOnTopContext } from '../../../common/contextkeys.ts';
 
 export class NativeTitlebarPart extends BrowserTitlebarPart {
 

@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { Event } from '../../../../../../base/common/event.js';
-import { IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IChatModeInstructions, IVariableReference } from '../../chatModes.js';
-import { PromptsType } from '../promptTypes.js';
-import { IHandOff, ParsedPromptFile } from '../promptFileParser.js';
-import { ResourceSet } from '../../../../../../base/common/map.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { Event } from '../../../../../../base/common/event.ts';
+import { IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatModeInstructions, IVariableReference } from '../../chatModes.ts';
+import { PromptsType } from '../promptTypes.ts';
+import { IHandOff, ParsedPromptFile } from '../promptFileParser.ts';
+import { ResourceSet } from '../../../../../../base/common/map.ts';
 
 /**
  * Provides prompt services.

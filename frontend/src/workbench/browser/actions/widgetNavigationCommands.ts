@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyMod, KeyCode } from '../../../base/common/keyCodes.js';
-import { ContextKeyExpr, IContextKey, IContextKeyService, RawContextKey } from '../../../platform/contextkey/common/contextkey.js';
-import { KeybindingWeight, KeybindingsRegistry } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { WorkbenchListFocusContextKey, WorkbenchListScrollAtBottomContextKey, WorkbenchListScrollAtTopContextKey } from '../../../platform/list/browser/listService.js';
-import { Event } from '../../../base/common/event.js';
-import { combinedDisposable, toDisposable, IDisposable, Disposable } from '../../../base/common/lifecycle.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../common/contributions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
+import { KeyMod, KeyCode } from '../../../base/common/keyCodes.ts';
+import { ContextKeyExpr, IContextKey, IContextKeyService, RawContextKey } from '../../../platform/contextkey/common/contextkey.ts';
+import { KeybindingWeight, KeybindingsRegistry } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { WorkbenchListFocusContextKey, WorkbenchListScrollAtBottomContextKey, WorkbenchListScrollAtTopContextKey } from '../../../platform/list/browser/listService.ts';
+import { Event } from '../../../base/common/event.ts';
+import { combinedDisposable, toDisposable, IDisposable, Disposable } from '../../../base/common/lifecycle.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../common/contributions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
 
 /** INavigableContainer represents a logical container composed of widgets that can
 	be navigated back and forth with key shortcuts */

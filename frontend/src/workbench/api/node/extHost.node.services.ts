@@ -3,34 +3,34 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.js';
-import { ExtHostTerminalService } from './extHostTerminalService.js';
-import { ExtHostTask } from './extHostTask.js';
-import { ExtHostDebugService } from './extHostDebugService.js';
-import { NativeExtHostSearch } from './extHostSearch.js';
-import { ExtHostExtensionService } from './extHostExtensionService.js';
-import { NodeExtHostTunnelService } from './extHostTunnelService.js';
-import { IExtHostDebugService } from '../common/extHostDebugService.js';
-import { IExtHostExtensionService } from '../common/extHostExtensionService.js';
-import { IExtHostSearch } from '../common/extHostSearch.js';
-import { IExtHostTask } from '../common/extHostTask.js';
-import { IExtHostTerminalService } from '../common/extHostTerminalService.js';
-import { IExtHostTunnelService } from '../common/extHostTunnelService.js';
-import { IExtensionStoragePaths } from '../common/extHostStoragePaths.js';
-import { ExtensionStoragePaths } from './extHostStoragePaths.js';
-import { ExtHostLoggerService } from './extHostLoggerService.js';
-import { ILogService, ILoggerService } from '../../../platform/log/common/log.js';
-import { NodeExtHostVariableResolverProviderService } from './extHostVariableResolverService.js';
-import { IExtHostVariableResolverProvider } from '../common/extHostVariableResolverService.js';
-import { ExtHostLogService } from '../common/extHostLogService.js';
-import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';
-import { ISignService } from '../../../platform/sign/common/sign.js';
-import { SignService } from '../../../platform/sign/node/signService.js';
-import { ExtHostTelemetry, IExtHostTelemetry } from '../common/extHostTelemetry.js';
-import { IExtHostMpcService } from '../common/extHostMcp.js';
-import { NodeExtHostMpcService } from './extHostMcpNode.js';
-import { IExtHostAuthentication } from '../common/extHostAuthentication.js';
-import { NodeExtHostAuthentication } from './extHostAuthentication.js';
+import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.ts';
+import { ExtHostTerminalService } from './extHostTerminalService.ts';
+import { ExtHostTask } from './extHostTask.ts';
+import { ExtHostDebugService } from './extHostDebugService.ts';
+import { NativeExtHostSearch } from './extHostSearch.ts';
+import { ExtHostExtensionService } from './extHostExtensionService.ts';
+import { NodeExtHostTunnelService } from './extHostTunnelService.ts';
+import { IExtHostDebugService } from '../common/extHostDebugService.ts';
+import { IExtHostExtensionService } from '../common/extHostExtensionService.ts';
+import { IExtHostSearch } from '../common/extHostSearch.ts';
+import { IExtHostTask } from '../common/extHostTask.ts';
+import { IExtHostTerminalService } from '../common/extHostTerminalService.ts';
+import { IExtHostTunnelService } from '../common/extHostTunnelService.ts';
+import { IExtensionStoragePaths } from '../common/extHostStoragePaths.ts';
+import { ExtensionStoragePaths } from './extHostStoragePaths.ts';
+import { ExtHostLoggerService } from './extHostLoggerService.ts';
+import { ILogService, ILoggerService } from '../../../platform/log/common/log.ts';
+import { NodeExtHostVariableResolverProviderService } from './extHostVariableResolverService.ts';
+import { IExtHostVariableResolverProvider } from '../common/extHostVariableResolverService.ts';
+import { ExtHostLogService } from '../common/extHostLogService.ts';
+import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.ts';
+import { ISignService } from '../../../platform/sign/common/sign.ts';
+import { SignService } from '../../../platform/sign/node/signService.ts';
+import { ExtHostTelemetry, IExtHostTelemetry } from '../common/extHostTelemetry.ts';
+import { IExtHostMpcService } from '../common/extHostMcp.ts';
+import { NodeExtHostMpcService } from './extHostMcpNode.ts';
+import { IExtHostAuthentication } from '../common/extHostAuthentication.ts';
+import { NodeExtHostAuthentication } from './extHostAuthentication.ts';
 
 // #########################################################################
 // ###                                                                   ###

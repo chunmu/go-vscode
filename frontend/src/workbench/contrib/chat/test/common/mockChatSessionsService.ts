@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IEditableData } from '../../../../common/views.js';
-import { IChatAgentAttachmentCapabilities, IChatAgentRequest } from '../../common/chatAgents.js';
-import { IChatModel } from '../../common/chatModel.js';
-import { IChatSession, IChatSessionContentProvider, IChatSessionItem, IChatSessionItemProvider, IChatSessionProviderOptionGroup, IChatSessionsExtensionPoint, IChatSessionsService, SessionOptionsChangedCallback } from '../../common/chatSessionsService.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IEditableData } from '../../../../common/views.ts';
+import { IChatAgentAttachmentCapabilities, IChatAgentRequest } from '../../common/chatAgents.ts';
+import { IChatModel } from '../../common/chatModel.ts';
+import { IChatSession, IChatSessionContentProvider, IChatSessionItem, IChatSessionItemProvider, IChatSessionProviderOptionGroup, IChatSessionsExtensionPoint, IChatSessionsService, SessionOptionsChangedCallback } from '../../common/chatSessionsService.ts';
 
 export class MockChatSessionsService implements IChatSessionsService {
 	_serviceBrand: undefined;

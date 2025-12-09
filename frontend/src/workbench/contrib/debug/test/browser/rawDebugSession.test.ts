@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { mock, mockObject } from '../../../../../base/test/common/mock.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IExtensionHostDebugService } from '../../../../../platform/debug/common/extensionHostDebug.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { INotificationService } from '../../../../../platform/notification/common/notification.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { RawDebugSession } from '../../browser/rawDebugSession.js';
-import { IDebugger } from '../../common/debug.js';
-import { MockDebugAdapter } from '../common/mockDebug.js';
+import { mock, mockObject } from '../../../../../base/test/common/mock.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IExtensionHostDebugService } from '../../../../../platform/debug/common/extensionHostDebug.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { INotificationService } from '../../../../../platform/notification/common/notification.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { RawDebugSession } from '../../browser/rawDebugSession.ts';
+import { IDebugger } from '../../common/debug.ts';
+import { MockDebugAdapter } from '../common/mockDebug.ts';
 
 suite('RawDebugSession', () => {
 	const disposables = ensureNoDisposablesAreLeakedInTestSuite();

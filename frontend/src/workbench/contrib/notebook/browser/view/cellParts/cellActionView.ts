@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import * as types from '../../../../../../base/common/types.js';
-import { EventType as TouchEventType } from '../../../../../../base/browser/touch.js';
-import { IActionViewItemProvider } from '../../../../../../base/browser/ui/actionbar/actionbar.js';
-import { IActionProvider } from '../../../../../../base/browser/ui/dropdown/dropdown.js';
-import { getDefaultHoverDelegate } from '../../../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { renderLabelWithIcons } from '../../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { IAction } from '../../../../../../base/common/actions.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { IMenuEntryActionViewItemOptions, MenuEntryActionViewItem, SubmenuEntryActionViewItem } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { MenuItemAction, SubmenuItemAction } from '../../../../../../platform/actions/common/actions.js';
-import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { IThemeService } from '../../../../../../platform/theme/common/themeService.js';
-import type { IManagedHover } from '../../../../../../base/browser/ui/hover/hover.js';
-import { IHoverService } from '../../../../../../platform/hover/browser/hover.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import * as types from '../../../../../../base/common/types.ts';
+import { EventType as TouchEventType } from '../../../../../../base/browser/touch.ts';
+import { IActionViewItemProvider } from '../../../../../../base/browser/ui/actionbar/actionbar.ts';
+import { IActionProvider } from '../../../../../../base/browser/ui/dropdown/dropdown.ts';
+import { getDefaultHoverDelegate } from '../../../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { renderLabelWithIcons } from '../../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { IAction } from '../../../../../../base/common/actions.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { IMenuEntryActionViewItemOptions, MenuEntryActionViewItem, SubmenuEntryActionViewItem } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { MenuItemAction, SubmenuItemAction } from '../../../../../../platform/actions/common/actions.ts';
+import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { IThemeService } from '../../../../../../platform/theme/common/themeService.ts';
+import type { IManagedHover } from '../../../../../../base/browser/ui/hover/hover.ts';
+import { IHoverService } from '../../../../../../platform/hover/browser/hover.ts';
 
 export class CodiconActionViewItem extends MenuEntryActionViewItem {
 

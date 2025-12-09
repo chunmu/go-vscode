@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IKeyboardLayoutInfo, IKeyboardMapping, IMacLinuxKeyboardMapping, IWindowsKeyboardMapping, macLinuxKeyboardMappingEquals, windowsKeyboardMappingEquals } from '../../../../platform/keyboardLayout/common/keyboardLayout.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { OperatingSystem, OS } from '../../../../base/common/platform.js';
-import { IMainProcessService } from '../../../../platform/ipc/common/mainProcessService.js';
-import { INativeKeyboardLayoutService as IBaseNativeKeyboardLayoutService } from '../../../../platform/keyboardLayout/common/keyboardLayoutService.js';
-import { ProxyChannel } from '../../../../base/parts/ipc/common/ipc.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IKeyboardLayoutInfo, IKeyboardMapping, IMacLinuxKeyboardMapping, IWindowsKeyboardMapping, macLinuxKeyboardMappingEquals, windowsKeyboardMappingEquals } from '../../../../platform/keyboardLayout/common/keyboardLayout.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { OperatingSystem, OS } from '../../../../base/common/platform.ts';
+import { IMainProcessService } from '../../../../platform/ipc/common/mainProcessService.ts';
+import { INativeKeyboardLayoutService as IBaseNativeKeyboardLayoutService } from '../../../../platform/keyboardLayout/common/keyboardLayoutService.ts';
+import { ProxyChannel } from '../../../../base/parts/ipc/common/ipc.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
 
 export const INativeKeyboardLayoutService = createDecorator<INativeKeyboardLayoutService>('nativeKeyboardLayoutService');
 

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MainContext, MainThreadLocalizationShape } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IFileService } from '../../../platform/files/common/files.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { ILanguagePackService } from '../../../platform/languagePacks/common/languagePacks.js';
+import { MainContext, MainThreadLocalizationShape } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IFileService } from '../../../platform/files/common/files.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { ILanguagePackService } from '../../../platform/languagePacks/common/languagePacks.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadLocalization)
 export class MainThreadLocalization extends Disposable implements MainThreadLocalizationShape {

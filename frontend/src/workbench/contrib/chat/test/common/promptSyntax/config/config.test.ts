@@ -4,11 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { mockService } from '../utils/mock.js';
-import { PromptsConfig } from '../../../../common/promptSyntax/config/config.js';
-import { PromptsType } from '../../../../common/promptSyntax/promptTypes.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.js';
-import { IConfigurationOverrides, IConfigurationService } from '../../../../../../../platform/configuration/common/configuration.js';
+import { mockService } from '../utils/mock.ts';
+import { PromptsConfig } from '../../../../common/promptSyntax/config/config.ts';
+import { PromptsType } from '../../../../common/promptSyntax/promptTypes.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.ts';
+import { IConfigurationOverrides, IConfigurationService } from '../../../../../../../platform/configuration/common/configuration.ts';
 
 /**
  * Mocked instance of {@link IConfigurationService}.

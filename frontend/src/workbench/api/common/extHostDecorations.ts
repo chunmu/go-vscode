@@ -4,18 +4,18 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { URI } from '../../../base/common/uri.js';
-import { MainContext, ExtHostDecorationsShape, MainThreadDecorationsShape, DecorationData, DecorationRequest, DecorationReply } from './extHost.protocol.js';
-import { Disposable, FileDecoration } from './extHostTypes.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { asArray, groupBy } from '../../../base/common/arrays.js';
-import { compare, count } from '../../../base/common/strings.js';
-import { dirname } from '../../../base/common/path.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
+import { URI } from '../../../base/common/uri.ts';
+import { MainContext, ExtHostDecorationsShape, MainThreadDecorationsShape, DecorationData, DecorationRequest, DecorationReply } from './extHost.protocol.ts';
+import { Disposable, FileDecoration } from './extHostTypes.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { asArray, groupBy } from '../../../base/common/arrays.ts';
+import { compare, count } from '../../../base/common/strings.ts';
+import { dirname } from '../../../base/common/path.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
 
 interface ProviderData {
 	provider: vscode.FileDecorationProvider;

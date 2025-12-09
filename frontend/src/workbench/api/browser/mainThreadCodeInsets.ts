@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { getWindow } from '../../../base/browser/dom.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { isEqual } from '../../../base/common/resources.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IActiveCodeEditor, IViewZone } from '../../../editor/browser/editorBrowser.js';
-import { ICodeEditorService } from '../../../editor/browser/services/codeEditorService.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { reviveWebviewContentOptions } from './mainThreadWebviews.js';
-import { ExtHostContext, ExtHostEditorInsetsShape, IWebviewContentOptions, MainContext, MainThreadEditorInsetsShape } from '../common/extHost.protocol.js';
-import { IWebviewService, IWebviewElement } from '../../contrib/webview/browser/webview.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
+import { getWindow } from '../../../base/browser/dom.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { isEqual } from '../../../base/common/resources.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IActiveCodeEditor, IViewZone } from '../../../editor/browser/editorBrowser.ts';
+import { ICodeEditorService } from '../../../editor/browser/services/codeEditorService.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { reviveWebviewContentOptions } from './mainThreadWebviews.ts';
+import { ExtHostContext, ExtHostEditorInsetsShape, IWebviewContentOptions, MainContext, MainThreadEditorInsetsShape } from '../common/extHost.protocol.ts';
+import { IWebviewService, IWebviewElement } from '../../contrib/webview/browser/webview.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
 
 // todo@jrieken move these things back into something like contrib/insets
 class EditorWebviewZone implements IViewZone {

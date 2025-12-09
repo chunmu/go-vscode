@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { URI } from '../../../../base/common/uri.js';
-import { CellUri, IResolvedNotebookEditorModel, NotebookEditorModelCreationOptions, NotebookSetting, NotebookWorkingCopyTypeIdentifier } from './notebookCommon.js';
-import { NotebookFileWorkingCopyModel, NotebookFileWorkingCopyModelFactory, SimpleNotebookEditorModel } from './notebookEditorModel.js';
-import { combinedDisposable, DisposableStore, dispose, IDisposable, IReference, ReferenceCollection, toDisposable } from '../../../../base/common/lifecycle.js';
-import { INotebookService } from './notebookService.js';
-import { AsyncEmitter, Emitter, Event } from '../../../../base/common/event.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { INotebookConflictEvent, INotebookEditorModelResolverService, IUntitledNotebookResource } from './notebookEditorModelResolverService.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { FileWorkingCopyManager, IFileWorkingCopyManager } from '../../../services/workingCopy/common/fileWorkingCopyManager.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { NotebookProviderInfo } from './notebookProvider.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IFileReadLimits } from '../../../../platform/files/common/files.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { INotebookLoggingService } from './notebookLoggingService.js';
-import { parse } from '../../../services/notebook/common/notebookDocumentService.js';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { CellUri, IResolvedNotebookEditorModel, NotebookEditorModelCreationOptions, NotebookSetting, NotebookWorkingCopyTypeIdentifier } from './notebookCommon.ts';
+import { NotebookFileWorkingCopyModel, NotebookFileWorkingCopyModelFactory, SimpleNotebookEditorModel } from './notebookEditorModel.ts';
+import { combinedDisposable, DisposableStore, dispose, IDisposable, IReference, ReferenceCollection, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { INotebookService } from './notebookService.ts';
+import { AsyncEmitter, Emitter, Event } from '../../../../base/common/event.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { INotebookConflictEvent, INotebookEditorModelResolverService, IUntitledNotebookResource } from './notebookEditorModelResolverService.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { FileWorkingCopyManager, IFileWorkingCopyManager } from '../../../services/workingCopy/common/fileWorkingCopyManager.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { NotebookProviderInfo } from './notebookProvider.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IFileReadLimits } from '../../../../platform/files/common/files.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { INotebookLoggingService } from './notebookLoggingService.ts';
+import { parse } from '../../../services/notebook/common/notebookDocumentService.ts';
 
 class NotebookModelReferenceCollection extends ReferenceCollection<Promise<IResolvedNotebookEditorModel>> {
 

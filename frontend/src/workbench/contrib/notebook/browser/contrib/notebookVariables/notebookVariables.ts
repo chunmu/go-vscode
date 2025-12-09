@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import * as nls from '../../../../../../nls.js';
-import { IConfigurationChangeEvent, IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IContextKey, IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { SyncDescriptor } from '../../../../../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution } from '../../../../../common/contributions.js';
-import { Extensions, IViewDescriptorService, IViewsRegistry } from '../../../../../common/views.js';
-import { VIEWLET_ID as debugContainerId } from '../../../../debug/common/debug.js';
-import { NOTEBOOK_VARIABLE_VIEW_ENABLED } from './notebookVariableContextKeys.js';
-import { NotebookVariablesView } from './notebookVariablesView.js';
-import { getNotebookEditorFromEditorPane } from '../../notebookBrowser.js';
-import { variablesViewIcon } from '../../notebookIcons.js';
-import { NotebookSetting } from '../../../common/notebookCommon.js';
-import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
-import { INotebookKernelService } from '../../../common/notebookKernelService.js';
-import { INotebookService } from '../../../common/notebookService.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
+import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import * as nls from '../../../../../../nls.ts';
+import { IConfigurationChangeEvent, IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IContextKey, IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { SyncDescriptor } from '../../../../../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution } from '../../../../../common/contributions.ts';
+import { Extensions, IViewDescriptorService, IViewsRegistry } from '../../../../../common/views.ts';
+import { VIEWLET_ID as debugContainerId } from '../../../../debug/common/debug.ts';
+import { NOTEBOOK_VARIABLE_VIEW_ENABLED } from './notebookVariableContextKeys.ts';
+import { NotebookVariablesView } from './notebookVariablesView.ts';
+import { getNotebookEditorFromEditorPane } from '../../notebookBrowser.ts';
+import { variablesViewIcon } from '../../notebookIcons.ts';
+import { NotebookSetting } from '../../../common/notebookCommon.ts';
+import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
+import { INotebookKernelService } from '../../../common/notebookKernelService.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
 
 export class NotebookVariables extends Disposable implements IWorkbenchContribution {
 	private listeners: IDisposable[] = [];

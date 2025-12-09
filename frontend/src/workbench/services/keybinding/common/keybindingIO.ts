@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeybindingParser } from '../../../../base/common/keybindingParser.js';
-import { Keybinding } from '../../../../base/common/keybindings.js';
-import { ContextKeyExpr, ContextKeyExpression } from '../../../../platform/contextkey/common/contextkey.js';
-import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.js';
+import { KeybindingParser } from '../../../../base/common/keybindingParser.ts';
+import { Keybinding } from '../../../../base/common/keybindings.ts';
+import { ContextKeyExpr, ContextKeyExpression } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
 
 export interface IUserKeybindingItem {
 	keybinding: Keybinding | null;

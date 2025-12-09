@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { IObservable } from '../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IEditableData } from '../../../common/views.js';
-import { IChatAgentAttachmentCapabilities, IChatAgentRequest } from './chatAgents.js';
-import { IChatEditingSession } from './chatEditingService.js';
-import { IChatModel, IChatRequestVariableData } from './chatModel.js';
-import { IChatProgress } from './chatService.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IObservable } from '../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IEditableData } from '../../../common/views.ts';
+import { IChatAgentAttachmentCapabilities, IChatAgentRequest } from './chatAgents.ts';
+import { IChatEditingSession } from './chatEditingService.ts';
+import { IChatModel, IChatRequestVariableData } from './chatModel.ts';
+import { IChatProgress } from './chatService.ts';
 
 export const enum ChatSessionStatus {
 	Failed = 0,

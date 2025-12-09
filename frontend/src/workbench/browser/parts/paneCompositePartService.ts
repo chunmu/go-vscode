@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { assertReturnsDefined } from '../../../base/common/types.js';
-import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { IProgressIndicator } from '../../../platform/progress/common/progress.js';
-import { PaneCompositeDescriptor } from '../panecomposite.js';
-import { AuxiliaryBarPart } from './auxiliarybar/auxiliaryBarPart.js';
-import { PanelPart } from './panel/panelPart.js';
-import { SidebarPart } from './sidebar/sidebarPart.js';
-import { IPaneComposite } from '../../common/panecomposite.js';
-import { ViewContainerLocation, ViewContainerLocations } from '../../common/views.js';
-import { IPaneCompositePartService } from '../../services/panecomposite/browser/panecomposite.js';
-import { Disposable, DisposableStore } from '../../../base/common/lifecycle.js';
-import { IPaneCompositePart } from './paneCompositePart.js';
+import { Event } from '../../../base/common/event.ts';
+import { assertReturnsDefined } from '../../../base/common/types.ts';
+import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { IProgressIndicator } from '../../../platform/progress/common/progress.ts';
+import { PaneCompositeDescriptor } from '../panecomposite.ts';
+import { AuxiliaryBarPart } from './auxiliarybar/auxiliaryBarPart.ts';
+import { PanelPart } from './panel/panelPart.ts';
+import { SidebarPart } from './sidebar/sidebarPart.ts';
+import { IPaneComposite } from '../../common/panecomposite.ts';
+import { ViewContainerLocation, ViewContainerLocations } from '../../common/views.ts';
+import { IPaneCompositePartService } from '../../services/panecomposite/browser/panecomposite.ts';
+import { Disposable, DisposableStore } from '../../../base/common/lifecycle.ts';
+import { IPaneCompositePart } from './paneCompositePart.ts';
 
 export class PaneCompositePartService extends Disposable implements IPaneCompositePartService {
 

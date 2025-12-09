@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { normalizeDriveLetter } from '../../../../../../base/common/labels.js';
-import { basenameOrAuthority } from '../../../../../../base/common/resources.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { localize } from '../../../../../../nls.js';
-import { INotebookOutputVariableEntry } from '../../../../chat/common/chatVariableEntries.js';
-import { CellUri } from '../../../common/notebookCommon.js';
-import { ICellOutputViewModel, INotebookEditor } from '../../notebookBrowser.js';
+import { normalizeDriveLetter } from '../../../../../../base/common/labels.ts';
+import { basenameOrAuthority } from '../../../../../../base/common/resources.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { localize } from '../../../../../../nls.ts';
+import { INotebookOutputVariableEntry } from '../../../../chat/common/chatVariableEntries.ts';
+import { CellUri } from '../../../common/notebookCommon.ts';
+import { ICellOutputViewModel, INotebookEditor } from '../../notebookBrowser.ts';
 
 export const NOTEBOOK_CELL_OUTPUT_MIME_TYPE_LIST_FOR_CHAT_CONST = [
 	'text/plain',

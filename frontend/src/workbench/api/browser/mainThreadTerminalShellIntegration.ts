@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { Disposable, toDisposable, type IDisposable } from '../../../base/common/lifecycle.js';
-import { TerminalCapability, type ITerminalCommand } from '../../../platform/terminal/common/capabilities/capabilities.js';
-import { ExtHostContext, MainContext, type ExtHostTerminalShellIntegrationShape, type MainThreadTerminalShellIntegrationShape } from '../common/extHost.protocol.js';
-import { ITerminalService, type ITerminalInstance } from '../../contrib/terminal/browser/terminal.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { extHostNamedCustomer, type IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { TerminalShellExecutionCommandLineConfidence } from '../common/extHostTypes.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
+import { Event } from '../../../base/common/event.ts';
+import { Disposable, toDisposable, type IDisposable } from '../../../base/common/lifecycle.ts';
+import { TerminalCapability, type ITerminalCommand } from '../../../platform/terminal/common/capabilities/capabilities.ts';
+import { ExtHostContext, MainContext, type ExtHostTerminalShellIntegrationShape, type MainThreadTerminalShellIntegrationShape } from '../common/extHost.protocol.ts';
+import { ITerminalService, type ITerminalInstance } from '../../contrib/terminal/browser/terminal.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { extHostNamedCustomer, type IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { TerminalShellExecutionCommandLineConfidence } from '../common/extHostTypes.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadTerminalShellIntegration)
 export class MainThreadTerminalShellIntegration extends Disposable implements MainThreadTerminalShellIntegrationShape {

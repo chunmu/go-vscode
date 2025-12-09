@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MarkdownString } from '../../../base/common/htmlContent.js';
-import { IJSONSchema } from '../../../base/common/jsonSchema.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import * as resources from '../../../base/common/resources.js';
-import { isFalsyOrWhitespace } from '../../../base/common/strings.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { URI } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier, ExtensionIdentifierSet, IExtensionDescription, IExtensionManifest } from '../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { PaneCompositeRegistry, Extensions as ViewletExtensions } from '../../browser/panecomposite.js';
-import { CustomTreeView, TreeViewPane } from '../../browser/parts/views/treeView.js';
-import { ViewPaneContainer } from '../../browser/parts/views/viewPaneContainer.js';
-import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../common/contributions.js';
-import { ICustomViewDescriptor, IViewContainersRegistry, IViewDescriptor, IViewsRegistry, ViewContainer, Extensions as ViewContainerExtensions, ViewContainerLocation } from '../../common/views.js';
-import { ChatContextKeyExprs } from '../../contrib/chat/common/chatContextKeys.js';
-import { LEGACY_AGENT_SESSIONS_VIEW_ID } from '../../contrib/chat/common/constants.js';
-import { VIEWLET_ID as DEBUG } from '../../contrib/debug/common/debug.js';
-import { VIEWLET_ID as EXPLORER } from '../../contrib/files/common/files.js';
-import { VIEWLET_ID as REMOTE } from '../../contrib/remote/browser/remoteExplorer.js';
-import { VIEWLET_ID as SCM } from '../../contrib/scm/common/scm.js';
-import { WebviewViewPane } from '../../contrib/webviewView/browser/webviewViewPane.js';
-import { Extensions as ExtensionFeaturesRegistryExtensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../services/extensionManagement/common/extensionFeatures.js';
-import { isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { ExtensionMessageCollector, ExtensionsRegistry, IExtensionPoint, IExtensionPointUser } from '../../services/extensions/common/extensionsRegistry.js';
+import { MarkdownString } from '../../../base/common/htmlContent.ts';
+import { IJSONSchema } from '../../../base/common/jsonSchema.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import * as resources from '../../../base/common/resources.ts';
+import { isFalsyOrWhitespace } from '../../../base/common/strings.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier, ExtensionIdentifierSet, IExtensionDescription, IExtensionManifest } from '../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { PaneCompositeRegistry, Extensions as ViewletExtensions } from '../../browser/panecomposite.ts';
+import { CustomTreeView, TreeViewPane } from '../../browser/parts/views/treeView.ts';
+import { ViewPaneContainer } from '../../browser/parts/views/viewPaneContainer.ts';
+import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../common/contributions.ts';
+import { ICustomViewDescriptor, IViewContainersRegistry, IViewDescriptor, IViewsRegistry, ViewContainer, Extensions as ViewContainerExtensions, ViewContainerLocation } from '../../common/views.ts';
+import { ChatContextKeyExprs } from '../../contrib/chat/common/chatContextKeys.ts';
+import { LEGACY_AGENT_SESSIONS_VIEW_ID } from '../../contrib/chat/common/constants.ts';
+import { VIEWLET_ID as DEBUG } from '../../contrib/debug/common/debug.ts';
+import { VIEWLET_ID as EXPLORER } from '../../contrib/files/common/files.ts';
+import { VIEWLET_ID as REMOTE } from '../../contrib/remote/browser/remoteExplorer.ts';
+import { VIEWLET_ID as SCM } from '../../contrib/scm/common/scm.ts';
+import { WebviewViewPane } from '../../contrib/webviewView/browser/webviewViewPane.ts';
+import { Extensions as ExtensionFeaturesRegistryExtensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../services/extensionManagement/common/extensionFeatures.ts';
+import { isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { ExtensionMessageCollector, ExtensionsRegistry, IExtensionPoint, IExtensionPointUser } from '../../services/extensions/common/extensionsRegistry.ts';
 
 export interface IUserFriendlyViewsContainerDescriptor {
 	id: string;

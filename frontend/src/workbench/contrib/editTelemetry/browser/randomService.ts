@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { generateUuid } from '../../../../base/common/uuid.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { generateUuid } from '../../../../base/common/uuid.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
 
 export const IRandomService = createDecorator<IRandomService>('randomService');
 

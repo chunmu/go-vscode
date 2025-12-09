@@ -3,39 +3,39 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IActionViewItem } from '../../../../base/browser/ui/actionbar/actionbar.js';
-import { IAction } from '../../../../base/common/actions.js';
-import { DisposableStore, dispose, IDisposable } from '../../../../base/common/lifecycle.js';
+import { IActionViewItem } from '../../../../base/browser/ui/actionbar/actionbar.ts';
+import { IAction } from '../../../../base/common/actions.ts';
+import { DisposableStore, dispose, IDisposable } from '../../../../base/common/lifecycle.ts';
 import './media/debugViewlet.css';
-import * as nls from '../../../../nls.js';
-import { createActionViewItem } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { Action2, MenuId, MenuItemAction, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService, IContextViewService } from '../../../../platform/contextview/browser/contextView.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IProgressService } from '../../../../platform/progress/common/progress.js';
-import { IQuickInputService } from '../../../../platform/quickinput/common/quickInput.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { ViewPane } from '../../../browser/parts/views/viewPane.js';
-import { ViewPaneContainer, ViewsSubMenu } from '../../../browser/parts/views/viewPaneContainer.js';
-import { WorkbenchStateContext } from '../../../common/contextkeys.js';
-import { IViewDescriptorService } from '../../../common/views.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { FocusSessionActionViewItem, StartDebugActionViewItem } from './debugActionViewItems.js';
-import { DEBUG_CONFIGURE_COMMAND_ID, DEBUG_CONFIGURE_LABEL, DEBUG_START_COMMAND_ID, DEBUG_START_LABEL, DISCONNECT_ID, FOCUS_SESSION_ID, SELECT_AND_START_ID, STOP_ID } from './debugCommands.js';
-import { debugConfigure } from './debugIcons.js';
-import { createDisconnectMenuItemAction } from './debugToolBar.js';
-import { WelcomeView } from './welcomeView.js';
-import { BREAKPOINTS_VIEW_ID, CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DEBUG_STATE, CONTEXT_DEBUG_UX, CONTEXT_DEBUG_UX_KEY, getStateLabel, IDebugService, ILaunch, REPL_VIEW_ID, State, VIEWLET_ID, EDITOR_CONTRIBUTION_ID, IDebugEditorContribution } from '../common/debug.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.js';
-import { IBaseActionViewItemOptions } from '../../../../base/browser/ui/actionbar/actionViewItems.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
+import * as nls from '../../../../nls.ts';
+import { createActionViewItem } from '../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { Action2, MenuId, MenuItemAction, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService, IContextViewService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IProgressService } from '../../../../platform/progress/common/progress.ts';
+import { IQuickInputService } from '../../../../platform/quickinput/common/quickInput.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { ViewPane } from '../../../browser/parts/views/viewPane.ts';
+import { ViewPaneContainer, ViewsSubMenu } from '../../../browser/parts/views/viewPaneContainer.ts';
+import { WorkbenchStateContext } from '../../../common/contextkeys.ts';
+import { IViewDescriptorService } from '../../../common/views.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { FocusSessionActionViewItem, StartDebugActionViewItem } from './debugActionViewItems.ts';
+import { DEBUG_CONFIGURE_COMMAND_ID, DEBUG_CONFIGURE_LABEL, DEBUG_START_COMMAND_ID, DEBUG_START_LABEL, DISCONNECT_ID, FOCUS_SESSION_ID, SELECT_AND_START_ID, STOP_ID } from './debugCommands.ts';
+import { debugConfigure } from './debugIcons.ts';
+import { createDisconnectMenuItemAction } from './debugToolBar.ts';
+import { WelcomeView } from './welcomeView.ts';
+import { BREAKPOINTS_VIEW_ID, CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DEBUG_STATE, CONTEXT_DEBUG_UX, CONTEXT_DEBUG_UX_KEY, getStateLabel, IDebugService, ILaunch, REPL_VIEW_ID, State, VIEWLET_ID, EDITOR_CONTRIBUTION_ID, IDebugEditorContribution } from '../common/debug.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.ts';
+import { IBaseActionViewItemOptions } from '../../../../base/browser/ui/actionbar/actionViewItems.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
 
 export class DebugViewPaneContainer extends ViewPaneContainer {
 

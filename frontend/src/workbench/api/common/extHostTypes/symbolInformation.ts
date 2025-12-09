@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Location } from './location.js';
-import { Range } from './range.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Location } from './location.ts';
+import { Range } from './range.ts';
 
 export enum SymbolKind {
 	File = 0,

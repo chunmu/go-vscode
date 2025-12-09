@@ -4,11 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { ExtHostShareShape, IMainContext, IShareableItemDto, MainContext, MainThreadShareShape } from './extHost.protocol.js';
-import { DocumentSelector, Range } from './extHostTypeConverters.js';
-import { IURITransformer } from '../../../base/common/uriIpc.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
+import { ExtHostShareShape, IMainContext, IShareableItemDto, MainContext, MainThreadShareShape } from './extHost.protocol.ts';
+import { DocumentSelector, Range } from './extHostTypeConverters.ts';
+import { IURITransformer } from '../../../base/common/uriIpc.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
 
 export class ExtHostShare implements ExtHostShareShape {
 	private static handlePool: number = 0;

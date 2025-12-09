@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { assert } from '../../../../../../../base/common/assert.js';
-import { isOneOf } from '../../../../../../../base/common/types.js';
+import { assert } from '../../../../../../../base/common/assert.ts';
+import { isOneOf } from '../../../../../../../base/common/types.ts';
 
 
 

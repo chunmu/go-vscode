@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize2 } from '../../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { CHAT_CATEGORY } from './chatActions.js';
-import { IChatWidgetService } from '../chat.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IChatResponseViewModel, isResponseVM } from '../../common/chatViewModel.js';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IChatResponseViewModel, isResponseVM } from '../../common/chatViewModel.ts';
 
 export function registerChatFileTreeActions() {
 	registerAction2(class NextFileTreeAction extends Action2 {

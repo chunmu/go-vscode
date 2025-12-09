@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { raceCancellation } from '../../../base/common/async.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtHostContext, ExtHostSpeechShape, MainContext, MainThreadSpeechShape } from '../common/extHost.protocol.js';
-import { IKeywordRecognitionEvent, ISpeechProviderMetadata, ISpeechService, ISpeechToTextEvent, ITextToSpeechEvent, TextToSpeechStatus } from '../../contrib/speech/common/speechService.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
+import { raceCancellation } from '../../../base/common/async.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtHostContext, ExtHostSpeechShape, MainContext, MainThreadSpeechShape } from '../common/extHost.protocol.ts';
+import { IKeywordRecognitionEvent, ISpeechProviderMetadata, ISpeechService, ISpeechToTextEvent, ITextToSpeechEvent, TextToSpeechStatus } from '../../contrib/speech/common/speechService.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
 
 type SpeechToTextSession = {
 	readonly onDidChange: Emitter<ISpeechToTextEvent>;

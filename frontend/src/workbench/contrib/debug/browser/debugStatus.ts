@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { IDisposable, dispose } from '../../../../base/common/lifecycle.js';
-import { IDebugService, State, IDebugConfiguration } from '../common/debug.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IStatusbarEntry, IStatusbarService, StatusbarAlignment, IStatusbarEntryAccessor } from '../../../services/statusbar/browser/statusbar.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
+import * as nls from '../../../../nls.ts';
+import { IDisposable, dispose } from '../../../../base/common/lifecycle.ts';
+import { IDebugService, State, IDebugConfiguration } from '../common/debug.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IStatusbarEntry, IStatusbarService, StatusbarAlignment, IStatusbarEntryAccessor } from '../../../services/statusbar/browser/statusbar.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
 
 export class DebugStatusContribution implements IWorkbenchContribution {
 

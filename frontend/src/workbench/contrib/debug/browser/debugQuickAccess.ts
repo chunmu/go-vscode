@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.js';
-import { PickerQuickAccessProvider, IPickerQuickAccessItem, TriggerAction } from '../../../../platform/quickinput/browser/pickerQuickAccess.js';
-import { localize } from '../../../../nls.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
-import { IDebugService } from '../common/debug.js';
-import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { matchesFuzzy } from '../../../../base/common/filters.js';
-import { ADD_CONFIGURATION_ID, DEBUG_QUICK_ACCESS_PREFIX } from './debugCommands.js';
-import { debugConfigure, debugRemoveConfig } from './debugIcons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
+import { IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.ts';
+import { PickerQuickAccessProvider, IPickerQuickAccessItem, TriggerAction } from '../../../../platform/quickinput/browser/pickerQuickAccess.ts';
+import { localize } from '../../../../nls.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
+import { IDebugService } from '../common/debug.ts';
+import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { matchesFuzzy } from '../../../../base/common/filters.ts';
+import { ADD_CONFIGURATION_ID, DEBUG_QUICK_ACCESS_PREFIX } from './debugCommands.ts';
+import { debugConfigure, debugRemoveConfig } from './debugIcons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
 
 export class StartDebugQuickAccessProvider extends PickerQuickAccessProvider<IPickerQuickAccessItem> {
 

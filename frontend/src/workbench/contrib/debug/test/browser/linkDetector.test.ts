@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { isHTMLAnchorElement } from '../../../../../base/browser/dom.js';
-import { isWindows } from '../../../../../base/common/platform.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { ITunnelService } from '../../../../../platform/tunnel/common/tunnel.js';
-import { WorkspaceFolder } from '../../../../../platform/workspace/common/workspace.js';
-import { LinkDetector } from '../../browser/linkDetector.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { IHighlight } from '../../../../../base/browser/ui/highlightedlabel/highlightedLabel.js';
+import { isHTMLAnchorElement } from '../../../../../base/browser/dom.ts';
+import { isWindows } from '../../../../../base/common/platform.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { ITunnelService } from '../../../../../platform/tunnel/common/tunnel.ts';
+import { WorkspaceFolder } from '../../../../../platform/workspace/common/workspace.ts';
+import { LinkDetector } from '../../browser/linkDetector.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { IHighlight } from '../../../../../base/browser/ui/highlightedlabel/highlightedLabel.ts';
 
 suite('Debug - Link Detector', () => {
 
@@ -82,7 +82,7 @@ suite('Debug - Link Detector', () => {
 	});
 
 	test('relativeLink', () => {
-		const input = '\./foo/bar.js';
+		const input = '\./foo/bar.ts';
 		const expectedOutput = '<span>\./foo/bar.js</span>';
 		const output = linkDetector.linkify(input);
 
@@ -92,7 +92,7 @@ suite('Debug - Link Detector', () => {
 	});
 
 	test('relativeLinkWithWorkspace', async () => {
-		const input = '\./foo/bar.js';
+		const input = '\./foo/bar.ts';
 		const output = linkDetector.linkify(input, false, new WorkspaceFolder({ uri: URI.file('/path/to/workspace'), name: 'ws', index: 0 }));
 		assert.strictEqual('SPAN', output.tagName);
 		assert.ok(output.outerHTML.indexOf('link') >= 0);

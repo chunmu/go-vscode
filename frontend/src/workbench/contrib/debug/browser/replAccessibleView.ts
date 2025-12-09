@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AccessibleViewProviderId, AccessibleViewType, IAccessibleViewContentProvider, IAccessibleViewService } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { IReplElement } from '../common/debug.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { getReplView, Repl } from './repl.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { Position } from '../../../../editor/common/core/position.js';
+import { AccessibleViewProviderId, AccessibleViewType, IAccessibleViewContentProvider, IAccessibleViewService } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { IReplElement } from '../common/debug.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { getReplView, Repl } from './repl.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { Position } from '../../../../editor/common/core/position.ts';
 
 export class ReplAccessibleView implements IAccessibleViewImplementation {
 	priority = 70;

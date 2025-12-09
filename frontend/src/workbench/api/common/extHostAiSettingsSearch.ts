@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type { SettingsSearchProvider, SettingsSearchResult } from 'vscode';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { AiSettingsSearchProviderOptions } from '../../services/aiSettingsSearch/common/aiSettingsSearch.js';
-import { ExtHostAiSettingsSearchShape, IMainContext, MainContext, MainThreadAiSettingsSearchShape } from './extHost.protocol.js';
-import { Disposable } from './extHostTypes.js';
-import { Progress } from '../../../platform/progress/common/progress.js';
-import { AiSettingsSearch } from './extHostTypeConverters.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { AiSettingsSearchProviderOptions } from '../../services/aiSettingsSearch/common/aiSettingsSearch.ts';
+import { ExtHostAiSettingsSearchShape, IMainContext, MainContext, MainThreadAiSettingsSearchShape } from './extHost.protocol.ts';
+import { Disposable } from './extHostTypes.ts';
+import { Progress } from '../../../platform/progress/common/progress.ts';
+import { AiSettingsSearch } from './extHostTypeConverters.ts';
 
 export class ExtHostAiSettingsSearch implements ExtHostAiSettingsSearchShape {
 	private _settingsSearchProviders: Map<number, SettingsSearchProvider> = new Map();

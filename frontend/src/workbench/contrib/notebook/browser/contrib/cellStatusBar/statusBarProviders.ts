@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../../base/common/map.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { localize } from '../../../../../../nls.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../../../common/contributions.js';
-import { CHANGE_CELL_LANGUAGE, DETECT_CELL_LANGUAGE } from '../../notebookBrowser.js';
-import { INotebookCellStatusBarService } from '../../../common/notebookCellStatusBarService.js';
-import { CellKind, CellStatusbarAlignment, INotebookCellStatusBarItem, INotebookCellStatusBarItemList, INotebookCellStatusBarItemProvider } from '../../../common/notebookCommon.js';
-import { INotebookKernelService } from '../../../common/notebookKernelService.js';
-import { INotebookService } from '../../../common/notebookService.js';
-import { ILanguageDetectionService, LanguageDetectionHintConfig } from '../../../../../services/languageDetection/common/languageDetectionWorkerService.js';
-import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../../base/common/map.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../../../common/contributions.ts';
+import { CHANGE_CELL_LANGUAGE, DETECT_CELL_LANGUAGE } from '../../notebookBrowser.ts';
+import { INotebookCellStatusBarService } from '../../../common/notebookCellStatusBarService.ts';
+import { CellKind, CellStatusbarAlignment, INotebookCellStatusBarItem, INotebookCellStatusBarItemList, INotebookCellStatusBarItemProvider } from '../../../common/notebookCommon.ts';
+import { INotebookKernelService } from '../../../common/notebookKernelService.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
+import { ILanguageDetectionService, LanguageDetectionHintConfig } from '../../../../../services/languageDetection/common/languageDetectionWorkerService.ts';
+import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.ts';
 
 class CellStatusBarLanguagePickerProvider implements INotebookCellStatusBarItemProvider {
 

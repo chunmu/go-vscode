@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $, append } from '../../../../../base/browser/dom.js';
-import { alert } from '../../../../../base/browser/ui/aria/aria.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { createMarkdownCommandLink, MarkdownString, type IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { localize } from '../../../../../nls.js';
-import { IChatProgressMessage, IChatTask, IChatTaskSerialized, IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../common/chatService.js';
-import { IChatRendererContent, isResponseVM } from '../../common/chatViewModel.js';
-import { ChatTreeItem } from '../chat.js';
-import { renderFileWidgets } from '../chatInlineAnchorWidget.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { IChatMarkdownAnchorService } from './chatMarkdownAnchorService.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { AccessibilityWorkbenchSettingId } from '../../../accessibility/browser/accessibilityConfiguration.js';
-import { IHoverService } from '../../../../../platform/hover/browser/hover.js';
-import { HoverStyle } from '../../../../../base/browser/ui/hover/hover.js';
-import { ILanguageModelToolsService } from '../../common/languageModelToolsService.js';
+import { $, append } from '../../../../../base/browser/dom.ts';
+import { alert } from '../../../../../base/browser/ui/aria/aria.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { createMarkdownCommandLink, MarkdownString, type IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { localize } from '../../../../../nls.ts';
+import { IChatProgressMessage, IChatTask, IChatTaskSerialized, IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../common/chatService.ts';
+import { IChatRendererContent, isResponseVM } from '../../common/chatViewModel.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { renderFileWidgets } from '../chatInlineAnchorWidget.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { IChatMarkdownAnchorService } from './chatMarkdownAnchorService.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { AccessibilityWorkbenchSettingId } from '../../../accessibility/browser/accessibilityConfiguration.ts';
+import { IHoverService } from '../../../../../platform/hover/browser/hover.ts';
+import { HoverStyle } from '../../../../../base/browser/ui/hover/hover.ts';
+import { ILanguageModelToolsService } from '../../common/languageModelToolsService.ts';
 
 export class ChatProgressContentPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

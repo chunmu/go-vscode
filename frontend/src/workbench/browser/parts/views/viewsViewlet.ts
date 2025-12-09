@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { IViewDescriptor, IViewDescriptorService, IAddedViewDescriptorRef, IView } from '../../../common/views.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { ViewPaneContainer } from './viewPaneContainer.js';
-import { ViewPane, IViewPaneOptions } from './viewPane.js';
-import { Event } from '../../../../base/common/event.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IViewDescriptor, IViewDescriptorService, IAddedViewDescriptorRef, IView } from '../../../common/views.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { ViewPaneContainer } from './viewPaneContainer.ts';
+import { ViewPane, IViewPaneOptions } from './viewPane.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
 
 export interface IViewletViewOptions extends IViewPaneOptions {
 	readonly fromExtensionId?: ExtensionIdentifier;

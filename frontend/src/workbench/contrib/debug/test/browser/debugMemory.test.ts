@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { decodeBase64, encodeBase64, VSBuffer } from '../../../../../base/common/buffer.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { mockObject, MockObject } from '../../../../../base/test/common/mock.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { MemoryRangeType } from '../../common/debug.js';
-import { MemoryRegion } from '../../common/debugModel.js';
-import { MockSession } from '../common/mockDebug.js';
+import { decodeBase64, encodeBase64, VSBuffer } from '../../../../../base/common/buffer.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { mockObject, MockObject } from '../../../../../base/test/common/mock.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { MemoryRangeType } from '../../common/debug.ts';
+import { MemoryRegion } from '../../common/debugModel.ts';
+import { MockSession } from '../common/mockDebug.ts';
 
 suite('Debug - Memory', () => {
 	const dapResponseCommon = {

@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { IEnvironmentService } from '../../../platform/environment/common/environment.js';
-import { IProductService } from '../../../platform/product/common/productService.js';
-import { ClassifiedEvent, IGDPRProperty, OmitMetadata, StrictPropertyCheck } from '../../../platform/telemetry/common/gdprTypings.js';
-import { ITelemetryService, TelemetryLevel, TELEMETRY_OLD_SETTING_ID, TELEMETRY_SETTING_ID, ITelemetryData } from '../../../platform/telemetry/common/telemetry.js';
-import { supportsTelemetry } from '../../../platform/telemetry/common/telemetryUtils.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostTelemetryShape, MainContext, MainThreadTelemetryShape } from '../common/extHost.protocol.js';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { IEnvironmentService } from '../../../platform/environment/common/environment.ts';
+import { IProductService } from '../../../platform/product/common/productService.ts';
+import { ClassifiedEvent, IGDPRProperty, OmitMetadata, StrictPropertyCheck } from '../../../platform/telemetry/common/gdprTypings.ts';
+import { ITelemetryService, TelemetryLevel, TELEMETRY_OLD_SETTING_ID, TELEMETRY_SETTING_ID, ITelemetryData } from '../../../platform/telemetry/common/telemetry.ts';
+import { supportsTelemetry } from '../../../platform/telemetry/common/telemetryUtils.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostTelemetryShape, MainContext, MainThreadTelemetryShape } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadTelemetry)
 export class MainThreadTelemetry extends Disposable implements MainThreadTelemetryShape {

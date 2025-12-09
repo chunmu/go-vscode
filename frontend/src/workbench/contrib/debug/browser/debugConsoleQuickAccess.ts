@@ -2,16 +2,16 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { matchesFuzzy } from '../../../../base/common/filters.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { FastAndSlowPicks, IPickerQuickAccessItem, PickerQuickAccessProvider, Picks } from '../../../../platform/quickinput/browser/pickerQuickAccess.js';
-import { IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { DEBUG_CONSOLE_QUICK_ACCESS_PREFIX, SELECT_AND_START_ID } from './debugCommands.js';
-import { IDebugService, IDebugSession, REPL_VIEW_ID } from '../common/debug.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { matchesFuzzy } from '../../../../base/common/filters.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { FastAndSlowPicks, IPickerQuickAccessItem, PickerQuickAccessProvider, Picks } from '../../../../platform/quickinput/browser/pickerQuickAccess.ts';
+import { IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { DEBUG_CONSOLE_QUICK_ACCESS_PREFIX, SELECT_AND_START_ID } from './debugCommands.ts';
+import { IDebugService, IDebugSession, REPL_VIEW_ID } from '../common/debug.ts';
 
 export class DebugConsoleQuickAccess extends PickerQuickAccessProvider<IPickerQuickAccessItem> {
 

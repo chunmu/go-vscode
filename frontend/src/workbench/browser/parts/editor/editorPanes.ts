@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { IAction } from '../../../../base/common/actions.js';
-import { Emitter } from '../../../../base/common/event.js';
-import Severity from '../../../../base/common/severity.js';
-import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { EditorExtensions, EditorInputCapabilities, IEditorOpenContext, IVisibleEditorPane, isEditorOpenError } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { Dimension, show, hide, IDomNodePagePosition, isAncestor, getActiveElement, getWindowById, isEditableElement, $ } from '../../../../base/browser/dom.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IEditorPaneRegistry, IEditorPaneDescriptor } from '../../editor.js';
-import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.js';
-import { EditorPane } from './editorPane.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IEditorProgressService, LongRunningOperation } from '../../../../platform/progress/common/progress.js';
-import { IEditorGroupView, DEFAULT_EDITOR_MIN_DIMENSIONS, DEFAULT_EDITOR_MAX_DIMENSIONS, IInternalEditorOpenOptions } from './editor.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { IWorkspaceTrustManagementService } from '../../../../platform/workspace/common/workspaceTrust.js';
-import { ErrorPlaceholderEditor, IErrorEditorPlaceholderOptions, WorkspaceTrustRequiredPlaceholderEditor } from './editorPlaceholder.js';
-import { EditorOpenSource, IEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { isCancellationError } from '../../../../base/common/errors.js';
-import { toErrorMessage } from '../../../../base/common/errorMessage.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IDialogService, IPromptButton, IPromptCancelButton } from '../../../../platform/dialogs/common/dialogs.js';
-import { IBoundarySashes } from '../../../../base/browser/ui/sash/sash.js';
-import { IHostService } from '../../../services/host/browser/host.js';
+import { localize } from '../../../../nls.ts';
+import { IAction } from '../../../../base/common/actions.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import Severity from '../../../../base/common/severity.ts';
+import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { EditorExtensions, EditorInputCapabilities, IEditorOpenContext, IVisibleEditorPane, isEditorOpenError } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { Dimension, show, hide, IDomNodePagePosition, isAncestor, getActiveElement, getWindowById, isEditableElement, $ } from '../../../../base/browser/dom.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IEditorPaneRegistry, IEditorPaneDescriptor } from '../../editor.ts';
+import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.ts';
+import { EditorPane } from './editorPane.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IEditorProgressService, LongRunningOperation } from '../../../../platform/progress/common/progress.ts';
+import { IEditorGroupView, DEFAULT_EDITOR_MIN_DIMENSIONS, DEFAULT_EDITOR_MAX_DIMENSIONS, IInternalEditorOpenOptions } from './editor.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { IWorkspaceTrustManagementService } from '../../../../platform/workspace/common/workspaceTrust.ts';
+import { ErrorPlaceholderEditor, IErrorEditorPlaceholderOptions, WorkspaceTrustRequiredPlaceholderEditor } from './editorPlaceholder.ts';
+import { EditorOpenSource, IEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { isCancellationError } from '../../../../base/common/errors.ts';
+import { toErrorMessage } from '../../../../base/common/errorMessage.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IDialogService, IPromptButton, IPromptCancelButton } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IBoundarySashes } from '../../../../base/browser/ui/sash/sash.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
 
 export interface IOpenEditorResult {
 

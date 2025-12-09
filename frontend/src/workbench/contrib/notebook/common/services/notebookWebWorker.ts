@@ -2,23 +2,23 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { IDiffChange, ISequence, LcsDiff } from '../../../../../base/common/diff/diff.js';
-import { doHash, hash, numberHash } from '../../../../../base/common/hash.js';
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IWebWorkerServerRequestHandler } from '../../../../../base/common/worker/webWorker.js';
-import { PieceTreeTextBufferBuilder } from '../../../../../editor/common/model/pieceTreeTextBuffer/pieceTreeTextBufferBuilder.js';
-import { CellKind, IMainCellDto, INotebookDiffResult, IOutputDto, NotebookCellInternalMetadata, NotebookCellMetadata, NotebookCellsChangedEventDto, NotebookCellsChangeType, NotebookCellTextModelSplice, NotebookDocumentMetadata, TransientDocumentMetadata } from '../notebookCommon.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { SearchParams } from '../../../../../editor/common/model/textModelSearch.js';
-import { MirrorModel } from '../../../../../editor/common/services/textModelSync/textModelSync.impl.js';
-import { DefaultEndOfLine } from '../../../../../editor/common/model.js';
-import { IModelChangedEvent } from '../../../../../editor/common/model/mirrorTextModel.js';
-import { filter } from '../../../../../base/common/objects.js';
-import { matchCellBasedOnSimilarties } from './notebookCellMatching.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { DiffChange } from '../../../../../base/common/diff/diffChange.js';
-import { computeDiff } from '../notebookDiff.js';
+import { IDiffChange, ISequence, LcsDiff } from '../../../../../base/common/diff/diff.ts';
+import { doHash, hash, numberHash } from '../../../../../base/common/hash.ts';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IWebWorkerServerRequestHandler } from '../../../../../base/common/worker/webWorker.ts';
+import { PieceTreeTextBufferBuilder } from '../../../../../editor/common/model/pieceTreeTextBuffer/pieceTreeTextBufferBuilder.ts';
+import { CellKind, IMainCellDto, INotebookDiffResult, IOutputDto, NotebookCellInternalMetadata, NotebookCellMetadata, NotebookCellsChangedEventDto, NotebookCellsChangeType, NotebookCellTextModelSplice, NotebookDocumentMetadata, TransientDocumentMetadata } from '../notebookCommon.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { SearchParams } from '../../../../../editor/common/model/textModelSearch.ts';
+import { MirrorModel } from '../../../../../editor/common/services/textModelSync/textModelSync.impl.ts';
+import { DefaultEndOfLine } from '../../../../../editor/common/model.ts';
+import { IModelChangedEvent } from '../../../../../editor/common/model/mirrorTextModel.ts';
+import { filter } from '../../../../../base/common/objects.ts';
+import { matchCellBasedOnSimilarties } from './notebookCellMatching.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { DiffChange } from '../../../../../base/common/diff/diffChange.ts';
+import { computeDiff } from '../notebookDiff.ts';
 
 const PREFIX_FOR_UNMATCHED_ORIGINAL_CELLS = `unmatchedOriginalCell`;
 

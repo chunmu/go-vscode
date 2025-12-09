@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { URI } from '../../../../base/common/uri.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { ITextEditorPane } from '../../../common/editor.js';
-import { applyTextEditorOptions } from '../../../common/editor/editorOptions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ITextEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { isEqual } from '../../../../base/common/resources.js';
-import { IEditorOptions as ICodeEditorOptions } from '../../../../editor/common/config/editorOptions.js';
-import { CodeEditorWidget, ICodeEditorWidgetOptions } from '../../../../editor/browser/widget/codeEditor/codeEditorWidget.js';
-import { IEditorViewState, ScrollType } from '../../../../editor/common/editorCommon.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { AbstractTextEditor } from './textEditor.js';
-import { Dimension } from '../../../../base/browser/dom.js';
+import { localize } from '../../../../nls.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { ITextEditorPane } from '../../../common/editor.ts';
+import { applyTextEditorOptions } from '../../../common/editor/editorOptions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ITextEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { isEqual } from '../../../../base/common/resources.ts';
+import { IEditorOptions as ICodeEditorOptions } from '../../../../editor/common/config/editorOptions.ts';
+import { CodeEditorWidget, ICodeEditorWidgetOptions } from '../../../../editor/browser/widget/codeEditor/codeEditorWidget.ts';
+import { IEditorViewState, ScrollType } from '../../../../editor/common/editorCommon.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { AbstractTextEditor } from './textEditor.ts';
+import { Dimension } from '../../../../base/browser/dom.ts';
 
 /**
  * A text editor using the code editor widget.

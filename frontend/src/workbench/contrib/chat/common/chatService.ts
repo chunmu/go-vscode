@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction } from '../../../../base/common/actions.js';
-import { DeferredPromise } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { DisposableStore, IReference } from '../../../../base/common/lifecycle.js';
-import { autorun, autorunSelfDisposable, IObservable, IReader } from '../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI, UriComponents } from '../../../../base/common/uri.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import { ISelection } from '../../../../editor/common/core/selection.js';
-import { Command, Location, TextEdit } from '../../../../editor/common/languages.js';
-import { FileType } from '../../../../platform/files/common/files.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IAutostartResult } from '../../mcp/common/mcpTypes.js';
-import { ICellEditOperation } from '../../notebook/common/notebookCommon.js';
-import { IWorkspaceSymbol } from '../../search/common/search.js';
-import { IChatAgentCommand, IChatAgentData, IChatAgentResult, UserSelectedTools } from './chatAgents.js';
-import { IChatEditingSession } from './chatEditingService.js';
-import { IChatModel, IChatModelInputState, IChatRequestModeInfo, IChatRequestModel, IChatRequestVariableData, IChatResponseModel, IExportableChatData, ISerializableChatData } from './chatModel.js';
-import { IParsedChatRequest } from './chatParserTypes.js';
-import { IChatParserContext } from './chatRequestParser.js';
-import { IChatRequestVariableEntry } from './chatVariableEntries.js';
-import { IChatRequestVariableValue } from './chatVariables.js';
-import { ChatAgentLocation } from './constants.js';
-import { IPreparedToolInvocation, IToolConfirmationMessages, IToolResult, IToolResultInputOutputDetails, ToolDataSource } from './languageModelToolsService.js';
+import { IAction } from '../../../../base/common/actions.ts';
+import { DeferredPromise } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { DisposableStore, IReference } from '../../../../base/common/lifecycle.ts';
+import { autorun, autorunSelfDisposable, IObservable, IReader } from '../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI, UriComponents } from '../../../../base/common/uri.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import { ISelection } from '../../../../editor/common/core/selection.ts';
+import { Command, Location, TextEdit } from '../../../../editor/common/languages.ts';
+import { FileType } from '../../../../platform/files/common/files.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IAutostartResult } from '../../mcp/common/mcpTypes.ts';
+import { ICellEditOperation } from '../../notebook/common/notebookCommon.ts';
+import { IWorkspaceSymbol } from '../../search/common/search.ts';
+import { IChatAgentCommand, IChatAgentData, IChatAgentResult, UserSelectedTools } from './chatAgents.ts';
+import { IChatEditingSession } from './chatEditingService.ts';
+import { IChatModel, IChatModelInputState, IChatRequestModeInfo, IChatRequestModel, IChatRequestVariableData, IChatResponseModel, IExportableChatData, ISerializableChatData } from './chatModel.ts';
+import { IParsedChatRequest } from './chatParserTypes.ts';
+import { IChatParserContext } from './chatRequestParser.ts';
+import { IChatRequestVariableEntry } from './chatVariableEntries.ts';
+import { IChatRequestVariableValue } from './chatVariables.ts';
+import { ChatAgentLocation } from './constants.ts';
+import { IPreparedToolInvocation, IToolConfirmationMessages, IToolResult, IToolResultInputOutputDetails, ToolDataSource } from './languageModelToolsService.ts';
 
 export interface IChatRequest {
 	message: string;

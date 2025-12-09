@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { IListVirtualDelegate } from '../../../../../../base/browser/ui/list/list.js';
-import { IListAccessibilityProvider } from '../../../../../../base/browser/ui/list/listWidget.js';
-import { ITreeNode, ITreeRenderer } from '../../../../../../base/browser/ui/tree/tree.js';
-import { FuzzyScore } from '../../../../../../base/common/filters.js';
-import { DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { observableValue } from '../../../../../../base/common/observable.js';
-import { ILocalizedString, localize, localize2 } from '../../../../../../nls.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { WorkbenchObjectTree } from '../../../../../../platform/list/browser/listService.js';
-import { DebugExpressionRenderer } from '../../../../debug/browser/debugExpressionRenderer.js';
-import { INotebookVariableElement } from './notebookVariablesDataSource.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { IListVirtualDelegate } from '../../../../../../base/browser/ui/list/list.ts';
+import { IListAccessibilityProvider } from '../../../../../../base/browser/ui/list/listWidget.ts';
+import { ITreeNode, ITreeRenderer } from '../../../../../../base/browser/ui/tree/tree.ts';
+import { FuzzyScore } from '../../../../../../base/common/filters.ts';
+import { DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { observableValue } from '../../../../../../base/common/observable.ts';
+import { ILocalizedString, localize, localize2 } from '../../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { WorkbenchObjectTree } from '../../../../../../platform/list/browser/listService.ts';
+import { DebugExpressionRenderer } from '../../../../debug/browser/debugExpressionRenderer.ts';
+import { INotebookVariableElement } from './notebookVariablesDataSource.ts';
 
 const $ = dom.$;
 const MAX_VALUE_RENDER_LENGTH_IN_VIEWLET = 1024;

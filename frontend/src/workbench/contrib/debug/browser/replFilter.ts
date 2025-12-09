@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { FuzzyScore, matchesFuzzy } from '../../../../base/common/filters.js';
-import { splitGlobAware } from '../../../../base/common/glob.js';
-import { ITreeFilter, TreeVisibility, TreeFilterResult } from '../../../../base/browser/ui/tree/tree.js';
-import { IReplElement } from '../common/debug.js';
-import { ReplEvaluationResult, ReplEvaluationInput } from '../common/replModel.js';
-import { Variable } from '../common/debugModel.js';
+import { FuzzyScore, matchesFuzzy } from '../../../../base/common/filters.ts';
+import { splitGlobAware } from '../../../../base/common/glob.ts';
+import { ITreeFilter, TreeVisibility, TreeFilterResult } from '../../../../base/browser/ui/tree/tree.ts';
+import { IReplElement } from '../common/debug.ts';
+import { ReplEvaluationResult, ReplEvaluationInput } from '../common/replModel.ts';
+import { Variable } from '../common/debugModel.ts';
 
 
 type ParsedQuery = {

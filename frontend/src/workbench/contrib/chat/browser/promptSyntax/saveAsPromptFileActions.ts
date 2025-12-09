@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../../../base/common/network.js';
-import { joinPath } from '../../../../../base/common/resources.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { ILocalizedString, localize2 } from '../../../../../nls.js';
-import { ICommandActionTitle } from '../../../../../platform/action/common/action.js';
-import { Action2, IAction2Options, MenuId } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ResourceContextKey } from '../../../../common/contextkeys.js';
-import { ITextFileService } from '../../../../services/textfile/common/textfiles.js';
-import { chatEditingWidgetFileStateContextKey, ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { getCleanPromptName } from '../../common/promptSyntax/config/promptFileLocations.js';
-import { AGENT_LANGUAGE_ID, INSTRUCTIONS_LANGUAGE_ID, PROMPT_LANGUAGE_ID, PromptsType } from '../../common/promptSyntax/promptTypes.js';
-import { CHAT_CATEGORY } from '../actions/chatActions.js';
-import { askForPromptFileName } from './pickers/askForPromptName.js';
-import { askForPromptSourceFolder } from './pickers/askForPromptSourceFolder.js';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { joinPath } from '../../../../../base/common/resources.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { ILocalizedString, localize2 } from '../../../../../nls.ts';
+import { ICommandActionTitle } from '../../../../../platform/action/common/action.ts';
+import { Action2, IAction2Options, MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ResourceContextKey } from '../../../../common/contextkeys.ts';
+import { ITextFileService } from '../../../../services/textfile/common/textfiles.ts';
+import { chatEditingWidgetFileStateContextKey, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { getCleanPromptName } from '../../common/promptSyntax/config/promptFileLocations.ts';
+import { AGENT_LANGUAGE_ID, INSTRUCTIONS_LANGUAGE_ID, PROMPT_LANGUAGE_ID, PromptsType } from '../../common/promptSyntax/promptTypes.ts';
+import { CHAT_CATEGORY } from '../actions/chatActions.ts';
+import { askForPromptFileName } from './pickers/askForPromptName.ts';
+import { askForPromptSourceFolder } from './pickers/askForPromptSourceFolder.ts';
 
 class BaseSaveAsPromptFileAction extends Action2 {
 	constructor(opts: Readonly<IAction2Options>, private readonly promptType: PromptsType) {

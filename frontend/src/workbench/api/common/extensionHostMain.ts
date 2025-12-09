@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as errors from '../../../base/common/errors.js';
-import * as performance from '../../../base/common/performance.js';
-import { URI } from '../../../base/common/uri.js';
-import { IURITransformer } from '../../../base/common/uriIpc.js';
-import { IMessagePassingProtocol } from '../../../base/parts/ipc/common/ipc.js';
-import { MainContext, MainThreadConsoleShape } from './extHost.protocol.js';
-import { IExtensionHostInitData } from '../../services/extensions/common/extensionHostProtocol.js';
-import { RPCProtocol } from '../../services/extensions/common/rpcProtocol.js';
-import { ExtensionError, ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { getSingletonServiceDescriptors } from '../../../platform/instantiation/common/extensions.js';
-import { ServiceCollection } from '../../../platform/instantiation/common/serviceCollection.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { InstantiationService } from '../../../platform/instantiation/common/instantiationService.js';
-import { IInstantiationService, ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService, ExtHostRpcService } from './extHostRpcService.js';
-import { IURITransformerService, URITransformerService } from './extHostUriTransformerService.js';
-import { IExtHostExtensionService, IHostUtils } from './extHostExtensionService.js';
-import { IExtHostTelemetry } from './extHostTelemetry.js';
-import { Mutable } from '../../../base/common/types.js';
-import { IExtHostApiDeprecationService } from './extHostApiDeprecationService.js';
+import * as errors from '../../../base/common/errors.ts';
+import * as performance from '../../../base/common/performance.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IURITransformer } from '../../../base/common/uriIpc.ts';
+import { IMessagePassingProtocol } from '../../../base/parts/ipc/common/ipc.ts';
+import { MainContext, MainThreadConsoleShape } from './extHost.protocol.ts';
+import { IExtensionHostInitData } from '../../services/extensions/common/extensionHostProtocol.ts';
+import { RPCProtocol } from '../../services/extensions/common/rpcProtocol.ts';
+import { ExtensionError, ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { getSingletonServiceDescriptors } from '../../../platform/instantiation/common/extensions.ts';
+import { ServiceCollection } from '../../../platform/instantiation/common/serviceCollection.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { InstantiationService } from '../../../platform/instantiation/common/instantiationService.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService, ExtHostRpcService } from './extHostRpcService.ts';
+import { IURITransformerService, URITransformerService } from './extHostUriTransformerService.ts';
+import { IExtHostExtensionService, IHostUtils } from './extHostExtensionService.ts';
+import { IExtHostTelemetry } from './extHostTelemetry.ts';
+import { Mutable } from '../../../base/common/types.ts';
+import { IExtHostApiDeprecationService } from './extHostApiDeprecationService.ts';
 
 export interface IExitFn {
 	(code?: number): any;

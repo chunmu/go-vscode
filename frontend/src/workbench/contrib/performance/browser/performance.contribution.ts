@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize2 } from '../../../../nls.js';
-import { registerAction2, Action2 } from '../../../../platform/actions/common/actions.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { Extensions, IWorkbenchContributionsRegistry, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { EditorExtensions, IEditorSerializer, IEditorFactoryRegistry } from '../../../common/editor.js';
-import { PerfviewContrib, PerfviewInput } from './perfviewEditor.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { InstantiationService, Trace } from '../../../../platform/instantiation/common/instantiationService.js';
-import { EventProfiling } from '../../../../base/common/event.js';
-import { InputLatencyContrib } from './inputLatencyContrib.js';
-import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
-import { GCBasedDisposableTracker, setDisposableTracker } from '../../../../base/common/lifecycle.js';
+import { localize2 } from '../../../../nls.ts';
+import { registerAction2, Action2 } from '../../../../platform/actions/common/actions.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { Extensions, IWorkbenchContributionsRegistry, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { EditorExtensions, IEditorSerializer, IEditorFactoryRegistry } from '../../../common/editor.ts';
+import { PerfviewContrib, PerfviewInput } from './perfviewEditor.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { InstantiationService, Trace } from '../../../../platform/instantiation/common/instantiationService.ts';
+import { EventProfiling } from '../../../../base/common/event.ts';
+import { InputLatencyContrib } from './inputLatencyContrib.ts';
+import { IEnvironmentService } from '../../../../platform/environment/common/environment.ts';
+import { GCBasedDisposableTracker, setDisposableTracker } from '../../../../base/common/lifecycle.ts';
 
 // -- startup performance view
 

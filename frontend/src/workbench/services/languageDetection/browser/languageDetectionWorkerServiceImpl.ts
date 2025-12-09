@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { ILanguageDetectionService, ILanguageDetectionStats, LanguageDetectionStatsClassification, LanguageDetectionStatsId } from '../common/languageDetectionWorkerService.js';
-import { AppResourcePath, FileAccess, nodeModulesAsarPath, nodeModulesPath, Schemas } from '../../../../base/common/network.js';
-import { IWorkbenchEnvironmentService } from '../../environment/common/environmentService.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { URI } from '../../../../base/common/uri.js';
-import { isWeb } from '../../../../base/common/platform.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { IWebWorkerClient } from '../../../../base/common/worker/webWorker.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IDiagnosticsService } from '../../../../platform/diagnostics/common/diagnostics.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { IEditorService } from '../../editor/common/editorService.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { LRUCache } from '../../../../base/common/map.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { canASAR } from '../../../../amdX.js';
-import { WebWorkerDescriptor } from '../../../../platform/webWorker/browser/webWorkerDescriptor.js';
-import { IWebWorkerService } from '../../../../platform/webWorker/browser/webWorkerService.js';
-import { WorkerTextModelSyncClient } from '../../../../editor/common/services/textModelSync/textModelSync.impl.js';
-import { ILanguageDetectionWorker, LanguageDetectionWorkerHost } from './languageDetectionWorker.protocol.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { ILanguageDetectionService, ILanguageDetectionStats, LanguageDetectionStatsClassification, LanguageDetectionStatsId } from '../common/languageDetectionWorkerService.ts';
+import { AppResourcePath, FileAccess, nodeModulesAsarPath, nodeModulesPath, Schemas } from '../../../../base/common/network.ts';
+import { IWorkbenchEnvironmentService } from '../../environment/common/environmentService.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { isWeb } from '../../../../base/common/platform.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { IWebWorkerClient } from '../../../../base/common/worker/webWorker.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IDiagnosticsService } from '../../../../platform/diagnostics/common/diagnostics.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { IEditorService } from '../../editor/common/editorService.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { LRUCache } from '../../../../base/common/map.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { canASAR } from '../../../../amdX.ts';
+import { WebWorkerDescriptor } from '../../../../platform/webWorker/browser/webWorkerDescriptor.ts';
+import { IWebWorkerService } from '../../../../platform/webWorker/browser/webWorkerService.ts';
+import { WorkerTextModelSyncClient } from '../../../../editor/common/services/textModelSync/textModelSync.impl.ts';
+import { ILanguageDetectionWorker, LanguageDetectionWorkerHost } from './languageDetectionWorker.protocol.ts';
 
 const TOP_LANG_COUNTS = 12;
 

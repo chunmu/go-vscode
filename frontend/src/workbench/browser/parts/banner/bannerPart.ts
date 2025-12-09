@@ -4,31 +4,31 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/bannerpart.css';
-import { localize, localize2 } from '../../../../nls.js';
-import { $, addDisposableListener, append, clearNode, EventType, isHTMLElement } from '../../../../base/browser/dom.js';
-import { asCSSUrl } from '../../../../base/browser/cssValue.js';
-import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { Part } from '../../part.js';
-import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.js';
-import { Action } from '../../../../base/common/actions.js';
-import { Link } from '../../../../platform/opener/browser/link.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { IBannerItem, IBannerService } from '../../../services/banner/browser/bannerService.js';
-import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.js';
-import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { URI } from '../../../../base/common/uri.js';
-import { widgetClose } from '../../../../platform/theme/common/iconRegistry.js';
-import { BannerFocused } from '../../../common/contextkeys.js';
+import { localize, localize2 } from '../../../../nls.ts';
+import { $, addDisposableListener, append, clearNode, EventType, isHTMLElement } from '../../../../base/browser/dom.ts';
+import { asCSSUrl } from '../../../../base/browser/cssValue.ts';
+import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { Part } from '../../part.ts';
+import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.ts';
+import { Action } from '../../../../base/common/actions.ts';
+import { Link } from '../../../../platform/opener/browser/link.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { IBannerItem, IBannerService } from '../../../services/banner/browser/bannerService.ts';
+import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.ts';
+import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { widgetClose } from '../../../../platform/theme/common/iconRegistry.ts';
+import { BannerFocused } from '../../../common/contextkeys.ts';
 
 // Banner Part
 

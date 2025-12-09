@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../../base/common/event.js';
-import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2 } from '../../../../../platform/actions/common/actions.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { IQuickInputService, IQuickPick, IQuickPickItem, QuickPickInput } from '../../../../../platform/quickinput/common/quickInput.js';
-import { AuthenticationSessionAccount, IAuthenticationService } from '../../../../services/authentication/common/authentication.js';
-import { IAuthenticationQueryService } from '../../../../services/authentication/common/authenticationQuery.js';
-import { IMcpService } from '../../../mcp/common/mcpTypes.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2 } from '../../../../../platform/actions/common/actions.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { IQuickInputService, IQuickPick, IQuickPickItem, QuickPickInput } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { AuthenticationSessionAccount, IAuthenticationService } from '../../../../services/authentication/common/authentication.ts';
+import { IAuthenticationQueryService } from '../../../../services/authentication/common/authenticationQuery.ts';
+import { IMcpService } from '../../../mcp/common/mcpTypes.ts';
 
 export class ManageAccountPreferencesForMcpServerAction extends Action2 {
 	constructor() {

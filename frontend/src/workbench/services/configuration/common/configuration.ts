@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ConfigurationScope } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { refineServiceDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { Event } from '../../../../base/common/event.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { IAnyWorkspaceIdentifier } from '../../../../platform/workspace/common/workspace.js';
+import { ConfigurationScope } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { refineServiceDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { IAnyWorkspaceIdentifier } from '../../../../platform/workspace/common/workspace.ts';
 
 export const FOLDER_CONFIG_FOLDER_NAME = '.vscode';
 export const FOLDER_SETTINGS_NAME = 'settings';

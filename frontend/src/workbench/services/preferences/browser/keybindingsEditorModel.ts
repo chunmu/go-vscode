@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { distinct, coalesce } from '../../../../base/common/arrays.js';
-import * as strings from '../../../../base/common/strings.js';
-import { OperatingSystem, Language } from '../../../../base/common/platform.js';
-import { IMatch, IFilter, or, matchesCamelCase, matchesWords, matchesBaseContiguousSubString, matchesContiguousSubString } from '../../../../base/common/filters.js';
-import { ResolvedKeybinding, ResolvedChord } from '../../../../base/common/keybindings.js';
-import { AriaLabelProvider, UserSettingsLabelProvider, UILabelProvider, ModifierLabels as ModLabels } from '../../../../base/common/keybindingLabels.js';
-import { MenuRegistry } from '../../../../platform/actions/common/actions.js';
-import { EditorModel } from '../../../common/editor/editorModel.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.js';
-import { getAllUnboundCommands } from '../../keybinding/browser/unboundCommands.js';
-import { IKeybindingItemEntry, KeybindingMatches, KeybindingMatch, IKeybindingItem } from '../common/preferences.js';
-import { ICommandAction, ILocalizedString } from '../../../../platform/action/common/action.js';
-import { isEmptyObject, isString } from '../../../../base/common/types.js';
-import { IExtensionService } from '../../extensions/common/extensions.js';
-import { ExtensionIdentifier, ExtensionIdentifierMap, IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
+import { localize } from '../../../../nls.ts';
+import { distinct, coalesce } from '../../../../base/common/arrays.ts';
+import * as strings from '../../../../base/common/strings.ts';
+import { OperatingSystem, Language } from '../../../../base/common/platform.ts';
+import { IMatch, IFilter, or, matchesCamelCase, matchesWords, matchesBaseContiguousSubString, matchesContiguousSubString } from '../../../../base/common/filters.ts';
+import { ResolvedKeybinding, ResolvedChord } from '../../../../base/common/keybindings.ts';
+import { AriaLabelProvider, UserSettingsLabelProvider, UILabelProvider, ModifierLabels as ModLabels } from '../../../../base/common/keybindingLabels.ts';
+import { MenuRegistry } from '../../../../platform/actions/common/actions.ts';
+import { EditorModel } from '../../../common/editor/editorModel.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
+import { getAllUnboundCommands } from '../../keybinding/browser/unboundCommands.ts';
+import { IKeybindingItemEntry, KeybindingMatches, KeybindingMatch, IKeybindingItem } from '../common/preferences.ts';
+import { ICommandAction, ILocalizedString } from '../../../../platform/action/common/action.ts';
+import { isEmptyObject, isString } from '../../../../base/common/types.ts';
+import { IExtensionService } from '../../extensions/common/extensions.ts';
+import { ExtensionIdentifier, ExtensionIdentifierMap, IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
 
 export const KEYBINDING_ENTRY_TEMPLATE_ID = 'keybinding.entry.template';
 

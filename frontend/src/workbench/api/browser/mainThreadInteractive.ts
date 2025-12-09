@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { PLAINTEXT_LANGUAGE_ID } from '../../../editor/common/languages/modesRegistry.js';
-import { ExtHostContext, ExtHostInteractiveShape, MainContext, MainThreadInteractiveShape } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IInteractiveDocumentService } from '../../contrib/interactive/browser/interactiveDocumentService.js';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { PLAINTEXT_LANGUAGE_ID } from '../../../editor/common/languages/modesRegistry.ts';
+import { ExtHostContext, ExtHostInteractiveShape, MainContext, MainThreadInteractiveShape } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IInteractiveDocumentService } from '../../contrib/interactive/browser/interactiveDocumentService.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadInteractive)
 export class MainThreadInteractive implements MainThreadInteractiveShape {

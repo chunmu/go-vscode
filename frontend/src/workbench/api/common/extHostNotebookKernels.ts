@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { asArray } from '../../../base/common/arrays.js';
-import { DeferredPromise, timeout } from '../../../base/common/async.js';
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../base/common/map.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtHostNotebookKernelsShape, ICellExecuteUpdateDto, IMainContext, INotebookKernelDto2, MainContext, MainThreadNotebookKernelsShape, NotebookOutputDto, VariablesResult } from './extHost.protocol.js';
-import { ApiCommand, ApiCommandArgument, ApiCommandResult, ExtHostCommands } from './extHostCommands.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { ExtHostNotebookController } from './extHostNotebook.js';
-import { ExtHostCell, ExtHostNotebookDocument } from './extHostNotebookDocument.js';
-import * as extHostTypeConverters from './extHostTypeConverters.js';
-import { NotebookCellOutput, NotebookControllerAffinity2, NotebookVariablesRequestKind } from './extHostTypes.js';
-import { asWebviewUri } from '../../contrib/webview/common/webview.js';
-import { INotebookKernelSourceAction } from '../../contrib/notebook/common/notebookCommon.js';
-import { CellExecutionUpdateType } from '../../contrib/notebook/common/notebookExecutionService.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { asArray } from '../../../base/common/arrays.ts';
+import { DeferredPromise, timeout } from '../../../base/common/async.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../base/common/map.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtHostNotebookKernelsShape, ICellExecuteUpdateDto, IMainContext, INotebookKernelDto2, MainContext, MainThreadNotebookKernelsShape, NotebookOutputDto, VariablesResult } from './extHost.protocol.ts';
+import { ApiCommand, ApiCommandArgument, ApiCommandResult, ExtHostCommands } from './extHostCommands.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { ExtHostNotebookController } from './extHostNotebook.ts';
+import { ExtHostCell, ExtHostNotebookDocument } from './extHostNotebookDocument.ts';
+import * as extHostTypeConverters from './extHostTypeConverters.ts';
+import { NotebookCellOutput, NotebookControllerAffinity2, NotebookVariablesRequestKind } from './extHostTypes.ts';
+import { asWebviewUri } from '../../contrib/webview/common/webview.ts';
+import { INotebookKernelSourceAction } from '../../contrib/notebook/common/notebookCommon.ts';
+import { CellExecutionUpdateType } from '../../contrib/notebook/common/notebookExecutionService.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 import * as vscode from 'vscode';
-import { variablePageSize } from '../../contrib/notebook/common/notebookKernelService.js';
+import { variablePageSize } from '../../contrib/notebook/common/notebookKernelService.ts';
 
 interface IKernelData {
 	extensionId: ExtensionIdentifier;

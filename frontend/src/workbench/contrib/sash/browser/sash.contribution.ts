@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isIOS } from '../../../../base/common/platform.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { workbenchConfigurationNodeBase } from '../../../common/configuration.js';
-import { registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { SashSettingsController } from './sash.js';
+import { isIOS } from '../../../../base/common/platform.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { workbenchConfigurationNodeBase } from '../../../common/configuration.ts';
+import { registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { SashSettingsController } from './sash.ts';
 
 // Sash size contribution
 registerWorkbenchContribution2(SashSettingsController.ID, SashSettingsController, WorkbenchPhase.AfterRestored);

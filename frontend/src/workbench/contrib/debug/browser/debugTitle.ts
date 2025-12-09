@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IDebugService, State } from '../common/debug.js';
-import { dispose, IDisposable } from '../../../../base/common/lifecycle.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { ITitleService } from '../../../services/title/browser/titleService.js';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IDebugService, State } from '../common/debug.ts';
+import { dispose, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { ITitleService } from '../../../services/title/browser/titleService.ts';
 
 export class DebugTitleContribution implements IWorkbenchContribution {
 

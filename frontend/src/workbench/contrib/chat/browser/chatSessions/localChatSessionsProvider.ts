@@ -2,19 +2,19 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ResourceSet } from '../../../../../base/common/map.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { IChatModel } from '../../common/chatModel.js';
-import { IChatService } from '../../common/chatService.js';
-import { ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.js';
-import { ChatAgentLocation } from '../../common/constants.js';
-import { IChatWidget, IChatWidgetService, isIChatViewViewContext } from '../chat.js';
-import { ChatSessionItemWithProvider } from './common.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ResourceSet } from '../../../../../base/common/map.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { IChatModel } from '../../common/chatModel.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
+import { IChatWidget, IChatWidgetService, isIChatViewViewContext } from '../chat.ts';
+import { ChatSessionItemWithProvider } from './common.ts';
 
 export class LocalChatSessionsProvider extends Disposable implements IChatSessionItemProvider, IWorkbenchContribution {
 	static readonly ID = 'workbench.contrib.localChatSessionsProvider';

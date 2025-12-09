@@ -4,29 +4,29 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/editordroptarget.css';
-import { DataTransfers } from '../../../../base/browser/dnd.js';
-import { $, addDisposableListener, DragAndDropObserver, EventHelper, EventType, getWindow, isAncestor } from '../../../../base/browser/dom.js';
-import { renderFormattedText } from '../../../../base/browser/formattedTextRenderer.js';
-import { RunOnceScheduler } from '../../../../base/common/async.js';
-import { toDisposable } from '../../../../base/common/lifecycle.js';
-import { isMacintosh, isWeb } from '../../../../base/common/platform.js';
-import { assertReturnsAllDefined, assertReturnsDefined } from '../../../../base/common/types.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { activeContrastBorder } from '../../../../platform/theme/common/colorRegistry.js';
-import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.js';
-import { isTemporaryWorkspace, IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { CodeDataTransfers, containsDragType, Extensions as DragAndDropExtensions, IDragAndDropContributionRegistry, LocalSelectionTransfer } from '../../../../platform/dnd/browser/dnd.js';
-import { DraggedEditorGroupIdentifier, DraggedEditorIdentifier, extractTreeDropData, ResourcesDropHandler } from '../../dnd.js';
-import { IEditorGroupView, prepareMoveCopyEditors } from './editor.js';
-import { EditorInputCapabilities, IEditorIdentifier, IUntypedEditorInput } from '../../../common/editor.js';
-import { EDITOR_DRAG_AND_DROP_BACKGROUND, EDITOR_DROP_INTO_PROMPT_BACKGROUND, EDITOR_DROP_INTO_PROMPT_BORDER, EDITOR_DROP_INTO_PROMPT_FOREGROUND } from '../../../common/theme.js';
-import { GroupDirection, IEditorDropTargetDelegate, IEditorGroup, IEditorGroupsService, IMergeGroupOptions, MergeGroupMode } from '../../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { ITreeViewsDnDService } from '../../../../editor/common/services/treeViewsDndService.js';
-import { DraggedTreeItemsIdentifier } from '../../../../editor/common/services/treeViewsDnd.js';
+import { DataTransfers } from '../../../../base/browser/dnd.ts';
+import { $, addDisposableListener, DragAndDropObserver, EventHelper, EventType, getWindow, isAncestor } from '../../../../base/browser/dom.ts';
+import { renderFormattedText } from '../../../../base/browser/formattedTextRenderer.ts';
+import { RunOnceScheduler } from '../../../../base/common/async.ts';
+import { toDisposable } from '../../../../base/common/lifecycle.ts';
+import { isMacintosh, isWeb } from '../../../../base/common/platform.ts';
+import { assertReturnsAllDefined, assertReturnsDefined } from '../../../../base/common/types.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { activeContrastBorder } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.ts';
+import { isTemporaryWorkspace, IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { CodeDataTransfers, containsDragType, Extensions as DragAndDropExtensions, IDragAndDropContributionRegistry, LocalSelectionTransfer } from '../../../../platform/dnd/browser/dnd.ts';
+import { DraggedEditorGroupIdentifier, DraggedEditorIdentifier, extractTreeDropData, ResourcesDropHandler } from '../../dnd.ts';
+import { IEditorGroupView, prepareMoveCopyEditors } from './editor.ts';
+import { EditorInputCapabilities, IEditorIdentifier, IUntypedEditorInput } from '../../../common/editor.ts';
+import { EDITOR_DRAG_AND_DROP_BACKGROUND, EDITOR_DROP_INTO_PROMPT_BACKGROUND, EDITOR_DROP_INTO_PROMPT_BORDER, EDITOR_DROP_INTO_PROMPT_FOREGROUND } from '../../../common/theme.ts';
+import { GroupDirection, IEditorDropTargetDelegate, IEditorGroup, IEditorGroupsService, IMergeGroupOptions, MergeGroupMode } from '../../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { ITreeViewsDnDService } from '../../../../editor/common/services/treeViewsDndService.ts';
+import { DraggedTreeItemsIdentifier } from '../../../../editor/common/services/treeViewsDnd.ts';
 
 interface IDropOperation {
 	splitDirection?: GroupDirection;

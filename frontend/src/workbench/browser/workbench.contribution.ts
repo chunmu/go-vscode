@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isStandalone } from '../../base/browser/browser.js';
-import { isLinux, isMacintosh, isNative, isWeb, isWindows } from '../../base/common/platform.js';
-import { localize } from '../../nls.js';
-import { Extensions as ConfigurationExtensions, ConfigurationScope, IConfigurationRegistry } from '../../platform/configuration/common/configurationRegistry.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { ConfigurationKeyValuePairs, ConfigurationMigrationWorkbenchContribution, DynamicWindowConfiguration, DynamicWorkbenchSecurityConfiguration, Extensions, IConfigurationMigrationRegistry, problemsConfigurationNodeBase, windowConfigurationNodeBase, workbenchConfigurationNodeBase } from '../common/configuration.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../common/contributions.js';
-import { CustomEditorLabelService } from '../services/editor/common/customEditorLabelService.js';
-import { ActivityBarPosition, EditorActionsLocation, EditorTabsMode, LayoutSettings } from '../services/layout/browser/layoutService.js';
-import { defaultWindowTitle, defaultWindowTitleSeparator } from './parts/titlebar/windowTitle.js';
+import { isStandalone } from '../../base/browser/browser.ts';
+import { isLinux, isMacintosh, isNative, isWeb, isWindows } from '../../base/common/platform.ts';
+import { localize } from '../../nls.ts';
+import { Extensions as ConfigurationExtensions, ConfigurationScope, IConfigurationRegistry } from '../../platform/configuration/common/configurationRegistry.ts';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { ConfigurationKeyValuePairs, ConfigurationMigrationWorkbenchContribution, DynamicWindowConfiguration, DynamicWorkbenchSecurityConfiguration, Extensions, IConfigurationMigrationRegistry, problemsConfigurationNodeBase, windowConfigurationNodeBase, workbenchConfigurationNodeBase } from '../common/configuration.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../common/contributions.ts';
+import { CustomEditorLabelService } from '../services/editor/common/customEditorLabelService.ts';
+import { ActivityBarPosition, EditorActionsLocation, EditorTabsMode, LayoutSettings } from '../services/layout/browser/layoutService.ts';
+import { defaultWindowTitle, defaultWindowTitleSeparator } from './parts/titlebar/windowTitle.ts';
 
 const registry = Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration);
 

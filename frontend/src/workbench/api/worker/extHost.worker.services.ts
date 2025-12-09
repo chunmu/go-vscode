@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';
-import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtHostAuthentication, IExtHostAuthentication } from '../common/extHostAuthentication.js';
-import { IExtHostExtensionService } from '../common/extHostExtensionService.js';
-import { ExtHostLogService } from '../common/extHostLogService.js';
-import { ExtensionStoragePaths, IExtensionStoragePaths } from '../common/extHostStoragePaths.js';
-import { ExtHostTelemetry, IExtHostTelemetry } from '../common/extHostTelemetry.js';
-import { ExtHostExtensionService } from './extHostExtensionService.js';
+import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.ts';
+import { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtHostAuthentication, IExtHostAuthentication } from '../common/extHostAuthentication.ts';
+import { IExtHostExtensionService } from '../common/extHostExtensionService.ts';
+import { ExtHostLogService } from '../common/extHostLogService.ts';
+import { ExtensionStoragePaths, IExtensionStoragePaths } from '../common/extHostStoragePaths.ts';
+import { ExtHostTelemetry, IExtHostTelemetry } from '../common/extHostTelemetry.ts';
+import { ExtHostExtensionService } from './extHostExtensionService.ts';
 
 // #########################################################################
 // ###                                                                   ###

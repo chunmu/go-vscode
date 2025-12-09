@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../base/common/event.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ExtHostDocumentsShape, IMainContext, MainContext, MainThreadDocumentsShape } from './extHost.protocol.js';
-import { ExtHostDocumentData, setWordDefinitionFor } from './extHostDocumentData.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
-import * as TypeConverters from './extHostTypeConverters.js';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ExtHostDocumentsShape, IMainContext, MainContext, MainThreadDocumentsShape } from './extHost.protocol.ts';
+import { ExtHostDocumentData, setWordDefinitionFor } from './extHostDocumentData.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
+import * as TypeConverters from './extHostTypeConverters.ts';
 import type * as vscode from 'vscode';
-import { assertReturnsDefined } from '../../../base/common/types.js';
-import { deepFreeze } from '../../../base/common/objects.js';
-import { TextDocumentChangeReason } from './extHostTypes.js';
-import { ISerializedModelContentChangedEvent } from '../../../editor/common/textModelEvents.js';
+import { assertReturnsDefined } from '../../../base/common/types.ts';
+import { deepFreeze } from '../../../base/common/objects.ts';
+import { TextDocumentChangeReason } from './extHostTypes.ts';
+import { ISerializedModelContentChangedEvent } from '../../../editor/common/textModelEvents.ts';
 
 export class ExtHostDocuments implements ExtHostDocumentsShape {
 

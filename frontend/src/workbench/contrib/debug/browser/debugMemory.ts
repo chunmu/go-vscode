@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable, DisposableStore, toDisposable } from '../../../../base/common/lifecycle.js';
-import { clamp } from '../../../../base/common/numbers.js';
-import { assertNever } from '../../../../base/common/assert.js';
-import { URI } from '../../../../base/common/uri.js';
-import { FileChangeType, IFileOpenOptions, FilePermission, FileSystemProviderCapabilities, FileSystemProviderErrorCode, FileType, IFileChange, IFileSystemProvider, IStat, IWatchOptions, createFileSystemProviderError } from '../../../../platform/files/common/files.js';
-import { DEBUG_MEMORY_SCHEME, IDebugService, IDebugSession, IMemoryInvalidationEvent, IMemoryRegion, MemoryRange, MemoryRangeType, State } from '../common/debug.js';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable, DisposableStore, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { clamp } from '../../../../base/common/numbers.ts';
+import { assertNever } from '../../../../base/common/assert.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { FileChangeType, IFileOpenOptions, FilePermission, FileSystemProviderCapabilities, FileSystemProviderErrorCode, FileType, IFileChange, IFileSystemProvider, IStat, IWatchOptions, createFileSystemProviderError } from '../../../../platform/files/common/files.ts';
+import { DEBUG_MEMORY_SCHEME, IDebugService, IDebugSession, IMemoryInvalidationEvent, IMemoryRegion, MemoryRange, MemoryRangeType, State } from '../common/debug.ts';
 
 const rangeRe = /range=([0-9]+):([0-9]+)/;
 

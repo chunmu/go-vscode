@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CodeWindow } from '../../../../base/browser/window.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IEditorContributionDescription } from '../../../../editor/browser/editorExtensions.js';
-import * as editorCommon from '../../../../editor/common/editorCommon.js';
-import { FontInfo } from '../../../../editor/common/config/fontInfo.js';
-import { IPosition } from '../../../../editor/common/core/position.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { FindMatch, IModelDeltaDecoration, IReadonlyTextBuffer, ITextModel, TrackedRangeStickiness } from '../../../../editor/common/model.js';
-import { MenuId } from '../../../../platform/actions/common/actions.js';
-import { ITextEditorOptions, ITextResourceEditorInput } from '../../../../platform/editor/common/editor.js';
-import { IConstructorSignature } from '../../../../platform/instantiation/common/instantiation.js';
-import { IEditorPane, IEditorPaneWithSelection } from '../../../common/editor.js';
-import { CellViewModelStateChangeEvent, NotebookCellStateChangedEvent, NotebookLayoutInfo } from './notebookViewEvents.js';
-import { NotebookCellTextModel } from '../common/model/notebookCellTextModel.js';
-import { NotebookTextModel } from '../common/model/notebookTextModel.js';
-import { CellKind, ICellOutput, INotebookCellStatusBarItem, INotebookRendererInfo, INotebookFindOptions, IOrderedMimeType, NotebookCellInternalMetadata, NotebookCellMetadata, NOTEBOOK_EDITOR_ID, NOTEBOOK_DIFF_EDITOR_ID } from '../common/notebookCommon.js';
-import { isCompositeNotebookEditorInput } from '../common/notebookEditorInput.js';
-import { INotebookKernel } from '../common/notebookKernelService.js';
-import { NotebookOptions } from './notebookOptions.js';
-import { cellRangesToIndexes, ICellRange, reduceCellRanges } from '../common/notebookRange.js';
-import { IWebviewElement } from '../../webview/browser/webview.js';
-import { IEditorCommentsOptions, IEditorOptions } from '../../../../editor/common/config/editorOptions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IObservable } from '../../../../base/common/observable.js';
-import { INotebookTextDiffEditor } from './diff/notebookDiffEditorBrowser.js';
+import { CodeWindow } from '../../../../base/browser/window.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IEditorContributionDescription } from '../../../../editor/browser/editorExtensions.ts';
+import * as editorCommon from '../../../../editor/common/editorCommon.ts';
+import { FontInfo } from '../../../../editor/common/config/fontInfo.ts';
+import { IPosition } from '../../../../editor/common/core/position.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { FindMatch, IModelDeltaDecoration, IReadonlyTextBuffer, ITextModel, TrackedRangeStickiness } from '../../../../editor/common/model.ts';
+import { MenuId } from '../../../../platform/actions/common/actions.ts';
+import { ITextEditorOptions, ITextResourceEditorInput } from '../../../../platform/editor/common/editor.ts';
+import { IConstructorSignature } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IEditorPane, IEditorPaneWithSelection } from '../../../common/editor.ts';
+import { CellViewModelStateChangeEvent, NotebookCellStateChangedEvent, NotebookLayoutInfo } from './notebookViewEvents.ts';
+import { NotebookCellTextModel } from '../common/model/notebookCellTextModel.ts';
+import { NotebookTextModel } from '../common/model/notebookTextModel.ts';
+import { CellKind, ICellOutput, INotebookCellStatusBarItem, INotebookRendererInfo, INotebookFindOptions, IOrderedMimeType, NotebookCellInternalMetadata, NotebookCellMetadata, NOTEBOOK_EDITOR_ID, NOTEBOOK_DIFF_EDITOR_ID } from '../common/notebookCommon.ts';
+import { isCompositeNotebookEditorInput } from '../common/notebookEditorInput.ts';
+import { INotebookKernel } from '../common/notebookKernelService.ts';
+import { NotebookOptions } from './notebookOptions.ts';
+import { cellRangesToIndexes, ICellRange, reduceCellRanges } from '../common/notebookRange.ts';
+import { IWebviewElement } from '../../webview/browser/webview.ts';
+import { IEditorCommentsOptions, IEditorOptions } from '../../../../editor/common/config/editorOptions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IObservable } from '../../../../base/common/observable.ts';
+import { INotebookTextDiffEditor } from './diff/notebookDiffEditorBrowser.ts';
 
 //#region Shared commands
 export const EXPAND_CELL_INPUT_COMMAND_ID = 'notebook.cell.expandCellInput';

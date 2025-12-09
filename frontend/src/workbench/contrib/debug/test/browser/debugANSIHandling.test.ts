@@ -4,20 +4,20 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { isHTMLSpanElement } from '../../../../../base/browser/dom.js';
-import { Color, RGBA } from '../../../../../base/common/color.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { registerColors } from '../../../terminal/common/terminalColorRegistry.js';
-import { appendStylizedStringToContainer, calcANSI8bitColor, handleANSIOutput } from '../../browser/debugANSIHandling.js';
-import { DebugSession } from '../../browser/debugSession.js';
-import { LinkDetector } from '../../browser/linkDetector.js';
-import { DebugModel } from '../../common/debugModel.js';
-import { createTestSession } from './callStack.test.js';
-import { createMockDebugModel } from './mockDebugModel.js';
+import { isHTMLSpanElement } from '../../../../../base/browser/dom.ts';
+import { Color, RGBA } from '../../../../../base/common/color.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { registerColors } from '../../../terminal/common/terminalColorRegistry.ts';
+import { appendStylizedStringToContainer, calcANSI8bitColor, handleANSIOutput } from '../../browser/debugANSIHandling.ts';
+import { DebugSession } from '../../browser/debugSession.ts';
+import { LinkDetector } from '../../browser/linkDetector.ts';
+import { DebugModel } from '../../common/debugModel.ts';
+import { createTestSession } from './callStack.test.ts';
+import { createMockDebugModel } from './mockDebugModel.ts';
 
 suite('Debug - ANSI Handling', () => {
 

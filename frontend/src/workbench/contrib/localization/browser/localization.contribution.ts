@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { BaseLocalizationWorkbenchContribution } from '../common/localization.contribution.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
+import { BaseLocalizationWorkbenchContribution } from '../common/localization.contribution.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
 
 export class WebLocalizationWorkbenchContribution extends BaseLocalizationWorkbenchContribution { }
 

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ILogger, ILoggerOptions, ILoggerResource, LogLevel } from '../../../platform/log/common/log.js';
-import { URI } from '../../../base/common/uri.js';
-import { ExtHostLoggerService as BaseExtHostLoggerService } from '../common/extHostLoggerService.js';
-import { Schemas } from '../../../base/common/network.js';
-import { SpdLogLogger } from '../../../platform/log/node/spdlogLog.js';
-import { generateUuid } from '../../../base/common/uuid.js';
+import { ILogger, ILoggerOptions, ILoggerResource, LogLevel } from '../../../platform/log/common/log.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ExtHostLoggerService as BaseExtHostLoggerService } from '../common/extHostLoggerService.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { SpdLogLogger } from '../../../platform/log/node/spdlogLog.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
 
 export class ExtHostLoggerService extends BaseExtHostLoggerService {
 

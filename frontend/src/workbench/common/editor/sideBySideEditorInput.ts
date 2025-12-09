@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
-import { URI } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { EditorInputCapabilities, GroupIdentifier, ISaveOptions, IRevertOptions, EditorExtensions, IEditorFactoryRegistry, IEditorSerializer, ISideBySideEditorInput, IUntypedEditorInput, isResourceSideBySideEditorInput, isDiffEditorInput, isResourceDiffEditorInput, IResourceSideBySideEditorInput, findViewStateForEditor, IMoveResult, isEditorInput, isResourceEditorInput, Verbosity, isResourceMergeEditorInput, isResourceMultiDiffEditorInput } from '../editor.js';
-import { EditorInput, IUntypedEditorOptions } from './editorInput.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
+import { Event } from '../../../base/common/event.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { EditorInputCapabilities, GroupIdentifier, ISaveOptions, IRevertOptions, EditorExtensions, IEditorFactoryRegistry, IEditorSerializer, ISideBySideEditorInput, IUntypedEditorInput, isResourceSideBySideEditorInput, isDiffEditorInput, isResourceDiffEditorInput, IResourceSideBySideEditorInput, findViewStateForEditor, IMoveResult, isEditorInput, isResourceEditorInput, Verbosity, isResourceMergeEditorInput, isResourceMultiDiffEditorInput } from '../editor.ts';
+import { EditorInput, IUntypedEditorOptions } from './editorInput.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
 
 /**
  * Side by side editor inputs that have a primary and secondary side.

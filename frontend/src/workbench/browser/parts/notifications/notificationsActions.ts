@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/notificationsActions.css';
-import { INotificationViewItem } from '../../../common/notifications.js';
-import { localize } from '../../../../nls.js';
-import { Action } from '../../../../base/common/actions.js';
-import { CLEAR_NOTIFICATION, EXPAND_NOTIFICATION, COLLAPSE_NOTIFICATION, CLEAR_ALL_NOTIFICATIONS, HIDE_NOTIFICATIONS_CENTER, TOGGLE_DO_NOT_DISTURB_MODE, TOGGLE_DO_NOT_DISTURB_MODE_BY_SOURCE } from './notificationsCommands.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
+import { INotificationViewItem } from '../../../common/notifications.ts';
+import { localize } from '../../../../nls.ts';
+import { Action } from '../../../../base/common/actions.ts';
+import { CLEAR_NOTIFICATION, EXPAND_NOTIFICATION, COLLAPSE_NOTIFICATION, CLEAR_ALL_NOTIFICATIONS, HIDE_NOTIFICATIONS_CENTER, TOGGLE_DO_NOT_DISTURB_MODE, TOGGLE_DO_NOT_DISTURB_MODE_BY_SOURCE } from './notificationsCommands.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
 
 const clearIcon = registerIcon('notifications-clear', Codicon.close, localize('clearIcon', 'Icon for the clear action in notifications.'));
 const clearAllIcon = registerIcon('notifications-clear-all', Codicon.clearAll, localize('clearAllIcon', 'Icon for the clear all action in notifications.'));

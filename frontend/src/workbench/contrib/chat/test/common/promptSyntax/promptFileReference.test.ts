@@ -4,26 +4,26 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { ConfigurationService } from '../../../../../../platform/configuration/common/configurationService.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { FileService } from '../../../../../../platform/files/common/fileService.js';
-import { InMemoryFileSystemProvider } from '../../../../../../platform/files/common/inMemoryFilesystemProvider.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { ILogService, NullLogService } from '../../../../../../platform/log/common/log.js';
-import { NullPolicyService } from '../../../../../../platform/policy/common/policy.js';
-import { ChatModeKind } from '../../../common/constants.js';
-import { getPromptFileType } from '../../../common/promptSyntax/config/promptFileLocations.js';
-import { PromptsType } from '../../../common/promptSyntax/promptTypes.js';
-import { IMockFolder, MockFilesystem } from './testUtils/mockFilesystem.js';
-import { IBodyFileReference, PromptFileParser } from '../../../common/promptSyntax/promptFileParser.js';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../../../../editor/common/services/model.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { ConfigurationService } from '../../../../../../platform/configuration/common/configurationService.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { FileService } from '../../../../../../platform/files/common/fileService.ts';
+import { InMemoryFileSystemProvider } from '../../../../../../platform/files/common/inMemoryFilesystemProvider.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { ILogService, NullLogService } from '../../../../../../platform/log/common/log.ts';
+import { NullPolicyService } from '../../../../../../platform/policy/common/policy.ts';
+import { ChatModeKind } from '../../../common/constants.ts';
+import { getPromptFileType } from '../../../common/promptSyntax/config/promptFileLocations.ts';
+import { PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
+import { IMockFolder, MockFilesystem } from './testUtils/mockFilesystem.ts';
+import { IBodyFileReference, PromptFileParser } from '../../../common/promptSyntax/promptFileParser.ts';
 
 /**
  * Represents a file reference with an expected

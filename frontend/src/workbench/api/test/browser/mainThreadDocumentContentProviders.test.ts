@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { URI } from '../../../../base/common/uri.js';
-import { MainThreadDocumentContentProviders } from '../../browser/mainThreadDocumentContentProviders.js';
-import { createTextModel } from '../../../../editor/test/common/testTextModel.js';
-import { mock } from '../../../../base/test/common/mock.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { IEditorWorkerService } from '../../../../editor/common/services/editorWorker.js';
-import { TestRPCProtocol } from '../common/testRPCProtocol.js';
-import { TextEdit } from '../../../../editor/common/languages.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { MainThreadDocumentContentProviders } from '../../browser/mainThreadDocumentContentProviders.ts';
+import { createTextModel } from '../../../../editor/test/common/testTextModel.ts';
+import { mock } from '../../../../base/test/common/mock.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { IEditorWorkerService } from '../../../../editor/common/services/editorWorker.ts';
+import { TestRPCProtocol } from '../common/testRPCProtocol.ts';
+import { TextEdit } from '../../../../editor/common/languages.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.ts';
 
 suite('MainThreadDocumentContentProviders', function () {
 

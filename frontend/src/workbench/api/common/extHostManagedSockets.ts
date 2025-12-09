@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ExtHostManagedSocketsShape, MainContext, MainThreadManagedSocketsShape } from './extHost.protocol.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+import { ExtHostManagedSocketsShape, MainContext, MainThreadManagedSocketsShape } from './extHost.protocol.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
 import * as vscode from 'vscode';
-import { Disposable, DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
+import { Disposable, DisposableStore, toDisposable } from '../../../base/common/lifecycle.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
 
 export interface IExtHostManagedSockets extends ExtHostManagedSocketsShape {
 	setFactory(socketFactoryId: number, makeConnection: () => Thenable<vscode.ManagedMessagePassing>): void;

@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { ActionBar, ActionsOrientation } from '../../../../../base/browser/ui/actionbar/actionbar.js';
-import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.js';
-import { IListRenderer, IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { MarshalledId } from '../../../../../base/common/marshallingIds.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { IMenuService, MenuId } from '../../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { FileKind } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { WorkbenchList } from '../../../../../platform/list/browser/listService.js';
-import { IThemeService } from '../../../../../platform/theme/common/themeService.js';
-import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.js';
-import { ACTIVE_GROUP, IEditorService, SIDE_GROUP } from '../../../../services/editor/common/editorService.js';
-import { createFileIconThemableTreeContainerScope } from '../../../files/browser/views/explorerView.js';
-import { MultiDiffEditorInput } from '../../../multiDiffEditor/browser/multiDiffEditorInput.js';
-import { MultiDiffEditorItem } from '../../../multiDiffEditor/browser/multiDiffSourceResolverService.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IEditSessionEntryDiff } from '../../common/chatEditingService.js';
-import { IChatMultiDiffData } from '../../common/chatService.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { ChatTreeItem } from '../chat.js';
-import { ChatEditorInput } from '../chatEditorInput.js';
-import { IChatContentPart } from './chatContentParts.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { ActionBar, ActionsOrientation } from '../../../../../base/browser/ui/actionbar/actionbar.ts';
+import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.ts';
+import { IListRenderer, IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { MarshalledId } from '../../../../../base/common/marshallingIds.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { IMenuService, MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { FileKind } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { WorkbenchList } from '../../../../../platform/list/browser/listService.ts';
+import { IThemeService } from '../../../../../platform/theme/common/themeService.ts';
+import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.ts';
+import { ACTIVE_GROUP, IEditorService, SIDE_GROUP } from '../../../../services/editor/common/editorService.ts';
+import { createFileIconThemableTreeContainerScope } from '../../../files/browser/views/explorerView.ts';
+import { MultiDiffEditorInput } from '../../../multiDiffEditor/browser/multiDiffEditorInput.ts';
+import { MultiDiffEditorItem } from '../../../multiDiffEditor/browser/multiDiffSourceResolverService.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IEditSessionEntryDiff } from '../../common/chatEditingService.ts';
+import { IChatMultiDiffData } from '../../common/chatService.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { ChatEditorInput } from '../chatEditorInput.ts';
+import { IChatContentPart } from './chatContentParts.ts';
 
 const $ = dom.$;
 

@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { isObject } from '../../../../base/common/types.js';
-import { IJSONSchema, IJSONSchemaMap, IJSONSchemaSnippet } from '../../../../base/common/jsonSchema.js';
-import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { IConfig, IDebuggerContribution, IDebugAdapter, IDebugger, IDebugSession, IAdapterManager, IDebugService, debuggerDisabledMessage, IDebuggerMetadata, DebugConfigurationProviderTriggerKind } from './debug.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IConfigurationResolverService } from '../../../services/configurationResolver/common/configurationResolver.js';
-import * as ConfigurationResolverUtils from '../../../services/configurationResolver/common/configurationResolverUtils.js';
-import { ITextResourcePropertiesService } from '../../../../editor/common/services/textResourceConfiguration.js';
-import { URI } from '../../../../base/common/uri.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { isDebuggerMainContribution } from './debugUtils.js';
-import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import { ITelemetryEndpoint } from '../../../../platform/telemetry/common/telemetry.js';
-import { cleanRemoteAuthority } from '../../../../platform/telemetry/common/telemetryUtils.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { ContextKeyExpr, ContextKeyExpression, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { filter } from '../../../../base/common/objects.js';
+import * as nls from '../../../../nls.ts';
+import { isObject } from '../../../../base/common/types.ts';
+import { IJSONSchema, IJSONSchemaMap, IJSONSchemaSnippet } from '../../../../base/common/jsonSchema.ts';
+import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { IConfig, IDebuggerContribution, IDebugAdapter, IDebugger, IDebugSession, IAdapterManager, IDebugService, debuggerDisabledMessage, IDebuggerMetadata, DebugConfigurationProviderTriggerKind } from './debug.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IConfigurationResolverService } from '../../../services/configurationResolver/common/configurationResolver.ts';
+import * as ConfigurationResolverUtils from '../../../services/configurationResolver/common/configurationResolverUtils.ts';
+import { ITextResourcePropertiesService } from '../../../../editor/common/services/textResourceConfiguration.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { isDebuggerMainContribution } from './debugUtils.ts';
+import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import { ITelemetryEndpoint } from '../../../../platform/telemetry/common/telemetry.ts';
+import { cleanRemoteAuthority } from '../../../../platform/telemetry/common/telemetryUtils.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { ContextKeyExpr, ContextKeyExpression, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { filter } from '../../../../base/common/objects.ts';
 
 export class Debugger implements IDebugger, IDebuggerMetadata {
 

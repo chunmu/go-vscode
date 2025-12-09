@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../../nls.js';
-import { IDisposable, IReference } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { EditorInputCapabilities } from '../../../../common/editor.js';
-import { EditorInput } from '../../../../common/editor/editorInput.js';
-import { IResolvedNotebookEditorModel } from '../../common/notebookCommon.js';
-import { INotebookEditorModelResolverService } from '../../common/notebookEditorModelResolverService.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.js';
+import * as nls from '../../../../../nls.ts';
+import { IDisposable, IReference } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { EditorInputCapabilities } from '../../../../common/editor.ts';
+import { EditorInput } from '../../../../common/editor/editorInput.ts';
+import { IResolvedNotebookEditorModel } from '../../common/notebookCommon.ts';
+import { INotebookEditorModelResolverService } from '../../common/notebookEditorModelResolverService.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.ts';
 
 
 class ResolvedNotebookOutputEditorInputModel implements IDisposable {

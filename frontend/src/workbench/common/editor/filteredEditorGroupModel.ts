@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IUntypedEditorInput, IMatchEditorOptions, EditorsOrder, GroupIdentifier } from '../editor.js';
-import { EditorInput } from './editorInput.js';
-import { Emitter } from '../../../base/common/event.js';
-import { IGroupModelChangeEvent, IReadonlyEditorGroupModel } from './editorGroupModel.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
+import { IUntypedEditorInput, IMatchEditorOptions, EditorsOrder, GroupIdentifier } from '../editor.ts';
+import { EditorInput } from './editorInput.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { IGroupModelChangeEvent, IReadonlyEditorGroupModel } from './editorGroupModel.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
 
 abstract class FilteredEditorGroupModel extends Disposable implements IReadonlyEditorGroupModel {
 

@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.js';
-import { ITreeCompressionDelegate } from '../../../../../base/browser/ui/tree/asyncDataTree.js';
-import { ICompressedTreeNode } from '../../../../../base/browser/ui/tree/compressedObjectTreeModel.js';
-import { ICompressibleTreeRenderer } from '../../../../../base/browser/ui/tree/objectTree.js';
-import { IAsyncDataSource, ITreeNode } from '../../../../../base/browser/ui/tree/tree.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../nls.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { FileKind, FileType } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { WorkbenchCompressibleAsyncDataTree } from '../../../../../platform/list/browser/listService.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { IThemeService } from '../../../../../platform/theme/common/themeService.js';
-import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.js';
-import { ChatTreeItem } from '../chat.js';
-import { IDisposableReference, ResourcePool } from './chatCollections.js';
-import { IChatContentPart } from './chatContentParts.js';
-import { IChatProgressRenderableResponseContent } from '../../common/chatModel.js';
-import { IChatResponseProgressFileTreeData } from '../../common/chatService.js';
-import { createFileIconThemableTreeContainerScope } from '../../../files/browser/views/explorerView.js';
-import { IFilesConfiguration } from '../../../files/common/files.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.ts';
+import { ITreeCompressionDelegate } from '../../../../../base/browser/ui/tree/asyncDataTree.ts';
+import { ICompressedTreeNode } from '../../../../../base/browser/ui/tree/compressedObjectTreeModel.ts';
+import { ICompressibleTreeRenderer } from '../../../../../base/browser/ui/tree/objectTree.ts';
+import { IAsyncDataSource, ITreeNode } from '../../../../../base/browser/ui/tree/tree.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { FileKind, FileType } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { WorkbenchCompressibleAsyncDataTree } from '../../../../../platform/list/browser/listService.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { IThemeService } from '../../../../../platform/theme/common/themeService.ts';
+import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { IDisposableReference, ResourcePool } from './chatCollections.ts';
+import { IChatContentPart } from './chatContentParts.ts';
+import { IChatProgressRenderableResponseContent } from '../../common/chatModel.ts';
+import { IChatResponseProgressFileTreeData } from '../../common/chatService.ts';
+import { createFileIconThemableTreeContainerScope } from '../../../files/browser/views/explorerView.ts';
+import { IFilesConfiguration } from '../../../files/common/files.ts';
 
 const $ = dom.$;
 

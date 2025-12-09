@@ -4,20 +4,20 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/editorquickaccess.css';
-import { localize } from '../../../../nls.js';
-import { IQuickPickSeparator, quickPickItemScorerAccessor, IQuickPickItemWithResource, IQuickPick } from '../../../../platform/quickinput/common/quickInput.js';
-import { PickerQuickAccessProvider, IPickerQuickAccessItem, TriggerAction } from '../../../../platform/quickinput/browser/pickerQuickAccess.js';
-import { IEditorGroupsService, GroupsOrder } from '../../../services/editor/common/editorGroupsService.js';
-import { EditorsOrder, IEditorIdentifier, EditorResourceAccessor, SideBySideEditor, GroupIdentifier } from '../../../common/editor.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { getIconClasses } from '../../../../editor/common/services/getIconClasses.js';
-import { prepareQuery, scoreItemFuzzy, compareItemsByFuzzyScore, FuzzyScorerCache } from '../../../../base/common/fuzzyScorer.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
+import { localize } from '../../../../nls.ts';
+import { IQuickPickSeparator, quickPickItemScorerAccessor, IQuickPickItemWithResource, IQuickPick } from '../../../../platform/quickinput/common/quickInput.ts';
+import { PickerQuickAccessProvider, IPickerQuickAccessItem, TriggerAction } from '../../../../platform/quickinput/browser/pickerQuickAccess.ts';
+import { IEditorGroupsService, GroupsOrder } from '../../../services/editor/common/editorGroupsService.ts';
+import { EditorsOrder, IEditorIdentifier, EditorResourceAccessor, SideBySideEditor, GroupIdentifier } from '../../../common/editor.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { getIconClasses } from '../../../../editor/common/services/getIconClasses.ts';
+import { prepareQuery, scoreItemFuzzy, compareItemsByFuzzyScore, FuzzyScorerCache } from '../../../../base/common/fuzzyScorer.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
 
 interface IEditorQuickPickItem extends IQuickPickItemWithResource, IPickerQuickAccessItem {
 	groupId: GroupIdentifier;

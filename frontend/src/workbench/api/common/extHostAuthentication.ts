@@ -4,29 +4,29 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import * as nls from '../../../nls.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { MainContext, MainThreadAuthenticationShape, ExtHostAuthenticationShape } from './extHost.protocol.js';
-import { Disposable, ProgressLocation } from './extHostTypes.js';
-import { IExtensionDescription, ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { INTERNAL_AUTH_PROVIDER_PREFIX, isAuthenticationWwwAuthenticateRequest } from '../../services/authentication/common/authentication.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { AuthorizationErrorType, fetchDynamicRegistration, getClaimsFromJWT, IAuthorizationJWTClaims, IAuthorizationProtectedResourceMetadata, IAuthorizationServerMetadata, IAuthorizationTokenResponse, isAuthorizationErrorResponse, isAuthorizationTokenResponse } from '../../../base/common/oauth.js';
-import { IExtHostWindow } from './extHostWindow.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { ILogger, ILoggerService, ILogService } from '../../../platform/log/common/log.js';
-import { autorun, derivedOpts, IObservable, ISettableObservable, observableValue } from '../../../base/common/observable.js';
-import { stringHash } from '../../../base/common/hash.js';
-import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { IExtHostUrlsService } from './extHostUrls.js';
-import { encodeBase64, VSBuffer } from '../../../base/common/buffer.js';
-import { equals as arraysEqual } from '../../../base/common/arrays.js';
-import { IExtHostProgress } from './extHostProgress.js';
-import { IProgressStep } from '../../../platform/progress/common/progress.js';
-import { CancellationError, isCancellationError } from '../../../base/common/errors.js';
-import { raceCancellationError, SequencerByKey } from '../../../base/common/async.js';
+import * as nls from '../../../nls.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { MainContext, MainThreadAuthenticationShape, ExtHostAuthenticationShape } from './extHost.protocol.ts';
+import { Disposable, ProgressLocation } from './extHostTypes.ts';
+import { IExtensionDescription, ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { INTERNAL_AUTH_PROVIDER_PREFIX, isAuthenticationWwwAuthenticateRequest } from '../../services/authentication/common/authentication.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { AuthorizationErrorType, fetchDynamicRegistration, getClaimsFromJWT, IAuthorizationJWTClaims, IAuthorizationProtectedResourceMetadata, IAuthorizationServerMetadata, IAuthorizationTokenResponse, isAuthorizationErrorResponse, isAuthorizationTokenResponse } from '../../../base/common/oauth.ts';
+import { IExtHostWindow } from './extHostWindow.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { ILogger, ILoggerService, ILogService } from '../../../platform/log/common/log.ts';
+import { autorun, derivedOpts, IObservable, ISettableObservable, observableValue } from '../../../base/common/observable.ts';
+import { stringHash } from '../../../base/common/hash.ts';
+import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { IExtHostUrlsService } from './extHostUrls.ts';
+import { encodeBase64, VSBuffer } from '../../../base/common/buffer.ts';
+import { equals as arraysEqual } from '../../../base/common/arrays.ts';
+import { IExtHostProgress } from './extHostProgress.ts';
+import { IProgressStep } from '../../../platform/progress/common/progress.ts';
+import { CancellationError, isCancellationError } from '../../../base/common/errors.ts';
+import { raceCancellationError, SequencerByKey } from '../../../base/common/async.ts';
 
 export interface IExtHostAuthentication extends ExtHostAuthentication { }
 export const IExtHostAuthentication = createDecorator<IExtHostAuthentication>('IExtHostAuthentication');

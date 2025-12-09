@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce } from '../../../../../base/common/arrays.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize2 } from '../../../../../nls.js';
-import { Action2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ProductQualityContext } from '../../../../../platform/contextkey/common/contextkeys.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ILanguageModelChatMetadataAndIdentifier, ILanguageModelsService } from '../../common/languageModels.js';
-import { CHAT_CATEGORY } from './chatActions.js';
+import { coalesce } from '../../../../../base/common/arrays.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { Action2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ProductQualityContext } from '../../../../../platform/contextkey/common/contextkeys.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ILanguageModelChatMetadataAndIdentifier, ILanguageModelsService } from '../../common/languageModels.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
 
 interface IVendorQuickPickItem extends IQuickPickItem {
 	managementCommand?: string;

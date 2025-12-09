@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { diffSets } from '../../../../../../base/common/collections.js';
-import { Emitter } from '../../../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { isDefined } from '../../../../../../base/common/types.js';
-import { ICellViewModel, INotebookEditor } from '../../notebookBrowser.js';
-import { cellRangesToIndexes } from '../../../common/notebookRange.js';
+import { diffSets } from '../../../../../../base/common/collections.ts';
+import { Emitter } from '../../../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { isDefined } from '../../../../../../base/common/types.ts';
+import { ICellViewModel, INotebookEditor } from '../../notebookBrowser.ts';
+import { cellRangesToIndexes } from '../../../common/notebookRange.ts';
 
 export interface ICellVisibilityChangeEvent {
 	added: ICellViewModel[];

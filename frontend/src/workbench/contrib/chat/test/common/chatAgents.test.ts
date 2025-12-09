@@ -4,12 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.js';
-import { ChatAgentService, IChatAgentData, IChatAgentImplementation } from '../../common/chatAgents.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.ts';
+import { ChatAgentService, IChatAgentData, IChatAgentImplementation } from '../../common/chatAgents.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
 
 const testAgentId = 'testAgent';
 const testAgentData: IChatAgentData = {

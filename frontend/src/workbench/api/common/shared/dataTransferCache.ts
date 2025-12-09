@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce } from '../../../../base/common/arrays.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { IDataTransferFile, IReadonlyVSDataTransfer } from '../../../../base/common/dataTransfer.js';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { IDataTransferFile, IReadonlyVSDataTransfer } from '../../../../base/common/dataTransfer.ts';
 
 export class DataTransferFileCache {
 

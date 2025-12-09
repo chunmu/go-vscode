@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { isLocation } from '../../../../editor/common/languages.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IChatAgentData } from './chatAgents.js';
-import { ChatRequestModel, IChatRequestVariableData } from './chatModel.js';
-import { ChatRequestAgentSubcommandPart, ChatRequestSlashCommandPart } from './chatParserTypes.js';
-import { ChatAgentVoteDirection, ChatCopyKind, IChatSendRequestOptions, IChatUserActionEvent } from './chatService.js';
-import { isImageVariableEntry } from './chatVariableEntries.js';
-import { ChatAgentLocation } from './constants.js';
-import { ILanguageModelsService } from './languageModels.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { isLocation } from '../../../../editor/common/languages.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IChatAgentData } from './chatAgents.ts';
+import { ChatRequestModel, IChatRequestVariableData } from './chatModel.ts';
+import { ChatRequestAgentSubcommandPart, ChatRequestSlashCommandPart } from './chatParserTypes.ts';
+import { ChatAgentVoteDirection, ChatCopyKind, IChatSendRequestOptions, IChatUserActionEvent } from './chatService.ts';
+import { isImageVariableEntry } from './chatVariableEntries.ts';
+import { ChatAgentLocation } from './constants.ts';
+import { ILanguageModelsService } from './languageModels.ts';
 
 type ChatVoteEvent = {
 	direction: 'up' | 'down';

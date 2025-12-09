@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { constObservable, IObservable, ISettableObservable, observableValue, transaction } from '../../../../base/common/observable.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IOffsetRange } from '../../../../editor/common/core/ranges/offsetRange.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IChatAgentService } from './chatAgents.js';
-import { ChatContextKeys } from './chatContextKeys.js';
-import { ChatConfiguration, ChatModeKind } from './constants.js';
-import { IHandOff } from './promptSyntax/promptFileParser.js';
-import { IAgentSource, ICustomAgent, IPromptsService, PromptsStorage } from './promptSyntax/service/promptsService.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { constObservable, IObservable, ISettableObservable, observableValue, transaction } from '../../../../base/common/observable.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IOffsetRange } from '../../../../editor/common/core/ranges/offsetRange.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IChatAgentService } from './chatAgents.ts';
+import { ChatContextKeys } from './chatContextKeys.ts';
+import { ChatConfiguration, ChatModeKind } from './constants.ts';
+import { IHandOff } from './promptSyntax/promptFileParser.ts';
+import { IAgentSource, ICustomAgent, IPromptsService, PromptsStorage } from './promptSyntax/service/promptsService.ts';
 
 export const IChatModeService = createDecorator<IChatModeService>('chatModeService');
 export interface IChatModeService {

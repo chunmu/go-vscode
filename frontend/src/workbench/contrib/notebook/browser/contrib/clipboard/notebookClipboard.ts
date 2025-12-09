@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../../../nls.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { NOTEBOOK_CELL_EDITABLE, NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_OUTPUT_FOCUSED } from '../../../common/notebookContextKeys.js';
-import { cellRangeToViewCells, expandCellRangesWithHiddenCells, getNotebookEditorFromEditorPane, ICellViewModel, INotebookEditor } from '../../notebookBrowser.js';
-import { CopyAction, CutAction, PasteAction } from '../../../../../../editor/contrib/clipboard/browser/clipboard.js';
-import { IClipboardService } from '../../../../../../platform/clipboard/common/clipboardService.js';
-import { cloneNotebookCellTextModel, NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.js';
-import { CellEditType, ICellEditOperation, ISelectionState, SelectionStateType } from '../../../common/notebookCommon.js';
-import { INotebookService } from '../../../common/notebookService.js';
-import * as platform from '../../../../../../base/common/platform.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { CellOverflowToolbarGroups, INotebookActionContext, INotebookCellActionContext, NotebookAction, NotebookCellAction, NOTEBOOK_EDITOR_WIDGET_ACTION_WEIGHT, NOTEBOOK_OUTPUT_WEBVIEW_ACTION_WEIGHT } from '../../controller/coreActions.js';
-import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { InputFocusedContextKey } from '../../../../../../platform/contextkey/common/contextkeys.js';
-import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { RedoCommand, UndoCommand } from '../../../../../../editor/browser/editorExtensions.js';
-import { IWebview } from '../../../../webview/browser/webview.js';
-import { Categories } from '../../../../../../platform/action/common/actionCommonCategories.js';
-import { ILogService } from '../../../../../../platform/log/common/log.js';
-import { ICommandService } from '../../../../../../platform/commands/common/commands.js';
-import { showWindowLogActionId } from '../../../../../services/log/common/logConstants.js';
-import { getActiveElement, getWindow, isEditableElement, isHTMLElement } from '../../../../../../base/browser/dom.js';
+import { localize, localize2 } from '../../../../../../nls.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { NOTEBOOK_CELL_EDITABLE, NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_OUTPUT_FOCUSED } from '../../../common/notebookContextKeys.ts';
+import { cellRangeToViewCells, expandCellRangesWithHiddenCells, getNotebookEditorFromEditorPane, ICellViewModel, INotebookEditor } from '../../notebookBrowser.ts';
+import { CopyAction, CutAction, PasteAction } from '../../../../../../editor/contrib/clipboard/browser/clipboard.ts';
+import { IClipboardService } from '../../../../../../platform/clipboard/common/clipboardService.ts';
+import { cloneNotebookCellTextModel, NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.ts';
+import { CellEditType, ICellEditOperation, ISelectionState, SelectionStateType } from '../../../common/notebookCommon.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
+import * as platform from '../../../../../../base/common/platform.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { CellOverflowToolbarGroups, INotebookActionContext, INotebookCellActionContext, NotebookAction, NotebookCellAction, NOTEBOOK_EDITOR_WIDGET_ACTION_WEIGHT, NOTEBOOK_OUTPUT_WEBVIEW_ACTION_WEIGHT } from '../../controller/coreActions.ts';
+import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { InputFocusedContextKey } from '../../../../../../platform/contextkey/common/contextkeys.ts';
+import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { RedoCommand, UndoCommand } from '../../../../../../editor/browser/editorExtensions.ts';
+import { IWebview } from '../../../../webview/browser/webview.ts';
+import { Categories } from '../../../../../../platform/action/common/actionCommonCategories.ts';
+import { ILogService } from '../../../../../../platform/log/common/log.ts';
+import { ICommandService } from '../../../../../../platform/commands/common/commands.ts';
+import { showWindowLogActionId } from '../../../../../services/log/common/logConstants.ts';
+import { getActiveElement, getWindow, isEditableElement, isHTMLElement } from '../../../../../../base/browser/dom.ts';
 
 let _logging: boolean = false;
 function toggleLogging() {

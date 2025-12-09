@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { illegalArgument } from '../../../base/common/errors.js';
-import { MainThreadNotebookEditorsShape } from './extHost.protocol.js';
-import * as extHostConverter from './extHostTypeConverters.js';
-import * as extHostTypes from './extHostTypes.js';
+import { illegalArgument } from '../../../base/common/errors.ts';
+import { MainThreadNotebookEditorsShape } from './extHost.protocol.ts';
+import * as extHostConverter from './extHostTypeConverters.ts';
+import * as extHostTypes from './extHostTypes.ts';
 import * as vscode from 'vscode';
-import { ExtHostNotebookDocument } from './extHostNotebookDocument.js';
-import { NotebookRange } from './extHostTypes.js';
+import { ExtHostNotebookDocument } from './extHostNotebookDocument.ts';
+import { NotebookRange } from './extHostTypes.ts';
 
 export class ExtHostNotebookEditor {
 

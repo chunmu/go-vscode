@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI, UriComponents } from '../../../../../base/common/uri.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, IAction2Options, MenuId, MenuRegistry } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { getNotebookEditorFromEditorPane, IActiveNotebookEditor, ICellViewModel, cellRangeToViewCells, ICellOutputViewModel } from '../notebookBrowser.js';
-import { INTERACTIVE_WINDOW_IS_ACTIVE_EDITOR, NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_IS_ACTIVE_EDITOR, NOTEBOOK_KERNEL_COUNT, NOTEBOOK_KERNEL_SOURCE_COUNT, REPL_NOTEBOOK_IS_ACTIVE_EDITOR } from '../../common/notebookContextKeys.js';
-import { ICellRange, isICellRange } from '../../common/notebookRange.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { isEditorCommandsContext } from '../../../../common/editor.js';
-import { INotebookEditorService } from '../services/notebookEditorService.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../base/common/actions.js';
-import { TypeConstraint } from '../../../../../base/common/types.js';
-import { IJSONSchema } from '../../../../../base/common/jsonSchema.js';
-import { MarshalledId } from '../../../../../base/common/marshallingIds.js';
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { isEqual } from '../../../../../base/common/resources.js';
+import { URI, UriComponents } from '../../../../../base/common/uri.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, IAction2Options, MenuId, MenuRegistry } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { getNotebookEditorFromEditorPane, IActiveNotebookEditor, ICellViewModel, cellRangeToViewCells, ICellOutputViewModel } from '../notebookBrowser.ts';
+import { INTERACTIVE_WINDOW_IS_ACTIVE_EDITOR, NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_IS_ACTIVE_EDITOR, NOTEBOOK_KERNEL_COUNT, NOTEBOOK_KERNEL_SOURCE_COUNT, REPL_NOTEBOOK_IS_ACTIVE_EDITOR } from '../../common/notebookContextKeys.ts';
+import { ICellRange, isICellRange } from '../../common/notebookRange.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { isEditorCommandsContext } from '../../../../common/editor.ts';
+import { INotebookEditorService } from '../services/notebookEditorService.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../base/common/actions.ts';
+import { TypeConstraint } from '../../../../../base/common/types.ts';
+import { IJSONSchema } from '../../../../../base/common/jsonSchema.ts';
+import { MarshalledId } from '../../../../../base/common/marshallingIds.ts';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
 
 // Kernel Command
 export const SELECT_KERNEL_ID = '_notebook.selectKernel';

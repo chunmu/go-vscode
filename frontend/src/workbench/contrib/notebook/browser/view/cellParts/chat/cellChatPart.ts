@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ICellViewModel, INotebookEditorDelegate } from '../../../notebookBrowser.js';
-import { CellContentPart } from '../../cellPart.js';
+import { ICellViewModel, INotebookEditorDelegate } from '../../../notebookBrowser.ts';
+import { CellContentPart } from '../../cellPart.ts';
 
 export class CellChatPart extends CellContentPart {
 	// private _controller: NotebookCellChatController | undefined;

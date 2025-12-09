@@ -4,19 +4,19 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { Event, Emitter } from '../../../base/common/event.js';
-import { ExtHostTelemetryShape } from './extHost.protocol.js';
-import { ICommonProperties, TelemetryLevel } from '../../../platform/telemetry/common/telemetry.js';
-import { ILogger, ILoggerService } from '../../../platform/log/common/log.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { UIKind } from '../../services/extensions/common/extensionHostProtocol.js';
-import { getRemoteName } from '../../../platform/remote/common/remoteHosts.js';
-import { cleanData, cleanRemoteAuthority, TelemetryLogGroup } from '../../../platform/telemetry/common/telemetryUtils.js';
-import { mixin } from '../../../base/common/objects.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { localize } from '../../../nls.js';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { Event, Emitter } from '../../../base/common/event.ts';
+import { ExtHostTelemetryShape } from './extHost.protocol.ts';
+import { ICommonProperties, TelemetryLevel } from '../../../platform/telemetry/common/telemetry.ts';
+import { ILogger, ILoggerService } from '../../../platform/log/common/log.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { UIKind } from '../../services/extensions/common/extensionHostProtocol.ts';
+import { getRemoteName } from '../../../platform/remote/common/remoteHosts.ts';
+import { cleanData, cleanRemoteAuthority, TelemetryLogGroup } from '../../../platform/telemetry/common/telemetryUtils.ts';
+import { mixin } from '../../../base/common/objects.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { localize } from '../../../nls.ts';
 
 type ExtHostTelemetryEventData = Record<string, any> & {
 	properties?: Record<string, any>;

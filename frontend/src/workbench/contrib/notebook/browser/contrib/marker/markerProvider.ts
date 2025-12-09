@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../../base/common/uri.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.js';
-import { IMarkerListProvider, MarkerList, IMarkerNavigationService } from '../../../../../../editor/contrib/gotoError/browser/markerNavigationService.js';
-import { CellUri } from '../../../common/notebookCommon.js';
-import { IMarkerService, MarkerSeverity } from '../../../../../../platform/markers/common/markers.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { INotebookDeltaDecoration, INotebookEditor, INotebookEditorContribution, NotebookOverviewRulerLane } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { throttle } from '../../../../../../base/common/decorators.js';
-import { editorErrorForeground, editorWarningForeground } from '../../../../../../platform/theme/common/colorRegistry.js';
-import { isEqual } from '../../../../../../base/common/resources.js';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.ts';
+import { IMarkerListProvider, MarkerList, IMarkerNavigationService } from '../../../../../../editor/contrib/gotoError/browser/markerNavigationService.ts';
+import { CellUri } from '../../../common/notebookCommon.ts';
+import { IMarkerService, MarkerSeverity } from '../../../../../../platform/markers/common/markers.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { INotebookDeltaDecoration, INotebookEditor, INotebookEditorContribution, NotebookOverviewRulerLane } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { throttle } from '../../../../../../base/common/decorators.ts';
+import { editorErrorForeground, editorWarningForeground } from '../../../../../../platform/theme/common/colorRegistry.ts';
+import { isEqual } from '../../../../../../base/common/resources.ts';
 
 class MarkerListProvider implements IMarkerListProvider {
 

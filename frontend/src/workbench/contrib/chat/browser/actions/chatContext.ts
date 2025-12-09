@@ -2,36 +2,36 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { isElectron } from '../../../../../base/common/platform.js';
-import { dirname } from '../../../../../base/common/resources.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { EditorResourceAccessor, SideBySideEditor } from '../../../../common/editor.js';
-import { DiffEditorInput } from '../../../../common/editor/diffEditorInput.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { IHostService } from '../../../../services/host/browser/host.js';
-import { UntitledTextEditorInput } from '../../../../services/untitled/common/untitledTextEditorInput.js';
-import { FileEditorInput } from '../../../files/browser/editors/fileEditorInput.js';
-import { NotebookEditorInput } from '../../../notebook/common/notebookEditorInput.js';
-import { IChatContextPickService, IChatContextValueItem, IChatContextPickerItem, IChatContextPickerPickItem, IChatContextPicker } from '../chatContextPickService.js';
-import { IChatEditingService } from '../../common/chatEditingService.js';
-import { IChatRequestToolEntry, IChatRequestToolSetEntry, IChatRequestVariableEntry, IImageVariableEntry, OmittedState, toToolSetVariableEntry, toToolVariableEntry } from '../../common/chatVariableEntries.js';
-import { ToolDataSource, ToolSet } from '../../common/languageModelToolsService.js';
-import { IChatWidget } from '../chat.js';
-import { imageToHash, isImage } from '../chatPasteProviders.js';
-import { convertBufferToScreenshotVariable } from '../contrib/screenshot.js';
-import { ChatInstructionsPickerPick } from '../promptSyntax/attachInstructionsAction.js';
-import { ITerminalService } from '../../../terminal/browser/terminal.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ITerminalCommand, TerminalCapability } from '../../../../../platform/terminal/common/capabilities/capabilities.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { isElectron } from '../../../../../base/common/platform.ts';
+import { dirname } from '../../../../../base/common/resources.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { EditorResourceAccessor, SideBySideEditor } from '../../../../common/editor.ts';
+import { DiffEditorInput } from '../../../../common/editor/diffEditorInput.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { IHostService } from '../../../../services/host/browser/host.ts';
+import { UntitledTextEditorInput } from '../../../../services/untitled/common/untitledTextEditorInput.ts';
+import { FileEditorInput } from '../../../files/browser/editors/fileEditorInput.ts';
+import { NotebookEditorInput } from '../../../notebook/common/notebookEditorInput.ts';
+import { IChatContextPickService, IChatContextValueItem, IChatContextPickerItem, IChatContextPickerPickItem, IChatContextPicker } from '../chatContextPickService.ts';
+import { IChatEditingService } from '../../common/chatEditingService.ts';
+import { IChatRequestToolEntry, IChatRequestToolSetEntry, IChatRequestVariableEntry, IImageVariableEntry, OmittedState, toToolSetVariableEntry, toToolVariableEntry } from '../../common/chatVariableEntries.ts';
+import { ToolDataSource, ToolSet } from '../../common/languageModelToolsService.ts';
+import { IChatWidget } from '../chat.ts';
+import { imageToHash, isImage } from '../chatPasteProviders.ts';
+import { convertBufferToScreenshotVariable } from '../contrib/screenshot.ts';
+import { ChatInstructionsPickerPick } from '../promptSyntax/attachInstructionsAction.ts';
+import { ITerminalService } from '../../../terminal/browser/terminal.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ITerminalCommand, TerminalCapability } from '../../../../../platform/terminal/common/capabilities/capabilities.ts';
 
 
 export class ChatContextContributions extends Disposable implements IWorkbenchContribution {

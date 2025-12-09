@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AsyncReader, AsyncReaderEndOfStream } from '../../../../../base/common/async.js';
-import { CachedFunction } from '../../../../../base/common/cache.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { IObservableWithChange, ISettableObservable, observableValue, runOnChange } from '../../../../../base/common/observable.js';
-import { AnnotatedStringEdit, IEditData, StringEdit } from '../../../../../editor/common/core/edits/stringEdit.js';
-import { StringText } from '../../../../../editor/common/core/text/abstractText.js';
-import { IEditorWorkerService } from '../../../../../editor/common/services/editorWorker.js';
-import { TextModelEditSource } from '../../../../../editor/common/textModelEditSource.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IObservableDocument } from './observableWorkspace.js';
-import { iterateObservableChanges, mapObservableDelta } from './utils.js';
+import { AsyncReader, AsyncReaderEndOfStream } from '../../../../../base/common/async.ts';
+import { CachedFunction } from '../../../../../base/common/cache.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { IObservableWithChange, ISettableObservable, observableValue, runOnChange } from '../../../../../base/common/observable.ts';
+import { AnnotatedStringEdit, IEditData, StringEdit } from '../../../../../editor/common/core/edits/stringEdit.ts';
+import { StringText } from '../../../../../editor/common/core/text/abstractText.ts';
+import { IEditorWorkerService } from '../../../../../editor/common/services/editorWorker.ts';
+import { TextModelEditSource } from '../../../../../editor/common/textModelEditSource.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IObservableDocument } from './observableWorkspace.ts';
+import { iterateObservableChanges, mapObservableDelta } from './utils.ts';
 
 export interface IDocumentWithAnnotatedEdits<TEditData extends IEditData<TEditData> = EditKeySourceData> {
 	readonly value: IObservableWithChange<StringText, { edit: AnnotatedStringEdit<TEditData> }>;

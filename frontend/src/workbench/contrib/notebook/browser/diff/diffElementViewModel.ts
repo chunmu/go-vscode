@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { hash } from '../../../../../base/common/hash.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { DiffEditorWidget } from '../../../../../editor/browser/widget/diffEditor/diffEditorWidget.js';
-import { FontInfo } from '../../../../../editor/common/config/fontInfo.js';
-import * as editorCommon from '../../../../../editor/common/editorCommon.js';
-import { getEditorPadding } from './diffCellEditorOptions.js';
-import { DiffNestedCellViewModel } from './diffNestedCellViewModel.js';
-import { NotebookDiffEditorEventDispatcher, NotebookDiffViewEventType } from './eventDispatcher.js';
-import { CellDiffViewModelLayoutChangeEvent, DIFF_CELL_MARGIN, DiffSide, IDiffElementLayoutInfo } from './notebookDiffEditorBrowser.js';
-import { CellLayoutState, IGenericCellViewModel } from '../notebookBrowser.js';
-import { NotebookLayoutInfo } from '../notebookViewEvents.js';
-import { getFormattedMetadataJSON, NotebookCellTextModel } from '../../common/model/notebookCellTextModel.js';
-import { NotebookTextModel } from '../../common/model/notebookTextModel.js';
-import { CellUri, ICellOutput, INotebookTextModel, IOutputDto, IOutputItemDto } from '../../common/notebookCommon.js';
-import { INotebookService } from '../../common/notebookService.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { IDiffEditorHeightCalculatorService } from './editorHeightCalculator.js';
-import { NotebookDocumentMetadataTextModel } from '../../common/model/notebookMetadataTextModel.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { hash } from '../../../../../base/common/hash.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { DiffEditorWidget } from '../../../../../editor/browser/widget/diffEditor/diffEditorWidget.ts';
+import { FontInfo } from '../../../../../editor/common/config/fontInfo.ts';
+import * as editorCommon from '../../../../../editor/common/editorCommon.ts';
+import { getEditorPadding } from './diffCellEditorOptions.ts';
+import { DiffNestedCellViewModel } from './diffNestedCellViewModel.ts';
+import { NotebookDiffEditorEventDispatcher, NotebookDiffViewEventType } from './eventDispatcher.ts';
+import { CellDiffViewModelLayoutChangeEvent, DIFF_CELL_MARGIN, DiffSide, IDiffElementLayoutInfo } from './notebookDiffEditorBrowser.ts';
+import { CellLayoutState, IGenericCellViewModel } from '../notebookBrowser.ts';
+import { NotebookLayoutInfo } from '../notebookViewEvents.ts';
+import { getFormattedMetadataJSON, NotebookCellTextModel } from '../../common/model/notebookCellTextModel.ts';
+import { NotebookTextModel } from '../../common/model/notebookTextModel.ts';
+import { CellUri, ICellOutput, INotebookTextModel, IOutputDto, IOutputItemDto } from '../../common/notebookCommon.ts';
+import { INotebookService } from '../../common/notebookService.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { IDiffEditorHeightCalculatorService } from './editorHeightCalculator.ts';
+import { NotebookDocumentMetadataTextModel } from '../../common/model/notebookMetadataTextModel.ts';
 
 const PropertyHeaderHeight = 25;
 

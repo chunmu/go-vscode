@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize2 } from '../../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { INotebookActionContext, NOTEBOOK_ACTIONS_CATEGORY } from '../../controller/coreActions.js';
-import { NotebookSetting } from '../../../common/notebookCommon.js';
+import { localize2 } from '../../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { INotebookActionContext, NOTEBOOK_ACTIONS_CATEGORY } from '../../controller/coreActions.ts';
+import { NotebookSetting } from '../../../common/notebookCommon.ts';
 
 const TOGGLE_CELL_TOOLBAR_POSITION = 'notebook.toggleCellToolbarPosition';
 

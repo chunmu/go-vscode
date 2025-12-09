@@ -4,20 +4,20 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/chatExtensionsContent.css';
-import * as dom from '../../../../../base/browser/dom.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ExtensionsList, getExtensions } from '../../../extensions/browser/extensionsViewer.js';
-import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.js';
-import { IChatExtensionsContent } from '../../common/chatService.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { ChatTreeItem, ChatViewId, IChatCodeBlockInfo } from '../chat.js';
-import { IChatContentPart } from './chatContentParts.js';
-import { PagedModel } from '../../../../../base/common/paging.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ExtensionsList, getExtensions } from '../../../extensions/browser/extensionsViewer.ts';
+import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.ts';
+import { IChatExtensionsContent } from '../../common/chatService.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { ChatTreeItem, ChatViewId, IChatCodeBlockInfo } from '../chat.ts';
+import { IChatContentPart } from './chatContentParts.ts';
+import { PagedModel } from '../../../../../base/common/paging.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
 
 export class ChatExtensionsContentPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

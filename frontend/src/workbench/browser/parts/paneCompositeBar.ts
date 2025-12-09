@@ -3,34 +3,34 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../nls.js';
-import { ActionsOrientation } from '../../../base/browser/ui/actionbar/actionbar.js';
-import { IActivityService } from '../../services/activity/common/activity.js';
-import { IWorkbenchLayoutService, Parts } from '../../services/layout/browser/layoutService.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { IDisposable, DisposableStore, Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import { IColorTheme } from '../../../platform/theme/common/themeService.js';
-import { CompositeBar, ICompositeBarItem, CompositeDragAndDrop } from './compositeBar.js';
-import { Dimension, isMouseEvent } from '../../../base/browser/dom.js';
-import { createCSSRule } from '../../../base/browser/domStylesheets.js';
-import { asCSSUrl } from '../../../base/browser/cssValue.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../platform/storage/common/storage.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ToggleCompositePinnedAction, ICompositeBarColors, IActivityHoverOptions, ToggleCompositeBadgeAction, CompositeBarAction, ICompositeBar, ICompositeBarActionItem } from './compositeBarActions.js';
-import { IViewDescriptorService, ViewContainer, IViewContainerModel, ViewContainerLocation } from '../../common/views.js';
-import { IContextKeyService, ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.js';
-import { isString } from '../../../base/common/types.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { isNative } from '../../../base/common/platform.js';
-import { Before2D, ICompositeDragAndDrop } from '../dnd.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { IAction, Separator, SubmenuAction, toAction } from '../../../base/common/actions.js';
-import { StringSHA1 } from '../../../base/common/hash.js';
-import { GestureEvent } from '../../../base/browser/touch.js';
-import { IPaneCompositePart } from './paneCompositePart.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { IViewsService } from '../../services/views/common/viewsService.js';
+import { localize } from '../../../nls.ts';
+import { ActionsOrientation } from '../../../base/browser/ui/actionbar/actionbar.ts';
+import { IActivityService } from '../../services/activity/common/activity.ts';
+import { IWorkbenchLayoutService, Parts } from '../../services/layout/browser/layoutService.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { IDisposable, DisposableStore, Disposable, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { IColorTheme } from '../../../platform/theme/common/themeService.ts';
+import { CompositeBar, ICompositeBarItem, CompositeDragAndDrop } from './compositeBar.ts';
+import { Dimension, isMouseEvent } from '../../../base/browser/dom.ts';
+import { createCSSRule } from '../../../base/browser/domStylesheets.ts';
+import { asCSSUrl } from '../../../base/browser/cssValue.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../platform/storage/common/storage.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ToggleCompositePinnedAction, ICompositeBarColors, IActivityHoverOptions, ToggleCompositeBadgeAction, CompositeBarAction, ICompositeBar, ICompositeBarActionItem } from './compositeBarActions.ts';
+import { IViewDescriptorService, ViewContainer, IViewContainerModel, ViewContainerLocation } from '../../common/views.ts';
+import { IContextKeyService, ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.ts';
+import { isString } from '../../../base/common/types.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { isNative } from '../../../base/common/platform.ts';
+import { Before2D, ICompositeDragAndDrop } from '../dnd.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { IAction, Separator, SubmenuAction, toAction } from '../../../base/common/actions.ts';
+import { StringSHA1 } from '../../../base/common/hash.ts';
+import { GestureEvent } from '../../../base/browser/touch.ts';
+import { IPaneCompositePart } from './paneCompositePart.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { IViewsService } from '../../services/views/common/viewsService.ts';
 
 interface IPlaceholderViewContainer {
 	readonly id: string;

@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Dimension } from '../../../../base/browser/dom.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IEditorGroupsView, IEditorGroupView, IEditorPartsView, IInternalEditorOpenOptions } from './editor.js';
-import { IEditorTabsControl } from './editorTabsControl.js';
-import { MultiEditorTabsControl } from './multiEditorTabsControl.js';
-import { IEditorPartOptions } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { StickyEditorGroupModel, UnstickyEditorGroupModel } from '../../../common/editor/filteredEditorGroupModel.js';
-import { IEditorTitleControlDimensions } from './editorTitleControl.js';
-import { IReadonlyEditorGroupModel } from '../../../common/editor/editorGroupModel.js';
+import { Dimension } from '../../../../base/browser/dom.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IEditorGroupsView, IEditorGroupView, IEditorPartsView, IInternalEditorOpenOptions } from './editor.ts';
+import { IEditorTabsControl } from './editorTabsControl.ts';
+import { MultiEditorTabsControl } from './multiEditorTabsControl.ts';
+import { IEditorPartOptions } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { StickyEditorGroupModel, UnstickyEditorGroupModel } from '../../../common/editor/filteredEditorGroupModel.ts';
+import { IEditorTitleControlDimensions } from './editorTitleControl.ts';
+import { IReadonlyEditorGroupModel } from '../../../common/editor/editorGroupModel.ts';
 
 export class MultiRowEditorControl extends Disposable implements IEditorTabsControl {
 

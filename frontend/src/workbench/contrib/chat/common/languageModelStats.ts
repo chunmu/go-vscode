@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { Extensions, IExtensionFeaturesManagementService, IExtensionFeaturesRegistry } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { localize } from '../../../../nls.js';
-import { Codicon } from '../../../../base/common/codicons.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { Extensions, IExtensionFeaturesManagementService, IExtensionFeaturesRegistry } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { localize } from '../../../../nls.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
 
 export const ILanguageModelStatsService = createDecorator<ILanguageModelStatsService>('ILanguageModelStatsService');
 

@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ITextModel, ITextBufferFactory, ITextSnapshot, ModelConstants } from '../../../editor/common/model.js';
-import { EditorModel } from './editorModel.js';
-import { ILanguageSupport } from '../../services/textfile/common/textfiles.js';
-import { URI } from '../../../base/common/uri.js';
-import { ITextEditorModel, IResolvedTextEditorModel } from '../../../editor/common/services/resolverService.js';
-import { ILanguageService, ILanguageSelection } from '../../../editor/common/languages/language.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { MutableDisposable } from '../../../base/common/lifecycle.js';
-import { PLAINTEXT_LANGUAGE_ID } from '../../../editor/common/languages/modesRegistry.js';
-import { ILanguageDetectionService, LanguageDetectionLanguageEventSource } from '../../services/languageDetection/common/languageDetectionWorkerService.js';
-import { ThrottledDelayer } from '../../../base/common/async.js';
-import { IAccessibilityService } from '../../../platform/accessibility/common/accessibility.js';
-import { localize } from '../../../nls.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
-import { TextModelEditSource } from '../../../editor/common/textModelEditSource.js';
+import { ITextModel, ITextBufferFactory, ITextSnapshot, ModelConstants } from '../../../editor/common/model.ts';
+import { EditorModel } from './editorModel.ts';
+import { ILanguageSupport } from '../../services/textfile/common/textfiles.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ITextEditorModel, IResolvedTextEditorModel } from '../../../editor/common/services/resolverService.ts';
+import { ILanguageService, ILanguageSelection } from '../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { MutableDisposable } from '../../../base/common/lifecycle.ts';
+import { PLAINTEXT_LANGUAGE_ID } from '../../../editor/common/languages/modesRegistry.ts';
+import { ILanguageDetectionService, LanguageDetectionLanguageEventSource } from '../../services/languageDetection/common/languageDetectionWorkerService.ts';
+import { ThrottledDelayer } from '../../../base/common/async.ts';
+import { IAccessibilityService } from '../../../platform/accessibility/common/accessibility.ts';
+import { localize } from '../../../nls.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
+import { TextModelEditSource } from '../../../editor/common/textModelEditSource.ts';
 
 /**
  * The base text editor model leverages the code editor model. This class is only intended to be subclassed and not instantiated.

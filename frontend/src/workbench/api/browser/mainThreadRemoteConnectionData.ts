@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostExtensionServiceShape } from '../common/extHost.protocol.js';
-import { IRemoteAuthorityResolverService } from '../../../platform/remote/common/remoteAuthorityResolver.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
+import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostExtensionServiceShape } from '../common/extHost.protocol.ts';
+import { IRemoteAuthorityResolverService } from '../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
 
 @extHostCustomer
 export class MainThreadRemoteConnectionData extends Disposable {

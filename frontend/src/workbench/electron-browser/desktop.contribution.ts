@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Registry } from '../../platform/registry/common/platform.js';
-import { localize, localize2 } from '../../nls.js';
-import { MenuRegistry, MenuId, registerAction2 } from '../../platform/actions/common/actions.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions, ConfigurationScope } from '../../platform/configuration/common/configurationRegistry.js';
-import { KeyMod, KeyCode } from '../../base/common/keyCodes.js';
-import { isLinux, isMacintosh, isWindows } from '../../base/common/platform.js';
-import { ConfigureRuntimeArgumentsAction, ToggleDevToolsAction, ReloadWindowWithExtensionsDisabledAction, OpenUserDataFolderAction, ShowGPUInfoAction, StopTracing } from './actions/developerActions.js';
-import { ZoomResetAction, ZoomOutAction, ZoomInAction, CloseWindowAction, SwitchWindowAction, QuickSwitchWindowAction, NewWindowTabHandler, ShowPreviousWindowTabHandler, ShowNextWindowTabHandler, MoveWindowTabToNewWindowHandler, MergeWindowTabsHandlerHandler, ToggleWindowTabsBarHandler, ToggleWindowAlwaysOnTopAction, DisableWindowAlwaysOnTopAction, EnableWindowAlwaysOnTopAction, CloseOtherWindowsAction } from './actions/windowActions.js';
-import { ContextKeyExpr } from '../../platform/contextkey/common/contextkey.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../platform/keybinding/common/keybindingsRegistry.js';
-import { CommandsRegistry } from '../../platform/commands/common/commands.js';
-import { ServicesAccessor } from '../../platform/instantiation/common/instantiation.js';
-import { IsMacContext } from '../../platform/contextkey/common/contextkeys.js';
-import { INativeHostService } from '../../platform/native/common/native.js';
-import { IJSONContributionRegistry, Extensions as JSONExtensions } from '../../platform/jsonschemas/common/jsonContributionRegistry.js';
-import { IJSONSchema } from '../../base/common/jsonSchema.js';
-import { InstallShellScriptAction, UninstallShellScriptAction } from './actions/installActions.js';
-import { EditorsVisibleContext, SingleEditorGroupsContext } from '../common/contextkeys.js';
-import { TELEMETRY_SETTING_ID } from '../../platform/telemetry/common/telemetry.js';
-import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
-import { ShutdownReason } from '../services/lifecycle/common/lifecycle.js';
-import { NativeWindow } from './window.js';
-import { ModifierKeyEmitter } from '../../base/browser/dom.js';
-import { applicationConfigurationNodeBase, securityConfigurationNodeBase } from '../common/configuration.js';
-import { MAX_ZOOM_LEVEL, MIN_ZOOM_LEVEL } from '../../platform/window/electron-browser/window.js';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { localize, localize2 } from '../../nls.ts';
+import { MenuRegistry, MenuId, registerAction2 } from '../../platform/actions/common/actions.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions, ConfigurationScope } from '../../platform/configuration/common/configurationRegistry.ts';
+import { KeyMod, KeyCode } from '../../base/common/keyCodes.ts';
+import { isLinux, isMacintosh, isWindows } from '../../base/common/platform.ts';
+import { ConfigureRuntimeArgumentsAction, ToggleDevToolsAction, ReloadWindowWithExtensionsDisabledAction, OpenUserDataFolderAction, ShowGPUInfoAction, StopTracing } from './actions/developerActions.ts';
+import { ZoomResetAction, ZoomOutAction, ZoomInAction, CloseWindowAction, SwitchWindowAction, QuickSwitchWindowAction, NewWindowTabHandler, ShowPreviousWindowTabHandler, ShowNextWindowTabHandler, MoveWindowTabToNewWindowHandler, MergeWindowTabsHandlerHandler, ToggleWindowTabsBarHandler, ToggleWindowAlwaysOnTopAction, DisableWindowAlwaysOnTopAction, EnableWindowAlwaysOnTopAction, CloseOtherWindowsAction } from './actions/windowActions.ts';
+import { ContextKeyExpr } from '../../platform/contextkey/common/contextkey.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../platform/keybinding/common/keybindingsRegistry.ts';
+import { CommandsRegistry } from '../../platform/commands/common/commands.ts';
+import { ServicesAccessor } from '../../platform/instantiation/common/instantiation.ts';
+import { IsMacContext } from '../../platform/contextkey/common/contextkeys.ts';
+import { INativeHostService } from '../../platform/native/common/native.ts';
+import { IJSONContributionRegistry, Extensions as JSONExtensions } from '../../platform/jsonschemas/common/jsonContributionRegistry.ts';
+import { IJSONSchema } from '../../base/common/jsonSchema.ts';
+import { InstallShellScriptAction, UninstallShellScriptAction } from './actions/installActions.ts';
+import { EditorsVisibleContext, SingleEditorGroupsContext } from '../common/contextkeys.ts';
+import { TELEMETRY_SETTING_ID } from '../../platform/telemetry/common/telemetry.ts';
+import { IConfigurationService } from '../../platform/configuration/common/configuration.ts';
+import { ShutdownReason } from '../services/lifecycle/common/lifecycle.ts';
+import { NativeWindow } from './window.ts';
+import { ModifierKeyEmitter } from '../../base/browser/dom.ts';
+import { applicationConfigurationNodeBase, securityConfigurationNodeBase } from '../common/configuration.ts';
+import { MAX_ZOOM_LEVEL, MIN_ZOOM_LEVEL } from '../../platform/window/electron-browser/window.ts';
 
 // Actions
 (function registerActions(): void {

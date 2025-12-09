@@ -2,17 +2,17 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { IS_COMPOSITE_NOTEBOOK, NOTEBOOK_EDITOR_FOCUSED } from '../common/notebookContextKeys.js';
-import { localize } from '../../../../nls.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { AccessibleViewProviderId, AccessibleViewType, AccessibleContentProvider } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IVisibleEditorPane } from '../../../common/editor.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { IS_COMPOSITE_NOTEBOOK, NOTEBOOK_EDITOR_FOCUSED } from '../common/notebookContextKeys.ts';
+import { localize } from '../../../../nls.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { AccessibleViewProviderId, AccessibleViewType, AccessibleContentProvider } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IVisibleEditorPane } from '../../../common/editor.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
 
 export class NotebookAccessibilityHelp implements IAccessibleViewImplementation {
 	readonly priority = 105;

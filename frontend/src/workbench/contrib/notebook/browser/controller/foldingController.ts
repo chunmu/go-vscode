@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_IS_ACTIVE_EDITOR } from '../../common/notebookContextKeys.js';
-import { INotebookEditor, INotebookEditorMouseEvent, INotebookEditorContribution, getNotebookEditorFromEditorPane, CellFoldingState } from '../notebookBrowser.js';
-import { FoldingModel } from '../viewModel/foldingModel.js'; import { CellKind } from '../../common/notebookCommon.js';
-import { ICellRange } from '../../common/notebookRange.js';
-import { registerNotebookContribution } from '../notebookEditorExtensions.js';
-import { registerAction2, Action2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { InputFocusedContextKey } from '../../../../../platform/contextkey/common/contextkeys.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { NOTEBOOK_ACTIONS_CATEGORY } from './coreActions.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { FoldingRegion } from '../../../../../editor/contrib/folding/browser/foldingRanges.js';
-import { ICommandMetadata } from '../../../../../platform/commands/common/commands.js';
-import { NotebookViewModel } from '../viewModel/notebookViewModelImpl.js';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_IS_ACTIVE_EDITOR } from '../../common/notebookContextKeys.ts';
+import { INotebookEditor, INotebookEditorMouseEvent, INotebookEditorContribution, getNotebookEditorFromEditorPane, CellFoldingState } from '../notebookBrowser.ts';
+import { FoldingModel } from '../viewModel/foldingModel.ts'; import { CellKind } from '../../common/notebookCommon.ts';
+import { ICellRange } from '../../common/notebookRange.ts';
+import { registerNotebookContribution } from '../notebookEditorExtensions.ts';
+import { registerAction2, Action2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { InputFocusedContextKey } from '../../../../../platform/contextkey/common/contextkeys.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { NOTEBOOK_ACTIONS_CATEGORY } from './coreActions.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { FoldingRegion } from '../../../../../editor/contrib/folding/browser/foldingRanges.ts';
+import { ICommandMetadata } from '../../../../../platform/commands/common/commands.ts';
+import { NotebookViewModel } from '../viewModel/notebookViewModelImpl.ts';
 
 export class FoldingController extends Disposable implements INotebookEditorContribution {
 	static id: string = 'workbench.notebook.foldingController';

@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ok } from '../../../base/common/assert.js';
-import { Schemas } from '../../../base/common/network.js';
-import { regExpLeadsToEndlessLoop } from '../../../base/common/strings.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { MirrorTextModel } from '../../../editor/common/model/mirrorTextModel.js';
-import { ensureValidWordDefinition, getWordAtText } from '../../../editor/common/core/wordHelper.js';
+import { ok } from '../../../base/common/assert.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { regExpLeadsToEndlessLoop } from '../../../base/common/strings.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { MirrorTextModel } from '../../../editor/common/model/mirrorTextModel.ts';
+import { ensureValidWordDefinition, getWordAtText } from '../../../editor/common/core/wordHelper.ts';
 import type * as vscode from 'vscode';
-import { equals } from '../../../base/common/arrays.js';
-import { EndOfLine } from './extHostTypes/textEdit.js';
-import { Position } from './extHostTypes/position.js';
-import { Range } from './extHostTypes/range.js';
+import { equals } from '../../../base/common/arrays.ts';
+import { EndOfLine } from './extHostTypes/textEdit.ts';
+import { Position } from './extHostTypes/position.ts';
+import { Range } from './extHostTypes/range.ts';
 
 const _languageId2WordDefinition = new Map<string, RegExp>();
 export function setWordDefinitionFor(languageId: string, wordDefinition: RegExp | undefined): void {

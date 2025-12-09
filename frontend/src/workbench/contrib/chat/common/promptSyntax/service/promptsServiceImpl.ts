@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { CancellationError } from '../../../../../../base/common/errors.js';
-import { Emitter, Event } from '../../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { ResourceMap, ResourceSet } from '../../../../../../base/common/map.js';
-import { dirname, isEqual } from '../../../../../../base/common/resources.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { OffsetRange } from '../../../../../../editor/common/core/ranges/offsetRange.js';
-import { type ITextModel } from '../../../../../../editor/common/model.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { localize } from '../../../../../../nls.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IExtensionDescription } from '../../../../../../platform/extensions/common/extensions.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../../../platform/label/common/label.js';
-import { ILogService } from '../../../../../../platform/log/common/log.js';
-import { IFilesConfigurationService } from '../../../../../services/filesConfiguration/common/filesConfigurationService.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../../platform/storage/common/storage.js';
-import { IUserDataProfileService } from '../../../../../services/userDataProfile/common/userDataProfile.js';
-import { IVariableReference } from '../../chatModes.js';
-import { PromptsConfig } from '../config/config.js';
-import { getCleanPromptName } from '../config/promptFileLocations.js';
-import { PROMPT_LANGUAGE_ID, PromptsType, getPromptsTypeForLanguageId } from '../promptTypes.js';
-import { PromptFilesLocator } from '../utils/promptFilesLocator.js';
-import { PromptFileParser, ParsedPromptFile, PromptHeaderAttributes } from '../promptFileParser.js';
-import { IAgentInstructions, IAgentSource, IChatPromptSlashCommand, ICustomAgent, IExtensionPromptPath, ILocalPromptPath, IPromptPath, IPromptsService, IClaudeSkill, IUserPromptPath, PromptsStorage } from './promptsService.js';
-import { Delayer } from '../../../../../../base/common/async.js';
-import { Schemas } from '../../../../../../base/common/network.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { CancellationError } from '../../../../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { ResourceMap, ResourceSet } from '../../../../../../base/common/map.ts';
+import { dirname, isEqual } from '../../../../../../base/common/resources.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { OffsetRange } from '../../../../../../editor/common/core/ranges/offsetRange.ts';
+import { type ITextModel } from '../../../../../../editor/common/model.ts';
+import { IModelService } from '../../../../../../editor/common/services/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IExtensionDescription } from '../../../../../../platform/extensions/common/extensions.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../../../platform/label/common/label.ts';
+import { ILogService } from '../../../../../../platform/log/common/log.ts';
+import { IFilesConfigurationService } from '../../../../../services/filesConfiguration/common/filesConfigurationService.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../../platform/storage/common/storage.ts';
+import { IUserDataProfileService } from '../../../../../services/userDataProfile/common/userDataProfile.ts';
+import { IVariableReference } from '../../chatModes.ts';
+import { PromptsConfig } from '../config/config.ts';
+import { getCleanPromptName } from '../config/promptFileLocations.ts';
+import { PROMPT_LANGUAGE_ID, PromptsType, getPromptsTypeForLanguageId } from '../promptTypes.ts';
+import { PromptFilesLocator } from '../utils/promptFilesLocator.ts';
+import { PromptFileParser, ParsedPromptFile, PromptHeaderAttributes } from '../promptFileParser.ts';
+import { IAgentInstructions, IAgentSource, IChatPromptSlashCommand, ICustomAgent, IExtensionPromptPath, ILocalPromptPath, IPromptPath, IPromptsService, IClaudeSkill, IUserPromptPath, PromptsStorage } from './promptsService.ts';
+import { Delayer } from '../../../../../../base/common/async.ts';
+import { Schemas } from '../../../../../../base/common/network.ts';
 
 /**
  * Provides prompt services.

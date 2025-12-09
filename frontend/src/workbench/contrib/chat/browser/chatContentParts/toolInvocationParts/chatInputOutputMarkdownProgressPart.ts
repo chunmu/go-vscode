@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ProgressBar } from '../../../../../../base/browser/ui/progressbar/progressbar.js';
-import { decodeBase64 } from '../../../../../../base/common/buffer.js';
-import { IMarkdownString, createMarkdownCommandLink, MarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { Lazy } from '../../../../../../base/common/lazy.js';
-import { toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { getExtensionForMimeType } from '../../../../../../base/common/mime.js';
-import { autorun } from '../../../../../../base/common/observable.js';
-import { basename } from '../../../../../../base/common/resources.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { localize } from '../../../../../../nls.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ChatResponseResource } from '../../../common/chatModel.js';
-import { IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../../common/chatService.js';
-import { IToolResultInputOutputDetails } from '../../../common/languageModelToolsService.js';
-import { IChatCodeBlockInfo } from '../../chat.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { ChatCollapsibleInputOutputContentPart, ChatCollapsibleIOPart, IChatCollapsibleIOCodePart } from '../chatToolInputOutputContentPart.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
+import { ProgressBar } from '../../../../../../base/browser/ui/progressbar/progressbar.ts';
+import { decodeBase64 } from '../../../../../../base/common/buffer.ts';
+import { IMarkdownString, createMarkdownCommandLink, MarkdownString } from '../../../../../../base/common/htmlContent.ts';
+import { Lazy } from '../../../../../../base/common/lazy.ts';
+import { toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { getExtensionForMimeType } from '../../../../../../base/common/mime.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
+import { basename } from '../../../../../../base/common/resources.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../../../../editor/common/services/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ChatResponseResource } from '../../../common/chatModel.ts';
+import { IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../../common/chatService.ts';
+import { IToolResultInputOutputDetails } from '../../../common/languageModelToolsService.ts';
+import { IChatCodeBlockInfo } from '../../chat.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { ChatCollapsibleInputOutputContentPart, ChatCollapsibleIOPart, IChatCollapsibleIOCodePart } from '../chatToolInputOutputContentPart.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
 
 export class ChatInputOutputMarkdownProgressPart extends BaseChatToolInvocationSubPart {
 	/** Remembers expanded tool parts on re-render */

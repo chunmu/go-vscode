@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Memento } from './memento.js';
-import { IThemeService, Themable } from '../../platform/theme/common/themeService.js';
-import { IStorageService, IStorageValueChangeEvent, StorageScope, StorageTarget } from '../../platform/storage/common/storage.js';
-import { DisposableStore } from '../../base/common/lifecycle.js';
-import { Event } from '../../base/common/event.js';
+import { Memento } from './memento.ts';
+import { IThemeService, Themable } from '../../platform/theme/common/themeService.ts';
+import { IStorageService, IStorageValueChangeEvent, StorageScope, StorageTarget } from '../../platform/storage/common/storage.ts';
+import { DisposableStore } from '../../base/common/lifecycle.ts';
+import { Event } from '../../base/common/event.ts';
 
 export class Component<MementoType extends object = object> extends Themable {
 

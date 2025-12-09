@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IProgress, IProgressService, IProgressStep, ProgressLocation, IProgressOptions, IProgressNotificationOptions } from '../../../platform/progress/common/progress.js';
-import { MainThreadProgressShape, MainContext, ExtHostProgressShape, ExtHostContext } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ICommandService } from '../../../platform/commands/common/commands.js';
-import { localize } from '../../../nls.js';
-import { onUnexpectedExternalError } from '../../../base/common/errors.js';
-import { toAction } from '../../../base/common/actions.js';
-import { NotificationPriority } from '../../../platform/notification/common/notification.js';
+import { IProgress, IProgressService, IProgressStep, ProgressLocation, IProgressOptions, IProgressNotificationOptions } from '../../../platform/progress/common/progress.ts';
+import { MainThreadProgressShape, MainContext, ExtHostProgressShape, ExtHostContext } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ICommandService } from '../../../platform/commands/common/commands.ts';
+import { localize } from '../../../nls.ts';
+import { onUnexpectedExternalError } from '../../../base/common/errors.ts';
+import { toAction } from '../../../base/common/actions.ts';
+import { NotificationPriority } from '../../../platform/notification/common/notification.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadProgress)
 export class MainThreadProgress implements MainThreadProgressShape {

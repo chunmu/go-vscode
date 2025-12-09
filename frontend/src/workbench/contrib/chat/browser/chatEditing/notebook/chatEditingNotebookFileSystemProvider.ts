@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { Event } from '../../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../../base/common/map.js';
-import { ReadableStreamEvents } from '../../../../../../base/common/stream.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { FileSystemProviderCapabilities, FileType, IFileChange, IFileDeleteOptions, IFileOpenOptions, IFileOverwriteOptions, IFileReadStreamOptions, IFileService, IFileSystemProvider, IFileWriteOptions, IStat, IWatchOptions } from '../../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IWorkbenchContribution } from '../../../../../common/contributions.js';
-import { IChatEditingService } from '../../../common/chatEditingService.js';
-import { LocalChatSessionUri } from '../../../common/chatUri.js';
-import { ChatEditingNotebookSnapshotScheme } from './chatEditingModifiedNotebookSnapshot.js';
+import { VSBuffer } from '../../../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { Event } from '../../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../../base/common/map.ts';
+import { ReadableStreamEvents } from '../../../../../../base/common/stream.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { FileSystemProviderCapabilities, FileType, IFileChange, IFileDeleteOptions, IFileOpenOptions, IFileOverwriteOptions, IFileReadStreamOptions, IFileService, IFileSystemProvider, IFileWriteOptions, IStat, IWatchOptions } from '../../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IWorkbenchContribution } from '../../../../../common/contributions.ts';
+import { IChatEditingService } from '../../../common/chatEditingService.ts';
+import { LocalChatSessionUri } from '../../../common/chatUri.ts';
+import { ChatEditingNotebookSnapshotScheme } from './chatEditingModifiedNotebookSnapshot.ts';
 
 
 export class ChatEditingNotebookFileSystemProviderContrib extends Disposable implements IWorkbenchContribution {

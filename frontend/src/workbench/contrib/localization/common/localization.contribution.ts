@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import { registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { ClearDisplayLanguageAction, ConfigureDisplayLanguageAction } from './localizationsActions.js';
-import { IExtensionFeatureTableRenderer, IRenderedData, ITableData, IRowData, IExtensionFeaturesRegistry, Extensions } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import { registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { ClearDisplayLanguageAction, ConfigureDisplayLanguageAction } from './localizationsActions.ts';
+import { IExtensionFeatureTableRenderer, IRenderedData, ITableData, IRowData, IExtensionFeaturesRegistry, Extensions } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.ts';
 
 export class BaseLocalizationWorkbenchContribution extends Disposable implements IWorkbenchContribution {
 	constructor() {

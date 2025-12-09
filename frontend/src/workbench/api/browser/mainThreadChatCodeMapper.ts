@@ -2,14 +2,14 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Disposable, DisposableMap, IDisposable } from '../../../base/common/lifecycle.js';
-import { URI } from '../../../base/common/uri.js';
-import { TextEdit } from '../../../editor/common/languages.js';
-import { ICodeMapperProvider, ICodeMapperRequest, ICodeMapperResponse, ICodeMapperService } from '../../contrib/chat/common/chatCodeMapperService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostCodeMapperShape, ExtHostContext, ICodeMapperProgressDto, ICodeMapperRequestDto, MainContext, MainThreadCodeMapperShape } from '../common/extHost.protocol.js';
-import { NotebookDto } from './mainThreadNotebookDto.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Disposable, DisposableMap, IDisposable } from '../../../base/common/lifecycle.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { TextEdit } from '../../../editor/common/languages.ts';
+import { ICodeMapperProvider, ICodeMapperRequest, ICodeMapperResponse, ICodeMapperService } from '../../contrib/chat/common/chatCodeMapperService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostCodeMapperShape, ExtHostContext, ICodeMapperProgressDto, ICodeMapperRequestDto, MainContext, MainThreadCodeMapperShape } from '../common/extHost.protocol.ts';
+import { NotebookDto } from './mainThreadNotebookDto.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadCodeMapper)
 export class MainThreadChatCodemapper extends Disposable implements MainThreadCodeMapperShape {

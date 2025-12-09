@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as cp from 'child_process';
-import { getDriveLetter } from '../../../../base/common/extpath.js';
-import * as platform from '../../../../base/common/platform.js';
+import { getDriveLetter } from '../../../../base/common/extpath.ts';
+import * as platform from '../../../../base/common/platform.ts';
 
 function spawnAsPromised(command: string, args: string[]): Promise<string> {
 	return new Promise((resolve, reject) => {

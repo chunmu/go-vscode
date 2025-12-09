@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { derived, IObservable, IReader, observableFromEvent } from '../../../../base/common/observable.js';
-import { ITreeSitterThemeService } from '../../../../editor/common/services/treeSitter/treeSitterThemeService.js';
-import { ColorThemeData, findMetadata } from '../../themes/common/colorThemeData.js';
-import { IWorkbenchThemeService } from '../../themes/common/workbenchThemeService.js';
+import { derived, IObservable, IReader, observableFromEvent } from '../../../../base/common/observable.ts';
+import { ITreeSitterThemeService } from '../../../../editor/common/services/treeSitter/treeSitterThemeService.ts';
+import { ColorThemeData, findMetadata } from '../../themes/common/colorThemeData.ts';
+import { IWorkbenchThemeService } from '../../themes/common/workbenchThemeService.ts';
 
 export class TreeSitterThemeService implements ITreeSitterThemeService {
 	_serviceBrand: undefined;

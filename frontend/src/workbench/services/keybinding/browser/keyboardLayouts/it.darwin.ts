@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyboardLayoutContribution } from './_.contribution.js';
+import { KeyboardLayoutContribution } from './_.contribution.ts';
 
 
 KeyboardLayoutContribution.INSTANCE.registerKeyboardLayout({

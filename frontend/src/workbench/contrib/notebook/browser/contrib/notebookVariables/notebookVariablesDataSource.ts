@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAsyncDataSource } from '../../../../../../base/browser/ui/tree/tree.js';
-import { CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { localize } from '../../../../../../nls.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { INotebookKernel, INotebookKernelService, VariablesResult, variablePageSize } from '../../../common/notebookKernelService.js';
+import { IAsyncDataSource } from '../../../../../../base/browser/ui/tree/tree.ts';
+import { CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { localize } from '../../../../../../nls.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { INotebookKernel, INotebookKernelService, VariablesResult, variablePageSize } from '../../../common/notebookKernelService.ts';
 
 export interface IEmptyScope {
 	kind: 'empty';

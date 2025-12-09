@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { join, normalize } from '../../../../../base/common/path.js';
-import * as platform from '../../../../../base/common/platform.js';
-import { IDebugAdapterExecutable, IConfig, IDebugSession, IAdapterManager, IDebuggerContribution } from '../../common/debug.js';
-import { Debugger } from '../../common/debugger.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ExecutableDebugAdapter } from '../../node/debugAdapter.js';
-import { TestTextResourcePropertiesService } from '../../../../../editor/test/common/services/testTextResourcePropertiesService.js';
-import { ExtensionIdentifier, IExtensionDescription, TargetPlatform } from '../../../../../platform/extensions/common/extensions.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { join, normalize } from '../../../../../base/common/path.ts';
+import * as platform from '../../../../../base/common/platform.ts';
+import { IDebugAdapterExecutable, IConfig, IDebugSession, IAdapterManager, IDebuggerContribution } from '../../common/debug.ts';
+import { Debugger } from '../../common/debugger.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ExecutableDebugAdapter } from '../../node/debugAdapter.ts';
+import { TestTextResourcePropertiesService } from '../../../../../editor/test/common/services/testTextResourcePropertiesService.ts';
+import { ExtensionIdentifier, IExtensionDescription, TargetPlatform } from '../../../../../platform/extensions/common/extensions.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 
 suite('Debug - Debugger', () => {

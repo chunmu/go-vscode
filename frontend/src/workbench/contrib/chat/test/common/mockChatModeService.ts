@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 
-import { Event } from '../../../../../base/common/event.js';
-import { ChatMode, IChatMode, IChatModeService } from '../../common/chatModes.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { ChatMode, IChatMode, IChatModeService } from '../../common/chatModes.ts';
 
 export class MockChatModeService implements IChatModeService {
 	declare readonly _serviceBrand: undefined;

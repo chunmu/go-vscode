@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import * as nls from '../../../nls.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { AuthenticationSession, AuthenticationSessionsChangeEvent, IAuthenticationProvider, IAuthenticationService, IAuthenticationExtensionsService, AuthenticationSessionAccount, IAuthenticationProviderSessionOptions, isAuthenticationWwwAuthenticateRequest, IAuthenticationConstraint, IAuthenticationWwwAuthenticateRequest } from '../../services/authentication/common/authentication.js';
-import { ExtHostAuthenticationShape, ExtHostContext, IRegisterAuthenticationProviderDetails, IRegisterDynamicAuthenticationProviderDetails, MainContext, MainThreadAuthenticationShape } from '../common/extHost.protocol.js';
-import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.js';
-import Severity from '../../../base/common/severity.js';
-import { INotificationService } from '../../../platform/notification/common/notification.js';
-import { ActivationKind, IExtensionService } from '../../services/extensions/common/extensions.js';
-import { ITelemetryService } from '../../../platform/telemetry/common/telemetry.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { IAuthenticationAccessService } from '../../services/authentication/browser/authenticationAccessService.js';
-import { IAuthenticationUsageService } from '../../services/authentication/browser/authenticationUsageService.js';
-import { getAuthenticationProviderActivationEvent } from '../../services/authentication/browser/authenticationService.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IOpenerService } from '../../../platform/opener/common/opener.js';
-import { CancellationError } from '../../../base/common/errors.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtensionHostKind } from '../../services/extensions/common/extensionHostKind.js';
-import { IURLService } from '../../../platform/url/common/url.js';
-import { DeferredPromise, raceTimeout } from '../../../base/common/async.js';
-import { IAuthorizationTokenResponse } from '../../../base/common/oauth.js';
-import { IDynamicAuthenticationProviderStorageService } from '../../services/authentication/common/dynamicAuthenticationProviderStorage.js';
-import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.js';
-import { IQuickInputService } from '../../../platform/quickinput/common/quickInput.js';
-import { IProductService } from '../../../platform/product/common/productService.js';
+import { Disposable, DisposableMap } from '../../../base/common/lifecycle.ts';
+import * as nls from '../../../nls.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { AuthenticationSession, AuthenticationSessionsChangeEvent, IAuthenticationProvider, IAuthenticationService, IAuthenticationExtensionsService, AuthenticationSessionAccount, IAuthenticationProviderSessionOptions, isAuthenticationWwwAuthenticateRequest, IAuthenticationConstraint, IAuthenticationWwwAuthenticateRequest } from '../../services/authentication/common/authentication.ts';
+import { ExtHostAuthenticationShape, ExtHostContext, IRegisterAuthenticationProviderDetails, IRegisterDynamicAuthenticationProviderDetails, MainContext, MainThreadAuthenticationShape } from '../common/extHost.protocol.ts';
+import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.ts';
+import Severity from '../../../base/common/severity.ts';
+import { INotificationService } from '../../../platform/notification/common/notification.ts';
+import { ActivationKind, IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { ITelemetryService } from '../../../platform/telemetry/common/telemetry.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { IAuthenticationAccessService } from '../../services/authentication/browser/authenticationAccessService.ts';
+import { IAuthenticationUsageService } from '../../services/authentication/browser/authenticationUsageService.ts';
+import { getAuthenticationProviderActivationEvent } from '../../services/authentication/browser/authenticationService.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IOpenerService } from '../../../platform/opener/common/opener.ts';
+import { CancellationError } from '../../../base/common/errors.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtensionHostKind } from '../../services/extensions/common/extensionHostKind.ts';
+import { IURLService } from '../../../platform/url/common/url.ts';
+import { DeferredPromise, raceTimeout } from '../../../base/common/async.ts';
+import { IAuthorizationTokenResponse } from '../../../base/common/oauth.ts';
+import { IDynamicAuthenticationProviderStorageService } from '../../services/authentication/common/dynamicAuthenticationProviderStorage.ts';
+import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.ts';
+import { IQuickInputService } from '../../../platform/quickinput/common/quickInput.ts';
+import { IProductService } from '../../../platform/product/common/productService.ts';
 
 export interface AuthenticationInteractiveOptions {
 	detail?: string;

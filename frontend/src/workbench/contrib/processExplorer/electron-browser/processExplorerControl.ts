@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IProcessService, IResolvedProcessInformation } from '../../../../platform/process/common/process.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { ProcessExplorerControl } from '../browser/processExplorerControl.js';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IProcessService, IResolvedProcessInformation } from '../../../../platform/process/common/process.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { ProcessExplorerControl } from '../browser/processExplorerControl.ts';
 
 export class NativeProcessExplorerControl extends ProcessExplorerControl {
 

@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { JSONSchemaType } from '../../../../base/common/jsonSchema.js';
-import { Color } from '../../../../base/common/color.js';
-import { isObject, isUndefinedOrNull, isString, isStringArray } from '../../../../base/common/types.js';
-import { IConfigurationPropertySchema } from '../../../../platform/configuration/common/configurationRegistry.js';
+import * as nls from '../../../../nls.ts';
+import { JSONSchemaType } from '../../../../base/common/jsonSchema.ts';
+import { Color } from '../../../../base/common/color.ts';
+import { isObject, isUndefinedOrNull, isString, isStringArray } from '../../../../base/common/types.ts';
+import { IConfigurationPropertySchema } from '../../../../platform/configuration/common/configurationRegistry.ts';
 
 type Validator<T> = { enabled: boolean; isValid: (value: T) => boolean; message: string };
 

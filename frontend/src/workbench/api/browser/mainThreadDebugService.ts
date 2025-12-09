@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { URI as uri, UriComponents } from '../../../base/common/uri.js';
-import { IDebugService, IConfig, IDebugConfigurationProvider, IBreakpoint, IFunctionBreakpoint, IBreakpointData, IDebugAdapter, IDebugAdapterDescriptorFactory, IDebugSession, IDebugAdapterFactory, IDataBreakpoint, IDebugSessionOptions, IInstructionBreakpoint, DebugConfigurationProviderTriggerKind, IDebugVisualization, DataBreakpointSetType } from '../../contrib/debug/common/debug.js';
+import { DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { URI as uri, UriComponents } from '../../../base/common/uri.ts';
+import { IDebugService, IConfig, IDebugConfigurationProvider, IBreakpoint, IFunctionBreakpoint, IBreakpointData, IDebugAdapter, IDebugAdapterDescriptorFactory, IDebugSession, IDebugAdapterFactory, IDataBreakpoint, IDebugSessionOptions, IInstructionBreakpoint, DebugConfigurationProviderTriggerKind, IDebugVisualization, DataBreakpointSetType } from '../../contrib/debug/common/debug.ts';
 import {
 	ExtHostContext, ExtHostDebugServiceShape, MainThreadDebugServiceShape, DebugSessionUUID, MainContext,
 	IBreakpointsDeltaDto, ISourceMultiBreakpointDto, ISourceBreakpointDto, IFunctionBreakpointDto, IDebugSessionDto, IDataBreakpointDto, IStartDebuggingOptions, IDebugConfiguration, IThreadFocusDto, IStackFrameFocusDto
-} from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import severity from '../../../base/common/severity.js';
-import { AbstractDebugAdapter } from '../../contrib/debug/common/abstractDebugAdapter.js';
-import { IWorkspaceFolder } from '../../../platform/workspace/common/workspace.js';
-import { convertToVSCPaths, convertToDAPaths, isSessionAttach } from '../../contrib/debug/common/debugUtils.js';
-import { ErrorNoTelemetry } from '../../../base/common/errors.js';
-import { IDebugVisualizerService } from '../../contrib/debug/common/debugVisualizers.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { Event } from '../../../base/common/event.js';
-import { isDefined } from '../../../base/common/types.js';
+} from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import severity from '../../../base/common/severity.ts';
+import { AbstractDebugAdapter } from '../../contrib/debug/common/abstractDebugAdapter.ts';
+import { IWorkspaceFolder } from '../../../platform/workspace/common/workspace.ts';
+import { convertToVSCPaths, convertToDAPaths, isSessionAttach } from '../../contrib/debug/common/debugUtils.ts';
+import { ErrorNoTelemetry } from '../../../base/common/errors.ts';
+import { IDebugVisualizerService } from '../../contrib/debug/common/debugVisualizers.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { Event } from '../../../base/common/event.ts';
+import { isDefined } from '../../../base/common/types.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadDebugService)
 export class MainThreadDebugService implements MainThreadDebugServiceShape, IDebugAdapterFactory {

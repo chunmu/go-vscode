@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Action } from '../../../base/common/actions.js';
-import { isCancellationError } from '../../../base/common/errors.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import { URI } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { INotificationService, Severity } from '../../../platform/notification/common/notification.js';
-import { IOpenerService } from '../../../platform/opener/common/opener.js';
-import { IStorageService } from '../../../platform/storage/common/storage.js';
-import { ExtHostContext, ExtHostUriOpenersShape, MainContext, MainThreadUriOpenersShape } from '../common/extHost.protocol.js';
-import { defaultExternalUriOpenerId } from '../../contrib/externalUriOpener/common/configuration.js';
-import { ContributedExternalUriOpenersStore } from '../../contrib/externalUriOpener/common/contributedOpeners.js';
-import { IExternalOpenerProvider, IExternalUriOpener, IExternalUriOpenerService } from '../../contrib/externalUriOpener/common/externalUriOpenerService.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
+import { Action } from '../../../base/common/actions.ts';
+import { isCancellationError } from '../../../base/common/errors.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { INotificationService, Severity } from '../../../platform/notification/common/notification.ts';
+import { IOpenerService } from '../../../platform/opener/common/opener.ts';
+import { IStorageService } from '../../../platform/storage/common/storage.ts';
+import { ExtHostContext, ExtHostUriOpenersShape, MainContext, MainThreadUriOpenersShape } from '../common/extHost.protocol.ts';
+import { defaultExternalUriOpenerId } from '../../contrib/externalUriOpener/common/configuration.ts';
+import { ContributedExternalUriOpenersStore } from '../../contrib/externalUriOpener/common/contributedOpeners.ts';
+import { IExternalOpenerProvider, IExternalUriOpener, IExternalUriOpenerService } from '../../contrib/externalUriOpener/common/externalUriOpenerService.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
 
 interface RegisteredOpenerMetadata {
 	readonly schemes: ReadonlySet<string>;

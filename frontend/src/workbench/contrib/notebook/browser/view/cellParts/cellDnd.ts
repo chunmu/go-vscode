@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { Delayer } from '../../../../../../base/common/async.js';
-import { Disposable, MutableDisposable } from '../../../../../../base/common/lifecycle.js';
-import * as platform from '../../../../../../base/common/platform.js';
-import { expandCellRangesWithHiddenCells, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.js';
-import { CellContentPart } from '../cellPart.js';
-import { BaseCellRenderTemplate, INotebookCellList } from '../notebookRenderingCommon.js';
-import { cloneNotebookCellTextModel } from '../../../common/model/notebookCellTextModel.js';
-import { CellEditType, ICellMoveEdit, SelectionStateType } from '../../../common/notebookCommon.js';
-import { cellRangesToIndexes, ICellRange } from '../../../common/notebookRange.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { Delayer } from '../../../../../../base/common/async.ts';
+import { Disposable, MutableDisposable } from '../../../../../../base/common/lifecycle.ts';
+import * as platform from '../../../../../../base/common/platform.ts';
+import { expandCellRangesWithHiddenCells, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { BaseCellRenderTemplate, INotebookCellList } from '../notebookRenderingCommon.ts';
+import { cloneNotebookCellTextModel } from '../../../common/model/notebookCellTextModel.ts';
+import { CellEditType, ICellMoveEdit, SelectionStateType } from '../../../common/notebookCommon.ts';
+import { cellRangesToIndexes, ICellRange } from '../../../common/notebookRange.ts';
 
 const $ = DOM.$;
 

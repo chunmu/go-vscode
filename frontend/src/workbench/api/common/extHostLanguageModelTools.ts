@@ -4,23 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { raceCancellation } from '../../../base/common/async.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { CancellationError } from '../../../base/common/errors.js';
-import { Lazy } from '../../../base/common/lazy.js';
-import { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { IPreparedToolInvocation, isToolInvocationContext, IToolInvocation, IToolInvocationContext, IToolInvocationPreparationContext, IToolResult, ToolInvocationPresentation } from '../../contrib/chat/common/languageModelToolsService.js';
-import { ExtensionEditToolId, InternalEditToolId } from '../../contrib/chat/common/tools/editFileTool.js';
-import { InternalFetchWebPageToolId } from '../../contrib/chat/common/tools/tools.js';
-import { SearchExtensionsToolId } from '../../contrib/extensions/common/searchExtensionsTool.js';
-import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { Dto, SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostLanguageModelToolsShape, IMainContext, IToolDataDto, MainContext, MainThreadLanguageModelToolsShape } from './extHost.protocol.js';
-import { ExtHostLanguageModels } from './extHostLanguageModels.js';
-import * as typeConvert from './extHostTypeConverters.js';
+import { raceCancellation } from '../../../base/common/async.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { CancellationError } from '../../../base/common/errors.ts';
+import { Lazy } from '../../../base/common/lazy.ts';
+import { IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { IPreparedToolInvocation, isToolInvocationContext, IToolInvocation, IToolInvocationContext, IToolInvocationPreparationContext, IToolResult, ToolInvocationPresentation } from '../../contrib/chat/common/languageModelToolsService.ts';
+import { ExtensionEditToolId, InternalEditToolId } from '../../contrib/chat/common/tools/editFileTool.ts';
+import { InternalFetchWebPageToolId } from '../../contrib/chat/common/tools/tools.ts';
+import { SearchExtensionsToolId } from '../../contrib/extensions/common/searchExtensionsTool.ts';
+import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { Dto, SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostLanguageModelToolsShape, IMainContext, IToolDataDto, MainContext, MainThreadLanguageModelToolsShape } from './extHost.protocol.ts';
+import { ExtHostLanguageModels } from './extHostLanguageModels.ts';
+import * as typeConvert from './extHostTypeConverters.ts';
 
 class Tool {
 

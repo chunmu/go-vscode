@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize2 } from '../../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ElicitationState } from '../../common/chatService.js';
-import { isResponseVM } from '../../common/chatViewModel.js';
-import { IChatWidgetService } from '../chat.js';
-import { CHAT_CATEGORY } from './chatActions.js';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ElicitationState } from '../../common/chatService.ts';
+import { isResponseVM } from '../../common/chatViewModel.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
 
 export const AcceptElicitationRequestActionId = 'workbench.action.chat.acceptElicitation';
 

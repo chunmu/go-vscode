@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { autorun, observableFromEvent } from '../../../../../base/common/observable.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { IChatEditingService } from '../../common/chatEditingService.js';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { autorun, observableFromEvent } from '../../../../../base/common/observable.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { IChatEditingService } from '../../common/chatEditingService.ts';
 
 export class ChatEditingEditorAccessibility implements IWorkbenchContribution {
 

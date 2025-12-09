@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { KeyChord, KeyCode, KeyMod, ScanCode, ScanCodeUtils } from '../../../../../base/common/keyCodes.js';
-import { KeyCodeChord, decodeKeybinding, createSimpleKeybinding, ScanCodeChord, Keybinding } from '../../../../../base/common/keybindings.js';
-import { UserSettingsLabelProvider } from '../../../../../base/common/keybindingLabels.js';
-import { OperatingSystem } from '../../../../../base/common/platform.js';
-import { USLayoutResolvedKeybinding } from '../../../../../platform/keybinding/common/usLayoutResolvedKeybinding.js';
-import { MacLinuxKeyboardMapper } from '../../common/macLinuxKeyboardMapper.js';
-import { IResolvedKeybinding, assertMapping, assertResolveKeyboardEvent, assertResolveKeybinding, readRawMapping } from './keyboardMapperTestUtils.js';
-import { IMacLinuxKeyboardMapping } from '../../../../../platform/keyboardLayout/common/keyboardLayout.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { KeyChord, KeyCode, KeyMod, ScanCode, ScanCodeUtils } from '../../../../../base/common/keyCodes.ts';
+import { KeyCodeChord, decodeKeybinding, createSimpleKeybinding, ScanCodeChord, Keybinding } from '../../../../../base/common/keybindings.ts';
+import { UserSettingsLabelProvider } from '../../../../../base/common/keybindingLabels.ts';
+import { OperatingSystem } from '../../../../../base/common/platform.ts';
+import { USLayoutResolvedKeybinding } from '../../../../../platform/keybinding/common/usLayoutResolvedKeybinding.ts';
+import { MacLinuxKeyboardMapper } from '../../common/macLinuxKeyboardMapper.ts';
+import { IResolvedKeybinding, assertMapping, assertResolveKeyboardEvent, assertResolveKeybinding, readRawMapping } from './keyboardMapperTestUtils.ts';
+import { IMacLinuxKeyboardMapping } from '../../../../../platform/keyboardLayout/common/keyboardLayout.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 const WRITE_FILE_IF_DIFFERENT = false;
 

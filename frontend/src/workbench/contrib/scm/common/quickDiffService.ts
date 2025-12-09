@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { Disposable, IDisposable } from '../../../../base/common/lifecycle.js';
-import { IQuickDiffService, QuickDiff, QuickDiffProvider } from './quickDiff.js';
-import { isEqualOrParent } from '../../../../base/common/resources.js';
-import { score } from '../../../../editor/common/languageSelector.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { Disposable, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IQuickDiffService, QuickDiff, QuickDiffProvider } from './quickDiff.ts';
+import { isEqualOrParent } from '../../../../base/common/resources.ts';
+import { score } from '../../../../editor/common/languageSelector.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
 
 function createProviderComparer(uri: URI): (a: QuickDiffProvider, b: QuickDiffProvider) => number {
 	return (a, b) => {

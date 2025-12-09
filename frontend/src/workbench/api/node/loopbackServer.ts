@@ -5,10 +5,10 @@
 import { randomBytes } from 'crypto';
 import * as http from 'http';
 import { URL } from 'url';
-import { DeferredPromise } from '../../../base/common/async.js';
-import { DEFAULT_AUTH_FLOW_PORT } from '../../../base/common/oauth.js';
-import { URI } from '../../../base/common/uri.js';
-import { ILogger } from '../../../platform/log/common/log.js';
+import { DeferredPromise } from '../../../base/common/async.ts';
+import { DEFAULT_AUTH_FLOW_PORT } from '../../../base/common/oauth.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ILogger } from '../../../platform/log/common/log.ts';
 
 export interface IOAuthResult {
 	code: string;

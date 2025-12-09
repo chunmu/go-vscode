@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { ToolBar } from '../../../../../../base/browser/ui/toolbar/toolbar.js';
-import { IAction } from '../../../../../../base/common/actions.js';
-import { disposableTimeout } from '../../../../../../base/common/async.js';
-import { Emitter, Event } from '../../../../../../base/common/event.js';
-import { MarshalledId } from '../../../../../../base/common/marshallingIds.js';
-import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.js';
-import { createActionViewItem, getActionBarActions, MenuEntryActionViewItem, PrimaryAndSecondaryActions } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { IMenu, IMenuService, MenuId, MenuItemAction } from '../../../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { INotebookCellActionContext } from '../../controller/coreActions.js';
-import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CodiconActionViewItem } from './cellActionView.js';
-import { CellOverlayPart } from '../cellPart.js';
-import { registerCellToolbarStickyScroll } from './cellToolbarStickyScroll.js';
-import { WorkbenchToolBar } from '../../../../../../platform/actions/browser/toolbar.js';
-import { createInstantHoverDelegate } from '../../../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { IHoverDelegate } from '../../../../../../base/browser/ui/hover/hoverDelegate.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { ToolBar } from '../../../../../../base/browser/ui/toolbar/toolbar.ts';
+import { IAction } from '../../../../../../base/common/actions.ts';
+import { disposableTimeout } from '../../../../../../base/common/async.ts';
+import { Emitter, Event } from '../../../../../../base/common/event.ts';
+import { MarshalledId } from '../../../../../../base/common/marshallingIds.ts';
+import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.ts';
+import { createActionViewItem, getActionBarActions, MenuEntryActionViewItem, PrimaryAndSecondaryActions } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { IMenu, IMenuService, MenuId, MenuItemAction } from '../../../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { INotebookCellActionContext } from '../../controller/coreActions.ts';
+import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CodiconActionViewItem } from './cellActionView.ts';
+import { CellOverlayPart } from '../cellPart.ts';
+import { registerCellToolbarStickyScroll } from './cellToolbarStickyScroll.ts';
+import { WorkbenchToolBar } from '../../../../../../platform/actions/browser/toolbar.ts';
+import { createInstantHoverDelegate } from '../../../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { IHoverDelegate } from '../../../../../../base/browser/ui/hover/hoverDelegate.ts';
 
 export class BetweenCellToolbar extends CellOverlayPart {
 	private _betweenCellToolbar: ToolBar | undefined;

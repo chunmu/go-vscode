@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { ProgressOptions } from 'vscode';
-import { MainThreadProgressShape, ExtHostProgressShape, MainContext } from './extHost.protocol.js';
-import { ProgressLocation } from './extHostTypeConverters.js';
-import { Progress, IProgressStep } from '../../../platform/progress/common/progress.js';
-import { CancellationTokenSource, CancellationToken } from '../../../base/common/cancellation.js';
-import { throttle } from '../../../base/common/decorators.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { onUnexpectedExternalError } from '../../../base/common/errors.js';
-import { INotificationSource } from '../../../platform/notification/common/notification.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
+import { MainThreadProgressShape, ExtHostProgressShape, MainContext } from './extHost.protocol.ts';
+import { ProgressLocation } from './extHostTypeConverters.ts';
+import { Progress, IProgressStep } from '../../../platform/progress/common/progress.ts';
+import { CancellationTokenSource, CancellationToken } from '../../../base/common/cancellation.ts';
+import { throttle } from '../../../base/common/decorators.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { onUnexpectedExternalError } from '../../../base/common/errors.ts';
+import { INotificationSource } from '../../../platform/notification/common/notification.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
 
 export interface IExtHostProgress extends ExtHostProgress { }
 export const IExtHostProgress = createDecorator<IExtHostProgress>('IExtHostProgress');

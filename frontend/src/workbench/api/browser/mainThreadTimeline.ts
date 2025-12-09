@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { URI } from '../../../base/common/uri.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { MainContext, MainThreadTimelineShape, ExtHostTimelineShape, ExtHostContext } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { TimelineChangeEvent, TimelineOptions, TimelineProviderDescriptor, ITimelineService, Timeline } from '../../contrib/timeline/common/timeline.js';
-import { revive } from '../../../base/common/marshalling.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { MainContext, MainThreadTimelineShape, ExtHostTimelineShape, ExtHostContext } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { TimelineChangeEvent, TimelineOptions, TimelineProviderDescriptor, ITimelineService, Timeline } from '../../contrib/timeline/common/timeline.ts';
+import { revive } from '../../../base/common/marshalling.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadTimeline)
 export class MainThreadTimeline implements MainThreadTimelineShape {

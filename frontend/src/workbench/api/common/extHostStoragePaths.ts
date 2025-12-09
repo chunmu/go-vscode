@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IEnvironment, IStaticWorkspaceData } from '../../services/extensions/common/extensionHostProtocol.js';
-import { IExtHostConsumerFileSystem } from './extHostFileSystemConsumer.js';
-import { URI } from '../../../base/common/uri.js';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IEnvironment, IStaticWorkspaceData } from '../../services/extensions/common/extensionHostProtocol.ts';
+import { IExtHostConsumerFileSystem } from './extHostFileSystemConsumer.ts';
+import { URI } from '../../../base/common/uri.ts';
 
 export const IExtensionStoragePaths = createDecorator<IExtensionStoragePaths>('IExtensionStoragePaths');
 

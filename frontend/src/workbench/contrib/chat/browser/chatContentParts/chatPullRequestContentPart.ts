@@ -4,19 +4,19 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/chatPullRequestContent.css';
-import * as dom from '../../../../../base/browser/dom.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { IChatPullRequestContent } from '../../common/chatService.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { ChatTreeItem } from '../chat.js';
-import { IChatContentPart } from './chatContentParts.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { addDisposableListener } from '../../../../../base/browser/dom.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { renderAsPlaintext } from '../../../../../base/browser/markdownRenderer.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IChatPullRequestContent } from '../../common/chatService.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { IChatContentPart } from './chatContentParts.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { addDisposableListener } from '../../../../../base/browser/dom.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { renderAsPlaintext } from '../../../../../base/browser/markdownRenderer.ts';
 
 export class ChatPullRequestContentPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

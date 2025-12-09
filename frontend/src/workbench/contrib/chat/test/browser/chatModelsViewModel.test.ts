@@ -4,14 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { ILanguageModelChatMetadata, ILanguageModelChatMetadataAndIdentifier, ILanguageModelChatProvider, ILanguageModelChatSelector, ILanguageModelsService, IUserFriendlyLanguageModel } from '../../common/languageModels.js';
-import { ChatModelGroup, ChatModelsViewModel, IModelItemEntry, IVendorItemEntry, isVendorEntry, isGroupEntry, IGroupItemEntry } from '../../browser/chatManagement/chatModelsViewModel.js';
-import { IChatEntitlementService, ChatEntitlement } from '../../../../services/chat/common/chatEntitlementService.js';
-import { IObservable, observableValue } from '../../../../../base/common/observable.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { ILanguageModelChatMetadata, ILanguageModelChatMetadataAndIdentifier, ILanguageModelChatProvider, ILanguageModelChatSelector, ILanguageModelsService, IUserFriendlyLanguageModel } from '../../common/languageModels.ts';
+import { ChatModelGroup, ChatModelsViewModel, IModelItemEntry, IVendorItemEntry, isVendorEntry, isGroupEntry, IGroupItemEntry } from '../../browser/chatManagement/chatModelsViewModel.ts';
+import { IChatEntitlementService, ChatEntitlement } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { IObservable, observableValue } from '../../../../../base/common/observable.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
 
 class MockLanguageModelsService implements ILanguageModelsService {
 	_serviceBrand: undefined;

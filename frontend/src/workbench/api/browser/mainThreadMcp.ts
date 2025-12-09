@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { mapFindFirst } from '../../../base/common/arraysFind.js';
-import { disposableTimeout } from '../../../base/common/async.js';
-import { CancellationError } from '../../../base/common/errors.js';
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable, DisposableMap, DisposableStore, MutableDisposable } from '../../../base/common/lifecycle.js';
-import { ISettableObservable, observableValue } from '../../../base/common/observable.js';
-import Severity from '../../../base/common/severity.js';
-import { URI } from '../../../base/common/uri.js';
-import * as nls from '../../../nls.js';
-import { ContextKeyExpr, IContextKeyService } from '../../../platform/contextkey/common/contextkey.js';
-import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { LogLevel } from '../../../platform/log/common/log.js';
-import { IMcpMessageTransport, IMcpRegistry } from '../../contrib/mcp/common/mcpRegistryTypes.js';
-import { extensionPrefixedIdentifier, McpCollectionDefinition, McpConnectionState, McpServerDefinition, McpServerLaunch, McpServerTransportType, McpServerTrust, UserInteractionRequiredError } from '../../contrib/mcp/common/mcpTypes.js';
-import { MCP } from '../../contrib/mcp/common/modelContextProtocol.js';
-import { IAuthenticationMcpAccessService } from '../../services/authentication/browser/authenticationMcpAccessService.js';
-import { IAuthenticationMcpService } from '../../services/authentication/browser/authenticationMcpService.js';
-import { IAuthenticationMcpUsageService } from '../../services/authentication/browser/authenticationMcpUsageService.js';
-import { AuthenticationSession, AuthenticationSessionAccount, IAuthenticationService } from '../../services/authentication/common/authentication.js';
-import { IDynamicAuthenticationProviderStorageService } from '../../services/authentication/common/dynamicAuthenticationProviderStorage.js';
-import { ExtensionHostKind, extensionHostKindToString } from '../../services/extensions/common/extensionHostKind.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { Proxied } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostContext, ExtHostMcpShape, IMcpAuthenticationDetails, IMcpAuthenticationOptions, MainContext, MainThreadMcpShape } from '../common/extHost.protocol.js';
+import { mapFindFirst } from '../../../base/common/arraysFind.ts';
+import { disposableTimeout } from '../../../base/common/async.ts';
+import { CancellationError } from '../../../base/common/errors.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable, DisposableMap, DisposableStore, MutableDisposable } from '../../../base/common/lifecycle.ts';
+import { ISettableObservable, observableValue } from '../../../base/common/observable.ts';
+import Severity from '../../../base/common/severity.ts';
+import { URI } from '../../../base/common/uri.ts';
+import * as nls from '../../../nls.ts';
+import { ContextKeyExpr, IContextKeyService } from '../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { LogLevel } from '../../../platform/log/common/log.ts';
+import { IMcpMessageTransport, IMcpRegistry } from '../../contrib/mcp/common/mcpRegistryTypes.ts';
+import { extensionPrefixedIdentifier, McpCollectionDefinition, McpConnectionState, McpServerDefinition, McpServerLaunch, McpServerTransportType, McpServerTrust, UserInteractionRequiredError } from '../../contrib/mcp/common/mcpTypes.ts';
+import { MCP } from '../../contrib/mcp/common/modelContextProtocol.ts';
+import { IAuthenticationMcpAccessService } from '../../services/authentication/browser/authenticationMcpAccessService.ts';
+import { IAuthenticationMcpService } from '../../services/authentication/browser/authenticationMcpService.ts';
+import { IAuthenticationMcpUsageService } from '../../services/authentication/browser/authenticationMcpUsageService.ts';
+import { AuthenticationSession, AuthenticationSessionAccount, IAuthenticationService } from '../../services/authentication/common/authentication.ts';
+import { IDynamicAuthenticationProviderStorageService } from '../../services/authentication/common/dynamicAuthenticationProviderStorage.ts';
+import { ExtensionHostKind, extensionHostKindToString } from '../../services/extensions/common/extensionHostKind.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { Proxied } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostContext, ExtHostMcpShape, IMcpAuthenticationDetails, IMcpAuthenticationOptions, MainContext, MainThreadMcpShape } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadMcp)
 export class MainThreadMcp extends Disposable implements MainThreadMcpShape {

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IResourceUndoRedoElement, UndoRedoElementType } from '../../../../../platform/undoRedo/common/undoRedo.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { NotebookCellTextModel } from './notebookCellTextModel.js';
-import { ISelectionState, NotebookCellMetadata } from '../notebookCommon.js';
+import { IResourceUndoRedoElement, UndoRedoElementType } from '../../../../../platform/undoRedo/common/undoRedo.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { NotebookCellTextModel } from './notebookCellTextModel.ts';
+import { ISelectionState, NotebookCellMetadata } from '../notebookCommon.ts';
 
 /**
  * It should not modify Undo/Redo stack

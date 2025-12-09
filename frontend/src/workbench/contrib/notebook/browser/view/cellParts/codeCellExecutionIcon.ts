@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { renderLabelWithIcons } from '../../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../../nls.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { errorStateIcon, executingStateIcon, pendingStateIcon, successStateIcon } from '../../notebookIcons.js';
-import { NotebookCellExecutionState, NotebookCellInternalMetadata } from '../../../common/notebookCommon.js';
-import { INotebookCellExecution, INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { renderLabelWithIcons } from '../../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../../nls.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { errorStateIcon, executingStateIcon, pendingStateIcon, successStateIcon } from '../../notebookIcons.ts';
+import { NotebookCellExecutionState, NotebookCellInternalMetadata } from '../../../common/notebookCommon.ts';
+import { INotebookCellExecution, INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.ts';
 
 interface IExecutionItem {
 	text: string;

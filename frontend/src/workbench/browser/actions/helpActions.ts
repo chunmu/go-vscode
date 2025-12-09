@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../nls.js';
-import product from '../../../platform/product/common/product.js';
-import { isMacintosh, isLinux, language, isWeb } from '../../../base/common/platform.js';
-import { ITelemetryService } from '../../../platform/telemetry/common/telemetry.js';
-import { IOpenerService } from '../../../platform/opener/common/opener.js';
-import { URI } from '../../../base/common/uri.js';
-import { MenuId, Action2, registerAction2, MenuRegistry } from '../../../platform/actions/common/actions.js';
-import { KeyChord, KeyMod, KeyCode } from '../../../base/common/keyCodes.js';
-import { IProductService } from '../../../platform/product/common/productService.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { Categories } from '../../../platform/action/common/actionCommonCategories.js';
-import { ICommandService } from '../../../platform/commands/common/commands.js';
-import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.js';
+import { localize, localize2 } from '../../../nls.ts';
+import product from '../../../platform/product/common/product.ts';
+import { isMacintosh, isLinux, language, isWeb } from '../../../base/common/platform.ts';
+import { ITelemetryService } from '../../../platform/telemetry/common/telemetry.ts';
+import { IOpenerService } from '../../../platform/opener/common/opener.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { MenuId, Action2, registerAction2, MenuRegistry } from '../../../platform/actions/common/actions.ts';
+import { KeyChord, KeyMod, KeyCode } from '../../../base/common/keyCodes.ts';
+import { IProductService } from '../../../platform/product/common/productService.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { Categories } from '../../../platform/action/common/actionCommonCategories.ts';
+import { ICommandService } from '../../../platform/commands/common/commands.ts';
+import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.ts';
 
 class KeybindingsReferenceAction extends Action2 {
 

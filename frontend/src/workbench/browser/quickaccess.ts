@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../base/common/lifecycle.js';
-import { getIEditor } from '../../editor/browser/editorBrowser.js';
-import { ICodeEditorViewState, IDiffEditorViewState } from '../../editor/common/editorCommon.js';
-import { localize } from '../../nls.js';
-import { ICommandHandler } from '../../platform/commands/common/commands.js';
-import { ContextKeyExpr, RawContextKey } from '../../platform/contextkey/common/contextkey.js';
-import { IResourceEditorInput, ITextResourceEditorInput } from '../../platform/editor/common/editor.js';
-import { IKeybindingService } from '../../platform/keybinding/common/keybinding.js';
-import { IQuickInputService } from '../../platform/quickinput/common/quickInput.js';
-import { IEditorPane, IUntitledTextResourceEditorInput, IUntypedEditorInput } from '../common/editor.js';
-import { EditorInput } from '../common/editor/editorInput.js';
-import { IEditorGroup, IEditorGroupsService } from '../services/editor/common/editorGroupsService.js';
-import { PreferredGroup, IEditorService } from '../services/editor/common/editorService.js';
+import { Disposable } from '../../base/common/lifecycle.ts';
+import { getIEditor } from '../../editor/browser/editorBrowser.ts';
+import { ICodeEditorViewState, IDiffEditorViewState } from '../../editor/common/editorCommon.ts';
+import { localize } from '../../nls.ts';
+import { ICommandHandler } from '../../platform/commands/common/commands.ts';
+import { ContextKeyExpr, RawContextKey } from '../../platform/contextkey/common/contextkey.ts';
+import { IResourceEditorInput, ITextResourceEditorInput } from '../../platform/editor/common/editor.ts';
+import { IKeybindingService } from '../../platform/keybinding/common/keybinding.ts';
+import { IQuickInputService } from '../../platform/quickinput/common/quickInput.ts';
+import { IEditorPane, IUntitledTextResourceEditorInput, IUntypedEditorInput } from '../common/editor.ts';
+import { EditorInput } from '../common/editor/editorInput.ts';
+import { IEditorGroup, IEditorGroupsService } from '../services/editor/common/editorGroupsService.ts';
+import { PreferredGroup, IEditorService } from '../services/editor/common/editorService.ts';
 
 export const inQuickPickContextKeyValue = 'inQuickOpen';
 export const InQuickPickContextKey = new RawContextKey<boolean>(inQuickPickContextKeyValue, false, localize('inQuickOpen', "Whether keyboard focus is inside the quick open control"));

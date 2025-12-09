@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DeferredPromise } from '../../../../base/common/async.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { ICellViewModel } from './notebookBrowser.js';
-import { NotebookEditorWidget } from './notebookEditorWidget.js';
-import { INotebookCellList } from './view/notebookRenderingCommon.js';
-import * as DOM from '../../../../base/browser/dom.js';
-import { INotebookLoggingService } from '../common/notebookLoggingService.js';
+import { DeferredPromise } from '../../../../base/common/async.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { ICellViewModel } from './notebookBrowser.ts';
+import { NotebookEditorWidget } from './notebookEditorWidget.ts';
+import { INotebookCellList } from './view/notebookRenderingCommon.ts';
+import * as DOM from '../../../../base/browser/dom.ts';
+import { INotebookLoggingService } from '../common/notebookLoggingService.ts';
 
 export class NotebookCellLayoutManager extends Disposable {
 	private _pendingLayouts: WeakMap<ICellViewModel, IDisposable> | null = new WeakMap<ICellViewModel, IDisposable>();

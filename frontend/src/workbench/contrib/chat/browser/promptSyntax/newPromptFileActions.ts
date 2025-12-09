@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isEqual } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { getCodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { SnippetController2 } from '../../../../../editor/contrib/snippet/browser/snippetController2.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { INotificationService, NeverShowAgainScope, Severity } from '../../../../../platform/notification/common/notification.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { getLanguageIdForPromptsType, PromptsType } from '../../common/promptSyntax/promptTypes.js';
-import { IUserDataSyncEnablementService, SyncResource } from '../../../../../platform/userDataSync/common/userDataSync.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { CONFIGURE_SYNC_COMMAND_ID } from '../../../../services/userDataSync/common/userDataSync.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { CHAT_CATEGORY } from '../actions/chatActions.js';
-import { askForPromptFileName } from './pickers/askForPromptName.js';
-import { askForPromptSourceFolder } from './pickers/askForPromptSourceFolder.js';
-import { IChatModeService } from '../../common/chatModes.js';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { getCodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { SnippetController2 } from '../../../../../editor/contrib/snippet/browser/snippetController2.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { INotificationService, NeverShowAgainScope, Severity } from '../../../../../platform/notification/common/notification.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { getLanguageIdForPromptsType, PromptsType } from '../../common/promptSyntax/promptTypes.ts';
+import { IUserDataSyncEnablementService, SyncResource } from '../../../../../platform/userDataSync/common/userDataSync.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { CONFIGURE_SYNC_COMMAND_ID } from '../../../../services/userDataSync/common/userDataSync.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { CHAT_CATEGORY } from '../actions/chatActions.ts';
+import { askForPromptFileName } from './pickers/askForPromptName.ts';
+import { askForPromptSourceFolder } from './pickers/askForPromptSourceFolder.ts';
+import { IChatModeService } from '../../common/chatModes.ts';
 
 
 class AbstractNewPromptFileAction extends Action2 {

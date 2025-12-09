@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { sumBy } from '../../../../base/common/arrays.js';
-import { LineEdit } from '../../../../editor/common/core/edits/lineEdit.js';
-import { AnnotatedStringEdit, BaseStringEdit, IEditData } from '../../../../editor/common/core/edits/stringEdit.js';
-import { AbstractText } from '../../../../editor/common/core/text/abstractText.js';
+import { sumBy } from '../../../../base/common/arrays.ts';
+import { LineEdit } from '../../../../editor/common/core/edits/lineEdit.ts';
+import { AnnotatedStringEdit, BaseStringEdit, IEditData } from '../../../../editor/common/core/edits/stringEdit.ts';
+import { AbstractText } from '../../../../editor/common/core/text/abstractText.ts';
 
 /**
  * The ARC (accepted and retained characters) counts how many characters inserted by the initial suggestion (trackedEdit)

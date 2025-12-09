@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.js';
-import { katexContainerClassName, katexContainerLatexAttributeName } from '../../../markdown/common/markedKatexExtension.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IChatRequestViewModel, IChatResponseViewModel, isChatTreeItem, isRequestVM, isResponseVM } from '../../common/chatViewModel.js';
-import { ChatTreeItem, IChatWidgetService } from '../chat.js';
-import { CHAT_CATEGORY, stringifyItem } from './chatActions.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.ts';
+import { katexContainerClassName, katexContainerLatexAttributeName } from '../../../markdown/common/markedKatexExtension.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IChatRequestViewModel, IChatResponseViewModel, isChatTreeItem, isRequestVM, isResponseVM } from '../../common/chatViewModel.ts';
+import { ChatTreeItem, IChatWidgetService } from '../chat.ts';
+import { CHAT_CATEGORY, stringifyItem } from './chatActions.ts';
 
 export function registerChatCopyActions() {
 	registerAction2(class CopyAllAction extends Action2 {

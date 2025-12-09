@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MainThreadStatusBarShape, MainContext, ExtHostContext, StatusBarItemDto, ExtHostStatusBarShape } from '../common/extHost.protocol.js';
-import { ThemeColor } from '../../../base/common/themables.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
-import { Command } from '../../../editor/common/languages.js';
-import { IAccessibilityInformation } from '../../../platform/accessibility/common/accessibility.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
-import { IExtensionStatusBarItemService, StatusBarUpdateKind } from './statusBarExtensionPoint.js';
-import { IStatusbarEntry, StatusbarAlignment } from '../../services/statusbar/browser/statusbar.js';
-import { IManagedHoverTooltipMarkdownString } from '../../../base/browser/ui/hover/hover.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
+import { MainThreadStatusBarShape, MainContext, ExtHostContext, StatusBarItemDto, ExtHostStatusBarShape } from '../common/extHost.protocol.ts';
+import { ThemeColor } from '../../../base/common/themables.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.ts';
+import { Command } from '../../../editor/common/languages.ts';
+import { IAccessibilityInformation } from '../../../platform/accessibility/common/accessibility.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
+import { IExtensionStatusBarItemService, StatusBarUpdateKind } from './statusBarExtensionPoint.ts';
+import { IStatusbarEntry, StatusbarAlignment } from '../../services/statusbar/browser/statusbar.ts';
+import { IManagedHoverTooltipMarkdownString } from '../../../base/browser/ui/hover/hover.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadStatusBar)
 export class MainThreadStatusBar implements MainThreadStatusBarShape {

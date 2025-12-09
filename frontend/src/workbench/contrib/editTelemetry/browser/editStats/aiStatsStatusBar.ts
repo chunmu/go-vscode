@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { n } from '../../../../../base/browser/dom.js';
-import { ActionBar, IActionBarOptions, IActionOptions } from '../../../../../base/browser/ui/actionbar/actionbar.js';
-import { IAction } from '../../../../../base/common/actions.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { createHotClass } from '../../../../../base/common/hotReloadHelpers.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { autorun, derived } from '../../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { nativeHoverDelegate } from '../../../../../platform/hover/browser/hover.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IStatusbarService, StatusbarAlignment } from '../../../../services/statusbar/browser/statusbar.js';
-import { AI_STATS_SETTING_ID } from '../settingIds.js';
-import type { AiStatsFeature } from './aiStatsFeature.js';
+import { n } from '../../../../../base/browser/dom.ts';
+import { ActionBar, IActionBarOptions, IActionOptions } from '../../../../../base/browser/ui/actionbar/actionbar.ts';
+import { IAction } from '../../../../../base/common/actions.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { createHotClass } from '../../../../../base/common/hotReloadHelpers.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { autorun, derived } from '../../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { nativeHoverDelegate } from '../../../../../platform/hover/browser/hover.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IStatusbarService, StatusbarAlignment } from '../../../../services/statusbar/browser/statusbar.ts';
+import { AI_STATS_SETTING_ID } from '../settingIds.ts';
+import type { AiStatsFeature } from './aiStatsFeature.ts';
 import './media.css';
 
 export class AiStatsStatusBar extends Disposable {

@@ -2,21 +2,21 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { raceTimeout } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IActiveCodeEditor, ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { Position } from '../../../../editor/common/core/position.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { IValidEditOperation } from '../../../../editor/common/model.js';
-import { createDecorator, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IChatWidgetService } from '../../chat/browser/chat.js';
-import { IChatEditingSession } from '../../chat/common/chatEditingService.js';
-import { IChatModel, IChatRequestModel } from '../../chat/common/chatModel.js';
-import { IChatService } from '../../chat/common/chatService.js';
-import { Session, StashedSession } from './inlineChatSession.js';
+import { raceTimeout } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IActiveCodeEditor, ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { Position } from '../../../../editor/common/core/position.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { IValidEditOperation } from '../../../../editor/common/model.ts';
+import { createDecorator, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IChatWidgetService } from '../../chat/browser/chat.ts';
+import { IChatEditingSession } from '../../chat/common/chatEditingService.ts';
+import { IChatModel, IChatRequestModel } from '../../chat/common/chatModel.ts';
+import { IChatService } from '../../chat/common/chatService.ts';
+import { Session, StashedSession } from './inlineChatSession.ts';
 
 export interface ISessionKeyComputer {
 	getComparisonKey(editor: ICodeEditor, uri: URI): string;

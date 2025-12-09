@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IEncryptionService, KnownStorageProvider } from '../../../../platform/encryption/common/encryptionService.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { IEncryptionService, KnownStorageProvider } from '../../../../platform/encryption/common/encryptionService.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
 
 export class EncryptionService implements IEncryptionService {
 

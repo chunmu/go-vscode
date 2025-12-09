@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { promiseWithResolvers, timeout } from '../../../../base/common/async.js';
-import { Mutable } from '../../../../base/common/types.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.js';
-import { ExtensionIdentifier, IExtensionDescription, TargetPlatform } from '../../../../platform/extensions/common/extensions.js';
-import { NullLogService } from '../../../../platform/log/common/log.js';
-import { ActivatedExtension, EmptyExtension, ExtensionActivationTimes, ExtensionsActivator, IExtensionsActivatorHost } from '../../common/extHostExtensionActivator.js';
-import { ExtensionDescriptionRegistry, IActivationEventsReader } from '../../../services/extensions/common/extensionDescriptionRegistry.js';
-import { ExtensionActivationReason, MissingExtensionDependency } from '../../../services/extensions/common/extensions.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
+import { promiseWithResolvers, timeout } from '../../../../base/common/async.ts';
+import { Mutable } from '../../../../base/common/types.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.ts';
+import { ExtensionIdentifier, IExtensionDescription, TargetPlatform } from '../../../../platform/extensions/common/extensions.ts';
+import { NullLogService } from '../../../../platform/log/common/log.ts';
+import { ActivatedExtension, EmptyExtension, ExtensionActivationTimes, ExtensionsActivator, IExtensionsActivatorHost } from '../../common/extHostExtensionActivator.ts';
+import { ExtensionDescriptionRegistry, IActivationEventsReader } from '../../../services/extensions/common/extensionDescriptionRegistry.ts';
+import { ExtensionActivationReason, MissingExtensionDependency } from '../../../services/extensions/common/extensions.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
 
 suite('ExtensionsActivator', () => {
 

@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyChord, KeyCode, KeyMod, ScanCode } from '../../../../../base/common/keyCodes.js';
-import { KeyCodeChord, decodeKeybinding, ScanCodeChord, Keybinding } from '../../../../../base/common/keybindings.js';
-import { OperatingSystem } from '../../../../../base/common/platform.js';
-import { WindowsKeyboardMapper } from '../../common/windowsKeyboardMapper.js';
-import { IResolvedKeybinding, assertMapping, assertResolveKeyboardEvent, assertResolveKeybinding, readRawMapping } from './keyboardMapperTestUtils.js';
-import { IWindowsKeyboardMapping } from '../../../../../platform/keyboardLayout/common/keyboardLayout.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { KeyChord, KeyCode, KeyMod, ScanCode } from '../../../../../base/common/keyCodes.ts';
+import { KeyCodeChord, decodeKeybinding, ScanCodeChord, Keybinding } from '../../../../../base/common/keybindings.ts';
+import { OperatingSystem } from '../../../../../base/common/platform.ts';
+import { WindowsKeyboardMapper } from '../../common/windowsKeyboardMapper.ts';
+import { IResolvedKeybinding, assertMapping, assertResolveKeyboardEvent, assertResolveKeybinding, readRawMapping } from './keyboardMapperTestUtils.ts';
+import { IWindowsKeyboardMapping } from '../../../../../platform/keyboardLayout/common/keyboardLayout.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 const WRITE_FILE_IF_DIFFERENT = false;
 

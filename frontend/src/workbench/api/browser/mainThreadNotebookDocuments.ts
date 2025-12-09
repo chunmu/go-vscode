@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { DisposableStore, dispose } from '../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../base/common/map.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { BoundModelReferenceCollection } from './mainThreadDocuments.js';
-import { NotebookTextModel } from '../../contrib/notebook/common/model/notebookTextModel.js';
-import { NotebookCellsChangeType } from '../../contrib/notebook/common/notebookCommon.js';
-import { INotebookEditorModelResolverService } from '../../contrib/notebook/common/notebookEditorModelResolverService.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { ExtHostContext, ExtHostNotebookDocumentsShape, MainThreadNotebookDocumentsShape, NotebookCellDto, NotebookCellsChangedEventDto, NotebookDataDto } from '../common/extHost.protocol.js';
-import { NotebookDto } from './mainThreadNotebookDto.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
+import { Event } from '../../../base/common/event.ts';
+import { DisposableStore, dispose } from '../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../base/common/map.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { BoundModelReferenceCollection } from './mainThreadDocuments.ts';
+import { NotebookTextModel } from '../../contrib/notebook/common/model/notebookTextModel.ts';
+import { NotebookCellsChangeType } from '../../contrib/notebook/common/notebookCommon.ts';
+import { INotebookEditorModelResolverService } from '../../contrib/notebook/common/notebookEditorModelResolverService.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { ExtHostContext, ExtHostNotebookDocumentsShape, MainThreadNotebookDocumentsShape, NotebookCellDto, NotebookCellsChangedEventDto, NotebookDataDto } from '../common/extHost.protocol.ts';
+import { NotebookDto } from './mainThreadNotebookDto.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
 
 export class MainThreadNotebookDocuments implements MainThreadNotebookDocumentsShape {
 

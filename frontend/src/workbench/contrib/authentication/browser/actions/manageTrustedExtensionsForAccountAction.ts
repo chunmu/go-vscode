@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { fromNow } from '../../../../../base/common/date.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IQuickInputService, IQuickPickItem, IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.js';
-import { AllowedExtension, IAuthenticationService } from '../../../../services/authentication/common/authentication.js';
-import { IAuthenticationQueryService, IAccountQuery } from '../../../../services/authentication/common/authenticationQuery.js';
-import { IExtensionService } from '../../../../services/extensions/common/extensions.js';
-import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { fromNow } from '../../../../../base/common/date.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IQuickInputService, IQuickPickItem, IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { AllowedExtension, IAuthenticationService } from '../../../../services/authentication/common/authentication.ts';
+import { IAuthenticationQueryService, IAccountQuery } from '../../../../services/authentication/common/authenticationQuery.ts';
+import { IExtensionService } from '../../../../services/extensions/common/extensions.ts';
+import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.ts';
 
 export class ManageTrustedExtensionsForAccountAction extends Action2 {
 	constructor() {

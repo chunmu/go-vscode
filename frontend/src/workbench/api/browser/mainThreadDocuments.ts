@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { toErrorMessage } from '../../../base/common/errorMessage.js';
-import { IReference, dispose, Disposable } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ITextModel, shouldSynchronizeModel } from '../../../editor/common/model.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { ITextModelService } from '../../../editor/common/services/resolverService.js';
-import { IFileService, FileOperation } from '../../../platform/files/common/files.js';
-import { ExtHostContext, ExtHostDocumentsShape, MainThreadDocumentsShape } from '../common/extHost.protocol.js';
-import { EncodingMode, ITextFileEditorModel, ITextFileService, TextFileResolveReason } from '../../services/textfile/common/textfiles.js';
-import { IUntitledTextEditorModel } from '../../services/untitled/common/untitledTextEditorModel.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { toLocalResource, extUri, IExtUri } from '../../../base/common/resources.js';
-import { IWorkingCopyFileService } from '../../services/workingCopy/common/workingCopyFileService.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { IPathService } from '../../services/path/common/pathService.js';
-import { ResourceMap } from '../../../base/common/map.js';
-import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ErrorNoTelemetry, onUnexpectedError } from '../../../base/common/errors.js';
-import { ISerializedModelContentChangedEvent } from '../../../editor/common/textModelEvents.js';
+import { toErrorMessage } from '../../../base/common/errorMessage.ts';
+import { IReference, dispose, Disposable } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ITextModel, shouldSynchronizeModel } from '../../../editor/common/model.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { ITextModelService } from '../../../editor/common/services/resolverService.ts';
+import { IFileService, FileOperation } from '../../../platform/files/common/files.ts';
+import { ExtHostContext, ExtHostDocumentsShape, MainThreadDocumentsShape } from '../common/extHost.protocol.ts';
+import { EncodingMode, ITextFileEditorModel, ITextFileService, TextFileResolveReason } from '../../services/textfile/common/textfiles.ts';
+import { IUntitledTextEditorModel } from '../../services/untitled/common/untitledTextEditorModel.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { toLocalResource, extUri, IExtUri } from '../../../base/common/resources.ts';
+import { IWorkingCopyFileService } from '../../services/workingCopy/common/workingCopyFileService.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { IPathService } from '../../services/path/common/pathService.ts';
+import { ResourceMap } from '../../../base/common/map.ts';
+import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ErrorNoTelemetry, onUnexpectedError } from '../../../base/common/errors.ts';
+import { ISerializedModelContentChangedEvent } from '../../../editor/common/textModelEvents.ts';
 
 export class BoundModelReferenceCollection {
 

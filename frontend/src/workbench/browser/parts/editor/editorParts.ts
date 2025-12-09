@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { EditorGroupLayout, GroupDirection, GroupLocation, GroupOrientation, GroupsArrangement, GroupsOrder, IAuxiliaryEditorPart, IEditorGroupContextKeyProvider, IEditorDropTargetDelegate, IEditorGroupsService, IEditorSideGroup, IEditorWorkingSet, IFindGroupScope, IMergeGroupOptions, IEditorWorkingSetOptions, IEditorPart } from '../../../services/editor/common/editorGroupsService.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { GroupIdentifier, IEditorPartOptions } from '../../../common/editor.js';
-import { EditorPart, IEditorPartUIState, MainEditorPart } from './editorPart.js';
-import { IEditorGroupView, IEditorPartsView } from './editor.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { distinct } from '../../../../base/common/arrays.js';
-import { AuxiliaryEditorPart, IAuxiliaryEditorPartOpenOptions } from './auxiliaryEditorPart.js';
-import { MultiWindowParts } from '../../part.js';
-import { DeferredPromise } from '../../../../base/common/async.js';
-import { IStorageService, IStorageValueChangeEvent, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { IAuxiliaryWindowOpenOptions, IAuxiliaryWindowService } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.js';
-import { generateUuid } from '../../../../base/common/uuid.js';
-import { ContextKeyValue, IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { isHTMLElement } from '../../../../base/browser/dom.js';
-import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { DeepPartial } from '../../../../base/common/types.js';
-import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.js';
-import { mainWindow } from '../../../../base/browser/window.js';
+import { localize } from '../../../../nls.ts';
+import { EditorGroupLayout, GroupDirection, GroupLocation, GroupOrientation, GroupsArrangement, GroupsOrder, IAuxiliaryEditorPart, IEditorGroupContextKeyProvider, IEditorDropTargetDelegate, IEditorGroupsService, IEditorSideGroup, IEditorWorkingSet, IFindGroupScope, IMergeGroupOptions, IEditorWorkingSetOptions, IEditorPart } from '../../../services/editor/common/editorGroupsService.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { GroupIdentifier, IEditorPartOptions } from '../../../common/editor.ts';
+import { EditorPart, IEditorPartUIState, MainEditorPart } from './editorPart.ts';
+import { IEditorGroupView, IEditorPartsView } from './editor.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { distinct } from '../../../../base/common/arrays.ts';
+import { AuxiliaryEditorPart, IAuxiliaryEditorPartOpenOptions } from './auxiliaryEditorPart.ts';
+import { MultiWindowParts } from '../../part.ts';
+import { DeferredPromise } from '../../../../base/common/async.ts';
+import { IStorageService, IStorageValueChangeEvent, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { IAuxiliaryWindowOpenOptions, IAuxiliaryWindowService } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.ts';
+import { generateUuid } from '../../../../base/common/uuid.ts';
+import { ContextKeyValue, IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { isHTMLElement } from '../../../../base/browser/dom.ts';
+import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { DeepPartial } from '../../../../base/common/types.ts';
+import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.ts';
+import { mainWindow } from '../../../../base/browser/window.ts';
 
 interface IEditorPartsUIState {
 	readonly auxiliary: IAuxiliaryEditorPartState[];

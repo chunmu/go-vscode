@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { CodeActionController } from '../../../../../../editor/contrib/codeAction/browser/codeActionController.js';
-import { CodeActionKind, CodeActionTriggerSource } from '../../../../../../editor/contrib/codeAction/common/types.js';
-import { localize, localize2 } from '../../../../../../nls.js';
-import { registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { INotebookCellActionContext, NotebookCellAction, findTargetCellEditor } from '../../controller/coreActions.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { NOTEBOOK_CELL_EDITOR_FOCUSED, NOTEBOOK_CELL_FOCUSED, NOTEBOOK_CELL_HAS_ERROR_DIAGNOSTICS } from '../../../common/notebookContextKeys.js';
-import { InlineChatController } from '../../../../inlineChat/browser/inlineChatController.js';
-import { IChatWidgetService } from '../../../../chat/browser/chat.js';
+import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { CodeActionController } from '../../../../../../editor/contrib/codeAction/browser/codeActionController.ts';
+import { CodeActionKind, CodeActionTriggerSource } from '../../../../../../editor/contrib/codeAction/common/types.ts';
+import { localize, localize2 } from '../../../../../../nls.ts';
+import { registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { INotebookCellActionContext, NotebookCellAction, findTargetCellEditor } from '../../controller/coreActions.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { NOTEBOOK_CELL_EDITOR_FOCUSED, NOTEBOOK_CELL_FOCUSED, NOTEBOOK_CELL_HAS_ERROR_DIAGNOSTICS } from '../../../common/notebookContextKeys.ts';
+import { InlineChatController } from '../../../../inlineChat/browser/inlineChatController.ts';
+import { IChatWidgetService } from '../../../../chat/browser/chat.ts';
 
 export const OPEN_CELL_FAILURE_ACTIONS_COMMAND_ID = 'notebook.cell.openFailureActions';
 export const FIX_CELL_ERROR_COMMAND_ID = 'notebook.cell.chat.fixError';

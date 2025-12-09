@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { EditorModel } from './editorModel.js';
-import { URI } from '../../../base/common/uri.js';
-import { IFileService } from '../../../platform/files/common/files.js';
-import { Mimes } from '../../../base/common/mime.js';
+import { EditorModel } from './editorModel.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IFileService } from '../../../platform/files/common/files.ts';
+import { Mimes } from '../../../base/common/mime.ts';
 
 /**
  * An editor model that just represents a resource that can be loaded.

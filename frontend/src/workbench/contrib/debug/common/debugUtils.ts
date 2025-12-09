@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { equalsIgnoreCase } from '../../../../base/common/strings.js';
-import { IDebuggerContribution, IDebugSession, IConfigPresentation, State } from './debug.js';
-import { URI as uri } from '../../../../base/common/uri.js';
-import { isAbsolute } from '../../../../base/common/path.js';
-import { deepClone } from '../../../../base/common/objects.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { Position } from '../../../../editor/common/core/position.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { coalesce } from '../../../../base/common/arrays.js';
-import { ILanguageFeaturesService } from '../../../../editor/common/services/languageFeatures.js';
+import { equalsIgnoreCase } from '../../../../base/common/strings.ts';
+import { IDebuggerContribution, IDebugSession, IConfigPresentation, State } from './debug.ts';
+import { URI as uri } from '../../../../base/common/uri.ts';
+import { isAbsolute } from '../../../../base/common/path.ts';
+import { deepClone } from '../../../../base/common/objects.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { Position } from '../../../../editor/common/core/position.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { ILanguageFeaturesService } from '../../../../editor/common/services/languageFeatures.ts';
 
 const _formatPIIRegexp = /{([^}]+)}/g;
 

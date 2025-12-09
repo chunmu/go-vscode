@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { localize } from '../../../../nls.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { localize } from '../../../../nls.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
 
 const DisassemblyEditorIcon = registerIcon('disassembly-editor-label-icon', Codicon.debug, localize('disassemblyEditorLabelIcon', 'Icon of the disassembly editor label.'));
 

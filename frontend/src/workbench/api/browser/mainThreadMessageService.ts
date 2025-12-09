@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../nls.js';
-import Severity from '../../../base/common/severity.js';
-import { IAction, toAction } from '../../../base/common/actions.js';
-import { MainThreadMessageServiceShape, MainContext, MainThreadMessageOptions } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.js';
-import { INotificationService, INotificationSource, NotificationPriority } from '../../../platform/notification/common/notification.js';
-import { Event } from '../../../base/common/event.js';
-import { ICommandService } from '../../../platform/commands/common/commands.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
+import * as nls from '../../../nls.ts';
+import Severity from '../../../base/common/severity.ts';
+import { IAction, toAction } from '../../../base/common/actions.ts';
+import { MainThreadMessageServiceShape, MainContext, MainThreadMessageOptions } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.ts';
+import { INotificationService, INotificationSource, NotificationPriority } from '../../../platform/notification/common/notification.ts';
+import { Event } from '../../../base/common/event.ts';
+import { ICommandService } from '../../../platform/commands/common/commands.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadMessageService)
 export class MainThreadMessageService implements MainThreadMessageServiceShape {

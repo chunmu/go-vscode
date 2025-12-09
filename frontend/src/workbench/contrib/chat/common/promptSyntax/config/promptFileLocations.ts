@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../../base/common/uri.js';
-import { basename, dirname } from '../../../../../../base/common/path.js';
-import { PromptsType } from '../promptTypes.js';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { basename, dirname } from '../../../../../../base/common/path.ts';
+import { PromptsType } from '../promptTypes.ts';
 
 /**
  * File extension for the reusable prompt files.

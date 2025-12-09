@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { onUnexpectedExternalError } from '../../../../../base/common/errors.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { INotebookCellStatusBarService } from '../../common/notebookCellStatusBarService.js';
-import { INotebookCellStatusBarItemList, INotebookCellStatusBarItemProvider } from '../../common/notebookCommon.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { onUnexpectedExternalError } from '../../../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { INotebookCellStatusBarService } from '../../common/notebookCellStatusBarService.ts';
+import { INotebookCellStatusBarItemList, INotebookCellStatusBarItemProvider } from '../../common/notebookCommon.ts';
 
 export class NotebookCellStatusBarService extends Disposable implements INotebookCellStatusBarService {
 

@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { asCssVariable, asCssVariableName, registerColor, transparent } from '../../../../platform/theme/common/colorRegistry.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IDebugService, State, IDebugSession, IDebugConfiguration } from '../common/debug.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { STATUS_BAR_FOREGROUND, STATUS_BAR_BORDER, COMMAND_CENTER_BACKGROUND } from '../../../common/theme.js';
-import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { createStyleSheet } from '../../../../base/browser/domStylesheets.js';
+import { localize } from '../../../../nls.ts';
+import { asCssVariable, asCssVariableName, registerColor, transparent } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IDebugService, State, IDebugSession, IDebugConfiguration } from '../common/debug.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { STATUS_BAR_FOREGROUND, STATUS_BAR_BORDER, COMMAND_CENTER_BACKGROUND } from '../../../common/theme.ts';
+import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { createStyleSheet } from '../../../../base/browser/domStylesheets.ts';
 
 
 // colors for theming

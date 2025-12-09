@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { MenuId } from '../../../../platform/actions/common/actions.js';
-import { Extensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { ContextKeyExpr, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { diffInserted, diffRemoved, editorWidgetBackground, editorWidgetBorder, editorWidgetForeground, focusBorder, inputBackground, inputPlaceholderForeground, registerColor, transparent, widgetShadow } from '../../../../platform/theme/common/colorRegistry.js';
-import { NOTEBOOK_IS_ACTIVE_EDITOR } from '../../notebook/common/notebookContextKeys.js';
+import { localize } from '../../../../nls.ts';
+import { MenuId } from '../../../../platform/actions/common/actions.ts';
+import { Extensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { ContextKeyExpr, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { diffInserted, diffRemoved, editorWidgetBackground, editorWidgetBorder, editorWidgetForeground, focusBorder, inputBackground, inputPlaceholderForeground, registerColor, transparent, widgetShadow } from '../../../../platform/theme/common/colorRegistry.ts';
+import { NOTEBOOK_IS_ACTIVE_EDITOR } from '../../notebook/common/notebookContextKeys.ts';
 
 // settings
 

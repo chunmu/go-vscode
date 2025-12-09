@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostNotebookRenderersShape, IMainContext, MainContext, MainThreadNotebookRenderersShape } from './extHost.protocol.js';
-import { ExtHostNotebookController } from './extHostNotebook.js';
-import { ExtHostNotebookEditor } from './extHostNotebookEditor.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostNotebookRenderersShape, IMainContext, MainContext, MainThreadNotebookRenderersShape } from './extHost.protocol.ts';
+import { ExtHostNotebookController } from './extHostNotebook.ts';
+import { ExtHostNotebookEditor } from './extHostNotebookEditor.ts';
 import * as vscode from 'vscode';
 
 

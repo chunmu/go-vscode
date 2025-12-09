@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { parseNextChatResponseChunk } from '../../electron-browser/actions/voiceChatActions.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { parseNextChatResponseChunk } from '../../electron-browser/actions/voiceChatActions.ts';
 
 suite('VoiceChatActions', function () {
 

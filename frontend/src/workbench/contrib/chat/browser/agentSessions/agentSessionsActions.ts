@@ -4,23 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/agentsessionsactions.css';
-import { localize, localize2 } from '../../../../../nls.js';
-import { IAgentSessionViewModel } from './agentSessionViewModel.js';
-import { Action, IAction } from '../../../../../base/common/actions.js';
-import { ActionViewItem, IActionViewItemOptions } from '../../../../../base/browser/ui/actionbar/actionViewItems.js';
-import { CommandsRegistry, ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { EventHelper, h, hide, show } from '../../../../../base/browser/dom.js';
-import { assertReturnsDefined } from '../../../../../base/common/types.js';
-import { Action2, ISubmenuItem, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { ViewAction } from '../../../../browser/parts/views/viewPane.js';
-import { AGENT_SESSIONS_VIEW_ID, AgentSessionProviders } from './agentSessions.js';
-import { AgentSessionsView } from './agentSessionsView.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IChatService } from '../../common/chatService.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { resetFilter } from './agentSessionsViewFilter.js';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { IAgentSessionViewModel } from './agentSessionViewModel.ts';
+import { Action, IAction } from '../../../../../base/common/actions.ts';
+import { ActionViewItem, IActionViewItemOptions } from '../../../../../base/browser/ui/actionbar/actionViewItems.ts';
+import { CommandsRegistry, ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { EventHelper, h, hide, show } from '../../../../../base/browser/dom.ts';
+import { assertReturnsDefined } from '../../../../../base/common/types.ts';
+import { Action2, ISubmenuItem, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { ViewAction } from '../../../../browser/parts/views/viewPane.ts';
+import { AGENT_SESSIONS_VIEW_ID, AgentSessionProviders } from './agentSessions.ts';
+import { AgentSessionsView } from './agentSessionsView.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { resetFilter } from './agentSessionsViewFilter.ts';
 
 //#region Diff Statistics Action
 

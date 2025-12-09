@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IStringDictionary } from '../../../../base/common/collections.js';
-import { Event } from '../../../../base/common/event.js';
-import { IMatch } from '../../../../base/common/filters.js';
-import { IJSONSchema, IJSONSchemaMap } from '../../../../base/common/jsonSchema.js';
-import { ResolvedKeybinding } from '../../../../base/common/keybindings.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { IEditorContribution } from '../../../../editor/common/editorCommon.js';
-import { ConfigurationTarget } from '../../../../platform/configuration/common/configuration.js';
-import { ConfigurationDefaultValueSource, ConfigurationScope, EditPresentationTypes, IExtensionInfo } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { IEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.js';
-import { DEFAULT_EDITOR_ASSOCIATION, IEditorPane } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { Settings2EditorModel } from './preferencesModels.js';
+import { IStringDictionary } from '../../../../base/common/collections.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IMatch } from '../../../../base/common/filters.ts';
+import { IJSONSchema, IJSONSchemaMap } from '../../../../base/common/jsonSchema.ts';
+import { ResolvedKeybinding } from '../../../../base/common/keybindings.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { IEditorContribution } from '../../../../editor/common/editorCommon.ts';
+import { ConfigurationTarget } from '../../../../platform/configuration/common/configuration.ts';
+import { ConfigurationDefaultValueSource, ConfigurationScope, EditPresentationTypes, IExtensionInfo } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { IEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
+import { DEFAULT_EDITOR_ASSOCIATION, IEditorPane } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { Settings2EditorModel } from './preferencesModels.ts';
 
 export enum SettingValueType {
 	Null = 'null',

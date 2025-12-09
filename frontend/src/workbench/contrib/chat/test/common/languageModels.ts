@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Event } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { IChatMessage, ILanguageModelChatMetadata, ILanguageModelChatMetadataAndIdentifier, ILanguageModelChatProvider, ILanguageModelChatResponse, ILanguageModelChatSelector, ILanguageModelsService, IUserFriendlyLanguageModel } from '../../common/languageModels.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { IChatMessage, ILanguageModelChatMetadata, ILanguageModelChatMetadataAndIdentifier, ILanguageModelChatProvider, ILanguageModelChatResponse, ILanguageModelChatSelector, ILanguageModelsService, IUserFriendlyLanguageModel } from '../../common/languageModels.ts';
 
 export class NullLanguageModelsService implements ILanguageModelsService {
 	_serviceBrand: undefined;

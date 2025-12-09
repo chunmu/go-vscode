@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { RunOnceScheduler } from '../../../../../base/common/async.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { escapeMarkdownSyntaxTokens, createMarkdownCommandLink, MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Lazy } from '../../../../../base/common/lazy.js';
-import { Disposable, IDisposable, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { IMarkdownRendererService, openLinkFromMarkdown } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.js';
-import { localize } from '../../../../../nls.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { McpCommandIds } from '../../../mcp/common/mcpCommandIds.js';
-import { IAutostartResult, IMcpService } from '../../../mcp/common/mcpTypes.js';
-import { startServerAndWaitForLiveTools } from '../../../mcp/common/mcpTypesUtils.js';
-import { IChatMcpServersStarting } from '../../common/chatService.js';
-import { IChatRendererContent, IChatResponseViewModel, isResponseVM } from '../../common/chatViewModel.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { ChatProgressContentPart } from './chatProgressContentPart.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { RunOnceScheduler } from '../../../../../base/common/async.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { escapeMarkdownSyntaxTokens, createMarkdownCommandLink, MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Lazy } from '../../../../../base/common/lazy.ts';
+import { Disposable, IDisposable, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { IMarkdownRendererService, openLinkFromMarkdown } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.ts';
+import { localize } from '../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { McpCommandIds } from '../../../mcp/common/mcpCommandIds.ts';
+import { IAutostartResult, IMcpService } from '../../../mcp/common/mcpTypes.ts';
+import { startServerAndWaitForLiveTools } from '../../../mcp/common/mcpTypesUtils.ts';
+import { IChatMcpServersStarting } from '../../common/chatService.ts';
+import { IChatRendererContent, IChatResponseViewModel, isResponseVM } from '../../common/chatViewModel.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { ChatProgressContentPart } from './chatProgressContentPart.ts';
 import './media/chatMcpServersInteractionContent.css';
 
 export class ChatMcpServersInteractionContentPart extends Disposable implements IChatContentPart {

@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../nls.js';
-import { MenuId, Action2, registerAction2 } from '../../../platform/actions/common/actions.js';
-import { KeyMod, KeyCode } from '../../../base/common/keyCodes.js';
-import { KeybindingsRegistry, KeybindingWeight, IKeybindingRule } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IQuickInputService, ItemActivation, QuickInputHideReason } from '../../../platform/quickinput/common/quickInput.js';
-import { IKeybindingService } from '../../../platform/keybinding/common/keybinding.js';
-import { CommandsRegistry } from '../../../platform/commands/common/commands.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { inQuickPickContext, defaultQuickAccessContext, getQuickNavigateHandler } from '../quickaccess.js';
-import { ILocalizedString } from '../../../platform/action/common/action.js';
-import { AnythingQuickAccessProviderRunOptions } from '../../../platform/quickinput/common/quickAccess.js';
-import { Codicon } from '../../../base/common/codicons.js';
+import { localize, localize2 } from '../../../nls.ts';
+import { MenuId, Action2, registerAction2 } from '../../../platform/actions/common/actions.ts';
+import { KeyMod, KeyCode } from '../../../base/common/keyCodes.ts';
+import { KeybindingsRegistry, KeybindingWeight, IKeybindingRule } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IQuickInputService, ItemActivation, QuickInputHideReason } from '../../../platform/quickinput/common/quickInput.ts';
+import { IKeybindingService } from '../../../platform/keybinding/common/keybinding.ts';
+import { CommandsRegistry } from '../../../platform/commands/common/commands.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { inQuickPickContext, defaultQuickAccessContext, getQuickNavigateHandler } from '../quickaccess.ts';
+import { ILocalizedString } from '../../../platform/action/common/action.ts';
+import { AnythingQuickAccessProviderRunOptions } from '../../../platform/quickinput/common/quickAccess.ts';
+import { Codicon } from '../../../base/common/codicons.ts';
 
 //#region Quick access management commands and keys
 

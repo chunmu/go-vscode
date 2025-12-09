@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ok } from '../../../base/common/assert.js';
-import { ReadonlyError, illegalArgument } from '../../../base/common/errors.js';
-import { IdGenerator } from '../../../base/common/idGenerator.js';
-import { TextEditorCursorStyle } from '../../../editor/common/config/editorOptions.js';
-import { IRange } from '../../../editor/common/core/range.js';
-import { ISingleEditOperation } from '../../../editor/common/core/editOperation.js';
-import { IResolvedTextEditorConfiguration, ITextEditorConfigurationUpdate, MainThreadTextEditorsShape } from './extHost.protocol.js';
-import * as TypeConverters from './extHostTypeConverters.js';
-import { EndOfLine, Position, Range, Selection, SnippetString, TextEditorLineNumbersStyle, TextEditorRevealType } from './extHostTypes.js';
+import { ok } from '../../../base/common/assert.ts';
+import { ReadonlyError, illegalArgument } from '../../../base/common/errors.ts';
+import { IdGenerator } from '../../../base/common/idGenerator.ts';
+import { TextEditorCursorStyle } from '../../../editor/common/config/editorOptions.ts';
+import { IRange } from '../../../editor/common/core/range.ts';
+import { ISingleEditOperation } from '../../../editor/common/core/editOperation.ts';
+import { IResolvedTextEditorConfiguration, ITextEditorConfigurationUpdate, MainThreadTextEditorsShape } from './extHost.protocol.ts';
+import * as TypeConverters from './extHostTypeConverters.ts';
+import { EndOfLine, Position, Range, Selection, SnippetString, TextEditorLineNumbersStyle, TextEditorRevealType } from './extHostTypes.ts';
 import type * as vscode from 'vscode';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { Lazy } from '../../../base/common/lazy.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { Lazy } from '../../../base/common/lazy.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
 
 export class TextEditorDecorationType {
 

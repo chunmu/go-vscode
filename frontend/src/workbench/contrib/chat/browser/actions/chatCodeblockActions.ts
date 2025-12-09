@@ -3,42 +3,42 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AsyncIterableObject } from '../../../../../base/common/async.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { Disposable, markAsSingleton } from '../../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.js';
-import { CopyAction } from '../../../../../editor/contrib/clipboard/browser/clipboard.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { IActionViewItemService } from '../../../../../platform/actions/browser/actionViewItemService.js';
-import { MenuEntryActionViewItem } from '../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { Action2, MenuId, MenuItemAction, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { TerminalLocation } from '../../../../../platform/terminal/common/terminal.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { IUntitledTextResourceEditorInput } from '../../../../common/editor.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { accessibleViewInCodeBlock } from '../../../accessibility/browser/accessibilityConfiguration.js';
-import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.js';
-import { EditDeltaInfo } from '../../../../../editor/common/textModelEditSource.js';
-import { reviewEdits } from '../../../inlineChat/browser/inlineChatController.js';
-import { ITerminalEditorService, ITerminalGroupService, ITerminalService } from '../../../terminal/browser/terminal.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ChatCopyKind, IChatService } from '../../common/chatService.js';
-import { IChatRequestViewModel, IChatResponseViewModel, isRequestVM, isResponseVM } from '../../common/chatViewModel.js';
-import { ChatAgentLocation } from '../../common/constants.js';
-import { IChatCodeBlockContextProviderService, IChatWidgetService } from '../chat.js';
-import { DefaultChatTextEditor, ICodeBlockActionContext, ICodeCompareBlockActionContext } from '../codeBlockPart.js';
-import { CHAT_CATEGORY } from './chatActions.js';
-import { ApplyCodeBlockOperation, InsertCodeBlockOperation } from './codeBlockOperations.js';
+import { AsyncIterableObject } from '../../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { Disposable, markAsSingleton } from '../../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.ts';
+import { CopyAction } from '../../../../../editor/contrib/clipboard/browser/clipboard.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { IActionViewItemService } from '../../../../../platform/actions/browser/actionViewItemService.ts';
+import { MenuEntryActionViewItem } from '../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { Action2, MenuId, MenuItemAction, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { TerminalLocation } from '../../../../../platform/terminal/common/terminal.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { IUntitledTextResourceEditorInput } from '../../../../common/editor.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { accessibleViewInCodeBlock } from '../../../accessibility/browser/accessibilityConfiguration.ts';
+import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts';
+import { EditDeltaInfo } from '../../../../../editor/common/textModelEditSource.ts';
+import { reviewEdits } from '../../../inlineChat/browser/inlineChatController.ts';
+import { ITerminalEditorService, ITerminalGroupService, ITerminalService } from '../../../terminal/browser/terminal.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ChatCopyKind, IChatService } from '../../common/chatService.ts';
+import { IChatRequestViewModel, IChatResponseViewModel, isRequestVM, isResponseVM } from '../../common/chatViewModel.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
+import { IChatCodeBlockContextProviderService, IChatWidgetService } from '../chat.ts';
+import { DefaultChatTextEditor, ICodeBlockActionContext, ICodeCompareBlockActionContext } from '../codeBlockPart.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
+import { ApplyCodeBlockOperation, InsertCodeBlockOperation } from './codeBlockOperations.ts';
 
 const shellLangIds = [
 	'fish',

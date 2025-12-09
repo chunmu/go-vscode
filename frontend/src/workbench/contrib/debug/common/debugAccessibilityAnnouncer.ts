@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDebugService } from './debug.js';
-import { Disposable, IDisposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { Expression } from './debugModel.js';
+import { IDebugService } from './debug.ts';
+import { Disposable, IDisposable, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { Expression } from './debugModel.ts';
 
 export class DebugWatchAccessibilityAnnouncer extends Disposable implements IWorkbenchContribution {
 	static ID = 'workbench.contrib.debugWatchAccessibilityAnnouncer';

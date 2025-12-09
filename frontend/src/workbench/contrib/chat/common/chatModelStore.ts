@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IDisposable, IReference, ReferenceCollection } from '../../../../base/common/lifecycle.js';
-import { ObservableMap } from '../../../../base/common/observable.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IChatEditingSession } from './chatEditingService.js';
-import { ChatModel, IExportableChatData, ISerializableChatData } from './chatModel.js';
-import { ChatAgentLocation } from './constants.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IDisposable, IReference, ReferenceCollection } from '../../../../base/common/lifecycle.ts';
+import { ObservableMap } from '../../../../base/common/observable.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IChatEditingSession } from './chatEditingService.ts';
+import { ChatModel, IExportableChatData, ISerializableChatData } from './chatModel.ts';
+import { ChatAgentLocation } from './constants.ts';
 
 export interface IStartSessionProps {
 	readonly initialData?: IExportableChatData | ISerializableChatData;

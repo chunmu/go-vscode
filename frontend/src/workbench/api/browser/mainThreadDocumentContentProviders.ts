@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onUnexpectedError } from '../../../base/common/errors.js';
-import { dispose, DisposableMap } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { EditOperation } from '../../../editor/common/core/editOperation.js';
-import { Range } from '../../../editor/common/core/range.js';
-import { ITextModel } from '../../../editor/common/model.js';
-import { IEditorWorkerService } from '../../../editor/common/services/editorWorker.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../editor/common/languages/language.js';
-import { ITextModelService } from '../../../editor/common/services/resolverService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostDocumentContentProvidersShape, MainContext, MainThreadDocumentContentProvidersShape } from '../common/extHost.protocol.js';
-import { CancellationTokenSource } from '../../../base/common/cancellation.js';
+import { onUnexpectedError } from '../../../base/common/errors.ts';
+import { dispose, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { EditOperation } from '../../../editor/common/core/editOperation.ts';
+import { Range } from '../../../editor/common/core/range.ts';
+import { ITextModel } from '../../../editor/common/model.ts';
+import { IEditorWorkerService } from '../../../editor/common/services/editorWorker.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../editor/common/languages/language.ts';
+import { ITextModelService } from '../../../editor/common/services/resolverService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostDocumentContentProvidersShape, MainContext, MainThreadDocumentContentProvidersShape } from '../common/extHost.protocol.ts';
+import { CancellationTokenSource } from '../../../base/common/cancellation.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadDocumentContentProviders)
 export class MainThreadDocumentContentProviders implements MainThreadDocumentContentProvidersShape {

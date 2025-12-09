@@ -4,22 +4,22 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ContextKeyService } from '../../../../../platform/contextkey/browser/contextKeyService.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { LanguageModelToolsService } from '../../browser/languageModelToolsService.js';
-import { IChatService } from '../../common/chatService.js';
-import { ILanguageModelToolsService, IToolData, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.js';
-import { MockChatService } from '../common/mockChatService.js';
-import { ChatSelectedTools } from '../../browser/chatSelectedTools.js';
-import { constObservable } from '../../../../../base/common/observable.js';
-import { Iterable } from '../../../../../base/common/iterator.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.js';
-import { timeout } from '../../../../../base/common/async.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ChatMode } from '../../common/chatModes.js';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ContextKeyService } from '../../../../../platform/contextkey/browser/contextKeyService.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { LanguageModelToolsService } from '../../browser/languageModelToolsService.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { ILanguageModelToolsService, IToolData, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.ts';
+import { MockChatService } from '../common/mockChatService.ts';
+import { ChatSelectedTools } from '../../browser/chatSelectedTools.ts';
+import { constObservable } from '../../../../../base/common/observable.ts';
+import { Iterable } from '../../../../../base/common/iterator.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.ts';
+import { timeout } from '../../../../../base/common/async.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ChatMode } from '../../common/chatModes.ts';
 
 suite('ChatSelectedTools', () => {
 

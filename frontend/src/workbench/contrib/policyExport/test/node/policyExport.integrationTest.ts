@@ -7,10 +7,10 @@ import * as assert from 'assert';
 import * as cp from 'child_process';
 import { promises as fs } from 'fs';
 import * as os from 'os';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { isWindows } from '../../../../../base/common/platform.js';
-import { dirname, join } from '../../../../../base/common/path.js';
-import { FileAccess } from '../../../../../base/common/network.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { isWindows } from '../../../../../base/common/platform.ts';
+import { dirname, join } from '../../../../../base/common/path.ts';
+import { FileAccess } from '../../../../../base/common/network.ts';
 import * as util from 'util';
 
 const exec = util.promisify(cp.exec);

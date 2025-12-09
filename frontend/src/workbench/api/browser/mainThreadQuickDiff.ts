@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { DisposableMap, IDisposable } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ExtHostContext, ExtHostQuickDiffShape, IDocumentFilterDto, MainContext, MainThreadQuickDiffShape } from '../common/extHost.protocol.js';
-import { IQuickDiffService, QuickDiffProvider } from '../../contrib/scm/common/quickDiff.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { DisposableMap, IDisposable } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ExtHostContext, ExtHostQuickDiffShape, IDocumentFilterDto, MainContext, MainThreadQuickDiffShape } from '../common/extHost.protocol.ts';
+import { IQuickDiffService, QuickDiffProvider } from '../../contrib/scm/common/quickDiff.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadQuickDiff)
 export class MainThreadQuickDiff implements MainThreadQuickDiffShape {

@@ -5,30 +5,30 @@
 
 import './media/notificationsCenter.css';
 import './media/notificationsActions.css';
-import { NOTIFICATIONS_CENTER_HEADER_FOREGROUND, NOTIFICATIONS_CENTER_HEADER_BACKGROUND, NOTIFICATIONS_CENTER_BORDER } from '../../../common/theme.js';
-import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.js';
-import { INotificationsModel, INotificationChangeEvent, NotificationChangeType, NotificationViewItemContentChangeKind } from '../../../common/notifications.js';
-import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { INotificationsCenterController, NotificationActionRunner } from './notificationsCommands.js';
-import { NotificationsList } from './notificationsList.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { $, Dimension, isAncestorOfActiveElement } from '../../../../base/browser/dom.js';
-import { widgetShadow } from '../../../../platform/theme/common/colorRegistry.js';
-import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { localize } from '../../../../nls.js';
-import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.js';
-import { ClearAllNotificationsAction, ConfigureDoNotDisturbAction, ToggleDoNotDisturbBySourceAction, HideNotificationsCenterAction, ToggleDoNotDisturbAction } from './notificationsActions.js';
-import { IAction, Separator, toAction } from '../../../../base/common/actions.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { assertReturnsAllDefined, assertReturnsDefined } from '../../../../base/common/types.js';
-import { NotificationsCenterVisibleContext } from '../../../common/contextkeys.js';
-import { INotificationService, NotificationsFilter } from '../../../../platform/notification/common/notification.js';
-import { mainWindow } from '../../../../base/browser/window.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { DropdownMenuActionViewItem } from '../../../../base/browser/ui/dropdown/dropdownActionViewItem.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
+import { NOTIFICATIONS_CENTER_HEADER_FOREGROUND, NOTIFICATIONS_CENTER_HEADER_BACKGROUND, NOTIFICATIONS_CENTER_BORDER } from '../../../common/theme.ts';
+import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.ts';
+import { INotificationsModel, INotificationChangeEvent, NotificationChangeType, NotificationViewItemContentChangeKind } from '../../../common/notifications.ts';
+import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { INotificationsCenterController, NotificationActionRunner } from './notificationsCommands.ts';
+import { NotificationsList } from './notificationsList.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { $, Dimension, isAncestorOfActiveElement } from '../../../../base/browser/dom.ts';
+import { widgetShadow } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { localize } from '../../../../nls.ts';
+import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.ts';
+import { ClearAllNotificationsAction, ConfigureDoNotDisturbAction, ToggleDoNotDisturbBySourceAction, HideNotificationsCenterAction, ToggleDoNotDisturbAction } from './notificationsActions.ts';
+import { IAction, Separator, toAction } from '../../../../base/common/actions.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { assertReturnsAllDefined, assertReturnsDefined } from '../../../../base/common/types.ts';
+import { NotificationsCenterVisibleContext } from '../../../common/contextkeys.ts';
+import { INotificationService, NotificationsFilter } from '../../../../platform/notification/common/notification.ts';
+import { mainWindow } from '../../../../base/browser/window.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { DropdownMenuActionViewItem } from '../../../../base/browser/ui/dropdown/dropdownActionViewItem.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
 
 export class NotificationsCenter extends Themable implements INotificationsCenterController {
 

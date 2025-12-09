@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ProxyIdentifier, IRPCProtocol, Proxied } from '../../services/extensions/common/proxyIdentifier.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+import { ProxyIdentifier, IRPCProtocol, Proxied } from '../../services/extensions/common/proxyIdentifier.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
 
 export const IExtHostRpcService = createDecorator<IExtHostRpcService>('IExtHostRpcService');
 

@@ -5,18 +5,18 @@
 
 
 import type { Parser, Language, Query } from '@vscode/tree-sitter-wasm';
-import { IReader, ObservablePromise } from '../../../../base/common/observable.js';
-import { ITreeSitterLibraryService } from '../../../../editor/common/services/treeSitter/treeSitterLibraryService.js';
-import { canASAR, importAMDNodeModule } from '../../../../amdX.js';
-import { Lazy } from '../../../../base/common/lazy.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { FileOperationResult, IFileContent, IFileService, toFileOperationResult } from '../../../../platform/files/common/files.js';
-import { observableConfigValue } from '../../../../platform/observable/common/platformObservableUtils.js';
-import { CachedFunction } from '../../../../base/common/cache.js';
-import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
-import { AppResourcePath, FileAccess, nodeModulesAsarUnpackedPath, nodeModulesPath } from '../../../../base/common/network.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
+import { IReader, ObservablePromise } from '../../../../base/common/observable.ts';
+import { ITreeSitterLibraryService } from '../../../../editor/common/services/treeSitter/treeSitterLibraryService.ts';
+import { canASAR, importAMDNodeModule } from '../../../../amdX.ts';
+import { Lazy } from '../../../../base/common/lazy.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { FileOperationResult, IFileContent, IFileService, toFileOperationResult } from '../../../../platform/files/common/files.ts';
+import { observableConfigValue } from '../../../../platform/observable/common/platformObservableUtils.ts';
+import { CachedFunction } from '../../../../base/common/cache.ts';
+import { IEnvironmentService } from '../../../../platform/environment/common/environment.ts';
+import { AppResourcePath, FileAccess, nodeModulesAsarUnpackedPath, nodeModulesPath } from '../../../../base/common/network.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
 
 export const EDITOR_EXPERIMENTAL_PREFER_TREESITTER = 'editor.experimental.preferTreeSitter';
 export const TREESITTER_ALLOWED_SUPPORT = ['css', 'typescript', 'ini', 'regex'];

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { DocumentSemanticTokensProvider, ProviderResult, SemanticTokens, SemanticTokensLegend } from '../../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { getPromptsTypeForLanguageId } from '../promptTypes.js';
-import { IPromptsService } from '../service/promptsService.js';
-import { isGithubTarget } from './promptValidator.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { DocumentSemanticTokensProvider, ProviderResult, SemanticTokens, SemanticTokensLegend } from '../../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { getPromptsTypeForLanguageId } from '../promptTypes.ts';
+import { IPromptsService } from '../service/promptsService.ts';
+import { isGithubTarget } from './promptValidator.ts';
 
 export class PromptDocumentSemanticTokensProvider implements DocumentSemanticTokensProvider {
 	/**

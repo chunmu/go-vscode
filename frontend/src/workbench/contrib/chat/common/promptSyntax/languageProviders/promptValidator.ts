@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isEmptyPattern, parse, splitGlobAware } from '../../../../../../base/common/glob.js';
-import { Iterable } from '../../../../../../base/common/iterator.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { localize } from '../../../../../../nls.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IMarkerData, IMarkerService, MarkerSeverity } from '../../../../../../platform/markers/common/markers.js';
-import { IChatMode, IChatModeService } from '../../chatModes.js';
-import { ChatModeKind } from '../../constants.js';
-import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../languageModels.js';
-import { ILanguageModelToolsService } from '../../languageModelToolsService.js';
-import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.js';
-import { GithubPromptHeaderAttributes, IArrayValue, IHeaderAttribute, IStringValue, ParsedPromptFile, PromptHeaderAttributes, Target } from '../promptFileParser.js';
-import { Disposable, DisposableStore, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { Delayer } from '../../../../../../base/common/async.js';
-import { ResourceMap } from '../../../../../../base/common/map.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { IPromptsService } from '../service/promptsService.js';
-import { ILabelService } from '../../../../../../platform/label/common/label.js';
-import { AGENTS_SOURCE_FOLDER, LEGACY_MODE_FILE_EXTENSION } from '../config/promptFileLocations.js';
-import { Lazy } from '../../../../../../base/common/lazy.js';
+import { isEmptyPattern, parse, splitGlobAware } from '../../../../../../base/common/glob.ts';
+import { Iterable } from '../../../../../../base/common/iterator.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { IModelService } from '../../../../../../editor/common/services/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IMarkerData, IMarkerService, MarkerSeverity } from '../../../../../../platform/markers/common/markers.ts';
+import { IChatMode, IChatModeService } from '../../chatModes.ts';
+import { ChatModeKind } from '../../constants.ts';
+import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../languageModels.ts';
+import { ILanguageModelToolsService } from '../../languageModelToolsService.ts';
+import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.ts';
+import { GithubPromptHeaderAttributes, IArrayValue, IHeaderAttribute, IStringValue, ParsedPromptFile, PromptHeaderAttributes, Target } from '../promptFileParser.ts';
+import { Disposable, DisposableStore, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { Delayer } from '../../../../../../base/common/async.ts';
+import { ResourceMap } from '../../../../../../base/common/map.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { IPromptsService } from '../service/promptsService.ts';
+import { ILabelService } from '../../../../../../platform/label/common/label.ts';
+import { AGENTS_SOURCE_FOLDER, LEGACY_MODE_FILE_EXTENSION } from '../config/promptFileLocations.ts';
+import { Lazy } from '../../../../../../base/common/lazy.ts';
 
 const MARKERS_OWNER_ID = 'prompts-diagnostics-provider';
 

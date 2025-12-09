@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AsyncIterableProducer } from '../../../../../base/common/async.js';
-import { DisposableStore, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { IObservableWithChange, observableValue, runOnChange, transaction, RemoveUndefined } from '../../../../../base/common/observable.js';
+import { AsyncIterableProducer } from '../../../../../base/common/async.ts';
+import { DisposableStore, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IObservableWithChange, observableValue, runOnChange, transaction, RemoveUndefined } from '../../../../../base/common/observable.ts';
 
 export function sumByCategory<T, TCategory extends string>(items: readonly T[], getValue: (item: T) => number, getCategory: (item: T) => TCategory): Record<TCategory, number | undefined> {
 	return items.reduce((acc, item) => {

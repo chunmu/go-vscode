@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../nls.js';
-import { ExtensionsRegistry } from '../../services/extensions/common/extensionsRegistry.js';
-import * as resources from '../../../base/common/resources.js';
-import { isString } from '../../../base/common/types.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../services/extensionManagement/common/extensionFeatures.js';
-import { IExtensionManifest } from '../../../platform/extensions/common/extensions.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';
-import { MarkdownString } from '../../../base/common/htmlContent.js';
+import * as nls from '../../../nls.ts';
+import { ExtensionsRegistry } from '../../services/extensions/common/extensionsRegistry.ts';
+import * as resources from '../../../base/common/resources.ts';
+import { isString } from '../../../base/common/types.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../services/extensionManagement/common/extensionFeatures.ts';
+import { IExtensionManifest } from '../../../platform/extensions/common/extensions.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.ts';
+import { MarkdownString } from '../../../base/common/htmlContent.ts';
 
 interface IJSONValidationExtensionPoint {
 	fileMatch: string | string[];

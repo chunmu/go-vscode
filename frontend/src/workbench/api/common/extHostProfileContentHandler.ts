@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { toDisposable } from '../../../base/common/lifecycle.js';
-import { isString } from '../../../base/common/types.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { ISaveProfileResult } from '../../services/userDataProfile/common/userDataProfile.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { toDisposable } from '../../../base/common/lifecycle.ts';
+import { isString } from '../../../base/common/types.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { ISaveProfileResult } from '../../services/userDataProfile/common/userDataProfile.ts';
 import type * as vscode from 'vscode';
-import { ExtHostProfileContentHandlersShape, IMainContext, MainContext, MainThreadProfileContentHandlersShape } from './extHost.protocol.js';
+import { ExtHostProfileContentHandlersShape, IMainContext, MainContext, MainThreadProfileContentHandlersShape } from './extHost.protocol.ts';
 
 
 export class ExtHostProfileContentHandlers implements ExtHostProfileContentHandlersShape {

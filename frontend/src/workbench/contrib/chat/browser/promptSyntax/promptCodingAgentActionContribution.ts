@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableMap } from '../../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { registerEditorContribution, EditorContributionInstantiation } from '../../../../../editor/browser/editorExtensions.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { PROMPT_LANGUAGE_ID } from '../../common/promptSyntax/promptTypes.js';
-import { PromptCodingAgentActionOverlayWidget } from './promptCodingAgentActionOverlay.js';
+import { Disposable, DisposableMap } from '../../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { registerEditorContribution, EditorContributionInstantiation } from '../../../../../editor/browser/editorExtensions.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { PROMPT_LANGUAGE_ID } from '../../common/promptSyntax/promptTypes.ts';
+import { PromptCodingAgentActionOverlayWidget } from './promptCodingAgentActionOverlay.ts';
 
 export class PromptCodingAgentActionContribution extends Disposable {
 	static readonly ID = 'promptCodingAgentActionContribution';

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IResolvedNotebookEditorModel, NotebookEditorModelCreationOptions } from './notebookCommon.js';
-import { IReference } from '../../../../base/common/lifecycle.js';
-import { Event, IWaitUntil } from '../../../../base/common/event.js';
-import { NotebookTextModel } from './model/notebookTextModel.js';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IResolvedNotebookEditorModel, NotebookEditorModelCreationOptions } from './notebookCommon.ts';
+import { IReference } from '../../../../base/common/lifecycle.ts';
+import { Event, IWaitUntil } from '../../../../base/common/event.ts';
+import { NotebookTextModel } from './model/notebookTextModel.ts';
 
 export const INotebookEditorModelResolverService = createDecorator<INotebookEditorModelResolverService>('INotebookModelResolverService');
 

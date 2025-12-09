@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../../base/common/uri.js';
-import { isAbsolute } from '../../../../../../base/common/path.js';
-import { ResourceSet } from '../../../../../../base/common/map.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { getPromptFileLocationsConfigKey, PromptsConfig } from '../config/config.js';
-import { basename, dirname, isEqualOrParent, joinPath } from '../../../../../../base/common/resources.js';
-import { IWorkspaceContextService } from '../../../../../../platform/workspace/common/workspace.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { COPILOT_CUSTOM_INSTRUCTIONS_FILENAME, AGENTS_SOURCE_FOLDER, getPromptFileExtension, getPromptFileType, LEGACY_MODE_FILE_EXTENSION, getCleanPromptName, AGENT_FILE_EXTENSION } from '../config/promptFileLocations.js';
-import { PromptsType } from '../promptTypes.js';
-import { IWorkbenchEnvironmentService } from '../../../../../services/environment/common/environmentService.js';
-import { Schemas } from '../../../../../../base/common/network.js';
-import { getExcludes, IFileQuery, ISearchConfiguration, ISearchService, QueryType } from '../../../../../services/search/common/search.js';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { isCancellationError } from '../../../../../../base/common/errors.js';
-import { PromptsStorage } from '../service/promptsService.js';
-import { IUserDataProfileService } from '../../../../../services/userDataProfile/common/userDataProfile.js';
-import { Emitter, Event } from '../../../../../../base/common/event.js';
-import { DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { ILogService } from '../../../../../../platform/log/common/log.js';
-import { IPathService } from '../../../../../services/path/common/pathService.js';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { isAbsolute } from '../../../../../../base/common/path.ts';
+import { ResourceSet } from '../../../../../../base/common/map.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { getPromptFileLocationsConfigKey, PromptsConfig } from '../config/config.ts';
+import { basename, dirname, isEqualOrParent, joinPath } from '../../../../../../base/common/resources.ts';
+import { IWorkspaceContextService } from '../../../../../../platform/workspace/common/workspace.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { COPILOT_CUSTOM_INSTRUCTIONS_FILENAME, AGENTS_SOURCE_FOLDER, getPromptFileExtension, getPromptFileType, LEGACY_MODE_FILE_EXTENSION, getCleanPromptName, AGENT_FILE_EXTENSION } from '../config/promptFileLocations.ts';
+import { PromptsType } from '../promptTypes.ts';
+import { IWorkbenchEnvironmentService } from '../../../../../services/environment/common/environmentService.ts';
+import { Schemas } from '../../../../../../base/common/network.ts';
+import { getExcludes, IFileQuery, ISearchConfiguration, ISearchService, QueryType } from '../../../../../services/search/common/search.ts';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { isCancellationError } from '../../../../../../base/common/errors.ts';
+import { PromptsStorage } from '../service/promptsService.ts';
+import { IUserDataProfileService } from '../../../../../services/userDataProfile/common/userDataProfile.ts';
+import { Emitter, Event } from '../../../../../../base/common/event.ts';
+import { DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { ILogService } from '../../../../../../platform/log/common/log.ts';
+import { IPathService } from '../../../../../services/path/common/pathService.ts';
 
 /**
  * Utility class to locate prompt files.

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import type { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { PromptsType } from '../promptTypes.js';
-import { INSTRUCTIONS_DEFAULT_SOURCE_FOLDER, PROMPT_DEFAULT_SOURCE_FOLDER, getPromptFileDefaultLocation } from './promptFileLocations.js';
+import type { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { PromptsType } from '../promptTypes.ts';
+import { INSTRUCTIONS_DEFAULT_SOURCE_FOLDER, PROMPT_DEFAULT_SOURCE_FOLDER, getPromptFileDefaultLocation } from './promptFileLocations.ts';
 
 /**
  * Configuration helper for the `reusable prompts` feature.

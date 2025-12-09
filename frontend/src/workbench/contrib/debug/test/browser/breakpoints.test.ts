@@ -4,28 +4,28 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { dispose } from '../../../../../base/common/lifecycle.js';
-import { URI as uri } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { OverviewRulerLane } from '../../../../../editor/common/model.js';
-import { LanguageService } from '../../../../../editor/common/services/languageService.js';
-import { createTextModel } from '../../../../../editor/test/common/testTextModel.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
-import { createBreakpointDecorations } from '../../browser/breakpointEditorContribution.js';
-import { getBreakpointMessageAndIcon, getExpandedBodySize } from '../../browser/breakpointsView.js';
-import { DataBreakpointSetType, IBreakpointData, IBreakpointUpdateData, IDebugService, State } from '../../common/debug.js';
-import { Breakpoint, DebugModel } from '../../common/debugModel.js';
-import { createTestSession } from './callStack.test.js';
-import { createMockDebugModel, mockUriIdentityService } from './mockDebugModel.js';
-import { MockDebugService, MockDebugStorage } from '../common/mockDebug.js';
-import { MockLabelService } from '../../../../services/label/test/common/mockLabelService.js';
-import { TestStorageService } from '../../../../test/common/workbenchTestServices.js';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { dispose } from '../../../../../base/common/lifecycle.ts';
+import { URI as uri } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { OverviewRulerLane } from '../../../../../editor/common/model.ts';
+import { LanguageService } from '../../../../../editor/common/services/languageService.ts';
+import { createTextModel } from '../../../../../editor/test/common/testTextModel.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
+import { createBreakpointDecorations } from '../../browser/breakpointEditorContribution.ts';
+import { getBreakpointMessageAndIcon, getExpandedBodySize } from '../../browser/breakpointsView.ts';
+import { DataBreakpointSetType, IBreakpointData, IBreakpointUpdateData, IDebugService, State } from '../../common/debug.ts';
+import { Breakpoint, DebugModel } from '../../common/debugModel.ts';
+import { createTestSession } from './callStack.test.ts';
+import { createMockDebugModel, mockUriIdentityService } from './mockDebugModel.ts';
+import { MockDebugService, MockDebugStorage } from '../common/mockDebug.ts';
+import { MockLabelService } from '../../../../services/label/test/common/mockLabelService.ts';
+import { TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
 
 function addBreakpointsAndCheckEvents(model: DebugModel, uri: uri, data: IBreakpointData[]) {
 	let eventCount = 0;

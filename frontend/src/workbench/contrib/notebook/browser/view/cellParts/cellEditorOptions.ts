@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../../../base/common/event.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { IEditorOptions } from '../../../../../../editor/common/config/editorOptions.js';
-import { localize, localize2 } from '../../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../../../platform/configuration/common/configurationRegistry.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { ActiveEditorContext } from '../../../../../common/contextkeys.js';
-import { INotebookCellToolbarActionContext, INotebookCommandContext, NotebookMultiCellAction, NOTEBOOK_ACTIONS_CATEGORY } from '../../controller/coreActions.js';
-import { IBaseCellEditorOptions, ICellViewModel } from '../../notebookBrowser.js';
-import { NOTEBOOK_CELL_LINE_NUMBERS, NOTEBOOK_EDITOR_FOCUSED } from '../../../common/notebookContextKeys.js';
-import { CellContentPart } from '../cellPart.js';
-import { NotebookCellInternalMetadata, NOTEBOOK_EDITOR_ID } from '../../../common/notebookCommon.js';
-import { NotebookOptions } from '../../notebookOptions.js';
-import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.js';
-import { ITextModelUpdateOptions } from '../../../../../../editor/common/model.js';
+import { Emitter, Event } from '../../../../../../base/common/event.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { IEditorOptions } from '../../../../../../editor/common/config/editorOptions.ts';
+import { localize, localize2 } from '../../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../../../platform/configuration/common/configurationRegistry.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { ActiveEditorContext } from '../../../../../common/contextkeys.ts';
+import { INotebookCellToolbarActionContext, INotebookCommandContext, NotebookMultiCellAction, NOTEBOOK_ACTIONS_CATEGORY } from '../../controller/coreActions.ts';
+import { IBaseCellEditorOptions, ICellViewModel } from '../../notebookBrowser.ts';
+import { NOTEBOOK_CELL_LINE_NUMBERS, NOTEBOOK_EDITOR_FOCUSED } from '../../../common/notebookContextKeys.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { NotebookCellInternalMetadata, NOTEBOOK_EDITOR_ID } from '../../../common/notebookCommon.ts';
+import { NotebookOptions } from '../../notebookOptions.ts';
+import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.ts';
+import { ITextModelUpdateOptions } from '../../../../../../editor/common/model.ts';
 
 //todo@Yoyokrazy implenets is needed or not?
 export class CellEditorOptions extends CellContentPart implements ITextModelUpdateOptions {

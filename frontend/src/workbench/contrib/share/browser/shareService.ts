@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { score } from '../../../../editor/common/languageSelector.js';
-import { localize } from '../../../../nls.js';
-import { ISubmenuItem, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr, IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../platform/quickinput/common/quickInput.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { ToggleTitleBarConfigAction } from '../../../browser/parts/titlebar/titlebarActions.js';
-import { IsCompactTitleBarContext, WorkspaceFolderCountContext } from '../../../common/contextkeys.js';
-import { IShareProvider, IShareService, IShareableItem } from '../common/share.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { score } from '../../../../editor/common/languageSelector.ts';
+import { localize } from '../../../../nls.ts';
+import { ISubmenuItem, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr, IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../platform/quickinput/common/quickInput.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { ToggleTitleBarConfigAction } from '../../../browser/parts/titlebar/titlebarActions.ts';
+import { IsCompactTitleBarContext, WorkspaceFolderCountContext } from '../../../common/contextkeys.ts';
+import { IShareProvider, IShareService, IShareableItem } from '../common/share.ts';
 
 export const ShareProviderCountContext = new RawContextKey<number>('shareProviderCount', 0, localize('shareProviderCount', "The number of available share providers"));
 

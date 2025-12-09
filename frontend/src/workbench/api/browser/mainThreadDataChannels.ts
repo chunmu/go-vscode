@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { IDataChannelService } from '../../../platform/dataChannel/common/dataChannel.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostDataChannelsShape, MainContext, MainThreadDataChannelsShape } from '../common/extHost.protocol.js';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { IDataChannelService } from '../../../platform/dataChannel/common/dataChannel.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostDataChannelsShape, MainContext, MainThreadDataChannelsShape } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadDataChannels)
 export class MainThreadDataChannels extends Disposable implements MainThreadDataChannelsShape {

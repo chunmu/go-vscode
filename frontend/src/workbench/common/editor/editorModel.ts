@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
 
 /**
  * The editor model is the heavyweight counterpart of editor input. Depending on the editor input, it

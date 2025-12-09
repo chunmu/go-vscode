@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction, Separator } from '../../../../base/common/actions.js';
-import { IMenuService, SubmenuItemAction, MenuItemAction } from '../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IWorkspacesService } from '../../../../platform/workspaces/common/workspaces.js';
-import { isMacintosh } from '../../../../base/common/platform.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { IUpdateService } from '../../../../platform/update/common/update.js';
-import { IOpenRecentAction, MenubarControl } from '../../../browser/parts/titlebar/menubarControl.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IMenubarData, IMenubarMenu, IMenubarKeybinding, IMenubarMenuItemSubmenu, IMenubarMenuItemAction, MenubarMenuItem } from '../../../../platform/menubar/common/menubar.js';
-import { IMenubarService } from '../../../../platform/menubar/electron-browser/menubar.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { IPreferencesService } from '../../../services/preferences/common/preferences.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { OpenRecentAction } from '../../../browser/actions/windowActions.js';
-import { isICommandActionToggleInfo } from '../../../../platform/action/common/action.js';
-import { getFlatContextMenuActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
+import { IAction, Separator } from '../../../../base/common/actions.ts';
+import { IMenuService, SubmenuItemAction, MenuItemAction } from '../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IWorkspacesService } from '../../../../platform/workspaces/common/workspaces.ts';
+import { isMacintosh } from '../../../../base/common/platform.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { IUpdateService } from '../../../../platform/update/common/update.ts';
+import { IOpenRecentAction, MenubarControl } from '../../../browser/parts/titlebar/menubarControl.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IMenubarData, IMenubarMenu, IMenubarKeybinding, IMenubarMenuItemSubmenu, IMenubarMenuItemAction, MenubarMenuItem } from '../../../../platform/menubar/common/menubar.ts';
+import { IMenubarService } from '../../../../platform/menubar/electron-browser/menubar.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { IPreferencesService } from '../../../services/preferences/common/preferences.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { OpenRecentAction } from '../../../browser/actions/windowActions.ts';
+import { isICommandActionToggleInfo } from '../../../../platform/action/common/action.ts';
+import { getFlatContextMenuActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.ts';
 
 export class NativeMenubarControl extends MenubarControl {
 

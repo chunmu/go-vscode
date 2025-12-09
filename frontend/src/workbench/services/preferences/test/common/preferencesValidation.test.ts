@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.js';
-import { createValidator, getInvalidTypeError } from '../../common/preferencesValidation.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.ts';
+import { createValidator, getInvalidTypeError } from '../../common/preferencesValidation.ts';
 
 
 suite('Preferences Validation', () => {

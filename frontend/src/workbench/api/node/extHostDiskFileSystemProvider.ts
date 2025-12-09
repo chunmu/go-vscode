@@ -4,12 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { IExtHostConsumerFileSystem } from '../common/extHostFileSystemConsumer.js';
-import { Schemas } from '../../../base/common/network.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { DiskFileSystemProvider } from '../../../platform/files/node/diskFileSystemProvider.js';
-import { FilePermission } from '../../../platform/files/common/files.js';
-import { isLinux } from '../../../base/common/platform.js';
+import { IExtHostConsumerFileSystem } from '../common/extHostFileSystemConsumer.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { DiskFileSystemProvider } from '../../../platform/files/node/diskFileSystemProvider.ts';
+import { FilePermission } from '../../../platform/files/common/files.ts';
+import { isLinux } from '../../../base/common/platform.ts';
 
 export class ExtHostDiskFileSystemProvider {
 

@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { mockObject, mockService } from './mock.js';
-import { typeCheck } from '../../../../../../../base/common/types.js';
-import { randomBoolean } from '../../../../../../../base/test/common/testUtils.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.js';
+import { mockObject, mockService } from './mock.ts';
+import { typeCheck } from '../../../../../../../base/common/types.ts';
+import { randomBoolean } from '../../../../../../../base/test/common/testUtils.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.ts';
 
 suite('mockService', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

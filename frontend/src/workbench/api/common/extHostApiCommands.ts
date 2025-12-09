@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isFalsyOrEmpty } from '../../../base/common/arrays.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { Schemas, matchesSomeScheme } from '../../../base/common/network.js';
-import { URI } from '../../../base/common/uri.js';
-import { IPosition } from '../../../editor/common/core/position.js';
-import { IRange } from '../../../editor/common/core/range.js';
-import { ISelection } from '../../../editor/common/core/selection.js';
-import * as languages from '../../../editor/common/languages.js';
-import { decodeSemanticTokensDto } from '../../../editor/common/services/semanticTokensDto.js';
-import { validateWhenClauses } from '../../../platform/contextkey/common/contextkey.js';
-import { ITextEditorOptions } from '../../../platform/editor/common/editor.js';
-import { ICallHierarchyItemDto, IIncomingCallDto, IInlineValueContextDto, IOutgoingCallDto, IRawColorInfo, ITypeHierarchyItemDto, IWorkspaceEditDto } from './extHost.protocol.js';
-import { ApiCommand, ApiCommandArgument, ApiCommandResult, ExtHostCommands } from './extHostCommands.js';
-import { CustomCodeAction } from './extHostLanguageFeatures.js';
-import * as typeConverters from './extHostTypeConverters.js';
-import * as types from './extHostTypes.js';
-import { TransientCellMetadata, TransientDocumentMetadata } from '../../contrib/notebook/common/notebookCommon.js';
-import * as search from '../../contrib/search/common/search.js';
+import { isFalsyOrEmpty } from '../../../base/common/arrays.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { Schemas, matchesSomeScheme } from '../../../base/common/network.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IPosition } from '../../../editor/common/core/position.ts';
+import { IRange } from '../../../editor/common/core/range.ts';
+import { ISelection } from '../../../editor/common/core/selection.ts';
+import * as languages from '../../../editor/common/languages.ts';
+import { decodeSemanticTokensDto } from '../../../editor/common/services/semanticTokensDto.ts';
+import { validateWhenClauses } from '../../../platform/contextkey/common/contextkey.ts';
+import { ITextEditorOptions } from '../../../platform/editor/common/editor.ts';
+import { ICallHierarchyItemDto, IIncomingCallDto, IInlineValueContextDto, IOutgoingCallDto, IRawColorInfo, ITypeHierarchyItemDto, IWorkspaceEditDto } from './extHost.protocol.ts';
+import { ApiCommand, ApiCommandArgument, ApiCommandResult, ExtHostCommands } from './extHostCommands.ts';
+import { CustomCodeAction } from './extHostLanguageFeatures.ts';
+import * as typeConverters from './extHostTypeConverters.ts';
+import * as types from './extHostTypes.ts';
+import { TransientCellMetadata, TransientDocumentMetadata } from '../../contrib/notebook/common/notebookCommon.ts';
+import * as search from '../../contrib/search/common/search.ts';
 import type * as vscode from 'vscode';
 
 //#region --- NEW world

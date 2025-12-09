@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../base/browser/dom.js';
-import { onUnexpectedError } from '../../../../../base/common/errors.js';
-import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import { ICellViewModel } from '../notebookBrowser.js';
-import { CellViewModelStateChangeEvent } from '../notebookViewEvents.js';
-import { ICellExecutionStateChangedEvent } from '../../common/notebookExecutionStateService.js';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import { onUnexpectedError } from '../../../../../base/common/errors.ts';
+import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ICellViewModel } from '../notebookBrowser.ts';
+import { CellViewModelStateChangeEvent } from '../notebookViewEvents.ts';
+import { ICellExecutionStateChangedEvent } from '../../common/notebookExecutionStateService.ts';
 
 /**
  * A content part is a non-floating element that is rendered inside a cell.

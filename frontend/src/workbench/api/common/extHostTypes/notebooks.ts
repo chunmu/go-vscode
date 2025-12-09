@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { illegalArgument } from '../../../../base/common/errors.js';
-import { Mimes, normalizeMimeType, isTextStreamMime } from '../../../../base/common/mime.js';
-import { generateUuid } from '../../../../base/common/uuid.js';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { illegalArgument } from '../../../../base/common/errors.ts';
+import { Mimes, normalizeMimeType, isTextStreamMime } from '../../../../base/common/mime.ts';
+import { generateUuid } from '../../../../base/common/uuid.ts';
 
 /* eslint-disable local/code-no-native-private */
 

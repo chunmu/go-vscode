@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event, Emitter } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { INotebookKernelSourceAction, INotebookTextModel } from '../../common/notebookCommon.js';
-import { INotebookKernel, ISelectedNotebooksChangeEvent, INotebookKernelMatchResult, INotebookKernelService, INotebookTextModelLike, ISourceAction, INotebookSourceActionChangeEvent, INotebookKernelDetectionTask, IKernelSourceActionProvider } from '../../common/notebookKernelService.js';
-import { LRUCache, ResourceMap } from '../../../../../base/common/map.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { INotebookService } from '../../common/notebookService.js';
-import { IMenu, IMenuService, MenuId } from '../../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IAction } from '../../../../../base/common/actions.js';
-import { MarshalledId } from '../../../../../base/common/marshallingIds.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { getActiveWindow, runWhenWindowIdle } from '../../../../../base/browser/dom.js';
+import { Event, Emitter } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { INotebookKernelSourceAction, INotebookTextModel } from '../../common/notebookCommon.ts';
+import { INotebookKernel, ISelectedNotebooksChangeEvent, INotebookKernelMatchResult, INotebookKernelService, INotebookTextModelLike, ISourceAction, INotebookSourceActionChangeEvent, INotebookKernelDetectionTask, IKernelSourceActionProvider } from '../../common/notebookKernelService.ts';
+import { LRUCache, ResourceMap } from '../../../../../base/common/map.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { INotebookService } from '../../common/notebookService.ts';
+import { IMenu, IMenuService, MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IAction } from '../../../../../base/common/actions.ts';
+import { MarshalledId } from '../../../../../base/common/marshallingIds.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { getActiveWindow, runWhenWindowIdle } from '../../../../../base/browser/dom.ts';
 
 class KernelInfo {
 

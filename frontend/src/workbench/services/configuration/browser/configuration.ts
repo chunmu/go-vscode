@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { Event, Emitter } from '../../../../base/common/event.js';
-import * as errors from '../../../../base/common/errors.js';
-import { Disposable, IDisposable, dispose, toDisposable, MutableDisposable, combinedDisposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { RunOnceScheduler } from '../../../../base/common/async.js';
-import { FileChangeType, FileChangesEvent, IFileService, whenProviderRegistered, FileOperationError, FileOperationResult, FileOperation, FileOperationEvent } from '../../../../platform/files/common/files.js';
-import { ConfigurationModel, ConfigurationModelParser, ConfigurationParseOptions, UserSettings } from '../../../../platform/configuration/common/configurationModels.js';
-import { WorkspaceConfigurationModelParser, StandaloneConfigurationModelParser } from '../common/configurationModels.js';
-import { TASKS_CONFIGURATION_KEY, FOLDER_SETTINGS_NAME, LAUNCH_CONFIGURATION_KEY, IConfigurationCache, ConfigurationKey, REMOTE_MACHINE_SCOPES, FOLDER_SCOPES, WORKSPACE_SCOPES, APPLY_ALL_PROFILES_SETTING, APPLICATION_SCOPES, MCP_CONFIGURATION_KEY } from '../common/configuration.js';
-import { IStoredWorkspaceFolder } from '../../../../platform/workspaces/common/workspaces.js';
-import { WorkbenchState, IWorkspaceFolder, IWorkspaceIdentifier } from '../../../../platform/workspace/common/workspace.js';
-import { ConfigurationScope, Extensions, IConfigurationRegistry, OVERRIDE_PROPERTY_REGEX } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { equals } from '../../../../base/common/objects.js';
-import { IRemoteAgentService } from '../../remote/common/remoteAgentService.js';
-import { hash } from '../../../../base/common/hash.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IStringDictionary } from '../../../../base/common/collections.js';
-import { joinPath } from '../../../../base/common/resources.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IBrowserWorkbenchEnvironmentService } from '../../environment/browser/environmentService.js';
-import { isEmptyObject, isObject } from '../../../../base/common/types.js';
-import { DefaultConfiguration as BaseDefaultConfiguration } from '../../../../platform/configuration/common/configurations.js';
-import { IJSONEditingService } from '../common/jsonEditing.js';
-import { IUserDataProfilesService } from '../../../../platform/userDataProfile/common/userDataProfile.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { Event, Emitter } from '../../../../base/common/event.ts';
+import * as errors from '../../../../base/common/errors.ts';
+import { Disposable, IDisposable, dispose, toDisposable, MutableDisposable, combinedDisposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { RunOnceScheduler } from '../../../../base/common/async.ts';
+import { FileChangeType, FileChangesEvent, IFileService, whenProviderRegistered, FileOperationError, FileOperationResult, FileOperation, FileOperationEvent } from '../../../../platform/files/common/files.ts';
+import { ConfigurationModel, ConfigurationModelParser, ConfigurationParseOptions, UserSettings } from '../../../../platform/configuration/common/configurationModels.ts';
+import { WorkspaceConfigurationModelParser, StandaloneConfigurationModelParser } from '../common/configurationModels.ts';
+import { TASKS_CONFIGURATION_KEY, FOLDER_SETTINGS_NAME, LAUNCH_CONFIGURATION_KEY, IConfigurationCache, ConfigurationKey, REMOTE_MACHINE_SCOPES, FOLDER_SCOPES, WORKSPACE_SCOPES, APPLY_ALL_PROFILES_SETTING, APPLICATION_SCOPES, MCP_CONFIGURATION_KEY } from '../common/configuration.ts';
+import { IStoredWorkspaceFolder } from '../../../../platform/workspaces/common/workspaces.ts';
+import { WorkbenchState, IWorkspaceFolder, IWorkspaceIdentifier } from '../../../../platform/workspace/common/workspace.ts';
+import { ConfigurationScope, Extensions, IConfigurationRegistry, OVERRIDE_PROPERTY_REGEX } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { equals } from '../../../../base/common/objects.ts';
+import { IRemoteAgentService } from '../../remote/common/remoteAgentService.ts';
+import { hash } from '../../../../base/common/hash.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IStringDictionary } from '../../../../base/common/collections.ts';
+import { joinPath } from '../../../../base/common/resources.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../../environment/browser/environmentService.ts';
+import { isEmptyObject, isObject } from '../../../../base/common/types.ts';
+import { DefaultConfiguration as BaseDefaultConfiguration } from '../../../../platform/configuration/common/configurations.ts';
+import { IJSONEditingService } from '../common/jsonEditing.ts';
+import { IUserDataProfilesService } from '../../../../platform/userDataProfile/common/userDataProfile.ts';
 
 export class DefaultConfiguration extends BaseDefaultConfiguration {
 

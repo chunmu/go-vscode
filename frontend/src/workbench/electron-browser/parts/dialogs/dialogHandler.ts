@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { AbstractDialogHandler, IConfirmation, IConfirmationResult, IPrompt, IAsyncPromptResult } from '../../../../platform/dialogs/common/dialogs.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { getActiveWindow } from '../../../../base/browser/dom.js';
+import { localize } from '../../../../nls.ts';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { AbstractDialogHandler, IConfirmation, IConfirmationResult, IPrompt, IAsyncPromptResult } from '../../../../platform/dialogs/common/dialogs.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { getActiveWindow } from '../../../../base/browser/dom.ts';
 
 export class NativeDialogHandler extends AbstractDialogHandler {
 

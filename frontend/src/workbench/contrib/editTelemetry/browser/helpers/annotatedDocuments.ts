@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IObservable, mapObservableArrayCached, derived, derivedObservableWithCache, observableFromEvent, observableSignalFromEvent, IReader } from '../../../../../base/common/observable.js';
-import { isDefined } from '../../../../../base/common/types.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { EditorResourceAccessor } from '../../../../common/editor.js';
-import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { IDocumentWithAnnotatedEdits, EditSourceData, DocumentWithSourceAnnotatedEdits, CombineStreamedChanges, MinimizeEditsProcessor } from './documentWithAnnotatedEdits.js';
-import { ObservableWorkspace, IObservableDocument } from './observableWorkspace.js';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IObservable, mapObservableArrayCached, derived, derivedObservableWithCache, observableFromEvent, observableSignalFromEvent, IReader } from '../../../../../base/common/observable.ts';
+import { isDefined } from '../../../../../base/common/types.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { EditorResourceAccessor } from '../../../../common/editor.ts';
+import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { IDocumentWithAnnotatedEdits, EditSourceData, DocumentWithSourceAnnotatedEdits, CombineStreamedChanges, MinimizeEditsProcessor } from './documentWithAnnotatedEdits.ts';
+import { ObservableWorkspace, IObservableDocument } from './observableWorkspace.ts';
 
 export interface IAnnotatedDocuments {
 	readonly documents: IObservable<readonly AnnotatedDocument[]>;

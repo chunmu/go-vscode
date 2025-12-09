@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore, dispose, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { localize2 } from '../../../../../../nls.js';
-import { Categories } from '../../../../../../platform/action/common/actionCommonCategories.js';
-import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { getNotebookEditorFromEditorPane, ICellViewModel, INotebookDeltaCellStatusBarItems, INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { NotebookEditorWidget } from '../../notebookEditorWidget.js';
-import { CellStatusbarAlignment, INotebookCellStatusBarItem } from '../../../common/notebookCommon.js';
-import { INotebookService } from '../../../common/notebookService.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { n } from '../../../../../../base/browser/dom.js';
+import { Disposable, DisposableStore, dispose, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { localize2 } from '../../../../../../nls.ts';
+import { Categories } from '../../../../../../platform/action/common/actionCommonCategories.ts';
+import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { getNotebookEditorFromEditorPane, ICellViewModel, INotebookDeltaCellStatusBarItems, INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { NotebookEditorWidget } from '../../notebookEditorWidget.ts';
+import { CellStatusbarAlignment, INotebookCellStatusBarItem } from '../../../common/notebookCommon.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { n } from '../../../../../../base/browser/dom.ts';
 
 export class TroubleshootController extends Disposable implements INotebookEditorContribution {
 	static id: string = 'workbench.notebook.troubleshoot';

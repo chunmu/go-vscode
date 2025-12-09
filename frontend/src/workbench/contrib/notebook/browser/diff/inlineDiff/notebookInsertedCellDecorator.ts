@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { CellDiffInfo } from '../notebookDiffViewModel.js';
-import { INotebookEditor, NotebookOverviewRulerLane } from '../../notebookBrowser.js';
-import { overviewRulerAddedForeground } from '../../../../scm/common/quickDiff.js';
+import { Disposable, DisposableStore, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { CellDiffInfo } from '../notebookDiffViewModel.ts';
+import { INotebookEditor, NotebookOverviewRulerLane } from '../../notebookBrowser.ts';
+import { overviewRulerAddedForeground } from '../../../../scm/common/quickDiff.ts';
 
 export class NotebookInsertedCellDecorator extends Disposable {
 	private readonly decorators = this._register(new DisposableStore());

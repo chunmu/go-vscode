@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { URI } from '../../../../base/common/uri.js';
-import { normalize, isAbsolute } from '../../../../base/common/path.js';
-import * as resources from '../../../../base/common/resources.js';
-import { DEBUG_SCHEME } from './debug.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { IEditorService, SIDE_GROUP, ACTIVE_GROUP } from '../../../services/editor/common/editorService.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { isUriString } from './debugUtils.js';
-import { IEditorPane } from '../../../common/editor.js';
-import { TextEditorSelectionRevealType } from '../../../../platform/editor/common/editor.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
+import * as nls from '../../../../nls.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { normalize, isAbsolute } from '../../../../base/common/path.ts';
+import * as resources from '../../../../base/common/resources.ts';
+import { DEBUG_SCHEME } from './debug.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { IEditorService, SIDE_GROUP, ACTIVE_GROUP } from '../../../services/editor/common/editorService.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { isUriString } from './debugUtils.ts';
+import { IEditorPane } from '../../../common/editor.ts';
+import { TextEditorSelectionRevealType } from '../../../../platform/editor/common/editor.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
 
 export const UNKNOWN_SOURCE_LABEL = nls.localize('unknownSource', "Unknown Source");
 

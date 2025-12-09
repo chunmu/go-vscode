@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../base/common/codicons.js';
-import { localize } from '../../../../nls.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { localize } from '../../../../nls.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
 
 export const debugConsoleViewIcon = registerIcon('debug-console-view-icon', Codicon.debugConsole, localize('debugConsoleViewIcon', 'View icon of the debug console view.'));
 export const runViewIcon = registerIcon('run-view-icon', Codicon.debugAlt, localize('runViewIcon', 'View icon of the run view.'));

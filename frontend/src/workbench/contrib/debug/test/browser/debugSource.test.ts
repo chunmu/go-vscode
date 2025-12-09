@@ -4,12 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { isWindows } from '../../../../../base/common/platform.js';
-import { URI as uri } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { Source } from '../../common/debugSource.js';
-import { mockUriIdentityService } from './mockDebugModel.js';
+import { isWindows } from '../../../../../base/common/platform.ts';
+import { URI as uri } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { Source } from '../../common/debugSource.ts';
+import { mockUriIdentityService } from './mockDebugModel.ts';
 
 suite('Debug - Source', () => {
 

@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MainContext, MainThreadOutputServiceShape, ExtHostOutputServiceShape } from './extHost.protocol.js';
+import { MainContext, MainThreadOutputServiceShape, ExtHostOutputServiceShape } from './extHost.protocol.ts';
 import type * as vscode from 'vscode';
-import { URI } from '../../../base/common/uri.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { AbstractMessageLogger, ILogger, ILoggerService, ILogService, log, LogLevel, parseLogLevel } from '../../../platform/log/common/log.js';
-import { OutputChannelUpdateMode } from '../../services/output/common/output.js';
-import { IExtHostConsumerFileSystem } from './extHostFileSystemConsumer.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IExtHostFileSystemInfo } from './extHostFileSystemInfo.js';
-import { toLocalISOString } from '../../../base/common/date.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { isString } from '../../../base/common/types.js';
-import { FileSystemProviderErrorCode, toFileSystemProviderErrorCode } from '../../../platform/files/common/files.js';
-import { Emitter } from '../../../base/common/event.js';
-import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
+import { URI } from '../../../base/common/uri.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { AbstractMessageLogger, ILogger, ILoggerService, ILogService, log, LogLevel, parseLogLevel } from '../../../platform/log/common/log.ts';
+import { OutputChannelUpdateMode } from '../../services/output/common/output.ts';
+import { IExtHostConsumerFileSystem } from './extHostFileSystemConsumer.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IExtHostFileSystemInfo } from './extHostFileSystemInfo.ts';
+import { toLocalISOString } from '../../../base/common/date.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { isString } from '../../../base/common/types.ts';
+import { FileSystemProviderErrorCode, toFileSystemProviderErrorCode } from '../../../platform/files/common/files.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.ts';
 
 class ExtHostOutputChannel extends AbstractMessageLogger implements vscode.LogOutputChannel {
 

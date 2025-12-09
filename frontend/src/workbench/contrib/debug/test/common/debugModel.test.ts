@@ -4,17 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { DeferredPromise } from '../../../../../base/common/async.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { mockObject, upcastDeepPartial, upcastPartial } from '../../../../../base/test/common/mock.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { ITextFileService } from '../../../../services/textfile/common/textfiles.js';
-import { TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { IDebugSession } from '../../common/debug.js';
-import { DebugModel, ExceptionBreakpoint, FunctionBreakpoint, Thread } from '../../common/debugModel.js';
-import { MockDebugStorage } from './mockDebug.js';
-import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.js';
+import { DeferredPromise } from '../../../../../base/common/async.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { mockObject, upcastDeepPartial, upcastPartial } from '../../../../../base/test/common/mock.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { ITextFileService } from '../../../../services/textfile/common/textfiles.ts';
+import { TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { IDebugSession } from '../../common/debug.ts';
+import { DebugModel, ExceptionBreakpoint, FunctionBreakpoint, Thread } from '../../common/debugModel.ts';
+import { MockDebugStorage } from './mockDebug.ts';
+import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.ts';
 
 suite('DebugModel', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

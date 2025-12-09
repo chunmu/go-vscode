@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createCommandUri } from '../../../../base/common/htmlContent.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { isCodeEditor, isDiffEditor } from '../../../../editor/browser/editorBrowser.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { ILocalizedString } from '../../../../platform/action/common/action.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { OpenFileAction, OpenFolderAction } from '../../../browser/actions/workspaceActions.js';
-import { ViewPane } from '../../../browser/parts/views/viewPane.js';
-import { IViewletViewOptions } from '../../../browser/parts/views/viewsViewlet.js';
-import { WorkbenchStateContext } from '../../../common/contextkeys.js';
-import { Extensions, IViewDescriptorService, IViewsRegistry, ViewContentGroups } from '../../../common/views.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DEBUG_EXTENSION_AVAILABLE, IDebugService } from '../common/debug.js';
-import { DEBUG_CONFIGURE_COMMAND_ID, DEBUG_START_COMMAND_ID } from './debugCommands.js';
+import { createCommandUri } from '../../../../base/common/htmlContent.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { isCodeEditor, isDiffEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { ILocalizedString } from '../../../../platform/action/common/action.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { OpenFileAction, OpenFolderAction } from '../../../browser/actions/workspaceActions.ts';
+import { ViewPane } from '../../../browser/parts/views/viewPane.ts';
+import { IViewletViewOptions } from '../../../browser/parts/views/viewsViewlet.ts';
+import { WorkbenchStateContext } from '../../../common/contextkeys.ts';
+import { Extensions, IViewDescriptorService, IViewsRegistry, ViewContentGroups } from '../../../common/views.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DEBUG_EXTENSION_AVAILABLE, IDebugService } from '../common/debug.ts';
+import { DEBUG_CONFIGURE_COMMAND_ID, DEBUG_START_COMMAND_ID } from './debugCommands.ts';
 
 const debugStartLanguageKey = 'debugStartLanguage';
 const CONTEXT_DEBUG_START_LANGUAGE = new RawContextKey<string>(debugStartLanguageKey, undefined);

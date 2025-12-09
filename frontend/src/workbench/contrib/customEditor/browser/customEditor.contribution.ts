@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { EditorPaneDescriptor, IEditorPaneRegistry } from '../../../browser/editor.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { EditorExtensions, IEditorFactoryRegistry } from '../../../common/editor.js';
-import { ComplexCustomWorkingCopyEditorHandler as ComplexCustomWorkingCopyEditorHandler, CustomEditorInputSerializer } from './customEditorInputFactory.js';
-import { ICustomEditorService } from '../common/customEditor.js';
-import { WebviewEditor } from '../../webviewPanel/browser/webviewEditor.js';
-import { CustomEditorInput } from './customEditorInput.js';
-import { CustomEditorService } from './customEditors.js';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { EditorPaneDescriptor, IEditorPaneRegistry } from '../../../browser/editor.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { EditorExtensions, IEditorFactoryRegistry } from '../../../common/editor.ts';
+import { ComplexCustomWorkingCopyEditorHandler as ComplexCustomWorkingCopyEditorHandler, CustomEditorInputSerializer } from './customEditorInputFactory.ts';
+import { ICustomEditorService } from '../common/customEditor.ts';
+import { WebviewEditor } from '../../webviewPanel/browser/webviewEditor.ts';
+import { CustomEditorInput } from './customEditorInput.ts';
+import { CustomEditorService } from './customEditors.ts';
 
 registerSingleton(ICustomEditorService, CustomEditorService, InstantiationType.Delayed);
 

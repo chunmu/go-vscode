@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { PrefixSumComputer } from '../../../../../editor/common/model/prefixSumComputer.js';
-import { IDiffNestedCellViewModel } from './notebookDiffEditorBrowser.js';
-import { ICellOutputViewModel, IGenericCellViewModel } from '../notebookBrowser.js';
-import { CellViewModelStateChangeEvent } from '../notebookViewEvents.js';
-import { CellOutputViewModel } from '../viewModel/cellOutputViewModel.js';
-import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.js';
-import { INotebookService } from '../../common/notebookService.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { PrefixSumComputer } from '../../../../../editor/common/model/prefixSumComputer.ts';
+import { IDiffNestedCellViewModel } from './notebookDiffEditorBrowser.ts';
+import { ICellOutputViewModel, IGenericCellViewModel } from '../notebookBrowser.ts';
+import { CellViewModelStateChangeEvent } from '../notebookViewEvents.ts';
+import { CellOutputViewModel } from '../viewModel/cellOutputViewModel.ts';
+import { NotebookCellTextModel } from '../../common/model/notebookCellTextModel.ts';
+import { INotebookService } from '../../common/notebookService.ts';
 
 export class DiffNestedCellViewModel extends Disposable implements IDiffNestedCellViewModel, IGenericCellViewModel {
 	private _id: string;

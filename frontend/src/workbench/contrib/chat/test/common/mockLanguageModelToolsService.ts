@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Event } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { constObservable, IObservable } from '../../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { IProgressStep } from '../../../../../platform/progress/common/progress.js';
-import { IVariableReference } from '../../common/chatModes.js';
-import { ChatRequestToolReferenceEntry } from '../../common/chatVariableEntries.js';
-import { CountTokensCallback, ILanguageModelToolsService, IToolAndToolSetEnablementMap, IToolData, IToolImpl, IToolInvocation, IToolResult, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { constObservable, IObservable } from '../../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { IProgressStep } from '../../../../../platform/progress/common/progress.ts';
+import { IVariableReference } from '../../common/chatModes.ts';
+import { ChatRequestToolReferenceEntry } from '../../common/chatVariableEntries.ts';
+import { CountTokensCallback, ILanguageModelToolsService, IToolAndToolSetEnablementMap, IToolData, IToolImpl, IToolInvocation, IToolResult, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.ts';
 
 export class MockLanguageModelToolsService implements ILanguageModelToolsService {
 	_serviceBrand: undefined;

@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { EditOperation } from '../../../../editor/common/core/editOperation.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { IIdentifiedSingleEditOperation, ITextModel, IValidEditOperation, TrackedRangeStickiness } from '../../../../editor/common/model.js';
-import { IEditObserver } from './inlineChatStrategies.js';
-import { IProgress } from '../../../../platform/progress/common/progress.js';
-import { IntervalTimer, AsyncIterableSource } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { getNWords } from '../../chat/common/chatWordCounter.js';
-import { TextModelEditSource } from '../../../../editor/common/textModelEditSource.js';
+import { EditOperation } from '../../../../editor/common/core/editOperation.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { IIdentifiedSingleEditOperation, ITextModel, IValidEditOperation, TrackedRangeStickiness } from '../../../../editor/common/model.ts';
+import { IEditObserver } from './inlineChatStrategies.ts';
+import { IProgress } from '../../../../platform/progress/common/progress.ts';
+import { IntervalTimer, AsyncIterableSource } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { getNWords } from '../../chat/common/chatWordCounter.ts';
+import { TextModelEditSource } from '../../../../editor/common/textModelEditSource.ts';
 
 
 

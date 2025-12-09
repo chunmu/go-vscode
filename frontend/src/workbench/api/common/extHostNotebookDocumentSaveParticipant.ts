@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { AsyncEmitter, Event } from '../../../base/common/event.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtHostNotebookDocumentSaveParticipantShape, IWorkspaceEditDto, MainThreadBulkEditsShape } from './extHost.protocol.js';
-import { ExtHostNotebookController } from './extHostNotebook.js';
-import { TextDocumentSaveReason, WorkspaceEdit as WorksapceEditConverter } from './extHostTypeConverters.js';
-import { WorkspaceEdit } from './extHostTypes.js';
-import { SaveReason } from '../../common/editor.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { AsyncEmitter, Event } from '../../../base/common/event.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtHostNotebookDocumentSaveParticipantShape, IWorkspaceEditDto, MainThreadBulkEditsShape } from './extHost.protocol.ts';
+import { ExtHostNotebookController } from './extHostNotebook.ts';
+import { TextDocumentSaveReason, WorkspaceEdit as WorksapceEditConverter } from './extHostTypeConverters.ts';
+import { WorkspaceEdit } from './extHostTypes.ts';
+import { SaveReason } from '../../common/editor.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 import { NotebookDocumentWillSaveEvent } from 'vscode';
 
 interface IExtensionListener<E> {

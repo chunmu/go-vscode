@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { streamToBuffer, VSBuffer } from '../../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { INotificationService } from '../../../../../platform/notification/common/notification.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { IRequestService } from '../../../../../platform/request/common/request.js';
-import { IURLHandler, IURLService } from '../../../../../platform/url/common/url.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { askForPromptFileName } from './pickers/askForPromptName.js';
-import { askForPromptSourceFolder } from './pickers/askForPromptSourceFolder.js';
-import { getCleanPromptName } from '../../common/promptSyntax/config/promptFileLocations.js';
-import { PromptsType } from '../../common/promptSyntax/promptTypes.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { localize } from '../../../../../nls.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { IHostService } from '../../../../services/host/browser/host.js';
-import { mainWindow } from '../../../../../base/browser/window.js';
+import { streamToBuffer, VSBuffer } from '../../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { INotificationService } from '../../../../../platform/notification/common/notification.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { IRequestService } from '../../../../../platform/request/common/request.ts';
+import { IURLHandler, IURLService } from '../../../../../platform/url/common/url.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { askForPromptFileName } from './pickers/askForPromptName.ts';
+import { askForPromptSourceFolder } from './pickers/askForPromptSourceFolder.ts';
+import { getCleanPromptName } from '../../common/promptSyntax/config/promptFileLocations.ts';
+import { PromptsType } from '../../common/promptSyntax/promptTypes.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { localize } from '../../../../../nls.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { IHostService } from '../../../../services/host/browser/host.ts';
+import { mainWindow } from '../../../../../base/browser/window.ts';
 
 // example URL: code-oss:chat-prompt/install?url=https://gist.githubusercontent.com/aeschli/43fe78babd5635f062aef0195a476aad/raw/dfd71f60058a4dd25f584b55de3e20f5fd580e63/filterEvenNumbers.prompt.md
 

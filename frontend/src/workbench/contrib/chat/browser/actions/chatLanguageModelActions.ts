@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IQuickInputService, IQuickPickItem, QuickPickInput } from '../../../../../platform/quickinput/common/quickInput.js';
-import { ILanguageModelsService } from '../../common/languageModels.js';
-import { IAuthenticationAccessService } from '../../../../services/authentication/browser/authenticationAccessService.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { AllowedExtension, INTERNAL_AUTH_PROVIDER_PREFIX } from '../../../../services/authentication/common/authentication.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { CHAT_CATEGORY } from './chatActions.js';
-import { IExtensionService } from '../../../../services/extensions/common/extensions.js';
-import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.js';
-import { IProductService } from '../../../../../platform/product/common/productService.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ManageModelsAction } from './manageModelsActions.js';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IQuickInputService, IQuickPickItem, QuickPickInput } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { ILanguageModelsService } from '../../common/languageModels.ts';
+import { IAuthenticationAccessService } from '../../../../services/authentication/browser/authenticationAccessService.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { AllowedExtension, INTERNAL_AUTH_PROVIDER_PREFIX } from '../../../../services/authentication/common/authentication.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
+import { IExtensionService } from '../../../../services/extensions/common/extensions.ts';
+import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.ts';
+import { IProductService } from '../../../../../platform/product/common/productService.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ManageModelsAction } from './manageModelsActions.ts';
 
 class ManageLanguageModelAuthenticationAction extends Action2 {
 	static readonly ID = 'workbench.action.chat.manageLanguageModelAuthentication';

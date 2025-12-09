@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../nls.js';
-import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.js';
-import { Action } from '../../../../base/common/actions.js';
-import { Parts, IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ServicesAccessor } from '../../../../editor/browser/editorExtensions.js';
-import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { StatusbarViewModel } from './statusbarModel.js';
-import { StatusBarFocused } from '../../../common/contextkeys.js';
-import { getActiveWindow } from '../../../../base/browser/dom.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
+import { localize, localize2 } from '../../../../nls.ts';
+import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.ts';
+import { Action } from '../../../../base/common/actions.ts';
+import { Parts, IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ServicesAccessor } from '../../../../editor/browser/editorExtensions.ts';
+import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { StatusbarViewModel } from './statusbarModel.ts';
+import { StatusBarFocused } from '../../../common/contextkeys.ts';
+import { getActiveWindow } from '../../../../base/browser/dom.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
 
 export class ToggleStatusbarEntryVisibilityAction extends Action {
 

@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ProgressBar } from '../../../../../../base/browser/ui/progressbar/progressbar.js';
-import { defaultProgressBarStyles } from '../../../../../../platform/theme/browser/defaultStyles.js';
-import { ICellViewModel } from '../../notebookBrowser.js';
-import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.js';
-import { CellContentPart } from '../cellPart.js';
-import { NotebookCellExecutionState } from '../../../common/notebookCommon.js';
-import { ICellExecutionStateChangedEvent, INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
+import { ProgressBar } from '../../../../../../base/browser/ui/progressbar/progressbar.ts';
+import { defaultProgressBarStyles } from '../../../../../../platform/theme/browser/defaultStyles.ts';
+import { ICellViewModel } from '../../notebookBrowser.ts';
+import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { NotebookCellExecutionState } from '../../../common/notebookCommon.ts';
+import { ICellExecutionStateChangedEvent, INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
 
 export class CellProgressBar extends CellContentPart {
 	private readonly _progressBar: ProgressBar;

@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { revive } from '../../../../base/common/marshalling.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { IOffsetRange, OffsetRange } from '../../../../editor/common/core/ranges/offsetRange.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { IChatAgentCommand, IChatAgentData, IChatAgentService, reviveSerializedAgent } from './chatAgents.js';
-import { IChatSlashData } from './chatSlashCommands.js';
-import { IChatRequestProblemsVariable, IChatRequestVariableValue } from './chatVariables.js';
-import { ChatAgentLocation } from './constants.js';
-import { IToolData } from './languageModelToolsService.js';
-import { IChatRequestToolEntry, IChatRequestToolSetEntry, IChatRequestVariableEntry, IDiagnosticVariableEntryFilterData } from './chatVariableEntries.js';
+import { revive } from '../../../../base/common/marshalling.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { IOffsetRange, OffsetRange } from '../../../../editor/common/core/ranges/offsetRange.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { IChatAgentCommand, IChatAgentData, IChatAgentService, reviveSerializedAgent } from './chatAgents.ts';
+import { IChatSlashData } from './chatSlashCommands.ts';
+import { IChatRequestProblemsVariable, IChatRequestVariableValue } from './chatVariables.ts';
+import { ChatAgentLocation } from './constants.ts';
+import { IToolData } from './languageModelToolsService.ts';
+import { IChatRequestToolEntry, IChatRequestToolSetEntry, IChatRequestVariableEntry, IDiagnosticVariableEntryFilterData } from './chatVariableEntries.ts';
 
 // These are in a separate file to avoid circular dependencies with the dependencies of the parser
 

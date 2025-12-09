@@ -3,59 +3,59 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
+import * as nls from '../../../../nls.ts';
 
 // base
-import * as browser from '../../../../base/browser/browser.js';
-import { BrowserFeatures, KeyboardSupport } from '../../../../base/browser/canIUse.js';
-import * as dom from '../../../../base/browser/dom.js';
-import { printKeyboardEvent, printStandardKeyboardEvent, StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
-import { mainWindow } from '../../../../base/browser/window.js';
-import { DeferredPromise, RunOnceScheduler } from '../../../../base/common/async.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { parse } from '../../../../base/common/json.js';
-import { IJSONSchema, TypeFromJsonSchema } from '../../../../base/common/jsonSchema.js';
-import { UserSettingsLabelProvider } from '../../../../base/common/keybindingLabels.js';
-import { KeybindingParser } from '../../../../base/common/keybindingParser.js';
-import { Keybinding, KeyCodeChord, ResolvedKeybinding, ScanCodeChord } from '../../../../base/common/keybindings.js';
-import { IMMUTABLE_CODE_TO_KEY_CODE, KeyCode, KeyCodeUtils, KeyMod, ScanCode, ScanCodeUtils } from '../../../../base/common/keyCodes.js';
-import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import * as objects from '../../../../base/common/objects.js';
-import { isMacintosh, OperatingSystem, OS } from '../../../../base/common/platform.js';
-import { dirname } from '../../../../base/common/resources.js';
+import * as browser from '../../../../base/browser/browser.ts';
+import { BrowserFeatures, KeyboardSupport } from '../../../../base/browser/canIUse.ts';
+import * as dom from '../../../../base/browser/dom.ts';
+import { printKeyboardEvent, printStandardKeyboardEvent, StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.ts';
+import { mainWindow } from '../../../../base/browser/window.ts';
+import { DeferredPromise, RunOnceScheduler } from '../../../../base/common/async.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { parse } from '../../../../base/common/json.ts';
+import { IJSONSchema, TypeFromJsonSchema } from '../../../../base/common/jsonSchema.ts';
+import { UserSettingsLabelProvider } from '../../../../base/common/keybindingLabels.ts';
+import { KeybindingParser } from '../../../../base/common/keybindingParser.ts';
+import { Keybinding, KeyCodeChord, ResolvedKeybinding, ScanCodeChord } from '../../../../base/common/keybindings.ts';
+import { IMMUTABLE_CODE_TO_KEY_CODE, KeyCode, KeyCodeUtils, KeyMod, ScanCode, ScanCodeUtils } from '../../../../base/common/keyCodes.ts';
+import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import * as objects from '../../../../base/common/objects.ts';
+import { isMacintosh, OperatingSystem, OS } from '../../../../base/common/platform.ts';
+import { dirname } from '../../../../base/common/resources.ts';
 
 // platform
-import { ILocalizedString, isLocalizedString } from '../../../../platform/action/common/action.js';
-import { MenuRegistry } from '../../../../platform/actions/common/actions.js';
-import { CommandsRegistry, ICommandService } from '../../../../platform/commands/common/commands.js';
-import { ContextKeyExpr, ContextKeyExpression, IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { FileOperation, IFileService } from '../../../../platform/files/common/files.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { Extensions, IJSONContributionRegistry } from '../../../../platform/jsonschemas/common/jsonContributionRegistry.js';
-import { AbstractKeybindingService } from '../../../../platform/keybinding/common/abstractKeybindingService.js';
-import { IKeybindingService, IKeyboardEvent, KeybindingsSchemaContribution } from '../../../../platform/keybinding/common/keybinding.js';
-import { KeybindingResolver } from '../../../../platform/keybinding/common/keybindingResolver.js';
-import { IExtensionKeybindingRule, IKeybindingItem, KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.js';
-import { IKeyboardLayoutService } from '../../../../platform/keyboardLayout/common/keyboardLayout.js';
-import { IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
+import { ILocalizedString, isLocalizedString } from '../../../../platform/action/common/action.ts';
+import { MenuRegistry } from '../../../../platform/actions/common/actions.ts';
+import { CommandsRegistry, ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { ContextKeyExpr, ContextKeyExpression, IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { FileOperation, IFileService } from '../../../../platform/files/common/files.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { Extensions, IJSONContributionRegistry } from '../../../../platform/jsonschemas/common/jsonContributionRegistry.ts';
+import { AbstractKeybindingService } from '../../../../platform/keybinding/common/abstractKeybindingService.ts';
+import { IKeybindingService, IKeyboardEvent, KeybindingsSchemaContribution } from '../../../../platform/keybinding/common/keybinding.ts';
+import { KeybindingResolver } from '../../../../platform/keybinding/common/keybindingResolver.ts';
+import { IExtensionKeybindingRule, IKeybindingItem, KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ResolvedKeybindingItem } from '../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
+import { IKeyboardLayoutService } from '../../../../platform/keyboardLayout/common/keyboardLayout.ts';
+import { IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
 
 // workbench
-import { remove } from '../../../../base/common/arrays.js';
-import { commandsExtensionPoint } from '../../actions/common/menusExtensionPoint.js';
-import { IExtensionService } from '../../extensions/common/extensions.js';
-import { ExtensionMessageCollector, ExtensionsRegistry } from '../../extensions/common/extensionsRegistry.js';
-import { IHostService } from '../../host/browser/host.js';
-import { IUserDataProfileService } from '../../userDataProfile/common/userDataProfile.js';
-import { IUserKeybindingItem, KeybindingIO, OutputBuilder } from '../common/keybindingIO.js';
-import { IKeyboard, INavigatorWithKeyboard } from './navigatorKeyboard.js';
-import { getAllUnboundCommands } from './unboundCommands.js';
+import { remove } from '../../../../base/common/arrays.ts';
+import { commandsExtensionPoint } from '../../actions/common/menusExtensionPoint.ts';
+import { IExtensionService } from '../../extensions/common/extensions.ts';
+import { ExtensionMessageCollector, ExtensionsRegistry } from '../../extensions/common/extensionsRegistry.ts';
+import { IHostService } from '../../host/browser/host.ts';
+import { IUserDataProfileService } from '../../userDataProfile/common/userDataProfile.ts';
+import { IUserKeybindingItem, KeybindingIO, OutputBuilder } from '../common/keybindingIO.ts';
+import { IKeyboard, INavigatorWithKeyboard } from './navigatorKeyboard.ts';
+import { getAllUnboundCommands } from './unboundCommands.ts';
 
 function isValidContributedKeyBinding(keyBinding: ContributedKeyBinding, rejects: string[]): boolean {
 	if (!keyBinding) {

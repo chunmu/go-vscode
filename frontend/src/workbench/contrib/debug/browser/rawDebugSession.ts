@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { Event, Emitter } from '../../../../base/common/event.js';
-import * as objects from '../../../../base/common/objects.js';
-import { toAction } from '../../../../base/common/actions.js';
-import * as errors from '../../../../base/common/errors.js';
-import { createErrorWithActions } from '../../../../base/common/errorMessage.js';
-import { formatPII, isUriString } from '../common/debugUtils.js';
-import { IDebugAdapter, IConfig, AdapterEndEvent, IDebugger } from '../common/debug.js';
-import { IExtensionHostDebugService, IOpenExtensionWindowResult } from '../../../../platform/debug/common/extensionHostDebug.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { IDisposable, dispose } from '../../../../base/common/lifecycle.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { INotificationService, Severity } from '../../../../platform/notification/common/notification.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { Schemas } from '../../../../base/common/network.js';
+import * as nls from '../../../../nls.ts';
+import { Event, Emitter } from '../../../../base/common/event.ts';
+import * as objects from '../../../../base/common/objects.ts';
+import { toAction } from '../../../../base/common/actions.ts';
+import * as errors from '../../../../base/common/errors.ts';
+import { createErrorWithActions } from '../../../../base/common/errorMessage.ts';
+import { formatPII, isUriString } from '../common/debugUtils.ts';
+import { IDebugAdapter, IConfig, AdapterEndEvent, IDebugger } from '../common/debug.ts';
+import { IExtensionHostDebugService, IOpenExtensionWindowResult } from '../../../../platform/debug/common/extensionHostDebug.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { IDisposable, dispose } from '../../../../base/common/lifecycle.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { INotificationService, Severity } from '../../../../platform/notification/common/notification.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { Schemas } from '../../../../base/common/network.ts';
 
 /**
  * This interface represents a single command line argument split into a "prefix" and a "path" half.

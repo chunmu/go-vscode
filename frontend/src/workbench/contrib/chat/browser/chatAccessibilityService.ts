@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { renderAsPlaintext } from '../../../../base/browser/markdownRenderer.js';
-import { alert, status } from '../../../../base/browser/ui/aria/aria.js';
-import { Event } from '../../../../base/common/event.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { Disposable, DisposableMap, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { AccessibilityProgressSignalScheduler } from '../../../../platform/accessibilitySignal/browser/progressAccessibilitySignalScheduler.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { FocusMode } from '../../../../platform/native/common/native.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { AccessibilityVoiceSettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { ElicitationState, IChatElicitationRequest } from '../common/chatService.js';
-import { IChatResponseViewModel } from '../common/chatViewModel.js';
-import { ChatConfiguration } from '../common/constants.js';
-import { IChatAccessibilityService, IChatWidgetService } from './chat.js';
-import { ChatWidget } from './chatWidget.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { renderAsPlaintext } from '../../../../base/browser/markdownRenderer.ts';
+import { alert, status } from '../../../../base/browser/ui/aria/aria.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Disposable, DisposableMap, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { AccessibilityProgressSignalScheduler } from '../../../../platform/accessibilitySignal/browser/progressAccessibilitySignalScheduler.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { FocusMode } from '../../../../platform/native/common/native.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { AccessibilityVoiceSettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { ElicitationState, IChatElicitationRequest } from '../common/chatService.ts';
+import { IChatResponseViewModel } from '../common/chatViewModel.ts';
+import { ChatConfiguration } from '../common/constants.ts';
+import { IChatAccessibilityService, IChatWidgetService } from './chat.ts';
+import { ChatWidget } from './chatWidget.ts';
 
 const CHAT_RESPONSE_PENDING_ALLOWANCE_MS = 4000;
 export class ChatAccessibilityService extends Disposable implements IChatAccessibilityService {

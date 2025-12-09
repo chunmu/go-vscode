@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { shouldSynchronizeModel } from '../../../editor/common/model.js';
-import { localize } from '../../../nls.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { IProgressStep, IProgress } from '../../../platform/progress/common/progress.js';
-import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ITextFileSaveParticipant, ITextFileService, ITextFileEditorModel, ITextFileSaveParticipantContext } from '../../services/textfile/common/textfiles.js';
-import { ExtHostContext, ExtHostDocumentSaveParticipantShape } from '../common/extHost.protocol.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { raceCancellationError } from '../../../base/common/async.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { shouldSynchronizeModel } from '../../../editor/common/model.ts';
+import { localize } from '../../../nls.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { IProgressStep, IProgress } from '../../../platform/progress/common/progress.ts';
+import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ITextFileSaveParticipant, ITextFileService, ITextFileEditorModel, ITextFileSaveParticipantContext } from '../../services/textfile/common/textfiles.ts';
+import { ExtHostContext, ExtHostDocumentSaveParticipantShape } from '../common/extHost.protocol.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { raceCancellationError } from '../../../base/common/async.ts';
 
 class ExtHostSaveParticipant implements ITextFileSaveParticipant {
 

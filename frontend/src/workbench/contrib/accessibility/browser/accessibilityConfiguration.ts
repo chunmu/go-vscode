@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { ConfigurationScope, Extensions, IConfigurationNode, IConfigurationPropertySchema, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { workbenchConfigurationNodeBase, Extensions as WorkbenchExtensions, IConfigurationMigrationRegistry, ConfigurationKeyValuePairs, ConfigurationMigration } from '../../../common/configuration.js';
-import { AccessibilitySignal } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { AccessibilityVoiceSettingId, ISpeechService, SPEECH_LANGUAGES } from '../../speech/common/speechService.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { Event } from '../../../../base/common/event.js';
-import { isDefined } from '../../../../base/common/types.js';
+import { localize } from '../../../../nls.ts';
+import { ConfigurationScope, Extensions, IConfigurationNode, IConfigurationPropertySchema, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { workbenchConfigurationNodeBase, Extensions as WorkbenchExtensions, IConfigurationMigrationRegistry, ConfigurationKeyValuePairs, ConfigurationMigration } from '../../../common/configuration.ts';
+import { AccessibilitySignal } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { AccessibilityVoiceSettingId, ISpeechService, SPEECH_LANGUAGES } from '../../speech/common/speechService.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { isDefined } from '../../../../base/common/types.ts';
 
 export const accessibilityHelpIsShown = new RawContextKey<boolean>('accessibilityHelpIsShown', false, true);
 export const accessibleViewIsShown = new RawContextKey<boolean>('accessibleViewIsShown', false, true);

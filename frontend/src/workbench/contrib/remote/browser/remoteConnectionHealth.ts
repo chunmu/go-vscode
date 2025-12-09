@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IRemoteAgentService, remoteConnectionLatencyMeasurer } from '../../../services/remote/common/remoteAgentService.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { localize } from '../../../../nls.js';
-import { isWeb } from '../../../../base/common/platform.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { getRemoteName } from '../../../../platform/remote/common/remoteHosts.js';
-import { IBannerService } from '../../../services/banner/browser/bannerService.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import Severity from '../../../../base/common/severity.js';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IRemoteAgentService, remoteConnectionLatencyMeasurer } from '../../../services/remote/common/remoteAgentService.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { localize } from '../../../../nls.ts';
+import { isWeb } from '../../../../base/common/platform.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { getRemoteName } from '../../../../platform/remote/common/remoteHosts.ts';
+import { IBannerService } from '../../../services/banner/browser/bannerService.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import Severity from '../../../../base/common/severity.ts';
 
 
 const REMOTE_UNSUPPORTED_CONNECTION_CHOICE_KEY = 'remote.unsupportedConnectionChoice';

@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { autorun, derived } from '../../../../base/common/observable.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { observableConfigValue } from '../../../../platform/observable/common/platformObservableUtils.js';
-import { ITelemetryService, TelemetryLevel, telemetryLevelEnabled } from '../../../../platform/telemetry/common/telemetry.js';
-import { AnnotatedDocuments } from './helpers/annotatedDocuments.js';
-import { EditTrackingFeature } from './telemetry/editSourceTrackingFeature.js';
-import { VSCodeWorkspace } from './helpers/vscodeObservableWorkspace.js';
-import { AiStatsFeature } from './editStats/aiStatsFeature.js';
-import { EDIT_TELEMETRY_SETTING_ID, AI_STATS_SETTING_ID } from './settingIds.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { autorun, derived } from '../../../../base/common/observable.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { observableConfigValue } from '../../../../platform/observable/common/platformObservableUtils.ts';
+import { ITelemetryService, TelemetryLevel, telemetryLevelEnabled } from '../../../../platform/telemetry/common/telemetry.ts';
+import { AnnotatedDocuments } from './helpers/annotatedDocuments.ts';
+import { EditTrackingFeature } from './telemetry/editSourceTrackingFeature.ts';
+import { VSCodeWorkspace } from './helpers/vscodeObservableWorkspace.ts';
+import { AiStatsFeature } from './editStats/aiStatsFeature.ts';
+import { EDIT_TELEMETRY_SETTING_ID, AI_STATS_SETTING_ID } from './settingIds.ts';
 
 export class EditTelemetryContribution extends Disposable {
 	constructor(

@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { Disposable, DisposableStore, IDisposable, dispose, toDisposable } from '../../../../base/common/lifecycle.js';
-import { IFilesConfigurationService, AutoSaveMode, AutoSaveDisabledReason } from '../../../services/filesConfiguration/common/filesConfigurationService.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { SaveReason, IEditorIdentifier, GroupIdentifier, EditorInputCapabilities } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { IWorkingCopyService } from '../../../services/workingCopy/common/workingCopyService.js';
-import { IWorkingCopy, WorkingCopyCapabilities } from '../../../services/workingCopy/common/workingCopy.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IMarkerService } from '../../../../platform/markers/common/markers.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { Disposable, DisposableStore, IDisposable, dispose, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { IFilesConfigurationService, AutoSaveMode, AutoSaveDisabledReason } from '../../../services/filesConfiguration/common/filesConfigurationService.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { SaveReason, IEditorIdentifier, GroupIdentifier, EditorInputCapabilities } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { IWorkingCopyService } from '../../../services/workingCopy/common/workingCopyService.ts';
+import { IWorkingCopy, WorkingCopyCapabilities } from '../../../services/workingCopy/common/workingCopy.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IMarkerService } from '../../../../platform/markers/common/markers.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
 
 export class EditorAutoSave extends Disposable implements IWorkbenchContribution {
 

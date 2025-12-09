@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { INotificationsModel, INotificationChangeEvent, NotificationChangeType, IStatusMessageChangeEvent, StatusMessageChangeType, IStatusMessageViewItem } from '../../../common/notifications.js';
-import { IStatusbarService, StatusbarAlignment, IStatusbarEntryAccessor, IStatusbarEntry } from '../../../services/statusbar/browser/statusbar.js';
-import { Disposable, IDisposable, dispose } from '../../../../base/common/lifecycle.js';
-import { HIDE_NOTIFICATIONS_CENTER, SHOW_NOTIFICATIONS_CENTER } from './notificationsCommands.js';
-import { localize } from '../../../../nls.js';
-import { INotificationService, NotificationsFilter } from '../../../../platform/notification/common/notification.js';
+import { INotificationsModel, INotificationChangeEvent, NotificationChangeType, IStatusMessageChangeEvent, StatusMessageChangeType, IStatusMessageViewItem } from '../../../common/notifications.ts';
+import { IStatusbarService, StatusbarAlignment, IStatusbarEntryAccessor, IStatusbarEntry } from '../../../services/statusbar/browser/statusbar.ts';
+import { Disposable, IDisposable, dispose } from '../../../../base/common/lifecycle.ts';
+import { HIDE_NOTIFICATIONS_CENTER, SHOW_NOTIFICATIONS_CENTER } from './notificationsCommands.ts';
+import { localize } from '../../../../nls.ts';
+import { INotificationService, NotificationsFilter } from '../../../../platform/notification/common/notification.ts';
 
 export class NotificationsStatus extends Disposable {
 

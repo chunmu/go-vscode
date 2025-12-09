@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IFileService, IFileStatResult, IFileStat } from '../../../../platform/files/common/files.js';
-import { IWorkspaceContextService, WorkbenchState, IWorkspace } from '../../../../platform/workspace/common/workspace.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { ITextFileService, ITextFileContent } from '../../../services/textfile/common/textfiles.js';
-import { URI } from '../../../../base/common/uri.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IWorkspaceTagsService, Tags } from '../common/workspaceTags.js';
-import { getHashedRemotesFromConfig } from './workspaceTags.js';
-import { splitLines } from '../../../../base/common/strings.js';
-import { MavenArtifactIdRegex, MavenDependenciesRegex, MavenDependencyRegex, GradleDependencyCompactRegex, GradleDependencyLooseRegex, MavenGroupIdRegex, JavaLibrariesToLookFor } from '../common/javaWorkspaceTags.js';
-import { hashAsync } from '../../../../base/common/hash.js';
+import { IFileService, IFileStatResult, IFileStat } from '../../../../platform/files/common/files.ts';
+import { IWorkspaceContextService, WorkbenchState, IWorkspace } from '../../../../platform/workspace/common/workspace.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { ITextFileService, ITextFileContent } from '../../../services/textfile/common/textfiles.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IWorkspaceTagsService, Tags } from '../common/workspaceTags.ts';
+import { getHashedRemotesFromConfig } from './workspaceTags.ts';
+import { splitLines } from '../../../../base/common/strings.ts';
+import { MavenArtifactIdRegex, MavenDependenciesRegex, MavenDependencyRegex, GradleDependencyCompactRegex, GradleDependencyLooseRegex, MavenGroupIdRegex, JavaLibrariesToLookFor } from '../common/javaWorkspaceTags.ts';
+import { hashAsync } from '../../../../base/common/hash.ts';
 
 const MetaModulesToLookFor = [
 	// Azure packages

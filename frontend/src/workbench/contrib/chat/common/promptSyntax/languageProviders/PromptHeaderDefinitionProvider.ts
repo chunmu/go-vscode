@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { Definition, DefinitionProvider } from '../../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { IChatModeService } from '../../chatModes.js';
-import { getPromptsTypeForLanguageId } from '../promptTypes.js';
-import { PromptHeaderAttributes } from '../promptFileParser.js';
-import { IPromptsService } from '../service/promptsService.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { Definition, DefinitionProvider } from '../../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { IChatModeService } from '../../chatModes.ts';
+import { getPromptsTypeForLanguageId } from '../promptTypes.ts';
+import { PromptHeaderAttributes } from '../promptFileParser.ts';
+import { IPromptsService } from '../service/promptsService.ts';
 
 export class PromptHeaderDefinitionProvider implements DefinitionProvider {
 	/**

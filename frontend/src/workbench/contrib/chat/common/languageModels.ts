@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { SequencerByKey } from '../../../../base/common/async.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Iterable } from '../../../../base/common/iterator.js';
-import { IJSONSchema, TypeFromJsonSchema } from '../../../../base/common/jsonSchema.js';
-import { DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { isFalsyOrWhitespace } from '../../../../base/common/strings.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { ChatEntitlement, IChatEntitlementService } from '../../../services/chat/common/chatEntitlementService.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.js';
-import { ChatContextKeys } from './chatContextKeys.js';
+import { SequencerByKey } from '../../../../base/common/async.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
+import { IJSONSchema, TypeFromJsonSchema } from '../../../../base/common/jsonSchema.ts';
+import { DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { isFalsyOrWhitespace } from '../../../../base/common/strings.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { ChatEntitlement, IChatEntitlementService } from '../../../services/chat/common/chatEntitlementService.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.ts';
+import { ChatContextKeys } from './chatContextKeys.ts';
 
 export const enum ChatMessageRole {
 	System,

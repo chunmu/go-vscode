@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { getWindow } from '../../../../base/browser/dom.js';
-import { raceCancellationError } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { matchesMimeType } from '../../../../base/common/dataTransfer.js';
-import { CancellationError } from '../../../../base/common/errors.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IJSONSchema, TypeFromJsonSchema } from '../../../../base/common/jsonSchema.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../base/common/observable.js';
-import { URI } from '../../../../base/common/uri.js';
-import { generateUuid } from '../../../../base/common/uuid.js';
-import * as nls from '../../../../nls.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IWebview, IWebviewService, WebviewContentPurpose } from '../../../contrib/webview/browser/webview.js';
-import { IExtensionService, isProposedApiEnabled } from '../../../services/extensions/common/extensions.js';
-import { ExtensionsRegistry, IExtensionPointUser } from '../../../services/extensions/common/extensionsRegistry.js';
+import { getWindow } from '../../../../base/browser/dom.ts';
+import { raceCancellationError } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { matchesMimeType } from '../../../../base/common/dataTransfer.ts';
+import { CancellationError } from '../../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IJSONSchema, TypeFromJsonSchema } from '../../../../base/common/jsonSchema.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../base/common/observable.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { generateUuid } from '../../../../base/common/uuid.ts';
+import * as nls from '../../../../nls.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IWebview, IWebviewService, WebviewContentPurpose } from '../../../contrib/webview/browser/webview.ts';
+import { IExtensionService, isProposedApiEnabled } from '../../../services/extensions/common/extensions.ts';
+import { ExtensionsRegistry, IExtensionPointUser } from '../../../services/extensions/common/extensionsRegistry.ts';
 
 export interface IChatOutputItemRenderer {
 	renderOutputPart(mime: string, data: Uint8Array, webview: IWebview, token: CancellationToken): Promise<void>;

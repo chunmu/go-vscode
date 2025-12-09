@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $, clearNode } from '../../../../../base/browser/dom.js';
-import { IChatThinkingPart } from '../../common/chatService.js';
-import { IChatContentPartRenderContext, IChatContentPart } from './chatContentParts.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { ThinkingDisplayMode } from '../../common/constants.js';
-import { ChatTreeItem } from '../chat.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.js';
-import { ChatCollapsibleContentPart } from './chatCollapsibleContentPart.js';
-import { localize } from '../../../../../nls.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { autorun } from '../../../../../base/common/observable.js';
+import { $, clearNode } from '../../../../../base/browser/dom.ts';
+import { IChatThinkingPart } from '../../common/chatService.ts';
+import { IChatContentPartRenderContext, IChatContentPart } from './chatContentParts.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { ThinkingDisplayMode } from '../../common/constants.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.ts';
+import { ChatCollapsibleContentPart } from './chatCollapsibleContentPart.ts';
+import { localize } from '../../../../../nls.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { autorun } from '../../../../../base/common/observable.ts';
 import './media/chatThinkingContent.css';
 
 

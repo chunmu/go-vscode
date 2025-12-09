@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer, decodeBase64 } from '../../../base/common/buffer.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { IBulkEditService, ResourceFileEdit, ResourceTextEdit } from '../../../editor/browser/services/bulkEditService.js';
-import { WorkspaceEdit } from '../../../editor/common/languages.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { IWorkspaceCellEditDto, IWorkspaceEditDto, IWorkspaceFileEditDto, MainContext, MainThreadBulkEditsShape } from '../common/extHost.protocol.js';
-import { ResourceNotebookCellEdit } from '../../contrib/bulkEdit/browser/bulkCellEdits.js';
-import { CellEditType } from '../../contrib/notebook/common/notebookCommon.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { VSBuffer, decodeBase64 } from '../../../base/common/buffer.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { IBulkEditService, ResourceFileEdit, ResourceTextEdit } from '../../../editor/browser/services/bulkEditService.ts';
+import { WorkspaceEdit } from '../../../editor/common/languages.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { IWorkspaceCellEditDto, IWorkspaceEditDto, IWorkspaceFileEditDto, MainContext, MainThreadBulkEditsShape } from '../common/extHost.protocol.ts';
+import { ResourceNotebookCellEdit } from '../../contrib/bulkEdit/browser/bulkCellEdits.ts';
+import { CellEditType } from '../../contrib/notebook/common/notebookCommon.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 
 
 @extHostNamedCustomer(MainContext.MainThreadBulkEdits)

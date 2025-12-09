@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/chatUsageWidget.css';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import * as DOM from '../../../../../base/browser/dom.js';
-import { localize } from '../../../../../nls.js';
-import { IChatEntitlementService, IQuotaSnapshot } from '../../../../services/chat/common/chatEntitlementService.js';
-import { language } from '../../../../../base/common/platform.js';
-import { safeIntl } from '../../../../../base/common/date.js';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import { localize } from '../../../../../nls.ts';
+import { IChatEntitlementService, IQuotaSnapshot } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { language } from '../../../../../base/common/platform.ts';
+import { safeIntl } from '../../../../../base/common/date.ts';
 
 const $ = DOM.$;
 

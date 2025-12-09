@@ -2,30 +2,30 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { addDisposableListener, Dimension } from '../../../../base/browser/dom.js';
-import * as aria from '../../../../base/browser/ui/aria/aria.js';
-import { MutableDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../base/common/observable.js';
-import { isEqual } from '../../../../base/common/resources.js';
-import { assertType } from '../../../../base/common/types.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { StableEditorBottomScrollState } from '../../../../editor/browser/stableEditorScroll.js';
-import { EditorOption } from '../../../../editor/common/config/editorOptions.js';
-import { Position } from '../../../../editor/common/core/position.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { ScrollType } from '../../../../editor/common/editorCommon.js';
-import { IOptions, ZoneWidget } from '../../../../editor/contrib/zoneWidget/browser/zoneWidget.js';
-import { localize } from '../../../../nls.js';
-import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IChatWidgetViewOptions } from '../../chat/browser/chat.js';
-import { IChatWidgetLocationOptions } from '../../chat/browser/chatWidget.js';
-import { ChatMode } from '../../chat/common/chatModes.js';
-import { isResponseVM } from '../../chat/common/chatViewModel.js';
-import { INotebookEditor } from '../../notebook/browser/notebookBrowser.js';
-import { ACTION_REGENERATE_RESPONSE, ACTION_REPORT_ISSUE, ACTION_TOGGLE_DIFF, CTX_INLINE_CHAT_OUTER_CURSOR_POSITION, MENU_INLINE_CHAT_SIDE, MENU_INLINE_CHAT_WIDGET_SECONDARY, MENU_INLINE_CHAT_WIDGET_STATUS } from '../common/inlineChat.js';
-import { EditorBasedInlineChatWidget } from './inlineChatWidget.js';
+import { addDisposableListener, Dimension } from '../../../../base/browser/dom.ts';
+import * as aria from '../../../../base/browser/ui/aria/aria.ts';
+import { MutableDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../base/common/observable.ts';
+import { isEqual } from '../../../../base/common/resources.ts';
+import { assertType } from '../../../../base/common/types.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { StableEditorBottomScrollState } from '../../../../editor/browser/stableEditorScroll.ts';
+import { EditorOption } from '../../../../editor/common/config/editorOptions.ts';
+import { Position } from '../../../../editor/common/core/position.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { ScrollType } from '../../../../editor/common/editorCommon.ts';
+import { IOptions, ZoneWidget } from '../../../../editor/contrib/zoneWidget/browser/zoneWidget.ts';
+import { localize } from '../../../../nls.ts';
+import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IChatWidgetViewOptions } from '../../chat/browser/chat.ts';
+import { IChatWidgetLocationOptions } from '../../chat/browser/chatWidget.ts';
+import { ChatMode } from '../../chat/common/chatModes.ts';
+import { isResponseVM } from '../../chat/common/chatViewModel.ts';
+import { INotebookEditor } from '../../notebook/browser/notebookBrowser.ts';
+import { ACTION_REGENERATE_RESPONSE, ACTION_REPORT_ISSUE, ACTION_TOGGLE_DIFF, CTX_INLINE_CHAT_OUTER_CURSOR_POSITION, MENU_INLINE_CHAT_SIDE, MENU_INLINE_CHAT_WIDGET_SECONDARY, MENU_INLINE_CHAT_WIDGET_STATUS } from '../common/inlineChat.ts';
+import { EditorBasedInlineChatWidget } from './inlineChatWidget.ts';
 
 export class InlineChatZoneWidget extends ZoneWidget {
 

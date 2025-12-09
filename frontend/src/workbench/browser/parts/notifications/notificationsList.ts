@@ -4,24 +4,24 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/notificationsList.css';
-import { localize } from '../../../../nls.js';
-import { $, getWindow, isAncestorOfActiveElement, trackFocus } from '../../../../base/browser/dom.js';
-import { WorkbenchList } from '../../../../platform/list/browser/listService.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IListAccessibilityProvider, IListOptions } from '../../../../base/browser/ui/list/listWidget.js';
-import { NOTIFICATIONS_BACKGROUND } from '../../../common/theme.js';
-import { INotificationViewItem } from '../../../common/notifications.js';
-import { NotificationsListDelegate, NotificationRenderer } from './notificationsViewer.js';
-import { CopyNotificationMessageAction } from './notificationsActions.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { assertReturnsAllDefined } from '../../../../base/common/types.js';
-import { NotificationFocusedContext } from '../../../common/contextkeys.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { AriaRole } from '../../../../base/browser/ui/aria/aria.js';
-import { NotificationActionRunner } from './notificationsCommands.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { withSeverityPrefix } from '../../../../platform/notification/common/notification.js';
+import { localize } from '../../../../nls.ts';
+import { $, getWindow, isAncestorOfActiveElement, trackFocus } from '../../../../base/browser/dom.ts';
+import { WorkbenchList } from '../../../../platform/list/browser/listService.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IListAccessibilityProvider, IListOptions } from '../../../../base/browser/ui/list/listWidget.ts';
+import { NOTIFICATIONS_BACKGROUND } from '../../../common/theme.ts';
+import { INotificationViewItem } from '../../../common/notifications.ts';
+import { NotificationsListDelegate, NotificationRenderer } from './notificationsViewer.ts';
+import { CopyNotificationMessageAction } from './notificationsActions.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { assertReturnsAllDefined } from '../../../../base/common/types.ts';
+import { NotificationFocusedContext } from '../../../common/contextkeys.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { AriaRole } from '../../../../base/browser/ui/aria/aria.ts';
+import { NotificationActionRunner } from './notificationsCommands.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { withSeverityPrefix } from '../../../../platform/notification/common/notification.ts';
 
 export interface INotificationsListOptions extends IListOptions<INotificationViewItem> {
 	readonly widgetAriaLabel?: string;

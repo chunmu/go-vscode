@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import type { Event } from '../../../../../../base/common/event.js';
-import type { IDisposable } from '../../../../../../base/common/lifecycle.js';
-import type * as webviewMessages from './webviewMessages.js';
-import type { NotebookCellMetadata } from '../../../common/notebookCommon.js';
+import type { Event } from '../../../../../../base/common/event.ts';
+import type { IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import type * as webviewMessages from './webviewMessages.ts';
+import type { NotebookCellMetadata } from '../../../common/notebookCommon.ts';
 import type * as rendererApi from 'vscode-notebook-renderer';
-import type { NotebookCellOutputTransferData } from '../../../../../../platform/dnd/browser/dnd.js';
+import type { NotebookCellOutputTransferData } from '../../../../../../platform/dnd/browser/dnd.ts';
 
 // !! IMPORTANT !! ----------------------------------------------------------------------------------
 // import { RenderOutputType } from 'vs/workbench/contrib/notebook/browser/notebookBrowser';

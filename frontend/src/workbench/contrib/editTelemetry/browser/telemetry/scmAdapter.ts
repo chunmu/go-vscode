@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { WeakCachedFunction } from '../../../../../base/common/cache.js';
-import { Event } from '../../../../../base/common/event.js';
-import { observableSignalFromEvent, IReader, IObservable, derived } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ISCMRepository, ISCMService } from '../../../scm/common/scm.js';
+import { WeakCachedFunction } from '../../../../../base/common/cache.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { observableSignalFromEvent, IReader, IObservable, derived } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ISCMRepository, ISCMService } from '../../../scm/common/scm.ts';
 
 export class ScmAdapter {
 	private readonly _repos = new WeakCachedFunction((repo: ISCMRepository) => new ScmRepoAdapter(repo));

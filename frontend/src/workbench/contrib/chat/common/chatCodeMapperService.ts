@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { TextEdit } from '../../../../editor/common/languages.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { ICellEditOperation } from '../../notebook/common/notebookCommon.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { TextEdit } from '../../../../editor/common/languages.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ICellEditOperation } from '../../notebook/common/notebookCommon.ts';
 
 export interface ICodeMapperResponse {
 	textEdit: (resource: URI, textEdit: TextEdit[]) => void;

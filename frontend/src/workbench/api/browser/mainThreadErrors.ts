@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { SerializedError, onUnexpectedError, transformErrorFromSerialization } from '../../../base/common/errors.js';
-import { extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { MainContext, MainThreadErrorsShape } from '../common/extHost.protocol.js';
+import { SerializedError, onUnexpectedError, transformErrorFromSerialization } from '../../../base/common/errors.ts';
+import { extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { MainContext, MainThreadErrorsShape } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadErrors)
 export class MainThreadErrors implements MainThreadErrorsShape {

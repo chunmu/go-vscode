@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isSafari, setFullscreen } from '../../base/browser/browser.js';
-import { addDisposableListener, EventHelper, EventType, getActiveWindow, getWindow, getWindowById, getWindows, getWindowsCount, windowOpenNoOpener, windowOpenPopup, windowOpenWithSuccess } from '../../base/browser/dom.js';
-import { DomEmitter } from '../../base/browser/event.js';
-import { HidDeviceData, requestHidDevice, requestSerialPort, requestUsbDevice, SerialPortData, UsbDeviceData } from '../../base/browser/deviceAccess.js';
-import { timeout } from '../../base/common/async.js';
-import { Event } from '../../base/common/event.js';
-import { Disposable, IDisposable, dispose, toDisposable } from '../../base/common/lifecycle.js';
-import { matchesScheme, Schemas } from '../../base/common/network.js';
-import { isIOS, isMacintosh } from '../../base/common/platform.js';
-import Severity from '../../base/common/severity.js';
-import { URI } from '../../base/common/uri.js';
-import { localize } from '../../nls.js';
-import { CommandsRegistry } from '../../platform/commands/common/commands.js';
-import { IDialogService, IPromptButton } from '../../platform/dialogs/common/dialogs.js';
-import { IInstantiationService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../platform/label/common/label.js';
-import { IOpenerService } from '../../platform/opener/common/opener.js';
-import { IProductService } from '../../platform/product/common/productService.js';
-import { IBrowserWorkbenchEnvironmentService } from '../services/environment/browser/environmentService.js';
-import { IWorkbenchLayoutService } from '../services/layout/browser/layoutService.js';
-import { BrowserLifecycleService } from '../services/lifecycle/browser/lifecycleService.js';
-import { ILifecycleService, ShutdownReason } from '../services/lifecycle/common/lifecycle.js';
-import { IHostService } from '../services/host/browser/host.js';
-import { registerWindowDriver } from '../services/driver/browser/driver.js';
-import { CodeWindow, isAuxiliaryWindow, mainWindow } from '../../base/browser/window.js';
-import { createSingleCallFunction } from '../../base/common/functional.js';
-import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
-import { IWorkbenchEnvironmentService } from '../services/environment/common/environmentService.js';
-import { MarkdownString } from '../../base/common/htmlContent.js';
-import { IContextMenuService } from '../../platform/contextview/browser/contextView.js';
+import { isSafari, setFullscreen } from '../../base/browser/browser.ts';
+import { addDisposableListener, EventHelper, EventType, getActiveWindow, getWindow, getWindowById, getWindows, getWindowsCount, windowOpenNoOpener, windowOpenPopup, windowOpenWithSuccess } from '../../base/browser/dom.ts';
+import { DomEmitter } from '../../base/browser/event.ts';
+import { HidDeviceData, requestHidDevice, requestSerialPort, requestUsbDevice, SerialPortData, UsbDeviceData } from '../../base/browser/deviceAccess.ts';
+import { timeout } from '../../base/common/async.ts';
+import { Event } from '../../base/common/event.ts';
+import { Disposable, IDisposable, dispose, toDisposable } from '../../base/common/lifecycle.ts';
+import { matchesScheme, Schemas } from '../../base/common/network.ts';
+import { isIOS, isMacintosh } from '../../base/common/platform.ts';
+import Severity from '../../base/common/severity.ts';
+import { URI } from '../../base/common/uri.ts';
+import { localize } from '../../nls.ts';
+import { CommandsRegistry } from '../../platform/commands/common/commands.ts';
+import { IDialogService, IPromptButton } from '../../platform/dialogs/common/dialogs.ts';
+import { IInstantiationService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../platform/label/common/label.ts';
+import { IOpenerService } from '../../platform/opener/common/opener.ts';
+import { IProductService } from '../../platform/product/common/productService.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../services/environment/browser/environmentService.ts';
+import { IWorkbenchLayoutService } from '../services/layout/browser/layoutService.ts';
+import { BrowserLifecycleService } from '../services/lifecycle/browser/lifecycleService.ts';
+import { ILifecycleService, ShutdownReason } from '../services/lifecycle/common/lifecycle.ts';
+import { IHostService } from '../services/host/browser/host.ts';
+import { registerWindowDriver } from '../services/driver/browser/driver.ts';
+import { CodeWindow, isAuxiliaryWindow, mainWindow } from '../../base/browser/window.ts';
+import { createSingleCallFunction } from '../../base/common/functional.ts';
+import { IConfigurationService } from '../../platform/configuration/common/configuration.ts';
+import { IWorkbenchEnvironmentService } from '../services/environment/common/environmentService.ts';
+import { MarkdownString } from '../../base/common/htmlContent.ts';
+import { IContextMenuService } from '../../platform/contextview/browser/contextView.ts';
 
 export abstract class BaseWindow extends Disposable {
 

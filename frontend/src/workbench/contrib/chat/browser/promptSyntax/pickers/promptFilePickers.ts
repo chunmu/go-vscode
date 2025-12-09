@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../../../nls.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { IPromptPath, IPromptsService, PromptsStorage } from '../../../common/promptSyntax/service/promptsService.js';
-import { dirname, extUri, joinPath } from '../../../../../../base/common/resources.js';
-import { DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { IOpenerService } from '../../../../../../platform/opener/common/opener.js';
-import { IDialogService } from '../../../../../../platform/dialogs/common/dialogs.js';
-import { ICommandService } from '../../../../../../platform/commands/common/commands.js';
-import { getCleanPromptName } from '../../../common/promptSyntax/config/promptFileLocations.js';
-import { PromptsType, INSTRUCTIONS_DOCUMENTATION_URL, AGENT_DOCUMENTATION_URL, PROMPT_DOCUMENTATION_URL } from '../../../common/promptSyntax/promptTypes.js';
-import { NEW_PROMPT_COMMAND_ID, NEW_INSTRUCTIONS_COMMAND_ID, NEW_AGENT_COMMAND_ID } from '../newPromptFileActions.js';
-import { IKeyMods, IQuickInputButton, IQuickInputService, IQuickPick, IQuickPickItem, IQuickPickItemButtonEvent, IQuickPickSeparator } from '../../../../../../platform/quickinput/common/quickInput.js';
-import { askForPromptFileName } from './askForPromptName.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { CancellationToken, CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { askForPromptSourceFolder } from './askForPromptSourceFolder.js';
-import { ILabelService } from '../../../../../../platform/label/common/label.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { PromptsConfig } from '../../../common/promptSyntax/config/config.js';
-import { ResourceSet } from '../../../../../../base/common/map.js';
-import { PromptFileRewriter } from '../promptFileRewriter.js';
+import { localize } from '../../../../../../nls.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { IPromptPath, IPromptsService, PromptsStorage } from '../../../common/promptSyntax/service/promptsService.ts';
+import { dirname, extUri, joinPath } from '../../../../../../base/common/resources.ts';
+import { DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { IOpenerService } from '../../../../../../platform/opener/common/opener.ts';
+import { IDialogService } from '../../../../../../platform/dialogs/common/dialogs.ts';
+import { ICommandService } from '../../../../../../platform/commands/common/commands.ts';
+import { getCleanPromptName } from '../../../common/promptSyntax/config/promptFileLocations.ts';
+import { PromptsType, INSTRUCTIONS_DOCUMENTATION_URL, AGENT_DOCUMENTATION_URL, PROMPT_DOCUMENTATION_URL } from '../../../common/promptSyntax/promptTypes.ts';
+import { NEW_PROMPT_COMMAND_ID, NEW_INSTRUCTIONS_COMMAND_ID, NEW_AGENT_COMMAND_ID } from '../newPromptFileActions.ts';
+import { IKeyMods, IQuickInputButton, IQuickInputService, IQuickPick, IQuickPickItem, IQuickPickItemButtonEvent, IQuickPickSeparator } from '../../../../../../platform/quickinput/common/quickInput.ts';
+import { askForPromptFileName } from './askForPromptName.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { askForPromptSourceFolder } from './askForPromptSourceFolder.ts';
+import { ILabelService } from '../../../../../../platform/label/common/label.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { PromptsConfig } from '../../../common/promptSyntax/config/config.ts';
+import { ResourceSet } from '../../../../../../base/common/map.ts';
+import { PromptFileRewriter } from '../promptFileRewriter.ts';
 
 /**
  * Options for the {@link askToSelectInstructions} function.

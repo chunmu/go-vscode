@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../nls.js';
-import { hasWorkspaceFileExtension, IWorkspaceContextService } from '../../../platform/workspace/common/workspace.js';
-import { IWorkspaceEditingService } from '../../services/workspaces/common/workspaceEditing.js';
-import { dirname } from '../../../base/common/resources.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { mnemonicButtonLabel } from '../../../base/common/labels.js';
-import { CommandsRegistry, ICommandService } from '../../../platform/commands/common/commands.js';
-import { FileKind } from '../../../platform/files/common/files.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../platform/label/common/label.js';
-import { IQuickInputService, IPickOptions, IQuickPickItem } from '../../../platform/quickinput/common/quickInput.js';
-import { getIconClasses } from '../../../editor/common/services/getIconClasses.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../editor/common/languages/language.js';
-import { IFileDialogService, IPickAndOpenOptions } from '../../../platform/dialogs/common/dialogs.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { Schemas } from '../../../base/common/network.js';
-import { IFileToOpen, IFolderToOpen, IOpenEmptyWindowOptions, IOpenWindowOptions, IWorkspaceToOpen } from '../../../platform/window/common/window.js';
-import { IRecent, IWorkspacesService } from '../../../platform/workspaces/common/workspaces.js';
-import { IPathService } from '../../services/path/common/pathService.js';
-import { ILocalizedString } from '../../../platform/action/common/action.js';
+import { localize, localize2 } from '../../../nls.ts';
+import { hasWorkspaceFileExtension, IWorkspaceContextService } from '../../../platform/workspace/common/workspace.ts';
+import { IWorkspaceEditingService } from '../../services/workspaces/common/workspaceEditing.ts';
+import { dirname } from '../../../base/common/resources.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { mnemonicButtonLabel } from '../../../base/common/labels.ts';
+import { CommandsRegistry, ICommandService } from '../../../platform/commands/common/commands.ts';
+import { FileKind } from '../../../platform/files/common/files.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../platform/label/common/label.ts';
+import { IQuickInputService, IPickOptions, IQuickPickItem } from '../../../platform/quickinput/common/quickInput.ts';
+import { getIconClasses } from '../../../editor/common/services/getIconClasses.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../editor/common/languages/language.ts';
+import { IFileDialogService, IPickAndOpenOptions } from '../../../platform/dialogs/common/dialogs.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { IFileToOpen, IFolderToOpen, IOpenEmptyWindowOptions, IOpenWindowOptions, IWorkspaceToOpen } from '../../../platform/window/common/window.ts';
+import { IRecent, IWorkspacesService } from '../../../platform/workspaces/common/workspaces.ts';
+import { IPathService } from '../../services/path/common/pathService.ts';
+import { ILocalizedString } from '../../../platform/action/common/action.ts';
 
 export const ADD_ROOT_FOLDER_COMMAND_ID = 'addRootFolder';
 export const ADD_ROOT_FOLDER_LABEL: ILocalizedString = localize2('addFolderToWorkspace', 'Add Folder to Workspace...');

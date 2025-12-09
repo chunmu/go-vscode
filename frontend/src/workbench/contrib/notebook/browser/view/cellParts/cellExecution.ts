@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { disposableTimeout } from '../../../../../../base/common/async.js';
-import { DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { clamp } from '../../../../../../base/common/numbers.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { NotebookCellInternalMetadata } from '../../../common/notebookCommon.js';
-import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
-import { executingStateIcon } from '../../notebookIcons.js';
-import { renderLabelWithIcons } from '../../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.js';
-import { hasKey } from '../../../../../../base/common/types.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { disposableTimeout } from '../../../../../../base/common/async.ts';
+import { DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { clamp } from '../../../../../../base/common/numbers.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { NotebookCellInternalMetadata } from '../../../common/notebookCommon.ts';
+import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
+import { executingStateIcon } from '../../notebookIcons.ts';
+import { renderLabelWithIcons } from '../../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.ts';
+import { hasKey } from '../../../../../../base/common/types.ts';
 
 const UPDATE_EXECUTION_ORDER_GRACE_PERIOD = 200;
 

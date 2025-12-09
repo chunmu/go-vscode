@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { adjustCellDiffAndOriginalModelBasedOnCellAddDelete, adjustCellDiffAndOriginalModelBasedOnCellMovements, adjustCellDiffForKeepingADeletedCell, adjustCellDiffForKeepingAnInsertedCell, adjustCellDiffForRevertingADeletedCell, adjustCellDiffForRevertingAnInsertedCell } from '../../browser/chatEditing/notebook/helpers.js';
-import { ICellDiffInfo } from '../../browser/chatEditing/notebook/notebookCellChanges.js';
-import { nullDocumentDiff } from '../../../../../editor/common/diff/documentDiffProvider.js';
-import { ObservablePromise, observableValue } from '../../../../../base/common/observable.js';
-import { CellEditType, CellKind, ICell, ICellEditOperation, NotebookCellsChangeType } from '../../../notebook/common/notebookCommon.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { hash } from '../../../../../base/common/hash.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { adjustCellDiffAndOriginalModelBasedOnCellAddDelete, adjustCellDiffAndOriginalModelBasedOnCellMovements, adjustCellDiffForKeepingADeletedCell, adjustCellDiffForKeepingAnInsertedCell, adjustCellDiffForRevertingADeletedCell, adjustCellDiffForRevertingAnInsertedCell } from '../../browser/chatEditing/notebook/helpers.ts';
+import { ICellDiffInfo } from '../../browser/chatEditing/notebook/notebookCellChanges.ts';
+import { nullDocumentDiff } from '../../../../../editor/common/diff/documentDiffProvider.ts';
+import { ObservablePromise, observableValue } from '../../../../../base/common/observable.ts';
+import { CellEditType, CellKind, ICell, ICellEditOperation, NotebookCellsChangeType } from '../../../notebook/common/notebookCommon.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { hash } from '../../../../../base/common/hash.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
 
 suite('ChatEditingModifiedNotebookEntry', function () {
 	suite('Keep Inserted Cell', function () {

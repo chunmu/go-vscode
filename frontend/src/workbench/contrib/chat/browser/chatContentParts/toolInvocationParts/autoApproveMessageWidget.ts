@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IMarkdownString } from '../../../../../../base/common/htmlContent.js';
+import { IMarkdownString } from '../../../../../../base/common/htmlContent.ts';
 
 export class AutoApproveMessageWidget {
 	constructor(public readonly message: IMarkdownString) { }

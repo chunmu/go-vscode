@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { type Terminal, type TerminalShellExecution, type TerminalShellExecutionCommandLine, type TerminalShellExecutionStartEvent } from 'vscode';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.js';
-import { InternalTerminalShellIntegration } from '../../common/extHostTerminalShellIntegration.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { TerminalShellExecutionCommandLineConfidence } from '../../common/extHostTypes.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.ts';
+import { InternalTerminalShellIntegration } from '../../common/extHostTerminalShellIntegration.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { TerminalShellExecutionCommandLineConfidence } from '../../common/extHostTypes.ts';
 import { deepStrictEqual, notStrictEqual, strictEqual } from 'assert';
-import type { URI } from '../../../../base/common/uri.js';
-import { DeferredPromise } from '../../../../base/common/async.js';
+import type { URI } from '../../../../base/common/uri.ts';
+import { DeferredPromise } from '../../../../base/common/async.ts';
 
 function cmdLine(value: string): TerminalShellExecutionCommandLine {
 	return Object.freeze({

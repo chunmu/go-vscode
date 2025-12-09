@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { renderIcon } from '../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { raceCancellationError } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import * as nls from '../../../../nls.js';
-import { IContextKeyService, IScopedContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { editorBackground, editorForeground, inputBackground } from '../../../../platform/theme/common/colorRegistry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { EditorPane } from '../../../browser/parts/editor/editorPane.js';
-import { IEditorOpenContext } from '../../../common/editor.js';
-import { EDITOR_DRAG_AND_DROP_BACKGROUND } from '../../../common/theme.js';
-import { IEditorGroup } from '../../../services/editor/common/editorGroupsService.js';
-import { ChatContextKeys } from '../common/chatContextKeys.js';
-import { IChatModel, IChatModelInputState, IExportableChatData, ISerializableChatData } from '../common/chatModel.js';
-import { IChatService } from '../common/chatService.js';
-import { IChatSessionsService, localChatSessionType } from '../common/chatSessionsService.js';
-import { ChatAgentLocation, ChatModeKind } from '../common/constants.js';
-import { clearChatEditor } from './actions/chatClear.js';
-import { ChatEditorInput } from './chatEditorInput.js';
-import { ChatWidget } from './chatWidget.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { renderIcon } from '../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { raceCancellationError } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import * as nls from '../../../../nls.ts';
+import { IContextKeyService, IScopedContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { editorBackground, editorForeground, inputBackground } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { EditorPane } from '../../../browser/parts/editor/editorPane.ts';
+import { IEditorOpenContext } from '../../../common/editor.ts';
+import { EDITOR_DRAG_AND_DROP_BACKGROUND } from '../../../common/theme.ts';
+import { IEditorGroup } from '../../../services/editor/common/editorGroupsService.ts';
+import { ChatContextKeys } from '../common/chatContextKeys.ts';
+import { IChatModel, IChatModelInputState, IExportableChatData, ISerializableChatData } from '../common/chatModel.ts';
+import { IChatService } from '../common/chatService.ts';
+import { IChatSessionsService, localChatSessionType } from '../common/chatSessionsService.ts';
+import { ChatAgentLocation, ChatModeKind } from '../common/constants.ts';
+import { clearChatEditor } from './actions/chatClear.ts';
+import { ChatEditorInput } from './chatEditorInput.ts';
+import { ChatWidget } from './chatWidget.ts';
 
 export interface IChatEditorOptions extends IEditorOptions {
 	/**

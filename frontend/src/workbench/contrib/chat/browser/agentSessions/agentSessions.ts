@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../../nls.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localChatSessionType } from '../../common/chatSessionsService.js';
+import { localize } from '../../../../../nls.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localChatSessionType } from '../../common/chatSessionsService.ts';
 
 export const AGENT_SESSIONS_VIEW_CONTAINER_ID = 'workbench.viewContainer.agentSessions';
 export const AGENT_SESSIONS_VIEW_ID = 'workbench.view.agentSessions';

@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { IAction } from '../../../../base/common/actions.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import * as dom from '../../../../base/browser/dom.js';
-import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
-import { SelectBox, ISelectOptionItem, SeparatorSelectOption } from '../../../../base/browser/ui/selectBox/selectBox.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IDebugService, IDebugSession, IDebugConfiguration, IConfig, ILaunch, State } from '../common/debug.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { selectBorder, selectBackground, asCssVariable } from '../../../../platform/theme/common/colorRegistry.js';
-import { IContextViewService } from '../../../../platform/contextview/browser/contextView.js';
-import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.js';
-import { IDisposable, dispose } from '../../../../base/common/lifecycle.js';
-import { ADD_CONFIGURATION_ID } from './debugCommands.js';
-import { BaseActionViewItem, IBaseActionViewItemOptions, SelectActionViewItem } from '../../../../base/browser/ui/actionbar/actionViewItems.js';
-import { debugStart } from './debugIcons.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { defaultSelectBoxStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { AccessibilityCommandId } from '../../accessibility/common/accessibilityCommands.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { hasNativeContextMenu } from '../../../../platform/window/common/window.js';
-import { Gesture, EventType as TouchEventType } from '../../../../base/browser/touch.js';
+import * as nls from '../../../../nls.ts';
+import { IAction } from '../../../../base/common/actions.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import * as dom from '../../../../base/browser/dom.ts';
+import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.ts';
+import { SelectBox, ISelectOptionItem, SeparatorSelectOption } from '../../../../base/browser/ui/selectBox/selectBox.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IDebugService, IDebugSession, IDebugConfiguration, IConfig, ILaunch, State } from '../common/debug.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { selectBorder, selectBackground, asCssVariable } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IContextViewService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.ts';
+import { IDisposable, dispose } from '../../../../base/common/lifecycle.ts';
+import { ADD_CONFIGURATION_ID } from './debugCommands.ts';
+import { BaseActionViewItem, IBaseActionViewItemOptions, SelectActionViewItem } from '../../../../base/browser/ui/actionbar/actionViewItems.ts';
+import { debugStart } from './debugIcons.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { defaultSelectBoxStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { AccessibilityCommandId } from '../../accessibility/common/accessibilityCommands.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { hasNativeContextMenu } from '../../../../platform/window/common/window.ts';
+import { Gesture, EventType as TouchEventType } from '../../../../base/browser/touch.ts';
 
 const $ = dom.$;
 

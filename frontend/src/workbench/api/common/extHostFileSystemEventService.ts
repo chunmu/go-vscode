@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event, AsyncEmitter, IWaitUntil, IWaitUntilData } from '../../../base/common/event.js';
-import { GLOBSTAR, GLOB_SPLIT, IRelativePattern, parse } from '../../../base/common/glob.js';
-import { URI } from '../../../base/common/uri.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
+import { Emitter, Event, AsyncEmitter, IWaitUntil, IWaitUntilData } from '../../../base/common/event.ts';
+import { GLOBSTAR, GLOB_SPLIT, IRelativePattern, parse } from '../../../base/common/glob.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
 import type * as vscode from 'vscode';
-import { ExtHostFileSystemEventServiceShape, FileSystemEvents, IMainContext, SourceTargetPair, IWorkspaceEditDto, IWillRunFileOperationParticipation, MainContext, IRelativePatternDto } from './extHost.protocol.js';
-import * as typeConverter from './extHostTypeConverters.js';
-import { Disposable, WorkspaceEdit } from './extHostTypes.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { FileChangeFilter, FileOperation, IGlobPatterns } from '../../../platform/files/common/files.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IExtHostWorkspace } from './extHostWorkspace.js';
-import { Lazy } from '../../../base/common/lazy.js';
-import { ExtHostConfigProvider } from './extHostConfiguration.js';
-import { rtrim } from '../../../base/common/strings.js';
-import { normalizeWatcherPattern } from '../../../platform/files/common/watcher.js';
+import { ExtHostFileSystemEventServiceShape, FileSystemEvents, IMainContext, SourceTargetPair, IWorkspaceEditDto, IWillRunFileOperationParticipation, MainContext, IRelativePatternDto } from './extHost.protocol.ts';
+import * as typeConverter from './extHostTypeConverters.ts';
+import { Disposable, WorkspaceEdit } from './extHostTypes.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { FileChangeFilter, FileOperation, IGlobPatterns } from '../../../platform/files/common/files.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IExtHostWorkspace } from './extHostWorkspace.ts';
+import { Lazy } from '../../../base/common/lazy.ts';
+import { ExtHostConfigProvider } from './extHostConfiguration.ts';
+import { rtrim } from '../../../base/common/strings.ts';
+import { normalizeWatcherPattern } from '../../../platform/files/common/watcher.ts';
 
 export interface FileSystemWatcherCreateOptions {
 	readonly ignoreCreateEvents?: boolean;

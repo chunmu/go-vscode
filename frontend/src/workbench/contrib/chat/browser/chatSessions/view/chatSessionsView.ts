@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import * as nls from '../../../../../../nls.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.js';
-import { SyncDescriptor } from '../../../../../../platform/instantiation/common/descriptors.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../../../platform/log/common/log.js';
-import { IProductService } from '../../../../../../platform/product/common/productService.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { IStorageService } from '../../../../../../platform/storage/common/storage.js';
-import { ITelemetryService } from '../../../../../../platform/telemetry/common/telemetry.js';
-import { registerIcon } from '../../../../../../platform/theme/common/iconRegistry.js';
-import { IThemeService } from '../../../../../../platform/theme/common/themeService.js';
-import { IWorkspaceContextService } from '../../../../../../platform/workspace/common/workspace.js';
-import { ViewPaneContainer } from '../../../../../browser/parts/views/viewPaneContainer.js';
-import { IWorkbenchContribution } from '../../../../../common/contributions.js';
-import { Extensions, IViewContainersRegistry, IViewDescriptor, IViewDescriptorService, IViewsRegistry, ViewContainerLocation } from '../../../../../common/views.js';
-import { IExtensionService } from '../../../../../services/extensions/common/extensions.js';
-import { IWorkbenchLayoutService } from '../../../../../services/layout/browser/layoutService.js';
-import { ChatContextKeyExprs } from '../../../common/chatContextKeys.js';
-import { IChatSessionItemProvider, IChatSessionsExtensionPoint, IChatSessionsService, localChatSessionType } from '../../../common/chatSessionsService.js';
-import { LEGACY_AGENT_SESSIONS_VIEW_ID } from '../../../common/constants.js';
-import { ACTION_ID_OPEN_CHAT } from '../../actions/chatActions.js';
-import { ChatSessionTracker } from '../chatSessionTracker.js';
-import { SessionsViewPane } from './sessionsViewPane.js';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import * as nls from '../../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.ts';
+import { SyncDescriptor } from '../../../../../../platform/instantiation/common/descriptors.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../../../platform/log/common/log.ts';
+import { IProductService } from '../../../../../../platform/product/common/productService.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { IStorageService } from '../../../../../../platform/storage/common/storage.ts';
+import { ITelemetryService } from '../../../../../../platform/telemetry/common/telemetry.ts';
+import { registerIcon } from '../../../../../../platform/theme/common/iconRegistry.ts';
+import { IThemeService } from '../../../../../../platform/theme/common/themeService.ts';
+import { IWorkspaceContextService } from '../../../../../../platform/workspace/common/workspace.ts';
+import { ViewPaneContainer } from '../../../../../browser/parts/views/viewPaneContainer.ts';
+import { IWorkbenchContribution } from '../../../../../common/contributions.ts';
+import { Extensions, IViewContainersRegistry, IViewDescriptor, IViewDescriptorService, IViewsRegistry, ViewContainerLocation } from '../../../../../common/views.ts';
+import { IExtensionService } from '../../../../../services/extensions/common/extensions.ts';
+import { IWorkbenchLayoutService } from '../../../../../services/layout/browser/layoutService.ts';
+import { ChatContextKeyExprs } from '../../../common/chatContextKeys.ts';
+import { IChatSessionItemProvider, IChatSessionsExtensionPoint, IChatSessionsService, localChatSessionType } from '../../../common/chatSessionsService.ts';
+import { LEGACY_AGENT_SESSIONS_VIEW_ID } from '../../../common/constants.ts';
+import { ACTION_ID_OPEN_CHAT } from '../../actions/chatActions.ts';
+import { ChatSessionTracker } from '../chatSessionTracker.ts';
+import { SessionsViewPane } from './sessionsViewPane.ts';
 
 export class ChatSessionsView extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'workbench.contrib.chatSessionsView';

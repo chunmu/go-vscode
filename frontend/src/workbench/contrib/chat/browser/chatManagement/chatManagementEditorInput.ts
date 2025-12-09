@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import * as nls from '../../../../../nls.js';
-import { registerIcon } from '../../../../../platform/theme/common/iconRegistry.js';
-import { IUntypedEditorInput } from '../../../../common/editor.js';
-import { EditorInput } from '../../../../common/editor/editorInput.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import * as nls from '../../../../../nls.ts';
+import { registerIcon } from '../../../../../platform/theme/common/iconRegistry.ts';
+import { IUntypedEditorInput } from '../../../../common/editor.ts';
+import { EditorInput } from '../../../../common/editor/editorInput.ts';
 
 const ChatManagementEditorIcon = registerIcon('ai-management-editor-label-icon', Codicon.copilot, nls.localize('aiManagementEditorLabelIcon', 'Icon of the AI Management editor label.'));
 const ModelsManagementEditorIcon = registerIcon('models-management-editor-label-icon', Codicon.settings, nls.localize('modelsManagementEditorLabelIcon', 'Icon of the Models Management editor label.'));

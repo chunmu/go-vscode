@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../nls.js';
-import { EditorResourceAccessor, EditorExtensions, SideBySideEditor, IEditorDescriptor as ICommonEditorDescriptor, EditorCloseContext, IWillInstantiateEditorPaneEvent } from '../common/editor.js';
-import { EditorInput } from '../common/editor/editorInput.js';
-import { SyncDescriptor } from '../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { EditorPane } from './parts/editor/editorPane.js';
-import { IConstructorSignature, IInstantiationService, BrandedService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.js';
-import { IDisposable, toDisposable } from '../../base/common/lifecycle.js';
-import { Promises } from '../../base/common/async.js';
-import { IEditorService } from '../services/editor/common/editorService.js';
-import { IUriIdentityService } from '../../platform/uriIdentity/common/uriIdentity.js';
-import { IWorkingCopyService } from '../services/workingCopy/common/workingCopyService.js';
-import { URI } from '../../base/common/uri.js';
-import { Schemas } from '../../base/common/network.js';
-import { IEditorGroup } from '../services/editor/common/editorGroupsService.js';
-import { Iterable } from '../../base/common/iterator.js';
-import { Emitter } from '../../base/common/event.js';
+import { localize } from '../../nls.ts';
+import { EditorResourceAccessor, EditorExtensions, SideBySideEditor, IEditorDescriptor as ICommonEditorDescriptor, EditorCloseContext, IWillInstantiateEditorPaneEvent } from '../common/editor.ts';
+import { EditorInput } from '../common/editor/editorInput.ts';
+import { SyncDescriptor } from '../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { EditorPane } from './parts/editor/editorPane.ts';
+import { IConstructorSignature, IInstantiationService, BrandedService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.ts';
+import { IDisposable, toDisposable } from '../../base/common/lifecycle.ts';
+import { Promises } from '../../base/common/async.ts';
+import { IEditorService } from '../services/editor/common/editorService.ts';
+import { IUriIdentityService } from '../../platform/uriIdentity/common/uriIdentity.ts';
+import { IWorkingCopyService } from '../services/workingCopy/common/workingCopyService.ts';
+import { URI } from '../../base/common/uri.ts';
+import { Schemas } from '../../base/common/network.ts';
+import { IEditorGroup } from '../services/editor/common/editorGroupsService.ts';
+import { Iterable } from '../../base/common/iterator.ts';
+import { Emitter } from '../../base/common/event.ts';
 
 //#region Editor Pane Registry
 

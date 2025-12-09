@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDiffEditorConstructionOptions } from '../../../../../editor/browser/editorBrowser.js';
-import { IEditorOptions } from '../../../../../editor/common/config/editorOptions.js';
+import { IDiffEditorConstructionOptions } from '../../../../../editor/browser/editorBrowser.ts';
+import { IEditorOptions } from '../../../../../editor/common/config/editorOptions.ts';
 
 /**
  * Do not leave at 12, when at 12 and we have whitespace and only one line,

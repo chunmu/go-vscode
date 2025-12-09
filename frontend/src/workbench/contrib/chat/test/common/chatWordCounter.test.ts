@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { getNWords, IWordCountResult } from '../../common/chatWordCounter.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { getNWords, IWordCountResult } from '../../common/chatWordCounter.ts';
 
 suite('ChatWordCounter', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

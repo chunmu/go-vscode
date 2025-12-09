@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IDiffElementLayoutInfo } from './notebookDiffEditorBrowser.js';
-import { NotebookLayoutChangeEvent, NotebookLayoutInfo } from '../notebookViewEvents.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IDiffElementLayoutInfo } from './notebookDiffEditorBrowser.ts';
+import { NotebookLayoutChangeEvent, NotebookLayoutInfo } from '../notebookViewEvents.ts';
 
 export enum NotebookDiffViewEventType {
 	LayoutChanged = 1,

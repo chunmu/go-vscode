@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Separator } from '../../../../../../base/common/actions.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../../nls.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { ChatContextKeys } from '../../../common/chatContextKeys.js';
-import { ConfirmedReason, IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.js';
-import { ILanguageModelToolsService } from '../../../common/languageModelToolsService.js';
-import { IChatWidgetService } from '../../chat.js';
-import { ChatCustomConfirmationWidget, IChatConfirmationButton } from '../chatConfirmationWidget.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
+import { Separator } from '../../../../../../base/common/actions.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { ChatContextKeys } from '../../../common/chatContextKeys.ts';
+import { ConfirmedReason, IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.ts';
+import { ILanguageModelToolsService } from '../../../common/languageModelToolsService.ts';
+import { IChatWidgetService } from '../../chat.ts';
+import { ChatCustomConfirmationWidget, IChatConfirmationButton } from '../chatConfirmationWidget.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
 
 export interface IToolConfirmationConfig {
 	allowActionId: string;

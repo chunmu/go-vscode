@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { Command } from '../../../../editor/common/languages.js';
-import { IAction } from '../../../../base/common/actions.js';
-import { IMenu } from '../../../../platform/actions/common/actions.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { ResourceTree } from '../../../../base/common/resourceTree.js';
-import { ISCMHistoryProvider } from './history.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { IObservable } from '../../../../base/common/observable.js';
-import { ISCMArtifact, ISCMArtifactGroup, ISCMArtifactProvider } from './artifact.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { Command } from '../../../../editor/common/languages.ts';
+import { IAction } from '../../../../base/common/actions.ts';
+import { IMenu } from '../../../../platform/actions/common/actions.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { ResourceTree } from '../../../../base/common/resourceTree.ts';
+import { ISCMHistoryProvider } from './history.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { IObservable } from '../../../../base/common/observable.ts';
+import { ISCMArtifact, ISCMArtifactGroup, ISCMArtifactProvider } from './artifact.ts';
 
 export const VIEWLET_ID = 'workbench.view.scm';
 export const VIEW_PANE_ID = 'workbench.scm';

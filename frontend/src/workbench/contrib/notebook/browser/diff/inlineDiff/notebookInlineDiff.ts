@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../../base/common/observable.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { INotebookEditorWorkerService } from '../../../common/services/notebookWorkerService.js';
-import { CellDiffInfo } from '../notebookDiffViewModel.js';
-import { INotebookEditorContribution, INotebookEditor } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { NotebookCellDiffDecorator } from './notebookCellDiffDecorator.js';
-import { NotebookDeletedCellDecorator } from './notebookDeletedCellDecorator.js';
-import { NotebookInsertedCellDecorator } from './notebookInsertedCellDecorator.js';
-import { INotebookLoggingService } from '../../../common/notebookLoggingService.js';
-import { computeDiff } from '../../../common/notebookDiff.js';
-import { InstantiationType, registerSingleton } from '../../../../../../platform/instantiation/common/extensions.js';
-import { INotebookOriginalModelReferenceFactory, NotebookOriginalModelReferenceFactory } from './notebookOriginalModelRefFactory.js';
-import { INotebookOriginalCellModelFactory, OriginalNotebookCellModelFactory } from './notebookOriginalCellModelFactory.js';
+import { Event } from '../../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { INotebookEditorWorkerService } from '../../../common/services/notebookWorkerService.ts';
+import { CellDiffInfo } from '../notebookDiffViewModel.ts';
+import { INotebookEditorContribution, INotebookEditor } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { NotebookCellDiffDecorator } from './notebookCellDiffDecorator.ts';
+import { NotebookDeletedCellDecorator } from './notebookDeletedCellDecorator.ts';
+import { NotebookInsertedCellDecorator } from './notebookInsertedCellDecorator.ts';
+import { INotebookLoggingService } from '../../../common/notebookLoggingService.ts';
+import { computeDiff } from '../../../common/notebookDiff.ts';
+import { InstantiationType, registerSingleton } from '../../../../../../platform/instantiation/common/extensions.ts';
+import { INotebookOriginalModelReferenceFactory, NotebookOriginalModelReferenceFactory } from './notebookOriginalModelRefFactory.ts';
+import { INotebookOriginalCellModelFactory, OriginalNotebookCellModelFactory } from './notebookOriginalCellModelFactory.ts';
 
 export class NotebookInlineDiffDecorationContribution extends Disposable implements INotebookEditorContribution {
 	static ID: string = 'workbench.notebook.inlineDiffDecoration';

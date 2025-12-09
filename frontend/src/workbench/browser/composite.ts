@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction, IActionRunner, ActionRunner } from '../../base/common/actions.js';
-import { Component } from '../common/component.js';
-import { ITelemetryService } from '../../platform/telemetry/common/telemetry.js';
-import { IComposite, ICompositeControl } from '../common/composite.js';
-import { Event, Emitter } from '../../base/common/event.js';
-import { IThemeService } from '../../platform/theme/common/themeService.js';
-import { IConstructorSignature, IInstantiationService } from '../../platform/instantiation/common/instantiation.js';
-import { trackFocus, Dimension, IDomPosition } from '../../base/browser/dom.js';
-import { IStorageService } from '../../platform/storage/common/storage.js';
-import { Disposable } from '../../base/common/lifecycle.js';
-import { assertReturnsDefined } from '../../base/common/types.js';
-import { IActionViewItem } from '../../base/browser/ui/actionbar/actionbar.js';
-import { MenuId } from '../../platform/actions/common/actions.js';
-import { IBoundarySashes } from '../../base/browser/ui/sash/sash.js';
-import { IBaseActionViewItemOptions } from '../../base/browser/ui/actionbar/actionViewItems.js';
+import { IAction, IActionRunner, ActionRunner } from '../../base/common/actions.ts';
+import { Component } from '../common/component.ts';
+import { ITelemetryService } from '../../platform/telemetry/common/telemetry.ts';
+import { IComposite, ICompositeControl } from '../common/composite.ts';
+import { Event, Emitter } from '../../base/common/event.ts';
+import { IThemeService } from '../../platform/theme/common/themeService.ts';
+import { IConstructorSignature, IInstantiationService } from '../../platform/instantiation/common/instantiation.ts';
+import { trackFocus, Dimension, IDomPosition } from '../../base/browser/dom.ts';
+import { IStorageService } from '../../platform/storage/common/storage.ts';
+import { Disposable } from '../../base/common/lifecycle.ts';
+import { assertReturnsDefined } from '../../base/common/types.ts';
+import { IActionViewItem } from '../../base/browser/ui/actionbar/actionbar.ts';
+import { MenuId } from '../../platform/actions/common/actions.ts';
+import { IBoundarySashes } from '../../base/browser/ui/sash/sash.ts';
+import { IBaseActionViewItemOptions } from '../../base/browser/ui/actionbar/actionViewItems.ts';
 
 /**
  * Composites are layed out in the sidebar and panel part of the workbench. At a time only one composite

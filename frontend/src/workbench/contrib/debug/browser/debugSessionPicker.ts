@@ -2,16 +2,16 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import * as nls from '../../../../nls.js';
-import { matchesFuzzy } from '../../../../base/common/filters.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { IDebugService, IDebugSession, REPL_VIEW_ID } from '../common/debug.js';
-import { IQuickInputService, IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.js';
+import * as nls from '../../../../nls.ts';
+import { matchesFuzzy } from '../../../../base/common/filters.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { IDebugService, IDebugSession, REPL_VIEW_ID } from '../common/debug.ts';
+import { IQuickInputService, IQuickPickSeparator } from '../../../../platform/quickinput/common/quickInput.ts';
 
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IPickerDebugItem } from '../common/loadedScriptsPicker.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IPickerDebugItem } from '../common/loadedScriptsPicker.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
 
 
 export async function showDebugSessionMenu(accessor: ServicesAccessor, selectAndStartID: string) {

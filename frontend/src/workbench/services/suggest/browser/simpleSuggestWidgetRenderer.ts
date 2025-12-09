@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $, append, show } from '../../../../base/browser/dom.js';
-import { IconLabel, IIconLabelValueOptions } from '../../../../base/browser/ui/iconLabel/iconLabel.js';
-import { IListRenderer } from '../../../../base/browser/ui/list/list.js';
-import { SimpleCompletionItem } from './simpleCompletionItem.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { createMatches } from '../../../../base/common/filters.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { getIconClasses } from '../../../../editor/common/services/getIconClasses.js';
-import { URI } from '../../../../base/common/uri.js';
-import { FileKind } from '../../../../platform/files/common/files.js';
+import { $, append, show } from '../../../../base/browser/dom.ts';
+import { IconLabel, IIconLabelValueOptions } from '../../../../base/browser/ui/iconLabel/iconLabel.ts';
+import { IListRenderer } from '../../../../base/browser/ui/list/list.ts';
+import { SimpleCompletionItem } from './simpleCompletionItem.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { createMatches } from '../../../../base/common/filters.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { getIconClasses } from '../../../../editor/common/services/getIconClasses.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { FileKind } from '../../../../platform/files/common/files.ts';
 
 export function getAriaId(index: number): string {
 	return `simple-suggest-aria-id-${index}`;

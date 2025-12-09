@@ -5,8 +5,8 @@
 
 import assert from 'assert';
 import * as crypto from 'crypto';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { getHashedRemotesFromConfig as baseGetHashedRemotesFromConfig } from '../../common/workspaceTags.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { getHashedRemotesFromConfig as baseGetHashedRemotesFromConfig } from '../../common/workspaceTags.ts';
 
 function hash(value: string): string {
 	return crypto.createHash('sha256').update(value.toString()).digest('hex');

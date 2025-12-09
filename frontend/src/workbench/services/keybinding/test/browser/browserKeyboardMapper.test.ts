@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 import assert from 'assert';
-import '../../browser/keyboardLayouts/en.darwin.js';
-import '../../browser/keyboardLayouts/de.darwin.js';
-import { KeyboardLayoutContribution } from '../../browser/keyboardLayouts/_.contribution.js';
-import { BrowserKeyboardMapperFactoryBase } from '../../browser/keyboardLayoutService.js';
-import { KeymapInfo, IKeymapInfo } from '../../common/keymapInfo.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { INotificationService } from '../../../../../platform/notification/common/notification.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { TestNotificationService } from '../../../../../platform/notification/test/common/testNotificationService.js';
-import { TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import '../../browser/keyboardLayouts/en.darwin.ts';
+import '../../browser/keyboardLayouts/de.darwin.ts';
+import { KeyboardLayoutContribution } from '../../browser/keyboardLayouts/_.contribution.ts';
+import { BrowserKeyboardMapperFactoryBase } from '../../browser/keyboardLayoutService.ts';
+import { KeymapInfo, IKeymapInfo } from '../../common/keymapInfo.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { INotificationService } from '../../../../../platform/notification/common/notification.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { TestNotificationService } from '../../../../../platform/notification/test/common/testNotificationService.ts';
+import { TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 class TestKeyboardMapperFactory extends BrowserKeyboardMapperFactoryBase {
 	constructor(configurationService: IConfigurationService, notificationService: INotificationService, storageService: IStorageService, commandService: ICommandService) {

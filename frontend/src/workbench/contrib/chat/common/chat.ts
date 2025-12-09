@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import type { IChatTerminalToolInvocationData, ILegacyChatTerminalToolInvocationData } from './chatService.js';
-import { ChatModeKind } from './constants.js';
+import type { IChatTerminalToolInvocationData, ILegacyChatTerminalToolInvocationData } from './chatService.ts';
+import { ChatModeKind } from './constants.ts';
 
 export function checkModeOption(mode: ChatModeKind, option: boolean | ((mode: ChatModeKind) => boolean) | undefined): boolean | undefined {
 	if (option === undefined) {

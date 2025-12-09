@@ -3,37 +3,37 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as glob from '../../../../base/common/glob.js';
-import { GroupIdentifier, ISaveOptions, IMoveResult, IRevertOptions, EditorInputCapabilities, Verbosity, IUntypedEditorInput, IFileLimitedEditorInputOptions, isResourceEditorInput } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { INotebookService, SimpleNotebookProviderInfo } from './notebookService.js';
-import { URI } from '../../../../base/common/uri.js';
-import { isEqual, toLocalResource } from '../../../../base/common/resources.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IFileDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { INotebookEditorModelResolverService } from './notebookEditorModelResolverService.js';
-import { IDisposable, IReference } from '../../../../base/common/lifecycle.js';
-import { CellEditType, CellUri, IResolvedNotebookEditorModel } from './notebookCommon.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { AbstractResourceEditorInput } from '../../../common/editor/resourceEditorInput.js';
-import { IResourceEditorInput } from '../../../../platform/editor/common/editor.js';
-import { onUnexpectedError } from '../../../../base/common/errors.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { IWorkingCopyIdentifier } from '../../../services/workingCopy/common/workingCopy.js';
-import { NotebookProviderInfo } from './notebookProvider.js';
-import { NotebookPerfMarks } from './notebookPerformance.js';
-import { IFilesConfigurationService } from '../../../services/filesConfiguration/common/filesConfigurationService.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { localize } from '../../../../nls.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.js';
-import { ICustomEditorLabelService } from '../../../services/editor/common/customEditorLabelService.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { IPathService } from '../../../services/path/common/pathService.js';
-import { isAbsolute } from '../../../../base/common/path.js';
+import * as glob from '../../../../base/common/glob.ts';
+import { GroupIdentifier, ISaveOptions, IMoveResult, IRevertOptions, EditorInputCapabilities, Verbosity, IUntypedEditorInput, IFileLimitedEditorInputOptions, isResourceEditorInput } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { INotebookService, SimpleNotebookProviderInfo } from './notebookService.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { isEqual, toLocalResource } from '../../../../base/common/resources.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IFileDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { INotebookEditorModelResolverService } from './notebookEditorModelResolverService.ts';
+import { IDisposable, IReference } from '../../../../base/common/lifecycle.ts';
+import { CellEditType, CellUri, IResolvedNotebookEditorModel } from './notebookCommon.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { AbstractResourceEditorInput } from '../../../common/editor/resourceEditorInput.ts';
+import { IResourceEditorInput } from '../../../../platform/editor/common/editor.ts';
+import { onUnexpectedError } from '../../../../base/common/errors.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { IWorkingCopyIdentifier } from '../../../services/workingCopy/common/workingCopy.ts';
+import { NotebookProviderInfo } from './notebookProvider.ts';
+import { NotebookPerfMarks } from './notebookPerformance.ts';
+import { IFilesConfigurationService } from '../../../services/filesConfiguration/common/filesConfigurationService.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { localize } from '../../../../nls.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.ts';
+import { ICustomEditorLabelService } from '../../../services/editor/common/customEditorLabelService.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { IPathService } from '../../../services/path/common/pathService.ts';
+import { isAbsolute } from '../../../../base/common/path.ts';
 
 export interface NotebookEditorInputOptions {
 	startDirty?: boolean;

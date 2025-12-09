@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { IBannerService } from '../../../services/banner/browser/bannerService.js';
-import { asJson, IRequestService } from '../../../../platform/request/common/request.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { arch, platform } from '../../../../base/common/process.js';
+import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { IBannerService } from '../../../services/banner/browser/bannerService.ts';
+import { asJson, IRequestService } from '../../../../platform/request/common/request.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { arch, platform } from '../../../../base/common/process.ts';
 
 interface IEmergencyAlert {
 	readonly commit: string;

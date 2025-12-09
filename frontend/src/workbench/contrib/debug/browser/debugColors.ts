@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { registerColor, foreground, editorInfoForeground, editorWarningForeground, errorForeground, badgeBackground, badgeForeground, listDeemphasizedForeground, contrastBorder, inputBorder, toolbarHoverBackground } from '../../../../platform/theme/common/colorRegistry.js';
-import { registerThemingParticipant } from '../../../../platform/theme/common/themeService.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { Color } from '../../../../base/common/color.js';
-import { localize } from '../../../../nls.js';
-import * as icons from './debugIcons.js';
-import { isHighContrast } from '../../../../platform/theme/common/theme.js';
+import { registerColor, foreground, editorInfoForeground, editorWarningForeground, errorForeground, badgeBackground, badgeForeground, listDeemphasizedForeground, contrastBorder, inputBorder, toolbarHoverBackground } from '../../../../platform/theme/common/colorRegistry.ts';
+import { registerThemingParticipant } from '../../../../platform/theme/common/themeService.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { Color } from '../../../../base/common/color.ts';
+import { localize } from '../../../../nls.ts';
+import * as icons from './debugIcons.ts';
+import { isHighContrast } from '../../../../platform/theme/common/theme.ts';
 
 export const debugToolBarBackground = registerColor('debugToolBar.background', {
 	dark: '#333333',

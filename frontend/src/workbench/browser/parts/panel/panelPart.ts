@@ -4,33 +4,33 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/panelpart.css';
-import { localize } from '../../../../nls.js';
-import { IAction, Separator, SubmenuAction, toAction } from '../../../../base/common/actions.js';
-import { ActionsOrientation } from '../../../../base/browser/ui/actionbar/actionbar.js';
-import { ActivePanelContext, PanelFocusContext } from '../../../common/contextkeys.js';
-import { IWorkbenchLayoutService, Parts, Position } from '../../../services/layout/browser/layoutService.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { TogglePanelAction } from './panelActions.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { PANEL_BACKGROUND, PANEL_BORDER, PANEL_TITLE_BORDER, PANEL_ACTIVE_TITLE_FOREGROUND, PANEL_INACTIVE_TITLE_FOREGROUND, PANEL_ACTIVE_TITLE_BORDER, PANEL_DRAG_AND_DROP_BORDER, PANEL_TITLE_BADGE_BACKGROUND, PANEL_TITLE_BADGE_FOREGROUND } from '../../../common/theme.js';
-import { contrastBorder } from '../../../../platform/theme/common/colorRegistry.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
-import { Dimension } from '../../../../base/browser/dom.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IViewDescriptorService } from '../../../common/views.js';
-import { HoverPosition } from '../../../../base/browser/ui/hover/hoverWidget.js';
-import { IMenuService, MenuId } from '../../../../platform/actions/common/actions.js';
-import { AbstractPaneCompositePart, CompositeBarPosition } from '../paneCompositePart.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { getContextMenuActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { IPaneCompositeBarOptions } from '../paneCompositeBar.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
+import { localize } from '../../../../nls.ts';
+import { IAction, Separator, SubmenuAction, toAction } from '../../../../base/common/actions.ts';
+import { ActionsOrientation } from '../../../../base/browser/ui/actionbar/actionbar.ts';
+import { ActivePanelContext, PanelFocusContext } from '../../../common/contextkeys.ts';
+import { IWorkbenchLayoutService, Parts, Position } from '../../../services/layout/browser/layoutService.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { TogglePanelAction } from './panelActions.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { PANEL_BACKGROUND, PANEL_BORDER, PANEL_TITLE_BORDER, PANEL_ACTIVE_TITLE_FOREGROUND, PANEL_INACTIVE_TITLE_FOREGROUND, PANEL_ACTIVE_TITLE_BORDER, PANEL_DRAG_AND_DROP_BORDER, PANEL_TITLE_BADGE_BACKGROUND, PANEL_TITLE_BADGE_FOREGROUND } from '../../../common/theme.ts';
+import { contrastBorder } from '../../../../platform/theme/common/colorRegistry.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
+import { Dimension } from '../../../../base/browser/dom.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IViewDescriptorService } from '../../../common/views.ts';
+import { HoverPosition } from '../../../../base/browser/ui/hover/hoverWidget.ts';
+import { IMenuService, MenuId } from '../../../../platform/actions/common/actions.ts';
+import { AbstractPaneCompositePart, CompositeBarPosition } from '../paneCompositePart.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { getContextMenuActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { IPaneCompositeBarOptions } from '../paneCompositeBar.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
 
 export class PanelPart extends AbstractPaneCompositePart {
 

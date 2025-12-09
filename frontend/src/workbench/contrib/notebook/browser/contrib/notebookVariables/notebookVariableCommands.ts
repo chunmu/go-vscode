@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { URI, UriComponents } from '../../../../../../base/common/uri.js';
-import { localize } from '../../../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { IClipboardService } from '../../../../../../platform/clipboard/common/clipboardService.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { contextMenuArg } from './notebookVariablesView.js';
-import { INotebookKernelService, VariablesResult } from '../../../common/notebookKernelService.js';
-import { INotebookService } from '../../../common/notebookService.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { URI, UriComponents } from '../../../../../../base/common/uri.ts';
+import { localize } from '../../../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { IClipboardService } from '../../../../../../platform/clipboard/common/clipboardService.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { contextMenuArg } from './notebookVariablesView.ts';
+import { INotebookKernelService, VariablesResult } from '../../../common/notebookKernelService.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
 
 export const COPY_NOTEBOOK_VARIABLE_VALUE_ID = 'workbench.debug.viewlet.action.copyWorkspaceVariableValue';
 export const COPY_NOTEBOOK_VARIABLE_VALUE_LABEL = localize('copyWorkspaceVariableValue', "Copy Value");

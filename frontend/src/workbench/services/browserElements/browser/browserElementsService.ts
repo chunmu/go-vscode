@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { BrowserType, IElementData } from '../../../../platform/browserElements/common/browserElements.js';
-import { IRectangle } from '../../../../platform/window/common/window.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { BrowserType, IElementData } from '../../../../platform/browserElements/common/browserElements.ts';
+import { IRectangle } from '../../../../platform/window/common/window.ts';
 
 export const IBrowserElementsService = createDecorator<IBrowserElementsService>('browserElementsService');
 

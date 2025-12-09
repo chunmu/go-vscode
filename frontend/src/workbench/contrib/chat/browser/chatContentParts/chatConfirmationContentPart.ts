@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../nls.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IChatProgressRenderableResponseContent } from '../../common/chatModel.js';
-import { IChatConfirmation, IChatSendRequestOptions, IChatService } from '../../common/chatService.js';
-import { isResponseVM } from '../../common/chatViewModel.js';
-import { IChatWidgetService } from '../chat.js';
-import { SimpleChatConfirmationWidget } from './chatConfirmationWidget.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatProgressRenderableResponseContent } from '../../common/chatModel.ts';
+import { IChatConfirmation, IChatSendRequestOptions, IChatService } from '../../common/chatService.ts';
+import { isResponseVM } from '../../common/chatViewModel.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { SimpleChatConfirmationWidget } from './chatConfirmationWidget.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
 
 export class ChatConfirmationContentPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

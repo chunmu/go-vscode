@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as performance from '../../../base/common/performance.js';
+import * as performance from '../../../base/common/performance.ts';
 import type * as vscode from 'vscode';
-import { createApiFactoryAndRegisterActors } from '../common/extHost.api.impl.js';
-import { INodeModuleFactory, RequireInterceptor } from '../common/extHostRequireInterceptor.js';
-import { ExtensionActivationTimesBuilder } from '../common/extHostExtensionActivator.js';
-import { connectProxyResolver } from './proxyResolver.js';
-import { AbstractExtHostExtensionService } from '../common/extHostExtensionService.js';
-import { ExtHostDownloadService } from './extHostDownloadService.js';
-import { URI } from '../../../base/common/uri.js';
-import { Schemas } from '../../../base/common/network.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtensionRuntime } from '../common/extHostTypes.js';
-import { CLIServer } from './extHostCLIServer.js';
-import { realpathSync } from '../../../base/node/pfs.js';
-import { ExtHostConsoleForwarder } from './extHostConsoleForwarder.js';
-import { ExtHostDiskFileSystemProvider } from './extHostDiskFileSystemProvider.js';
+import { createApiFactoryAndRegisterActors } from '../common/extHost.api.impl.ts';
+import { INodeModuleFactory, RequireInterceptor } from '../common/extHostRequireInterceptor.ts';
+import { ExtensionActivationTimesBuilder } from '../common/extHostExtensionActivator.ts';
+import { connectProxyResolver } from './proxyResolver.ts';
+import { AbstractExtHostExtensionService } from '../common/extHostExtensionService.ts';
+import { ExtHostDownloadService } from './extHostDownloadService.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtensionRuntime } from '../common/extHostTypes.ts';
+import { CLIServer } from './extHostCLIServer.ts';
+import { realpathSync } from '../../../base/node/pfs.ts';
+import { ExtHostConsoleForwarder } from './extHostConsoleForwarder.ts';
+import { ExtHostDiskFileSystemProvider } from './extHostDiskFileSystemProvider.ts';
 import nodeModule from 'node:module';
-import { assertType } from '../../../base/common/types.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { BidirectionalMap } from '../../../base/common/map.js';
-import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
+import { assertType } from '../../../base/common/types.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { BidirectionalMap } from '../../../base/common/map.ts';
+import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.ts';
 
 const require = nodeModule.createRequire(import.meta.url);
 

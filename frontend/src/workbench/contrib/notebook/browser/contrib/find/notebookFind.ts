@@ -4,30 +4,30 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/notebookFind.css';
-import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.js';
-import { Schemas } from '../../../../../../base/common/network.js';
-import { isEqual } from '../../../../../../base/common/resources.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { ICodeEditorService } from '../../../../../../editor/browser/services/codeEditorService.js';
-import { EditorOption } from '../../../../../../editor/common/config/editorOptions.js';
-import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { FindStartFocusAction, getSelectionSearchString, IFindStartOptions, NextMatchFindAction, PreviousMatchFindAction, StartFindAction, StartFindReplaceAction } from '../../../../../../editor/contrib/find/browser/findController.js';
-import { localize2 } from '../../../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
+import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.ts';
+import { Schemas } from '../../../../../../base/common/network.ts';
+import { isEqual } from '../../../../../../base/common/resources.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { ICodeEditorService } from '../../../../../../editor/browser/services/codeEditorService.ts';
+import { EditorOption } from '../../../../../../editor/common/config/editorOptions.ts';
+import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { FindStartFocusAction, getSelectionSearchString, IFindStartOptions, NextMatchFindAction, PreviousMatchFindAction, StartFindAction, StartFindReplaceAction } from '../../../../../../editor/contrib/find/browser/findController.ts';
+import { localize2 } from '../../../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
 
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IShowNotebookFindWidgetOptions, NotebookFindContrib } from './notebookFindWidget.js';
-import { INotebookCommandContext, NotebookMultiCellAction } from '../../controller/coreActions.js';
-import { getNotebookEditorFromEditorPane, INotebookEditor } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { CellUri, NotebookFindScopeType } from '../../../common/notebookCommon.js';
-import { INTERACTIVE_WINDOW_IS_ACTIVE_EDITOR, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_IS_ACTIVE_EDITOR } from '../../../common/notebookContextKeys.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { CONTEXT_FIND_WIDGET_VISIBLE } from '../../../../../../editor/contrib/find/browser/findModel.js';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IShowNotebookFindWidgetOptions, NotebookFindContrib } from './notebookFindWidget.ts';
+import { INotebookCommandContext, NotebookMultiCellAction } from '../../controller/coreActions.ts';
+import { getNotebookEditorFromEditorPane, INotebookEditor } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { CellUri, NotebookFindScopeType } from '../../../common/notebookCommon.ts';
+import { INTERACTIVE_WINDOW_IS_ACTIVE_EDITOR, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_IS_ACTIVE_EDITOR } from '../../../common/notebookContextKeys.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { CONTEXT_FIND_WIDGET_VISIBLE } from '../../../../../../editor/contrib/find/browser/findModel.ts';
 
 registerNotebookContribution(NotebookFindContrib.id, NotebookFindContrib);
 

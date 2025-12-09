@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { Extensions, IOutputChannelRegistry, IOutputService, IOutputChannel, OUTPUT_VIEW_ID, OutputChannelUpdateMode } from '../../services/output/common/output.js';
-import { MainThreadOutputServiceShape, MainContext, ExtHostOutputServiceShape, ExtHostContext } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { UriComponents, URI } from '../../../base/common/uri.js';
-import { Disposable, MutableDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { Event } from '../../../base/common/event.js';
-import { IViewsService } from '../../services/views/common/viewsService.js';
-import { isNumber } from '../../../base/common/types.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { IStatusbarEntry, IStatusbarEntryAccessor, IStatusbarService, StatusbarAlignment } from '../../services/statusbar/browser/statusbar.js';
-import { localize } from '../../../nls.js';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { Extensions, IOutputChannelRegistry, IOutputService, IOutputChannel, OUTPUT_VIEW_ID, OutputChannelUpdateMode } from '../../services/output/common/output.ts';
+import { MainThreadOutputServiceShape, MainContext, ExtHostOutputServiceShape, ExtHostContext } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { UriComponents, URI } from '../../../base/common/uri.ts';
+import { Disposable, MutableDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { Event } from '../../../base/common/event.ts';
+import { IViewsService } from '../../services/views/common/viewsService.ts';
+import { isNumber } from '../../../base/common/types.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { IStatusbarEntry, IStatusbarEntryAccessor, IStatusbarService, StatusbarAlignment } from '../../services/statusbar/browser/statusbar.ts';
+import { localize } from '../../../nls.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadOutputService)
 export class MainThreadOutputService extends Disposable implements MainThreadOutputServiceShape {

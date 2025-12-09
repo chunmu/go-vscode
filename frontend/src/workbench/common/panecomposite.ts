@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IView, IViewPaneContainer } from './views.js';
-import { IComposite } from './composite.js';
+import { IView, IViewPaneContainer } from './views.ts';
+import { IComposite } from './composite.ts';
 
 export interface IPaneComposite extends IComposite {
 

@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import * as extHostProtocol from './extHost.protocol.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
+import * as extHostProtocol from './extHost.protocol.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
 
 export class ExtHostChatStatus {
 

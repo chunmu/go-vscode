@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CodeWindow } from '../../../../../base/browser/window.js';
-import { createDecorator, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { INotebookEditor, INotebookEditorCreationOptions } from '../notebookBrowser.js';
-import { Event } from '../../../../../base/common/event.js';
-import { Dimension } from '../../../../../base/browser/dom.js';
-import { NotebookEditorWidget } from '../notebookEditorWidget.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
+import { CodeWindow } from '../../../../../base/browser/window.ts';
+import { createDecorator, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { INotebookEditor, INotebookEditorCreationOptions } from '../notebookBrowser.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { Dimension } from '../../../../../base/browser/dom.ts';
+import { NotebookEditorWidget } from '../notebookEditorWidget.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
 
 export const INotebookEditorService = createDecorator<INotebookEditorService>('INotebookEditorWidgetService');
 

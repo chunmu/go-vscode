@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as glob from '../../../../../base/common/glob.js';
-import { URI, UriComponents } from '../../../../../base/common/uri.js';
-import { CommandsRegistry } from '../../../../../platform/commands/common/commands.js';
-import { isDocumentExcludePattern, TransientCellMetadata, TransientDocumentMetadata } from '../../common/notebookCommon.js';
-import { INotebookKernelService } from '../../common/notebookKernelService.js';
-import { INotebookService } from '../../common/notebookService.js';
+import * as glob from '../../../../../base/common/glob.ts';
+import { URI, UriComponents } from '../../../../../base/common/uri.ts';
+import { CommandsRegistry } from '../../../../../platform/commands/common/commands.ts';
+import { isDocumentExcludePattern, TransientCellMetadata, TransientDocumentMetadata } from '../../common/notebookCommon.ts';
+import { INotebookKernelService } from '../../common/notebookKernelService.ts';
+import { INotebookService } from '../../common/notebookService.ts';
 
 CommandsRegistry.registerCommand('_resolveNotebookContentProvider', (accessor): {
 	viewType: string;

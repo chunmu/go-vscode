@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.js';
-import { Color, RGBA } from '../../../../base/common/color.js';
-import { isDefined } from '../../../../base/common/types.js';
-import { editorHoverBackground, listActiveSelectionBackground, listFocusBackground, listInactiveFocusBackground, listInactiveSelectionBackground } from '../../../../platform/theme/common/colorRegistry.js';
-import { registerThemingParticipant } from '../../../../platform/theme/common/themeService.js';
-import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { PANEL_BACKGROUND, SIDE_BAR_BACKGROUND } from '../../../common/theme.js';
-import { ansiColorIdentifiers } from '../../terminal/common/terminalColorRegistry.js';
-import { ILinkDetector } from './linkDetector.js';
+import { IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.ts';
+import { Color, RGBA } from '../../../../base/common/color.ts';
+import { isDefined } from '../../../../base/common/types.ts';
+import { editorHoverBackground, listActiveSelectionBackground, listFocusBackground, listInactiveFocusBackground, listInactiveSelectionBackground } from '../../../../platform/theme/common/colorRegistry.ts';
+import { registerThemingParticipant } from '../../../../platform/theme/common/themeService.ts';
+import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { PANEL_BACKGROUND, SIDE_BAR_BACKGROUND } from '../../../common/theme.ts';
+import { ansiColorIdentifiers } from '../../terminal/common/terminalColorRegistry.ts';
+import { ILinkDetector } from './linkDetector.ts';
 
 /**
  * @param text The content to stylize.

@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { distinct } from '../../../../base/common/arrays.js';
-import { Event } from '../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { IDisposable, IReference } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import * as nls from '../../../../nls.js';
-import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IRevertOptions, ISaveOptions } from '../../../common/editor.js';
-import { globMatchesResource, priorityToRank, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.js';
+import { distinct } from '../../../../base/common/arrays.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { IDisposable, IReference } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import * as nls from '../../../../nls.ts';
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IRevertOptions, ISaveOptions } from '../../../common/editor.ts';
+import { globMatchesResource, priorityToRank, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.ts';
 
 export const ICustomEditorService = createDecorator<ICustomEditorService>('customEditorService');
 

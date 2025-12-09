@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IDebugService } from './debug.js';
+import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IDebugService } from './debug.ts';
 
 export class ReplAccessibilityAnnouncer extends Disposable implements IWorkbenchContribution {
 	static ID = 'debug.replAccessibilityAnnouncer';

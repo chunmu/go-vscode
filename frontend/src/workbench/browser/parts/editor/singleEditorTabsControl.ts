@@ -4,21 +4,21 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/singleeditortabscontrol.css';
-import { EditorResourceAccessor, Verbosity, IEditorPartOptions, SideBySideEditor, preventEditorClose, EditorCloseMethod, IToolbarActions } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { EditorTabsControl } from './editorTabsControl.js';
-import { ResourceLabel, IResourceLabel } from '../../labels.js';
-import { TAB_ACTIVE_FOREGROUND, TAB_UNFOCUSED_ACTIVE_FOREGROUND } from '../../../common/theme.js';
-import { EventType as TouchEventType, GestureEvent, Gesture } from '../../../../base/browser/touch.js';
-import { addDisposableListener, EventType, EventHelper, Dimension, isAncestor, DragAndDropObserver, isHTMLElement, $ } from '../../../../base/browser/dom.js';
-import { CLOSE_EDITOR_COMMAND_ID, UNLOCK_GROUP_COMMAND_ID } from './editorCommands.js';
-import { Color } from '../../../../base/common/color.js';
-import { assertReturnsDefined, assertReturnsAllDefined } from '../../../../base/common/types.js';
-import { equals } from '../../../../base/common/objects.js';
-import { toDisposable } from '../../../../base/common/lifecycle.js';
-import { defaultBreadcrumbsWidgetStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { IEditorTitleControlDimensions } from './editorTitleControl.js';
-import { BreadcrumbsControlFactory } from './breadcrumbsControl.js';
+import { EditorResourceAccessor, Verbosity, IEditorPartOptions, SideBySideEditor, preventEditorClose, EditorCloseMethod, IToolbarActions } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { EditorTabsControl } from './editorTabsControl.ts';
+import { ResourceLabel, IResourceLabel } from '../../labels.ts';
+import { TAB_ACTIVE_FOREGROUND, TAB_UNFOCUSED_ACTIVE_FOREGROUND } from '../../../common/theme.ts';
+import { EventType as TouchEventType, GestureEvent, Gesture } from '../../../../base/browser/touch.ts';
+import { addDisposableListener, EventType, EventHelper, Dimension, isAncestor, DragAndDropObserver, isHTMLElement, $ } from '../../../../base/browser/dom.ts';
+import { CLOSE_EDITOR_COMMAND_ID, UNLOCK_GROUP_COMMAND_ID } from './editorCommands.ts';
+import { Color } from '../../../../base/common/color.ts';
+import { assertReturnsDefined, assertReturnsAllDefined } from '../../../../base/common/types.ts';
+import { equals } from '../../../../base/common/objects.ts';
+import { toDisposable } from '../../../../base/common/lifecycle.ts';
+import { defaultBreadcrumbsWidgetStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { IEditorTitleControlDimensions } from './editorTitleControl.ts';
+import { BreadcrumbsControlFactory } from './breadcrumbsControl.ts';
 
 interface IRenderedEditorLabel {
 	readonly editor?: EditorInput;

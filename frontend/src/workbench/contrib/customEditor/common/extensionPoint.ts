@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce } from '../../../../base/common/arrays.js';
-import { TypeFromJsonSchema, IJSONSchema } from '../../../../base/common/jsonSchema.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import * as nls from '../../../../nls.js';
-import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { CustomEditorPriority } from './customEditor.js';
-import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.js';
-import { languagesExtPoint } from '../../../services/language/common/languageService.js';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { TypeFromJsonSchema, IJSONSchema } from '../../../../base/common/jsonSchema.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import * as nls from '../../../../nls.ts';
+import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { CustomEditorPriority } from './customEditor.ts';
+import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.ts';
+import { languagesExtPoint } from '../../../services/language/common/languageService.ts';
 
 const Fields = Object.freeze({
 	viewType: 'viewType',

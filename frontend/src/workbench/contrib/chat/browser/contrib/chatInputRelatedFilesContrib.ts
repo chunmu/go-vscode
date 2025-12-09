@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ResourceMap, ResourceSet } from '../../../../../base/common/map.js';
-import { autorun } from '../../../../../base/common/observable.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { IChatEditingService, IChatEditingSession } from '../../common/chatEditingService.js';
-import { IChatWidget, IChatWidgetService } from '../chat.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ResourceMap, ResourceSet } from '../../../../../base/common/map.ts';
+import { autorun } from '../../../../../base/common/observable.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { IChatEditingService, IChatEditingSession } from '../../common/chatEditingService.ts';
+import { IChatWidget, IChatWidgetService } from '../chat.ts';
 
 export class ChatRelatedFilesContribution extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'chat.relatedFilesWorkingSet';

@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { marked } from '../../../../../base/common/marked/marked.js';
-import { basename } from '../../../../../base/common/resources.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { IBulkEditService } from '../../../../../editor/browser/services/bulkEditService.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { ResourceNotebookCellEdit } from '../../../bulkEdit/browser/bulkCellEdits.js';
-import { MENU_INLINE_CHAT_WIDGET_SECONDARY } from '../../../inlineChat/common/inlineChat.js';
-import { INotebookEditor } from '../../../notebook/browser/notebookBrowser.js';
-import { CellEditType, CellKind, NOTEBOOK_EDITOR_ID } from '../../../notebook/common/notebookCommon.js';
-import { NOTEBOOK_IS_ACTIVE_EDITOR } from '../../../notebook/common/notebookContextKeys.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { applyingChatEditsFailedContextKey, isChatEditingActionContext } from '../../common/chatEditingService.js';
-import { ChatAgentVoteDirection, ChatAgentVoteDownReason, IChatService } from '../../common/chatService.js';
-import { isResponseVM } from '../../common/chatViewModel.js';
-import { ChatModeKind } from '../../common/constants.js';
-import { IChatWidgetService } from '../chat.js';
-import { CHAT_CATEGORY } from './chatActions.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { marked } from '../../../../../base/common/marked/marked.ts';
+import { basename } from '../../../../../base/common/resources.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { IBulkEditService } from '../../../../../editor/browser/services/bulkEditService.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { ResourceNotebookCellEdit } from '../../../bulkEdit/browser/bulkCellEdits.ts';
+import { MENU_INLINE_CHAT_WIDGET_SECONDARY } from '../../../inlineChat/common/inlineChat.ts';
+import { INotebookEditor } from '../../../notebook/browser/notebookBrowser.ts';
+import { CellEditType, CellKind, NOTEBOOK_EDITOR_ID } from '../../../notebook/common/notebookCommon.ts';
+import { NOTEBOOK_IS_ACTIVE_EDITOR } from '../../../notebook/common/notebookContextKeys.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { applyingChatEditsFailedContextKey, isChatEditingActionContext } from '../../common/chatEditingService.ts';
+import { ChatAgentVoteDirection, ChatAgentVoteDownReason, IChatService } from '../../common/chatService.ts';
+import { isResponseVM } from '../../common/chatViewModel.ts';
+import { ChatModeKind } from '../../common/constants.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
 
 export const MarkUnhelpfulActionId = 'workbench.action.chat.markUnhelpful';
 const enableFeedbackConfig = 'config.telemetry.feedback.enabled';

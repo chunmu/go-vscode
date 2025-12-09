@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Action } from '../../../../../base/common/actions.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.js';
-import { IChatMode } from '../../common/chatModes.js';
-import { IChatSessionsService } from '../../common/chatSessionsService.js';
-import { IHandOff } from '../../common/promptSyntax/promptFileParser.js';
-import { AgentSessionProviders, getAgentSessionProviderIcon, getAgentSessionProviderName } from '../agentSessions/agentSessions.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Action } from '../../../../../base/common/actions.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.ts';
+import { IChatMode } from '../../common/chatModes.ts';
+import { IChatSessionsService } from '../../common/chatSessionsService.ts';
+import { IHandOff } from '../../common/promptSyntax/promptFileParser.ts';
+import { AgentSessionProviders, getAgentSessionProviderIcon, getAgentSessionProviderName } from '../agentSessions/agentSessions.ts';
 
 export interface INextPromptSelection {
 	readonly handoff: IHandOff;

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IDebugAdapter } from './debug.js';
-import { timeout } from '../../../../base/common/async.js';
-import { localize } from '../../../../nls.js';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IDebugAdapter } from './debug.ts';
+import { timeout } from '../../../../base/common/async.ts';
+import { localize } from '../../../../nls.ts';
 
 /**
  * Abstract implementation of the low level API for a debug adapter.

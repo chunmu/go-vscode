@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { NotebookOutlineContext } from '../contrib/outline/notebookOutline.js';
-import { FoldingController } from './foldingController.js';
-import { CellEditState, CellFoldingState, ICellViewModel, INotebookEditor } from '../notebookBrowser.js';
-import * as icons from '../notebookIcons.js';
-import { OutlineEntry } from '../viewModel/OutlineEntry.js';
-import { CellKind } from '../../common/notebookCommon.js';
-import { OutlineTarget } from '../../../../services/outline/browser/outline.js';
-import { CELL_TITLE_CELL_GROUP_ID, CellToolbarOrder } from './coreActions.js';
-import { executeSectionCondition } from './executeActions.js';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { NotebookOutlineContext } from '../contrib/outline/notebookOutline.ts';
+import { FoldingController } from './foldingController.ts';
+import { CellEditState, CellFoldingState, ICellViewModel, INotebookEditor } from '../notebookBrowser.ts';
+import * as icons from '../notebookIcons.ts';
+import { OutlineEntry } from '../viewModel/OutlineEntry.ts';
+import { CellKind } from '../../common/notebookCommon.ts';
+import { OutlineTarget } from '../../../../services/outline/browser/outline.ts';
+import { CELL_TITLE_CELL_GROUP_ID, CellToolbarOrder } from './coreActions.ts';
+import { executeSectionCondition } from './executeActions.ts';
 
 export type NotebookOutlineEntryArgs = {
 	notebookEditor: INotebookEditor;

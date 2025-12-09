@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { Button } from '../../../../base/browser/ui/button/button.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { toErrorMessage } from '../../../../base/common/errorMessage.js';
-import { Lazy } from '../../../../base/common/lazy.js';
-import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { asCssVariable } from '../../../../platform/theme/common/colorUtils.js';
-import { contentRefUrl } from '../common/annotations.js';
-import { getFullyQualifiedId, IChatAgentCommand, IChatAgentData, IChatAgentNameService, IChatAgentService } from '../common/chatAgents.js';
-import { chatSlashCommandBackground, chatSlashCommandForeground } from '../common/chatColors.js';
-import { chatAgentLeader, ChatRequestAgentPart, ChatRequestAgentSubcommandPart, ChatRequestDynamicVariablePart, ChatRequestSlashCommandPart, ChatRequestSlashPromptPart, ChatRequestTextPart, ChatRequestToolPart, chatSubcommandLeader, IParsedChatRequest, IParsedChatRequestPart } from '../common/chatParserTypes.js';
-import { IChatMarkdownContent, IChatService } from '../common/chatService.js';
-import { ILanguageModelToolsService } from '../common/languageModelToolsService.js';
-import { IChatWidgetService } from './chat.js';
-import { ChatAgentHover, getChatAgentHoverOptions } from './chatAgentHover.js';
-import { IChatMarkdownAnchorService } from './chatContentParts/chatMarkdownAnchorService.js';
-import { InlineAnchorWidget } from './chatInlineAnchorWidget.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { Button } from '../../../../base/browser/ui/button/button.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { toErrorMessage } from '../../../../base/common/errorMessage.ts';
+import { Lazy } from '../../../../base/common/lazy.ts';
+import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { asCssVariable } from '../../../../platform/theme/common/colorUtils.ts';
+import { contentRefUrl } from '../common/annotations.ts';
+import { getFullyQualifiedId, IChatAgentCommand, IChatAgentData, IChatAgentNameService, IChatAgentService } from '../common/chatAgents.ts';
+import { chatSlashCommandBackground, chatSlashCommandForeground } from '../common/chatColors.ts';
+import { chatAgentLeader, ChatRequestAgentPart, ChatRequestAgentSubcommandPart, ChatRequestDynamicVariablePart, ChatRequestSlashCommandPart, ChatRequestSlashPromptPart, ChatRequestTextPart, ChatRequestToolPart, chatSubcommandLeader, IParsedChatRequest, IParsedChatRequestPart } from '../common/chatParserTypes.ts';
+import { IChatMarkdownContent, IChatService } from '../common/chatService.ts';
+import { ILanguageModelToolsService } from '../common/languageModelToolsService.ts';
+import { IChatWidgetService } from './chat.ts';
+import { ChatAgentHover, getChatAgentHoverOptions } from './chatAgentHover.ts';
+import { IChatMarkdownAnchorService } from './chatContentParts/chatMarkdownAnchorService.ts';
+import { InlineAnchorWidget } from './chatInlineAnchorWidget.ts';
 import './media/chatInlineAnchorWidget.css';
 
 /** For rendering slash commands, variables */

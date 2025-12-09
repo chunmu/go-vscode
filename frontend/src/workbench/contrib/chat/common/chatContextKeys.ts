@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { ContextKeyExpr, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { IsWebContext } from '../../../../platform/contextkey/common/contextkeys.js';
-import { RemoteNameContext } from '../../../common/contextkeys.js';
-import { ViewContainerLocation } from '../../../common/views.js';
-import { ChatEntitlementContextKeys } from '../../../services/chat/common/chatEntitlementService.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from './constants.js';
+import { localize } from '../../../../nls.ts';
+import { ContextKeyExpr, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IsWebContext } from '../../../../platform/contextkey/common/contextkeys.ts';
+import { RemoteNameContext } from '../../../common/contextkeys.ts';
+import { ViewContainerLocation } from '../../../common/views.ts';
+import { ChatEntitlementContextKeys } from '../../../services/chat/common/chatEntitlementService.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from './constants.ts';
 
 export namespace ChatContextKeys {
 	export const responseVote = new RawContextKey<string>('chatSessionResponseVote', '', { type: 'string', description: localize('interactiveSessionResponseVote', "When the response has been voted up, is set to 'up'. When voted down, is set to 'down'. Otherwise an empty string.") });

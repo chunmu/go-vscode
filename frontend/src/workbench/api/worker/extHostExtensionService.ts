@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createApiFactoryAndRegisterActors } from '../common/extHost.api.impl.js';
-import { ExtensionActivationTimesBuilder } from '../common/extHostExtensionActivator.js';
-import { AbstractExtHostExtensionService } from '../common/extHostExtensionService.js';
-import { URI } from '../../../base/common/uri.js';
-import { RequireInterceptor } from '../common/extHostRequireInterceptor.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtensionRuntime } from '../common/extHostTypes.js';
-import { timeout } from '../../../base/common/async.js';
-import { ExtHostConsoleForwarder } from './extHostConsoleForwarder.js';
-import { extname } from '../../../base/common/path.js';
+import { createApiFactoryAndRegisterActors } from '../common/extHost.api.impl.ts';
+import { ExtensionActivationTimesBuilder } from '../common/extHostExtensionActivator.ts';
+import { AbstractExtHostExtensionService } from '../common/extHostExtensionService.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { RequireInterceptor } from '../common/extHostRequireInterceptor.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtensionRuntime } from '../common/extHostTypes.ts';
+import { timeout } from '../../../base/common/async.ts';
+import { ExtHostConsoleForwarder } from './extHostConsoleForwarder.ts';
+import { extname } from '../../../base/common/path.ts';
 
 class WorkerRequireInterceptor extends RequireInterceptor {
 

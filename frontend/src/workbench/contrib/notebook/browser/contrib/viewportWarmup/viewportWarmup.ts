@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { RunOnceScheduler } from '../../../../../../base/common/async.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { IAccessibilityService } from '../../../../../../platform/accessibility/common/accessibility.js';
-import { CellEditState, IInsetRenderOutput, INotebookEditor, INotebookEditorContribution, INotebookEditorDelegate, RenderOutputType } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { CodeCellViewModel, outputDisplayLimit } from '../../viewModel/codeCellViewModel.js';
-import { CellKind } from '../../../common/notebookCommon.js';
-import { cellRangesToIndexes } from '../../../common/notebookRange.js';
-import { INotebookService } from '../../../common/notebookService.js';
+import { RunOnceScheduler } from '../../../../../../base/common/async.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { IAccessibilityService } from '../../../../../../platform/accessibility/common/accessibility.ts';
+import { CellEditState, IInsetRenderOutput, INotebookEditor, INotebookEditorContribution, INotebookEditorDelegate, RenderOutputType } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { CodeCellViewModel, outputDisplayLimit } from '../../viewModel/codeCellViewModel.ts';
+import { CellKind } from '../../../common/notebookCommon.ts';
+import { cellRangesToIndexes } from '../../../common/notebookRange.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
 
 class NotebookViewportContribution extends Disposable implements INotebookEditorContribution {
 	static id: string = 'workbench.notebook.viewportWarmup';

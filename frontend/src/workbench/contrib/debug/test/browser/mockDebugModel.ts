@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { upcastPartial } from '../../../../../base/test/common/mock.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { UriIdentityService } from '../../../../../platform/uriIdentity/common/uriIdentityService.js';
-import { ITextFileService } from '../../../../services/textfile/common/textfiles.js';
-import { TestFileService, TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { DebugModel } from '../../common/debugModel.js';
-import { MockDebugStorage } from '../common/mockDebug.js';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { upcastPartial } from '../../../../../base/test/common/mock.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { UriIdentityService } from '../../../../../platform/uriIdentity/common/uriIdentityService.ts';
+import { ITextFileService } from '../../../../services/textfile/common/textfiles.ts';
+import { TestFileService, TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { DebugModel } from '../../common/debugModel.ts';
+import { MockDebugStorage } from '../common/mockDebug.ts';
 
 const fileService = new TestFileService();
 export const mockUriIdentityService = new UriIdentityService(fileService);

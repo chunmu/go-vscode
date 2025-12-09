@@ -5,17 +5,17 @@
 
 /* eslint-disable local/code-no-native-private */
 
-import { StatusBarAlignment as ExtHostStatusBarAlignment, Disposable, ThemeColor, asStatusBarItemIdentifier } from './extHostTypes.js';
+import { StatusBarAlignment as ExtHostStatusBarAlignment, Disposable, ThemeColor, asStatusBarItemIdentifier } from './extHostTypes.ts';
 import type * as vscode from 'vscode';
-import { MainContext, MainThreadStatusBarShape, IMainContext, ICommandDto, ExtHostStatusBarShape, StatusBarItemDto } from './extHost.protocol.js';
-import { localize } from '../../../nls.js';
-import { CommandsConverter } from './extHostCommands.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { MarkdownString } from './extHostTypeConverters.js';
-import { isNumber } from '../../../base/common/types.js';
-import * as htmlContent from '../../../base/common/htmlContent.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
+import { MainContext, MainThreadStatusBarShape, IMainContext, ICommandDto, ExtHostStatusBarShape, StatusBarItemDto } from './extHost.protocol.ts';
+import { localize } from '../../../nls.ts';
+import { CommandsConverter } from './extHostCommands.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { MarkdownString } from './extHostTypeConverters.ts';
+import { isNumber } from '../../../base/common/types.ts';
+import * as htmlContent from '../../../base/common/htmlContent.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
 
 
 export class ExtHostStatusBarEntry implements vscode.StatusBarItem {

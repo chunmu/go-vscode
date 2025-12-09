@@ -3,39 +3,39 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../base/common/observable.js';
-import { resolve } from '../../../../base/common/path.js';
-import { isMacintosh } from '../../../../base/common/platform.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ipcRenderer } from '../../../../base/parts/sandbox/electron-browser/globals.js';
-import { localize } from '../../../../nls.js';
-import { registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IWorkspaceTrustRequestService } from '../../../../platform/workspace/common/workspaceTrust.js';
-import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { ViewContainerLocation } from '../../../common/views.js';
-import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.js';
-import { ILifecycleService, ShutdownReason } from '../../../services/lifecycle/common/lifecycle.js';
-import { ACTION_ID_NEW_CHAT, CHAT_OPEN_ACTION_ID, IChatViewOpenOptions } from '../browser/actions/chatActions.js';
-import { IChatWidgetService } from '../browser/chat.js';
-import { ChatContextKeys } from '../common/chatContextKeys.js';
-import { IChatService } from '../common/chatService.js';
-import { ChatUrlFetchingConfirmationContribution } from '../common/chatUrlFetchingConfirmation.js';
-import { ChatModeKind } from '../common/constants.js';
-import { ILanguageModelToolsConfirmationService } from '../common/languageModelToolsConfirmationService.js';
-import { ILanguageModelToolsService } from '../common/languageModelToolsService.js';
-import { InternalFetchWebPageToolId } from '../common/tools/tools.js';
-import { registerChatDeveloperActions } from './actions/chatDeveloperActions.js';
-import { HoldToVoiceChatInChatViewAction, InlineVoiceChatAction, KeywordActivationContribution, QuickVoiceChatAction, ReadChatResponseAloud, StartVoiceChatAction, StopListeningAction, StopListeningAndSubmitAction, StopReadAloud, StopReadChatItemAloud, VoiceChatInChatViewAction } from './actions/voiceChatActions.js';
-import { FetchWebPageTool, FetchWebPageToolData, IFetchWebPageToolParams } from './tools/fetchPageTool.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../base/common/observable.ts';
+import { resolve } from '../../../../base/common/path.ts';
+import { isMacintosh } from '../../../../base/common/platform.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ipcRenderer } from '../../../../base/parts/sandbox/electron-browser/globals.ts';
+import { localize } from '../../../../nls.ts';
+import { registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IWorkspaceTrustRequestService } from '../../../../platform/workspace/common/workspaceTrust.ts';
+import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { ViewContainerLocation } from '../../../common/views.ts';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.ts';
+import { ILifecycleService, ShutdownReason } from '../../../services/lifecycle/common/lifecycle.ts';
+import { ACTION_ID_NEW_CHAT, CHAT_OPEN_ACTION_ID, IChatViewOpenOptions } from '../browser/actions/chatActions.ts';
+import { IChatWidgetService } from '../browser/chat.ts';
+import { ChatContextKeys } from '../common/chatContextKeys.ts';
+import { IChatService } from '../common/chatService.ts';
+import { ChatUrlFetchingConfirmationContribution } from '../common/chatUrlFetchingConfirmation.ts';
+import { ChatModeKind } from '../common/constants.ts';
+import { ILanguageModelToolsConfirmationService } from '../common/languageModelToolsConfirmationService.ts';
+import { ILanguageModelToolsService } from '../common/languageModelToolsService.ts';
+import { InternalFetchWebPageToolId } from '../common/tools/tools.ts';
+import { registerChatDeveloperActions } from './actions/chatDeveloperActions.ts';
+import { HoldToVoiceChatInChatViewAction, InlineVoiceChatAction, KeywordActivationContribution, QuickVoiceChatAction, ReadChatResponseAloud, StartVoiceChatAction, StopListeningAction, StopListeningAndSubmitAction, StopReadAloud, StopReadChatItemAloud, VoiceChatInChatViewAction } from './actions/voiceChatActions.ts';
+import { FetchWebPageTool, FetchWebPageToolData, IFetchWebPageToolParams } from './tools/fetchPageTool.ts';
 
 class NativeBuiltinToolsContribution extends Disposable implements IWorkbenchContribution {
 

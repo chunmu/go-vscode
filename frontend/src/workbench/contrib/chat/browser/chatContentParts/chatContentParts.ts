@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ChatTreeItem, IChatCodeBlockInfo } from '../chat.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { CodeBlockModelCollection } from '../../common/codeBlockModelCollection.js';
-import { DiffEditorPool, EditorPool } from './chatContentCodePools.js';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ChatTreeItem, IChatCodeBlockInfo } from '../chat.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { CodeBlockModelCollection } from '../../common/codeBlockModelCollection.ts';
+import { DiffEditorPool, EditorPool } from './chatContentCodePools.ts';
 
 export interface IChatContentPart extends IDisposable {
 	domNode: HTMLElement | undefined;

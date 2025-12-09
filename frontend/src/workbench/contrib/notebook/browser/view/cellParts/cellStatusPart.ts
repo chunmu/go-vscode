@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { StandardKeyboardEvent } from '../../../../../../base/browser/keyboardEvent.js';
-import { SimpleIconLabel } from '../../../../../../base/browser/ui/iconLabel/simpleIconLabel.js';
-import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../../base/common/actions.js';
-import { toErrorMessage } from '../../../../../../base/common/errorMessage.js';
-import { Emitter, Event } from '../../../../../../base/common/event.js';
-import { stripIcons } from '../../../../../../base/common/iconLabels.js';
-import { KeyCode } from '../../../../../../base/common/keyCodes.js';
-import { Disposable, DisposableStore, dispose } from '../../../../../../base/common/lifecycle.js';
-import { MarshalledId } from '../../../../../../base/common/marshallingIds.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { isThemeColor } from '../../../../../../editor/common/editorCommon.js';
-import { ICommandService } from '../../../../../../platform/commands/common/commands.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { INotificationService } from '../../../../../../platform/notification/common/notification.js';
-import { ITelemetryService } from '../../../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../../../platform/theme/common/themeService.js';
-import { ThemeColor } from '../../../../../../base/common/themables.js';
-import { INotebookCellActionContext } from '../../controller/coreActions.js';
-import { CellFocusMode, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
-import { ClickTargetType, IClickTarget } from './cellWidgets.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { CellStatusbarAlignment, INotebookCellStatusBarItem } from '../../../common/notebookCommon.js';
-import { IHoverDelegate, IHoverDelegateOptions } from '../../../../../../base/browser/ui/hover/hoverDelegate.js';
-import { IHoverService } from '../../../../../../platform/hover/browser/hover.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { HoverPosition } from '../../../../../../base/browser/ui/hover/hoverWidget.js';
-import type { IManagedHoverTooltipMarkdownString } from '../../../../../../base/browser/ui/hover/hover.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { StandardKeyboardEvent } from '../../../../../../base/browser/keyboardEvent.ts';
+import { SimpleIconLabel } from '../../../../../../base/browser/ui/iconLabel/simpleIconLabel.ts';
+import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../../base/common/actions.ts';
+import { toErrorMessage } from '../../../../../../base/common/errorMessage.ts';
+import { Emitter, Event } from '../../../../../../base/common/event.ts';
+import { stripIcons } from '../../../../../../base/common/iconLabels.ts';
+import { KeyCode } from '../../../../../../base/common/keyCodes.ts';
+import { Disposable, DisposableStore, dispose } from '../../../../../../base/common/lifecycle.ts';
+import { MarshalledId } from '../../../../../../base/common/marshallingIds.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { isThemeColor } from '../../../../../../editor/common/editorCommon.ts';
+import { ICommandService } from '../../../../../../platform/commands/common/commands.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { INotificationService } from '../../../../../../platform/notification/common/notification.ts';
+import { ITelemetryService } from '../../../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../../../platform/theme/common/themeService.ts';
+import { ThemeColor } from '../../../../../../base/common/themables.ts';
+import { INotebookCellActionContext } from '../../controller/coreActions.ts';
+import { CellFocusMode, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { ClickTargetType, IClickTarget } from './cellWidgets.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { CellStatusbarAlignment, INotebookCellStatusBarItem } from '../../../common/notebookCommon.ts';
+import { IHoverDelegate, IHoverDelegateOptions } from '../../../../../../base/browser/ui/hover/hoverDelegate.ts';
+import { IHoverService } from '../../../../../../platform/hover/browser/hover.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { HoverPosition } from '../../../../../../base/browser/ui/hover/hoverWidget.ts';
+import type { IManagedHoverTooltipMarkdownString } from '../../../../../../base/browser/ui/hover/hover.ts';
 
 const $ = DOM.$;
 

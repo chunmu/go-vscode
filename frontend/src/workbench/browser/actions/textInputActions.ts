@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction, Separator, toAction } from '../../../base/common/actions.js';
-import { localize } from '../../../nls.js';
-import { IWorkbenchLayoutService } from '../../services/layout/browser/layoutService.js';
-import { IContextMenuService } from '../../../platform/contextview/browser/contextView.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { EventHelper, addDisposableListener, getActiveDocument, getWindow, isHTMLInputElement, isHTMLTextAreaElement } from '../../../base/browser/dom.js';
-import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../common/contributions.js';
-import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.js';
-import { StandardMouseEvent } from '../../../base/browser/mouseEvent.js';
-import { Event as BaseEvent } from '../../../base/common/event.js';
-import { Lazy } from '../../../base/common/lazy.js';
-import { ILogService } from '../../../platform/log/common/log.js';
+import { IAction, Separator, toAction } from '../../../base/common/actions.ts';
+import { localize } from '../../../nls.ts';
+import { IWorkbenchLayoutService } from '../../services/layout/browser/layoutService.ts';
+import { IContextMenuService } from '../../../platform/contextview/browser/contextView.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { EventHelper, addDisposableListener, getActiveDocument, getWindow, isHTMLInputElement, isHTMLTextAreaElement } from '../../../base/browser/dom.ts';
+import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../common/contributions.ts';
+import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.ts';
+import { StandardMouseEvent } from '../../../base/browser/mouseEvent.ts';
+import { Event as BaseEvent } from '../../../base/common/event.ts';
+import { Lazy } from '../../../base/common/lazy.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
 
 export function createTextInputActions(clipboardService: IClipboardService, logService: ILogService): IAction[] {
 	return [

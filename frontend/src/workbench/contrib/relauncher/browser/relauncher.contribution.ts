@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { RunOnceScheduler } from '../../../../base/common/async.js';
-import { Disposable, dispose, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { isLinux, isMacintosh, isNative } from '../../../../base/common/platform.js';
-import { isEqual } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { ConfigurationTarget, IConfigurationChangeEvent, IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IUserDataSyncEnablementService, IUserDataSyncService, SyncStatus } from '../../../../platform/userDataSync/common/userDataSync.js';
-import { IWindowsConfiguration, IWindowSettings, MenuSettings, MenuStyleConfiguration, TitleBarSetting, TitlebarStyle } from '../../../../platform/window/common/window.js';
-import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.js';
-import { IWorkbenchContribution, IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../../../common/contributions.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { IUserDataSyncWorkbenchService } from '../../../services/userDataSync/common/userDataSync.js';
+import { RunOnceScheduler } from '../../../../base/common/async.ts';
+import { Disposable, dispose, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { isLinux, isMacintosh, isNative } from '../../../../base/common/platform.ts';
+import { isEqual } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { ConfigurationTarget, IConfigurationChangeEvent, IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IUserDataSyncEnablementService, IUserDataSyncService, SyncStatus } from '../../../../platform/userDataSync/common/userDataSync.ts';
+import { IWindowsConfiguration, IWindowSettings, MenuSettings, MenuStyleConfiguration, TitleBarSetting, TitlebarStyle } from '../../../../platform/window/common/window.ts';
+import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.ts';
+import { IWorkbenchContribution, IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../../../common/contributions.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { IUserDataSyncWorkbenchService } from '../../../services/userDataSync/common/userDataSync.ts';
 
 interface IConfiguration extends IWindowsConfiguration {
 	update?: { mode?: string };

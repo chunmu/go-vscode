@@ -4,29 +4,29 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { AsyncIterableProducer, AsyncIterableSource, RunOnceScheduler } from '../../../base/common/async.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { SerializedError, transformErrorForSerialization, transformErrorFromSerialization } from '../../../base/common/errors.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { Iterable } from '../../../base/common/iterator.js';
-import { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { ExtensionIdentifier, ExtensionIdentifierMap, ExtensionIdentifierSet, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { Progress } from '../../../platform/progress/common/progress.js';
-import { IChatMessage, IChatResponsePart, ILanguageModelChatMetadata, ILanguageModelChatMetadataAndIdentifier } from '../../contrib/chat/common/languageModels.js';
-import { DEFAULT_MODEL_PICKER_CATEGORY } from '../../contrib/chat/common/modelPicker/modelPickerWidget.js';
-import { INTERNAL_AUTH_PROVIDER_PREFIX } from '../../services/authentication/common/authentication.js';
-import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostLanguageModelsShape, MainContext, MainThreadLanguageModelsShape } from './extHost.protocol.js';
-import { IExtHostAuthentication } from './extHostAuthentication.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import * as typeConvert from './extHostTypeConverters.js';
-import * as extHostTypes from './extHostTypes.js';
+import { AsyncIterableProducer, AsyncIterableSource, RunOnceScheduler } from '../../../base/common/async.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { SerializedError, transformErrorForSerialization, transformErrorFromSerialization } from '../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { Iterable } from '../../../base/common/iterator.ts';
+import { IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { ExtensionIdentifier, ExtensionIdentifierMap, ExtensionIdentifierSet, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { Progress } from '../../../platform/progress/common/progress.ts';
+import { IChatMessage, IChatResponsePart, ILanguageModelChatMetadata, ILanguageModelChatMetadataAndIdentifier } from '../../contrib/chat/common/languageModels.ts';
+import { DEFAULT_MODEL_PICKER_CATEGORY } from '../../contrib/chat/common/modelPicker/modelPickerWidget.ts';
+import { INTERNAL_AUTH_PROVIDER_PREFIX } from '../../services/authentication/common/authentication.ts';
+import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostLanguageModelsShape, MainContext, MainThreadLanguageModelsShape } from './extHost.protocol.ts';
+import { IExtHostAuthentication } from './extHostAuthentication.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import * as typeConvert from './extHostTypeConverters.ts';
+import * as extHostTypes from './extHostTypes.ts';
 
 export interface IExtHostLanguageModels extends ExtHostLanguageModels { }
 

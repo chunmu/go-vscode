@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { BrandedService } from '../../../../platform/instantiation/common/instantiation.js';
-import { INotebookEditor, INotebookEditorContribution, INotebookEditorContributionCtor, INotebookEditorContributionDescription } from './notebookBrowser.js';
+import { BrandedService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { INotebookEditor, INotebookEditorContribution, INotebookEditorContributionCtor, INotebookEditorContributionDescription } from './notebookBrowser.ts';
 
 
 class EditorContributionRegistry {

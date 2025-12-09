@@ -4,30 +4,30 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/customEditor.css';
-import { coalesce } from '../../../../base/common/arrays.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { extname, isEqual } from '../../../../base/common/resources.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { URI } from '../../../../base/common/uri.js';
-import { RedoCommand, UndoCommand } from '../../../../editor/browser/editorExtensions.js';
-import { IResourceEditorInput } from '../../../../platform/editor/common/editor.js';
-import { FileOperation, IFileService } from '../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { DEFAULT_EDITOR_ASSOCIATION, EditorExtensions, GroupIdentifier, IEditorFactoryRegistry, IResourceDiffEditorInput } from '../../../common/editor.js';
-import { DiffEditorInput } from '../../../common/editor/diffEditorInput.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { CONTEXT_ACTIVE_CUSTOM_EDITOR_ID, CONTEXT_FOCUSED_CUSTOM_EDITOR_IS_EDITABLE, CustomEditorCapabilities, CustomEditorInfo, CustomEditorInfoCollection, ICustomEditorModelManager, ICustomEditorService } from '../common/customEditor.js';
-import { CustomEditorModelManager } from '../common/customEditorModelManager.js';
-import { IEditorGroup, IEditorGroupContextKeyProvider, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { IEditorResolverService, IEditorType, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { ContributedCustomEditors } from '../common/contributedCustomEditors.js';
-import { CustomEditorInput } from './customEditorInput.js';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { extname, isEqual } from '../../../../base/common/resources.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { RedoCommand, UndoCommand } from '../../../../editor/browser/editorExtensions.ts';
+import { IResourceEditorInput } from '../../../../platform/editor/common/editor.ts';
+import { FileOperation, IFileService } from '../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { DEFAULT_EDITOR_ASSOCIATION, EditorExtensions, GroupIdentifier, IEditorFactoryRegistry, IResourceDiffEditorInput } from '../../../common/editor.ts';
+import { DiffEditorInput } from '../../../common/editor/diffEditorInput.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { CONTEXT_ACTIVE_CUSTOM_EDITOR_ID, CONTEXT_FOCUSED_CUSTOM_EDITOR_IS_EDITABLE, CustomEditorCapabilities, CustomEditorInfo, CustomEditorInfoCollection, ICustomEditorModelManager, ICustomEditorService } from '../common/customEditor.ts';
+import { CustomEditorModelManager } from '../common/customEditorModelManager.ts';
+import { IEditorGroup, IEditorGroupContextKeyProvider, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { IEditorResolverService, IEditorType, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { ContributedCustomEditors } from '../common/contributedCustomEditors.ts';
+import { CustomEditorInput } from './customEditorInput.ts';
 
 export class CustomEditorService extends Disposable implements ICustomEditorService {
 	_serviceBrand: any;

@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.js';
-import { Button, ButtonWithDropdown, IButton, IButtonOptions } from '../../../../../base/browser/ui/button/button.js';
-import { Action, Separator } from '../../../../../base/common/actions.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { IMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import type { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.js';
-import { MenuId } from '../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { FocusMode } from '../../../../../platform/native/common/native.js';
-import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.js';
-import { IHostService } from '../../../../services/host/browser/host.js';
-import { IChatWidgetService } from '../chat.js';
-import { renderFileWidgets } from '../chatInlineAnchorWidget.js';
-import { IChatContentPartRenderContext } from './chatContentParts.js';
-import { IChatMarkdownAnchorService } from './chatMarkdownAnchorService.js';
-import { ChatMarkdownContentPart, IChatMarkdownContentPartOptions } from './chatMarkdownContentPart.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.ts';
+import { Button, ButtonWithDropdown, IButton, IButtonOptions } from '../../../../../base/browser/ui/button/button.ts';
+import { Action, Separator } from '../../../../../base/common/actions.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { IMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import type { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.ts';
+import { MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { FocusMode } from '../../../../../platform/native/common/native.ts';
+import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.ts';
+import { IHostService } from '../../../../services/host/browser/host.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { renderFileWidgets } from '../chatInlineAnchorWidget.ts';
+import { IChatContentPartRenderContext } from './chatContentParts.ts';
+import { IChatMarkdownAnchorService } from './chatMarkdownAnchorService.ts';
+import { ChatMarkdownContentPart, IChatMarkdownContentPartOptions } from './chatMarkdownContentPart.ts';
 import './media/chatConfirmationWidget.css';
 
 export interface IChatConfirmationButton<T> {

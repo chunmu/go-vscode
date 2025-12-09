@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { safeStringify } from '../../../../base/common/objects.js';
-import * as nls from '../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
+import { safeStringify } from '../../../../base/common/objects.ts';
+import * as nls from '../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
 
 type RunnableCommand = string | { command: string; args: any[] };
 

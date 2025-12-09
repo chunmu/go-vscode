@@ -5,30 +5,30 @@
 
 /* eslint-disable local/code-no-native-private */
 
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { Event, Emitter } from '../../../base/common/event.js';
-import { debounce } from '../../../base/common/decorators.js';
-import { DisposableStore, IDisposable, MutableDisposable } from '../../../base/common/lifecycle.js';
-import { asPromise } from '../../../base/common/async.js';
-import { ExtHostCommands } from './extHostCommands.js';
-import { MainContext, MainThreadSCMShape, SCMRawResource, SCMRawResourceSplice, SCMRawResourceSplices, IMainContext, ExtHostSCMShape, ICommandDto, MainThreadTelemetryShape, SCMGroupFeatures, SCMHistoryItemDto, SCMHistoryItemChangeDto, SCMHistoryItemRefDto, SCMActionButtonDto, SCMArtifactGroupDto, SCMArtifactDto } from './extHost.protocol.js';
-import { sortedDiff, equals } from '../../../base/common/arrays.js';
-import { comparePaths } from '../../../base/common/comparers.js';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { Event, Emitter } from '../../../base/common/event.ts';
+import { debounce } from '../../../base/common/decorators.ts';
+import { DisposableStore, IDisposable, MutableDisposable } from '../../../base/common/lifecycle.ts';
+import { asPromise } from '../../../base/common/async.ts';
+import { ExtHostCommands } from './extHostCommands.ts';
+import { MainContext, MainThreadSCMShape, SCMRawResource, SCMRawResourceSplice, SCMRawResourceSplices, IMainContext, ExtHostSCMShape, ICommandDto, MainThreadTelemetryShape, SCMGroupFeatures, SCMHistoryItemDto, SCMHistoryItemChangeDto, SCMHistoryItemRefDto, SCMActionButtonDto, SCMArtifactGroupDto, SCMArtifactDto } from './extHost.protocol.ts';
+import { sortedDiff, equals } from '../../../base/common/arrays.ts';
+import { comparePaths } from '../../../base/common/comparers.ts';
 import type * as vscode from 'vscode';
-import { ISplice } from '../../../base/common/sequence.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { ExtensionIdentifierMap, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
-import { MarkdownString, SourceControlInputBoxValidationType } from './extHostTypeConverters.js';
-import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import { Schemas } from '../../../base/common/network.js';
-import { isLinux } from '../../../base/common/platform.js';
-import { structuralEquals } from '../../../base/common/equals.js';
-import { Iterable } from '../../../base/common/iterator.js';
+import { ISplice } from '../../../base/common/sequence.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { ExtensionIdentifierMap, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
+import { MarkdownString, SourceControlInputBoxValidationType } from './extHostTypeConverters.ts';
+import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { isLinux } from '../../../base/common/platform.ts';
+import { structuralEquals } from '../../../base/common/equals.ts';
+import { Iterable } from '../../../base/common/iterator.ts';
 
 type ProviderHandle = number;
 type GroupHandle = number;

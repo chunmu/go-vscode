@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ITunnel, ITunnelOptions, IWorkbench, IWorkbenchConstructionOptions, Menu } from './web.api.js';
-import { BrowserMain } from './web.main.js';
-import { URI, UriComponents } from '../../base/common/uri.js';
-import { IDisposable, toDisposable } from '../../base/common/lifecycle.js';
-import { CommandsRegistry } from '../../platform/commands/common/commands.js';
-import { mark, PerformanceMark } from '../../base/common/performance.js';
-import { MenuId, MenuRegistry } from '../../platform/actions/common/actions.js';
-import { DeferredPromise } from '../../base/common/async.js';
-import { asArray } from '../../base/common/arrays.js';
-import { IProgress, IProgressCompositeOptions, IProgressDialogOptions, IProgressNotificationOptions, IProgressOptions, IProgressStep, IProgressWindowOptions } from '../../platform/progress/common/progress.js';
-import { LogLevel } from '../../platform/log/common/log.js';
-import { IEmbedderTerminalOptions } from '../services/terminal/common/embedderTerminalService.js';
+import { ITunnel, ITunnelOptions, IWorkbench, IWorkbenchConstructionOptions, Menu } from './web.api.ts';
+import { BrowserMain } from './web.main.ts';
+import { URI, UriComponents } from '../../base/common/uri.ts';
+import { IDisposable, toDisposable } from '../../base/common/lifecycle.ts';
+import { CommandsRegistry } from '../../platform/commands/common/commands.ts';
+import { mark, PerformanceMark } from '../../base/common/performance.ts';
+import { MenuId, MenuRegistry } from '../../platform/actions/common/actions.ts';
+import { DeferredPromise } from '../../base/common/async.ts';
+import { asArray } from '../../base/common/arrays.ts';
+import { IProgress, IProgressCompositeOptions, IProgressDialogOptions, IProgressNotificationOptions, IProgressOptions, IProgressStep, IProgressWindowOptions } from '../../platform/progress/common/progress.ts';
+import { LogLevel } from '../../platform/log/common/log.ts';
+import { IEmbedderTerminalOptions } from '../services/terminal/common/embedderTerminalService.ts';
 
 let created = false;
 const workbenchPromise = new DeferredPromise<IWorkbench>();

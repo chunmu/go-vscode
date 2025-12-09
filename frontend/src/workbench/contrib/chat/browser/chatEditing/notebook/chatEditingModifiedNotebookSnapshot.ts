@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { decodeBase64, encodeBase64, VSBuffer } from '../../../../../../base/common/buffer.js';
-import { filter } from '../../../../../../base/common/objects.js';
-import { URI, UriComponents } from '../../../../../../base/common/uri.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { SnapshotContext } from '../../../../../services/workingCopy/common/fileWorkingCopy.js';
-import { NotebookCellTextModel } from '../../../../notebook/common/model/notebookCellTextModel.js';
-import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.js';
-import { CellEditType, ICellDto2, ICellEditOperation, INotebookTextModel, IOutputItemDto, NotebookData, NotebookSetting, TransientOptions } from '../../../../notebook/common/notebookCommon.js';
+import { decodeBase64, encodeBase64, VSBuffer } from '../../../../../../base/common/buffer.ts';
+import { filter } from '../../../../../../base/common/objects.ts';
+import { URI, UriComponents } from '../../../../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { SnapshotContext } from '../../../../../services/workingCopy/common/fileWorkingCopy.ts';
+import { NotebookCellTextModel } from '../../../../notebook/common/model/notebookCellTextModel.ts';
+import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.ts';
+import { CellEditType, ICellDto2, ICellEditOperation, INotebookTextModel, IOutputItemDto, NotebookData, NotebookSetting, TransientOptions } from '../../../../notebook/common/notebookCommon.ts';
 
 const BufferMarker = 'ArrayBuffer-4f56482b-5a03-49ba-8356-210d3b0c1c3d';
 

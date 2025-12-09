@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { IconLabel } from '../../../../../base/browser/ui/iconLabel/iconLabel.js';
-import { IListRenderer, IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../nls.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { WorkbenchList } from '../../../../../platform/list/browser/listService.js';
-import { IChatTodoListService, IChatTodo } from '../../common/chatTodoListService.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { TodoListToolDescriptionFieldSettingId } from '../../common/tools/manageTodoListTool.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { isEqual } from '../../../../../base/common/resources.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { IconLabel } from '../../../../../base/browser/ui/iconLabel/iconLabel.ts';
+import { IListRenderer, IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { WorkbenchList } from '../../../../../platform/list/browser/listService.ts';
+import { IChatTodoListService, IChatTodo } from '../../common/chatTodoListService.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { TodoListToolDescriptionFieldSettingId } from '../../common/tools/manageTodoListTool.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
 
 class TodoListDelegate implements IListVirtualDelegate<IChatTodo> {
 	getHeight(element: IChatTodo): number {

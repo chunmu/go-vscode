@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { illegalArgument } from '../../../../base/common/errors.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Position } from './position.js';
-import { Range } from './range.js';
+import { illegalArgument } from '../../../../base/common/errors.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Position } from './position.ts';
+import { Range } from './range.ts';
 
 export enum EndOfLine {
 	LF = 1,

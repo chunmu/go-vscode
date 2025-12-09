@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ICodeEditor, IOverlayWidget, IOverlayWidgetPosition, OverlayWidgetPositionPreference } from '../../../../../editor/browser/editorBrowser.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IRemoteCodingAgentsService } from '../../../remoteCodingAgents/common/remoteCodingAgentsService.js';
-import { localize } from '../../../../../nls.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { PROMPT_LANGUAGE_ID } from '../../common/promptSyntax/promptTypes.js';
-import { $ } from '../../../../../base/browser/dom.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ICodeEditor, IOverlayWidget, IOverlayWidgetPosition, OverlayWidgetPositionPreference } from '../../../../../editor/browser/editorBrowser.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IRemoteCodingAgentsService } from '../../../remoteCodingAgents/common/remoteCodingAgentsService.ts';
+import { localize } from '../../../../../nls.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { PROMPT_LANGUAGE_ID } from '../../common/promptSyntax/promptTypes.ts';
+import { $ } from '../../../../../base/browser/dom.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
 
 export class PromptCodingAgentActionOverlayWidget extends Disposable implements IOverlayWidget {
 

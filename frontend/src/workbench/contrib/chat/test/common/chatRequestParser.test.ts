@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { mockObject } from '../../../../../base/test/common/mock.js';
-import { assertSnapshot } from '../../../../../base/test/common/snapshot.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.js';
-import { ILogService, NullLogService } from '../../../../../platform/log/common/log.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { IExtensionService, nullExtensionDescription } from '../../../../services/extensions/common/extensions.js';
-import { TestExtensionService, TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { ChatAgentService, IChatAgentCommand, IChatAgentData, IChatAgentService } from '../../common/chatAgents.js';
-import { ChatRequestParser } from '../../common/chatRequestParser.js';
-import { IChatService } from '../../common/chatService.js';
-import { IChatSlashCommandService } from '../../common/chatSlashCommands.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
-import { IChatVariablesService } from '../../common/chatVariables.js';
-import { ChatAgentLocation, ChatModeKind } from '../../common/constants.js';
-import { IToolData, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
-import { MockChatService } from './mockChatService.js';
-import { MockChatVariablesService } from './mockChatVariables.js';
-import { MockPromptsService } from './mockPromptsService.js';
+import { mockObject } from '../../../../../base/test/common/mock.ts';
+import { assertSnapshot } from '../../../../../base/test/common/snapshot.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.ts';
+import { ILogService, NullLogService } from '../../../../../platform/log/common/log.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { IExtensionService, nullExtensionDescription } from '../../../../services/extensions/common/extensions.ts';
+import { TestExtensionService, TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { ChatAgentService, IChatAgentCommand, IChatAgentData, IChatAgentService } from '../../common/chatAgents.ts';
+import { ChatRequestParser } from '../../common/chatRequestParser.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { IChatSlashCommandService } from '../../common/chatSlashCommands.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
+import { IChatVariablesService } from '../../common/chatVariables.ts';
+import { ChatAgentLocation, ChatModeKind } from '../../common/constants.ts';
+import { IToolData, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
+import { MockChatService } from './mockChatService.ts';
+import { MockChatVariablesService } from './mockChatVariables.ts';
+import { MockPromptsService } from './mockPromptsService.ts';
 
 const testSessionUri = LocalChatSessionUri.forSession('test-session');
 

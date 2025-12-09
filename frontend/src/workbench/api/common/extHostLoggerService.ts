@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ILogger, ILoggerOptions, AbstractMessageLogger, LogLevel, AbstractLoggerService } from '../../../platform/log/common/log.js';
-import { MainThreadLoggerShape, MainContext, ExtHostLogLevelServiceShape as ExtHostLogLevelServiceShape } from './extHost.protocol.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { revive } from '../../../base/common/marshalling.js';
+import { ILogger, ILoggerOptions, AbstractMessageLogger, LogLevel, AbstractLoggerService } from '../../../platform/log/common/log.ts';
+import { MainThreadLoggerShape, MainContext, ExtHostLogLevelServiceShape as ExtHostLogLevelServiceShape } from './extHost.protocol.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { revive } from '../../../base/common/marshalling.ts';
 
 export class ExtHostLoggerService extends AbstractLoggerService implements ExtHostLogLevelServiceShape {
 

@@ -3,37 +3,37 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { RunOnceScheduler } from '../../../../base/common/async.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IJSONSchema, IJSONSchemaMap } from '../../../../base/common/jsonSchema.js';
-import { Disposable, IDisposable } from '../../../../base/common/lifecycle.js';
-import Severity from '../../../../base/common/severity.js';
-import * as strings from '../../../../base/common/strings.js';
-import { isCodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IEditorModel } from '../../../../editor/common/editorCommon.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import * as nls from '../../../../nls.js';
-import { IMenuService, MenuId, MenuItemAction } from '../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { Extensions as JSONExtensions, IJSONContributionRegistry } from '../../../../platform/jsonschemas/common/jsonContributionRegistry.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../platform/quickinput/common/quickInput.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { Breakpoints } from '../common/breakpoints.js';
-import { CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DEBUG_EXTENSION_AVAILABLE, IAdapterDescriptor, IAdapterManager, IConfig, IConfigurationManager, IDebugAdapter, IDebugAdapterDescriptorFactory, IDebugAdapterFactory, IDebugConfiguration, IDebugSession, IGuessedDebugger, INTERNAL_CONSOLE_OPTIONS_SCHEMA } from '../common/debug.js';
-import { Debugger } from '../common/debugger.js';
-import { breakpointsExtPoint, debuggersExtPoint, launchSchema, presentationSchema } from '../common/debugSchemas.js';
-import { TaskDefinitionRegistry } from '../../tasks/common/taskDefinitionRegistry.js';
-import { ITaskService } from '../../tasks/common/taskService.js';
-import { launchSchemaId } from '../../../services/configuration/common/configuration.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
+import { RunOnceScheduler } from '../../../../base/common/async.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IJSONSchema, IJSONSchemaMap } from '../../../../base/common/jsonSchema.ts';
+import { Disposable, IDisposable } from '../../../../base/common/lifecycle.ts';
+import Severity from '../../../../base/common/severity.ts';
+import * as strings from '../../../../base/common/strings.ts';
+import { isCodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IEditorModel } from '../../../../editor/common/editorCommon.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import * as nls from '../../../../nls.ts';
+import { IMenuService, MenuId, MenuItemAction } from '../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Extensions as JSONExtensions, IJSONContributionRegistry } from '../../../../platform/jsonschemas/common/jsonContributionRegistry.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../platform/quickinput/common/quickInput.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { Breakpoints } from '../common/breakpoints.ts';
+import { CONTEXT_DEBUGGERS_AVAILABLE, CONTEXT_DEBUG_EXTENSION_AVAILABLE, IAdapterDescriptor, IAdapterManager, IConfig, IConfigurationManager, IDebugAdapter, IDebugAdapterDescriptorFactory, IDebugAdapterFactory, IDebugConfiguration, IDebugSession, IGuessedDebugger, INTERNAL_CONSOLE_OPTIONS_SCHEMA } from '../common/debug.ts';
+import { Debugger } from '../common/debugger.ts';
+import { breakpointsExtPoint, debuggersExtPoint, launchSchema, presentationSchema } from '../common/debugSchemas.ts';
+import { TaskDefinitionRegistry } from '../../tasks/common/taskDefinitionRegistry.ts';
+import { ITaskService } from '../../tasks/common/taskService.ts';
+import { launchSchemaId } from '../../../services/configuration/common/configuration.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
 
 const jsonRegistry = Registry.as<IJSONContributionRegistry>(JSONExtensions.JSONContribution);
 

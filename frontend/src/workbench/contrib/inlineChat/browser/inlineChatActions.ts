@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { ICodeEditor, isCodeEditor, isDiffEditor } from '../../../../editor/browser/editorBrowser.js';
-import { EditorAction2 } from '../../../../editor/browser/editorExtensions.js';
-import { EmbeddedDiffEditorWidget } from '../../../../editor/browser/widget/diffEditor/embeddedDiffEditorWidget.js';
-import { EmbeddedCodeEditorWidget } from '../../../../editor/browser/widget/codeEditor/embeddedCodeEditorWidget.js';
-import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.js';
-import { InlineChatController, InlineChatController1, InlineChatController2, InlineChatRunOptions } from './inlineChatController.js';
-import { ACTION_ACCEPT_CHANGES, CTX_INLINE_CHAT_HAS_STASHED_SESSION, CTX_INLINE_CHAT_FOCUSED, CTX_INLINE_CHAT_INNER_CURSOR_FIRST, CTX_INLINE_CHAT_INNER_CURSOR_LAST, CTX_INLINE_CHAT_VISIBLE, CTX_INLINE_CHAT_OUTER_CURSOR_POSITION, MENU_INLINE_CHAT_WIDGET_STATUS, CTX_INLINE_CHAT_REQUEST_IN_PROGRESS, CTX_INLINE_CHAT_RESPONSE_TYPE, InlineChatResponseType, ACTION_REGENERATE_RESPONSE, ACTION_VIEW_IN_CHAT, ACTION_TOGGLE_DIFF, CTX_INLINE_CHAT_CHANGE_HAS_DIFF, CTX_INLINE_CHAT_CHANGE_SHOWS_DIFF, MENU_INLINE_CHAT_ZONE, ACTION_DISCARD_CHANGES, CTX_INLINE_CHAT_POSSIBLE, ACTION_START, MENU_INLINE_CHAT_SIDE, CTX_INLINE_CHAT_V2_ENABLED, CTX_INLINE_CHAT_V1_ENABLED } from '../common/inlineChat.js';
-import { ctxHasEditorModification, ctxHasRequestInProgress } from '../../chat/browser/chatEditing/chatEditingEditorContextKeys.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { Action2, IAction2Options, MenuId } from '../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../platform/accessibility/common/accessibility.js';
-import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
-import { IPreferencesService } from '../../../services/preferences/common/preferences.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IChatService } from '../../chat/common/chatService.js';
-import { ChatContextKeys } from '../../chat/common/chatContextKeys.js';
-import { HunkInformation } from './inlineChatSession.js';
-import { IChatWidgetService } from '../../chat/browser/chat.js';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { ICodeEditor, isCodeEditor, isDiffEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { EditorAction2 } from '../../../../editor/browser/editorExtensions.ts';
+import { EmbeddedDiffEditorWidget } from '../../../../editor/browser/widget/diffEditor/embeddedDiffEditorWidget.ts';
+import { EmbeddedCodeEditorWidget } from '../../../../editor/browser/widget/codeEditor/embeddedCodeEditorWidget.ts';
+import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.ts';
+import { InlineChatController, InlineChatController1, InlineChatController2, InlineChatRunOptions } from './inlineChatController.ts';
+import { ACTION_ACCEPT_CHANGES, CTX_INLINE_CHAT_HAS_STASHED_SESSION, CTX_INLINE_CHAT_FOCUSED, CTX_INLINE_CHAT_INNER_CURSOR_FIRST, CTX_INLINE_CHAT_INNER_CURSOR_LAST, CTX_INLINE_CHAT_VISIBLE, CTX_INLINE_CHAT_OUTER_CURSOR_POSITION, MENU_INLINE_CHAT_WIDGET_STATUS, CTX_INLINE_CHAT_REQUEST_IN_PROGRESS, CTX_INLINE_CHAT_RESPONSE_TYPE, InlineChatResponseType, ACTION_REGENERATE_RESPONSE, ACTION_VIEW_IN_CHAT, ACTION_TOGGLE_DIFF, CTX_INLINE_CHAT_CHANGE_HAS_DIFF, CTX_INLINE_CHAT_CHANGE_SHOWS_DIFF, MENU_INLINE_CHAT_ZONE, ACTION_DISCARD_CHANGES, CTX_INLINE_CHAT_POSSIBLE, ACTION_START, MENU_INLINE_CHAT_SIDE, CTX_INLINE_CHAT_V2_ENABLED, CTX_INLINE_CHAT_V1_ENABLED } from '../common/inlineChat.ts';
+import { ctxHasEditorModification, ctxHasRequestInProgress } from '../../chat/browser/chatEditing/chatEditingEditorContextKeys.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { Action2, IAction2Options, MenuId } from '../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../platform/accessibility/common/accessibility.ts';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
+import { IPreferencesService } from '../../../services/preferences/common/preferences.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IChatService } from '../../chat/common/chatService.ts';
+import { ChatContextKeys } from '../../chat/common/chatContextKeys.ts';
+import { HunkInformation } from './inlineChatSession.ts';
+import { IChatWidgetService } from '../../chat/browser/chat.ts';
 
 
 CommandsRegistry.registerCommandAlias('interactiveEditor.start', 'inlineChat.start');

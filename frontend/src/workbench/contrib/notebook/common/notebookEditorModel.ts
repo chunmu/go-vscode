@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBufferReadableStream, streamToBuffer } from '../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { CancellationError } from '../../../../base/common/errors.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { assertType, hasKey } from '../../../../base/common/types.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IWriteFileOptions, IFileStatWithMetadata, FileOperationError, FileOperationResult } from '../../../../platform/files/common/files.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IRevertOptions, ISaveOptions, IUntypedEditorInput } from '../../../common/editor.js';
-import { EditorModel } from '../../../common/editor/editorModel.js';
-import { NotebookTextModel } from './model/notebookTextModel.js';
-import { INotebookEditorModel, INotebookLoadOptions, IResolvedNotebookEditorModel, NotebookCellsChangeType, NotebookSetting } from './notebookCommon.js';
-import { INotebookLoggingService } from './notebookLoggingService.js';
-import { INotebookSerializer, INotebookService, SimpleNotebookProviderInfo } from './notebookService.js';
-import { IFilesConfigurationService } from '../../../services/filesConfiguration/common/filesConfigurationService.js';
-import { IFileWorkingCopyModelConfiguration, SnapshotContext } from '../../../services/workingCopy/common/fileWorkingCopy.js';
-import { IFileWorkingCopyManager } from '../../../services/workingCopy/common/fileWorkingCopyManager.js';
-import { IStoredFileWorkingCopy, IStoredFileWorkingCopyModel, IStoredFileWorkingCopyModelContentChangedEvent, IStoredFileWorkingCopyModelFactory, IStoredFileWorkingCopySaveEvent, StoredFileWorkingCopyState } from '../../../services/workingCopy/common/storedFileWorkingCopy.js';
-import { IUntitledFileWorkingCopy, IUntitledFileWorkingCopyModel, IUntitledFileWorkingCopyModelContentChangedEvent, IUntitledFileWorkingCopyModelFactory } from '../../../services/workingCopy/common/untitledFileWorkingCopy.js';
-import { WorkingCopyCapabilities } from '../../../services/workingCopy/common/workingCopy.js';
+import { VSBufferReadableStream, streamToBuffer } from '../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { CancellationError } from '../../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { assertType, hasKey } from '../../../../base/common/types.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IWriteFileOptions, IFileStatWithMetadata, FileOperationError, FileOperationResult } from '../../../../platform/files/common/files.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IRevertOptions, ISaveOptions, IUntypedEditorInput } from '../../../common/editor.ts';
+import { EditorModel } from '../../../common/editor/editorModel.ts';
+import { NotebookTextModel } from './model/notebookTextModel.ts';
+import { INotebookEditorModel, INotebookLoadOptions, IResolvedNotebookEditorModel, NotebookCellsChangeType, NotebookSetting } from './notebookCommon.ts';
+import { INotebookLoggingService } from './notebookLoggingService.ts';
+import { INotebookSerializer, INotebookService, SimpleNotebookProviderInfo } from './notebookService.ts';
+import { IFilesConfigurationService } from '../../../services/filesConfiguration/common/filesConfigurationService.ts';
+import { IFileWorkingCopyModelConfiguration, SnapshotContext } from '../../../services/workingCopy/common/fileWorkingCopy.ts';
+import { IFileWorkingCopyManager } from '../../../services/workingCopy/common/fileWorkingCopyManager.ts';
+import { IStoredFileWorkingCopy, IStoredFileWorkingCopyModel, IStoredFileWorkingCopyModelContentChangedEvent, IStoredFileWorkingCopyModelFactory, IStoredFileWorkingCopySaveEvent, StoredFileWorkingCopyState } from '../../../services/workingCopy/common/storedFileWorkingCopy.ts';
+import { IUntitledFileWorkingCopy, IUntitledFileWorkingCopyModel, IUntitledFileWorkingCopyModelContentChangedEvent, IUntitledFileWorkingCopyModelFactory } from '../../../services/workingCopy/common/untitledFileWorkingCopy.ts';
+import { WorkingCopyCapabilities } from '../../../services/workingCopy/common/workingCopy.ts';
 
 //#region --- simple content provider
 

@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { StandardKeyboardEvent } from '../../../../../base/browser/keyboardEvent.js';
-import { StandardMouseEvent } from '../../../../../base/browser/mouseEvent.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { getDefaultHoverDelegate } from '../../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode } from '../../../../../base/common/keyCodes.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { basename, dirname } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { Location } from '../../../../../editor/common/languages.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { IModelService } from '../../../../../editor/common/services/model.js';
-import { localize } from '../../../../../nls.js';
-import { getFlatContextMenuActions } from '../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { IMenuService, MenuId } from '../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.js';
-import { FileKind, IFileService } from '../../../../../platform/files/common/files.js';
-import { IHoverService } from '../../../../../platform/hover/browser/hover.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.js';
-import { ResourceContextKey } from '../../../../common/contextkeys.js';
-import { IChatRequestImplicitVariableEntry, IChatRequestStringVariableEntry, isStringImplicitContextValue } from '../../common/chatVariableEntries.js';
-import { IChatWidget } from '../chat.js';
-import { ChatAttachmentModel } from '../chatAttachmentModel.js';
-import { IChatContextService } from '../chatContextService.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { StandardKeyboardEvent } from '../../../../../base/browser/keyboardEvent.ts';
+import { StandardMouseEvent } from '../../../../../base/browser/mouseEvent.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { getDefaultHoverDelegate } from '../../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode } from '../../../../../base/common/keyCodes.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { basename, dirname } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { Location } from '../../../../../editor/common/languages.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../../../editor/common/services/model.ts';
+import { localize } from '../../../../../nls.ts';
+import { getFlatContextMenuActions } from '../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { IMenuService, MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.ts';
+import { FileKind, IFileService } from '../../../../../platform/files/common/files.ts';
+import { IHoverService } from '../../../../../platform/hover/browser/hover.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.ts';
+import { ResourceContextKey } from '../../../../common/contextkeys.ts';
+import { IChatRequestImplicitVariableEntry, IChatRequestStringVariableEntry, isStringImplicitContextValue } from '../../common/chatVariableEntries.ts';
+import { IChatWidget } from '../chat.ts';
+import { ChatAttachmentModel } from '../chatAttachmentModel.ts';
+import { IChatContextService } from '../chatContextService.ts';
 
 export class ImplicitContextAttachmentWidget extends Disposable {
 	public readonly domNode: HTMLElement;

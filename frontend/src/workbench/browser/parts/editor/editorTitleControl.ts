@@ -4,20 +4,20 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/editortitlecontrol.css';
-import { $, Dimension, clearNode } from '../../../../base/browser/dom.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.js';
-import { BreadcrumbsControl, BreadcrumbsControlFactory } from './breadcrumbsControl.js';
-import { IEditorGroupsView, IEditorGroupTitleHeight, IEditorGroupView, IEditorPartsView, IInternalEditorOpenOptions } from './editor.js';
-import { IEditorTabsControl } from './editorTabsControl.js';
-import { MultiEditorTabsControl } from './multiEditorTabsControl.js';
-import { SingleEditorTabsControl } from './singleEditorTabsControl.js';
-import { IEditorPartOptions } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { MultiRowEditorControl } from './multiRowEditorTabsControl.js';
-import { IReadonlyEditorGroupModel } from '../../../common/editor/editorGroupModel.js';
-import { NoEditorTabsControl } from './noEditorTabsControl.js';
+import { $, Dimension, clearNode } from '../../../../base/browser/dom.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.ts';
+import { BreadcrumbsControl, BreadcrumbsControlFactory } from './breadcrumbsControl.ts';
+import { IEditorGroupsView, IEditorGroupTitleHeight, IEditorGroupView, IEditorPartsView, IInternalEditorOpenOptions } from './editor.ts';
+import { IEditorTabsControl } from './editorTabsControl.ts';
+import { MultiEditorTabsControl } from './multiEditorTabsControl.ts';
+import { SingleEditorTabsControl } from './singleEditorTabsControl.ts';
+import { IEditorPartOptions } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { MultiRowEditorControl } from './multiRowEditorTabsControl.ts';
+import { IReadonlyEditorGroupModel } from '../../../common/editor/editorGroupModel.ts';
+import { NoEditorTabsControl } from './noEditorTabsControl.ts';
 
 export interface IEditorTitleControlDimensions {
 

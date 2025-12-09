@@ -4,14 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { IStorageService, StorageScope } from '../../../../../platform/storage/common/storage.js';
-import { TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { IChatModelInputState } from '../../common/chatModel.js';
-import { ChatAgentLocation, ChatModeKind } from '../../common/constants.js';
-import { ChatHistoryNavigator, ChatInputHistoryMaxEntries, ChatWidgetHistoryService, IChatWidgetHistoryService } from '../../common/chatWidgetHistoryService.js';
-import { Memento } from '../../../../common/memento.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { IStorageService, StorageScope } from '../../../../../platform/storage/common/storage.ts';
+import { TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { IChatModelInputState } from '../../common/chatModel.ts';
+import { ChatAgentLocation, ChatModeKind } from '../../common/constants.ts';
+import { ChatHistoryNavigator, ChatInputHistoryMaxEntries, ChatWidgetHistoryService, IChatWidgetHistoryService } from '../../common/chatWidgetHistoryService.ts';
+import { Memento } from '../../../../common/memento.ts';
 
 suite('ChatWidgetHistoryService', () => {
 	const testDisposables = ensureNoDisposablesAreLeakedInTestSuite();

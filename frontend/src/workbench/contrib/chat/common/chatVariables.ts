@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { Location } from '../../../../editor/common/languages.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IChatModel } from './chatModel.js';
-import { IChatContentReference, IChatProgressMessage } from './chatService.js';
-import { IDiagnosticVariableEntryFilterData, StringChatContextValue } from './chatVariableEntries.js';
-import { IToolAndToolSetEnablementMap } from './languageModelToolsService.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { Location } from '../../../../editor/common/languages.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IChatModel } from './chatModel.ts';
+import { IChatContentReference, IChatProgressMessage } from './chatService.ts';
+import { IDiagnosticVariableEntryFilterData, StringChatContextValue } from './chatVariableEntries.ts';
+import { IToolAndToolSetEnablementMap } from './languageModelToolsService.ts';
 
 export interface IChatVariableData {
 	id: string;

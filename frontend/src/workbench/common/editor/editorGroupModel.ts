@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event, Emitter } from '../../../base/common/event.js';
-import { IEditorFactoryRegistry, GroupIdentifier, EditorsOrder, EditorExtensions, IUntypedEditorInput, SideBySideEditor, EditorCloseContext, IMatchEditorOptions, GroupModelChangeKind } from '../editor.js';
-import { EditorInput } from './editorInput.js';
-import { SideBySideEditorInput } from './sideBySideEditorInput.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { IConfigurationChangeEvent, IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { dispose, Disposable, DisposableStore } from '../../../base/common/lifecycle.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { coalesce } from '../../../base/common/arrays.js';
+import { Event, Emitter } from '../../../base/common/event.ts';
+import { IEditorFactoryRegistry, GroupIdentifier, EditorsOrder, EditorExtensions, IUntypedEditorInput, SideBySideEditor, EditorCloseContext, IMatchEditorOptions, GroupModelChangeKind } from '../editor.ts';
+import { EditorInput } from './editorInput.ts';
+import { SideBySideEditorInput } from './sideBySideEditorInput.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { IConfigurationChangeEvent, IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { dispose, Disposable, DisposableStore } from '../../../base/common/lifecycle.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { coalesce } from '../../../base/common/arrays.ts';
 
 const EditorOpenPositioning = {
 	LEFT: 'left',

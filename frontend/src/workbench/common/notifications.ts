@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { INotification, INotificationHandle, INotificationActions, INotificationProgress, NoOpNotification, Severity, NotificationMessage, IPromptChoice, IStatusMessageOptions, NotificationsFilter, INotificationProgressProperties, IPromptChoiceWithMenu, NotificationPriority, INotificationSource, isNotificationSource, IStatusHandle } from '../../platform/notification/common/notification.js';
-import { toErrorMessage, isErrorWithActions } from '../../base/common/errorMessage.js';
-import { Event, Emitter } from '../../base/common/event.js';
-import { Disposable } from '../../base/common/lifecycle.js';
-import { isCancellationError } from '../../base/common/errors.js';
-import { Action } from '../../base/common/actions.js';
-import { equals } from '../../base/common/arrays.js';
-import { parseLinkedText, LinkedText } from '../../base/common/linkedText.js';
-import { mapsStrictEqualIgnoreOrder } from '../../base/common/map.js';
+import { INotification, INotificationHandle, INotificationActions, INotificationProgress, NoOpNotification, Severity, NotificationMessage, IPromptChoice, IStatusMessageOptions, NotificationsFilter, INotificationProgressProperties, IPromptChoiceWithMenu, NotificationPriority, INotificationSource, isNotificationSource, IStatusHandle } from '../../platform/notification/common/notification.ts';
+import { toErrorMessage, isErrorWithActions } from '../../base/common/errorMessage.ts';
+import { Event, Emitter } from '../../base/common/event.ts';
+import { Disposable } from '../../base/common/lifecycle.ts';
+import { isCancellationError } from '../../base/common/errors.ts';
+import { Action } from '../../base/common/actions.ts';
+import { equals } from '../../base/common/arrays.ts';
+import { parseLinkedText, LinkedText } from '../../base/common/linkedText.ts';
+import { mapsStrictEqualIgnoreOrder } from '../../base/common/map.ts';
 
 export interface INotificationsModel {
 

@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { getWindow, isHTMLElement, reset } from '../../../../base/browser/dom.js';
-import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../base/common/network.js';
-import * as osPath from '../../../../base/common/path.js';
-import * as platform from '../../../../base/common/platform.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { ITunnelService } from '../../../../platform/tunnel/common/tunnel.js';
-import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { IDebugSession } from '../common/debug.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.js';
-import { IPathService } from '../../../services/path/common/pathService.js';
-import { IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.js';
-import { Iterable } from '../../../../base/common/iterator.js';
+import { getWindow, isHTMLElement, reset } from '../../../../base/browser/dom.ts';
+import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import * as osPath from '../../../../base/common/path.ts';
+import * as platform from '../../../../base/common/platform.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { ITunnelService } from '../../../../platform/tunnel/common/tunnel.ts';
+import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { IDebugSession } from '../common/debug.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IWorkbenchEnvironmentService } from '../../../services/environment/common/environmentService.ts';
+import { IPathService } from '../../../services/path/common/pathService.ts';
+import { IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
 
 const CONTROL_CODES = '\\u0000-\\u0020\\u007f-\\u009f';
 const WEB_LINK_REGEX = new RegExp('(?:[a-zA-Z][a-zA-Z0-9+.-]{2,}:\\/\\/|data:|www\\.)[^\\s' + CONTROL_CODES + '"]{2,}[^\\s' + CONTROL_CODES + '"\')}\\],:;.!?]', 'ug');

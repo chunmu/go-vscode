@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../nls.js';
-import { registerAction2, Action2, MenuId } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
-import { ChatSessionStatus, IChatSessionsService } from '../../common/chatSessionsService.js';
-import { AgentSessionProviders, getAgentSessionProviderName } from './agentSessions.js';
-import { IAgentSessionViewModel } from './agentSessionViewModel.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../nls.ts';
+import { registerAction2, Action2, MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
+import { ChatSessionStatus, IChatSessionsService } from '../../common/chatSessionsService.ts';
+import { AgentSessionProviders, getAgentSessionProviderName } from './agentSessions.ts';
+import { IAgentSessionViewModel } from './agentSessionViewModel.ts';
 
 export interface IAgentSessionsViewFilterOptions {
 	readonly filterMenuId: MenuId;

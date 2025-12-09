@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../../../nls.js';
-import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.js';
-import { PromptsType } from '../../../common/promptSyntax/promptTypes.js';
-import { IQuickInputService } from '../../../../../../platform/quickinput/common/quickInput.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import Severity from '../../../../../../base/common/severity.js';
-import { isValidBasename } from '../../../../../../base/common/extpath.js';
-import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.js';
+import { localize } from '../../../../../../nls.ts';
+import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.ts';
+import { PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
+import { IQuickInputService } from '../../../../../../platform/quickinput/common/quickInput.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import Severity from '../../../../../../base/common/severity.ts';
+import { isValidBasename } from '../../../../../../base/common/extpath.ts';
+import { ServicesAccessor } from '../../../../../../editor/browser/editorExtensions.ts';
 
 /**
  * Asks the user for a file name.

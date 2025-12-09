@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
 import {
 	IToolData,
 	IToolImpl,
@@ -15,14 +15,14 @@ import {
 	ToolDataSource,
 	IToolInvocationPreparationContext,
 	IPreparedToolInvocation
-} from '../languageModelToolsService.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IChatTodo, IChatTodoListService } from '../chatTodoListService.js';
-import { localize } from '../../../../../nls.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { chatSessionResourceToId, LocalChatSessionUri } from '../chatUri.js';
+} from '../languageModelToolsService.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IChatTodo, IChatTodoListService } from '../chatTodoListService.ts';
+import { localize } from '../../../../../nls.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { chatSessionResourceToId, LocalChatSessionUri } from '../chatUri.ts';
 
 export const TodoListToolWriteOnlySettingId = 'chat.todoListTool.writeOnly';
 export const TodoListToolDescriptionFieldSettingId = 'chat.todoListTool.descriptionField';

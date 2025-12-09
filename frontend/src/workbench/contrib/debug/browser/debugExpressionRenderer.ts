@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { IObservable } from '../../../../base/common/observable.js';
-import { CommandsRegistry, ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { observableConfigValue } from '../../../../platform/observable/common/platformObservableUtils.js';
-import { IDebugSession, IExpressionValue } from '../common/debug.js';
-import { Expression, ExpressionContainer, Variable } from '../common/debugModel.js';
-import { ReplEvaluationResult } from '../common/replModel.js';
-import { IVariableTemplateData, splitExpressionOrScopeHighlights } from './baseDebugView.js';
-import { handleANSIOutput } from './debugANSIHandling.js';
-import { COPY_EVALUATE_PATH_ID, COPY_VALUE_ID } from './debugCommands.js';
-import { DebugLinkHoverBehavior, DebugLinkHoverBehaviorTypeData, ILinkDetector, LinkDetector } from './linkDetector.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IObservable } from '../../../../base/common/observable.ts';
+import { CommandsRegistry, ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { observableConfigValue } from '../../../../platform/observable/common/platformObservableUtils.ts';
+import { IDebugSession, IExpressionValue } from '../common/debug.ts';
+import { Expression, ExpressionContainer, Variable } from '../common/debugModel.ts';
+import { ReplEvaluationResult } from '../common/replModel.ts';
+import { IVariableTemplateData, splitExpressionOrScopeHighlights } from './baseDebugView.ts';
+import { handleANSIOutput } from './debugANSIHandling.ts';
+import { COPY_EVALUATE_PATH_ID, COPY_VALUE_ID } from './debugCommands.ts';
+import { DebugLinkHoverBehavior, DebugLinkHoverBehaviorTypeData, ILinkDetector, LinkDetector } from './linkDetector.ts';
 
 export interface IValueHoverOptions {
 	/** Commands to show in the hover footer. */

@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IProductService } from '../../../../../platform/product/common/productService.js';
-import { IExtensionService } from '../../../../services/extensions/common/extensions.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { IExtensionManagementService, InstallOperation } from '../../../../../platform/extensionManagement/common/extensionManagement.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
-import { IDefaultChatAgent } from '../../../../../base/common/product.js';
-import { IChatWidgetService } from '../chat.js';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IProductService } from '../../../../../platform/product/common/productService.ts';
+import { IExtensionService } from '../../../../services/extensions/common/extensions.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { IExtensionManagementService, InstallOperation } from '../../../../../platform/extensionManagement/common/extensionManagement.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
+import { IDefaultChatAgent } from '../../../../../base/common/product.ts';
+import { IChatWidgetService } from '../chat.ts';
 
 export class ChatGettingStartedContribution extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'workbench.contrib.chatGettingStarted';

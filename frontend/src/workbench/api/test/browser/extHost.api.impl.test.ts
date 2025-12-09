@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { URI } from '../../../../base/common/uri.js';
-import { originalFSPath } from '../../../../base/common/resources.js';
-import { isWindows } from '../../../../base/common/platform.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { originalFSPath } from '../../../../base/common/resources.ts';
+import { isWindows } from '../../../../base/common/platform.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.ts';
 
 suite('ExtHost API', function () {
 	test('issue #51387: originalFSPath', function () {

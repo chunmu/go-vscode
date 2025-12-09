@@ -5,27 +5,27 @@
 
 import assert from 'assert';
 import * as sinon from 'sinon';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { observableValue } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { assertSnapshot } from '../../../../../base/test/common/snapshot.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.js';
-import { ILogService, NullLogService } from '../../../../../platform/log/common/log.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { IExtensionService } from '../../../../services/extensions/common/extensions.js';
-import { TestExtensionService, TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { ChatAgentService, IChatAgentService } from '../../common/chatAgents.js';
-import { ChatModel, ISerializableChatData1, ISerializableChatData2, ISerializableChatData3, normalizeSerializableChatData, Response } from '../../common/chatModel.js';
-import { ChatRequestTextPart } from '../../common/chatParserTypes.js';
-import { IChatToolInvocation } from '../../common/chatService.js';
-import { ChatAgentLocation } from '../../common/constants.js';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { observableValue } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { assertSnapshot } from '../../../../../base/test/common/snapshot.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.ts';
+import { ILogService, NullLogService } from '../../../../../platform/log/common/log.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { IExtensionService } from '../../../../services/extensions/common/extensions.ts';
+import { TestExtensionService, TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { ChatAgentService, IChatAgentService } from '../../common/chatAgents.ts';
+import { ChatModel, ISerializableChatData1, ISerializableChatData2, ISerializableChatData3, normalizeSerializableChatData, Response } from '../../common/chatModel.ts';
+import { ChatRequestTextPart } from '../../common/chatParserTypes.ts';
+import { IChatToolInvocation } from '../../common/chatService.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
 
 suite('ChatModel', () => {
 	const testDisposables = ensureNoDisposablesAreLeakedInTestSuite();

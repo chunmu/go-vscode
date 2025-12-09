@@ -2,28 +2,28 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, IAction2Options, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IListService } from '../../../../../platform/list/browser/listService.js';
-import { resolveCommandsContext } from '../../../../browser/parts/editor/editorCommandsContext.js';
-import { ActiveEditorContext } from '../../../../common/contextkeys.js';
-import { EditorResourceAccessor, SideBySideEditor, TEXT_DIFF_EDITOR_ID } from '../../../../common/editor.js';
-import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { ACTIVE_GROUP, IEditorService } from '../../../../services/editor/common/editorService.js';
-import { MultiDiffEditorInput } from '../../../multiDiffEditor/browser/multiDiffEditorInput.js';
-import { NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_EDITOR_FOCUSED } from '../../../notebook/common/notebookContextKeys.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { CHAT_EDITING_MULTI_DIFF_SOURCE_RESOLVER_SCHEME, IChatEditingService, IChatEditingSession, IModifiedFileEntry, IModifiedFileEntryChangeHunk, IModifiedFileEntryEditorIntegration, ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
-import { CHAT_CATEGORY } from '../actions/chatActions.js';
-import { ctxCursorInChangeRange, ctxHasEditorModification, ctxIsCurrentlyBeingModified, ctxIsGlobalEditingSession, ctxReviewModeEnabled } from './chatEditingEditorContextKeys.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, IAction2Options, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IListService } from '../../../../../platform/list/browser/listService.ts';
+import { resolveCommandsContext } from '../../../../browser/parts/editor/editorCommandsContext.ts';
+import { ActiveEditorContext } from '../../../../common/contextkeys.ts';
+import { EditorResourceAccessor, SideBySideEditor, TEXT_DIFF_EDITOR_ID } from '../../../../common/editor.ts';
+import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { ACTIVE_GROUP, IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { MultiDiffEditorInput } from '../../../multiDiffEditor/browser/multiDiffEditorInput.ts';
+import { NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_EDITOR_FOCUSED } from '../../../notebook/common/notebookContextKeys.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { CHAT_EDITING_MULTI_DIFF_SOURCE_RESOLVER_SCHEME, IChatEditingService, IChatEditingSession, IModifiedFileEntry, IModifiedFileEntryChangeHunk, IModifiedFileEntryEditorIntegration, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
+import { CHAT_CATEGORY } from '../actions/chatActions.ts';
+import { ctxCursorInChangeRange, ctxHasEditorModification, ctxIsCurrentlyBeingModified, ctxIsGlobalEditingSession, ctxReviewModeEnabled } from './chatEditingEditorContextKeys.ts';
 
 
 abstract class ChatEditingEditorAction extends Action2 {

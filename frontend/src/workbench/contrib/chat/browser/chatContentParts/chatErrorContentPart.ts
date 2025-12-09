@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { ChatErrorLevel } from '../../common/chatService.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { IChatContentPart } from './chatContentParts.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { ChatErrorLevel } from '../../common/chatService.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { IChatContentPart } from './chatContentParts.ts';
 
 const $ = dom.$;
 

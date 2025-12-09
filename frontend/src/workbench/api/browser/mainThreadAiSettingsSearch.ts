@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { AiSettingsSearchResult, IAiSettingsSearchProvider, IAiSettingsSearchService } from '../../services/aiSettingsSearch/common/aiSettingsSearch.js';
-import { ExtHostContext, ExtHostAiSettingsSearchShape, MainContext, MainThreadAiSettingsSearchShape, } from '../common/extHost.protocol.js';
+import { Disposable, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { AiSettingsSearchResult, IAiSettingsSearchProvider, IAiSettingsSearchService } from '../../services/aiSettingsSearch/common/aiSettingsSearch.ts';
+import { ExtHostContext, ExtHostAiSettingsSearchShape, MainContext, MainThreadAiSettingsSearchShape, } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadAiSettingsSearch)
 export class MainThreadAiSettingsSearch extends Disposable implements MainThreadAiSettingsSearchShape {

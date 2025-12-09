@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AsyncIterableSource, DeferredPromise } from '../../../base/common/async.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { toErrorMessage } from '../../../base/common/errorMessage.js';
-import { SerializedError, transformErrorForSerialization, transformErrorFromSerialization } from '../../../base/common/errors.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { Disposable, DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { resizeImage } from '../../contrib/chat/browser/imageUtils.js';
-import { ILanguageModelIgnoredFilesService } from '../../contrib/chat/common/ignoredFiles.js';
-import { IChatMessage, IChatResponsePart, ILanguageModelChatResponse, ILanguageModelChatSelector, ILanguageModelsService } from '../../contrib/chat/common/languageModels.js';
-import { IAuthenticationAccessService } from '../../services/authentication/browser/authenticationAccessService.js';
-import { AuthenticationSession, AuthenticationSessionsChangeEvent, IAuthenticationProvider, IAuthenticationService, INTERNAL_AUTH_PROVIDER_PREFIX } from '../../services/authentication/common/authentication.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostContext, ExtHostLanguageModelsShape, MainContext, MainThreadLanguageModelsShape } from '../common/extHost.protocol.js';
-import { LanguageModelError } from '../common/extHostTypes.js';
+import { AsyncIterableSource, DeferredPromise } from '../../../base/common/async.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { toErrorMessage } from '../../../base/common/errorMessage.ts';
+import { SerializedError, transformErrorForSerialization, transformErrorFromSerialization } from '../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { Disposable, DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { resizeImage } from '../../contrib/chat/browser/imageUtils.ts';
+import { ILanguageModelIgnoredFilesService } from '../../contrib/chat/common/ignoredFiles.ts';
+import { IChatMessage, IChatResponsePart, ILanguageModelChatResponse, ILanguageModelChatSelector, ILanguageModelsService } from '../../contrib/chat/common/languageModels.ts';
+import { IAuthenticationAccessService } from '../../services/authentication/browser/authenticationAccessService.ts';
+import { AuthenticationSession, AuthenticationSessionsChangeEvent, IAuthenticationProvider, IAuthenticationService, INTERNAL_AUTH_PROVIDER_PREFIX } from '../../services/authentication/common/authentication.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostContext, ExtHostLanguageModelsShape, MainContext, MainThreadLanguageModelsShape } from '../common/extHost.protocol.ts';
+import { LanguageModelError } from '../common/extHostTypes.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadLanguageModels)
 export class MainThreadLanguageModels implements MainThreadLanguageModelsShape {

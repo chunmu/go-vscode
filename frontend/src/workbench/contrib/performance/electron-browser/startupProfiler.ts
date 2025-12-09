@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { localize } from '../../../../nls.js';
-import { dirname, basename } from '../../../../base/common/resources.js';
-import { ITextModelService } from '../../../../editor/common/services/resolverService.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.js';
-import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { PerfviewContrib } from '../browser/perfviewEditor.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { localize } from '../../../../nls.ts';
+import { dirname, basename } from '../../../../base/common/resources.ts';
+import { ITextModelService } from '../../../../editor/common/services/resolverService.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.ts';
+import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { PerfviewContrib } from '../browser/perfviewEditor.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
 
 export class StartupProfiler implements IWorkbenchContribution {
 

@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IInstantiationService, IConstructorSignature, ServicesAccessor, BrandedService } from '../../platform/instantiation/common/instantiation.js';
-import { ILifecycleService, LifecyclePhase } from '../services/lifecycle/common/lifecycle.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { IdleDeadline, DeferredPromise, runWhenGlobalIdle } from '../../base/common/async.js';
-import { mark } from '../../base/common/performance.js';
-import { ILogService } from '../../platform/log/common/log.js';
-import { IEnvironmentService } from '../../platform/environment/common/environment.js';
-import { getOrSet } from '../../base/common/map.js';
-import { Disposable, DisposableStore, isDisposable } from '../../base/common/lifecycle.js';
-import { IEditorPaneService } from '../services/editor/common/editorPaneService.js';
+import { IInstantiationService, IConstructorSignature, ServicesAccessor, BrandedService } from '../../platform/instantiation/common/instantiation.ts';
+import { ILifecycleService, LifecyclePhase } from '../services/lifecycle/common/lifecycle.ts';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { IdleDeadline, DeferredPromise, runWhenGlobalIdle } from '../../base/common/async.ts';
+import { mark } from '../../base/common/performance.ts';
+import { ILogService } from '../../platform/log/common/log.ts';
+import { IEnvironmentService } from '../../platform/environment/common/environment.ts';
+import { getOrSet } from '../../base/common/map.ts';
+import { Disposable, DisposableStore, isDisposable } from '../../base/common/lifecycle.ts';
+import { IEditorPaneService } from '../services/editor/common/editorPaneService.ts';
 
 /**
  * A workbench contribution that will be loaded when the workbench starts and disposed when the workbench shuts down.

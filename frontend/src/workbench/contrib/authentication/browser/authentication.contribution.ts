@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import { registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
-import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { SignOutOfAccountAction } from './actions/signOutOfAccountAction.js';
-import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.js';
-import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { ManageTrustedExtensionsForAccountAction } from './actions/manageTrustedExtensionsForAccountAction.js';
-import { ManageAccountPreferencesForExtensionAction } from './actions/manageAccountPreferencesForExtensionAction.js';
-import { IAuthenticationUsageService } from '../../../services/authentication/browser/authenticationUsageService.js';
-import { ManageAccountPreferencesForMcpServerAction } from './actions/manageAccountPreferencesForMcpServerAction.js';
-import { ManageTrustedMcpServersForAccountAction } from './actions/manageTrustedMcpServersForAccountAction.js';
-import { RemoveDynamicAuthenticationProvidersAction } from './actions/manageDynamicAuthenticationProvidersAction.js';
-import { ManageAccountsAction } from './actions/manageAccountsAction.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import { registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.ts';
+import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { SignOutOfAccountAction } from './actions/signOutOfAccountAction.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.ts';
+import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { ManageTrustedExtensionsForAccountAction } from './actions/manageTrustedExtensionsForAccountAction.ts';
+import { ManageAccountPreferencesForExtensionAction } from './actions/manageAccountPreferencesForExtensionAction.ts';
+import { IAuthenticationUsageService } from '../../../services/authentication/browser/authenticationUsageService.ts';
+import { ManageAccountPreferencesForMcpServerAction } from './actions/manageAccountPreferencesForMcpServerAction.ts';
+import { ManageTrustedMcpServersForAccountAction } from './actions/manageTrustedMcpServersForAccountAction.ts';
+import { RemoveDynamicAuthenticationProvidersAction } from './actions/manageDynamicAuthenticationProvidersAction.ts';
+import { ManageAccountsAction } from './actions/manageAccountsAction.ts';
 
 const codeExchangeProxyCommand = CommandsRegistry.registerCommand('workbench.getCodeExchangeProxyEndpoints', function (accessor, _) {
 	const environmentService = accessor.get(IBrowserWorkbenchEnvironmentService);

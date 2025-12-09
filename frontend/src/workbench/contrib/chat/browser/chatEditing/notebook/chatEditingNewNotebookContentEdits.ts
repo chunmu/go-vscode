@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../../../../base/common/buffer.js';
-import { TextEdit } from '../../../../../../editor/common/languages.js';
-import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.js';
-import { CellEditType, ICellEditOperation } from '../../../../notebook/common/notebookCommon.js';
-import { INotebookService } from '../../../../notebook/common/notebookService.js';
+import { VSBuffer } from '../../../../../../base/common/buffer.ts';
+import { TextEdit } from '../../../../../../editor/common/languages.ts';
+import { NotebookTextModel } from '../../../../notebook/common/model/notebookTextModel.ts';
+import { CellEditType, ICellEditOperation } from '../../../../notebook/common/notebookCommon.ts';
+import { INotebookService } from '../../../../notebook/common/notebookService.ts';
 
 
 /**

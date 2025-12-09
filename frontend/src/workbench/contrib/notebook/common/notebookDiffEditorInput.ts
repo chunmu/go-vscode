@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IResourceDiffEditorInput, IResourceSideBySideEditorInput, isResourceDiffEditorInput, IUntypedEditorInput } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { EditorModel } from '../../../common/editor/editorModel.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { INotebookDiffEditorModel, IResolvedNotebookEditorModel } from './notebookCommon.js';
-import { DiffEditorInput } from '../../../common/editor/diffEditorInput.js';
-import { NotebookEditorInput } from './notebookEditorInput.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
+import { IResourceDiffEditorInput, IResourceSideBySideEditorInput, isResourceDiffEditorInput, IUntypedEditorInput } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { EditorModel } from '../../../common/editor/editorModel.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { INotebookDiffEditorModel, IResolvedNotebookEditorModel } from './notebookCommon.ts';
+import { DiffEditorInput } from '../../../common/editor/diffEditorInput.ts';
+import { NotebookEditorInput } from './notebookEditorInput.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
 
 class NotebookDiffEditorModel extends EditorModel implements INotebookDiffEditorModel {
 	constructor(

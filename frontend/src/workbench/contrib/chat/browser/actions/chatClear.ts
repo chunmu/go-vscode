@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../../../base/common/network.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { IChatEditorOptions } from '../chatEditor.js';
-import { ChatEditorInput } from '../chatEditorInput.js';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { IChatEditorOptions } from '../chatEditor.ts';
+import { ChatEditorInput } from '../chatEditorInput.ts';
 
 export async function clearChatEditor(accessor: ServicesAccessor, chatEditorInput?: ChatEditorInput): Promise<void> {
 	const editorService = accessor.get(IEditorService);

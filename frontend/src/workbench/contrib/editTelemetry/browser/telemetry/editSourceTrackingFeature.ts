@@ -4,29 +4,29 @@
  *--------------------------------------------------------------------------------------------*/
 
 
-import { CachedFunction } from '../../../../../base/common/cache.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { autorun, mapObservableArrayCached, derived, IObservable, ISettableObservable, observableValue, derivedWithSetter, observableFromEvent } from '../../../../../base/common/observable.js';
-import { DynamicCssRules } from '../../../../../editor/browser/editorDom.js';
-import { observableCodeEditor } from '../../../../../editor/browser/observableCodeEditor.js';
-import { CodeEditorWidget } from '../../../../../editor/browser/widget/codeEditor/codeEditorWidget.js';
-import { IModelDeltaDecoration } from '../../../../../editor/common/model.js';
-import { CommandsRegistry } from '../../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { observableConfigValue } from '../../../../../platform/observable/common/platformObservableUtils.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { IStatusbarService, StatusbarAlignment } from '../../../../services/statusbar/browser/statusbar.js';
-import { EditSource } from '../helpers/documentWithAnnotatedEdits.js';
-import { EditSourceTrackingImpl } from './editSourceTrackingImpl.js';
-import { IAnnotatedDocuments } from '../helpers/annotatedDocuments.js';
-import { DataChannelForwardingTelemetryService } from '../../../../../platform/dataChannel/browser/forwardingTelemetryService.js';
-import { EDIT_TELEMETRY_DETAILS_SETTING_ID, EDIT_TELEMETRY_SHOW_DECORATIONS, EDIT_TELEMETRY_SHOW_STATUS_BAR } from '../settings.js';
-import { VSCodeWorkspace } from '../helpers/vscodeObservableWorkspace.js';
-import { IExtensionService } from '../../../../services/extensions/common/extensions.js';
+import { CachedFunction } from '../../../../../base/common/cache.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun, mapObservableArrayCached, derived, IObservable, ISettableObservable, observableValue, derivedWithSetter, observableFromEvent } from '../../../../../base/common/observable.ts';
+import { DynamicCssRules } from '../../../../../editor/browser/editorDom.ts';
+import { observableCodeEditor } from '../../../../../editor/browser/observableCodeEditor.ts';
+import { CodeEditorWidget } from '../../../../../editor/browser/widget/codeEditor/codeEditorWidget.ts';
+import { IModelDeltaDecoration } from '../../../../../editor/common/model.ts';
+import { CommandsRegistry } from '../../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { observableConfigValue } from '../../../../../platform/observable/common/platformObservableUtils.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { IStatusbarService, StatusbarAlignment } from '../../../../services/statusbar/browser/statusbar.ts';
+import { EditSource } from '../helpers/documentWithAnnotatedEdits.ts';
+import { EditSourceTrackingImpl } from './editSourceTrackingImpl.ts';
+import { IAnnotatedDocuments } from '../helpers/annotatedDocuments.ts';
+import { DataChannelForwardingTelemetryService } from '../../../../../platform/dataChannel/browser/forwardingTelemetryService.ts';
+import { EDIT_TELEMETRY_DETAILS_SETTING_ID, EDIT_TELEMETRY_SHOW_DECORATIONS, EDIT_TELEMETRY_SHOW_STATUS_BAR } from '../settings.ts';
+import { VSCodeWorkspace } from '../helpers/vscodeObservableWorkspace.ts';
+import { IExtensionService } from '../../../../services/extensions/common/extensions.ts';
 
 export class EditTrackingFeature extends Disposable {
 

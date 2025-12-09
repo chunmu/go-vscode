@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { onUnexpectedExternalError } from '../../../../../../base/common/errors.js';
-import { Event } from '../../../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../../base/common/map.js';
-import { isEqual } from '../../../../../../base/common/resources.js';
-import { format } from '../../../../../../base/common/strings.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { StandardTokenType } from '../../../../../../editor/common/encodedTokenAttributes.js';
-import { InlineValueContext, InlineValueText, InlineValueVariableLookup } from '../../../../../../editor/common/languages.js';
-import { IModelDeltaDecoration, ITextModel } from '../../../../../../editor/common/model.js';
-import { ILanguageFeaturesService } from '../../../../../../editor/common/services/languageFeatures.js';
-import { localize } from '../../../../../../nls.js';
-import { registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { createInlineValueDecoration } from '../../../../debug/browser/debugEditorContribution.js';
-import { IDebugService, State } from '../../../../debug/common/debug.js';
-import { NotebookSetting } from '../../../common/notebookCommon.js';
-import { ICellExecutionStateChangedEvent, INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.js';
-import { INotebookKernelService, VariablesResult } from '../../../common/notebookKernelService.js';
-import { INotebookActionContext, NotebookAction } from '../../controller/coreActions.js';
-import { ICellViewModel, INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
+import { CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { onUnexpectedExternalError } from '../../../../../../base/common/errors.ts';
+import { Event } from '../../../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../../base/common/map.ts';
+import { isEqual } from '../../../../../../base/common/resources.ts';
+import { format } from '../../../../../../base/common/strings.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { StandardTokenType } from '../../../../../../editor/common/encodedTokenAttributes.ts';
+import { InlineValueContext, InlineValueText, InlineValueVariableLookup } from '../../../../../../editor/common/languages.ts';
+import { IModelDeltaDecoration, ITextModel } from '../../../../../../editor/common/model.ts';
+import { ILanguageFeaturesService } from '../../../../../../editor/common/services/languageFeatures.ts';
+import { localize } from '../../../../../../nls.ts';
+import { registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { createInlineValueDecoration } from '../../../../debug/browser/debugEditorContribution.ts';
+import { IDebugService, State } from '../../../../debug/common/debug.ts';
+import { NotebookSetting } from '../../../common/notebookCommon.ts';
+import { ICellExecutionStateChangedEvent, INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.ts';
+import { INotebookKernelService, VariablesResult } from '../../../common/notebookKernelService.ts';
+import { INotebookActionContext, NotebookAction } from '../../controller/coreActions.ts';
+import { ICellViewModel, INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
 
 class InlineSegment {
 	constructor(public column: number, public text: string) {

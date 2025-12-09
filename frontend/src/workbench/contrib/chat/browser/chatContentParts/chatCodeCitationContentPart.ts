@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { localize } from '../../../../../nls.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { ChatTreeItem } from '../chat.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { getCodeCitationsMessage } from '../../common/chatModel.js';
-import { IChatCodeCitations, IChatRendererContent } from '../../common/chatViewModel.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../../nls.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { getCodeCitationsMessage } from '../../common/chatModel.ts';
+import { IChatCodeCitations, IChatRendererContent } from '../../common/chatViewModel.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
 
 type ChatCodeCitationOpenedClassification = {
 	owner: 'roblourens';

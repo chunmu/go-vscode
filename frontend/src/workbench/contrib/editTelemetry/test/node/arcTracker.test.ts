@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { StringText } from '../../../../../editor/common/core/text/abstractText.js';
-import { ArcTracker } from '../../common/arcTracker.js';
-import { FileAccess } from '../../../../../base/common/network.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { StringText } from '../../../../../editor/common/core/text/abstractText.ts';
+import { ArcTracker } from '../../common/arcTracker.ts';
+import { FileAccess } from '../../../../../base/common/network.ts';
 import { readFileSync } from 'fs';
-import { join, resolve } from '../../../../../base/common/path.js';
-import { StringEdit, StringReplacement } from '../../../../../editor/common/core/edits/stringEdit.js';
-import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.js';
-import { ensureDependenciesAreSet } from '../../../../../editor/common/core/text/positionToOffset.js';
+import { join, resolve } from '../../../../../base/common/path.ts';
+import { StringEdit, StringReplacement } from '../../../../../editor/common/core/edits/stringEdit.ts';
+import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.ts';
+import { ensureDependenciesAreSet } from '../../../../../editor/common/core/text/positionToOffset.ts';
 
 suite('ArcTracker', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

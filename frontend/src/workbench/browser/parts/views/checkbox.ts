@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../base/browser/dom.js';
-import type { IManagedHover } from '../../../../base/browser/ui/hover/hover.js';
-import { IHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegate.js';
-import { Checkbox } from '../../../../base/browser/ui/toggle/toggle.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import type { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { defaultCheckboxStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { ITreeItem, ITreeItemCheckboxState } from '../../../common/views.js';
+import * as DOM from '../../../../base/browser/dom.ts';
+import type { IManagedHover } from '../../../../base/browser/ui/hover/hover.ts';
+import { IHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegate.ts';
+import { Checkbox } from '../../../../base/browser/ui/toggle/toggle.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import type { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { defaultCheckboxStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { ITreeItem, ITreeItemCheckboxState } from '../../../common/views.ts';
 
 export class CheckboxStateHandler extends Disposable {
 	private readonly _onDidChangeCheckboxState = this._register(new Emitter<ITreeItem[]>());

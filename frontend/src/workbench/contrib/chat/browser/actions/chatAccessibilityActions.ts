@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { alert } from '../../../../../base/browser/ui/aria/aria.js';
-import { localize } from '../../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { IChatWidgetService } from '../chat.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { isResponseVM } from '../../common/chatViewModel.js';
-import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../../platform/accessibility/common/accessibility.js';
+import { alert } from '../../../../../base/browser/ui/aria/aria.ts';
+import { localize } from '../../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { isResponseVM } from '../../common/chatViewModel.ts';
+import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../../platform/accessibility/common/accessibility.ts';
 
 export const ACTION_ID_FOCUS_CHAT_CONFIRMATION = 'workbench.action.chat.focusConfirmation';
 

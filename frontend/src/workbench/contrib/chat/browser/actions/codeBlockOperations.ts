@@ -2,42 +2,42 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { AsyncIterableObject } from '../../../../../base/common/async.js';
-import { VSBuffer } from '../../../../../base/common/buffer.js';
-import { CancellationToken, CancellationTokenSource } from '../../../../../base/common/cancellation.js';
-import { CharCode } from '../../../../../base/common/charCode.js';
-import { isCancellationError } from '../../../../../base/common/errors.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import * as strings from '../../../../../base/common/strings.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { getCodeEditor, IActiveCodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { IBulkEditService, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { TextEdit } from '../../../../../editor/common/languages.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { EditDeltaInfo, EditSuggestionId } from '../../../../../editor/common/textModelEditSource.js';
-import { localize } from '../../../../../nls.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { IProgressService, ProgressLocation } from '../../../../../platform/progress/common/progress.js';
-import { IQuickInputService } from '../../../../../platform/quickinput/common/quickInput.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { ITextFileService } from '../../../../services/textfile/common/textfiles.js';
-import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.js';
-import { reviewEdits, reviewNotebookEdits } from '../../../inlineChat/browser/inlineChatController.js';
-import { insertCell } from '../../../notebook/browser/controller/cellOperations.js';
-import { IActiveNotebookEditor, INotebookEditor } from '../../../notebook/browser/notebookBrowser.js';
-import { CellKind, ICellEditOperation, NOTEBOOK_EDITOR_ID } from '../../../notebook/common/notebookCommon.js';
-import { INotebookService } from '../../../notebook/common/notebookService.js';
-import { ICodeMapperCodeBlock, ICodeMapperRequest, ICodeMapperResponse, ICodeMapperService } from '../../common/chatCodeMapperService.js';
-import { ChatUserAction, IChatService } from '../../common/chatService.js';
-import { IChatRequestViewModel, isRequestVM, isResponseVM } from '../../common/chatViewModel.js';
-import { ICodeBlockActionContext } from '../codeBlockPart.js';
+import { AsyncIterableObject } from '../../../../../base/common/async.ts';
+import { VSBuffer } from '../../../../../base/common/buffer.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../../../base/common/cancellation.ts';
+import { CharCode } from '../../../../../base/common/charCode.ts';
+import { isCancellationError } from '../../../../../base/common/errors.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import * as strings from '../../../../../base/common/strings.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { getCodeEditor, IActiveCodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { IBulkEditService, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { TextEdit } from '../../../../../editor/common/languages.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { EditDeltaInfo, EditSuggestionId } from '../../../../../editor/common/textModelEditSource.ts';
+import { localize } from '../../../../../nls.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { IProgressService, ProgressLocation } from '../../../../../platform/progress/common/progress.ts';
+import { IQuickInputService } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { ITextFileService } from '../../../../services/textfile/common/textfiles.ts';
+import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts';
+import { reviewEdits, reviewNotebookEdits } from '../../../inlineChat/browser/inlineChatController.ts';
+import { insertCell } from '../../../notebook/browser/controller/cellOperations.ts';
+import { IActiveNotebookEditor, INotebookEditor } from '../../../notebook/browser/notebookBrowser.ts';
+import { CellKind, ICellEditOperation, NOTEBOOK_EDITOR_ID } from '../../../notebook/common/notebookCommon.ts';
+import { INotebookService } from '../../../notebook/common/notebookService.ts';
+import { ICodeMapperCodeBlock, ICodeMapperRequest, ICodeMapperResponse, ICodeMapperService } from '../../common/chatCodeMapperService.ts';
+import { ChatUserAction, IChatService } from '../../common/chatService.ts';
+import { IChatRequestViewModel, isRequestVM, isResponseVM } from '../../common/chatViewModel.ts';
+import { ICodeBlockActionContext } from '../codeBlockPart.ts';
 
 export class InsertCodeBlockOperation {
 	constructor(

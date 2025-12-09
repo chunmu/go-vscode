@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
+import { URI } from '../../../../base/common/uri.ts';
 import type * as Parser from '@vscode/tree-sitter-wasm';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IWorkbenchThemeService, IWorkbenchColorTheme } from '../../../services/themes/common/workbenchThemeService.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { EditorResourceAccessor } from '../../../common/editor.js';
-import { ITextMateTokenizationService } from '../../../services/textMate/browser/textMateTokenizationFeature.js';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IWorkbenchThemeService, IWorkbenchColorTheme } from '../../../services/themes/common/workbenchThemeService.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { EditorResourceAccessor } from '../../../common/editor.ts';
+import { ITextMateTokenizationService } from '../../../services/textMate/browser/textMateTokenizationFeature.ts';
 import type { IGrammar, StateStack } from 'vscode-textmate';
-import { TokenizationRegistry } from '../../../../editor/common/languages.js';
-import { TokenMetadata } from '../../../../editor/common/encodedTokenAttributes.js';
-import { ThemeRule, findMatchingThemeRule } from '../../../services/textMate/common/TMHelper.js';
-import { Color } from '../../../../base/common/color.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { basename } from '../../../../base/common/resources.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { splitLines } from '../../../../base/common/strings.js';
-import { ColorThemeData, findMetadata } from '../../../services/themes/common/colorThemeData.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { Event } from '../../../../base/common/event.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { TreeSitterTree } from '../../../../editor/common/model/tokens/treeSitter/treeSitterTree.js';
-import { TokenizationTextModelPart } from '../../../../editor/common/model/tokens/tokenizationTextModelPart.js';
-import { TreeSitterSyntaxTokenBackend } from '../../../../editor/common/model/tokens/treeSitter/treeSitterSyntaxTokenBackend.js';
-import { TreeSitterTokenizationImpl } from '../../../../editor/common/model/tokens/treeSitter/treeSitterTokenizationImpl.js';
-import { waitForState } from '../../../../base/common/observable.js';
+import { TokenizationRegistry } from '../../../../editor/common/languages.ts';
+import { TokenMetadata } from '../../../../editor/common/encodedTokenAttributes.ts';
+import { ThemeRule, findMatchingThemeRule } from '../../../services/textMate/common/TMHelper.ts';
+import { Color } from '../../../../base/common/color.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { basename } from '../../../../base/common/resources.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { splitLines } from '../../../../base/common/strings.ts';
+import { ColorThemeData, findMetadata } from '../../../services/themes/common/colorThemeData.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { TreeSitterTree } from '../../../../editor/common/model/tokens/treeSitter/treeSitterTree.ts';
+import { TokenizationTextModelPart } from '../../../../editor/common/model/tokens/tokenizationTextModelPart.ts';
+import { TreeSitterSyntaxTokenBackend } from '../../../../editor/common/model/tokens/treeSitter/treeSitterSyntaxTokenBackend.ts';
+import { TreeSitterTokenizationImpl } from '../../../../editor/common/model/tokens/treeSitter/treeSitterTokenizationImpl.ts';
+import { waitForState } from '../../../../base/common/observable.ts';
 
 interface IToken {
 	c: string; // token

@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { DisposableStore, dispose, IDisposable } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { ITelemetryData, ITelemetryService } from '../../../platform/telemetry/common/telemetry.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IFileMatch, IFileQuery, IRawFileMatch2, ISearchComplete, ISearchCompleteStats, ISearchProgressItem, ISearchQuery, ISearchResultProvider, ISearchService, ITextQuery, QueryType, SearchProviderType } from '../../services/search/common/search.js';
-import { ExtHostContext, ExtHostSearchShape, MainContext, MainThreadSearchShape } from '../common/extHost.protocol.js';
-import { revive } from '../../../base/common/marshalling.js';
-import * as Constants from '../../contrib/search/common/constants.js';
-import { IContextKeyService } from '../../../platform/contextkey/common/contextkey.js';
-import { AISearchKeyword } from '../../services/search/common/searchExtTypes.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { DisposableStore, dispose, IDisposable } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { ITelemetryData, ITelemetryService } from '../../../platform/telemetry/common/telemetry.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IFileMatch, IFileQuery, IRawFileMatch2, ISearchComplete, ISearchCompleteStats, ISearchProgressItem, ISearchQuery, ISearchResultProvider, ISearchService, ITextQuery, QueryType, SearchProviderType } from '../../services/search/common/search.ts';
+import { ExtHostContext, ExtHostSearchShape, MainContext, MainThreadSearchShape } from '../common/extHost.protocol.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import * as Constants from '../../contrib/search/common/constants.ts';
+import { IContextKeyService } from '../../../platform/contextkey/common/contextkey.ts';
+import { AISearchKeyword } from '../../services/search/common/searchExtTypes.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadSearch)
 export class MainThreadSearch implements MainThreadSearchShape {

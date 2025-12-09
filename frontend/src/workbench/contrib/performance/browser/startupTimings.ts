@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isCodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { ILifecycleService, StartupKind, StartupKindToString } from '../../../services/lifecycle/common/lifecycle.js';
-import { IUpdateService } from '../../../../platform/update/common/update.js';
-import * as files from '../../files/common/files.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IWorkspaceTrustManagementService } from '../../../../platform/workspace/common/workspaceTrust.js';
-import { IPaneCompositePartService } from '../../../services/panecomposite/browser/panecomposite.js';
-import { ViewContainerLocation } from '../../../common/views.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.js';
-import { ITimerService } from '../../../services/timer/browser/timerService.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { posix } from '../../../../base/common/path.js';
-import { hash } from '../../../../base/common/hash.js';
+import { isCodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { ILifecycleService, StartupKind, StartupKindToString } from '../../../services/lifecycle/common/lifecycle.ts';
+import { IUpdateService } from '../../../../platform/update/common/update.ts';
+import * as files from '../../files/common/files.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IWorkspaceTrustManagementService } from '../../../../platform/workspace/common/workspaceTrust.ts';
+import { IPaneCompositePartService } from '../../../services/panecomposite/browser/panecomposite.ts';
+import { ViewContainerLocation } from '../../../common/views.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.ts';
+import { ITimerService } from '../../../services/timer/browser/timerService.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { posix } from '../../../../base/common/path.ts';
+import { hash } from '../../../../base/common/hash.ts';
 
 export abstract class StartupTimings {
 

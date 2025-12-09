@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../../../nls.js';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.js';
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { EditorAction, registerEditorAction } from '../../../../../../editor/browser/editorExtensions.js';
-import { IBulkEditService, ResourceTextEdit } from '../../../../../../editor/browser/services/bulkEditService.js';
-import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.js';
-import { IEditorWorkerService } from '../../../../../../editor/common/services/editorWorker.js';
-import { ILanguageFeaturesService } from '../../../../../../editor/common/services/languageFeatures.js';
-import { ITextModelService } from '../../../../../../editor/common/services/resolverService.js';
-import { FormattingMode, formatDocumentWithSelectedProvider, getDocumentFormattingEditsWithSelectedProvider } from '../../../../../../editor/contrib/format/browser/format.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { Progress } from '../../../../../../platform/progress/common/progress.js';
-import { NOTEBOOK_ACTIONS_CATEGORY } from '../../controller/coreActions.js';
-import { getNotebookEditorFromEditorPane } from '../../notebookBrowser.js';
-import { NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_IS_ACTIVE_EDITOR } from '../../../common/notebookContextKeys.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { INotebookCellExecution } from '../../../common/notebookExecutionStateService.js';
-import { ICellExecutionParticipant, INotebookExecutionService } from '../../../common/notebookExecutionService.js';
-import { NotebookSetting } from '../../../common/notebookCommon.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution, IWorkbenchContributionsRegistry, Extensions as WorkbenchContributionsExtensions } from '../../../../../common/contributions.js';
-import { INotebookService } from '../../../common/notebookService.js';
-import { CodeActionParticipantUtils } from '../saveParticipants/saveParticipants.js';
+import { localize, localize2 } from '../../../../../../nls.ts';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.ts';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { EditorAction, registerEditorAction } from '../../../../../../editor/browser/editorExtensions.ts';
+import { IBulkEditService, ResourceTextEdit } from '../../../../../../editor/browser/services/bulkEditService.ts';
+import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.ts';
+import { IEditorWorkerService } from '../../../../../../editor/common/services/editorWorker.ts';
+import { ILanguageFeaturesService } from '../../../../../../editor/common/services/languageFeatures.ts';
+import { ITextModelService } from '../../../../../../editor/common/services/resolverService.ts';
+import { FormattingMode, formatDocumentWithSelectedProvider, getDocumentFormattingEditsWithSelectedProvider } from '../../../../../../editor/contrib/format/browser/format.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { Progress } from '../../../../../../platform/progress/common/progress.ts';
+import { NOTEBOOK_ACTIONS_CATEGORY } from '../../controller/coreActions.ts';
+import { getNotebookEditorFromEditorPane } from '../../notebookBrowser.ts';
+import { NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_IS_ACTIVE_EDITOR } from '../../../common/notebookContextKeys.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { INotebookCellExecution } from '../../../common/notebookExecutionStateService.ts';
+import { ICellExecutionParticipant, INotebookExecutionService } from '../../../common/notebookExecutionService.ts';
+import { NotebookSetting } from '../../../common/notebookCommon.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution, IWorkbenchContributionsRegistry, Extensions as WorkbenchContributionsExtensions } from '../../../../../common/contributions.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
+import { CodeActionParticipantUtils } from '../saveParticipants/saveParticipants.ts';
 
 // format notebook
 registerAction2(class extends Action2 {

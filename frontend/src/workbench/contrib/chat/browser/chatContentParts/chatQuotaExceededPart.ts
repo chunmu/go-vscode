@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../base/common/actions.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { assertType } from '../../../../../base/common/types.js';
-import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { localize } from '../../../../../nls.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.js';
-import { asCssVariable, textLinkForeground } from '../../../../../platform/theme/common/colorRegistry.js';
-import { ChatEntitlement, IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.js';
-import { IChatErrorDetailsPart, IChatRendererContent, IChatResponseViewModel } from '../../common/chatViewModel.js';
-import { IChatWidgetService } from '../chat.js';
-import { IChatContentPart } from './chatContentParts.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../base/common/actions.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { assertType } from '../../../../../base/common/types.ts';
+import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { localize } from '../../../../../nls.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.ts';
+import { asCssVariable, textLinkForeground } from '../../../../../platform/theme/common/colorRegistry.ts';
+import { ChatEntitlement, IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { IChatErrorDetailsPart, IChatRendererContent, IChatResponseViewModel } from '../../common/chatViewModel.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { IChatContentPart } from './chatContentParts.ts';
 
 const $ = dom.$;
 

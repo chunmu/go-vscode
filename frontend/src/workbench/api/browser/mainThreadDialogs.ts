@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../base/common/uri.js';
-import { MainThreadDiaglogsShape, MainContext, MainThreadDialogOpenOptions, MainThreadDialogSaveOptions } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IFileDialogService, IOpenDialogOptions, ISaveDialogOptions } from '../../../platform/dialogs/common/dialogs.js';
+import { URI } from '../../../base/common/uri.ts';
+import { MainThreadDiaglogsShape, MainContext, MainThreadDialogOpenOptions, MainThreadDialogSaveOptions } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IFileDialogService, IOpenDialogOptions, ISaveDialogOptions } from '../../../platform/dialogs/common/dialogs.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadDialogs)
 export class MainThreadDialogs implements MainThreadDiaglogsShape {

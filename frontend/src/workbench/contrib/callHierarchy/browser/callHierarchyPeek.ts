@@ -4,35 +4,35 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/callHierarchy.css';
-import * as peekView from '../../../../editor/contrib/peekView/browser/peekView.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { CallHierarchyDirection, CallHierarchyModel } from '../common/callHierarchy.js';
-import { WorkbenchAsyncDataTree, IWorkbenchAsyncDataTreeOptions } from '../../../../platform/list/browser/listService.js';
-import { FuzzyScore } from '../../../../base/common/filters.js';
-import * as callHTree from './callHierarchyTree.js';
-import { IAsyncDataTreeViewState } from '../../../../base/browser/ui/tree/asyncDataTree.js';
-import { localize } from '../../../../nls.js';
-import { ScrollType } from '../../../../editor/common/editorCommon.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import { SplitView, Orientation, Sizing } from '../../../../base/browser/ui/splitview/splitview.js';
-import { Dimension, isKeyboardEvent } from '../../../../base/browser/dom.js';
-import { Event } from '../../../../base/common/event.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { EmbeddedCodeEditorWidget } from '../../../../editor/browser/widget/codeEditor/embeddedCodeEditorWidget.js';
-import { IEditorOptions } from '../../../../editor/common/config/editorOptions.js';
-import { ITextModelService } from '../../../../editor/common/services/resolverService.js';
-import { toDisposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { TrackedRangeStickiness, IModelDeltaDecoration, IModelDecorationOptions, OverviewRulerLane } from '../../../../editor/common/model.js';
-import { themeColorFromId, IThemeService, IColorTheme } from '../../../../platform/theme/common/themeService.js';
-import { IPosition } from '../../../../editor/common/core/position.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { Color } from '../../../../base/common/color.js';
-import { TreeMouseEventTarget, ITreeNode } from '../../../../base/browser/ui/tree/tree.js';
-import { URI } from '../../../../base/common/uri.js';
-import { MenuId, IMenuService } from '../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { getFlatActionBarActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
+import * as peekView from '../../../../editor/contrib/peekView/browser/peekView.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { CallHierarchyDirection, CallHierarchyModel } from '../common/callHierarchy.ts';
+import { WorkbenchAsyncDataTree, IWorkbenchAsyncDataTreeOptions } from '../../../../platform/list/browser/listService.ts';
+import { FuzzyScore } from '../../../../base/common/filters.ts';
+import * as callHTree from './callHierarchyTree.ts';
+import { IAsyncDataTreeViewState } from '../../../../base/browser/ui/tree/asyncDataTree.ts';
+import { localize } from '../../../../nls.ts';
+import { ScrollType } from '../../../../editor/common/editorCommon.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import { SplitView, Orientation, Sizing } from '../../../../base/browser/ui/splitview/splitview.ts';
+import { Dimension, isKeyboardEvent } from '../../../../base/browser/dom.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { EmbeddedCodeEditorWidget } from '../../../../editor/browser/widget/codeEditor/embeddedCodeEditorWidget.ts';
+import { IEditorOptions } from '../../../../editor/common/config/editorOptions.ts';
+import { ITextModelService } from '../../../../editor/common/services/resolverService.ts';
+import { toDisposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { TrackedRangeStickiness, IModelDeltaDecoration, IModelDecorationOptions, OverviewRulerLane } from '../../../../editor/common/model.ts';
+import { themeColorFromId, IThemeService, IColorTheme } from '../../../../platform/theme/common/themeService.ts';
+import { IPosition } from '../../../../editor/common/core/position.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { Color } from '../../../../base/common/color.ts';
+import { TreeMouseEventTarget, ITreeNode } from '../../../../base/browser/ui/tree/tree.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { MenuId, IMenuService } from '../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { getFlatActionBarActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.ts';
 
 const enum State {
 	Loading = 'loading',

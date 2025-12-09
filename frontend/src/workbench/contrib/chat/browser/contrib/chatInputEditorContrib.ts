@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, MutableDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../base/common/observable.js';
-import { themeColorFromId } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { IDecorationOptions } from '../../../../../editor/common/editorCommon.js';
-import { TrackedRangeStickiness } from '../../../../../editor/common/model.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { inputPlaceholderForeground } from '../../../../../platform/theme/common/colorRegistry.js';
-import { IThemeService } from '../../../../../platform/theme/common/themeService.js';
-import { IChatAgentCommand, IChatAgentData, IChatAgentService } from '../../common/chatAgents.js';
-import { chatSlashCommandBackground, chatSlashCommandForeground } from '../../common/chatColors.js';
-import { ChatRequestAgentPart, ChatRequestAgentSubcommandPart, ChatRequestDynamicVariablePart, ChatRequestSlashCommandPart, ChatRequestSlashPromptPart, ChatRequestTextPart, ChatRequestToolPart, ChatRequestToolSetPart, IParsedChatRequestPart, chatAgentLeader, chatSubcommandLeader } from '../../common/chatParserTypes.js';
-import { ChatRequestParser } from '../../common/chatRequestParser.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
-import { IChatWidget } from '../chat.js';
-import { ChatWidget } from '../chatWidget.js';
-import { dynamicVariableDecorationType } from './chatDynamicVariables.js';
-import { NativeEditContextRegistry } from '../../../../../editor/browser/controller/editContext/native/nativeEditContextRegistry.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { ThrottledDelayer } from '../../../../../base/common/async.js';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, MutableDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../base/common/observable.ts';
+import { themeColorFromId } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { IDecorationOptions } from '../../../../../editor/common/editorCommon.ts';
+import { TrackedRangeStickiness } from '../../../../../editor/common/model.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { inputPlaceholderForeground } from '../../../../../platform/theme/common/colorRegistry.ts';
+import { IThemeService } from '../../../../../platform/theme/common/themeService.ts';
+import { IChatAgentCommand, IChatAgentData, IChatAgentService } from '../../common/chatAgents.ts';
+import { chatSlashCommandBackground, chatSlashCommandForeground } from '../../common/chatColors.ts';
+import { ChatRequestAgentPart, ChatRequestAgentSubcommandPart, ChatRequestDynamicVariablePart, ChatRequestSlashCommandPart, ChatRequestSlashPromptPart, ChatRequestTextPart, ChatRequestToolPart, ChatRequestToolSetPart, IParsedChatRequestPart, chatAgentLeader, chatSubcommandLeader } from '../../common/chatParserTypes.ts';
+import { ChatRequestParser } from '../../common/chatRequestParser.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
+import { IChatWidget } from '../chat.ts';
+import { ChatWidget } from '../chatWidget.ts';
+import { dynamicVariableDecorationType } from './chatDynamicVariables.ts';
+import { NativeEditContextRegistry } from '../../../../../editor/browser/controller/editContext/native/nativeEditContextRegistry.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { ThrottledDelayer } from '../../../../../base/common/async.ts';
 
 const decorationDescription = 'chat';
 const placeholderDecorationType = 'chat-session-detail';

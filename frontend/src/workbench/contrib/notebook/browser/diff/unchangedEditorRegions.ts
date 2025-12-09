@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
 
 export type UnchangedEditorRegionOptions = {
 	options: {

@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { $ } from '../../../../../base/browser/dom.js';
-import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { IChatChangesSummaryPart as IChatFileChangesSummaryPart, IChatRendererContent } from '../../common/chatViewModel.js';
-import { ChatTreeItem } from '../chat.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IChatChangesSummary as IChatFileChangesSummary, IChatService } from '../../common/chatService.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { IChatEditingSession, IEditSessionEntryDiff } from '../../common/chatEditingService.js';
-import { WorkbenchList } from '../../../../../platform/list/browser/listService.js';
-import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { ResourcePool } from './chatCollections.js';
-import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.js';
-import { IListRenderer, IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.js';
-import { FileKind } from '../../../../../platform/files/common/files.js';
-import { createFileIconThemableTreeContainerScope } from '../../../files/browser/views/explorerView.js';
-import { IThemeService } from '../../../../../platform/theme/common/themeService.js';
-import { autorun, derived, IObservable, IObservableWithChange } from '../../../../../base/common/observable.js';
-import { MultiDiffEditorInput } from '../../../multiDiffEditor/browser/multiDiffEditorInput.js';
-import { MultiDiffEditorItem } from '../../../multiDiffEditor/browser/multiDiffSourceResolverService.js';
-import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { IHoverService } from '../../../../../platform/hover/browser/hover.js';
-import { localize2 } from '../../../../../nls.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { $ } from '../../../../../base/browser/dom.ts';
+import { Disposable, DisposableStore, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { IChatChangesSummaryPart as IChatFileChangesSummaryPart, IChatRendererContent } from '../../common/chatViewModel.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatChangesSummary as IChatFileChangesSummary, IChatService } from '../../common/chatService.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { IChatEditingSession, IEditSessionEntryDiff } from '../../common/chatEditingService.ts';
+import { WorkbenchList } from '../../../../../platform/list/browser/listService.ts';
+import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { ResourcePool } from './chatCollections.ts';
+import { IResourceLabel, ResourceLabels } from '../../../../browser/labels.ts';
+import { IListRenderer, IListVirtualDelegate } from '../../../../../base/browser/ui/list/list.ts';
+import { FileKind } from '../../../../../platform/files/common/files.ts';
+import { createFileIconThemableTreeContainerScope } from '../../../files/browser/views/explorerView.ts';
+import { IThemeService } from '../../../../../platform/theme/common/themeService.ts';
+import { autorun, derived, IObservable, IObservableWithChange } from '../../../../../base/common/observable.ts';
+import { MultiDiffEditorInput } from '../../../multiDiffEditor/browser/multiDiffEditorInput.ts';
+import { MultiDiffEditorItem } from '../../../multiDiffEditor/browser/multiDiffSourceResolverService.ts';
+import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { IHoverService } from '../../../../../platform/hover/browser/hover.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
 
 export class ChatCheckpointFileChangesSummaryContentPart extends Disposable implements IChatContentPart {
 

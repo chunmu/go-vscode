@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { illegalArgument } from '../../../../base/common/errors.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Position } from './position.js';
+import { illegalArgument } from '../../../../base/common/errors.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Position } from './position.ts';
 
 @es5ClassCompat
 export class Range {

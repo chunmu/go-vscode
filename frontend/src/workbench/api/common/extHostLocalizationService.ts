@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { LANGUAGE_DEFAULT } from '../../../base/common/platform.js';
-import { format2 } from '../../../base/common/strings.js';
-import { URI } from '../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtHostLocalizationShape, IStringDetails, MainContext, MainThreadLocalizationShape } from './extHost.protocol.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
+import { LANGUAGE_DEFAULT } from '../../../base/common/platform.ts';
+import { format2 } from '../../../base/common/strings.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ExtHostLocalizationShape, IStringDetails, MainContext, MainThreadLocalizationShape } from './extHost.protocol.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
 
 export class ExtHostLocalizationService implements ExtHostLocalizationShape {
 	readonly _serviceBrand: undefined;

@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 
-import { Disposable, DisposableStore, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { Registry } from '../../../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution, IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../../../../../common/contributions.js';
-import { INotebookKernelService } from '../../../common/notebookKernelService.js';
-import { INotebookLoggingService } from '../../../common/notebookLoggingService.js';
-import { IExtensionService } from '../../../../../services/extensions/common/extensions.js';
-import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.js';
+import { Disposable, DisposableStore, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { Registry } from '../../../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution, IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../../../../../common/contributions.ts';
+import { INotebookKernelService } from '../../../common/notebookKernelService.ts';
+import { INotebookLoggingService } from '../../../common/notebookLoggingService.ts';
+import { IExtensionService } from '../../../../../services/extensions/common/extensions.ts';
+import { LifecyclePhase } from '../../../../../services/lifecycle/common/lifecycle.ts';
 
 class NotebookKernelDetection extends Disposable implements IWorkbenchContribution {
 	private _detectionMap = new Map<string, IDisposable>();

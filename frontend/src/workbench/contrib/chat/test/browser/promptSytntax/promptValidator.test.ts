@@ -5,30 +5,30 @@
 
 import assert from 'assert';
 
-import { ResourceSet } from '../../../../../../base/common/map.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
-import { ContextKeyService } from '../../../../../../platform/contextkey/browser/contextKeyService.js';
-import { TestConfigurationService } from '../../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ExtensionIdentifier } from '../../../../../../platform/extensions/common/extensions.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { ILabelService } from '../../../../../../platform/label/common/label.js';
-import { IMarkerData, MarkerSeverity } from '../../../../../../platform/markers/common/markers.js';
-import { workbenchInstantiationService } from '../../../../../test/browser/workbenchTestServices.js';
-import { LanguageModelToolsService } from '../../../browser/languageModelToolsService.js';
-import { ChatMode, CustomChatMode, IChatModeService } from '../../../common/chatModes.js';
-import { IChatService } from '../../../common/chatService.js';
-import { ChatConfiguration } from '../../../common/constants.js';
-import { ILanguageModelToolsService, IToolData, ToolDataSource } from '../../../common/languageModelToolsService.js';
-import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../../common/languageModels.js';
-import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.js';
-import { PromptValidator } from '../../../common/promptSyntax/languageProviders/promptValidator.js';
-import { PromptsType } from '../../../common/promptSyntax/promptTypes.js';
-import { PromptFileParser } from '../../../common/promptSyntax/promptFileParser.js';
-import { PromptsStorage } from '../../../common/promptSyntax/service/promptsService.js';
-import { MockChatModeService } from '../../common/mockChatModeService.js';
-import { MockChatService } from '../../common/mockChatService.js';
+import { ResourceSet } from '../../../../../../base/common/map.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.ts';
+import { ContextKeyService } from '../../../../../../platform/contextkey/browser/contextKeyService.ts';
+import { TestConfigurationService } from '../../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ExtensionIdentifier } from '../../../../../../platform/extensions/common/extensions.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { ILabelService } from '../../../../../../platform/label/common/label.ts';
+import { IMarkerData, MarkerSeverity } from '../../../../../../platform/markers/common/markers.ts';
+import { workbenchInstantiationService } from '../../../../../test/browser/workbenchTestServices.ts';
+import { LanguageModelToolsService } from '../../../browser/languageModelToolsService.ts';
+import { ChatMode, CustomChatMode, IChatModeService } from '../../../common/chatModes.ts';
+import { IChatService } from '../../../common/chatService.ts';
+import { ChatConfiguration } from '../../../common/constants.ts';
+import { ILanguageModelToolsService, IToolData, ToolDataSource } from '../../../common/languageModelToolsService.ts';
+import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../../common/languageModels.ts';
+import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.ts';
+import { PromptValidator } from '../../../common/promptSyntax/languageProviders/promptValidator.ts';
+import { PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
+import { PromptFileParser } from '../../../common/promptSyntax/promptFileParser.ts';
+import { PromptsStorage } from '../../../common/promptSyntax/service/promptsService.ts';
+import { MockChatModeService } from '../../common/mockChatModeService.ts';
+import { MockChatService } from '../../common/mockChatService.ts';
 
 suite('PromptValidator', () => {
 	const disposables = ensureNoDisposablesAreLeakedInTestSuite();

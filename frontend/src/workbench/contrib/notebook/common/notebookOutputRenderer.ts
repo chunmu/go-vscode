@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as glob from '../../../../base/common/glob.js';
-import { Iterable } from '../../../../base/common/iterator.js';
-import { joinPath } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import { INotebookRendererInfo, ContributedNotebookRendererEntrypoint, NotebookRendererMatch, RendererMessagingSpec, NotebookRendererEntrypoint, INotebookStaticPreloadInfo as INotebookStaticPreloadInfo } from './notebookCommon.js';
+import * as glob from '../../../../base/common/glob.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
+import { joinPath } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import { INotebookRendererInfo, ContributedNotebookRendererEntrypoint, NotebookRendererMatch, RendererMessagingSpec, NotebookRendererEntrypoint, INotebookStaticPreloadInfo as INotebookStaticPreloadInfo } from './notebookCommon.ts';
 
 class DependencyList {
 	private readonly value: ReadonlySet<string>;

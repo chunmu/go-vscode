@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AbstractExtHostConsoleForwarder } from '../common/extHostConsoleForwarder.js';
-import { IExtHostInitDataService } from '../common/extHostInitDataService.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
+import { AbstractExtHostConsoleForwarder } from '../common/extHostConsoleForwarder.ts';
+import { IExtHostInitDataService } from '../common/extHostInitDataService.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
 
 export class ExtHostConsoleForwarder extends AbstractExtHostConsoleForwarder {
 

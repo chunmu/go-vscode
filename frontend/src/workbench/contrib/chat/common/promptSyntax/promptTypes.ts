@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { LanguageSelector } from '../../../../../editor/common/languageSelector.js';
+import { LanguageSelector } from '../../../../../editor/common/languageSelector.ts';
 
 /**
  * Documentation link for the reusable prompts feature.

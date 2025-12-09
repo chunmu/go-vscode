@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../base/common/event.js';
-import { combinedDisposable, DisposableStore, DisposableMap } from '../../../base/common/lifecycle.js';
-import { ICodeEditor, isCodeEditor, isDiffEditor, IActiveCodeEditor } from '../../../editor/browser/editorBrowser.js';
-import { ICodeEditorService } from '../../../editor/browser/services/codeEditorService.js';
-import { IEditor } from '../../../editor/common/editorCommon.js';
-import { ITextModel, shouldSynchronizeModel } from '../../../editor/common/model.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { ITextModelService } from '../../../editor/common/services/resolverService.js';
-import { IFileService } from '../../../platform/files/common/files.js';
-import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { MainThreadDocuments } from './mainThreadDocuments.js';
-import { MainThreadTextEditor } from './mainThreadEditor.js';
-import { MainThreadTextEditors } from './mainThreadEditors.js';
-import { ExtHostContext, ExtHostDocumentsAndEditorsShape, IDocumentsAndEditorsDelta, IModelAddedData, ITextEditorAddData, MainContext } from '../common/extHost.protocol.js';
-import { AbstractTextEditor } from '../../browser/parts/editor/textEditor.js';
-import { IEditorPane } from '../../common/editor.js';
-import { EditorGroupColumn, editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.js';
-import { ITextFileService } from '../../services/textfile/common/textfiles.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { IWorkingCopyFileService } from '../../services/workingCopy/common/workingCopyFileService.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.js';
-import { IPathService } from '../../services/path/common/pathService.js';
-import { diffSets, diffMaps } from '../../../base/common/collections.js';
-import { IPaneCompositePartService } from '../../services/panecomposite/browser/panecomposite.js';
-import { ViewContainerLocation } from '../../common/views.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { IQuickDiffModelService } from '../../contrib/scm/browser/quickDiffModel.js';
+import { Event } from '../../../base/common/event.ts';
+import { combinedDisposable, DisposableStore, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { ICodeEditor, isCodeEditor, isDiffEditor, IActiveCodeEditor } from '../../../editor/browser/editorBrowser.ts';
+import { ICodeEditorService } from '../../../editor/browser/services/codeEditorService.ts';
+import { IEditor } from '../../../editor/common/editorCommon.ts';
+import { ITextModel, shouldSynchronizeModel } from '../../../editor/common/model.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { ITextModelService } from '../../../editor/common/services/resolverService.ts';
+import { IFileService } from '../../../platform/files/common/files.ts';
+import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { MainThreadDocuments } from './mainThreadDocuments.ts';
+import { MainThreadTextEditor } from './mainThreadEditor.ts';
+import { MainThreadTextEditors } from './mainThreadEditors.ts';
+import { ExtHostContext, ExtHostDocumentsAndEditorsShape, IDocumentsAndEditorsDelta, IModelAddedData, ITextEditorAddData, MainContext } from '../common/extHost.protocol.ts';
+import { AbstractTextEditor } from '../../browser/parts/editor/textEditor.ts';
+import { IEditorPane } from '../../common/editor.ts';
+import { EditorGroupColumn, editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.ts';
+import { ITextFileService } from '../../services/textfile/common/textfiles.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { IWorkingCopyFileService } from '../../services/workingCopy/common/workingCopyFileService.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.ts';
+import { IPathService } from '../../services/path/common/pathService.ts';
+import { diffSets, diffMaps } from '../../../base/common/collections.ts';
+import { IPaneCompositePartService } from '../../services/panecomposite/browser/panecomposite.ts';
+import { ViewContainerLocation } from '../../common/views.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { IQuickDiffModelService } from '../../contrib/scm/browser/quickDiffModel.ts';
 
 
 class TextEditorSnapshot {

@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/style.css';
-import { registerThemingParticipant } from '../../platform/theme/common/themeService.js';
-import { WORKBENCH_BACKGROUND, TITLE_BAR_ACTIVE_BACKGROUND } from '../common/theme.js';
-import { isWeb, isIOS } from '../../base/common/platform.js';
-import { createMetaElement } from '../../base/browser/dom.js';
-import { isSafari, isStandalone } from '../../base/browser/browser.js';
-import { selectionBackground } from '../../platform/theme/common/colorRegistry.js';
-import { mainWindow } from '../../base/browser/window.js';
+import { registerThemingParticipant } from '../../platform/theme/common/themeService.ts';
+import { WORKBENCH_BACKGROUND, TITLE_BAR_ACTIVE_BACKGROUND } from '../common/theme.ts';
+import { isWeb, isIOS } from '../../base/common/platform.ts';
+import { createMetaElement } from '../../base/browser/dom.ts';
+import { isSafari, isStandalone } from '../../base/browser/browser.ts';
+import { selectionBackground } from '../../platform/theme/common/colorRegistry.ts';
+import { mainWindow } from '../../base/browser/window.ts';
 
 registerThemingParticipant((theme, collector) => {
 

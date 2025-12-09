@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 import assert from 'assert';
-import { KeyChord, KeyCode, KeyMod, ScanCode } from '../../../../../base/common/keyCodes.js';
-import { KeyCodeChord, decodeKeybinding, ScanCodeChord, Keybinding } from '../../../../../base/common/keybindings.js';
-import { KeybindingParser } from '../../../../../base/common/keybindingParser.js';
-import { OperatingSystem } from '../../../../../base/common/platform.js';
-import { KeybindingIO } from '../../common/keybindingIO.js';
-import { createUSLayoutResolvedKeybinding } from '../../../../../platform/keybinding/test/common/keybindingsTestUtils.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { KeyChord, KeyCode, KeyMod, ScanCode } from '../../../../../base/common/keyCodes.ts';
+import { KeyCodeChord, decodeKeybinding, ScanCodeChord, Keybinding } from '../../../../../base/common/keybindings.ts';
+import { KeybindingParser } from '../../../../../base/common/keybindingParser.ts';
+import { OperatingSystem } from '../../../../../base/common/platform.ts';
+import { KeybindingIO } from '../../common/keybindingIO.ts';
+import { createUSLayoutResolvedKeybinding } from '../../../../../platform/keybinding/test/common/keybindingsTestUtils.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 suite('keybindingIO', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

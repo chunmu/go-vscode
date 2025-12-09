@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AsyncReferenceCollection, IReference, ReferenceCollection } from '../../../../../../base/common/lifecycle.js';
-import { IModifiedFileEntry } from '../../../../chat/common/chatEditingService.js';
-import { INotebookService } from '../../../common/notebookService.js';
-import { bufferToStream, VSBuffer } from '../../../../../../base/common/buffer.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { createDecorator, IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ITextModelService } from '../../../../../../editor/common/services/resolverService.js';
+import { AsyncReferenceCollection, IReference, ReferenceCollection } from '../../../../../../base/common/lifecycle.ts';
+import { IModifiedFileEntry } from '../../../../chat/common/chatEditingService.ts';
+import { INotebookService } from '../../../common/notebookService.ts';
+import { bufferToStream, VSBuffer } from '../../../../../../base/common/buffer.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { createDecorator, IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ITextModelService } from '../../../../../../editor/common/services/resolverService.ts';
 
 
 export const INotebookOriginalModelReferenceFactory = createDecorator<INotebookOriginalModelReferenceFactory>('INotebookOriginalModelReferenceFactory');

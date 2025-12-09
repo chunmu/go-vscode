@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { BinaryEditorModel } from '../../../common/editor/binaryEditorModel.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { ByteSize } from '../../../../platform/files/common/files.js';
-import { IEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { EditorPlaceholder, IEditorPlaceholderContents } from './editorPlaceholder.js';
-import { IEditorGroup } from '../../../services/editor/common/editorGroupsService.js';
+import { localize } from '../../../../nls.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { BinaryEditorModel } from '../../../common/editor/binaryEditorModel.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { ByteSize } from '../../../../platform/files/common/files.ts';
+import { IEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { EditorPlaceholder, IEditorPlaceholderContents } from './editorPlaceholder.ts';
+import { IEditorGroup } from '../../../services/editor/common/editorGroupsService.ts';
 
 export interface IOpenCallbacks {
 	openInternal: (input: EditorInput, options: IEditorOptions | undefined) => Promise<void>;

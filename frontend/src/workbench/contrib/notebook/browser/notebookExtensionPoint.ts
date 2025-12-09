@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IJSONSchema } from '../../../../base/common/jsonSchema.js';
-import * as nls from '../../../../nls.js';
-import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.js';
-import { NotebookEditorPriority, ContributedNotebookRendererEntrypoint, RendererMessagingSpec } from '../common/notebookCommon.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { IExtensionFeatureTableRenderer, IRenderedData, ITableData, IRowData, IExtensionFeaturesRegistry, Extensions } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
+import { IJSONSchema } from '../../../../base/common/jsonSchema.ts';
+import * as nls from '../../../../nls.ts';
+import { ExtensionsRegistry } from '../../../services/extensions/common/extensionsRegistry.ts';
+import { NotebookEditorPriority, ContributedNotebookRendererEntrypoint, RendererMessagingSpec } from '../common/notebookCommon.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { IExtensionFeatureTableRenderer, IRenderedData, ITableData, IRowData, IExtensionFeaturesRegistry, Extensions } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
 
 const NotebookEditorContribution = Object.freeze({
 	type: 'type',

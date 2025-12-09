@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { equals as arraysEqual } from '../../../../base/common/arrays.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { Memento } from '../../../common/memento.js';
-import { IChatModelInputState } from './chatModel.js';
-import { CHAT_PROVIDER_ID } from './chatParticipantContribTypes.js';
-import { IChatRequestVariableEntry } from './chatVariableEntries.js';
-import { ChatAgentLocation, ChatModeKind } from './constants.js';
+import { equals as arraysEqual } from '../../../../base/common/arrays.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { Memento } from '../../../common/memento.ts';
+import { IChatModelInputState } from './chatModel.ts';
+import { CHAT_PROVIDER_ID } from './chatParticipantContribTypes.ts';
+import { IChatRequestVariableEntry } from './chatVariableEntries.ts';
+import { ChatAgentLocation, ChatModeKind } from './constants.ts';
 
 interface IChatHistoryEntry {
 	text: string;

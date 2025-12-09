@@ -4,11 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/singleeditortabscontrol.css';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { EditorTabsControl } from './editorTabsControl.js';
-import { Dimension } from '../../../../base/browser/dom.js';
-import { IEditorTitleControlDimensions } from './editorTitleControl.js';
-import { IToolbarActions } from '../../../common/editor.js';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { EditorTabsControl } from './editorTabsControl.ts';
+import { Dimension } from '../../../../base/browser/dom.ts';
+import { IEditorTitleControlDimensions } from './editorTitleControl.ts';
+import { IToolbarActions } from '../../../common/editor.ts';
 
 export class NoEditorTabsControl extends EditorTabsControl {
 	private activeEditor: EditorInput | null = null;

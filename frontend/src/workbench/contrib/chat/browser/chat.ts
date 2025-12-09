@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IMouseWheelEvent } from '../../../../base/browser/mouseEvent.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { EditDeltaInfo } from '../../../../editor/common/textModelEditSource.js';
-import { MenuId } from '../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { PreferredGroup } from '../../../services/editor/common/editorService.js';
-import { IChatAgentAttachmentCapabilities, IChatAgentCommand, IChatAgentData } from '../common/chatAgents.js';
-import { IChatResponseModel, IChatModelInputState } from '../common/chatModel.js';
-import { IChatMode } from '../common/chatModes.js';
-import { IParsedChatRequest } from '../common/chatParserTypes.js';
-import { CHAT_PROVIDER_ID } from '../common/chatParticipantContribTypes.js';
-import { IChatElicitationRequest, IChatLocationData, IChatSendRequestOptions } from '../common/chatService.js';
-import { IChatRequestViewModel, IChatResponseViewModel, IChatViewModel } from '../common/chatViewModel.js';
-import { ChatAgentLocation, ChatModeKind } from '../common/constants.js';
-import { ChatAttachmentModel } from './chatAttachmentModel.js';
-import { IChatEditorOptions } from './chatEditor.js';
-import { ChatInputPart } from './chatInputPart.js';
-import { ChatWidget, IChatWidgetContrib } from './chatWidget.js';
-import { ICodeBlockActionContext } from './codeBlockPart.js';
+import { IMouseWheelEvent } from '../../../../base/browser/mouseEvent.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { EditDeltaInfo } from '../../../../editor/common/textModelEditSource.ts';
+import { MenuId } from '../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { PreferredGroup } from '../../../services/editor/common/editorService.ts';
+import { IChatAgentAttachmentCapabilities, IChatAgentCommand, IChatAgentData } from '../common/chatAgents.ts';
+import { IChatResponseModel, IChatModelInputState } from '../common/chatModel.ts';
+import { IChatMode } from '../common/chatModes.ts';
+import { IParsedChatRequest } from '../common/chatParserTypes.ts';
+import { CHAT_PROVIDER_ID } from '../common/chatParticipantContribTypes.ts';
+import { IChatElicitationRequest, IChatLocationData, IChatSendRequestOptions } from '../common/chatService.ts';
+import { IChatRequestViewModel, IChatResponseViewModel, IChatViewModel } from '../common/chatViewModel.ts';
+import { ChatAgentLocation, ChatModeKind } from '../common/constants.ts';
+import { ChatAttachmentModel } from './chatAttachmentModel.ts';
+import { IChatEditorOptions } from './chatEditor.ts';
+import { ChatInputPart } from './chatInputPart.ts';
+import { ChatWidget, IChatWidgetContrib } from './chatWidget.ts';
+import { ICodeBlockActionContext } from './codeBlockPart.ts';
 
 export const IChatWidgetService = createDecorator<IChatWidgetService>('chatWidgetService');
 

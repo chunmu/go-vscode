@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore, toDisposable } from '../../../../base/common/lifecycle.js';
-import { Event, Emitter } from '../../../../base/common/event.js';
-import { ISCMService, ISCMProvider, ISCMInput, ISCMRepository, IInputValidator, ISCMInputChangeEvent, SCMInputChangeReason, InputValidationType, IInputValidation } from './scm.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { HistoryNavigator2 } from '../../../../base/common/history.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { URI } from '../../../../base/common/uri.js';
-import { Iterable } from '../../../../base/common/iterator.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { runOnChange } from '../../../../base/common/observable.js';
+import { Disposable, DisposableStore, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { Event, Emitter } from '../../../../base/common/event.ts';
+import { ISCMService, ISCMProvider, ISCMInput, ISCMRepository, IInputValidator, ISCMInputChangeEvent, SCMInputChangeReason, InputValidationType, IInputValidation } from './scm.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { HistoryNavigator2 } from '../../../../base/common/history.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { runOnChange } from '../../../../base/common/observable.ts';
 
 class SCMInput extends Disposable implements ISCMInput {
 

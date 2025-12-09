@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Event } from '../../../../../base/common/event.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { observableValue } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IChatModel, IChatRequestModel, IChatRequestVariableData, ISerializableChatData } from '../../common/chatModel.js';
-import { IParsedChatRequest } from '../../common/chatParserTypes.js';
-import { IChatCompleteResponse, IChatDetail, IChatModelReference, IChatProgress, IChatProviderInfo, IChatSendRequestData, IChatSendRequestOptions, IChatService, IChatSessionContext, IChatTransferredSessionData, IChatUserActionEvent } from '../../common/chatService.js';
-import { ChatAgentLocation } from '../../common/constants.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { observableValue } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IChatModel, IChatRequestModel, IChatRequestVariableData, ISerializableChatData } from '../../common/chatModel.ts';
+import { IParsedChatRequest } from '../../common/chatParserTypes.ts';
+import { IChatCompleteResponse, IChatDetail, IChatModelReference, IChatProgress, IChatProviderInfo, IChatSendRequestData, IChatSendRequestOptions, IChatService, IChatSessionContext, IChatTransferredSessionData, IChatUserActionEvent } from '../../common/chatService.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
 
 export class MockChatService implements IChatService {
 	requestInProgressObs = observableValue('name', false);

@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Command } from '../../editor/common/languages.js';
-import { UriComponents, URI } from '../../base/common/uri.js';
-import { Event, Emitter } from '../../base/common/event.js';
-import { ContextKeyExpression } from '../../platform/contextkey/common/contextkey.js';
-import { localize } from '../../nls.js';
-import { createDecorator } from '../../platform/instantiation/common/instantiation.js';
-import { IDisposable, Disposable, toDisposable } from '../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../base/common/themables.js';
-import { getOrSet, SetMap } from '../../base/common/map.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { IKeybindings } from '../../platform/keybinding/common/keybindingsRegistry.js';
-import { ExtensionIdentifier } from '../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../platform/instantiation/common/descriptors.js';
-import { IProgressIndicator } from '../../platform/progress/common/progress.js';
-import Severity from '../../base/common/severity.js';
-import { IAccessibilityInformation } from '../../platform/accessibility/common/accessibility.js';
-import { IMarkdownString, MarkdownString } from '../../base/common/htmlContent.js';
-import { mixin } from '../../base/common/objects.js';
-import { Codicon } from '../../base/common/codicons.js';
-import { registerIcon } from '../../platform/theme/common/iconRegistry.js';
-import { CancellationToken } from '../../base/common/cancellation.js';
-import { VSDataTransfer } from '../../base/common/dataTransfer.js';
-import { ILocalizedString } from '../../platform/action/common/action.js';
+import { Command } from '../../editor/common/languages.ts';
+import { UriComponents, URI } from '../../base/common/uri.ts';
+import { Event, Emitter } from '../../base/common/event.ts';
+import { ContextKeyExpression } from '../../platform/contextkey/common/contextkey.ts';
+import { localize } from '../../nls.ts';
+import { createDecorator } from '../../platform/instantiation/common/instantiation.ts';
+import { IDisposable, Disposable, toDisposable } from '../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../base/common/themables.ts';
+import { getOrSet, SetMap } from '../../base/common/map.ts';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { IKeybindings } from '../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ExtensionIdentifier } from '../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../platform/instantiation/common/descriptors.ts';
+import { IProgressIndicator } from '../../platform/progress/common/progress.ts';
+import Severity from '../../base/common/severity.ts';
+import { IAccessibilityInformation } from '../../platform/accessibility/common/accessibility.ts';
+import { IMarkdownString, MarkdownString } from '../../base/common/htmlContent.ts';
+import { mixin } from '../../base/common/objects.ts';
+import { Codicon } from '../../base/common/codicons.ts';
+import { registerIcon } from '../../platform/theme/common/iconRegistry.ts';
+import { CancellationToken } from '../../base/common/cancellation.ts';
+import { VSDataTransfer } from '../../base/common/dataTransfer.ts';
+import { ILocalizedString } from '../../platform/action/common/action.ts';
 
 export const VIEWS_LOG_ID = 'views';
 export const VIEWS_LOG_NAME = localize('views log', "Views");

@@ -4,30 +4,30 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as vscode from 'vscode';
-import { createCancelablePromise, disposableTimeout, firstParallel, RunOnceScheduler, timeout } from '../../../base/common/async.js';
-import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import * as platform from '../../../base/common/platform.js';
-import * as nls from '../../../nls.js';
-import { IExternalTerminalService } from '../../../platform/externalTerminal/common/externalTerminal.js';
-import { LinuxExternalTerminalService, MacExternalTerminalService, WindowsExternalTerminalService } from '../../../platform/externalTerminal/node/externalTerminalService.js';
-import { ISignService } from '../../../platform/sign/common/sign.js';
-import { SignService } from '../../../platform/sign/node/signService.js';
-import { AbstractDebugAdapter } from '../../contrib/debug/common/abstractDebugAdapter.js';
-import { ExecutableDebugAdapter, NamedPipeDebugAdapter, SocketDebugAdapter } from '../../contrib/debug/node/debugAdapter.js';
-import { hasChildProcesses, prepareCommand } from '../../contrib/debug/node/terminals.js';
-import { ExtensionDescriptionRegistry } from '../../services/extensions/common/extensionDescriptionRegistry.js';
-import { IExtHostCommands } from '../common/extHostCommands.js';
-import { ExtHostConfigProvider, IExtHostConfiguration } from '../common/extHostConfiguration.js';
-import { ExtHostDebugServiceBase, ExtHostDebugSession } from '../common/extHostDebugService.js';
-import { IExtHostEditorTabs } from '../common/extHostEditorTabs.js';
-import { IExtHostExtensionService } from '../common/extHostExtensionService.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
-import { IExtHostTerminalService } from '../common/extHostTerminalService.js';
-import { IExtHostTesting } from '../common/extHostTesting.js';
-import { DebugAdapterExecutable, DebugAdapterNamedPipeServer, DebugAdapterServer, ThemeIcon } from '../common/extHostTypes.js';
-import { IExtHostVariableResolverProvider } from '../common/extHostVariableResolverService.js';
-import { IExtHostWorkspace } from '../common/extHostWorkspace.js';
-import { IExtHostTerminalShellIntegration } from '../common/extHostTerminalShellIntegration.js';
+import { createCancelablePromise, disposableTimeout, firstParallel, RunOnceScheduler, timeout } from '../../../base/common/async.ts';
+import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import * as platform from '../../../base/common/platform.ts';
+import * as nls from '../../../nls.ts';
+import { IExternalTerminalService } from '../../../platform/externalTerminal/common/externalTerminal.ts';
+import { LinuxExternalTerminalService, MacExternalTerminalService, WindowsExternalTerminalService } from '../../../platform/externalTerminal/node/externalTerminalService.ts';
+import { ISignService } from '../../../platform/sign/common/sign.ts';
+import { SignService } from '../../../platform/sign/node/signService.ts';
+import { AbstractDebugAdapter } from '../../contrib/debug/common/abstractDebugAdapter.ts';
+import { ExecutableDebugAdapter, NamedPipeDebugAdapter, SocketDebugAdapter } from '../../contrib/debug/node/debugAdapter.ts';
+import { hasChildProcesses, prepareCommand } from '../../contrib/debug/node/terminals.ts';
+import { ExtensionDescriptionRegistry } from '../../services/extensions/common/extensionDescriptionRegistry.ts';
+import { IExtHostCommands } from '../common/extHostCommands.ts';
+import { ExtHostConfigProvider, IExtHostConfiguration } from '../common/extHostConfiguration.ts';
+import { ExtHostDebugServiceBase, ExtHostDebugSession } from '../common/extHostDebugService.ts';
+import { IExtHostEditorTabs } from '../common/extHostEditorTabs.ts';
+import { IExtHostExtensionService } from '../common/extHostExtensionService.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
+import { IExtHostTerminalService } from '../common/extHostTerminalService.ts';
+import { IExtHostTesting } from '../common/extHostTesting.ts';
+import { DebugAdapterExecutable, DebugAdapterNamedPipeServer, DebugAdapterServer, ThemeIcon } from '../common/extHostTypes.ts';
+import { IExtHostVariableResolverProvider } from '../common/extHostVariableResolverService.ts';
+import { IExtHostWorkspace } from '../common/extHostWorkspace.ts';
+import { IExtHostTerminalShellIntegration } from '../common/extHostTerminalShellIntegration.ts';
 
 export class ExtHostDebugService extends ExtHostDebugServiceBase {
 

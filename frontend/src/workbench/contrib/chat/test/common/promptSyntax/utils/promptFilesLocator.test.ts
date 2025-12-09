@@ -4,31 +4,31 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { CancellationToken } from '../../../../../../../base/common/cancellation.js';
-import { match } from '../../../../../../../base/common/glob.js';
-import { Schemas } from '../../../../../../../base/common/network.js';
-import { basename, relativePath } from '../../../../../../../base/common/resources.js';
-import { URI } from '../../../../../../../base/common/uri.js';
-import { mock } from '../../../../../../../base/test/common/mock.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.js';
-import { IConfigurationOverrides, IConfigurationService } from '../../../../../../../platform/configuration/common/configuration.js';
-import { IFileService } from '../../../../../../../platform/files/common/files.js';
-import { FileService } from '../../../../../../../platform/files/common/fileService.js';
-import { InMemoryFileSystemProvider } from '../../../../../../../platform/files/common/inMemoryFilesystemProvider.js';
-import { TestInstantiationService } from '../../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { ILogService, NullLogService } from '../../../../../../../platform/log/common/log.js';
-import { IWorkspace, IWorkspaceContextService, IWorkspaceFolder } from '../../../../../../../platform/workspace/common/workspace.js';
-import { IWorkbenchEnvironmentService } from '../../../../../../services/environment/common/environmentService.js';
-import { IFileMatch, IFileQuery, ISearchService } from '../../../../../../services/search/common/search.js';
-import { IUserDataProfileService } from '../../../../../../services/userDataProfile/common/userDataProfile.js';
-import { PromptsConfig } from '../../../../common/promptSyntax/config/config.js';
-import { PromptsType } from '../../../../common/promptSyntax/promptTypes.js';
-import { isValidGlob, PromptFilesLocator } from '../../../../common/promptSyntax/utils/promptFilesLocator.js';
-import { IMockFolder, MockFilesystem } from '../testUtils/mockFilesystem.js';
-import { mockService } from './mock.js';
-import { TestUserDataProfileService } from '../../../../../../test/common/workbenchTestServices.js';
-import { PromptsStorage } from '../../../../common/promptSyntax/service/promptsService.js';
-import { runWithFakedTimers } from '../../../../../../../base/test/common/timeTravelScheduler.js';
+import { CancellationToken } from '../../../../../../../base/common/cancellation.ts';
+import { match } from '../../../../../../../base/common/glob.ts';
+import { Schemas } from '../../../../../../../base/common/network.ts';
+import { basename, relativePath } from '../../../../../../../base/common/resources.ts';
+import { URI } from '../../../../../../../base/common/uri.ts';
+import { mock } from '../../../../../../../base/test/common/mock.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.ts';
+import { IConfigurationOverrides, IConfigurationService } from '../../../../../../../platform/configuration/common/configuration.ts';
+import { IFileService } from '../../../../../../../platform/files/common/files.ts';
+import { FileService } from '../../../../../../../platform/files/common/fileService.ts';
+import { InMemoryFileSystemProvider } from '../../../../../../../platform/files/common/inMemoryFilesystemProvider.ts';
+import { TestInstantiationService } from '../../../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { ILogService, NullLogService } from '../../../../../../../platform/log/common/log.ts';
+import { IWorkspace, IWorkspaceContextService, IWorkspaceFolder } from '../../../../../../../platform/workspace/common/workspace.ts';
+import { IWorkbenchEnvironmentService } from '../../../../../../services/environment/common/environmentService.ts';
+import { IFileMatch, IFileQuery, ISearchService } from '../../../../../../services/search/common/search.ts';
+import { IUserDataProfileService } from '../../../../../../services/userDataProfile/common/userDataProfile.ts';
+import { PromptsConfig } from '../../../../common/promptSyntax/config/config.ts';
+import { PromptsType } from '../../../../common/promptSyntax/promptTypes.ts';
+import { isValidGlob, PromptFilesLocator } from '../../../../common/promptSyntax/utils/promptFilesLocator.ts';
+import { IMockFolder, MockFilesystem } from '../testUtils/mockFilesystem.ts';
+import { mockService } from './mock.ts';
+import { TestUserDataProfileService } from '../../../../../../test/common/workbenchTestServices.ts';
+import { PromptsStorage } from '../../../../common/promptSyntax/service/promptsService.ts';
+import { runWithFakedTimers } from '../../../../../../../base/test/common/timeTravelScheduler.ts';
 
 /**
  * Mocked instance of {@link IConfigurationService}.

@@ -2,29 +2,29 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { assertNever } from '../../../../../base/common/assert.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { createMarkdownCommandLink } from '../../../../../base/common/htmlContent.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import Severity from '../../../../../base/common/severity.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { CommandsRegistry, ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IQuickInputButton, IQuickInputService, IQuickPickItem, IQuickTreeItem } from '../../../../../platform/quickinput/common/quickInput.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { ExtensionEditorTab, IExtensionsWorkbenchService } from '../../../extensions/common/extensions.js';
-import { McpCommandIds } from '../../../mcp/common/mcpCommandIds.js';
-import { IMcpRegistry } from '../../../mcp/common/mcpRegistryTypes.js';
-import { IMcpServer, IMcpService, IMcpWorkbenchService, McpConnectionState, McpServerCacheState, McpServerEditorTab } from '../../../mcp/common/mcpTypes.js';
-import { startServerAndWaitForLiveTools } from '../../../mcp/common/mcpTypesUtils.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ILanguageModelToolsService, IToolData, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.js';
-import { ConfigureToolSets } from '../tools/toolSetsContribution.js';
+import { assertNever } from '../../../../../base/common/assert.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { createMarkdownCommandLink } from '../../../../../base/common/htmlContent.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import Severity from '../../../../../base/common/severity.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { CommandsRegistry, ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IQuickInputButton, IQuickInputService, IQuickPickItem, IQuickTreeItem } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { ExtensionEditorTab, IExtensionsWorkbenchService } from '../../../extensions/common/extensions.ts';
+import { McpCommandIds } from '../../../mcp/common/mcpCommandIds.ts';
+import { IMcpRegistry } from '../../../mcp/common/mcpRegistryTypes.ts';
+import { IMcpServer, IMcpService, IMcpWorkbenchService, McpConnectionState, McpServerCacheState, McpServerEditorTab } from '../../../mcp/common/mcpTypes.ts';
+import { startServerAndWaitForLiveTools } from '../../../mcp/common/mcpTypesUtils.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ILanguageModelToolsService, IToolData, ToolDataSource, ToolSet } from '../../common/languageModelToolsService.ts';
+import { ConfigureToolSets } from '../tools/toolSetsContribution.ts';
 
 const enum BucketOrdinal { User, BuiltIn, Mcp, Extension }
 

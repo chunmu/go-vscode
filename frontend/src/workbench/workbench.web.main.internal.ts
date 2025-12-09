@@ -13,91 +13,91 @@
 
 //#region --- workbench common
 
-import './workbench.common.main.js';
+import './workbench.common.main.ts';
 
 //#endregion
 
 
 //#region --- workbench parts
 
-import './browser/parts/dialogs/dialog.web.contribution.js';
+import './browser/parts/dialogs/dialog.web.contribution.ts';
 
 //#endregion
 
 
 //#region --- workbench (web main)
 
-import './browser/web.main.js';
+import './browser/web.main.ts';
 
 //#endregion
 
 
 //#region --- workbench services
 
-import './services/integrity/browser/integrityService.js';
-import './services/search/browser/searchService.js';
-import './services/textfile/browser/browserTextFileService.js';
-import './services/keybinding/browser/keyboardLayoutService.js';
-import './services/extensions/browser/extensionService.js';
-import './services/extensionManagement/browser/extensionsProfileScannerService.js';
-import './services/extensions/browser/extensionsScannerService.js';
-import './services/extensionManagement/browser/webExtensionsScannerService.js';
-import './services/extensionManagement/common/extensionManagementServerService.js';
-import './services/mcp/browser/mcpGalleryManifestService.js';
-import './services/mcp/browser/mcpWorkbenchManagementService.js';
-import './services/extensionManagement/browser/extensionGalleryManifestService.js';
-import './services/telemetry/browser/telemetryService.js';
-import './services/url/browser/urlService.js';
-import './services/update/browser/updateService.js';
-import './services/workspaces/browser/workspacesService.js';
-import './services/workspaces/browser/workspaceEditingService.js';
-import './services/dialogs/browser/fileDialogService.js';
-import './services/host/browser/browserHostService.js';
-import './services/lifecycle/browser/lifecycleService.js';
-import './services/clipboard/browser/clipboardService.js';
-import './services/localization/browser/localeService.js';
-import './services/path/browser/pathService.js';
-import './services/themes/browser/browserHostColorSchemeService.js';
-import './services/encryption/browser/encryptionService.js';
-import './services/imageResize/browser/imageResizeService.js';
-import './services/secrets/browser/secretStorageService.js';
-import './services/workingCopy/browser/workingCopyBackupService.js';
-import './services/tunnel/browser/tunnelService.js';
-import './services/files/browser/elevatedFileService.js';
-import './services/workingCopy/browser/workingCopyHistoryService.js';
-import './services/userDataSync/browser/webUserDataSyncEnablementService.js';
-import './services/userDataProfile/browser/userDataProfileStorageService.js';
-import './services/configurationResolver/browser/configurationResolverService.js';
-import '../platform/extensionResourceLoader/browser/extensionResourceLoaderService.js';
-import './services/auxiliaryWindow/browser/auxiliaryWindowService.js';
-import './services/browserElements/browser/webBrowserElementsService.js';
+import './services/integrity/browser/integrityService.ts';
+import './services/search/browser/searchService.ts';
+import './services/textfile/browser/browserTextFileService.ts';
+import './services/keybinding/browser/keyboardLayoutService.ts';
+import './services/extensions/browser/extensionService.ts';
+import './services/extensionManagement/browser/extensionsProfileScannerService.ts';
+import './services/extensions/browser/extensionsScannerService.ts';
+import './services/extensionManagement/browser/webExtensionsScannerService.ts';
+import './services/extensionManagement/common/extensionManagementServerService.ts';
+import './services/mcp/browser/mcpGalleryManifestService.ts';
+import './services/mcp/browser/mcpWorkbenchManagementService.ts';
+import './services/extensionManagement/browser/extensionGalleryManifestService.ts';
+import './services/telemetry/browser/telemetryService.ts';
+import './services/url/browser/urlService.ts';
+import './services/update/browser/updateService.ts';
+import './services/workspaces/browser/workspacesService.ts';
+import './services/workspaces/browser/workspaceEditingService.ts';
+import './services/dialogs/browser/fileDialogService.ts';
+import './services/host/browser/browserHostService.ts';
+import './services/lifecycle/browser/lifecycleService.ts';
+import './services/clipboard/browser/clipboardService.ts';
+import './services/localization/browser/localeService.ts';
+import './services/path/browser/pathService.ts';
+import './services/themes/browser/browserHostColorSchemeService.ts';
+import './services/encryption/browser/encryptionService.ts';
+import './services/imageResize/browser/imageResizeService.ts';
+import './services/secrets/browser/secretStorageService.ts';
+import './services/workingCopy/browser/workingCopyBackupService.ts';
+import './services/tunnel/browser/tunnelService.ts';
+import './services/files/browser/elevatedFileService.ts';
+import './services/workingCopy/browser/workingCopyHistoryService.ts';
+import './services/userDataSync/browser/webUserDataSyncEnablementService.ts';
+import './services/userDataProfile/browser/userDataProfileStorageService.ts';
+import './services/configurationResolver/browser/configurationResolverService.ts';
+import '../platform/extensionResourceLoader/browser/extensionResourceLoaderService.ts';
+import './services/auxiliaryWindow/browser/auxiliaryWindowService.ts';
+import './services/browserElements/browser/webBrowserElementsService.ts';
 
-import { InstantiationType, registerSingleton } from '../platform/instantiation/common/extensions.js';
-import { IAccessibilityService } from '../platform/accessibility/common/accessibility.js';
-import { IContextMenuService } from '../platform/contextview/browser/contextView.js';
-import { ContextMenuService } from '../platform/contextview/browser/contextMenuService.js';
-import { IExtensionTipsService } from '../platform/extensionManagement/common/extensionManagement.js';
-import { ExtensionTipsService } from '../platform/extensionManagement/common/extensionTipsService.js';
-import { IWorkbenchExtensionManagementService } from './services/extensionManagement/common/extensionManagement.js';
-import { ExtensionManagementService } from './services/extensionManagement/common/extensionManagementService.js';
-import { LogLevel } from '../platform/log/common/log.js';
-import { UserDataSyncMachinesService, IUserDataSyncMachinesService } from '../platform/userDataSync/common/userDataSyncMachines.js';
-import { IUserDataSyncStoreService, IUserDataSyncService, IUserDataAutoSyncService, IUserDataSyncLocalStoreService, IUserDataSyncResourceProviderService } from '../platform/userDataSync/common/userDataSync.js';
-import { UserDataSyncStoreService } from '../platform/userDataSync/common/userDataSyncStoreService.js';
-import { UserDataSyncLocalStoreService } from '../platform/userDataSync/common/userDataSyncLocalStoreService.js';
-import { UserDataSyncService } from '../platform/userDataSync/common/userDataSyncService.js';
-import { IUserDataSyncAccountService, UserDataSyncAccountService } from '../platform/userDataSync/common/userDataSyncAccount.js';
-import { UserDataAutoSyncService } from '../platform/userDataSync/common/userDataAutoSyncService.js';
-import { AccessibilityService } from '../platform/accessibility/browser/accessibilityService.js';
-import { ICustomEndpointTelemetryService } from '../platform/telemetry/common/telemetry.js';
-import { NullEndpointTelemetryService } from '../platform/telemetry/common/telemetryUtils.js';
-import { ITitleService } from './services/title/browser/titleService.js';
-import { BrowserTitleService } from './browser/parts/titlebar/titlebarPart.js';
-import { ITimerService, TimerService } from './services/timer/browser/timerService.js';
-import { IDiagnosticsService, NullDiagnosticsService } from '../platform/diagnostics/common/diagnostics.js';
-import { ILanguagePackService } from '../platform/languagePacks/common/languagePacks.js';
-import { WebLanguagePacksService } from '../platform/languagePacks/browser/languagePacks.js';
-import { IWebContentExtractorService, NullWebContentExtractorService, ISharedWebContentExtractorService, NullSharedWebContentExtractorService } from '../platform/webContentExtractor/common/webContentExtractor.js';
+import { InstantiationType, registerSingleton } from '../platform/instantiation/common/extensions.ts';
+import { IAccessibilityService } from '../platform/accessibility/common/accessibility.ts';
+import { IContextMenuService } from '../platform/contextview/browser/contextView.ts';
+import { ContextMenuService } from '../platform/contextview/browser/contextMenuService.ts';
+import { IExtensionTipsService } from '../platform/extensionManagement/common/extensionManagement.ts';
+import { ExtensionTipsService } from '../platform/extensionManagement/common/extensionTipsService.ts';
+import { IWorkbenchExtensionManagementService } from './services/extensionManagement/common/extensionManagement.ts';
+import { ExtensionManagementService } from './services/extensionManagement/common/extensionManagementService.ts';
+import { LogLevel } from '../platform/log/common/log.ts';
+import { UserDataSyncMachinesService, IUserDataSyncMachinesService } from '../platform/userDataSync/common/userDataSyncMachines.ts';
+import { IUserDataSyncStoreService, IUserDataSyncService, IUserDataAutoSyncService, IUserDataSyncLocalStoreService, IUserDataSyncResourceProviderService } from '../platform/userDataSync/common/userDataSync.ts';
+import { UserDataSyncStoreService } from '../platform/userDataSync/common/userDataSyncStoreService.ts';
+import { UserDataSyncLocalStoreService } from '../platform/userDataSync/common/userDataSyncLocalStoreService.ts';
+import { UserDataSyncService } from '../platform/userDataSync/common/userDataSyncService.ts';
+import { IUserDataSyncAccountService, UserDataSyncAccountService } from '../platform/userDataSync/common/userDataSyncAccount.ts';
+import { UserDataAutoSyncService } from '../platform/userDataSync/common/userDataAutoSyncService.ts';
+import { AccessibilityService } from '../platform/accessibility/browser/accessibilityService.ts';
+import { ICustomEndpointTelemetryService } from '../platform/telemetry/common/telemetry.ts';
+import { NullEndpointTelemetryService } from '../platform/telemetry/common/telemetryUtils.ts';
+import { ITitleService } from './services/title/browser/titleService.ts';
+import { BrowserTitleService } from './browser/parts/titlebar/titlebarPart.ts';
+import { ITimerService, TimerService } from './services/timer/browser/timerService.ts';
+import { IDiagnosticsService, NullDiagnosticsService } from '../platform/diagnostics/common/diagnostics.ts';
+import { ILanguagePackService } from '../platform/languagePacks/common/languagePacks.ts';
+import { WebLanguagePacksService } from '../platform/languagePacks/browser/languagePacks.ts';
+import { IWebContentExtractorService, NullWebContentExtractorService, ISharedWebContentExtractorService, NullSharedWebContentExtractorService } from '../platform/webContentExtractor/common/webContentExtractor.ts';
 
 registerSingleton(IWorkbenchExtensionManagementService, ExtensionManagementService, InstantiationType.Delayed);
 registerSingleton(IAccessibilityService, AccessibilityService, InstantiationType.Delayed);
@@ -124,51 +124,51 @@ registerSingleton(ISharedWebContentExtractorService, NullSharedWebContentExtract
 //#region --- workbench contributions
 
 // Logs
-import './contrib/logs/browser/logs.contribution.js';
+import './contrib/logs/browser/logs.contribution.ts';
 
 // Localization
-import './contrib/localization/browser/localization.contribution.js';
+import './contrib/localization/browser/localization.contribution.ts';
 
 // Performance
-import './contrib/performance/browser/performance.web.contribution.js';
+import './contrib/performance/browser/performance.web.contribution.ts';
 
 // Preferences
-import './contrib/preferences/browser/keyboardLayoutPicker.js';
+import './contrib/preferences/browser/keyboardLayoutPicker.ts';
 
 // Debug
-import './contrib/debug/browser/extensionHostDebugService.js';
+import './contrib/debug/browser/extensionHostDebugService.ts';
 
 // Welcome Banner
-import './contrib/welcomeBanner/browser/welcomeBanner.contribution.js';
+import './contrib/welcomeBanner/browser/welcomeBanner.contribution.ts';
 
 // Webview
-import './contrib/webview/browser/webview.web.contribution.js';
+import './contrib/webview/browser/webview.web.contribution.ts';
 
 // Extensions Management
-import './contrib/extensions/browser/extensions.web.contribution.js';
+import './contrib/extensions/browser/extensions.web.contribution.ts';
 
 // Terminal
-import './contrib/terminal/browser/terminal.web.contribution.js';
-import './contrib/externalTerminal/browser/externalTerminal.contribution.js';
-import './contrib/terminal/browser/terminalInstanceService.js';
+import './contrib/terminal/browser/terminal.web.contribution.ts';
+import './contrib/externalTerminal/browser/externalTerminal.contribution.ts';
+import './contrib/terminal/browser/terminalInstanceService.ts';
 
 // Tasks
-import './contrib/tasks/browser/taskService.js';
+import './contrib/tasks/browser/taskService.ts';
 
 // Tags
-import './contrib/tags/browser/workspaceTagsService.js';
+import './contrib/tags/browser/workspaceTagsService.ts';
 
 // Issues
-import './contrib/issue/browser/issue.contribution.js';
+import './contrib/issue/browser/issue.contribution.ts';
 
 // Splash
-import './contrib/splash/browser/splash.contribution.js';
+import './contrib/splash/browser/splash.contribution.ts';
 
 // Remote Start Entry for the Web
-import './contrib/remote/browser/remoteStartEntry.contribution.js';
+import './contrib/remote/browser/remoteStartEntry.contribution.ts';
 
 // Process Explorer
-import './contrib/processExplorer/browser/processExplorer.web.contribution.js';
+import './contrib/processExplorer/browser/processExplorer.web.contribution.ts';
 
 //#endregion
 
@@ -183,14 +183,14 @@ import './contrib/processExplorer/browser/processExplorer.web.contribution.js';
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-import { create, commands, env, window, workspace, logger } from './browser/web.factory.js';
-import { Menu } from './browser/web.api.js';
-import { URI } from '../base/common/uri.js';
-import { Event, Emitter } from '../base/common/event.js';
-import { Disposable } from '../base/common/lifecycle.js';
-import { GroupOrientation } from './services/editor/common/editorGroupsService.js';
-import { UserDataSyncResourceProviderService } from '../platform/userDataSync/common/userDataSyncResourceProvider.js';
-import { RemoteAuthorityResolverError, RemoteAuthorityResolverErrorCode } from '../platform/remote/common/remoteAuthorityResolver.js';
+import { create, commands, env, window, workspace, logger } from './browser/web.factory.ts';
+import { Menu } from './browser/web.api.ts';
+import { URI } from '../base/common/uri.ts';
+import { Event, Emitter } from '../base/common/event.ts';
+import { Disposable } from '../base/common/lifecycle.ts';
+import { GroupOrientation } from './services/editor/common/editorGroupsService.ts';
+import { UserDataSyncResourceProviderService } from '../platform/userDataSync/common/userDataSyncResourceProvider.ts';
+import { RemoteAuthorityResolverError, RemoteAuthorityResolverErrorCode } from '../platform/remote/common/remoteAuthorityResolver.ts';
 
 // TODO@esm remove me once we stop supporting our web-esm-bridge
 // eslint-disable-next-line local/code-no-any-casts

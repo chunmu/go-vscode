@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Event } from '../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable, MutableDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { ISettableObservable, observableValue, transaction } from '../../../base/common/observable.js';
-import { WellDefinedPrefixTree } from '../../../base/common/prefixTree.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { Range } from '../../../editor/common/core/range.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { TestCoverage } from '../../contrib/testing/common/testCoverage.js';
-import { TestId } from '../../contrib/testing/common/testId.js';
-import { ITestProfileService } from '../../contrib/testing/common/testProfileService.js';
-import { LiveTestResult } from '../../contrib/testing/common/testResult.js';
-import { ITestResultService } from '../../contrib/testing/common/testResultService.js';
-import { IMainThreadTestController, ITestService } from '../../contrib/testing/common/testService.js';
-import { CoverageDetails, ExtensionRunTestsRequest, IFileCoverage, ITestItem, ITestMessage, ITestRunProfile, ITestRunTask, ResolvedTestRunRequest, TestControllerCapability, TestResultState, TestRunProfileBitset, TestsDiffOp } from '../../contrib/testing/common/testTypes.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostTestingShape, ILocationDto, ITestControllerPatch, MainContext, MainThreadTestingShape } from '../common/extHost.protocol.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Event } from '../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable, MutableDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { ISettableObservable, observableValue, transaction } from '../../../base/common/observable.ts';
+import { WellDefinedPrefixTree } from '../../../base/common/prefixTree.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { Range } from '../../../editor/common/core/range.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { TestCoverage } from '../../contrib/testing/common/testCoverage.ts';
+import { TestId } from '../../contrib/testing/common/testId.ts';
+import { ITestProfileService } from '../../contrib/testing/common/testProfileService.ts';
+import { LiveTestResult } from '../../contrib/testing/common/testResult.ts';
+import { ITestResultService } from '../../contrib/testing/common/testResultService.ts';
+import { IMainThreadTestController, ITestService } from '../../contrib/testing/common/testService.ts';
+import { CoverageDetails, ExtensionRunTestsRequest, IFileCoverage, ITestItem, ITestMessage, ITestRunProfile, ITestRunTask, ResolvedTestRunRequest, TestControllerCapability, TestResultState, TestRunProfileBitset, TestsDiffOp } from '../../contrib/testing/common/testTypes.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostTestingShape, ILocationDto, ITestControllerPatch, MainContext, MainThreadTestingShape } from '../common/extHost.protocol.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadTesting)
 export class MainThreadTesting extends Disposable implements MainThreadTestingShape {

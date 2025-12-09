@@ -4,35 +4,35 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './share.css';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { EditorResourceAccessor, SideBySideEditor } from '../../../common/editor.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { Severity } from '../../../../platform/notification/common/notification.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { WorkspaceFolderCountContext } from '../../../common/contextkeys.js';
-import { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';
-import { ShareProviderCountContext, ShareService } from './shareService.js';
-import { IShareService } from '../common/share.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { workbenchConfigurationNodeBase } from '../../../common/configuration.js';
-import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { EditorResourceAccessor, SideBySideEditor } from '../../../common/editor.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { Severity } from '../../../../platform/notification/common/notification.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { WorkspaceFolderCountContext } from '../../../common/contextkeys.ts';
+import { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.ts';
+import { ShareProviderCountContext, ShareService } from './shareService.ts';
+import { IShareService } from '../common/share.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { workbenchConfigurationNodeBase } from '../../../common/configuration.ts';
+import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
 
 const targetMenus = [
 	MenuId.EditorContextShare,

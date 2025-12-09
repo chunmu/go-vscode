@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../../../base/common/network.js';
-import { URI, UriComponents } from '../../../../../base/common/uri.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { IModelService } from '../../../../../editor/common/services/model.js';
-import { ITextModelContentProvider } from '../../../../../editor/common/services/resolverService.js';
-import { IChatEditingService } from '../../common/chatEditingService.js';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { URI, UriComponents } from '../../../../../base/common/uri.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { IModelService } from '../../../../../editor/common/services/model.ts';
+import { ITextModelContentProvider } from '../../../../../editor/common/services/resolverService.ts';
+import { IChatEditingService } from '../../common/chatEditingService.ts';
 
 type ChatEditingTextModelContentQueryData = { kind: 'doc'; documentId: string; chatSessionResource: UriComponents };
 

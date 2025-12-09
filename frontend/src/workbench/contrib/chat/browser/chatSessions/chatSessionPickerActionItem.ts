@@ -4,21 +4,21 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/chatSessionAction.css';
-import { IAction } from '../../../../../base/common/actions.js';
-import { Event } from '../../../../../base/common/event.js';
-import * as dom from '../../../../../base/browser/dom.js';
-import { IActionWidgetService } from '../../../../../platform/actionWidget/browser/actionWidget.js';
-import { IActionWidgetDropdownAction, IActionWidgetDropdownOptions } from '../../../../../platform/actionWidget/browser/actionWidgetDropdown.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.js';
-import { ActionWidgetDropdownActionViewItem } from '../../../../../platform/actions/browser/actionWidgetDropdownActionViewItem.js';
-import { IChatSessionProviderOptionGroup, IChatSessionProviderOptionItem } from '../../common/chatSessionsService.js';
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { renderLabelWithIcons, renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { localize } from '../../../../../nls.js';
+import { IAction } from '../../../../../base/common/actions.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { IActionWidgetService } from '../../../../../platform/actionWidget/browser/actionWidget.ts';
+import { IActionWidgetDropdownAction, IActionWidgetDropdownOptions } from '../../../../../platform/actionWidget/browser/actionWidgetDropdown.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { ActionWidgetDropdownActionViewItem } from '../../../../../platform/actions/browser/actionWidgetDropdownActionViewItem.ts';
+import { IChatSessionProviderOptionGroup, IChatSessionProviderOptionItem } from '../../common/chatSessionsService.ts';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { renderLabelWithIcons, renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { localize } from '../../../../../nls.ts';
 
 
 export interface IChatSessionPickerDelegate {

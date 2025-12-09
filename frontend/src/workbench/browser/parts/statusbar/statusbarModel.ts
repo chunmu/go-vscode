@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { isStatusbarEntryLocation, IStatusbarEntryPriority, StatusbarAlignment } from '../../../services/statusbar/browser/statusbar.js';
-import { hide, show, isAncestorOfActiveElement } from '../../../../base/browser/dom.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { Emitter } from '../../../../base/common/event.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { isStatusbarEntryLocation, IStatusbarEntryPriority, StatusbarAlignment } from '../../../services/statusbar/browser/statusbar.ts';
+import { hide, show, isAncestorOfActiveElement } from '../../../../base/browser/dom.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { Emitter } from '../../../../base/common/event.ts';
 
 export interface IStatusbarViewModelEntry {
 	readonly id: string;

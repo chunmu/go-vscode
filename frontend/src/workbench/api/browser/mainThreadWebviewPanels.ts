@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onUnexpectedError } from '../../../base/common/errors.js';
-import { Event } from '../../../base/common/event.js';
-import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import { URI } from '../../../base/common/uri.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { IStorageService } from '../../../platform/storage/common/storage.js';
-import { DiffEditorInput } from '../../common/editor/diffEditorInput.js';
-import { EditorInput } from '../../common/editor/editorInput.js';
-import { ExtensionKeyedWebviewOriginStore, WebviewOptions } from '../../contrib/webview/browser/webview.js';
-import { WebviewIcons, WebviewInput } from '../../contrib/webviewPanel/browser/webviewEditorInput.js';
-import { IWebViewShowOptions, IWebviewWorkbenchService } from '../../contrib/webviewPanel/browser/webviewWorkbenchService.js';
-import { editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.js';
-import { GroupLocation, GroupsOrder, IEditorGroup, IEditorGroupsService, preferredSideBySideGroupDirection } from '../../services/editor/common/editorGroupsService.js';
-import { ACTIVE_GROUP, IEditorService, PreferredGroup, SIDE_GROUP } from '../../services/editor/common/editorService.js';
-import { IExtensionService } from '../../services/extensions/common/extensions.js';
-import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import * as extHostProtocol from '../common/extHost.protocol.js';
-import { MainThreadWebviews, reviveWebviewContentOptions, reviveWebviewExtension } from './mainThreadWebviews.js';
+import { onUnexpectedError } from '../../../base/common/errors.ts';
+import { Event } from '../../../base/common/event.ts';
+import { Disposable, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { IStorageService } from '../../../platform/storage/common/storage.ts';
+import { DiffEditorInput } from '../../common/editor/diffEditorInput.ts';
+import { EditorInput } from '../../common/editor/editorInput.ts';
+import { ExtensionKeyedWebviewOriginStore, WebviewOptions } from '../../contrib/webview/browser/webview.ts';
+import { WebviewIcons, WebviewInput } from '../../contrib/webviewPanel/browser/webviewEditorInput.ts';
+import { IWebViewShowOptions, IWebviewWorkbenchService } from '../../contrib/webviewPanel/browser/webviewWorkbenchService.ts';
+import { editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.ts';
+import { GroupLocation, GroupsOrder, IEditorGroup, IEditorGroupsService, preferredSideBySideGroupDirection } from '../../services/editor/common/editorGroupsService.ts';
+import { ACTIVE_GROUP, IEditorService, PreferredGroup, SIDE_GROUP } from '../../services/editor/common/editorService.ts';
+import { IExtensionService } from '../../services/extensions/common/extensions.ts';
+import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import * as extHostProtocol from '../common/extHost.protocol.ts';
+import { MainThreadWebviews, reviveWebviewContentOptions, reviveWebviewExtension } from './mainThreadWebviews.ts';
 
 /**
  * Bi-directional map between webview handles and inputs.

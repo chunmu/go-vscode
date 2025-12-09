@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Lazy } from '../../../base/common/lazy.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import * as path from '../../../base/common/path.js';
-import * as process from '../../../base/common/process.js';
-import { URI } from '../../../base/common/uri.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
-import { IExtHostEditorTabs } from './extHostEditorTabs.js';
-import { IExtHostExtensionService } from './extHostExtensionService.js';
-import { CustomEditorTabInput, NotebookDiffEditorTabInput, NotebookEditorTabInput, TextDiffTabInput, TextTabInput } from './extHostTypes.js';
-import { IExtHostWorkspace } from './extHostWorkspace.js';
-import { IConfigurationResolverService } from '../../services/configurationResolver/common/configurationResolver.js';
-import { AbstractVariableResolverService } from '../../services/configurationResolver/common/variableResolver.js';
+import { Lazy } from '../../../base/common/lazy.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import * as path from '../../../base/common/path.ts';
+import * as process from '../../../base/common/process.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
+import { IExtHostEditorTabs } from './extHostEditorTabs.ts';
+import { IExtHostExtensionService } from './extHostExtensionService.ts';
+import { CustomEditorTabInput, NotebookDiffEditorTabInput, NotebookEditorTabInput, TextDiffTabInput, TextTabInput } from './extHostTypes.ts';
+import { IExtHostWorkspace } from './extHostWorkspace.ts';
+import { IConfigurationResolverService } from '../../services/configurationResolver/common/configurationResolver.ts';
+import { AbstractVariableResolverService } from '../../services/configurationResolver/common/variableResolver.ts';
 import * as vscode from 'vscode';
-import { ExtHostConfigProvider, IExtHostConfiguration } from './extHostConfiguration.js';
+import { ExtHostConfigProvider, IExtHostConfiguration } from './extHostConfiguration.ts';
 
 export interface IExtHostVariableResolverProvider {
 	readonly _serviceBrand: undefined;

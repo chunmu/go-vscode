@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { IDisposable, dispose } from '../../../base/common/lifecycle.js';
-import { URI } from '../../../base/common/uri.js';
-import { ExtHostContext, ExtHostShareShape, IDocumentFilterDto, MainContext, MainThreadShareShape } from '../common/extHost.protocol.js';
-import { IShareProvider, IShareService, IShareableItem } from '../../contrib/share/common/share.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { IDisposable, dispose } from '../../../base/common/lifecycle.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ExtHostContext, ExtHostShareShape, IDocumentFilterDto, MainContext, MainThreadShareShape } from '../common/extHost.protocol.ts';
+import { IShareProvider, IShareService, IShareableItem } from '../../contrib/share/common/share.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadShare)
 export class MainThreadShare implements MainThreadShareShape {

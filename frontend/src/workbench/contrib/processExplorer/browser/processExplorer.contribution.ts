@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../nls.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { IEditorSerializer, EditorExtensions, IEditorFactoryRegistry, GroupIdentifier } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { IEditorResolverService, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.js';
-import { ProcessExplorerEditorInput } from './processExplorerEditorInput.js';
-import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { AUX_WINDOW_GROUP, IEditorService } from '../../../services/editor/common/editorService.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IRectangle } from '../../../../platform/window/common/window.js';
-import { IAuxiliaryWindowService } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.js';
-import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { RemoteNameContext } from '../../../common/contextkeys.js';
-import { IsWebContext } from '../../../../platform/contextkey/common/contextkeys.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
+import { localize, localize2 } from '../../../../nls.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { IEditorSerializer, EditorExtensions, IEditorFactoryRegistry, GroupIdentifier } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { IEditorResolverService, RegisteredEditorPriority } from '../../../services/editor/common/editorResolverService.ts';
+import { ProcessExplorerEditorInput } from './processExplorerEditorInput.ts';
+import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { AUX_WINDOW_GROUP, IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IRectangle } from '../../../../platform/window/common/window.ts';
+import { IAuxiliaryWindowService } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.ts';
+import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { RemoteNameContext } from '../../../common/contextkeys.ts';
+import { IsWebContext } from '../../../../platform/contextkey/common/contextkeys.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
 
 //#region --- process explorer
 

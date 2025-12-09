@@ -3,36 +3,36 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onDidChangeFullscreen } from '../../../../base/browser/browser.js';
-import { $, getActiveWindow, hide, show } from '../../../../base/browser/dom.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { DisposableStore, markAsSingleton, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { isNative } from '../../../../base/common/platform.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { hasCustomTitlebar } from '../../../../platform/window/common/window.js';
-import { IEditorGroupView, IEditorPartsView } from './editor.js';
-import { EditorPart, IEditorPartUIState } from './editorPart.js';
-import { IAuxiliaryTitlebarPart } from '../titlebar/titlebarPart.js';
-import { WindowTitle } from '../titlebar/windowTitle.js';
-import { IAuxiliaryWindowOpenOptions, IAuxiliaryWindowService } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.js';
-import { GroupDirection, GroupsOrder, IAuxiliaryEditorPart } from '../../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { IWorkbenchLayoutService, shouldShowCustomTitleBar } from '../../../services/layout/browser/layoutService.js';
-import { ILifecycleService } from '../../../services/lifecycle/common/lifecycle.js';
-import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.js';
-import { ITitleService } from '../../../services/title/browser/titleService.js';
-import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { IsAuxiliaryWindowContext, IsAuxiliaryWindowFocusedContext, IsCompactTitleBarContext } from '../../../common/contextkeys.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { GroupIdentifier } from '../../../common/editor.js';
+import { onDidChangeFullscreen } from '../../../../base/browser/browser.ts';
+import { $, getActiveWindow, hide, show } from '../../../../base/browser/dom.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { DisposableStore, markAsSingleton, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { isNative } from '../../../../base/common/platform.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { hasCustomTitlebar } from '../../../../platform/window/common/window.ts';
+import { IEditorGroupView, IEditorPartsView } from './editor.ts';
+import { EditorPart, IEditorPartUIState } from './editorPart.ts';
+import { IAuxiliaryTitlebarPart } from '../titlebar/titlebarPart.ts';
+import { WindowTitle } from '../titlebar/windowTitle.ts';
+import { IAuxiliaryWindowOpenOptions, IAuxiliaryWindowService } from '../../../services/auxiliaryWindow/browser/auxiliaryWindowService.ts';
+import { GroupDirection, GroupsOrder, IAuxiliaryEditorPart } from '../../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { IWorkbenchLayoutService, shouldShowCustomTitleBar } from '../../../services/layout/browser/layoutService.ts';
+import { ILifecycleService } from '../../../services/lifecycle/common/lifecycle.ts';
+import { IStatusbarService } from '../../../services/statusbar/browser/statusbar.ts';
+import { ITitleService } from '../../../services/title/browser/titleService.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { IsAuxiliaryWindowContext, IsAuxiliaryWindowFocusedContext, IsCompactTitleBarContext } from '../../../common/contextkeys.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { GroupIdentifier } from '../../../common/editor.ts';
 
 export interface IAuxiliaryEditorPartOpenOptions extends IAuxiliaryWindowOpenOptions {
 	readonly state?: IEditorPartUIState;

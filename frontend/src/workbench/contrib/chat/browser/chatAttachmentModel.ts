@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { basename } from '../../../../base/common/resources.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IChatRequestFileEntry, IChatRequestVariableEntry, isPromptFileVariableEntry } from '../common/chatVariableEntries.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { ISharedWebContentExtractorService } from '../../../../platform/webContentExtractor/common/webContentExtractor.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { IChatAttachmentResolveService } from './chatAttachmentResolveService.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { equals } from '../../../../base/common/objects.js';
-import { Iterable } from '../../../../base/common/iterator.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { basename } from '../../../../base/common/resources.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IChatRequestFileEntry, IChatRequestVariableEntry, isPromptFileVariableEntry } from '../common/chatVariableEntries.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { ISharedWebContentExtractorService } from '../../../../platform/webContentExtractor/common/webContentExtractor.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IChatAttachmentResolveService } from './chatAttachmentResolveService.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { equals } from '../../../../base/common/objects.ts';
+import { Iterable } from '../../../../base/common/iterator.ts';
 
 export interface IChatAttachmentChangeEvent {
 	readonly deleted: readonly string[];

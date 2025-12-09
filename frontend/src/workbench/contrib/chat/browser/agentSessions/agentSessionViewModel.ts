@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ThrottledDelayer } from '../../../../../base/common/async.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI, UriComponents } from '../../../../../base/common/uri.js';
-import { MenuId } from '../../../../../platform/actions/common/actions.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
-import { ILifecycleService } from '../../../../services/lifecycle/common/lifecycle.js';
-import { ChatSessionStatus, IChatSessionsExtensionPoint, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.js';
-import { AgentSessionProviders, getAgentSessionProviderIcon, getAgentSessionProviderName } from './agentSessions.js';
-import { AgentSessionsViewFilter } from './agentSessionsViewFilter.js';
+import { ThrottledDelayer } from '../../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI, UriComponents } from '../../../../../base/common/uri.ts';
+import { MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
+import { ILifecycleService } from '../../../../services/lifecycle/common/lifecycle.ts';
+import { ChatSessionStatus, IChatSessionsExtensionPoint, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.ts';
+import { AgentSessionProviders, getAgentSessionProviderIcon, getAgentSessionProviderName } from './agentSessions.ts';
+import { AgentSessionsViewFilter } from './agentSessionsViewFilter.ts';
 
 //#region Interfaces, Types
 

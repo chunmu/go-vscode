@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { MainContext, ExtHostUrlsShape, MainThreadUrlsShape } from './extHost.protocol.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { toDisposable } from '../../../base/common/lifecycle.js';
-import { onUnexpectedError } from '../../../base/common/errors.js';
-import { ExtensionIdentifierSet, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
+import { MainContext, ExtHostUrlsShape, MainThreadUrlsShape } from './extHost.protocol.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { toDisposable } from '../../../base/common/lifecycle.ts';
+import { onUnexpectedError } from '../../../base/common/errors.ts';
+import { ExtensionIdentifierSet, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
 
 export class ExtHostUrls implements ExtHostUrlsShape {
 

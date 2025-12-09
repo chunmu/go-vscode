@@ -4,20 +4,20 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { transaction } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { upcastPartial } from '../../../../../base/test/common/mock.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { INotebookService } from '../../../notebook/common/notebookService.js';
-import { ChatEditingCheckpointTimelineImpl, IChatEditingTimelineFsDelegate } from '../../browser/chatEditing/chatEditingCheckpointTimelineImpl.js';
-import { FileOperation, FileOperationType } from '../../browser/chatEditing/chatEditingOperations.js';
-import { IModifiedEntryTelemetryInfo } from '../../common/chatEditingService.js';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { transaction } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { upcastPartial } from '../../../../../base/test/common/mock.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { INotebookService } from '../../../notebook/common/notebookService.ts';
+import { ChatEditingCheckpointTimelineImpl, IChatEditingTimelineFsDelegate } from '../../browser/chatEditing/chatEditingCheckpointTimelineImpl.ts';
+import { FileOperation, FileOperationType } from '../../browser/chatEditing/chatEditingOperations.ts';
+import { IModifiedEntryTelemetryInfo } from '../../common/chatEditingService.ts';
 
 suite('ChatEditingCheckpointTimeline', function () {
 

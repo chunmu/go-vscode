@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { MainContext, IMainContext, ExtHostFileSystemShape, MainThreadFileSystemShape, IFileChangeDto } from './extHost.protocol.js';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { MainContext, IMainContext, ExtHostFileSystemShape, MainThreadFileSystemShape, IFileChangeDto } from './extHost.protocol.ts';
 import type * as vscode from 'vscode';
-import * as files from '../../../platform/files/common/files.js';
-import { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { FileChangeType } from './extHostTypes.js';
-import * as typeConverter from './extHostTypeConverters.js';
-import { ExtHostLanguageFeatures } from './extHostLanguageFeatures.js';
-import { State, StateMachine, LinkComputer, Edge } from '../../../editor/common/languages/linkComputer.js';
-import { commonPrefixLength } from '../../../base/common/strings.js';
-import { CharCode } from '../../../base/common/charCode.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { IMarkdownString, isMarkdownString } from '../../../base/common/htmlContent.js';
+import * as files from '../../../platform/files/common/files.ts';
+import { IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { FileChangeType } from './extHostTypes.ts';
+import * as typeConverter from './extHostTypeConverters.ts';
+import { ExtHostLanguageFeatures } from './extHostLanguageFeatures.ts';
+import { State, StateMachine, LinkComputer, Edge } from '../../../editor/common/languages/linkComputer.ts';
+import { commonPrefixLength } from '../../../base/common/strings.ts';
+import { CharCode } from '../../../base/common/charCode.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { IMarkdownString, isMarkdownString } from '../../../base/common/htmlContent.ts';
 
 class FsLinkProvider {
 

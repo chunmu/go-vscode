@@ -6,49 +6,49 @@
 /* eslint-disable local/code-no-native-private */
 
 import type * as vscode from 'vscode';
-import { asArray } from '../../../base/common/arrays.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { illegalArgument, SerializedError } from '../../../base/common/errors.js';
-import { IRelativePattern } from '../../../base/common/glob.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { Mimes } from '../../../base/common/mime.js';
-import { nextCharLength } from '../../../base/common/strings.js';
-import { isNumber, isObject, isString, isStringArray } from '../../../base/common/types.js';
-import { URI } from '../../../base/common/uri.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { TextEditorSelectionSource } from '../../../platform/editor/common/editor.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { FileSystemProviderErrorCode, markAsFileSystemProviderError } from '../../../platform/files/common/files.js';
-import { RemoteAuthorityResolverErrorCode } from '../../../platform/remote/common/remoteAuthorityResolver.js';
-import { IRelativePatternDto } from './extHost.protocol.js';
-import { CodeActionKind } from './extHostTypes/codeActionKind.js';
-import { Diagnostic } from './extHostTypes/diagnostic.js';
-import { es5ClassCompat } from './extHostTypes/es5ClassCompat.js';
-import { Location } from './extHostTypes/location.js';
-import { MarkdownString } from './extHostTypes/markdownString.js';
-import { Position } from './extHostTypes/position.js';
-import { Range } from './extHostTypes/range.js';
-import { SnippetString } from './extHostTypes/snippetString.js';
-import { SymbolKind, SymbolTag } from './extHostTypes/symbolInformation.js';
-import { TextEdit } from './extHostTypes/textEdit.js';
-import { WorkspaceEdit } from './extHostTypes/workspaceEdit.js';
+import { asArray } from '../../../base/common/arrays.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { illegalArgument, SerializedError } from '../../../base/common/errors.ts';
+import { IRelativePattern } from '../../../base/common/glob.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { Mimes } from '../../../base/common/mime.ts';
+import { nextCharLength } from '../../../base/common/strings.ts';
+import { isNumber, isObject, isString, isStringArray } from '../../../base/common/types.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { TextEditorSelectionSource } from '../../../platform/editor/common/editor.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { FileSystemProviderErrorCode, markAsFileSystemProviderError } from '../../../platform/files/common/files.ts';
+import { RemoteAuthorityResolverErrorCode } from '../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { IRelativePatternDto } from './extHost.protocol.ts';
+import { CodeActionKind } from './extHostTypes/codeActionKind.ts';
+import { Diagnostic } from './extHostTypes/diagnostic.ts';
+import { es5ClassCompat } from './extHostTypes/es5ClassCompat.ts';
+import { Location } from './extHostTypes/location.ts';
+import { MarkdownString } from './extHostTypes/markdownString.ts';
+import { Position } from './extHostTypes/position.ts';
+import { Range } from './extHostTypes/range.ts';
+import { SnippetString } from './extHostTypes/snippetString.ts';
+import { SymbolKind, SymbolTag } from './extHostTypes/symbolInformation.ts';
+import { TextEdit } from './extHostTypes/textEdit.ts';
+import { WorkspaceEdit } from './extHostTypes/workspaceEdit.ts';
 
-export { CodeActionKind } from './extHostTypes/codeActionKind.js';
+export { CodeActionKind } from './extHostTypes/codeActionKind.ts';
 export {
 	Diagnostic, DiagnosticRelatedInformation,
 	DiagnosticSeverity, DiagnosticTag
-} from './extHostTypes/diagnostic.js';
-export { Location } from './extHostTypes/location.js';
-export { MarkdownString } from './extHostTypes/markdownString.js';
-export { NotebookCellData, NotebookCellKind, NotebookCellOutput, NotebookCellOutputItem, NotebookData, NotebookEdit, NotebookRange } from './extHostTypes/notebooks.js';
-export { Position } from './extHostTypes/position.js';
-export { Range } from './extHostTypes/range.js';
-export { Selection } from './extHostTypes/selection.js';
-export { SnippetString } from './extHostTypes/snippetString.js';
-export { SnippetTextEdit } from './extHostTypes/snippetTextEdit.js';
-export { SymbolInformation, SymbolKind, SymbolTag } from './extHostTypes/symbolInformation.js';
-export { EndOfLine, TextEdit } from './extHostTypes/textEdit.js';
-export { FileEditType, WorkspaceEdit } from './extHostTypes/workspaceEdit.js';
+} from './extHostTypes/diagnostic.ts';
+export { Location } from './extHostTypes/location.ts';
+export { MarkdownString } from './extHostTypes/markdownString.ts';
+export { NotebookCellData, NotebookCellKind, NotebookCellOutput, NotebookCellOutputItem, NotebookData, NotebookEdit, NotebookRange } from './extHostTypes/notebooks.ts';
+export { Position } from './extHostTypes/position.ts';
+export { Range } from './extHostTypes/range.ts';
+export { Selection } from './extHostTypes/selection.ts';
+export { SnippetString } from './extHostTypes/snippetString.ts';
+export { SnippetTextEdit } from './extHostTypes/snippetTextEdit.ts';
+export { SymbolInformation, SymbolKind, SymbolTag } from './extHostTypes/symbolInformation.ts';
+export { EndOfLine, TextEdit } from './extHostTypes/textEdit.ts';
+export { FileEditType, WorkspaceEdit } from './extHostTypes/workspaceEdit.ts';
 
 export enum TerminalOutputAnchor {
 	Top = 0,

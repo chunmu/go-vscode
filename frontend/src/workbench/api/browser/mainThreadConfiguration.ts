@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../base/common/uri.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions, ConfigurationScope, getScopes } from '../../../platform/configuration/common/configurationRegistry.js';
-import { IWorkspaceContextService, WorkbenchState } from '../../../platform/workspace/common/workspace.js';
-import { MainThreadConfigurationShape, MainContext, ExtHostContext, IConfigurationInitData } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ConfigurationTarget, IConfigurationService, IConfigurationOverrides } from '../../../platform/configuration/common/configuration.js';
-import { IEnvironmentService } from '../../../platform/environment/common/environment.js';
+import { URI } from '../../../base/common/uri.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions, ConfigurationScope, getScopes } from '../../../platform/configuration/common/configurationRegistry.ts';
+import { IWorkspaceContextService, WorkbenchState } from '../../../platform/workspace/common/workspace.ts';
+import { MainThreadConfigurationShape, MainContext, ExtHostContext, IConfigurationInitData } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ConfigurationTarget, IConfigurationService, IConfigurationOverrides } from '../../../platform/configuration/common/configuration.ts';
+import { IEnvironmentService } from '../../../platform/environment/common/environment.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadConfiguration)
 export class MainThreadConfiguration implements MainThreadConfigurationShape {

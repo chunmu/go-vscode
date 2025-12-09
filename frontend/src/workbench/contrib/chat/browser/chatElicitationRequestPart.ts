@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction } from '../../../../base/common/actions.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IObservable, observableValue } from '../../../../base/common/observable.js';
-import { ElicitationState, IChatElicitationRequest, IChatElicitationRequestSerialized } from '../common/chatService.js';
-import { ToolDataSource } from '../common/languageModelToolsService.js';
+import { IAction } from '../../../../base/common/actions.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IObservable, observableValue } from '../../../../base/common/observable.ts';
+import { ElicitationState, IChatElicitationRequest, IChatElicitationRequestSerialized } from '../common/chatService.ts';
+import { ToolDataSource } from '../common/languageModelToolsService.ts';
 
 export class ChatElicitationRequestPart extends Disposable implements IChatElicitationRequest {
 	public readonly kind = 'elicitation2';

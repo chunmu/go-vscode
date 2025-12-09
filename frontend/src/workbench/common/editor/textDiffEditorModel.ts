@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDiffEditorModel } from '../../../editor/common/editorCommon.js';
-import { BaseTextEditorModel } from './textEditorModel.js';
-import { DiffEditorModel } from './diffEditorModel.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
+import { IDiffEditorModel } from '../../../editor/common/editorCommon.ts';
+import { BaseTextEditorModel } from './textEditorModel.ts';
+import { DiffEditorModel } from './diffEditorModel.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
 
 /**
  * The base text editor model for the diff editor. It is made up of two text editor models, the original version

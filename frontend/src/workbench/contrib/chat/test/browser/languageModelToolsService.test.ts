@@ -4,33 +4,33 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as assert from 'assert';
-import { Barrier } from '../../../../../base/common/async.js';
-import { VSBuffer } from '../../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { CancellationError, isCancellationError } from '../../../../../base/common/errors.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IAccessibilityService } from '../../../../../platform/accessibility/common/accessibility.js';
-import { TestAccessibilityService } from '../../../../../platform/accessibility/test/common/testAccessibilityService.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { ConfigurationTarget, IConfigurationChangeEvent } from '../../../../../platform/configuration/common/configuration.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ContextKeyService } from '../../../../../platform/contextkey/browser/contextKeyService.js';
-import { ContextKeyEqualsExpr, IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { LanguageModelToolsService } from '../../browser/languageModelToolsService.js';
-import { ChatModel, IChatModel } from '../../common/chatModel.js';
-import { IChatService, IChatToolInputInvocationData, IChatToolInvocation, ToolConfirmKind } from '../../common/chatService.js';
-import { ChatConfiguration } from '../../common/constants.js';
-import { GithubCopilotToolReference, isToolResultInputOutputDetails, IToolData, IToolImpl, IToolInvocation, ToolDataSource, ToolSet, VSCodeToolReference } from '../../common/languageModelToolsService.js';
-import { MockChatService } from '../common/mockChatService.js';
-import { ChatToolInvocation } from '../../common/chatProgressTypes/chatToolInvocation.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
-import { ILanguageModelToolsConfirmationService } from '../../common/languageModelToolsConfirmationService.js';
-import { MockLanguageModelToolsConfirmationService } from '../common/mockLanguageModelToolsConfirmationService.js';
-import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.js';
+import { Barrier } from '../../../../../base/common/async.ts';
+import { VSBuffer } from '../../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { CancellationError, isCancellationError } from '../../../../../base/common/errors.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IAccessibilityService } from '../../../../../platform/accessibility/common/accessibility.ts';
+import { TestAccessibilityService } from '../../../../../platform/accessibility/test/common/testAccessibilityService.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { ConfigurationTarget, IConfigurationChangeEvent } from '../../../../../platform/configuration/common/configuration.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ContextKeyService } from '../../../../../platform/contextkey/browser/contextKeyService.ts';
+import { ContextKeyEqualsExpr, IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { LanguageModelToolsService } from '../../browser/languageModelToolsService.ts';
+import { ChatModel, IChatModel } from '../../common/chatModel.ts';
+import { IChatService, IChatToolInputInvocationData, IChatToolInvocation, ToolConfirmKind } from '../../common/chatService.ts';
+import { ChatConfiguration } from '../../common/constants.ts';
+import { GithubCopilotToolReference, isToolResultInputOutputDetails, IToolData, IToolImpl, IToolInvocation, ToolDataSource, ToolSet, VSCodeToolReference } from '../../common/languageModelToolsService.ts';
+import { MockChatService } from '../common/mockChatService.ts';
+import { ChatToolInvocation } from '../../common/chatProgressTypes/chatToolInvocation.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
+import { ILanguageModelToolsConfirmationService } from '../../common/languageModelToolsConfirmationService.ts';
+import { MockLanguageModelToolsConfirmationService } from '../common/mockLanguageModelToolsConfirmationService.ts';
+import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.ts';
 
 // --- Test helpers to reduce repetition and improve readability ---
 

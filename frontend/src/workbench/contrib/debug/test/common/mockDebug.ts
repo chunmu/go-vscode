@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DeferredPromise } from '../../../../../base/common/async.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Event } from '../../../../../base/common/event.js';
-import { URI as uri } from '../../../../../base/common/uri.js';
-import { IPosition, Position } from '../../../../../editor/common/core/position.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { IWorkspaceFolder } from '../../../../../platform/workspace/common/workspace.js';
-import { AbstractDebugAdapter } from '../../common/abstractDebugAdapter.js';
-import { AdapterEndEvent, IAdapterManager, IBreakpoint, IBreakpointData, IBreakpointUpdateData, IConfig, IConfigurationManager, IDataBreakpoint, IDataBreakpointInfoResponse, IDebugLocationReferenced, IDebugModel, IDebugService, IDebugSession, IDebugSessionOptions, IDebugger, IExceptionBreakpoint, IExceptionInfo, IFunctionBreakpoint, IInstructionBreakpoint, ILaunch, IMemoryRegion, INewReplElementData, IRawModelUpdate, IRawStoppedDetails, IReplElement, IStackFrame, IThread, IViewModel, LoadedSourceEvent, State } from '../../common/debug.js';
-import { DebugCompoundRoot } from '../../common/debugCompoundRoot.js';
-import { IInstructionBreakpointOptions } from '../../common/debugModel.js';
-import { Source } from '../../common/debugSource.js';
-import { DebugStorage } from '../../common/debugStorage.js';
+import { DeferredPromise } from '../../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { URI as uri } from '../../../../../base/common/uri.ts';
+import { IPosition, Position } from '../../../../../editor/common/core/position.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { IWorkspaceFolder } from '../../../../../platform/workspace/common/workspace.ts';
+import { AbstractDebugAdapter } from '../../common/abstractDebugAdapter.ts';
+import { AdapterEndEvent, IAdapterManager, IBreakpoint, IBreakpointData, IBreakpointUpdateData, IConfig, IConfigurationManager, IDataBreakpoint, IDataBreakpointInfoResponse, IDebugLocationReferenced, IDebugModel, IDebugService, IDebugSession, IDebugSessionOptions, IDebugger, IExceptionBreakpoint, IExceptionInfo, IFunctionBreakpoint, IInstructionBreakpoint, ILaunch, IMemoryRegion, INewReplElementData, IRawModelUpdate, IRawStoppedDetails, IReplElement, IStackFrame, IThread, IViewModel, LoadedSourceEvent, State } from '../../common/debug.ts';
+import { DebugCompoundRoot } from '../../common/debugCompoundRoot.ts';
+import { IInstructionBreakpointOptions } from '../../common/debugModel.ts';
+import { Source } from '../../common/debugSource.ts';
+import { DebugStorage } from '../../common/debugStorage.ts';
 
 export class MockDebugService implements IDebugService {
 	_serviceBrand: undefined;

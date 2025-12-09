@@ -4,30 +4,30 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as vscode from 'vscode';
-import { DeferredPromise, raceCancellationError, Sequencer, timeout } from '../../../base/common/async.js';
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { CancellationError } from '../../../base/common/errors.js';
-import { Disposable, DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { AUTH_SCOPE_SEPARATOR, fetchAuthorizationServerMetadata, fetchResourceMetadata, getDefaultMetadataForUrl, IAuthorizationProtectedResourceMetadata, IAuthorizationServerMetadata, parseWWWAuthenticateHeader, scopesMatch } from '../../../base/common/oauth.js';
-import { SSEParser } from '../../../base/common/sseParser.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { vArray, vNumber, vObj, vObjAny, vOptionalProp, vString } from '../../../base/common/validation.js';
-import { ConfigurationTarget } from '../../../platform/configuration/common/configuration.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { canLog, ILogService, LogLevel } from '../../../platform/log/common/log.js';
-import product from '../../../platform/product/common/product.js';
-import { StorageScope } from '../../../platform/storage/common/storage.js';
-import { extensionPrefixedIdentifier, McpCollectionDefinition, McpConnectionState, McpServerDefinition, McpServerLaunch, McpServerStaticMetadata, McpServerStaticToolAvailability, McpServerTransportHTTP, McpServerTransportType, UserInteractionRequiredError } from '../../contrib/mcp/common/mcpTypes.js';
-import { MCP } from '../../contrib/mcp/common/modelContextProtocol.js';
-import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { ExtHostMcpShape, IMcpAuthenticationDetails, IStartMcpOptions, MainContext, MainThreadMcpShape } from './extHost.protocol.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import * as Convert from './extHostTypeConverters.js';
-import { McpHttpServerDefinition, McpStdioServerDefinition, McpToolAvailability } from './extHostTypes.js';
-import { IExtHostVariableResolverProvider } from './extHostVariableResolverService.js';
-import { IExtHostWorkspace } from './extHostWorkspace.js';
+import { DeferredPromise, raceCancellationError, Sequencer, timeout } from '../../../base/common/async.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { CancellationError } from '../../../base/common/errors.ts';
+import { Disposable, DisposableMap, DisposableStore, IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { AUTH_SCOPE_SEPARATOR, fetchAuthorizationServerMetadata, fetchResourceMetadata, getDefaultMetadataForUrl, IAuthorizationProtectedResourceMetadata, IAuthorizationServerMetadata, parseWWWAuthenticateHeader, scopesMatch } from '../../../base/common/oauth.ts';
+import { SSEParser } from '../../../base/common/sseParser.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { vArray, vNumber, vObj, vObjAny, vOptionalProp, vString } from '../../../base/common/validation.ts';
+import { ConfigurationTarget } from '../../../platform/configuration/common/configuration.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { canLog, ILogService, LogLevel } from '../../../platform/log/common/log.ts';
+import product from '../../../platform/product/common/product.ts';
+import { StorageScope } from '../../../platform/storage/common/storage.ts';
+import { extensionPrefixedIdentifier, McpCollectionDefinition, McpConnectionState, McpServerDefinition, McpServerLaunch, McpServerStaticMetadata, McpServerStaticToolAvailability, McpServerTransportHTTP, McpServerTransportType, UserInteractionRequiredError } from '../../contrib/mcp/common/mcpTypes.ts';
+import { MCP } from '../../contrib/mcp/common/modelContextProtocol.ts';
+import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { ExtHostMcpShape, IMcpAuthenticationDetails, IStartMcpOptions, MainContext, MainThreadMcpShape } from './extHost.protocol.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import * as Convert from './extHostTypeConverters.ts';
+import { McpHttpServerDefinition, McpStdioServerDefinition, McpToolAvailability } from './extHostTypes.ts';
+import { IExtHostVariableResolverProvider } from './extHostVariableResolverService.ts';
+import { IExtHostWorkspace } from './extHostWorkspace.ts';
 
 export const IExtHostMpcService = createDecorator<IExtHostMpcService>('IExtHostMpcService');
 

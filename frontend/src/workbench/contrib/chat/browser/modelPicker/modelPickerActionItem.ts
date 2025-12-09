@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction } from '../../../../../base/common/actions.js';
-import { Event } from '../../../../../base/common/event.js';
-import { ILanguageModelChatMetadataAndIdentifier } from '../../common/languageModels.js';
-import { localize } from '../../../../../nls.js';
-import * as dom from '../../../../../base/browser/dom.js';
-import { renderLabelWithIcons } from '../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ActionWidgetDropdownActionViewItem } from '../../../../../platform/actions/browser/actionWidgetDropdownActionViewItem.js';
-import { IActionWidgetService } from '../../../../../platform/actionWidget/browser/actionWidget.js';
-import { IActionWidgetDropdownAction, IActionWidgetDropdownActionProvider, IActionWidgetDropdownOptions } from '../../../../../platform/actionWidget/browser/actionWidgetDropdown.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { ChatEntitlement, IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
-import { DEFAULT_MODEL_PICKER_CATEGORY } from '../../common/modelPicker/modelPickerWidget.js';
-import { ManageModelsAction } from '../actions/manageModelsActions.js';
-import { IActionProvider } from '../../../../../base/browser/ui/dropdown/dropdown.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IProductService } from '../../../../../platform/product/common/productService.js';
-import { MANAGE_CHAT_COMMAND_ID } from '../../common/constants.js';
-import { TelemetryTrustedValue } from '../../../../../platform/telemetry/common/telemetryUtils.js';
+import { IAction } from '../../../../../base/common/actions.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { ILanguageModelChatMetadataAndIdentifier } from '../../common/languageModels.ts';
+import { localize } from '../../../../../nls.ts';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { renderLabelWithIcons } from '../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ActionWidgetDropdownActionViewItem } from '../../../../../platform/actions/browser/actionWidgetDropdownActionViewItem.ts';
+import { IActionWidgetService } from '../../../../../platform/actionWidget/browser/actionWidget.ts';
+import { IActionWidgetDropdownAction, IActionWidgetDropdownActionProvider, IActionWidgetDropdownOptions } from '../../../../../platform/actionWidget/browser/actionWidgetDropdown.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { ChatEntitlement, IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
+import { DEFAULT_MODEL_PICKER_CATEGORY } from '../../common/modelPicker/modelPickerWidget.ts';
+import { ManageModelsAction } from '../actions/manageModelsActions.ts';
+import { IActionProvider } from '../../../../../base/browser/ui/dropdown/dropdown.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IProductService } from '../../../../../platform/product/common/productService.ts';
+import { MANAGE_CHAT_COMMAND_ID } from '../../common/constants.ts';
+import { TelemetryTrustedValue } from '../../../../../platform/telemetry/common/telemetryUtils.ts';
 
 export interface IModelPickerDelegate {
 	readonly onDidChangeModel: Event<ILanguageModelChatMetadataAndIdentifier>;

@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { IDiffResult } from '../../../../../base/common/diff/diff.js';
-import { Emitter, type IValueWithChangeEvent } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore, dispose } from '../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import type { URI } from '../../../../../base/common/uri.js';
-import { FontInfo } from '../../../../../editor/common/config/fontInfo.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import type { ContextKeyValue } from '../../../../../platform/contextkey/common/contextkey.js';
-import { MultiDiffEditorItem } from '../../../multiDiffEditor/browser/multiDiffSourceResolverService.js';
-import { DiffElementCellViewModelBase, DiffElementPlaceholderViewModel, IDiffElementViewModelBase, NotebookDocumentMetadataViewModel, SideBySideDiffElementViewModel, SingleSideDiffElementViewModel } from './diffElementViewModel.js';
-import { NotebookDiffEditorEventDispatcher } from './eventDispatcher.js';
-import { INotebookDiffViewModel, INotebookDiffViewModelUpdateEvent, NOTEBOOK_DIFF_ITEM_DIFF_STATE, NOTEBOOK_DIFF_ITEM_KIND } from './notebookDiffEditorBrowser.js';
-import { NotebookTextModel } from '../../common/model/notebookTextModel.js';
-import { CellUri, INotebookDiffEditorModel } from '../../common/notebookCommon.js';
-import { INotebookService } from '../../common/notebookService.js';
-import { INotebookEditorWorkerService } from '../../common/services/notebookWorkerService.js';
-import { IDiffEditorHeightCalculatorService } from './editorHeightCalculator.js';
-import { raceCancellation } from '../../../../../base/common/async.js';
-import { computeDiff } from '../../common/notebookDiff.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { IDiffResult } from '../../../../../base/common/diff/diff.ts';
+import { Emitter, type IValueWithChangeEvent } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore, dispose } from '../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import type { URI } from '../../../../../base/common/uri.ts';
+import { FontInfo } from '../../../../../editor/common/config/fontInfo.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import type { ContextKeyValue } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { MultiDiffEditorItem } from '../../../multiDiffEditor/browser/multiDiffSourceResolverService.ts';
+import { DiffElementCellViewModelBase, DiffElementPlaceholderViewModel, IDiffElementViewModelBase, NotebookDocumentMetadataViewModel, SideBySideDiffElementViewModel, SingleSideDiffElementViewModel } from './diffElementViewModel.ts';
+import { NotebookDiffEditorEventDispatcher } from './eventDispatcher.ts';
+import { INotebookDiffViewModel, INotebookDiffViewModelUpdateEvent, NOTEBOOK_DIFF_ITEM_DIFF_STATE, NOTEBOOK_DIFF_ITEM_KIND } from './notebookDiffEditorBrowser.ts';
+import { NotebookTextModel } from '../../common/model/notebookTextModel.ts';
+import { CellUri, INotebookDiffEditorModel } from '../../common/notebookCommon.ts';
+import { INotebookService } from '../../common/notebookService.ts';
+import { INotebookEditorWorkerService } from '../../common/services/notebookWorkerService.ts';
+import { IDiffEditorHeightCalculatorService } from './editorHeightCalculator.ts';
+import { raceCancellation } from '../../../../../base/common/async.ts';
+import { computeDiff } from '../../common/notebookDiff.ts';
 
 export class NotebookDiffViewModel extends Disposable implements INotebookDiffViewModel, IValueWithChangeEvent<readonly MultiDiffEditorItem[]> {
 	private readonly placeholderAndRelatedCells = new Map<DiffElementPlaceholderViewModel, DiffElementCellViewModelBase[]>();

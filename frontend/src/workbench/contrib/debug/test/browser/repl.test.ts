@@ -5,18 +5,18 @@
 
 
 import assert from 'assert';
-import { TreeVisibility } from '../../../../../base/browser/ui/tree/tree.js';
-import { timeout } from '../../../../../base/common/async.js';
-import severity from '../../../../../base/common/severity.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { RawDebugSession } from '../../browser/rawDebugSession.js';
-import { ReplFilter } from '../../browser/replFilter.js';
-import { DebugModel, StackFrame, Thread } from '../../common/debugModel.js';
-import { RawObjectReplElement, ReplEvaluationInput, ReplEvaluationResult, ReplGroup, ReplModel, ReplOutputElement, ReplVariableElement } from '../../common/replModel.js';
-import { createTestSession } from './callStack.test.js';
-import { createMockDebugModel } from './mockDebugModel.js';
-import { MockDebugAdapter, MockRawSession } from '../common/mockDebug.js';
+import { TreeVisibility } from '../../../../../base/browser/ui/tree/tree.ts';
+import { timeout } from '../../../../../base/common/async.ts';
+import severity from '../../../../../base/common/severity.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { RawDebugSession } from '../../browser/rawDebugSession.ts';
+import { ReplFilter } from '../../browser/replFilter.ts';
+import { DebugModel, StackFrame, Thread } from '../../common/debugModel.ts';
+import { RawObjectReplElement, ReplEvaluationInput, ReplEvaluationResult, ReplGroup, ReplModel, ReplOutputElement, ReplVariableElement } from '../../common/replModel.ts';
+import { createTestSession } from './callStack.test.ts';
+import { createMockDebugModel } from './mockDebugModel.ts';
+import { MockDebugAdapter, MockRawSession } from '../common/mockDebug.ts';
 
 suite('Debug - REPL', () => {
 	let model: DebugModel;

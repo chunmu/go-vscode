@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { URI } from '../../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
-import { getPromptFileType, getCleanPromptName } from '../../../common/promptSyntax/config/promptFileLocations.js';
-import { PromptsType } from '../../../common/promptSyntax/promptTypes.js';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.ts';
+import { getPromptFileType, getCleanPromptName } from '../../../common/promptSyntax/config/promptFileLocations.ts';
+import { PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
 
 suite('promptFileLocations', function () {
 	ensureNoDisposablesAreLeakedInTestSuite();

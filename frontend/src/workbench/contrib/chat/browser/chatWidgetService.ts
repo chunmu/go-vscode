@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { raceCancellablePromises, timeout } from '../../../../base/common/async.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { combinedDisposable, Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { isEqual } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ILayoutService } from '../../../../platform/layout/browser/layoutService.js';
-import { IEditorService, PreferredGroup } from '../../../../workbench/services/editor/common/editorService.js';
-import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { ChatAgentLocation } from '../common/constants.js';
-import { ChatViewId, ChatViewPaneTarget, IChatWidget, IChatWidgetService, IQuickChatService, isIChatViewViewContext } from './chat.js';
-import { ChatEditor, IChatEditorOptions } from './chatEditor.js';
-import { findExistingChatEditorByUri } from './chatSessions/common.js';
-import { ChatViewPane } from './chatViewPane.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { raceCancellablePromises, timeout } from '../../../../base/common/async.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { combinedDisposable, Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { isEqual } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ILayoutService } from '../../../../platform/layout/browser/layoutService.ts';
+import { IEditorService, PreferredGroup } from '../../../../workbench/services/editor/common/editorService.ts';
+import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { ChatAgentLocation } from '../common/constants.ts';
+import { ChatViewId, ChatViewPaneTarget, IChatWidget, IChatWidgetService, IQuickChatService, isIChatViewViewContext } from './chat.ts';
+import { ChatEditor, IChatEditorOptions } from './chatEditor.ts';
+import { findExistingChatEditorByUri } from './chatSessions/common.ts';
+import { ChatViewPane } from './chatViewPane.ts';
 
 export class ChatWidgetService extends Disposable implements IChatWidgetService {
 

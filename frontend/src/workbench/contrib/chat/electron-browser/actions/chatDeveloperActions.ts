@@ -2,14 +2,14 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize2 } from '../../../../../nls.js';
-import { Categories } from '../../../../../platform/action/common/actionCommonCategories.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { INativeHostService } from '../../../../../platform/native/common/native.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IChatService } from '../../common/chatService.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize2 } from '../../../../../nls.ts';
+import { Categories } from '../../../../../platform/action/common/actionCommonCategories.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { INativeHostService } from '../../../../../platform/native/common/native.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IChatService } from '../../common/chatService.ts';
 
 export function registerChatDeveloperActions() {
 	registerAction2(OpenChatStorageFolderAction);

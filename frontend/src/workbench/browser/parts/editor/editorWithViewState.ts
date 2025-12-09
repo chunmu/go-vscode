@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { Event } from '../../../../base/common/event.js';
-import { IEditorMemento, IEditorCloseEvent, IEditorOpenContext, EditorResourceAccessor, SideBySideEditor } from '../../../common/editor.js';
-import { EditorPane } from './editorPane.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.js';
-import { IEditorGroupsService, IEditorGroup } from '../../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IExtUri } from '../../../../base/common/resources.js';
-import { IDisposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IEditorMemento, IEditorCloseEvent, IEditorOpenContext, EditorResourceAccessor, SideBySideEditor } from '../../../common/editor.ts';
+import { EditorPane } from './editorPane.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.ts';
+import { IEditorGroupsService, IEditorGroup } from '../../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IExtUri } from '../../../../base/common/resources.ts';
+import { IDisposable, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
 
 /**
  * Base class of editors that want to store and restore view state.

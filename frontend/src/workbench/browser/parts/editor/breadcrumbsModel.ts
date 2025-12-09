@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationTokenSource } from '../../../../base/common/cancellation.js';
-import { onUnexpectedError } from '../../../../base/common/errors.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { DisposableStore, MutableDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { Schemas, matchesSomeScheme } from '../../../../base/common/network.js';
-import { dirname, isEqual } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { FileKind } from '../../../../platform/files/common/files.js';
-import { IWorkspaceContextService, IWorkspaceFolder, WorkbenchState } from '../../../../platform/workspace/common/workspace.js';
-import { BreadcrumbsConfig } from './breadcrumbs.js';
-import { IEditorPane } from '../../../common/editor.js';
-import { IOutline, IOutlineService, OutlineTarget } from '../../../services/outline/browser/outline.js';
+import { CancellationTokenSource } from '../../../../base/common/cancellation.ts';
+import { onUnexpectedError } from '../../../../base/common/errors.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { DisposableStore, MutableDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { Schemas, matchesSomeScheme } from '../../../../base/common/network.ts';
+import { dirname, isEqual } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { FileKind } from '../../../../platform/files/common/files.ts';
+import { IWorkspaceContextService, IWorkspaceFolder, WorkbenchState } from '../../../../platform/workspace/common/workspace.ts';
+import { BreadcrumbsConfig } from './breadcrumbs.ts';
+import { IEditorPane } from '../../../common/editor.ts';
+import { IOutline, IOutlineService, OutlineTarget } from '../../../services/outline/browser/outline.ts';
 
 export class FileElement {
 	constructor(

@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { dirname, extUri } from '../../../../../../base/common/resources.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { CompletionContext, CompletionItem, CompletionItemKind, CompletionItemProvider, CompletionList } from '../../../../../../editor/common/languages.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { CharCode } from '../../../../../../base/common/charCode.js';
-import { getWordAtText } from '../../../../../../editor/common/core/wordHelper.js';
-import { chatVariableLeader } from '../../chatParserTypes.js';
-import { ILanguageModelToolsService } from '../../languageModelToolsService.js';
+import { dirname, extUri } from '../../../../../../base/common/resources.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { CompletionContext, CompletionItem, CompletionItemKind, CompletionItemProvider, CompletionList } from '../../../../../../editor/common/languages.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { CharCode } from '../../../../../../base/common/charCode.ts';
+import { getWordAtText } from '../../../../../../editor/common/core/wordHelper.ts';
+import { chatVariableLeader } from '../../chatParserTypes.ts';
+import { ILanguageModelToolsService } from '../../languageModelToolsService.ts';
 
 /**
  * Provides autocompletion for the variables inside prompt bodies.

@@ -2,13 +2,13 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { IModelDeltaDecoration } from '../../../../../../editor/common/model.js';
-import { ModelDecorationOptions } from '../../../../../../editor/common/model/textModel.js';
-import { FindDecorations } from '../../../../../../editor/contrib/find/browser/findDecorations.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { overviewRulerSelectionHighlightForeground, overviewRulerFindMatchForeground } from '../../../../../../platform/theme/common/colorRegistry.js';
-import { CellFindMatchWithIndex, ICellModelDecorations, ICellModelDeltaDecorations, ICellViewModel, INotebookDeltaDecoration, INotebookEditor, NotebookOverviewRulerLane, } from '../../notebookBrowser.js';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { IModelDeltaDecoration } from '../../../../../../editor/common/model.ts';
+import { ModelDecorationOptions } from '../../../../../../editor/common/model/textModel.ts';
+import { FindDecorations } from '../../../../../../editor/contrib/find/browser/findDecorations.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { overviewRulerSelectionHighlightForeground, overviewRulerFindMatchForeground } from '../../../../../../platform/theme/common/colorRegistry.ts';
+import { CellFindMatchWithIndex, ICellModelDecorations, ICellModelDeltaDecorations, ICellViewModel, INotebookDeltaDecoration, INotebookEditor, NotebookOverviewRulerLane, } from '../../notebookBrowser.ts';
 
 export class FindMatchDecorationModel extends Disposable {
 	private _allMatchesDecorations: ICellModelDecorations[] = [];

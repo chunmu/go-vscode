@@ -3,39 +3,39 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IRemoteAgentService, remoteConnectionLatencyMeasurer } from '../../../services/remote/common/remoteAgentService.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { isMacintosh, isWindows } from '../../../../base/common/platform.js';
-import { KeyMod, KeyChord, KeyCode } from '../../../../base/common/keyCodes.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IWorkbenchContribution, IWorkbenchContributionsRegistry, WorkbenchPhase, Extensions as WorkbenchContributionsExtensions, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { ipcRenderer } from '../../../../base/parts/sandbox/electron-browser/globals.js';
-import { IDiagnosticInfoOptions, IRemoteDiagnosticInfo } from '../../../../platform/diagnostics/common/diagnostics.js';
-import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.js';
-import { PersistentConnectionEventType } from '../../../../platform/remote/common/remoteAgentConnection.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { IRemoteAuthorityResolverService } from '../../../../platform/remote/common/remoteAuthorityResolver.js';
-import { OpenLocalFileFolderCommand, OpenLocalFileCommand, OpenLocalFolderCommand, SaveLocalFileCommand, RemoteFileDialogContext } from '../../../services/dialogs/browser/simpleFileDialog.js';
-import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.js';
-import { TELEMETRY_SETTING_ID } from '../../../../platform/telemetry/common/telemetry.js';
-import { getTelemetryLevel } from '../../../../platform/telemetry/common/telemetryUtils.js';
-import { IContextKeyService, RawContextKey, ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IRemoteExplorerService, PORT_AUTO_SOURCE_SETTING, PORT_AUTO_SOURCE_SETTING_OUTPUT } from '../../../services/remote/common/remoteExplorerService.js';
-import { Tunnel, TunnelCloseReason } from '../../../services/remote/common/tunnelModel.js';
-import { localize } from '../../../../nls.js';
-import { RemoteNameContext } from '../../../common/contextkeys.js';
+import * as nls from '../../../../nls.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { IRemoteAgentService, remoteConnectionLatencyMeasurer } from '../../../services/remote/common/remoteAgentService.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { isMacintosh, isWindows } from '../../../../base/common/platform.ts';
+import { KeyMod, KeyChord, KeyCode } from '../../../../base/common/keyCodes.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IWorkbenchContribution, IWorkbenchContributionsRegistry, WorkbenchPhase, Extensions as WorkbenchContributionsExtensions, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { ipcRenderer } from '../../../../base/parts/sandbox/electron-browser/globals.ts';
+import { IDiagnosticInfoOptions, IRemoteDiagnosticInfo } from '../../../../platform/diagnostics/common/diagnostics.ts';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.ts';
+import { PersistentConnectionEventType } from '../../../../platform/remote/common/remoteAgentConnection.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { IRemoteAuthorityResolverService } from '../../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { OpenLocalFileFolderCommand, OpenLocalFileCommand, OpenLocalFolderCommand, SaveLocalFileCommand, RemoteFileDialogContext } from '../../../services/dialogs/browser/simpleFileDialog.ts';
+import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.ts';
+import { TELEMETRY_SETTING_ID } from '../../../../platform/telemetry/common/telemetry.ts';
+import { getTelemetryLevel } from '../../../../platform/telemetry/common/telemetryUtils.ts';
+import { IContextKeyService, RawContextKey, ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IRemoteExplorerService, PORT_AUTO_SOURCE_SETTING, PORT_AUTO_SOURCE_SETTING_OUTPUT } from '../../../services/remote/common/remoteExplorerService.ts';
+import { Tunnel, TunnelCloseReason } from '../../../services/remote/common/tunnelModel.ts';
+import { localize } from '../../../../nls.ts';
+import { RemoteNameContext } from '../../../common/contextkeys.ts';
 
 class RemoteAgentDiagnosticListener implements IWorkbenchContribution {
 	constructor(

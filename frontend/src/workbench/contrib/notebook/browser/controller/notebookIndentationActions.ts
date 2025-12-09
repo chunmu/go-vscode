@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../../nls.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { IBulkEditService, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { ITextModelService } from '../../../../../editor/common/services/resolverService.js';
-import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { IQuickInputService } from '../../../../../platform/quickinput/common/quickInput.js';
-import { INotebookEditorService } from '../services/notebookEditorService.js';
-import { NotebookSetting } from '../../common/notebookCommon.js';
-import { isNotebookEditorInput } from '../../common/notebookEditorInput.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
+import * as nls from '../../../../../nls.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { IBulkEditService, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { ITextModelService } from '../../../../../editor/common/services/resolverService.ts';
+import { Action2, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { IQuickInputService } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { INotebookEditorService } from '../services/notebookEditorService.ts';
+import { NotebookSetting } from '../../common/notebookCommon.ts';
+import { isNotebookEditorInput } from '../../common/notebookEditorInput.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
 
 export class NotebookIndentUsingTabs extends Action2 {
 	public static readonly ID = 'notebook.action.indentUsingTabs';

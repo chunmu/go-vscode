@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { decodeHex, encodeHex, VSBuffer } from '../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { autorunSelfDisposable, IObservable, IReader } from '../../../../base/common/observable.js';
-import { hasKey } from '../../../../base/common/types.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IDocumentDiff } from '../../../../editor/common/diff/documentDiffProvider.js';
-import { Location, TextEdit } from '../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { EditSuggestionId } from '../../../../editor/common/textModelEditSource.js';
-import { localize } from '../../../../nls.js';
-import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IEditorPane } from '../../../common/editor.js';
-import { ICellEditOperation } from '../../notebook/common/notebookCommon.js';
-import { IChatAgentResult } from './chatAgents.js';
-import { ChatModel, IChatRequestDisablement, IChatResponseModel } from './chatModel.js';
-import { IChatProgress } from './chatService.js';
+import { decodeHex, encodeHex, VSBuffer } from '../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { autorunSelfDisposable, IObservable, IReader } from '../../../../base/common/observable.ts';
+import { hasKey } from '../../../../base/common/types.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IDocumentDiff } from '../../../../editor/common/diff/documentDiffProvider.ts';
+import { Location, TextEdit } from '../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { EditSuggestionId } from '../../../../editor/common/textModelEditSource.ts';
+import { localize } from '../../../../nls.ts';
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IEditorPane } from '../../../common/editor.ts';
+import { ICellEditOperation } from '../../notebook/common/notebookCommon.ts';
+import { IChatAgentResult } from './chatAgents.ts';
+import { ChatModel, IChatRequestDisablement, IChatResponseModel } from './chatModel.ts';
+import { IChatProgress } from './chatService.ts';
 
 export const IChatEditingService = createDecorator<IChatEditingService>('chatEditingService');
 

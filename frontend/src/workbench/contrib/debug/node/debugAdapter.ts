@@ -6,16 +6,16 @@
 import * as cp from 'child_process';
 import * as net from 'net';
 import * as stream from 'stream';
-import * as objects from '../../../../base/common/objects.js';
-import * as path from '../../../../base/common/path.js';
-import * as platform from '../../../../base/common/platform.js';
-import * as strings from '../../../../base/common/strings.js';
-import { Promises } from '../../../../base/node/pfs.js';
-import * as nls from '../../../../nls.js';
-import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import { IDebugAdapterExecutable, IDebugAdapterNamedPipeServer, IDebugAdapterServer, IDebuggerContribution, IPlatformSpecificAdapterContribution } from '../common/debug.js';
-import { AbstractDebugAdapter } from '../common/abstractDebugAdapter.js';
-import { killTree } from '../../../../base/node/processes.js';
+import * as objects from '../../../../base/common/objects.ts';
+import * as path from '../../../../base/common/path.ts';
+import * as platform from '../../../../base/common/platform.ts';
+import * as strings from '../../../../base/common/strings.ts';
+import { Promises } from '../../../../base/node/pfs.ts';
+import * as nls from '../../../../nls.ts';
+import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import { IDebugAdapterExecutable, IDebugAdapterNamedPipeServer, IDebugAdapterServer, IDebuggerContribution, IPlatformSpecificAdapterContribution } from '../common/debug.ts';
+import { AbstractDebugAdapter } from '../common/abstractDebugAdapter.ts';
+import { killTree } from '../../../../base/node/processes.ts';
 
 /**
  * An implementation that communicates via two streams with the debug adapter.

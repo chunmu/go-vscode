@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../base/common/uri.js';
-import { equals } from '../../base/common/objects.js';
-import { isAbsolute } from '../../base/common/path.js';
-import { Emitter } from '../../base/common/event.js';
-import { relativePath } from '../../base/common/resources.js';
-import { Disposable } from '../../base/common/lifecycle.js';
-import { ParsedExpression, IExpression, parse } from '../../base/common/glob.js';
-import { IWorkspaceContextService } from '../../platform/workspace/common/workspace.js';
-import { IConfigurationService, IConfigurationChangeEvent } from '../../platform/configuration/common/configuration.js';
-import { Schemas } from '../../base/common/network.js';
-import { ResourceSet } from '../../base/common/map.js';
-import { getDriveLetter } from '../../base/common/extpath.js';
+import { URI } from '../../base/common/uri.ts';
+import { equals } from '../../base/common/objects.ts';
+import { isAbsolute } from '../../base/common/path.ts';
+import { Emitter } from '../../base/common/event.ts';
+import { relativePath } from '../../base/common/resources.ts';
+import { Disposable } from '../../base/common/lifecycle.ts';
+import { ParsedExpression, IExpression, parse } from '../../base/common/glob.ts';
+import { IWorkspaceContextService } from '../../platform/workspace/common/workspace.ts';
+import { IConfigurationService, IConfigurationChangeEvent } from '../../platform/configuration/common/configuration.ts';
+import { Schemas } from '../../base/common/network.ts';
+import { ResourceSet } from '../../base/common/map.ts';
+import { getDriveLetter } from '../../base/common/extpath.ts';
 
 interface IConfiguredExpression {
 	readonly expression: IExpression;

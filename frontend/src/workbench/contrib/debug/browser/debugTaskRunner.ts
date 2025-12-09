@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { toAction } from '../../../../base/common/actions.js';
-import { disposableTimeout } from '../../../../base/common/async.js';
-import { CancellationTokenSource } from '../../../../base/common/cancellation.js';
-import { createErrorWithActions } from '../../../../base/common/errorMessage.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import severity from '../../../../base/common/severity.js';
-import * as nls from '../../../../nls.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { IMarkerService, MarkerSeverity } from '../../../../platform/markers/common/markers.js';
-import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IWorkspace, IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { DEBUG_CONFIGURE_COMMAND_ID, DEBUG_CONFIGURE_LABEL } from './debugCommands.js';
-import { IDebugConfiguration } from '../common/debug.js';
-import { Markers } from '../../markers/common/markers.js';
-import { ConfiguringTask, CustomTask, ITaskEvent, ITaskIdentifier, Task, TaskEventKind } from '../../tasks/common/tasks.js';
-import { ITaskService, ITaskSummary } from '../../tasks/common/taskService.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
+import { toAction } from '../../../../base/common/actions.ts';
+import { disposableTimeout } from '../../../../base/common/async.ts';
+import { CancellationTokenSource } from '../../../../base/common/cancellation.ts';
+import { createErrorWithActions } from '../../../../base/common/errorMessage.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import severity from '../../../../base/common/severity.ts';
+import * as nls from '../../../../nls.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IMarkerService, MarkerSeverity } from '../../../../platform/markers/common/markers.ts';
+import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IWorkspace, IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { DEBUG_CONFIGURE_COMMAND_ID, DEBUG_CONFIGURE_LABEL } from './debugCommands.ts';
+import { IDebugConfiguration } from '../common/debug.ts';
+import { Markers } from '../../markers/common/markers.ts';
+import { ConfiguringTask, CustomTask, ITaskEvent, ITaskIdentifier, Task, TaskEventKind } from '../../tasks/common/tasks.ts';
+import { ITaskService, ITaskSummary } from '../../tasks/common/taskService.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
 
 const onceFilter = (event: Event<ITaskEvent>, filter: (e: ITaskEvent) => boolean) => Event.once(Event.filter(event, filter));
 

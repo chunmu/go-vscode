@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { asCSSUrl } from '../../../../../base/browser/cssValue.js';
-import * as dom from '../../../../../base/browser/dom.js';
-import { createCSSRule } from '../../../../../base/browser/domStylesheets.js';
-import { StandardKeyboardEvent } from '../../../../../base/browser/keyboardEvent.js';
-import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { Action, IAction } from '../../../../../base/common/actions.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Event } from '../../../../../base/common/event.js';
-import { StringSHA1 } from '../../../../../base/common/hash.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { KeyCode } from '../../../../../base/common/keyCodes.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { IObservable, ISettableObservable, observableValue } from '../../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.js';
-import { ChatAgentLocation } from '../../common/constants.js';
-import { IChatWidgetService } from '../chat.js';
-import { chatViewsWelcomeRegistry, IChatViewsWelcomeDescriptor } from './chatViewsWelcome.js';
+import { asCSSUrl } from '../../../../../base/browser/cssValue.ts';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { createCSSRule } from '../../../../../base/browser/domStylesheets.ts';
+import { StandardKeyboardEvent } from '../../../../../base/browser/keyboardEvent.ts';
+import { IRenderedMarkdown } from '../../../../../base/browser/markdownRenderer.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { renderIcon } from '../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { Action, IAction } from '../../../../../base/common/actions.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { StringSHA1 } from '../../../../../base/common/hash.ts';
+import { IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { KeyCode } from '../../../../../base/common/keyCodes.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { IObservable, ISettableObservable, observableValue } from '../../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { chatViewsWelcomeRegistry, IChatViewsWelcomeDescriptor } from './chatViewsWelcome.ts';
 
 const $ = dom.$;
 

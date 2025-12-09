@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IExtHostWorkspaceProvider } from '../common/extHostWorkspace.js';
-import { ConfigurationInspect, ExtHostConfigProvider } from '../common/extHostConfiguration.js';
-import { MainThreadTelemetryShape } from '../common/extHost.protocol.js';
-import { IExtensionHostInitData } from '../../services/extensions/common/extensionHostProtocol.js';
-import { ExtHostExtensionService } from './extHostExtensionService.js';
-import { URI } from '../../../base/common/uri.js';
-import { ILogService, LogLevel as LogServiceLevel } from '../../../platform/log/common/log.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
+import { IExtHostWorkspaceProvider } from '../common/extHostWorkspace.ts';
+import { ConfigurationInspect, ExtHostConfigProvider } from '../common/extHostConfiguration.ts';
+import { MainThreadTelemetryShape } from '../common/extHost.protocol.ts';
+import { IExtensionHostInitData } from '../../services/extensions/common/extensionHostProtocol.ts';
+import { ExtHostExtensionService } from './extHostExtensionService.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ILogService, LogLevel as LogServiceLevel } from '../../../platform/log/common/log.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
 import { LogLevel, createHttpPatch, createProxyResolver, createTlsPatch, ProxySupportSetting, ProxyAgentParams, createNetPatch, loadSystemCertificates, ResolveProxyWithRequest } from '@vscode/proxy-agent';
-import { AuthInfo, systemCertificatesNodeDefault } from '../../../platform/request/common/request.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
+import { AuthInfo, systemCertificatesNodeDefault } from '../../../platform/request/common/request.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
 import { createRequire } from 'node:module';
 import type * as undiciType from 'undici-types';
 import type * as tlsType from 'tls';
-import { lookupKerberosAuthorization } from '../../../platform/request/node/requestService.js';
+import { lookupKerberosAuthorization } from '../../../platform/request/node/requestService.ts';
 import * as proxyAgent from '@vscode/proxy-agent';
 
 const require = createRequire(import.meta.url);

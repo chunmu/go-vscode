@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../nls.js';
-import { AbstractSideBySideEditorInputSerializer, SideBySideEditorInput } from './sideBySideEditorInput.js';
-import { EditorInput, IUntypedEditorOptions } from './editorInput.js';
-import { EditorModel } from './editorModel.js';
-import { TEXT_DIFF_EDITOR_ID, BINARY_DIFF_EDITOR_ID, Verbosity, IEditorDescriptor, IEditorPane, IResourceDiffEditorInput, IUntypedEditorInput, isResourceDiffEditorInput, IDiffEditorInput, IResourceSideBySideEditorInput, EditorInputCapabilities } from '../editor.js';
-import { BaseTextEditorModel } from './textEditorModel.js';
-import { DiffEditorModel } from './diffEditorModel.js';
-import { TextDiffEditorModel } from './textDiffEditorModel.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { shorten } from '../../../base/common/labels.js';
-import { isResolvedEditorModel } from '../../../platform/editor/common/editor.js';
+import { localize } from '../../../nls.ts';
+import { AbstractSideBySideEditorInputSerializer, SideBySideEditorInput } from './sideBySideEditorInput.ts';
+import { EditorInput, IUntypedEditorOptions } from './editorInput.ts';
+import { EditorModel } from './editorModel.ts';
+import { TEXT_DIFF_EDITOR_ID, BINARY_DIFF_EDITOR_ID, Verbosity, IEditorDescriptor, IEditorPane, IResourceDiffEditorInput, IUntypedEditorInput, isResourceDiffEditorInput, IDiffEditorInput, IResourceSideBySideEditorInput, EditorInputCapabilities } from '../editor.ts';
+import { BaseTextEditorModel } from './textEditorModel.ts';
+import { DiffEditorModel } from './diffEditorModel.ts';
+import { TextDiffEditorModel } from './textDiffEditorModel.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { shorten } from '../../../base/common/labels.ts';
+import { isResolvedEditorModel } from '../../../platform/editor/common/editor.ts';
 
 interface IDiffEditorInputLabels {
 	readonly name: string;

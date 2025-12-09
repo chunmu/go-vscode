@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../base/common/event.js';
-import { Schemas } from '../../../base/common/network.js';
-import { isFalsyOrWhitespace } from '../../../base/common/strings.js';
-import { URI } from '../../../base/common/uri.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { isFalsyOrWhitespace } from '../../../base/common/strings.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
 import { WindowState } from 'vscode';
-import { ExtHostWindowShape, IOpenUriOptions, MainContext, MainThreadWindowShape } from './extHost.protocol.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { decodeBase64 } from '../../../base/common/buffer.js';
+import { ExtHostWindowShape, IOpenUriOptions, MainContext, MainThreadWindowShape } from './extHost.protocol.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { decodeBase64 } from '../../../base/common/buffer.ts';
 
 export class ExtHostWindow implements ExtHostWindowShape {
 

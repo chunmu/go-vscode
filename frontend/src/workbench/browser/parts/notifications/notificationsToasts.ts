@@ -4,28 +4,28 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/notificationsToasts.css';
-import { localize } from '../../../../nls.js';
-import { INotificationsModel, NotificationChangeType, INotificationChangeEvent, INotificationViewItem, NotificationViewItemContentChangeKind } from '../../../common/notifications.js';
-import { IDisposable, dispose, toDisposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { addDisposableListener, EventType, Dimension, scheduleAtNextAnimationFrame, isAncestorOfActiveElement, getWindow, $, isElementInBottomRightQuarter, isHTMLElement, isEditableElement, getActiveElement } from '../../../../base/browser/dom.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { NotificationsList } from './notificationsList.js';
-import { Event, Emitter } from '../../../../base/common/event.js';
-import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.js';
-import { NOTIFICATIONS_TOAST_BORDER, NOTIFICATIONS_BACKGROUND } from '../../../common/theme.js';
-import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.js';
-import { widgetShadow } from '../../../../platform/theme/common/colorRegistry.js';
-import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { INotificationsToastController } from './notificationsCommands.js';
-import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { Severity, NotificationsFilter, NotificationPriority, withSeverityPrefix } from '../../../../platform/notification/common/notification.js';
-import { ScrollbarVisibility } from '../../../../base/common/scrollable.js';
-import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { IHostService } from '../../../services/host/browser/host.js';
-import { IntervalCounter } from '../../../../base/common/async.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { NotificationsToastsVisibleContext } from '../../../common/contextkeys.js';
-import { mainWindow } from '../../../../base/browser/window.js';
+import { localize } from '../../../../nls.ts';
+import { INotificationsModel, NotificationChangeType, INotificationChangeEvent, INotificationViewItem, NotificationViewItemContentChangeKind } from '../../../common/notifications.ts';
+import { IDisposable, dispose, toDisposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { addDisposableListener, EventType, Dimension, scheduleAtNextAnimationFrame, isAncestorOfActiveElement, getWindow, $, isElementInBottomRightQuarter, isHTMLElement, isEditableElement, getActiveElement } from '../../../../base/browser/dom.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { NotificationsList } from './notificationsList.ts';
+import { Event, Emitter } from '../../../../base/common/event.ts';
+import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.ts';
+import { NOTIFICATIONS_TOAST_BORDER, NOTIFICATIONS_BACKGROUND } from '../../../common/theme.ts';
+import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.ts';
+import { widgetShadow } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { INotificationsToastController } from './notificationsCommands.ts';
+import { IContextKey, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { Severity, NotificationsFilter, NotificationPriority, withSeverityPrefix } from '../../../../platform/notification/common/notification.ts';
+import { ScrollbarVisibility } from '../../../../base/common/scrollable.ts';
+import { ILifecycleService, LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { IHostService } from '../../../services/host/browser/host.ts';
+import { IntervalCounter } from '../../../../base/common/async.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { NotificationsToastsVisibleContext } from '../../../common/contextkeys.ts';
+import { mainWindow } from '../../../../base/browser/window.ts';
 
 interface INotificationToast {
 	readonly item: INotificationViewItem;

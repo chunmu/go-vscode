@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { rtrim } from '../../../../base/common/strings.js';
-import { IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IChatAgentService } from './chatAgents.js';
-import { IChatModel } from './chatModel.js';
-import { chatAgentLeader, chatSubcommandLeader } from './chatParserTypes.js';
-import { ISpeechService, ISpeechToTextEvent, SpeechToTextStatus } from '../../speech/common/speechService.js';
+import { localize } from '../../../../nls.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { rtrim } from '../../../../base/common/strings.ts';
+import { IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IChatAgentService } from './chatAgents.ts';
+import { IChatModel } from './chatModel.ts';
+import { chatAgentLeader, chatSubcommandLeader } from './chatParserTypes.ts';
+import { ISpeechService, ISpeechToTextEvent, SpeechToTextStatus } from '../../speech/common/speechService.ts';
 
 export const IVoiceChatService = createDecorator<IVoiceChatService>('voiceChatService');
 

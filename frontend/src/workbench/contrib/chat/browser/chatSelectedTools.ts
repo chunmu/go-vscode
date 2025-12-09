@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { derived, IObservable, observableFromEvent, ObservableMap } from '../../../../base/common/observable.js';
-import { isObject } from '../../../../base/common/types.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ObservableMemento, observableMemento } from '../../../../platform/observable/common/observableMemento.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { UserSelectedTools } from '../common/chatAgents.js';
-import { IChatMode } from '../common/chatModes.js';
-import { ChatModeKind } from '../common/constants.js';
-import { ILanguageModelToolsService, IToolAndToolSetEnablementMap, IToolData, ToolSet } from '../common/languageModelToolsService.js';
-import { PromptsStorage } from '../common/promptSyntax/service/promptsService.js';
-import { PromptFileRewriter } from './promptSyntax/promptFileRewriter.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { derived, IObservable, observableFromEvent, ObservableMap } from '../../../../base/common/observable.ts';
+import { isObject } from '../../../../base/common/types.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ObservableMemento, observableMemento } from '../../../../platform/observable/common/observableMemento.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { UserSelectedTools } from '../common/chatAgents.ts';
+import { IChatMode } from '../common/chatModes.ts';
+import { ChatModeKind } from '../common/constants.ts';
+import { ILanguageModelToolsService, IToolAndToolSetEnablementMap, IToolData, ToolSet } from '../common/languageModelToolsService.ts';
+import { PromptsStorage } from '../common/promptSyntax/service/promptsService.ts';
+import { PromptFileRewriter } from './promptSyntax/promptFileRewriter.ts';
 
 
 type ToolEnablementStates = {

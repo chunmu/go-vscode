@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { SimpleCompletionItem } from './simpleCompletionItem.js';
-import { quickSelect } from '../../../../base/common/arrays.js';
-import { CharCode } from '../../../../base/common/charCode.js';
-import { FuzzyScore, fuzzyScore, fuzzyScoreGracefulAggressive, FuzzyScoreOptions, FuzzyScorer } from '../../../../base/common/filters.js';
+import { SimpleCompletionItem } from './simpleCompletionItem.ts';
+import { quickSelect } from '../../../../base/common/arrays.ts';
+import { CharCode } from '../../../../base/common/charCode.ts';
+import { FuzzyScore, fuzzyScore, fuzzyScoreGracefulAggressive, FuzzyScoreOptions, FuzzyScorer } from '../../../../base/common/filters.ts';
 
 export interface ISimpleCompletionStats {
 	pLabelLen: number;

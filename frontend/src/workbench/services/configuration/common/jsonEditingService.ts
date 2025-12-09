@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { URI } from '../../../../base/common/uri.js';
-import * as json from '../../../../base/common/json.js';
-import { setProperty } from '../../../../base/common/jsonEdit.js';
-import { Queue } from '../../../../base/common/async.js';
-import { Edit } from '../../../../base/common/jsonFormatter.js';
-import { IDisposable, IReference } from '../../../../base/common/lifecycle.js';
-import { EditOperation } from '../../../../editor/common/core/editOperation.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { ITextFileService } from '../../textfile/common/textfiles.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { ITextModelService, IResolvedTextEditorModel } from '../../../../editor/common/services/resolverService.js';
-import { IJSONEditingService, IJSONValue, JSONEditingError, JSONEditingErrorCode } from './jsonEditing.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { IFilesConfigurationService } from '../../filesConfiguration/common/filesConfigurationService.js';
+import * as nls from '../../../../nls.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import * as json from '../../../../base/common/json.ts';
+import { setProperty } from '../../../../base/common/jsonEdit.ts';
+import { Queue } from '../../../../base/common/async.ts';
+import { Edit } from '../../../../base/common/jsonFormatter.ts';
+import { IDisposable, IReference } from '../../../../base/common/lifecycle.ts';
+import { EditOperation } from '../../../../editor/common/core/editOperation.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { ITextFileService } from '../../textfile/common/textfiles.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { ITextModelService, IResolvedTextEditorModel } from '../../../../editor/common/services/resolverService.ts';
+import { IJSONEditingService, IJSONValue, JSONEditingError, JSONEditingErrorCode } from './jsonEditing.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { IFilesConfigurationService } from '../../filesConfiguration/common/filesConfigurationService.ts';
 
 export class JSONEditingService implements IJSONEditingService {
 

@@ -3,34 +3,34 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import * as domSanitize from '../../../../../../base/browser/domSanitize.js';
-import { renderIcon } from '../../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { disposableTimeout, raceCancellation } from '../../../../../../base/common/async.js';
-import { CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { Disposable, DisposableStore, MutableDisposable, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { CodeEditorWidget } from '../../../../../../editor/browser/widget/codeEditor/codeEditorWidget.js';
-import { IEditorOptions } from '../../../../../../editor/common/config/editorOptions.js';
-import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { tokenizeToStringSync } from '../../../../../../editor/common/languages/textToHtmlTokenizer.js';
-import { IReadonlyTextBuffer } from '../../../../../../editor/common/model.js';
-import { localize } from '../../../../../../nls.js';
-import { IAccessibilityService } from '../../../../../../platform/accessibility/common/accessibility.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../../../platform/instantiation/common/serviceCollection.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { CellEditState, CellFocusMode, CellFoldingState, EXPAND_CELL_INPUT_COMMAND_ID, IActiveNotebookEditorDelegate, ICellViewModel } from '../../notebookBrowser.js';
-import { collapsedIcon, expandedIcon } from '../../notebookIcons.js';
-import { CellEditorOptions } from './cellEditorOptions.js';
-import { collapsedCellTTPolicy, MarkdownCellRenderTemplate } from '../notebookRenderingCommon.js';
-import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.js';
-import { WordHighlighterContribution } from '../../../../../../editor/contrib/wordHighlighter/browser/wordHighlighter.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import * as domSanitize from '../../../../../../base/browser/domSanitize.ts';
+import { renderIcon } from '../../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { disposableTimeout, raceCancellation } from '../../../../../../base/common/async.ts';
+import { CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { Disposable, DisposableStore, MutableDisposable, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { CodeEditorWidget } from '../../../../../../editor/browser/widget/codeEditor/codeEditorWidget.ts';
+import { IEditorOptions } from '../../../../../../editor/common/config/editorOptions.ts';
+import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { tokenizeToStringSync } from '../../../../../../editor/common/languages/textToHtmlTokenizer.ts';
+import { IReadonlyTextBuffer } from '../../../../../../editor/common/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IAccessibilityService } from '../../../../../../platform/accessibility/common/accessibility.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../../../platform/instantiation/common/serviceCollection.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { CellEditState, CellFocusMode, CellFoldingState, EXPAND_CELL_INPUT_COMMAND_ID, IActiveNotebookEditorDelegate, ICellViewModel } from '../../notebookBrowser.ts';
+import { collapsedIcon, expandedIcon } from '../../notebookIcons.ts';
+import { CellEditorOptions } from './cellEditorOptions.ts';
+import { collapsedCellTTPolicy, MarkdownCellRenderTemplate } from '../notebookRenderingCommon.ts';
+import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.ts';
+import { WordHighlighterContribution } from '../../../../../../editor/contrib/wordHighlighter/browser/wordHighlighter.ts';
 
 export class MarkupCell extends Disposable {
 

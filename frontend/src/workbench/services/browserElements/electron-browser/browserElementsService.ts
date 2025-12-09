@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { BrowserType, IElementData, INativeBrowserElementsService } from '../../../../platform/browserElements/common/browserElements.js';
-import { IRectangle } from '../../../../platform/window/common/window.js';
-import { ipcRenderer } from '../../../../base/parts/sandbox/electron-browser/globals.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { registerSingleton, InstantiationType } from '../../../../platform/instantiation/common/extensions.js';
-import { IBrowserElementsService } from '../browser/browserElementsService.js';
-import { IMainProcessService } from '../../../../platform/ipc/common/mainProcessService.js';
-import { INativeWorkbenchEnvironmentService } from '../../environment/electron-browser/environmentService.js';
-import { NativeBrowserElementsService } from '../../../../platform/browserElements/common/nativeBrowserElementsService.js';
+import { BrowserType, IElementData, INativeBrowserElementsService } from '../../../../platform/browserElements/common/browserElements.ts';
+import { IRectangle } from '../../../../platform/window/common/window.ts';
+import { ipcRenderer } from '../../../../base/parts/sandbox/electron-browser/globals.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { registerSingleton, InstantiationType } from '../../../../platform/instantiation/common/extensions.ts';
+import { IBrowserElementsService } from '../browser/browserElementsService.ts';
+import { IMainProcessService } from '../../../../platform/ipc/common/mainProcessService.ts';
+import { INativeWorkbenchEnvironmentService } from '../../environment/electron-browser/environmentService.ts';
+import { NativeBrowserElementsService } from '../../../../platform/browserElements/common/nativeBrowserElementsService.ts';
 
 class WorkbenchNativeBrowserElementsService extends NativeBrowserElementsService {
 

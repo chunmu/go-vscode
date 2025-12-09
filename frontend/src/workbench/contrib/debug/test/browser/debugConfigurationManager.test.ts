@@ -4,24 +4,24 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Event } from '../../../../../base/common/event.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ContextKeyService } from '../../../../../platform/contextkey/browser/contextKeyService.js';
-import { FileService } from '../../../../../platform/files/common/fileService.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { UriIdentityService } from '../../../../../platform/uriIdentity/common/uriIdentityService.js';
-import { ConfigurationManager } from '../../browser/debugConfigurationManager.js';
-import { DebugConfigurationProviderTriggerKind, IAdapterManager, IConfig, IDebugAdapterExecutable, IDebugSession } from '../../common/debug.js';
-import { IPreferencesService } from '../../../../services/preferences/common/preferences.js';
-import { TestQuickInputService } from '../../../../test/browser/workbenchTestServices.js';
-import { TestHistoryService, TestContextService, TestExtensionService, TestStorageService } from '../../../../test/common/workbenchTestServices.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ContextKeyService } from '../../../../../platform/contextkey/browser/contextKeyService.ts';
+import { FileService } from '../../../../../platform/files/common/fileService.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { UriIdentityService } from '../../../../../platform/uriIdentity/common/uriIdentityService.ts';
+import { ConfigurationManager } from '../../browser/debugConfigurationManager.ts';
+import { DebugConfigurationProviderTriggerKind, IAdapterManager, IConfig, IDebugAdapterExecutable, IDebugSession } from '../../common/debug.ts';
+import { IPreferencesService } from '../../../../services/preferences/common/preferences.ts';
+import { TestQuickInputService } from '../../../../test/browser/workbenchTestServices.ts';
+import { TestHistoryService, TestContextService, TestExtensionService, TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
 
 suite('debugConfigurationManager', () => {
 	const configurationProviderType = 'custom-type';

@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../nls.js';
+import * as nls from '../../../nls.ts';
 
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import * as Types from '../../../base/common/types.js';
-import * as Platform from '../../../base/common/platform.js';
-import { IStringDictionary } from '../../../base/common/collections.js';
-import { Disposable, IDisposable } from '../../../base/common/lifecycle.js';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import * as Types from '../../../base/common/types.ts';
+import * as Platform from '../../../base/common/platform.ts';
+import { IStringDictionary } from '../../../base/common/collections.ts';
+import { Disposable, IDisposable } from '../../../base/common/lifecycle.ts';
 
-import { IWorkspace, IWorkspaceContextService, IWorkspaceFolder } from '../../../platform/workspace/common/workspace.js';
+import { IWorkspace, IWorkspaceContextService, IWorkspaceFolder } from '../../../platform/workspace/common/workspace.ts';
 
 import {
 	ContributedTask, ConfiguringTask, KeyedTaskIdentifier, ITaskExecution, Task, ITaskEvent,
 	IPresentationOptions, CommandOptions, ICommandConfiguration, RuntimeType, CustomTask, TaskScope, TaskSource,
 	TaskSourceKind, IExtensionTaskSource, IRunOptions, ITaskSet, TaskGroup, TaskDefinition, PresentationOptions, RunOptions
-} from '../../contrib/tasks/common/tasks.js';
+} from '../../contrib/tasks/common/tasks.ts';
 
 
-import { IResolveSet, IResolvedVariables } from '../../contrib/tasks/common/taskSystem.js';
-import { ITaskService, ITaskFilter, ITaskProvider } from '../../contrib/tasks/common/taskService.js';
+import { IResolveSet, IResolvedVariables } from '../../contrib/tasks/common/taskSystem.ts';
+import { ITaskService, ITaskFilter, ITaskProvider } from '../../contrib/tasks/common/taskService.ts';
 
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, MainThreadTaskShape, ExtHostTaskShape, MainContext } from '../common/extHost.protocol.js';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, MainThreadTaskShape, ExtHostTaskShape, MainContext } from '../common/extHost.protocol.ts';
 import {
 	ITaskDefinitionDTO, ITaskExecutionDTO, IProcessExecutionOptionsDTO, ITaskPresentationOptionsDTO,
 	IProcessExecutionDTO, IShellExecutionDTO, IShellExecutionOptionsDTO, ICustomExecutionDTO, ITaskDTO, ITaskSourceDTO, ITaskHandleDTO, ITaskFilterDTO, ITaskProcessStartedDTO, ITaskProcessEndedDTO, ITaskSystemInfoDTO,
@@ -33,12 +33,12 @@ import {
 	ITaskProblemMatcherStarted,
 	ITaskProblemMatcherEnded,
 	TaskEventKind
-} from '../common/shared/tasks.js';
-import { IConfigurationResolverService } from '../../services/configurationResolver/common/configurationResolver.js';
-import { ConfigurationTarget } from '../../../platform/configuration/common/configuration.js';
-import { ErrorNoTelemetry } from '../../../base/common/errors.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ConfigurationResolverExpression } from '../../services/configurationResolver/common/configurationResolverExpression.js';
+} from '../common/shared/tasks.ts';
+import { IConfigurationResolverService } from '../../services/configurationResolver/common/configurationResolver.ts';
+import { ConfigurationTarget } from '../../../platform/configuration/common/configuration.ts';
+import { ErrorNoTelemetry } from '../../../base/common/errors.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ConfigurationResolverExpression } from '../../services/configurationResolver/common/configurationResolverExpression.ts';
 
 namespace TaskExecutionDTO {
 	export function from(value: ITaskExecution): ITaskExecutionDTO {

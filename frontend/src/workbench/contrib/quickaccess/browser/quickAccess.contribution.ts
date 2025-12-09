@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { IQuickAccessRegistry, Extensions } from '../../../../platform/quickinput/common/quickAccess.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { HelpQuickAccessProvider } from '../../../../platform/quickinput/browser/helpQuickAccess.js';
-import { ViewQuickAccessProvider, OpenViewPickerAction, QuickAccessViewPickerAction } from './viewQuickAccess.js';
-import { CommandsQuickAccessProvider, ShowAllCommandsAction, ClearCommandHistoryAction } from './commandsQuickAccess.js';
-import { MenuRegistry, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { KeyMod } from '../../../../base/common/keyCodes.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { inQuickPickContext, getQuickNavigateHandler } from '../../../browser/quickaccess.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.js';
+import { localize } from '../../../../nls.ts';
+import { IQuickAccessRegistry, Extensions } from '../../../../platform/quickinput/common/quickAccess.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { HelpQuickAccessProvider } from '../../../../platform/quickinput/browser/helpQuickAccess.ts';
+import { ViewQuickAccessProvider, OpenViewPickerAction, QuickAccessViewPickerAction } from './viewQuickAccess.ts';
+import { CommandsQuickAccessProvider, ShowAllCommandsAction, ClearCommandHistoryAction } from './commandsQuickAccess.ts';
+import { MenuRegistry, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { KeyMod } from '../../../../base/common/keyCodes.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { inQuickPickContext, getQuickNavigateHandler } from '../../../browser/quickaccess.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.ts';
 
 //#region Quick Access Proviers
 

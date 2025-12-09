@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { IJSONSchema, TypeFromJsonSchema } from '../../../../../base/common/jsonSchema.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { checkProposedApiEnabled } from '../../../../services/extensions/common/extensions.js';
-import * as extensionsRegistry from '../../../../services/extensions/common/extensionsRegistry.js';
-import { ChatViewsWelcomeExtensions, IChatViewsWelcomeContributionRegistry, IChatViewsWelcomeDescriptor } from './chatViewsWelcome.js';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { IJSONSchema, TypeFromJsonSchema } from '../../../../../base/common/jsonSchema.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { checkProposedApiEnabled } from '../../../../services/extensions/common/extensions.ts';
+import * as extensionsRegistry from '../../../../services/extensions/common/extensionsRegistry.ts';
+import { ChatViewsWelcomeExtensions, IChatViewsWelcomeContributionRegistry, IChatViewsWelcomeDescriptor } from './chatViewsWelcome.ts';
 
 
 const chatViewsWelcomeJsonSchema = {

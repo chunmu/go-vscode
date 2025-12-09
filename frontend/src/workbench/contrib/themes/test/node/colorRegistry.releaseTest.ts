@@ -4,21 +4,21 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as fs from 'fs';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { IColorRegistry, Extensions, ColorContribution, asCssVariableName } from '../../../../../platform/theme/common/colorRegistry.js';
-import { asTextOrError } from '../../../../../platform/request/common/request.js';
-import * as pfs from '../../../../../base/node/pfs.js';
-import * as path from '../../../../../base/common/path.js';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { IColorRegistry, Extensions, ColorContribution, asCssVariableName } from '../../../../../platform/theme/common/colorRegistry.ts';
+import { asTextOrError } from '../../../../../platform/request/common/request.ts';
+import * as pfs from '../../../../../base/node/pfs.ts';
+import * as path from '../../../../../base/common/path.ts';
 import assert from 'assert';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { RequestService } from '../../../../../platform/request/node/requestService.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { RequestService } from '../../../../../platform/request/node/requestService.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
 // eslint-disable-next-line local/code-import-patterns
-import '../../../../workbench.desktop.main.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { mock } from '../../../../../base/test/common/mock.js';
-import { INativeEnvironmentService } from '../../../../../platform/environment/common/environment.js';
-import { FileAccess } from '../../../../../base/common/network.js';
+import '../../../../workbench.desktop.main.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { mock } from '../../../../../base/test/common/mock.ts';
+import { INativeEnvironmentService } from '../../../../../platform/environment/common/environment.ts';
+import { FileAccess } from '../../../../../base/common/network.ts';
 
 interface ColorInfo {
 	description: string;

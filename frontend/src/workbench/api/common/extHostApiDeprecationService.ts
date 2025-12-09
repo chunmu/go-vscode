@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import * as extHostProtocol from './extHost.protocol.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import * as extHostProtocol from './extHost.protocol.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
 
 export interface IExtHostApiDeprecationService {
 	readonly _serviceBrand: undefined;

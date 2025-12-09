@@ -4,29 +4,29 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { CompletionContext, CompletionTriggerKind } from '../../../../../../editor/common/languages.js';
-import { ContextKeyService } from '../../../../../../platform/contextkey/browser/contextKeyService.js';
-import { TestConfigurationService } from '../../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ExtensionIdentifier } from '../../../../../../platform/extensions/common/extensions.js';
-import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { workbenchInstantiationService } from '../../../../../test/browser/workbenchTestServices.js';
-import { LanguageModelToolsService } from '../../../browser/languageModelToolsService.js';
-import { ChatConfiguration } from '../../../common/constants.js';
-import { ILanguageModelToolsService, IToolData, ToolDataSource } from '../../../common/languageModelToolsService.js';
-import { PromptBodyAutocompletion } from '../../../common/promptSyntax/languageProviders/promptBodyAutocompletion.js';
-import { createTextModel } from '../../../../../../editor/test/common/testTextModel.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { getLanguageIdForPromptsType, PromptsType } from '../../../common/promptSyntax/promptTypes.js';
-import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { FileService } from '../../../../../../platform/files/common/fileService.js';
-import { VSBuffer } from '../../../../../../base/common/buffer.js';
-import { InMemoryFileSystemProvider } from '../../../../../../platform/files/common/inMemoryFilesystemProvider.js';
-import { ILogService, NullLogService } from '../../../../../../platform/log/common/log.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { CompletionContext, CompletionTriggerKind } from '../../../../../../editor/common/languages.ts';
+import { ContextKeyService } from '../../../../../../platform/contextkey/browser/contextKeyService.ts';
+import { TestConfigurationService } from '../../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ExtensionIdentifier } from '../../../../../../platform/extensions/common/extensions.ts';
+import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { workbenchInstantiationService } from '../../../../../test/browser/workbenchTestServices.ts';
+import { LanguageModelToolsService } from '../../../browser/languageModelToolsService.ts';
+import { ChatConfiguration } from '../../../common/constants.ts';
+import { ILanguageModelToolsService, IToolData, ToolDataSource } from '../../../common/languageModelToolsService.ts';
+import { PromptBodyAutocompletion } from '../../../common/promptSyntax/languageProviders/promptBodyAutocompletion.ts';
+import { createTextModel } from '../../../../../../editor/test/common/testTextModel.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { getLanguageIdForPromptsType, PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
+import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { FileService } from '../../../../../../platform/files/common/fileService.ts';
+import { VSBuffer } from '../../../../../../base/common/buffer.ts';
+import { InMemoryFileSystemProvider } from '../../../../../../platform/files/common/inMemoryFilesystemProvider.ts';
+import { ILogService, NullLogService } from '../../../../../../platform/log/common/log.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
 
 suite('PromptBodyAutocompletion', () => {
 	const disposables = ensureNoDisposablesAreLeakedInTestSuite();

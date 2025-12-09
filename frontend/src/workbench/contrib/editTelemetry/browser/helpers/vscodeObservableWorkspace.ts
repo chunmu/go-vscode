@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onUnexpectedError } from '../../../../../base/common/errors.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { derived, IObservable, IObservableWithChange, mapObservableArrayCached, observableSignalFromEvent, observableValue, transaction } from '../../../../../base/common/observable.js';
-import { isDefined } from '../../../../../base/common/types.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { StringText } from '../../../../../editor/common/core/text/abstractText.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { offsetEditFromContentChanges } from '../../../../../editor/common/model/textModelStringEdit.js';
-import { IModelService } from '../../../../../editor/common/services/model.js';
-import { IObservableDocument, ObservableWorkspace, StringEditWithReason } from './observableWorkspace.js';
+import { onUnexpectedError } from '../../../../../base/common/errors.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { derived, IObservable, IObservableWithChange, mapObservableArrayCached, observableSignalFromEvent, observableValue, transaction } from '../../../../../base/common/observable.ts';
+import { isDefined } from '../../../../../base/common/types.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { StringText } from '../../../../../editor/common/core/text/abstractText.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { offsetEditFromContentChanges } from '../../../../../editor/common/model/textModelStringEdit.ts';
+import { IModelService } from '../../../../../editor/common/services/model.ts';
+import { IObservableDocument, ObservableWorkspace, StringEditWithReason } from './observableWorkspace.ts';
 
 export class VSCodeWorkspace extends ObservableWorkspace implements IDisposable {
 	private readonly _documents;

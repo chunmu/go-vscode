@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { distinct } from '../../../../base/common/arrays.js';
-import { findLastIdx } from '../../../../base/common/arraysFind.js';
-import { DeferredPromise, RunOnceScheduler } from '../../../../base/common/async.js';
-import { VSBuffer, decodeBase64, encodeBase64 } from '../../../../base/common/buffer.js';
-import { CancellationTokenSource } from '../../../../base/common/cancellation.js';
-import { Emitter, Event, trackSetChanges } from '../../../../base/common/event.js';
-import { stringHash } from '../../../../base/common/hash.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { mixin } from '../../../../base/common/objects.js';
-import { autorun } from '../../../../base/common/observable.js';
-import * as resources from '../../../../base/common/resources.js';
-import { isString, isUndefinedOrNull } from '../../../../base/common/types.js';
-import { URI, URI as uri } from '../../../../base/common/uri.js';
-import { generateUuid } from '../../../../base/common/uuid.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import * as nls from '../../../../nls.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { IEditorPane } from '../../../common/editor.js';
-import { DEBUG_MEMORY_SCHEME, DataBreakpointSetType, DataBreakpointSource, DebugTreeItemCollapsibleState, IBaseBreakpoint, IBreakpoint, IBreakpointData, IBreakpointUpdateData, IBreakpointsChangeEvent, IDataBreakpoint, IDebugEvaluatePosition, IDebugModel, IDebugSession, IDebugVisualizationTreeItem, IEnablement, IExceptionBreakpoint, IExceptionInfo, IExpression, IExpressionContainer, IFunctionBreakpoint, IInstructionBreakpoint, IMemoryInvalidationEvent, IMemoryRegion, IRawModelUpdate, IRawStoppedDetails, IScope, IStackFrame, IThread, ITreeElement, MemoryRange, MemoryRangeType, State, isFrameDeemphasized } from './debug.js';
-import { Source, UNKNOWN_SOURCE_LABEL, getUriFromSource } from './debugSource.js';
-import { DebugStorage } from './debugStorage.js';
-import { IDebugVisualizerService } from './debugVisualizers.js';
-import { DisassemblyViewInput } from './disassemblyViewInput.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { ITextFileService } from '../../../services/textfile/common/textfiles.js';
+import { distinct } from '../../../../base/common/arrays.ts';
+import { findLastIdx } from '../../../../base/common/arraysFind.ts';
+import { DeferredPromise, RunOnceScheduler } from '../../../../base/common/async.ts';
+import { VSBuffer, decodeBase64, encodeBase64 } from '../../../../base/common/buffer.ts';
+import { CancellationTokenSource } from '../../../../base/common/cancellation.ts';
+import { Emitter, Event, trackSetChanges } from '../../../../base/common/event.ts';
+import { stringHash } from '../../../../base/common/hash.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { mixin } from '../../../../base/common/objects.ts';
+import { autorun } from '../../../../base/common/observable.ts';
+import * as resources from '../../../../base/common/resources.ts';
+import { isString, isUndefinedOrNull } from '../../../../base/common/types.ts';
+import { URI, URI as uri } from '../../../../base/common/uri.ts';
+import { generateUuid } from '../../../../base/common/uuid.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import * as nls from '../../../../nls.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { IEditorPane } from '../../../common/editor.ts';
+import { DEBUG_MEMORY_SCHEME, DataBreakpointSetType, DataBreakpointSource, DebugTreeItemCollapsibleState, IBaseBreakpoint, IBreakpoint, IBreakpointData, IBreakpointUpdateData, IBreakpointsChangeEvent, IDataBreakpoint, IDebugEvaluatePosition, IDebugModel, IDebugSession, IDebugVisualizationTreeItem, IEnablement, IExceptionBreakpoint, IExceptionInfo, IExpression, IExpressionContainer, IFunctionBreakpoint, IInstructionBreakpoint, IMemoryInvalidationEvent, IMemoryRegion, IRawModelUpdate, IRawStoppedDetails, IScope, IStackFrame, IThread, ITreeElement, MemoryRange, MemoryRangeType, State, isFrameDeemphasized } from './debug.ts';
+import { Source, UNKNOWN_SOURCE_LABEL, getUriFromSource } from './debugSource.ts';
+import { DebugStorage } from './debugStorage.ts';
+import { IDebugVisualizerService } from './debugVisualizers.ts';
+import { DisassemblyViewInput } from './disassemblyViewInput.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { ITextFileService } from '../../../services/textfile/common/textfiles.ts';
 
 interface IDebugProtocolVariableWithContext extends DebugProtocol.Variable {
 	__vscodeVariableMenuContext?: string;

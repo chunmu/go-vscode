@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Sequencer } from '../../../../base/common/async.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { toErrorMessage } from '../../../../base/common/errorMessage.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { revive } from '../../../../base/common/marshalling.js';
-import { joinPath } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
-import { FileOperationResult, IFileService, toFileOperationResult } from '../../../../platform/files/common/files.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IUserDataProfilesService } from '../../../../platform/userDataProfile/common/userDataProfile.js';
-import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.js';
-import { ILifecycleService } from '../../../services/lifecycle/common/lifecycle.js';
-import { ChatModel, IChatModelInputState, ISerializableChatData, ISerializableChatDataIn, ISerializableChatsData, normalizeSerializableChatData } from './chatModel.js';
-import { ChatAgentLocation } from './constants.js';
+import { Sequencer } from '../../../../base/common/async.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { toErrorMessage } from '../../../../base/common/errorMessage.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { revive } from '../../../../base/common/marshalling.ts';
+import { joinPath } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { IEnvironmentService } from '../../../../platform/environment/common/environment.ts';
+import { FileOperationResult, IFileService, toFileOperationResult } from '../../../../platform/files/common/files.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IUserDataProfilesService } from '../../../../platform/userDataProfile/common/userDataProfile.ts';
+import { IWorkspaceContextService } from '../../../../platform/workspace/common/workspace.ts';
+import { ILifecycleService } from '../../../services/lifecycle/common/lifecycle.ts';
+import { ChatModel, IChatModelInputState, ISerializableChatData, ISerializableChatDataIn, ISerializableChatsData, normalizeSerializableChatData } from './chatModel.ts';
+import { ChatAgentLocation } from './constants.ts';
 
 const maxPersistedSessions = 25;
 

@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { mockFiles, MockFilesystem } from './mockFilesystem.js';
-import { URI } from '../../../../../../../base/common/uri.js';
-import { Schemas } from '../../../../../../../base/common/network.js';
-import { assertDefined } from '../../../../../../../base/common/types.js';
-import { FileService } from '../../../../../../../platform/files/common/fileService.js';
-import { ILogService, NullLogService } from '../../../../../../../platform/log/common/log.js';
-import { IFileService, IFileStat } from '../../../../../../../platform/files/common/files.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.js';
-import { InMemoryFileSystemProvider } from '../../../../../../../platform/files/common/inMemoryFilesystemProvider.js';
-import { TestInstantiationService } from '../../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
+import { mockFiles, MockFilesystem } from './mockFilesystem.ts';
+import { URI } from '../../../../../../../base/common/uri.ts';
+import { Schemas } from '../../../../../../../base/common/network.ts';
+import { assertDefined } from '../../../../../../../base/common/types.ts';
+import { FileService } from '../../../../../../../platform/files/common/fileService.ts';
+import { ILogService, NullLogService } from '../../../../../../../platform/log/common/log.ts';
+import { IFileService, IFileStat } from '../../../../../../../platform/files/common/files.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.ts';
+import { InMemoryFileSystemProvider } from '../../../../../../../platform/files/common/inMemoryFilesystemProvider.ts';
+import { TestInstantiationService } from '../../../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
 
 /**
  * Base attribute for an expected filesystem node (a file or a folder).

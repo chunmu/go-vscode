@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../base/common/network.js';
-import { ExtUri, IExtUri } from '../../../base/common/resources.js';
-import { UriComponents } from '../../../base/common/uri.js';
-import { FileSystemProviderCapabilities } from '../../../platform/files/common/files.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { ExtHostFileSystemInfoShape } from './extHost.protocol.js';
+import { Schemas } from '../../../base/common/network.ts';
+import { ExtUri, IExtUri } from '../../../base/common/resources.ts';
+import { UriComponents } from '../../../base/common/uri.ts';
+import { FileSystemProviderCapabilities } from '../../../platform/files/common/files.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { ExtHostFileSystemInfoShape } from './extHost.protocol.ts';
 
 export class ExtHostFileSystemInfo implements ExtHostFileSystemInfoShape {
 

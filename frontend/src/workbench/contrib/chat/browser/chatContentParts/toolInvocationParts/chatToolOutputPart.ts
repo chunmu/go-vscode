@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { renderMarkdown } from '../../../../../../base/browser/markdownRenderer.js';
-import { decodeBase64 } from '../../../../../../base/common/buffer.js';
-import { CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { generateUuid } from '../../../../../../base/common/uuid.js';
-import { localize } from '../../../../../../nls.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IChatToolInvocation, IChatToolInvocationSerialized, IToolResultOutputDetailsSerialized } from '../../../common/chatService.js';
-import { IChatViewModel } from '../../../common/chatViewModel.js';
-import { IToolResultOutputDetails } from '../../../common/languageModelToolsService.js';
-import { IChatCodeBlockInfo, IChatWidgetService } from '../../chat.js';
-import { IChatOutputRendererService } from '../../chatOutputItemRenderer.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { ChatProgressSubPart } from '../chatProgressContentPart.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { renderMarkdown } from '../../../../../../base/browser/markdownRenderer.ts';
+import { decodeBase64 } from '../../../../../../base/common/buffer.ts';
+import { CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { generateUuid } from '../../../../../../base/common/uuid.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatToolInvocation, IChatToolInvocationSerialized, IToolResultOutputDetailsSerialized } from '../../../common/chatService.ts';
+import { IChatViewModel } from '../../../common/chatViewModel.ts';
+import { IToolResultOutputDetails } from '../../../common/languageModelToolsService.ts';
+import { IChatCodeBlockInfo, IChatWidgetService } from '../../chat.ts';
+import { IChatOutputRendererService } from '../../chatOutputItemRenderer.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { ChatProgressSubPart } from '../chatProgressContentPart.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
 
 interface OutputState {
 	readonly webviewOrigin: string;

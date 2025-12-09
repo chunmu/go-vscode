@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CommandsRegistry, ICommandMetadata } from '../../../../platform/commands/common/commands.js';
-import { isNonEmptyArray } from '../../../../base/common/arrays.js';
-import { EditorExtensionsRegistry } from '../../../../editor/browser/editorExtensions.js';
-import { MenuRegistry, MenuId, isIMenuItem } from '../../../../platform/actions/common/actions.js';
+import { CommandsRegistry, ICommandMetadata } from '../../../../platform/commands/common/commands.ts';
+import { isNonEmptyArray } from '../../../../base/common/arrays.ts';
+import { EditorExtensionsRegistry } from '../../../../editor/browser/editorExtensions.ts';
+import { MenuRegistry, MenuId, isIMenuItem } from '../../../../platform/actions/common/actions.ts';
 
 export function getAllUnboundCommands(boundCommands: Map<string, boolean>): string[] {
 	const unboundCommands: string[] = [];

@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { mixin, deepClone } from '../../../base/common/objects.js';
-import { Event, Emitter } from '../../../base/common/event.js';
+import { mixin, deepClone } from '../../../base/common/objects.ts';
+import { Event, Emitter } from '../../../base/common/event.ts';
 import type * as vscode from 'vscode';
-import { ExtHostWorkspace, IExtHostWorkspace } from './extHostWorkspace.js';
-import { ExtHostConfigurationShape, MainThreadConfigurationShape, IConfigurationInitData, MainContext } from './extHost.protocol.js';
-import { ConfigurationTarget as ExtHostConfigurationTarget } from './extHostTypes.js';
-import { ConfigurationTarget, IConfigurationChange, IConfigurationData, IConfigurationOverrides } from '../../../platform/configuration/common/configuration.js';
-import { Configuration, ConfigurationChangeEvent } from '../../../platform/configuration/common/configurationModels.js';
-import { ConfigurationScope, OVERRIDE_PROPERTY_REGEX } from '../../../platform/configuration/common/configurationRegistry.js';
-import { isObject } from '../../../base/common/types.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { Barrier } from '../../../base/common/async.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { Workspace } from '../../../platform/workspace/common/workspace.js';
-import { URI } from '../../../base/common/uri.js';
+import { ExtHostWorkspace, IExtHostWorkspace } from './extHostWorkspace.ts';
+import { ExtHostConfigurationShape, MainThreadConfigurationShape, IConfigurationInitData, MainContext } from './extHost.protocol.ts';
+import { ConfigurationTarget as ExtHostConfigurationTarget } from './extHostTypes.ts';
+import { ConfigurationTarget, IConfigurationChange, IConfigurationData, IConfigurationOverrides } from '../../../platform/configuration/common/configuration.ts';
+import { Configuration, ConfigurationChangeEvent } from '../../../platform/configuration/common/configurationModels.ts';
+import { ConfigurationScope, OVERRIDE_PROPERTY_REGEX } from '../../../platform/configuration/common/configurationRegistry.ts';
+import { isObject } from '../../../base/common/types.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { Barrier } from '../../../base/common/async.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { Workspace } from '../../../platform/workspace/common/workspace.ts';
+import { URI } from '../../../base/common/uri.ts';
 
 function lookUp(tree: unknown, key: string) {
 	if (key) {

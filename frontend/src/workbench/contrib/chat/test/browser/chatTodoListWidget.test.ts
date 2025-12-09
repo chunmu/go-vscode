@@ -6,15 +6,15 @@
 /* eslint-disable no-restricted-syntax */
 
 import assert from 'assert';
-import { Event } from '../../../../../base/common/event.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { ChatTodoListWidget } from '../../browser/chatContentParts/chatTodoListWidget.js';
-import { IChatTodo, IChatTodoListService } from '../../common/chatTodoListService.js';
-import { mainWindow } from '../../../../../base/browser/window.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { URI } from '../../../../../base/common/uri.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { ChatTodoListWidget } from '../../browser/chatContentParts/chatTodoListWidget.ts';
+import { IChatTodo, IChatTodoListService } from '../../common/chatTodoListService.ts';
+import { mainWindow } from '../../../../../base/browser/window.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { URI } from '../../../../../base/common/uri.ts';
 
 const testSessionUri = URI.parse('chat-session://test/session1');
 

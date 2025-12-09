@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { CharCode } from '../../../../../../base/common/charCode.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { CompletionContext, CompletionItem, CompletionItemInsertTextRule, CompletionItemKind, CompletionItemProvider, CompletionList } from '../../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../languageModels.js';
-import { ILanguageModelToolsService } from '../../languageModelToolsService.js';
-import { IChatModeService } from '../../chatModes.js';
-import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.js';
-import { IPromptsService } from '../service/promptsService.js';
-import { Iterable } from '../../../../../../base/common/iterator.js';
-import { PromptHeader, PromptHeaderAttributes } from '../promptFileParser.js';
-import { getValidAttributeNames, isGithubTarget, knownGithubCopilotTools } from './promptValidator.js';
-import { localize } from '../../../../../../nls.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { CharCode } from '../../../../../../base/common/charCode.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { CompletionContext, CompletionItem, CompletionItemInsertTextRule, CompletionItemKind, CompletionItemProvider, CompletionList } from '../../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../languageModels.ts';
+import { ILanguageModelToolsService } from '../../languageModelToolsService.ts';
+import { IChatModeService } from '../../chatModes.ts';
+import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.ts';
+import { IPromptsService } from '../service/promptsService.ts';
+import { Iterable } from '../../../../../../base/common/iterator.ts';
+import { PromptHeader, PromptHeaderAttributes } from '../promptFileParser.ts';
+import { getValidAttributeNames, isGithubTarget, knownGithubCopilotTools } from './promptValidator.ts';
+import { localize } from '../../../../../../nls.ts';
 
 export class PromptHeaderAutocompletion implements CompletionItemProvider {
 	/**

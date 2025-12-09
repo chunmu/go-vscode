@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDiffChange } from '../../../../base/common/diff/diff.js';
-import { CellKind, INotebookDiffResult } from './notebookCommon.js';
+import { IDiffChange } from '../../../../base/common/diff/diff.ts';
+import { CellKind, INotebookDiffResult } from './notebookCommon.ts';
 
 export type CellDiffInfo = {
 	originalCellIndex: number;

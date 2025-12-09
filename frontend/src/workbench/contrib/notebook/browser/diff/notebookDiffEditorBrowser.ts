@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CellLayoutState, ICellOutputViewModel, ICommonCellInfo, IGenericCellViewModel, IInsetRenderOutput, INotebookEditor } from '../notebookBrowser.js';
-import { DiffElementCellViewModelBase, IDiffElementViewModelBase } from './diffElementViewModel.js';
-import { Event } from '../../../../../base/common/event.js';
-import { BareFontInfo } from '../../../../../editor/common/config/fontInfo.js';
-import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { NotebookTextModel } from '../../common/model/notebookTextModel.js';
-import { CodeEditorWidget } from '../../../../../editor/browser/widget/codeEditor/codeEditorWidget.js';
-import { IMouseWheelEvent } from '../../../../../base/browser/mouseEvent.js';
-import { RawContextKey } from '../../../../../platform/contextkey/common/contextkey.js';
-import { NotebookOptions } from '../notebookOptions.js';
-import { NotebookLayoutInfo } from '../notebookViewEvents.js';
-import { WorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.js';
-import { DiffEditorWidget } from '../../../../../editor/browser/widget/diffEditor/diffEditorWidget.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { localize } from '../../../../../nls.js';
-import { IObservable } from '../../../../../base/common/observable.js';
+import { CellLayoutState, ICellOutputViewModel, ICommonCellInfo, IGenericCellViewModel, IInsetRenderOutput, INotebookEditor } from '../notebookBrowser.ts';
+import { DiffElementCellViewModelBase, IDiffElementViewModelBase } from './diffElementViewModel.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { BareFontInfo } from '../../../../../editor/common/config/fontInfo.ts';
+import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { NotebookTextModel } from '../../common/model/notebookTextModel.ts';
+import { CodeEditorWidget } from '../../../../../editor/browser/widget/codeEditor/codeEditorWidget.ts';
+import { IMouseWheelEvent } from '../../../../../base/browser/mouseEvent.ts';
+import { RawContextKey } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { NotebookOptions } from '../notebookOptions.ts';
+import { NotebookLayoutInfo } from '../notebookViewEvents.ts';
+import { WorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.ts';
+import { DiffEditorWidget } from '../../../../../editor/browser/widget/diffEditor/diffEditorWidget.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { localize } from '../../../../../nls.ts';
+import { IObservable } from '../../../../../base/common/observable.ts';
 
 export enum DiffSide {
 	Original = 0,

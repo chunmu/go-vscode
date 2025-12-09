@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Color } from '../../../../../base/common/color.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { Extensions, IColorRegistry } from '../../../../../platform/theme/common/colorRegistry.js';
+import { Color } from '../../../../../base/common/color.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { Extensions, IColorRegistry } from '../../../../../platform/theme/common/colorRegistry.ts';
 
 suite('ColorRegistry', () => {
 	if (process.env.VSCODE_COLOR_REGISTRY_EXPORT) {

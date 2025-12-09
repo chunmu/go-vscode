@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../../../base/common/buffer.js';
-import { hashAsync } from '../../../../../base/common/hash.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { revive } from '../../../../../base/common/marshalling.js';
-import { joinPath } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { EditSuggestionId } from '../../../../../editor/common/textModelEditSource.js';
-import { IEnvironmentService } from '../../../../../platform/environment/common/environment.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { IWorkspaceContextService } from '../../../../../platform/workspace/common/workspace.js';
-import { Dto } from '../../../../services/extensions/common/proxyIdentifier.js';
-import { ISnapshotEntry, ModifiedFileEntryState, WorkingSetDisplayMetadata } from '../../common/chatEditingService.js';
-import { getKeyForChatSessionResource, IChatEditingTimelineState } from './chatEditingOperations.js';
+import { VSBuffer } from '../../../../../base/common/buffer.ts';
+import { hashAsync } from '../../../../../base/common/hash.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { revive } from '../../../../../base/common/marshalling.ts';
+import { joinPath } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { EditSuggestionId } from '../../../../../editor/common/textModelEditSource.ts';
+import { IEnvironmentService } from '../../../../../platform/environment/common/environment.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { IWorkspaceContextService } from '../../../../../platform/workspace/common/workspace.ts';
+import { Dto } from '../../../../services/extensions/common/proxyIdentifier.ts';
+import { ISnapshotEntry, ModifiedFileEntryState, WorkingSetDisplayMetadata } from '../../common/chatEditingService.ts';
+import { getKeyForChatSessionResource, IChatEditingTimelineState } from './chatEditingOperations.ts';
 
 const STORAGE_CONTENTS_FOLDER = 'contents';
 const STORAGE_STATE_FILE = 'state.json';

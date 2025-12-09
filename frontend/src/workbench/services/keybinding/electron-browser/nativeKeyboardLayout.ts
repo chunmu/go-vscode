@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IKeyboardLayoutInfo, IKeyboardLayoutService, IKeyboardMapping, ILinuxKeyboardLayoutInfo, IMacKeyboardLayoutInfo, IMacLinuxKeyboardMapping, IWindowsKeyboardLayoutInfo, IWindowsKeyboardMapping } from '../../../../platform/keyboardLayout/common/keyboardLayout.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { OperatingSystem, OS } from '../../../../base/common/platform.js';
-import { CachedKeyboardMapper, IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.js';
-import { WindowsKeyboardMapper } from '../common/windowsKeyboardMapper.js';
-import { FallbackKeyboardMapper } from '../common/fallbackKeyboardMapper.js';
-import { MacLinuxKeyboardMapper } from '../common/macLinuxKeyboardMapper.js';
-import { DispatchConfig, readKeyboardConfig } from '../../../../platform/keyboardLayout/common/keyboardConfig.js';
-import { IKeyboardEvent } from '../../../../platform/keybinding/common/keybinding.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { INativeKeyboardLayoutService } from './nativeKeyboardLayoutService.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IKeyboardLayoutInfo, IKeyboardLayoutService, IKeyboardMapping, ILinuxKeyboardLayoutInfo, IMacKeyboardLayoutInfo, IMacLinuxKeyboardMapping, IWindowsKeyboardLayoutInfo, IWindowsKeyboardMapping } from '../../../../platform/keyboardLayout/common/keyboardLayout.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { OperatingSystem, OS } from '../../../../base/common/platform.ts';
+import { CachedKeyboardMapper, IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.ts';
+import { WindowsKeyboardMapper } from '../common/windowsKeyboardMapper.ts';
+import { FallbackKeyboardMapper } from '../common/fallbackKeyboardMapper.ts';
+import { MacLinuxKeyboardMapper } from '../common/macLinuxKeyboardMapper.ts';
+import { DispatchConfig, readKeyboardConfig } from '../../../../platform/keyboardLayout/common/keyboardConfig.ts';
+import { IKeyboardEvent } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { INativeKeyboardLayoutService } from './nativeKeyboardLayoutService.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
 
 export class KeyboardLayoutService extends Disposable implements IKeyboardLayoutService {
 

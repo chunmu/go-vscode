@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce } from '../../../../../../base/common/arrays.js';
-import { DisposableMap, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import * as languages from '../../../../../../editor/common/languages.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IThemeService } from '../../../../../../platform/theme/common/themeService.js';
-import { ICommentService, INotebookCommentInfo } from '../../../../comments/browser/commentService.js';
-import { CommentThreadWidget } from '../../../../comments/browser/commentThreadWidget.js';
-import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
-import { ICellRange } from '../../../common/notebookRange.js';
+import { coalesce } from '../../../../../../base/common/arrays.ts';
+import { DisposableMap, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import * as languages from '../../../../../../editor/common/languages.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IThemeService } from '../../../../../../platform/theme/common/themeService.ts';
+import { ICommentService, INotebookCommentInfo } from '../../../../comments/browser/commentService.ts';
+import { CommentThreadWidget } from '../../../../comments/browser/commentThreadWidget.ts';
+import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { ICellRange } from '../../../common/notebookRange.ts';
 
 export class CellComments extends CellContentPart {
 	// keyed by threadId

@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { PromptLinkProvider } from './languageProviders/promptLinkProvider.js';
-import { PromptBodyAutocompletion } from './languageProviders/promptBodyAutocompletion.js';
-import { PromptHeaderAutocompletion } from './languageProviders/promptHeaderAutocompletion.js';
-import { PromptHoverProvider } from './languageProviders/promptHovers.js';
-import { PromptHeaderDefinitionProvider } from './languageProviders/PromptHeaderDefinitionProvider.js';
-import { PromptValidatorContribution } from './languageProviders/promptValidator.js';
-import { PromptDocumentSemanticTokensProvider } from './languageProviders/promptDocumentSemanticTokensProvider.js';
-import { PromptCodeActionProvider } from './languageProviders/promptCodeActions.js';
-import { ILanguageFeaturesService } from '../../../../../editor/common/services/languageFeatures.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ALL_PROMPTS_LANGUAGE_SELECTOR } from './promptTypes.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { PromptLinkProvider } from './languageProviders/promptLinkProvider.ts';
+import { PromptBodyAutocompletion } from './languageProviders/promptBodyAutocompletion.ts';
+import { PromptHeaderAutocompletion } from './languageProviders/promptHeaderAutocompletion.ts';
+import { PromptHoverProvider } from './languageProviders/promptHovers.ts';
+import { PromptHeaderDefinitionProvider } from './languageProviders/PromptHeaderDefinitionProvider.ts';
+import { PromptValidatorContribution } from './languageProviders/promptValidator.ts';
+import { PromptDocumentSemanticTokensProvider } from './languageProviders/promptDocumentSemanticTokensProvider.ts';
+import { PromptCodeActionProvider } from './languageProviders/promptCodeActions.ts';
+import { ILanguageFeaturesService } from '../../../../../editor/common/services/languageFeatures.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ALL_PROMPTS_LANGUAGE_SELECTOR } from './promptTypes.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
 
 export class PromptLanguageFeaturesProvider extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'chat.promptLanguageFeatures';

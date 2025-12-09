@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { toErrorMessage } from '../../../../base/common/errorMessage.js';
-import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { SimpleIconLabel } from '../../../../base/browser/ui/iconLabel/simpleIconLabel.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IStatusbarEntry, isTooltipWithCommands, ShowTooltipCommand, StatusbarEntryKinds, TooltipContent } from '../../../services/statusbar/browser/statusbar.js';
-import { WorkbenchActionExecutedEvent, WorkbenchActionExecutedClassification } from '../../../../base/common/actions.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { ThemeColor } from '../../../../base/common/themables.js';
-import { isThemeColor } from '../../../../editor/common/editorCommon.js';
-import { addDisposableListener, EventType, hide, show, append, EventHelper, $ } from '../../../../base/browser/dom.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { Command } from '../../../../editor/common/languages.js';
-import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import { renderIcon, renderLabelWithIcons } from '../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { spinningLoading, syncing } from '../../../../platform/theme/common/iconRegistry.js';
-import { isMarkdownString, markdownStringEqual } from '../../../../base/common/htmlContent.js';
-import { IHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegate.js';
-import { Gesture, EventType as TouchEventType } from '../../../../base/browser/touch.js';
-import { IManagedHover, IManagedHoverOptions } from '../../../../base/browser/ui/hover/hover.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
+import { toErrorMessage } from '../../../../base/common/errorMessage.ts';
+import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { SimpleIconLabel } from '../../../../base/browser/ui/iconLabel/simpleIconLabel.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IStatusbarEntry, isTooltipWithCommands, ShowTooltipCommand, StatusbarEntryKinds, TooltipContent } from '../../../services/statusbar/browser/statusbar.ts';
+import { WorkbenchActionExecutedEvent, WorkbenchActionExecutedClassification } from '../../../../base/common/actions.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { ThemeColor } from '../../../../base/common/themables.ts';
+import { isThemeColor } from '../../../../editor/common/editorCommon.ts';
+import { addDisposableListener, EventType, hide, show, append, EventHelper, $ } from '../../../../base/browser/dom.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { Command } from '../../../../editor/common/languages.ts';
+import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import { renderIcon, renderLabelWithIcons } from '../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { spinningLoading, syncing } from '../../../../platform/theme/common/iconRegistry.ts';
+import { isMarkdownString, markdownStringEqual } from '../../../../base/common/htmlContent.ts';
+import { IHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegate.ts';
+import { Gesture, EventType as TouchEventType } from '../../../../base/browser/touch.ts';
+import { IManagedHover, IManagedHoverOptions } from '../../../../base/browser/ui/hover/hover.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
 
 export class StatusbarEntryItem extends Disposable {
 

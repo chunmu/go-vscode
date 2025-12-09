@@ -4,11 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type { ModelOperations, ModelResult } from '@vscode/vscode-languagedetection';
-import { importAMDNodeModule } from '../../../../amdX.js';
-import { StopWatch } from '../../../../base/common/stopwatch.js';
-import { IWebWorkerServerRequestHandler, IWebWorkerServer } from '../../../../base/common/worker/webWorker.js';
-import { LanguageDetectionWorkerHost, ILanguageDetectionWorker } from './languageDetectionWorker.protocol.js';
-import { WorkerTextModelSyncServer } from '../../../../editor/common/services/textModelSync/textModelSync.impl.js';
+import { importAMDNodeModule } from '../../../../amdX.ts';
+import { StopWatch } from '../../../../base/common/stopwatch.ts';
+import { IWebWorkerServerRequestHandler, IWebWorkerServer } from '../../../../base/common/worker/webWorker.ts';
+import { LanguageDetectionWorkerHost, ILanguageDetectionWorker } from './languageDetectionWorker.protocol.ts';
+import { WorkerTextModelSyncServer } from '../../../../editor/common/services/textModelSync/textModelSync.impl.ts';
 
 type RegexpModel = { detect: (inp: string, langBiases: Record<string, number>, supportedLangs?: string[]) => string | undefined };
 

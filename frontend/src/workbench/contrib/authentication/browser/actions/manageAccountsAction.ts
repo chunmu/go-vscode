@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Lazy } from '../../../../../base/common/lazy.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IProductService } from '../../../../../platform/product/common/productService.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.js';
-import { ISecretStorageService } from '../../../../../platform/secrets/common/secrets.js';
-import { AuthenticationSessionInfo, getCurrentAuthenticationSessionInfo } from '../../../../services/authentication/browser/authenticationService.js';
-import { IAuthenticationProvider, IAuthenticationService } from '../../../../services/authentication/common/authentication.js';
+import { Lazy } from '../../../../../base/common/lazy.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IProductService } from '../../../../../platform/product/common/productService.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { ISecretStorageService } from '../../../../../platform/secrets/common/secrets.ts';
+import { AuthenticationSessionInfo, getCurrentAuthenticationSessionInfo } from '../../../../services/authentication/browser/authenticationService.ts';
+import { IAuthenticationProvider, IAuthenticationService } from '../../../../services/authentication/common/authentication.ts';
 
 export class ManageAccountsAction extends Action2 {
 	constructor() {

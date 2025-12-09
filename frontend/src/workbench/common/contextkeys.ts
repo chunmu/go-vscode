@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore } from '../../base/common/lifecycle.js';
-import { URI } from '../../base/common/uri.js';
-import { localize } from '../../nls.js';
-import { IContextKeyService, IContextKey, RawContextKey } from '../../platform/contextkey/common/contextkey.js';
-import { basename, dirname, extname, isEqual } from '../../base/common/resources.js';
-import { ILanguageService } from '../../editor/common/languages/language.js';
-import { IFileService } from '../../platform/files/common/files.js';
-import { IModelService } from '../../editor/common/services/model.js';
-import { Schemas } from '../../base/common/network.js';
-import { EditorInput } from './editor/editorInput.js';
-import { IEditorResolverService } from '../services/editor/common/editorResolverService.js';
-import { DEFAULT_EDITOR_ASSOCIATION } from './editor.js';
-import { DiffEditorInput } from './editor/diffEditorInput.js';
+import { DisposableStore } from '../../base/common/lifecycle.ts';
+import { URI } from '../../base/common/uri.ts';
+import { localize } from '../../nls.ts';
+import { IContextKeyService, IContextKey, RawContextKey } from '../../platform/contextkey/common/contextkey.ts';
+import { basename, dirname, extname, isEqual } from '../../base/common/resources.ts';
+import { ILanguageService } from '../../editor/common/languages/language.ts';
+import { IFileService } from '../../platform/files/common/files.ts';
+import { IModelService } from '../../editor/common/services/model.ts';
+import { Schemas } from '../../base/common/network.ts';
+import { EditorInput } from './editor/editorInput.ts';
+import { IEditorResolverService } from '../services/editor/common/editorResolverService.ts';
+import { DEFAULT_EDITOR_ASSOCIATION } from './editor.ts';
+import { DiffEditorInput } from './editor/diffEditorInput.ts';
 
 //#region < --- Workbench --- >
 

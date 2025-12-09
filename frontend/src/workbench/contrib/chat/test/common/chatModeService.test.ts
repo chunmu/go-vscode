@@ -4,23 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { timeout } from '../../../../../base/common/async.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.js';
-import { ILogService, NullLogService } from '../../../../../platform/log/common/log.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { IChatAgentService } from '../../common/chatAgents.js';
-import { ChatMode, ChatModeService } from '../../common/chatModes.js';
-import { ChatModeKind } from '../../common/constants.js';
-import { IAgentSource, ICustomAgent, IPromptsService, PromptsStorage } from '../../common/promptSyntax/service/promptsService.js';
-import { MockPromptsService } from './mockPromptsService.js';
+import { timeout } from '../../../../../base/common/async.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.ts';
+import { ILogService, NullLogService } from '../../../../../platform/log/common/log.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { IChatAgentService } from '../../common/chatAgents.ts';
+import { ChatMode, ChatModeService } from '../../common/chatModes.ts';
+import { ChatModeKind } from '../../common/constants.ts';
+import { IAgentSource, ICustomAgent, IPromptsService, PromptsStorage } from '../../common/promptSyntax/service/promptsService.ts';
+import { MockPromptsService } from './mockPromptsService.ts';
 
 class TestChatAgentService implements Partial<IChatAgentService> {
 	_serviceBrand: undefined;

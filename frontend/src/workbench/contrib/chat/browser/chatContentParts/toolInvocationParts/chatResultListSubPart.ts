@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IMarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { Location } from '../../../../../../editor/common/languages.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IChatToolInvocation, IChatToolInvocationSerialized } from '../../../common/chatService.js';
-import { IChatCodeBlockInfo } from '../../chat.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { ChatCollapsibleListContentPart, CollapsibleListPool, IChatCollapsibleListItem } from '../chatReferencesContentPart.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
+import { IMarkdownString } from '../../../../../../base/common/htmlContent.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { Location } from '../../../../../../editor/common/languages.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IChatToolInvocation, IChatToolInvocationSerialized } from '../../../common/chatService.ts';
+import { IChatCodeBlockInfo } from '../../chat.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { ChatCollapsibleListContentPart, CollapsibleListPool, IChatCollapsibleListItem } from '../chatReferencesContentPart.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
 
 export class ChatResultListSubPart extends BaseChatToolInvocationSubPart {
 	public readonly domNode: HTMLElement;

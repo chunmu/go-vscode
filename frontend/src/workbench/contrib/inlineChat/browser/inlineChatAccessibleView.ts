@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { InlineChatController } from './inlineChatController.js';
-import { CTX_INLINE_CHAT_FOCUSED, CTX_INLINE_CHAT_RESPONSE_FOCUSED } from '../common/inlineChat.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { AccessibleViewProviderId, AccessibleViewType, AccessibleContentProvider } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { renderAsPlaintext } from '../../../../base/browser/markdownRenderer.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
+import { InlineChatController } from './inlineChatController.ts';
+import { CTX_INLINE_CHAT_FOCUSED, CTX_INLINE_CHAT_RESPONSE_FOCUSED } from '../common/inlineChat.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { AccessibleViewProviderId, AccessibleViewType, AccessibleContentProvider } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { renderAsPlaintext } from '../../../../base/browser/markdownRenderer.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
 
 export class InlineChatAccessibleView implements IAccessibleViewImplementation {
 	readonly priority = 100;

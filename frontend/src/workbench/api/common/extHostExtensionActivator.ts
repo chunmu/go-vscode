@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import * as errors from '../../../base/common/errors.js';
-import { Disposable, IDisposable } from '../../../base/common/lifecycle.js';
-import { ExtensionDescriptionRegistry } from '../../services/extensions/common/extensionDescriptionRegistry.js';
-import { ExtensionIdentifier, ExtensionIdentifierMap } from '../../../platform/extensions/common/extensions.js';
-import { ExtensionActivationReason, MissingExtensionDependency } from '../../services/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { Barrier } from '../../../base/common/async.js';
+import * as errors from '../../../base/common/errors.ts';
+import { Disposable, IDisposable } from '../../../base/common/lifecycle.ts';
+import { ExtensionDescriptionRegistry } from '../../services/extensions/common/extensionDescriptionRegistry.ts';
+import { ExtensionIdentifier, ExtensionIdentifierMap } from '../../../platform/extensions/common/extensions.ts';
+import { ExtensionActivationReason, MissingExtensionDependency } from '../../services/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { Barrier } from '../../../base/common/async.ts';
 
 /**
  * Represents the source code (module) of an extension.

@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { equals } from '../../../../base/common/arrays.js';
-import { URI } from '../../../../base/common/uri.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Location } from './location.js';
-import { Range } from './range.js';
+import { equals } from '../../../../base/common/arrays.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Location } from './location.ts';
+import { Range } from './range.ts';
 
 export enum DiagnosticTag {
 	Unnecessary = 1,

@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { localize } from '../../../../../nls.js';
-import { IAction2Options, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { InputFocusedContext } from '../../../../../platform/contextkey/common/contextkeys.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { insertCell } from './cellOperations.js';
-import { INotebookActionContext, NotebookAction } from './coreActions.js';
-import { NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_EDITOR_EDITABLE } from '../../common/notebookContextKeys.js';
-import { CellViewModel } from '../viewModel/notebookViewModelImpl.js';
-import { CellKind, NotebookSetting } from '../../common/notebookCommon.js';
-import { INotebookKernelHistoryService } from '../../common/notebookKernelService.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { localize } from '../../../../../nls.ts';
+import { IAction2Options, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { InputFocusedContext } from '../../../../../platform/contextkey/common/contextkeys.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { insertCell } from './cellOperations.ts';
+import { INotebookActionContext, NotebookAction } from './coreActions.ts';
+import { NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_EDITOR_EDITABLE } from '../../common/notebookContextKeys.ts';
+import { CellViewModel } from '../viewModel/notebookViewModelImpl.ts';
+import { CellKind, NotebookSetting } from '../../common/notebookCommon.ts';
+import { INotebookKernelHistoryService } from '../../common/notebookKernelService.ts';
 
 const INSERT_CODE_CELL_ABOVE_COMMAND_ID = 'notebook.cell.insertCodeCellAbove';
 const INSERT_CODE_CELL_BELOW_COMMAND_ID = 'notebook.cell.insertCodeCellBelow';

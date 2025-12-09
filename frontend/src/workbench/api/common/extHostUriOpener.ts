@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { toDisposable } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import * as languages from '../../../editor/common/languages.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { toDisposable } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import * as languages from '../../../editor/common/languages.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
 import type * as vscode from 'vscode';
-import { ExtHostUriOpenersShape, IMainContext, MainContext, MainThreadUriOpenersShape } from './extHost.protocol.js';
+import { ExtHostUriOpenersShape, IMainContext, MainContext, MainThreadUriOpenersShape } from './extHost.protocol.ts';
 
 
 export class ExtHostUriOpeners implements ExtHostUriOpenersShape {

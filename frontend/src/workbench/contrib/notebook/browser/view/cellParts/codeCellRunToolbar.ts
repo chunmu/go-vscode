@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ToolBar } from '../../../../../../base/browser/ui/toolbar/toolbar.js';
-import { Action, IAction } from '../../../../../../base/common/actions.js';
-import { DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { MarshalledId } from '../../../../../../base/common/marshallingIds.js';
-import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.js';
-import { localize } from '../../../../../../nls.js';
-import { DropdownWithPrimaryActionViewItem } from '../../../../../../platform/actions/browser/dropdownWithPrimaryActionViewItem.js';
-import { getActionBarActions } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { IMenu, IMenuService, MenuId, MenuItemAction } from '../../../../../../platform/actions/common/actions.js';
-import { IContextKeyService, IScopedContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { InputFocusedContext } from '../../../../../../platform/contextkey/common/contextkeys.js';
-import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { INotebookCellActionContext } from '../../controller/coreActions.js';
-import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
-import { registerCellToolbarStickyScroll } from './cellToolbarStickyScroll.js';
-import { NOTEBOOK_CELL_EXECUTION_STATE, NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_CELL_TYPE, NOTEBOOK_EDITOR_FOCUSED } from '../../../common/notebookContextKeys.js';
+import { ToolBar } from '../../../../../../base/browser/ui/toolbar/toolbar.ts';
+import { Action, IAction } from '../../../../../../base/common/actions.ts';
+import { DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { MarshalledId } from '../../../../../../base/common/marshallingIds.ts';
+import { EditorContextKeys } from '../../../../../../editor/common/editorContextKeys.ts';
+import { localize } from '../../../../../../nls.ts';
+import { DropdownWithPrimaryActionViewItem } from '../../../../../../platform/actions/browser/dropdownWithPrimaryActionViewItem.ts';
+import { getActionBarActions } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { IMenu, IMenuService, MenuId, MenuItemAction } from '../../../../../../platform/actions/common/actions.ts';
+import { IContextKeyService, IScopedContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { InputFocusedContext } from '../../../../../../platform/contextkey/common/contextkeys.ts';
+import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { INotebookCellActionContext } from '../../controller/coreActions.ts';
+import { ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { registerCellToolbarStickyScroll } from './cellToolbarStickyScroll.ts';
+import { NOTEBOOK_CELL_EXECUTION_STATE, NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_CELL_TYPE, NOTEBOOK_EDITOR_FOCUSED } from '../../../common/notebookContextKeys.ts';
 
 export class RunToolbar extends CellContentPart {
 	private toolbar!: ToolBar;

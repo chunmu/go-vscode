@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.js';
-import { Event, Emitter } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { observableFromEvent } from '../../../../base/common/observable.js';
-import * as nls from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { AccessibilityCommandId } from '../../accessibility/common/accessibilityCommands.js';
-import { CellViewModel, NotebookViewModel } from './viewModel/notebookViewModelImpl.js';
-import { CellKind, NotebookCellExecutionState } from '../common/notebookCommon.js';
-import { ICellExecutionStateChangedEvent, IExecutionStateChangedEvent, INotebookExecutionStateService, NotebookExecutionType } from '../common/notebookExecutionStateService.js';
-import { getAllOutputsText } from './viewModel/cellOutputTextHelper.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
-import { alert } from '../../../../base/browser/ui/aria/aria.js';
+import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.ts';
+import { Event, Emitter } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { observableFromEvent } from '../../../../base/common/observable.ts';
+import * as nls from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { AccessibilityCommandId } from '../../accessibility/common/accessibilityCommands.ts';
+import { CellViewModel, NotebookViewModel } from './viewModel/notebookViewModelImpl.ts';
+import { CellKind, NotebookCellExecutionState } from '../common/notebookCommon.ts';
+import { ICellExecutionStateChangedEvent, IExecutionStateChangedEvent, INotebookExecutionStateService, NotebookExecutionType } from '../common/notebookExecutionStateService.ts';
+import { getAllOutputsText } from './viewModel/cellOutputTextHelper.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
+import { alert } from '../../../../base/browser/ui/aria/aria.ts';
 
 type executionUpdate = { cellHandle: number; state: NotebookCellExecutionState | undefined };
 

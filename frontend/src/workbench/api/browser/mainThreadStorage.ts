@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IStorageService, StorageScope } from '../../../platform/storage/common/storage.js';
-import { MainThreadStorageShape, MainContext, ExtHostStorageShape, ExtHostContext } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { isWeb } from '../../../base/common/platform.js';
-import { IExtensionIdWithVersion, IExtensionStorageService } from '../../../platform/extensionManagement/common/extensionStorage.js';
-import { migrateExtensionStorage } from '../../services/extensions/common/extensionStorageMigration.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
+import { IStorageService, StorageScope } from '../../../platform/storage/common/storage.ts';
+import { MainThreadStorageShape, MainContext, ExtHostStorageShape, ExtHostContext } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { isWeb } from '../../../base/common/platform.ts';
+import { IExtensionIdWithVersion, IExtensionStorageService } from '../../../platform/extensionManagement/common/extensionStorage.ts';
+import { migrateExtensionStorage } from '../../services/extensions/common/extensionStorageMigration.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadStorage)
 export class MainThreadStorage implements MainThreadStorageShape {

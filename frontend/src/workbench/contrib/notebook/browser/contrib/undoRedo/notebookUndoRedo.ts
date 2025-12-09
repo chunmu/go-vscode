@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.js';
-import { CellKind } from '../../../common/notebookCommon.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { CellEditState, getNotebookEditorFromEditorPane } from '../../notebookBrowser.js';
-import { RedoCommand, UndoCommand } from '../../../../../../editor/browser/editorExtensions.js';
-import { NotebookViewModel } from '../../viewModel/notebookViewModelImpl.js';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.ts';
+import { CellKind } from '../../../common/notebookCommon.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { CellEditState, getNotebookEditorFromEditorPane } from '../../notebookBrowser.ts';
+import { RedoCommand, UndoCommand } from '../../../../../../editor/browser/editorExtensions.ts';
+import { NotebookViewModel } from '../../viewModel/notebookViewModelImpl.ts';
 
 class NotebookUndoRedoContribution extends Disposable {
 

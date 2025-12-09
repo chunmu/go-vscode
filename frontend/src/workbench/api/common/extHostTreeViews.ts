@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../nls.js';
+import { localize } from '../../../nls.ts';
 import type * as vscode from 'vscode';
-import { basename } from '../../../base/common/resources.js';
-import { URI } from '../../../base/common/uri.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { Disposable, DisposableStore, dispose, IDisposable } from '../../../base/common/lifecycle.js';
-import { CheckboxUpdate, DataTransferDTO, ExtHostTreeViewsShape, MainThreadTreeViewsShape } from './extHost.protocol.js';
-import { ITreeItem, TreeViewItemHandleArg, ITreeItemLabel, IRevealOptions, TreeCommand, TreeViewPaneHandleArg, ITreeItemCheckboxState, NoTreeViewError } from '../../common/views.js';
-import { ExtHostCommands, CommandsConverter } from './extHostCommands.js';
-import { asPromise } from '../../../base/common/async.js';
-import * as extHostTypes from './extHostTypes.js';
-import { isUndefinedOrNull, isString } from '../../../base/common/types.js';
-import { equals, coalesce, distinct } from '../../../base/common/arrays.js';
-import { ILogService, LogLevel } from '../../../platform/log/common/log.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { MarkdownString, ViewBadge, DataTransfer } from './extHostTypeConverters.js';
-import { IMarkdownString, isMarkdownString } from '../../../base/common/htmlContent.js';
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { ITreeViewsDnDService, TreeViewsDnDService } from '../../../editor/common/services/treeViewsDnd.js';
-import { IAccessibilityInformation } from '../../../platform/accessibility/common/accessibility.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
+import { basename } from '../../../base/common/resources.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { Disposable, DisposableStore, dispose, IDisposable } from '../../../base/common/lifecycle.ts';
+import { CheckboxUpdate, DataTransferDTO, ExtHostTreeViewsShape, MainThreadTreeViewsShape } from './extHost.protocol.ts';
+import { ITreeItem, TreeViewItemHandleArg, ITreeItemLabel, IRevealOptions, TreeCommand, TreeViewPaneHandleArg, ITreeItemCheckboxState, NoTreeViewError } from '../../common/views.ts';
+import { ExtHostCommands, CommandsConverter } from './extHostCommands.ts';
+import { asPromise } from '../../../base/common/async.ts';
+import * as extHostTypes from './extHostTypes.ts';
+import { isUndefinedOrNull, isString } from '../../../base/common/types.ts';
+import { equals, coalesce, distinct } from '../../../base/common/arrays.ts';
+import { ILogService, LogLevel } from '../../../platform/log/common/log.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { MarkdownString, ViewBadge, DataTransfer } from './extHostTypeConverters.ts';
+import { IMarkdownString, isMarkdownString } from '../../../base/common/htmlContent.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { ITreeViewsDnDService, TreeViewsDnDService } from '../../../editor/common/services/treeViewsDnd.ts';
+import { IAccessibilityInformation } from '../../../platform/accessibility/common/accessibility.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
 
 type TreeItemHandle = string;
 

@@ -4,24 +4,24 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { Event } from '../../../../../base/common/event.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { AgentSessionsViewModel, IAgentSessionViewModel, isAgentSession, isAgentSessionsViewModel, isLocalAgentSessionItem } from '../../browser/agentSessions/agentSessionViewModel.js';
-import { AgentSessionsViewFilter } from '../../browser/agentSessions/agentSessionsViewFilter.js';
-import { ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
-import { MockChatSessionsService } from '../common/mockChatSessionsService.js';
-import { TestLifecycleService, workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
-import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { MenuId } from '../../../../../platform/actions/common/actions.js';
-import { ILifecycleService } from '../../../../services/lifecycle/common/lifecycle.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { AgentSessionsViewModel, IAgentSessionViewModel, isAgentSession, isAgentSessionsViewModel, isLocalAgentSessionItem } from '../../browser/agentSessions/agentSessionViewModel.ts';
+import { AgentSessionsViewFilter } from '../../browser/agentSessions/agentSessionsViewFilter.ts';
+import { ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
+import { MockChatSessionsService } from '../common/mockChatSessionsService.ts';
+import { TestLifecycleService, workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
+import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { MenuId } from '../../../../../platform/actions/common/actions.ts';
+import { ILifecycleService } from '../../../../services/lifecycle/common/lifecycle.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../../platform/storage/common/storage.ts';
 
 suite('AgentSessionsViewModel', () => {
 

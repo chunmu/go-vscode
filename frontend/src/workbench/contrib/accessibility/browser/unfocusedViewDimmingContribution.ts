@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createStyleSheet } from '../../../../base/browser/domStylesheets.js';
-import { Event } from '../../../../base/common/event.js';
-import { Disposable, DisposableStore, toDisposable } from '../../../../base/common/lifecycle.js';
-import { clamp } from '../../../../base/common/numbers.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { AccessibilityWorkbenchSettingId, ViewDimUnfocusedOpacityProperties } from './accessibilityConfiguration.js';
+import { createStyleSheet } from '../../../../base/browser/domStylesheets.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { Disposable, DisposableStore, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { clamp } from '../../../../base/common/numbers.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { AccessibilityWorkbenchSettingId, ViewDimUnfocusedOpacityProperties } from './accessibilityConfiguration.ts';
 
 export class UnfocusedViewDimmingContribution extends Disposable implements IWorkbenchContribution {
 	private _styleElement?: HTMLStyleElement;

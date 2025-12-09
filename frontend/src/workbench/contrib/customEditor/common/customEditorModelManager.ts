@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createSingleCallFunction } from '../../../../base/common/functional.js';
-import { IReference } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ICustomEditorModel, ICustomEditorModelManager } from './customEditor.js';
+import { createSingleCallFunction } from '../../../../base/common/functional.ts';
+import { IReference } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ICustomEditorModel, ICustomEditorModelManager } from './customEditor.ts';
 
 export class CustomEditorModelManager implements ICustomEditorModelManager {
 

@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ExtHostContext, MainContext, MainThreadUrlsShape, ExtHostUrlsShape } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IURLService, IOpenURLOptions } from '../../../platform/url/common/url.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { Disposable, IDisposable } from '../../../base/common/lifecycle.js';
-import { IExtensionContributedURLHandler, IExtensionUrlHandler } from '../../services/extensions/browser/extensionUrlHandler.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { ITrustedDomainService } from '../../contrib/url/browser/trustedDomainService.js';
+import { ExtHostContext, MainContext, MainThreadUrlsShape, ExtHostUrlsShape } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IURLService, IOpenURLOptions } from '../../../platform/url/common/url.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { Disposable, IDisposable } from '../../../base/common/lifecycle.ts';
+import { IExtensionContributedURLHandler, IExtensionUrlHandler } from '../../services/extensions/browser/extensionUrlHandler.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { ITrustedDomainService } from '../../contrib/url/browser/trustedDomainService.ts';
 
 class ExtensionUrlHandler implements IExtensionContributedURLHandler {
 

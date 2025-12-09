@@ -5,22 +5,22 @@
 
 /* eslint-disable local/code-no-native-private */
 
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { Schemas } from '../../../base/common/network.js';
-import * as objects from '../../../base/common/objects.js';
-import { URI } from '../../../base/common/uri.js';
-import { normalizeVersion, parseVersion } from '../../../platform/extensions/common/extensionValidator.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IExtHostApiDeprecationService } from './extHostApiDeprecationService.js';
-import { deserializeWebviewMessage, serializeWebviewMessage } from './extHostWebviewMessaging.js';
-import { IExtHostWorkspace } from './extHostWorkspace.js';
-import { WebviewRemoteInfo, asWebviewUri, webviewGenericCspSource } from '../../contrib/webview/common/webview.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import * as objects from '../../../base/common/objects.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { normalizeVersion, parseVersion } from '../../../platform/extensions/common/extensionValidator.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IExtHostApiDeprecationService } from './extHostApiDeprecationService.ts';
+import { deserializeWebviewMessage, serializeWebviewMessage } from './extHostWebviewMessaging.ts';
+import { IExtHostWorkspace } from './extHostWorkspace.ts';
+import { WebviewRemoteInfo, asWebviewUri, webviewGenericCspSource } from '../../contrib/webview/common/webview.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 import type * as vscode from 'vscode';
-import * as extHostProtocol from './extHost.protocol.js';
+import * as extHostProtocol from './extHost.protocol.ts';
 
 export class ExtHostWebview implements vscode.Webview {
 

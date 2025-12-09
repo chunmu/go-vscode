@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { IMarkdownString, isMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../base/common/observable.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
-import { IChatProgressRenderableResponseContent } from '../../common/chatModel.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ElicitationState, IChatElicitationRequest, IChatElicitationRequestSerialized } from '../../common/chatService.js';
-import { IChatAccessibilityService } from '../chat.js';
-import { AcceptElicitationRequestActionId } from '../actions/chatElicitationActions.js';
-import { ChatConfirmationWidget, IChatConfirmationButton } from './chatConfirmationWidget.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { IAction } from '../../../../../base/common/actions.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { IMarkdownString, isMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../base/common/observable.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
+import { IChatProgressRenderableResponseContent } from '../../common/chatModel.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ElicitationState, IChatElicitationRequest, IChatElicitationRequestSerialized } from '../../common/chatService.ts';
+import { IChatAccessibilityService } from '../chat.ts';
+import { AcceptElicitationRequestActionId } from '../actions/chatElicitationActions.ts';
+import { ChatConfirmationWidget, IChatConfirmationButton } from './chatConfirmationWidget.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { IAction } from '../../../../../base/common/actions.ts';
 
 export class ChatElicitationContentPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

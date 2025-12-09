@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
 
 export const enum ChatViewsWelcomeExtensions {
 	ChatViewsWelcomeRegistry = 'workbench.registry.chat.viewsWelcome',

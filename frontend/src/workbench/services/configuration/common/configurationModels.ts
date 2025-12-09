@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { equals } from '../../../../base/common/objects.js';
-import { toValuesTree, IConfigurationModel, IConfigurationOverrides, IConfigurationValue, IConfigurationChange } from '../../../../platform/configuration/common/configuration.js';
-import { Configuration as BaseConfiguration, ConfigurationModelParser, ConfigurationModel, ConfigurationParseOptions } from '../../../../platform/configuration/common/configurationModels.js';
-import { IStoredWorkspaceFolder } from '../../../../platform/workspaces/common/workspaces.js';
-import { Workspace } from '../../../../platform/workspace/common/workspace.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { URI } from '../../../../base/common/uri.js';
-import { isBoolean } from '../../../../base/common/types.js';
-import { distinct } from '../../../../base/common/arrays.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IStringDictionary } from '../../../../base/common/collections.js';
+import { equals } from '../../../../base/common/objects.ts';
+import { toValuesTree, IConfigurationModel, IConfigurationOverrides, IConfigurationValue, IConfigurationChange } from '../../../../platform/configuration/common/configuration.ts';
+import { Configuration as BaseConfiguration, ConfigurationModelParser, ConfigurationModel, ConfigurationParseOptions } from '../../../../platform/configuration/common/configurationModels.ts';
+import { IStoredWorkspaceFolder } from '../../../../platform/workspaces/common/workspaces.ts';
+import { Workspace } from '../../../../platform/workspace/common/workspace.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { isBoolean } from '../../../../base/common/types.ts';
+import { distinct } from '../../../../base/common/arrays.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IStringDictionary } from '../../../../base/common/collections.ts';
 
 export class WorkspaceConfigurationModelParser extends ConfigurationModelParser {
 

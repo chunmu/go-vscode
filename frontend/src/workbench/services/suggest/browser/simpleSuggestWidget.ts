@@ -4,31 +4,31 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/suggest.css';
-import * as dom from '../../../../base/browser/dom.js';
-import { IListEvent, IListGestureEvent, IListMouseEvent } from '../../../../base/browser/ui/list/list.js';
-import { IListStyles, List } from '../../../../base/browser/ui/list/listWidget.js';
-import { ResizableHTMLElement } from '../../../../base/browser/ui/resizable/resizable.js';
-import { SimpleCompletionItem } from './simpleCompletionItem.js';
-import { LineContext, SimpleCompletionModel } from './simpleCompletionModel.js';
-import { getAriaId, SimpleSuggestWidgetItemRenderer, type ISimpleSuggestWidgetFontInfo } from './simpleSuggestWidgetRenderer.js';
-import { CancelablePromise, createCancelablePromise, disposableTimeout, TimeoutTimer } from '../../../../base/common/async.js';
-import { Emitter, Event, PauseableEmitter } from '../../../../base/common/event.js';
-import { MutableDisposable, Disposable, IDisposable } from '../../../../base/common/lifecycle.js';
-import { clamp } from '../../../../base/common/numbers.js';
-import { localize } from '../../../../nls.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { SuggestWidgetStatus } from '../../../../editor/contrib/suggest/browser/suggestWidgetStatus.js';
-import { MenuId } from '../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { canExpandCompletionItem, SimpleSuggestDetailsOverlay, SimpleSuggestDetailsWidget, type SimpleSuggestDetailsPlacement } from './simpleSuggestWidgetDetails.js';
-import { IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import * as strings from '../../../../base/common/strings.js';
-import { status } from '../../../../base/browser/ui/aria/aria.js';
-import { isWindows } from '../../../../base/common/platform.js';
-import { editorSuggestWidgetForeground, editorSuggestWidgetSelectedBackground } from '../../../../editor/contrib/suggest/browser/suggestWidget.js';
-import { getListStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { activeContrastBorder, focusBorder } from '../../../../platform/theme/common/colorRegistry.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { IListEvent, IListGestureEvent, IListMouseEvent } from '../../../../base/browser/ui/list/list.ts';
+import { IListStyles, List } from '../../../../base/browser/ui/list/listWidget.ts';
+import { ResizableHTMLElement } from '../../../../base/browser/ui/resizable/resizable.ts';
+import { SimpleCompletionItem } from './simpleCompletionItem.ts';
+import { LineContext, SimpleCompletionModel } from './simpleCompletionModel.ts';
+import { getAriaId, SimpleSuggestWidgetItemRenderer, type ISimpleSuggestWidgetFontInfo } from './simpleSuggestWidgetRenderer.ts';
+import { CancelablePromise, createCancelablePromise, disposableTimeout, TimeoutTimer } from '../../../../base/common/async.ts';
+import { Emitter, Event, PauseableEmitter } from '../../../../base/common/event.ts';
+import { MutableDisposable, Disposable, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { clamp } from '../../../../base/common/numbers.ts';
+import { localize } from '../../../../nls.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { SuggestWidgetStatus } from '../../../../editor/contrib/suggest/browser/suggestWidgetStatus.ts';
+import { MenuId } from '../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { canExpandCompletionItem, SimpleSuggestDetailsOverlay, SimpleSuggestDetailsWidget, type SimpleSuggestDetailsPlacement } from './simpleSuggestWidgetDetails.ts';
+import { IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import * as strings from '../../../../base/common/strings.ts';
+import { status } from '../../../../base/browser/ui/aria/aria.ts';
+import { isWindows } from '../../../../base/common/platform.ts';
+import { editorSuggestWidgetForeground, editorSuggestWidgetSelectedBackground } from '../../../../editor/contrib/suggest/browser/suggestWidget.ts';
+import { getListStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { activeContrastBorder, focusBorder } from '../../../../platform/theme/common/colorRegistry.ts';
 
 const $ = dom.$;
 

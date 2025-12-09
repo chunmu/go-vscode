@@ -4,14 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ICodeMapperResult } from '../../contrib/chat/common/chatCodeMapperService.js';
-import * as extHostProtocol from './extHost.protocol.js';
-import { NotebookEdit, TextEdit } from './extHostTypeConverters.js';
-import { URI } from '../../../base/common/uri.js';
-import { asArray } from '../../../base/common/arrays.js';
-import { LocalChatSessionUri } from '../../contrib/chat/common/chatUri.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ICodeMapperResult } from '../../contrib/chat/common/chatCodeMapperService.ts';
+import * as extHostProtocol from './extHost.protocol.ts';
+import { NotebookEdit, TextEdit } from './extHostTypeConverters.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { asArray } from '../../../base/common/arrays.ts';
+import { LocalChatSessionUri } from '../../contrib/chat/common/chatUri.ts';
 
 export class ExtHostCodeMapper implements extHostProtocol.ExtHostCodeMapperShape {
 

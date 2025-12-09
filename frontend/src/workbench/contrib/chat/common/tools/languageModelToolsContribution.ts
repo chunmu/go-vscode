@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isFalsyOrEmpty } from '../../../../../base/common/arrays.js';
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { IJSONSchema } from '../../../../../base/common/jsonSchema.js';
-import { Disposable, DisposableMap, DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { transaction } from '../../../../../base/common/observable.js';
-import { joinPath } from '../../../../../base/common/resources.js';
-import { isFalsyOrWhitespace } from '../../../../../base/common/strings.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier, IExtensionManifest } from '../../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.js';
-import { IProductService } from '../../../../../platform/product/common/productService.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { Extensions, IExtensionFeaturesRegistry, IExtensionFeatureTableRenderer, IRenderedData, IRowData, ITableData } from '../../../../services/extensionManagement/common/extensionFeatures.js';
-import { isProposedApiEnabled } from '../../../../services/extensions/common/extensions.js';
-import * as extensionsRegistry from '../../../../services/extensions/common/extensionsRegistry.js';
-import { ILanguageModelToolsService, IToolData, ToolDataSource, ToolSet } from '../languageModelToolsService.js';
-import { toolsParametersSchemaSchemaId } from './languageModelToolsParametersSchema.js';
+import { isFalsyOrEmpty } from '../../../../../base/common/arrays.ts';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { IJSONSchema } from '../../../../../base/common/jsonSchema.ts';
+import { Disposable, DisposableMap, DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { transaction } from '../../../../../base/common/observable.ts';
+import { joinPath } from '../../../../../base/common/resources.ts';
+import { isFalsyOrWhitespace } from '../../../../../base/common/strings.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier, IExtensionManifest } from '../../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.ts';
+import { IProductService } from '../../../../../platform/product/common/productService.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { Extensions, IExtensionFeaturesRegistry, IExtensionFeatureTableRenderer, IRenderedData, IRowData, ITableData } from '../../../../services/extensionManagement/common/extensionFeatures.ts';
+import { isProposedApiEnabled } from '../../../../services/extensions/common/extensions.ts';
+import * as extensionsRegistry from '../../../../services/extensions/common/extensionsRegistry.ts';
+import { ILanguageModelToolsService, IToolData, ToolDataSource, ToolSet } from '../languageModelToolsService.ts';
+import { toolsParametersSchemaSchemaId } from './languageModelToolsParametersSchema.ts';
 
 export interface IRawToolContribution {
 	name: string;

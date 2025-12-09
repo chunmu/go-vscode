@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../../base/common/network.js';
-import { IChatSessionsService } from './chatSessionsService.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
+import { Schemas } from '../../../../base/common/network.ts';
+import { IChatSessionsService } from './chatSessionsService.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
 
 export enum ChatConfiguration {
 	AgentEnabled = 'chat.agent.enabled',

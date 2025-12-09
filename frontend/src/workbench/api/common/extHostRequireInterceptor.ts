@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as performance from '../../../base/common/performance.js';
-import { URI } from '../../../base/common/uri.js';
-import { MainThreadTelemetryShape, MainContext } from './extHost.protocol.js';
-import { ExtHostConfigProvider, IExtHostConfiguration } from './extHostConfiguration.js';
-import { nullExtensionDescription } from '../../services/extensions/common/extensions.js';
+import * as performance from '../../../base/common/performance.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { MainThreadTelemetryShape, MainContext } from './extHost.protocol.ts';
+import { ExtHostConfigProvider, IExtHostConfiguration } from './extHostConfiguration.ts';
+import { nullExtensionDescription } from '../../services/extensions/common/extensions.ts';
 import * as vscode from 'vscode';
-import { ExtensionIdentifierMap } from '../../../platform/extensions/common/extensions.js';
-import { IExtensionApiFactory, IExtensionRegistries } from './extHost.api.impl.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { ExtensionPaths, IExtHostExtensionService } from './extHostExtensionService.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { escapeRegExpCharacters } from '../../../base/common/strings.js';
+import { ExtensionIdentifierMap } from '../../../platform/extensions/common/extensions.ts';
+import { IExtensionApiFactory, IExtensionRegistries } from './extHost.api.impl.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { ExtensionPaths, IExtHostExtensionService } from './extHostExtensionService.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { escapeRegExpCharacters } from '../../../base/common/strings.ts';
 
 
 interface LoadFunction {

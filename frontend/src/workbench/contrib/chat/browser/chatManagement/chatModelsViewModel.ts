@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { distinct, coalesce } from '../../../../../base/common/arrays.js';
-import { IMatch, IFilter, or, matchesCamelCase, matchesWords, matchesBaseContiguousSubString } from '../../../../../base/common/filters.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { ILanguageModelsService, ILanguageModelChatMetadata, IUserFriendlyLanguageModel } from '../../../chat/common/languageModels.js';
-import { IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.js';
-import { localize } from '../../../../../nls.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
+import { distinct, coalesce } from '../../../../../base/common/arrays.ts';
+import { IMatch, IFilter, or, matchesCamelCase, matchesWords, matchesBaseContiguousSubString } from '../../../../../base/common/filters.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { ILanguageModelsService, ILanguageModelChatMetadata, IUserFriendlyLanguageModel } from '../../../chat/common/languageModels.ts';
+import { IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { localize } from '../../../../../nls.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
 
 export const MODEL_ENTRY_TEMPLATE_ID = 'model.entry.template';
 export const VENDOR_ENTRY_TEMPLATE_ID = 'vendor.entry.template';

@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../base/common/event.js';
-import { URI } from '../../../base/common/uri.js';
-import { EditorInputCapabilities, Verbosity, GroupIdentifier, ISaveOptions, IRevertOptions, IMoveResult, IEditorDescriptor, IEditorPane, IUntypedEditorInput, EditorResourceAccessor, AbstractEditorInput, isEditorInput, IEditorIdentifier } from '../editor.js';
-import { isEqual } from '../../../base/common/resources.js';
-import { ConfirmResult } from '../../../platform/dialogs/common/dialogs.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { EditorInputCapabilities, Verbosity, GroupIdentifier, ISaveOptions, IRevertOptions, IMoveResult, IEditorDescriptor, IEditorPane, IUntypedEditorInput, EditorResourceAccessor, AbstractEditorInput, isEditorInput, IEditorIdentifier } from '../editor.ts';
+import { isEqual } from '../../../base/common/resources.ts';
+import { ConfirmResult } from '../../../platform/dialogs/common/dialogs.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
 
 export interface IEditorCloseHandler {
 

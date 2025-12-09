@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { AccessibleDiffViewerNext } from '../../../../../editor/browser/widget/diffEditor/commands.js';
-import { localize } from '../../../../../nls.js';
-import { AccessibleContentProvider, AccessibleViewProviderId, AccessibleViewType } from '../../../../../platform/accessibility/browser/accessibleView.js';
-import { IAccessibleViewImplementation } from '../../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
-import { AccessibilityVerbositySettingId } from '../../../accessibility/browser/accessibilityConfiguration.js';
-import { INLINE_CHAT_ID } from '../../../inlineChat/common/inlineChat.js';
-import { TerminalContribCommandId } from '../../../terminal/terminalContribExports.js';
-import { ChatContextKeyExprs, ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../../common/constants.js';
-import { IChatWidgetService } from '../chat.js';
-import { ChatEditingShowChangesAction, ViewPreviousEditsAction } from '../chatEditing/chatEditingActions.js';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { AccessibleDiffViewerNext } from '../../../../../editor/browser/widget/diffEditor/commands.ts';
+import { localize } from '../../../../../nls.ts';
+import { AccessibleContentProvider, AccessibleViewProviderId, AccessibleViewType } from '../../../../../platform/accessibility/browser/accessibleView.ts';
+import { IAccessibleViewImplementation } from '../../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
+import { AccessibilityVerbositySettingId } from '../../../accessibility/browser/accessibilityConfiguration.ts';
+import { INLINE_CHAT_ID } from '../../../inlineChat/common/inlineChat.ts';
+import { TerminalContribCommandId } from '../../../terminal/terminalContribExports.ts';
+import { ChatContextKeyExprs, ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../../common/constants.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { ChatEditingShowChangesAction, ViewPreviousEditsAction } from '../chatEditing/chatEditingActions.ts';
 
 export class PanelChatAccessibilityHelp implements IAccessibleViewImplementation {
 	readonly priority = 107;

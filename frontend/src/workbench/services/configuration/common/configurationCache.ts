@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IConfigurationCache, ConfigurationKey } from './configuration.js';
-import { URI } from '../../../../base/common/uri.js';
-import { FileOperationError, FileOperationResult, IFileService } from '../../../../platform/files/common/files.js';
-import { joinPath } from '../../../../base/common/resources.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { Queue } from '../../../../base/common/async.js';
-import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
+import { IConfigurationCache, ConfigurationKey } from './configuration.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { FileOperationError, FileOperationResult, IFileService } from '../../../../platform/files/common/files.ts';
+import { joinPath } from '../../../../base/common/resources.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { Queue } from '../../../../base/common/async.ts';
+import { IEnvironmentService } from '../../../../platform/environment/common/environment.ts';
 
 export class ConfigurationCache implements IConfigurationCache {
 

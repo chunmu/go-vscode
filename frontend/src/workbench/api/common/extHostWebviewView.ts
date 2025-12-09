@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostWebview, ExtHostWebviews, toExtensionData, shouldSerializeBuffersForPostMessage } from './extHostWebview.js';
-import { ViewBadge } from './extHostTypeConverters.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostWebview, ExtHostWebviews, toExtensionData, shouldSerializeBuffersForPostMessage } from './extHostWebview.ts';
+import { ViewBadge } from './extHostTypeConverters.ts';
 import type * as vscode from 'vscode';
-import * as extHostProtocol from './extHost.protocol.js';
-import * as extHostTypes from './extHostTypes.js';
+import * as extHostProtocol from './extHost.protocol.ts';
+import * as extHostTypes from './extHostTypes.ts';
 
 /* eslint-disable local/code-no-native-private */
 

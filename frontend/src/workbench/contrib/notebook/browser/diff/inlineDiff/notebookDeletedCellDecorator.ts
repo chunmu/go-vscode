@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createTrustedTypesPolicy } from '../../../../../../base/browser/trustedTypes.js';
-import { Disposable, DisposableStore, dispose, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { splitLines } from '../../../../../../base/common/strings.js';
-import { EditorOption } from '../../../../../../editor/common/config/editorOptions.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { tokenizeToString } from '../../../../../../editor/common/languages/textToHtmlTokenizer.js';
-import { NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { DefaultLineHeight } from '../diffElementViewModel.js';
-import { CellDiffInfo } from '../notebookDiffViewModel.js';
-import { INotebookEditor, NotebookOverviewRulerLane } from '../../notebookBrowser.js';
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { MenuWorkbenchToolBar, HiddenItemStrategy } from '../../../../../../platform/actions/browser/toolbar.js';
-import { MenuId } from '../../../../../../platform/actions/common/actions.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../../../platform/instantiation/common/serviceCollection.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { overviewRulerDeletedForeground } from '../../../../scm/common/quickDiff.js';
-import { IActionViewItemProvider } from '../../../../../../base/browser/ui/actionbar/actionbar.js';
+import { createTrustedTypesPolicy } from '../../../../../../base/browser/trustedTypes.ts';
+import { Disposable, DisposableStore, dispose, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { splitLines } from '../../../../../../base/common/strings.ts';
+import { EditorOption } from '../../../../../../editor/common/config/editorOptions.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { tokenizeToString } from '../../../../../../editor/common/languages/textToHtmlTokenizer.ts';
+import { NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { DefaultLineHeight } from '../diffElementViewModel.ts';
+import { CellDiffInfo } from '../notebookDiffViewModel.ts';
+import { INotebookEditor, NotebookOverviewRulerLane } from '../../notebookBrowser.ts';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { MenuWorkbenchToolBar, HiddenItemStrategy } from '../../../../../../platform/actions/browser/toolbar.ts';
+import { MenuId } from '../../../../../../platform/actions/common/actions.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../../../platform/instantiation/common/serviceCollection.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { overviewRulerDeletedForeground } from '../../../../scm/common/quickDiff.ts';
+import { IActionViewItemProvider } from '../../../../../../base/browser/ui/actionbar/actionbar.ts';
 
 const ttPolicy = createTrustedTypesPolicy('notebookRenderer', { createHTML: value => value });
 

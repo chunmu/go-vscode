@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { createTrustedTypesPolicy } from '../../../../../../base/browser/trustedTypes.js';
-import { Color } from '../../../../../../base/common/color.js';
-import * as platform from '../../../../../../base/common/platform.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { EditorOption } from '../../../../../../editor/common/config/editorOptions.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { ColorId } from '../../../../../../editor/common/encodedTokenAttributes.js';
-import * as languages from '../../../../../../editor/common/languages.js';
-import { tokenizeLineToHTML } from '../../../../../../editor/common/languages/textToHtmlTokenizer.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { BaseCellRenderTemplate } from '../notebookRenderingCommon.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { createTrustedTypesPolicy } from '../../../../../../base/browser/trustedTypes.ts';
+import { Color } from '../../../../../../base/common/color.ts';
+import * as platform from '../../../../../../base/common/platform.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { EditorOption } from '../../../../../../editor/common/config/editorOptions.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { ColorId } from '../../../../../../editor/common/encodedTokenAttributes.ts';
+import * as languages from '../../../../../../editor/common/languages.ts';
+import { tokenizeLineToHTML } from '../../../../../../editor/common/languages/textToHtmlTokenizer.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { BaseCellRenderTemplate } from '../notebookRenderingCommon.ts';
 
 class EditorTextRenderer {
 

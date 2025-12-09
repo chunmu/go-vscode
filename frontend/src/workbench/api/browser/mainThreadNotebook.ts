@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Emitter } from '../../../base/common/event.js';
-import { DisposableStore, dispose, IDisposable } from '../../../base/common/lifecycle.js';
-import { StopWatch } from '../../../base/common/stopwatch.js';
-import { assertType } from '../../../base/common/types.js';
-import { URI } from '../../../base/common/uri.js';
-import { CommandsRegistry } from '../../../platform/commands/common/commands.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { NotebookDto } from './mainThreadNotebookDto.js';
-import { INotebookCellStatusBarService } from '../../contrib/notebook/common/notebookCellStatusBarService.js';
-import { INotebookCellStatusBarItemProvider, INotebookContributionData, INotebookExclusiveDocumentFilter, NotebookData, NotebookExtensionDescription, TransientOptions } from '../../contrib/notebook/common/notebookCommon.js';
-import { INotebookService, SimpleNotebookProviderInfo } from '../../contrib/notebook/common/notebookService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostContext, ExtHostNotebookShape, MainContext, MainThreadNotebookShape, NotebookDataDto } from '../common/extHost.protocol.js';
-import { IRelativePattern } from '../../../base/common/glob.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { INotebookFileMatchNoModel } from '../../contrib/search/common/searchNotebookHelpers.js';
-import { NotebookPriorityInfo } from '../../contrib/search/common/search.js';
-import { coalesce } from '../../../base/common/arrays.js';
-import { FileOperationError } from '../../../platform/files/common/files.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { DisposableStore, dispose, IDisposable } from '../../../base/common/lifecycle.ts';
+import { StopWatch } from '../../../base/common/stopwatch.ts';
+import { assertType } from '../../../base/common/types.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { CommandsRegistry } from '../../../platform/commands/common/commands.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { NotebookDto } from './mainThreadNotebookDto.ts';
+import { INotebookCellStatusBarService } from '../../contrib/notebook/common/notebookCellStatusBarService.ts';
+import { INotebookCellStatusBarItemProvider, INotebookContributionData, INotebookExclusiveDocumentFilter, NotebookData, NotebookExtensionDescription, TransientOptions } from '../../contrib/notebook/common/notebookCommon.ts';
+import { INotebookService, SimpleNotebookProviderInfo } from '../../contrib/notebook/common/notebookService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostContext, ExtHostNotebookShape, MainContext, MainThreadNotebookShape, NotebookDataDto } from '../common/extHost.protocol.ts';
+import { IRelativePattern } from '../../../base/common/glob.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { INotebookFileMatchNoModel } from '../../contrib/search/common/searchNotebookHelpers.ts';
+import { NotebookPriorityInfo } from '../../contrib/search/common/search.ts';
+import { coalesce } from '../../../base/common/arrays.ts';
+import { FileOperationError } from '../../../platform/files/common/files.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadNotebook)
 export class MainThreadNotebooks implements MainThreadNotebookShape {

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { Emitter } from '../../../../../../base/common/event.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../../common/chatService.js';
-import { IChatCodeBlockInfo } from '../../chat.js';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { Emitter } from '../../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { IChatToolInvocation, IChatToolInvocationSerialized, ToolConfirmKind } from '../../../common/chatService.ts';
+import { IChatCodeBlockInfo } from '../../chat.ts';
 
 export abstract class BaseChatToolInvocationSubPart extends Disposable {
 	protected static idPool = 0;

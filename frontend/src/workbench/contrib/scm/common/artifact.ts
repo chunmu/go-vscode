@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../base/common/uri.js';
-import { Event } from '../../../../base/common/event.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { ISCMRepository } from './scm.js';
+import { URI } from '../../../../base/common/uri.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { ISCMRepository } from './scm.ts';
 
 export interface ISCMArtifactProvider {
 	readonly onDidChangeArtifacts: Event<string[]>;

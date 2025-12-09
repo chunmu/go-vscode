@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { Emitter } from '../../../../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../../base/common/observable.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IMarkdownRenderer } from '../../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IChatToolInvocation, IChatToolInvocationSerialized } from '../../../common/chatService.js';
-import { IChatRendererContent } from '../../../common/chatViewModel.js';
-import { CodeBlockModelCollection } from '../../../common/codeBlockModelCollection.js';
-import { isToolResultInputOutputDetails, isToolResultOutputDetails, ToolInvocationPresentation } from '../../../common/languageModelToolsService.js';
-import { ChatTreeItem, IChatCodeBlockInfo } from '../../chat.js';
-import { EditorPool } from '../chatContentCodePools.js';
-import { IChatContentPart, IChatContentPartRenderContext } from '../chatContentParts.js';
-import { CollapsibleListPool } from '../chatReferencesContentPart.js';
-import { ExtensionsInstallConfirmationWidgetSubPart } from './chatExtensionsInstallToolSubPart.js';
-import { ChatInputOutputMarkdownProgressPart } from './chatInputOutputMarkdownProgressPart.js';
-import { ChatResultListSubPart } from './chatResultListSubPart.js';
-import { ChatTerminalToolConfirmationSubPart } from './chatTerminalToolConfirmationSubPart.js';
-import { ChatTerminalToolProgressPart } from './chatTerminalToolProgressPart.js';
-import { ToolConfirmationSubPart } from './chatToolConfirmationSubPart.js';
-import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.js';
-import { ChatToolOutputSubPart } from './chatToolOutputPart.js';
-import { ChatToolPostExecuteConfirmationPart } from './chatToolPostExecuteConfirmationPart.js';
-import { ChatToolProgressSubPart } from './chatToolProgressPart.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { Emitter } from '../../../../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IMarkdownRenderer } from '../../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IChatToolInvocation, IChatToolInvocationSerialized } from '../../../common/chatService.ts';
+import { IChatRendererContent } from '../../../common/chatViewModel.ts';
+import { CodeBlockModelCollection } from '../../../common/codeBlockModelCollection.ts';
+import { isToolResultInputOutputDetails, isToolResultOutputDetails, ToolInvocationPresentation } from '../../../common/languageModelToolsService.ts';
+import { ChatTreeItem, IChatCodeBlockInfo } from '../../chat.ts';
+import { EditorPool } from '../chatContentCodePools.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { CollapsibleListPool } from '../chatReferencesContentPart.ts';
+import { ExtensionsInstallConfirmationWidgetSubPart } from './chatExtensionsInstallToolSubPart.ts';
+import { ChatInputOutputMarkdownProgressPart } from './chatInputOutputMarkdownProgressPart.ts';
+import { ChatResultListSubPart } from './chatResultListSubPart.ts';
+import { ChatTerminalToolConfirmationSubPart } from './chatTerminalToolConfirmationSubPart.ts';
+import { ChatTerminalToolProgressPart } from './chatTerminalToolProgressPart.ts';
+import { ToolConfirmationSubPart } from './chatToolConfirmationSubPart.ts';
+import { BaseChatToolInvocationSubPart } from './chatToolInvocationSubPart.ts';
+import { ChatToolOutputSubPart } from './chatToolOutputPart.ts';
+import { ChatToolPostExecuteConfirmationPart } from './chatToolPostExecuteConfirmationPart.ts';
+import { ChatToolProgressSubPart } from './chatToolProgressPart.ts';
 
 export class ChatToolInvocationPart extends Disposable implements IChatContentPart {
 	public readonly domNode: HTMLElement;

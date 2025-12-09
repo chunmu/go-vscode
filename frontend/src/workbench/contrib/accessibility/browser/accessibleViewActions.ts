@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { Command, MultiCommand, ServicesAccessor } from '../../../../editor/browser/editorExtensions.js';
-import { localize } from '../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { AccessibilityCommandId } from '../common/accessibilityCommands.js';
-import { accessibilityHelpIsShown, accessibleViewContainsCodeBlocks, accessibleViewCurrentProviderId, accessibleViewGoToSymbolSupported, accessibleViewHasAssignedKeybindings, accessibleViewHasUnassignedKeybindings, accessibleViewIsShown, accessibleViewSupportsNavigation, accessibleViewVerbosityEnabled } from './accessibilityConfiguration.js';
-import { AccessibleViewProviderId, IAccessibleViewService } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { InlineCompletionsController } from '../../../../editor/contrib/inlineCompletions/browser/controller/inlineCompletionsController.js';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { Command, MultiCommand, ServicesAccessor } from '../../../../editor/browser/editorExtensions.ts';
+import { localize } from '../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { AccessibilityCommandId } from '../common/accessibilityCommands.ts';
+import { accessibilityHelpIsShown, accessibleViewContainsCodeBlocks, accessibleViewCurrentProviderId, accessibleViewGoToSymbolSupported, accessibleViewHasAssignedKeybindings, accessibleViewHasUnassignedKeybindings, accessibleViewIsShown, accessibleViewSupportsNavigation, accessibleViewVerbosityEnabled } from './accessibilityConfiguration.ts';
+import { AccessibleViewProviderId, IAccessibleViewService } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { InlineCompletionsController } from '../../../../editor/contrib/inlineCompletions/browser/controller/inlineCompletionsController.ts';
 
 const accessibleViewMenu = {
 	id: MenuId.AccessibleView,

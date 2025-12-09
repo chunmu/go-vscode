@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { IExtensionDescription } from '../../../../../platform/extensions/common/extensions.js';
-import { PromptsType } from '../../common/promptSyntax/promptTypes.js';
-import { ParsedPromptFile } from '../../common/promptSyntax/promptFileParser.js';
-import { IClaudeSkill, ICustomAgent, IPromptPath, IPromptsService, PromptsStorage } from '../../common/promptSyntax/service/promptsService.js';
-import { ResourceSet } from '../../../../../base/common/map.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { IExtensionDescription } from '../../../../../platform/extensions/common/extensions.ts';
+import { PromptsType } from '../../common/promptSyntax/promptTypes.ts';
+import { ParsedPromptFile } from '../../common/promptSyntax/promptFileParser.ts';
+import { IClaudeSkill, ICustomAgent, IPromptPath, IPromptsService, PromptsStorage } from '../../common/promptSyntax/service/promptsService.ts';
+import { ResourceSet } from '../../../../../base/common/map.ts';
 
 export class MockPromptsService implements IPromptsService {
 

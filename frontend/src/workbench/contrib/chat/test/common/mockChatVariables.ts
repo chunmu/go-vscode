@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { IChatVariablesService, IDynamicVariable } from '../../common/chatVariables.js';
-import { IToolAndToolSetEnablementMap } from '../../common/languageModelToolsService.js';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { IChatVariablesService, IDynamicVariable } from '../../common/chatVariables.ts';
+import { IToolAndToolSetEnablementMap } from '../../common/languageModelToolsService.ts';
 
 export class MockChatVariablesService implements IChatVariablesService {
 	_serviceBrand: undefined;

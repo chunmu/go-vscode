@@ -3,34 +3,34 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce, isNonEmptyArray } from '../../../../base/common/arrays.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { toErrorMessage } from '../../../../base/common/errorMessage.js';
-import { Event } from '../../../../base/common/event.js';
-import { createCommandUri, MarkdownString } from '../../../../base/common/htmlContent.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { Disposable, DisposableMap, DisposableStore } from '../../../../base/common/lifecycle.js';
-import * as strings from '../../../../base/common/strings.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { ExtensionIdentifier, IExtensionManifest } from '../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { ViewPaneContainer } from '../../../browser/parts/views/viewPaneContainer.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IViewContainersRegistry, IViewDescriptor, IViewsRegistry, ViewContainer, ViewContainerLocation, Extensions as ViewExtensions } from '../../../common/views.js';
-import { Extensions, IExtensionFeaturesRegistry, IExtensionFeatureTableRenderer, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { isProposedApiEnabled } from '../../../services/extensions/common/extensions.js';
-import * as extensionsRegistry from '../../../services/extensions/common/extensionsRegistry.js';
-import { showExtensionsWithIdsCommandId } from '../../extensions/browser/extensionsActions.js';
-import { IExtension, IExtensionsWorkbenchService } from '../../extensions/common/extensions.js';
-import { IChatAgentData, IChatAgentService } from '../common/chatAgents.js';
-import { ChatContextKeys } from '../common/chatContextKeys.js';
-import { IRawChatParticipantContribution } from '../common/chatParticipantContribTypes.js';
-import { ChatAgentLocation, ChatModeKind } from '../common/constants.js';
-import { ChatViewId } from './chat.js';
-import { CHAT_SIDEBAR_PANEL_ID, ChatViewPane } from './chatViewPane.js';
+import { coalesce, isNonEmptyArray } from '../../../../base/common/arrays.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { toErrorMessage } from '../../../../base/common/errorMessage.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { createCommandUri, MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { Disposable, DisposableMap, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import * as strings from '../../../../base/common/strings.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { ContextKeyExpr, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { ExtensionIdentifier, IExtensionManifest } from '../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { ViewPaneContainer } from '../../../browser/parts/views/viewPaneContainer.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IViewContainersRegistry, IViewDescriptor, IViewsRegistry, ViewContainer, ViewContainerLocation, Extensions as ViewExtensions } from '../../../common/views.ts';
+import { Extensions, IExtensionFeaturesRegistry, IExtensionFeatureTableRenderer, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { isProposedApiEnabled } from '../../../services/extensions/common/extensions.ts';
+import * as extensionsRegistry from '../../../services/extensions/common/extensionsRegistry.ts';
+import { showExtensionsWithIdsCommandId } from '../../extensions/browser/extensionsActions.ts';
+import { IExtension, IExtensionsWorkbenchService } from '../../extensions/common/extensions.ts';
+import { IChatAgentData, IChatAgentService } from '../common/chatAgents.ts';
+import { ChatContextKeys } from '../common/chatContextKeys.ts';
+import { IRawChatParticipantContribution } from '../common/chatParticipantContribTypes.ts';
+import { ChatAgentLocation, ChatModeKind } from '../common/constants.ts';
+import { ChatViewId } from './chat.ts';
+import { CHAT_SIDEBAR_PANEL_ID, ChatViewPane } from './chatViewPane.ts';
 
 // --- Chat Container &  View Registration
 

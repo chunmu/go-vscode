@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MainContext, MainThreadFileSystemShape } from './extHost.protocol.js';
+import { MainContext, MainThreadFileSystemShape } from './extHost.protocol.ts';
 import type * as vscode from 'vscode';
-import * as files from '../../../platform/files/common/files.js';
-import { FileSystemError } from './extHostTypes.js';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { IExtHostFileSystemInfo } from './extHostFileSystemInfo.js';
-import { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import { ResourceQueue } from '../../../base/common/async.js';
-import { IExtUri, extUri, extUriIgnorePathCase } from '../../../base/common/resources.js';
-import { Schemas } from '../../../base/common/network.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
+import * as files from '../../../platform/files/common/files.ts';
+import { FileSystemError } from './extHostTypes.ts';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { IExtHostFileSystemInfo } from './extHostFileSystemInfo.ts';
+import { IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import { ResourceQueue } from '../../../base/common/async.ts';
+import { IExtUri, extUri, extUriIgnorePathCase } from '../../../base/common/resources.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
 
 export class ExtHostConsumerFileSystem {
 

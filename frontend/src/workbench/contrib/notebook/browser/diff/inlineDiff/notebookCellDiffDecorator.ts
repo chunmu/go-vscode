@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { autorunWithStore, derived, observableFromEvent } from '../../../../../../base/common/observable.js';
-import { INotebookEditor } from '../../notebookBrowser.js';
-import { ThrottledDelayer } from '../../../../../../base/common/async.js';
-import { ICodeEditor, IViewZone } from '../../../../../../editor/browser/editorBrowser.js';
-import { IEditorWorkerService } from '../../../../../../editor/common/services/editorWorker.js';
-import { EditorOption } from '../../../../../../editor/common/config/editorOptions.js';
-import { themeColorFromId } from '../../../../../../base/common/themables.js';
-import { RenderOptions, LineSource, renderLines } from '../../../../../../editor/browser/widget/diffEditor/components/diffEditorViewZones/renderLines.js';
-import { diffAddDecoration, diffWholeLineAddDecoration, diffDeleteDecoration } from '../../../../../../editor/browser/widget/diffEditor/registrations.contribution.js';
-import { IDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.js';
-import { ITextModel, TrackedRangeStickiness, MinimapPosition, IModelDeltaDecoration, OverviewRulerLane } from '../../../../../../editor/common/model.js';
-import { ModelDecorationOptions } from '../../../../../../editor/common/model/textModel.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.js';
-import { DetailedLineRangeMapping } from '../../../../../../editor/common/diff/rangeMapping.js';
-import { minimapGutterAddedBackground, minimapGutterDeletedBackground, minimapGutterModifiedBackground, overviewRulerAddedForeground, overviewRulerDeletedForeground, overviewRulerModifiedForeground } from '../../../../scm/common/quickDiff.js';
-import { INotebookOriginalCellModelFactory } from './notebookOriginalCellModelFactory.js';
-import { InlineDecoration, InlineDecorationType } from '../../../../../../editor/common/viewModel/inlineDecorations.js';
+import { DisposableStore, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { autorunWithStore, derived, observableFromEvent } from '../../../../../../base/common/observable.ts';
+import { INotebookEditor } from '../../notebookBrowser.ts';
+import { ThrottledDelayer } from '../../../../../../base/common/async.ts';
+import { ICodeEditor, IViewZone } from '../../../../../../editor/browser/editorBrowser.ts';
+import { IEditorWorkerService } from '../../../../../../editor/common/services/editorWorker.ts';
+import { EditorOption } from '../../../../../../editor/common/config/editorOptions.ts';
+import { themeColorFromId } from '../../../../../../base/common/themables.ts';
+import { RenderOptions, LineSource, renderLines } from '../../../../../../editor/browser/widget/diffEditor/components/diffEditorViewZones/renderLines.ts';
+import { diffAddDecoration, diffWholeLineAddDecoration, diffDeleteDecoration } from '../../../../../../editor/browser/widget/diffEditor/registrations.contribution.ts';
+import { IDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.ts';
+import { ITextModel, TrackedRangeStickiness, MinimapPosition, IModelDeltaDecoration, OverviewRulerLane } from '../../../../../../editor/common/model.ts';
+import { ModelDecorationOptions } from '../../../../../../editor/common/model/textModel.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { NotebookCellTextModel } from '../../../common/model/notebookCellTextModel.ts';
+import { DetailedLineRangeMapping } from '../../../../../../editor/common/diff/rangeMapping.ts';
+import { minimapGutterAddedBackground, minimapGutterDeletedBackground, minimapGutterModifiedBackground, overviewRulerAddedForeground, overviewRulerDeletedForeground, overviewRulerModifiedForeground } from '../../../../scm/common/quickDiff.ts';
+import { INotebookOriginalCellModelFactory } from './notebookOriginalCellModelFactory.ts';
+import { InlineDecoration, InlineDecorationType } from '../../../../../../editor/common/viewModel/inlineDecorations.ts';
 
 //TODO: allow client to set read-only - chateditsession should set read-only while making changes
 export class NotebookCellDiffDecorator extends DisposableStore {

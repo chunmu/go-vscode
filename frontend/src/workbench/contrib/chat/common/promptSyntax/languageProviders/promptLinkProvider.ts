@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IPromptsService } from '../service/promptsService.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { ILink, ILinksList, LinkProvider } from '../../../../../../editor/common/languages.js';
+import { IPromptsService } from '../service/promptsService.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { ILink, ILinksList, LinkProvider } from '../../../../../../editor/common/languages.ts';
 
 /**
  * Provides link references for prompt files.

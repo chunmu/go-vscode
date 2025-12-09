@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, IDisposable, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { IMarkerData, IMarkerService } from '../../../../../../platform/markers/common/markers.js';
-import { IRange } from '../../../../../../editor/common/core/range.js';
-import { ICellExecutionStateChangedEvent, IExecutionStateChangedEvent, INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { CellKind, NotebookSetting } from '../../../common/notebookCommon.js';
-import { INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { Event } from '../../../../../../base/common/event.js';
-import { IChatAgentService } from '../../../../chat/common/chatAgents.js';
-import { ChatAgentLocation } from '../../../../chat/common/constants.js';
-import { autorun } from '../../../../../../base/common/observable.js';
+import { Disposable, IDisposable, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { IMarkerData, IMarkerService } from '../../../../../../platform/markers/common/markers.ts';
+import { IRange } from '../../../../../../editor/common/core/range.ts';
+import { ICellExecutionStateChangedEvent, IExecutionStateChangedEvent, INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { CellKind, NotebookSetting } from '../../../common/notebookCommon.ts';
+import { INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { Event } from '../../../../../../base/common/event.ts';
+import { IChatAgentService } from '../../../../chat/common/chatAgents.ts';
+import { ChatAgentLocation } from '../../../../chat/common/constants.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
 
 export class CellDiagnostics extends Disposable implements INotebookEditorContribution {
 

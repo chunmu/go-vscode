@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable, DisposableMap } from '../../../../../base/common/lifecycle.js';
-import { GroupModelChangeKind } from '../../../../common/editor.js';
-import { EditorInput } from '../../../../common/editor/editorInput.js';
-import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { IChatModel } from '../../common/chatModel.js';
-import { IChatService } from '../../common/chatService.js';
-import { ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.js';
-import { ChatEditorInput } from '../chatEditorInput.js';
-import { ChatSessionItemWithProvider, isChatSession } from './common.js';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableMap } from '../../../../../base/common/lifecycle.ts';
+import { GroupModelChangeKind } from '../../../../common/editor.ts';
+import { EditorInput } from '../../../../common/editor/editorInput.ts';
+import { IEditorGroup, IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { IChatModel } from '../../common/chatModel.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider, IChatSessionsService, localChatSessionType } from '../../common/chatSessionsService.ts';
+import { ChatEditorInput } from '../chatEditorInput.ts';
+import { ChatSessionItemWithProvider, isChatSession } from './common.ts';
 
 export class ChatSessionTracker extends Disposable {
 	private readonly _onDidChangeEditors = this._register(new Emitter<{ sessionType: string; kind: GroupModelChangeKind }>());

@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ITerminalInstance, ITerminalService } from '../../terminal/browser/terminal.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../../base/common/lifecycle.js';
-import { IDebugService, IDebugSession, IReplElement } from '../../debug/common/debug.js';
-import { removeAnsiEscapeCodes } from '../../../../base/common/strings.js';
+import { ITerminalInstance, ITerminalService } from '../../terminal/browser/terminal.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IDebugService, IDebugSession, IReplElement } from '../../debug/common/debug.ts';
+import { removeAnsiEscapeCodes } from '../../../../base/common/strings.ts';
 
 export class UrlFinder extends Disposable {
 	/**

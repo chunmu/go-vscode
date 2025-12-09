@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { BrowserType, IElementData } from '../../../../platform/browserElements/common/browserElements.js';
-import { IRectangle } from '../../../../platform/window/common/window.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { registerSingleton, InstantiationType } from '../../../../platform/instantiation/common/extensions.js';
-import { IBrowserElementsService } from './browserElementsService.js';
+import { BrowserType, IElementData } from '../../../../platform/browserElements/common/browserElements.ts';
+import { IRectangle } from '../../../../platform/window/common/window.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { registerSingleton, InstantiationType } from '../../../../platform/instantiation/common/extensions.ts';
+import { IBrowserElementsService } from './browserElementsService.ts';
 
 class WebBrowserElementsService implements IBrowserElementsService {
 	_serviceBrand: undefined;

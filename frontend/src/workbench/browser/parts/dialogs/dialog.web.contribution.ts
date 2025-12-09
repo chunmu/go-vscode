@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { IDialogHandler, IDialogResult, IDialogService } from '../../../../platform/dialogs/common/dialogs.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { ILayoutService } from '../../../../platform/layout/browser/layoutService.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { IDialogsModel, IDialogViewItem } from '../../../common/dialogs.js';
-import { BrowserDialogHandler } from './dialogHandler.js';
-import { DialogService } from '../../../services/dialogs/common/dialogService.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { Lazy } from '../../../../base/common/lazy.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { createBrowserAboutDialogDetails } from '../../../../platform/dialogs/browser/dialog.js';
-import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.js';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { IDialogHandler, IDialogResult, IDialogService } from '../../../../platform/dialogs/common/dialogs.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { ILayoutService } from '../../../../platform/layout/browser/layoutService.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { IDialogsModel, IDialogViewItem } from '../../../common/dialogs.ts';
+import { BrowserDialogHandler } from './dialogHandler.ts';
+import { DialogService } from '../../../services/dialogs/common/dialogService.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { Lazy } from '../../../../base/common/lazy.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { createBrowserAboutDialogDetails } from '../../../../platform/dialogs/browser/dialog.ts';
+import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.ts';
 
 export class DialogHandlerContribution extends Disposable implements IWorkbenchContribution {
 

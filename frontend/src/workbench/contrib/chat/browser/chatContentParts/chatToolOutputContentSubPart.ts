@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { basename, joinPath } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.js';
-import { IFileDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { INotificationService } from '../../../../../platform/notification/common/notification.js';
-import { IProgressService, ProgressLocation } from '../../../../../platform/progress/common/progress.js';
-import { IWorkspaceContextService } from '../../../../../platform/workspace/common/workspace.js';
-import { REVEAL_IN_EXPLORER_COMMAND_ID } from '../../../files/browser/fileConstants.js';
-import { getAttachableImageExtension } from '../../common/chatModel.js';
-import { IChatRequestVariableEntry } from '../../common/chatVariableEntries.js';
-import { IChatCodeBlockInfo } from '../chat.js';
-import { CodeBlockPart, ICodeBlockData } from '../codeBlockPart.js';
-import { ChatAttachmentsContentPart } from './chatAttachmentsContentPart.js';
-import { IDisposableReference } from './chatCollections.js';
-import { IChatContentPartRenderContext } from './chatContentParts.js';
-import { ChatCollapsibleIOPart, IChatCollapsibleIOCodePart, IChatCollapsibleIODataPart } from './chatToolInputOutputContentPart.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { basename, joinPath } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.ts';
+import { IFileDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { INotificationService } from '../../../../../platform/notification/common/notification.ts';
+import { IProgressService, ProgressLocation } from '../../../../../platform/progress/common/progress.ts';
+import { IWorkspaceContextService } from '../../../../../platform/workspace/common/workspace.ts';
+import { REVEAL_IN_EXPLORER_COMMAND_ID } from '../../../files/browser/fileConstants.ts';
+import { getAttachableImageExtension } from '../../common/chatModel.ts';
+import { IChatRequestVariableEntry } from '../../common/chatVariableEntries.ts';
+import { IChatCodeBlockInfo } from '../chat.ts';
+import { CodeBlockPart, ICodeBlockData } from '../codeBlockPart.ts';
+import { ChatAttachmentsContentPart } from './chatAttachmentsContentPart.ts';
+import { IDisposableReference } from './chatCollections.ts';
+import { IChatContentPartRenderContext } from './chatContentParts.ts';
+import { ChatCollapsibleIOPart, IChatCollapsibleIOCodePart, IChatCollapsibleIODataPart } from './chatToolInputOutputContentPart.ts';
 
 /**
  * A reusable component for rendering tool output consisting of code blocks and/or resources.

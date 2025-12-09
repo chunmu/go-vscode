@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../nls.js';
-import { CallHierarchyProviderRegistry, CallHierarchyDirection, CallHierarchyModel } from '../common/callHierarchy.js';
-import { CancellationTokenSource } from '../../../../base/common/cancellation.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { CallHierarchyTreePeekWidget } from './callHierarchyPeek.js';
-import { Event } from '../../../../base/common/event.js';
-import { registerEditorContribution, EditorAction2, EditorContributionInstantiation } from '../../../../editor/browser/editorExtensions.js';
-import { IEditorContribution } from '../../../../editor/common/editorCommon.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IContextKeyService, RawContextKey, IContextKey, ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.js';
-import { PeekContext } from '../../../../editor/contrib/peekView/browser/peekView.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { IPosition } from '../../../../editor/common/core/position.js';
-import { MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
-import { isCancellationError } from '../../../../base/common/errors.js';
+import { localize, localize2 } from '../../../../nls.ts';
+import { CallHierarchyProviderRegistry, CallHierarchyDirection, CallHierarchyModel } from '../common/callHierarchy.ts';
+import { CancellationTokenSource } from '../../../../base/common/cancellation.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { CallHierarchyTreePeekWidget } from './callHierarchyPeek.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { registerEditorContribution, EditorAction2, EditorContributionInstantiation } from '../../../../editor/browser/editorExtensions.ts';
+import { IEditorContribution } from '../../../../editor/common/editorCommon.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IContextKeyService, RawContextKey, IContextKey, ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.ts';
+import { PeekContext } from '../../../../editor/contrib/peekView/browser/peekView.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { IPosition } from '../../../../editor/common/core/position.ts';
+import { MenuId, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
+import { isCancellationError } from '../../../../base/common/errors.ts';
 
 const _ctxHasCallHierarchyProvider = new RawContextKey<boolean>('editorHasCallHierarchyProvider', false, localize('editorHasCallHierarchyProvider', 'Whether a call hierarchy provider is available'));
 const _ctxCallHierarchyVisible = new RawContextKey<boolean>('callHierarchyVisible', false, localize('callHierarchyVisible', 'Whether call hierarchy peek is currently showing'));

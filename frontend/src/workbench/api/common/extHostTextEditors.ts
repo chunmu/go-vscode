@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as arrays from '../../../base/common/arrays.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { URI } from '../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ExtHostEditorsShape, IEditorPropertiesChangeData, IMainContext, ITextDocumentShowOptions, ITextEditorDiffInformation, ITextEditorPositionData, MainContext, MainThreadTextEditorsShape } from './extHost.protocol.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
-import { ExtHostTextEditor, TextEditorDecorationType } from './extHostTextEditor.js';
-import * as TypeConverters from './extHostTypeConverters.js';
-import { TextEditorSelectionChangeKind, TextEditorChangeKind } from './extHostTypes.js';
+import * as arrays from '../../../base/common/arrays.ts';
+import { Emitter, Event } from '../../../base/common/event.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ExtHostEditorsShape, IEditorPropertiesChangeData, IMainContext, ITextDocumentShowOptions, ITextEditorDiffInformation, ITextEditorPositionData, MainContext, MainThreadTextEditorsShape } from './extHost.protocol.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
+import { ExtHostTextEditor, TextEditorDecorationType } from './extHostTextEditor.ts';
+import * as TypeConverters from './extHostTypeConverters.ts';
+import { TextEditorSelectionChangeKind, TextEditorChangeKind } from './extHostTypes.ts';
 import * as vscode from 'vscode';
 
 export class ExtHostEditors extends Disposable implements ExtHostEditorsShape {

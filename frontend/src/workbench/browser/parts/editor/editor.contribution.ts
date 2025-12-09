@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { IEditorPaneRegistry, EditorPaneDescriptor } from '../../editor.js';
-import { IEditorFactoryRegistry, EditorExtensions } from '../../../common/editor.js';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { IEditorPaneRegistry, EditorPaneDescriptor } from '../../editor.ts';
+import { IEditorFactoryRegistry, EditorExtensions } from '../../../common/editor.ts';
 import {
 	TextCompareEditorActiveContext, ActiveEditorPinnedContext, EditorGroupEditorsCountContext, ActiveEditorStickyContext, ActiveEditorAvailableEditorIdsContext,
 	EditorPartMultipleEditorGroupsContext, ActiveEditorDirtyContext, ActiveEditorGroupLockedContext, ActiveEditorCanSplitInGroupContext, SideBySideEditorActiveContext,
 	EditorTabsVisibleContext, ActiveEditorLastInGroupContext, EditorPartMaximizedEditorGroupContext, MultipleEditorGroupsContext, InEditorZenModeContext,
 	IsAuxiliaryWindowContext, ActiveCompareEditorCanSwapContext, MultipleEditorsSelectedInGroupContext, SplitEditorsVertically
-} from '../../../common/contextkeys.js';
-import { SideBySideEditorInput, SideBySideEditorInputSerializer } from '../../../common/editor/sideBySideEditorInput.js';
-import { TextResourceEditor } from './textResourceEditor.js';
-import { SideBySideEditor } from './sideBySideEditor.js';
-import { DiffEditorInput, DiffEditorInputSerializer } from '../../../common/editor/diffEditorInput.js';
-import { UntitledTextEditorInput } from '../../../services/untitled/common/untitledTextEditorInput.js';
-import { TextResourceEditorInput } from '../../../common/editor/textResourceEditorInput.js';
-import { TextDiffEditor } from './textDiffEditor.js';
-import { BinaryResourceDiffEditor } from './binaryDiffEditor.js';
-import { ChangeEncodingAction, ChangeEOLAction, ChangeLanguageAction, EditorStatusContribution } from './editorStatus.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { MenuRegistry, MenuId, IMenuItem, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { KeyMod, KeyCode } from '../../../../base/common/keyCodes.js';
+} from '../../../common/contextkeys.ts';
+import { SideBySideEditorInput, SideBySideEditorInputSerializer } from '../../../common/editor/sideBySideEditorInput.ts';
+import { TextResourceEditor } from './textResourceEditor.ts';
+import { SideBySideEditor } from './sideBySideEditor.ts';
+import { DiffEditorInput, DiffEditorInputSerializer } from '../../../common/editor/diffEditorInput.ts';
+import { UntitledTextEditorInput } from '../../../services/untitled/common/untitledTextEditorInput.ts';
+import { TextResourceEditorInput } from '../../../common/editor/textResourceEditorInput.ts';
+import { TextDiffEditor } from './textDiffEditor.ts';
+import { BinaryResourceDiffEditor } from './binaryDiffEditor.ts';
+import { ChangeEncodingAction, ChangeEOLAction, ChangeLanguageAction, EditorStatusContribution } from './editorStatus.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { MenuRegistry, MenuId, IMenuItem, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { KeyMod, KeyCode } from '../../../../base/common/keyCodes.ts';
 import {
 	CloseEditorsInOtherGroupsAction, CloseAllEditorsAction, MoveGroupLeftAction, MoveGroupRightAction, SplitEditorAction, JoinTwoGroupsAction, RevertAndCloseEditorAction,
 	NavigateBetweenGroupsAction, FocusActiveGroupAction, FocusFirstGroupAction, ResetGroupSizesAction, MinimizeOtherGroupsAction, FocusPreviousGroup, FocusNextGroup,
@@ -45,7 +45,7 @@ import {
 	MaximizeGroupHideSidebarAction, MoveEditorToNewWindowAction, CopyEditorToNewindowAction, RestoreEditorsToMainWindowAction, ToggleMaximizeEditorGroupAction, MinimizeOtherGroupsHideSidebarAction, CopyEditorGroupToNewWindowAction,
 	MoveEditorGroupToNewWindowAction, NewEmptyEditorWindowAction,
 	ClearEditorHistoryWithoutConfirmAction
-} from './editorActions.js';
+} from './editorActions.ts';
 import {
 	CLOSE_EDITORS_AND_GROUP_COMMAND_ID, CLOSE_EDITORS_IN_GROUP_COMMAND_ID, CLOSE_EDITORS_TO_THE_RIGHT_COMMAND_ID, CLOSE_EDITOR_COMMAND_ID, CLOSE_EDITOR_GROUP_COMMAND_ID, CLOSE_OTHER_EDITORS_IN_GROUP_COMMAND_ID,
 	CLOSE_PINNED_EDITOR_COMMAND_ID, CLOSE_SAVED_EDITORS_COMMAND_ID, KEEP_EDITOR_COMMAND_ID, PIN_EDITOR_COMMAND_ID, SHOW_EDITORS_IN_GROUP, SPLIT_EDITOR_DOWN, SPLIT_EDITOR_LEFT,
@@ -53,26 +53,26 @@ import {
 	TOGGLE_LOCK_GROUP_COMMAND_ID, UNLOCK_GROUP_COMMAND_ID, SPLIT_EDITOR_IN_GROUP, JOIN_EDITOR_IN_GROUP, FOCUS_FIRST_SIDE_EDITOR, FOCUS_SECOND_SIDE_EDITOR, TOGGLE_SPLIT_EDITOR_IN_GROUP_LAYOUT, LOCK_GROUP_COMMAND_ID,
 	SPLIT_EDITOR, TOGGLE_MAXIMIZE_EDITOR_GROUP, MOVE_EDITOR_INTO_NEW_WINDOW_COMMAND_ID, COPY_EDITOR_INTO_NEW_WINDOW_COMMAND_ID, MOVE_EDITOR_GROUP_INTO_NEW_WINDOW_COMMAND_ID, COPY_EDITOR_GROUP_INTO_NEW_WINDOW_COMMAND_ID,
 	NEW_EMPTY_EDITOR_WINDOW_COMMAND_ID, MOVE_EDITOR_INTO_RIGHT_GROUP, MOVE_EDITOR_INTO_LEFT_GROUP, MOVE_EDITOR_INTO_ABOVE_GROUP, MOVE_EDITOR_INTO_BELOW_GROUP
-} from './editorCommands.js';
-import { GOTO_NEXT_CHANGE, GOTO_PREVIOUS_CHANGE, TOGGLE_DIFF_IGNORE_TRIM_WHITESPACE, TOGGLE_DIFF_SIDE_BY_SIDE, DIFF_SWAP_SIDES } from './diffEditorCommands.js';
-import { inQuickPickContext, getQuickNavigateHandler } from '../../quickaccess.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ContextKeyExpr, ContextKeyExpression } from '../../../../platform/contextkey/common/contextkey.js';
-import { isMacintosh } from '../../../../base/common/platform.js';
-import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { EditorAutoSave } from './editorAutoSave.js';
-import { IQuickAccessRegistry, Extensions as QuickAccessExtensions } from '../../../../platform/quickinput/common/quickAccess.js';
-import { ActiveGroupEditorsByMostRecentlyUsedQuickAccess, AllEditorsByAppearanceQuickAccess, AllEditorsByMostRecentlyUsedQuickAccess } from './editorQuickAccess.js';
-import { FileAccess } from '../../../../base/common/network.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
-import { UntitledTextEditorInputSerializer, UntitledTextEditorWorkingCopyEditorHandler } from '../../../services/untitled/common/untitledTextEditorHandler.js';
-import { DynamicEditorConfigurations } from './editorConfiguration.js';
-import { ConfigureEditorAction, ConfigureEditorTabsAction, EditorActionsDefaultAction, EditorActionsTitleBarAction, HideEditorActionsAction, HideEditorTabsAction, ShowMultipleEditorTabsAction, ShowSingleEditorTabAction, ZenHideEditorTabsAction, ZenShowMultipleEditorTabsAction, ZenShowSingleEditorTabAction } from '../../actions/layoutActions.js';
-import { ICommandAction } from '../../../../platform/action/common/action.js';
-import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.js';
-import { getFontSnippets } from '../../../../base/browser/fonts.js';
-import { registerEditorFontConfigurations } from '../../../../editor/common/config/editorConfigurationSchema.js';
+} from './editorCommands.ts';
+import { GOTO_NEXT_CHANGE, GOTO_PREVIOUS_CHANGE, TOGGLE_DIFF_IGNORE_TRIM_WHITESPACE, TOGGLE_DIFF_SIDE_BY_SIDE, DIFF_SWAP_SIDES } from './diffEditorCommands.ts';
+import { inQuickPickContext, getQuickNavigateHandler } from '../../quickaccess.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ContextKeyExpr, ContextKeyExpression } from '../../../../platform/contextkey/common/contextkey.ts';
+import { isMacintosh } from '../../../../base/common/platform.ts';
+import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { EditorAutoSave } from './editorAutoSave.ts';
+import { IQuickAccessRegistry, Extensions as QuickAccessExtensions } from '../../../../platform/quickinput/common/quickAccess.ts';
+import { ActiveGroupEditorsByMostRecentlyUsedQuickAccess, AllEditorsByAppearanceQuickAccess, AllEditorsByMostRecentlyUsedQuickAccess } from './editorQuickAccess.ts';
+import { FileAccess } from '../../../../base/common/network.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.ts';
+import { UntitledTextEditorInputSerializer, UntitledTextEditorWorkingCopyEditorHandler } from '../../../services/untitled/common/untitledTextEditorHandler.ts';
+import { DynamicEditorConfigurations } from './editorConfiguration.ts';
+import { ConfigureEditorAction, ConfigureEditorTabsAction, EditorActionsDefaultAction, EditorActionsTitleBarAction, HideEditorActionsAction, HideEditorTabsAction, ShowMultipleEditorTabsAction, ShowSingleEditorTabAction, ZenHideEditorTabsAction, ZenShowMultipleEditorTabsAction, ZenShowSingleEditorTabAction } from '../../actions/layoutActions.ts';
+import { ICommandAction } from '../../../../platform/action/common/action.ts';
+import { EditorContextKeys } from '../../../../editor/common/editorContextKeys.ts';
+import { getFontSnippets } from '../../../../base/browser/fonts.ts';
+import { registerEditorFontConfigurations } from '../../../../editor/common/config/editorConfigurationSchema.ts';
 
 //#region Editor Registrations
 

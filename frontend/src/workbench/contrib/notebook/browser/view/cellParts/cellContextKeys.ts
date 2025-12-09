@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../../base/common/observable.js';
-import { IContextKey, IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { CellEditState, CellFocusMode, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.js';
-import { CellContentPart } from '../cellPart.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.js';
-import { NotebookCellExecutionState } from '../../../common/notebookCommon.js';
-import { NotebookCellExecutionStateContext, NOTEBOOK_CELL_EDITABLE, NOTEBOOK_CELL_EDITOR_FOCUSED, NOTEBOOK_CELL_EXECUTING, NOTEBOOK_CELL_EXECUTION_STATE, NOTEBOOK_CELL_FOCUSED, NOTEBOOK_CELL_HAS_OUTPUTS, NOTEBOOK_CELL_INPUT_COLLAPSED, NOTEBOOK_CELL_LINE_NUMBERS, NOTEBOOK_CELL_MARKDOWN_EDIT_MODE, NOTEBOOK_CELL_OUTPUT_COLLAPSED, NOTEBOOK_CELL_RESOURCE, NOTEBOOK_CELL_TYPE, NOTEBOOK_CELL_HAS_ERROR_DIAGNOSTICS } from '../../../common/notebookContextKeys.js';
-import { INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.js';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
+import { IContextKey, IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { CellEditState, CellFocusMode, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellViewModelStateChangeEvent } from '../../notebookViewEvents.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.ts';
+import { NotebookCellExecutionState } from '../../../common/notebookCommon.ts';
+import { NotebookCellExecutionStateContext, NOTEBOOK_CELL_EDITABLE, NOTEBOOK_CELL_EDITOR_FOCUSED, NOTEBOOK_CELL_EXECUTING, NOTEBOOK_CELL_EXECUTION_STATE, NOTEBOOK_CELL_FOCUSED, NOTEBOOK_CELL_HAS_OUTPUTS, NOTEBOOK_CELL_INPUT_COLLAPSED, NOTEBOOK_CELL_LINE_NUMBERS, NOTEBOOK_CELL_MARKDOWN_EDIT_MODE, NOTEBOOK_CELL_OUTPUT_COLLAPSED, NOTEBOOK_CELL_RESOURCE, NOTEBOOK_CELL_TYPE, NOTEBOOK_CELL_HAS_ERROR_DIAGNOSTICS } from '../../../common/notebookContextKeys.ts';
+import { INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.ts';
 
 export class CellContextKeyPart extends CellContentPart {
 	private cellContextKeyManager: CellContextKeyManager;

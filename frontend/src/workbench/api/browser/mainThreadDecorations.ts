@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { Emitter } from '../../../base/common/event.js';
-import { IDisposable, dispose } from '../../../base/common/lifecycle.js';
-import { ExtHostContext, MainContext, MainThreadDecorationsShape, ExtHostDecorationsShape, DecorationData, DecorationRequest } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IDecorationsService, IDecorationData } from '../../services/decorations/common/decorations.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { DeferredPromise } from '../../../base/common/async.js';
-import { CancellationError } from '../../../base/common/errors.js';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { IDisposable, dispose } from '../../../base/common/lifecycle.ts';
+import { ExtHostContext, MainContext, MainThreadDecorationsShape, ExtHostDecorationsShape, DecorationData, DecorationRequest } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IDecorationsService, IDecorationData } from '../../services/decorations/common/decorations.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { DeferredPromise } from '../../../base/common/async.ts';
+import { CancellationError } from '../../../base/common/errors.ts';
 
 class DecorationRequestsQueue {
 

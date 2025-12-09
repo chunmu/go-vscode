@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.js';
-import { EditorOption } from '../../../../editor/common/config/editorOptions.js';
-import { AccessibilityHelpNLS } from '../../../../editor/common/standaloneStrings.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { AccessibilityHelpAction } from './accessibleViewActions.js';
-import { ChatContextKeys } from '../../chat/common/chatContextKeys.js';
-import { CommentAccessibilityHelpNLS } from '../../comments/browser/commentsAccessibility.js';
-import { CommentContextKeys } from '../../comments/common/commentContextKeys.js';
-import { NEW_UNTITLED_FILE_COMMAND_ID } from '../../files/browser/fileConstants.js';
-import { IAccessibleViewService, IAccessibleViewContentProvider, AccessibleViewProviderId, IAccessibleViewOptions, AccessibleViewType } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { AccessibilityVerbositySettingId } from './accessibilityConfiguration.js';
-import { ctxHasEditorModification, ctxHasRequestInProgress } from '../../chat/browser/chatEditing/chatEditingEditorContextKeys.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { ICodeEditorService } from '../../../../editor/browser/services/codeEditorService.ts';
+import { EditorOption } from '../../../../editor/common/config/editorOptions.ts';
+import { AccessibilityHelpNLS } from '../../../../editor/common/standaloneStrings.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { AccessibilityHelpAction } from './accessibleViewActions.ts';
+import { ChatContextKeys } from '../../chat/common/chatContextKeys.ts';
+import { CommentAccessibilityHelpNLS } from '../../comments/browser/commentsAccessibility.ts';
+import { CommentContextKeys } from '../../comments/common/commentContextKeys.ts';
+import { NEW_UNTITLED_FILE_COMMAND_ID } from '../../files/browser/fileConstants.ts';
+import { IAccessibleViewService, IAccessibleViewContentProvider, AccessibleViewProviderId, IAccessibleViewOptions, AccessibleViewType } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { AccessibilityVerbositySettingId } from './accessibilityConfiguration.ts';
+import { ctxHasEditorModification, ctxHasRequestInProgress } from '../../chat/browser/chatEditing/chatEditingEditorContextKeys.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
 
 export class EditorAccessibilityHelpContribution extends Disposable {
 	static ID: 'editorAccessibilityHelpContribution';

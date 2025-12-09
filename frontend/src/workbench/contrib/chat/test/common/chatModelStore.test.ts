@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { DeferredPromise } from '../../../../../base/common/async.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { ChatModel } from '../../common/chatModel.js';
-import { ChatModelStore, IStartSessionProps } from '../../common/chatModelStore.js';
-import { ChatAgentLocation } from '../../common/constants.js';
-import { MockChatModel } from './mockChatModel.js';
+import { DeferredPromise } from '../../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { ChatModel } from '../../common/chatModel.ts';
+import { ChatModelStore, IStartSessionProps } from '../../common/chatModelStore.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
+import { MockChatModel } from './mockChatModel.ts';
 
 suite('ChatModelStore', () => {
 	const store = ensureNoDisposablesAreLeakedInTestSuite();

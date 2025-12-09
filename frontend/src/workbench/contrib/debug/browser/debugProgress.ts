@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable, dispose } from '../../../../base/common/lifecycle.js';
-import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IDebugService, IDebugSession, VIEWLET_ID } from '../common/debug.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable, dispose } from '../../../../base/common/lifecycle.ts';
+import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IDebugService, IDebugSession, VIEWLET_ID } from '../common/debug.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
 
 export class DebugProgressContribution implements IWorkbenchContribution {
 

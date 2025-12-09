@@ -3,34 +3,34 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ITreeContextMenuEvent } from '../../../../../../base/browser/ui/tree/tree.js';
-import { RunOnceScheduler } from '../../../../../../base/common/async.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { getFlatContextMenuActions } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { IMenuService, MenuId } from '../../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.js';
-import { IHoverService } from '../../../../../../platform/hover/browser/hover.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { WorkbenchAsyncDataTree } from '../../../../../../platform/list/browser/listService.js';
-import { IOpenerService } from '../../../../../../platform/opener/common/opener.js';
-import { IQuickInputService } from '../../../../../../platform/quickinput/common/quickInput.js';
-import { IThemeService } from '../../../../../../platform/theme/common/themeService.js';
-import { IViewPaneOptions, ViewPane } from '../../../../../browser/parts/views/viewPane.js';
-import { IViewDescriptorService } from '../../../../../common/views.js';
-import { CONTEXT_VARIABLE_EXTENSIONID, CONTEXT_VARIABLE_INTERFACES, CONTEXT_VARIABLE_LANGUAGE, CONTEXT_VARIABLE_NAME, CONTEXT_VARIABLE_TYPE, CONTEXT_VARIABLE_VALUE } from '../../../../debug/common/debug.js';
-import { IEmptyScope, INotebookScope, INotebookVariableElement, NotebookVariableDataSource } from './notebookVariablesDataSource.js';
-import { NOTEBOOK_TITLE, NotebookVariableAccessibilityProvider, NotebookVariableRenderer, NotebookVariablesDelegate, REPL_TITLE } from './notebookVariablesTree.js';
-import { getNotebookEditorFromEditorPane } from '../../notebookBrowser.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { ICellExecutionStateChangedEvent, IExecutionStateChangedEvent, INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
-import { INotebookKernelService } from '../../../common/notebookKernelService.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { IEditorCloseEvent, IEditorPane } from '../../../../../common/editor.js';
-import { isCompositeNotebookEditorInput } from '../../../common/notebookEditorInput.js';
+import { ITreeContextMenuEvent } from '../../../../../../base/browser/ui/tree/tree.ts';
+import { RunOnceScheduler } from '../../../../../../base/common/async.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { getFlatContextMenuActions } from '../../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { IMenuService, MenuId } from '../../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IContextMenuService } from '../../../../../../platform/contextview/browser/contextView.ts';
+import { IHoverService } from '../../../../../../platform/hover/browser/hover.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { WorkbenchAsyncDataTree } from '../../../../../../platform/list/browser/listService.ts';
+import { IOpenerService } from '../../../../../../platform/opener/common/opener.ts';
+import { IQuickInputService } from '../../../../../../platform/quickinput/common/quickInput.ts';
+import { IThemeService } from '../../../../../../platform/theme/common/themeService.ts';
+import { IViewPaneOptions, ViewPane } from '../../../../../browser/parts/views/viewPane.ts';
+import { IViewDescriptorService } from '../../../../../common/views.ts';
+import { CONTEXT_VARIABLE_EXTENSIONID, CONTEXT_VARIABLE_INTERFACES, CONTEXT_VARIABLE_LANGUAGE, CONTEXT_VARIABLE_NAME, CONTEXT_VARIABLE_TYPE, CONTEXT_VARIABLE_VALUE } from '../../../../debug/common/debug.ts';
+import { IEmptyScope, INotebookScope, INotebookVariableElement, NotebookVariableDataSource } from './notebookVariablesDataSource.ts';
+import { NOTEBOOK_TITLE, NotebookVariableAccessibilityProvider, NotebookVariableRenderer, NotebookVariablesDelegate, REPL_TITLE } from './notebookVariablesTree.ts';
+import { getNotebookEditorFromEditorPane } from '../../notebookBrowser.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { ICellExecutionStateChangedEvent, IExecutionStateChangedEvent, INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
+import { INotebookKernelService } from '../../../common/notebookKernelService.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { IEditorCloseEvent, IEditorPane } from '../../../../../common/editor.ts';
+import { isCompositeNotebookEditorInput } from '../../../common/notebookEditorInput.ts';
 
 export type contextMenuArg = { source: string; name: string; type?: string; value?: string; expression?: string; language?: string; extensionId?: string };
 

@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $, append, clearNode, h } from '../../../../base/browser/dom.js';
-import { KeybindingLabel } from '../../../../base/browser/ui/keybindingLabel/keybindingLabel.js';
-import { coalesce, shuffle } from '../../../../base/common/arrays.js';
-import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { isMacintosh, isWeb, OS } from '../../../../base/common/platform.js';
-import { localize } from '../../../../nls.js';
-import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, ContextKeyExpression, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { IStorageService, StorageScope, StorageTarget, WillSaveStateReason } from '../../../../platform/storage/common/storage.js';
-import { defaultKeybindingLabelStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { editorForeground, registerColor, transparent } from '../../../../platform/theme/common/colorRegistry.js';
-import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.js';
+import { $, append, clearNode, h } from '../../../../base/browser/dom.ts';
+import { KeybindingLabel } from '../../../../base/browser/ui/keybindingLabel/keybindingLabel.ts';
+import { coalesce, shuffle } from '../../../../base/common/arrays.ts';
+import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { isMacintosh, isWeb, OS } from '../../../../base/common/platform.ts';
+import { localize } from '../../../../nls.ts';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, ContextKeyExpression, IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IStorageService, StorageScope, StorageTarget, WillSaveStateReason } from '../../../../platform/storage/common/storage.ts';
+import { defaultKeybindingLabelStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { editorForeground, registerColor, transparent } from '../../../../platform/theme/common/colorRegistry.ts';
+import { IWorkspaceContextService, WorkbenchState } from '../../../../platform/workspace/common/workspace.ts';
 
 interface WatermarkEntry {
 	readonly id: string;

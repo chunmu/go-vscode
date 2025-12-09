@@ -5,27 +5,27 @@
 
 import * as fs from 'fs';
 import { exec } from 'child_process';
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { Emitter } from '../../../base/common/event.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
-import { MovingAverage } from '../../../base/common/numbers.js';
-import { isLinux } from '../../../base/common/platform.js';
-import * as resources from '../../../base/common/resources.js';
-import { URI } from '../../../base/common/uri.js';
-import * as pfs from '../../../base/node/pfs.js';
-import { ISocket, SocketCloseEventType } from '../../../base/parts/ipc/common/ipc.net.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ManagedSocket, RemoteSocketHalf, connectManagedSocket } from '../../../platform/remote/common/managedSocket.js';
-import { ManagedRemoteConnection } from '../../../platform/remote/common/remoteAuthorityResolver.js';
-import { ISignService } from '../../../platform/sign/common/sign.js';
-import { isAllInterfaces, isLocalhost } from '../../../platform/tunnel/common/tunnel.js';
-import { NodeRemoteTunnel } from '../../../platform/tunnel/node/tunnelService.js';
-import { IExtHostInitDataService } from '../common/extHostInitDataService.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
-import { ExtHostTunnelService } from '../common/extHostTunnelService.js';
-import { CandidatePort, parseAddress } from '../../services/remote/common/tunnelModel.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { DisposableStore } from '../../../base/common/lifecycle.ts';
+import { MovingAverage } from '../../../base/common/numbers.ts';
+import { isLinux } from '../../../base/common/platform.ts';
+import * as resources from '../../../base/common/resources.ts';
+import { URI } from '../../../base/common/uri.ts';
+import * as pfs from '../../../base/node/pfs.ts';
+import { ISocket, SocketCloseEventType } from '../../../base/parts/ipc/common/ipc.net.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { ManagedSocket, RemoteSocketHalf, connectManagedSocket } from '../../../platform/remote/common/managedSocket.ts';
+import { ManagedRemoteConnection } from '../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { ISignService } from '../../../platform/sign/common/sign.ts';
+import { isAllInterfaces, isLocalhost } from '../../../platform/tunnel/common/tunnel.ts';
+import { NodeRemoteTunnel } from '../../../platform/tunnel/node/tunnelService.ts';
+import { IExtHostInitDataService } from '../common/extHostInitDataService.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
+import { ExtHostTunnelService } from '../common/extHostTunnelService.ts';
+import { CandidatePort, parseAddress } from '../../services/remote/common/tunnelModel.ts';
 import * as vscode from 'vscode';
-import { IExtHostConfiguration } from '../common/extHostConfiguration.js';
+import { IExtHostConfiguration } from '../common/extHostConfiguration.ts';
 
 export function getSockets(stdout: string): Record<string, { pid: number; socket: number }> {
 	const lines = stdout.trim().split('\n');

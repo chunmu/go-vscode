@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { IConfirmation, IConfirmationResult, IInputResult, ICheckbox, IInputElement, ICustomDialogOptions, IInput, AbstractDialogHandler, DialogType, IPrompt, IAsyncPromptResult } from '../../../../platform/dialogs/common/dialogs.js';
-import { ILayoutService } from '../../../../platform/layout/browser/layoutService.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import Severity from '../../../../base/common/severity.js';
-import { Dialog, IDialogResult } from '../../../../base/browser/ui/dialog/dialog.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IMarkdownRendererService, openLinkFromMarkdown } from '../../../../platform/markdown/browser/markdownRenderer.js';
-import { IOpenerService } from '../../../../platform/opener/common/opener.js';
-import { createWorkbenchDialogOptions } from '../../../../platform/dialogs/browser/dialog.js';
+import { localize } from '../../../../nls.ts';
+import { IConfirmation, IConfirmationResult, IInputResult, ICheckbox, IInputElement, ICustomDialogOptions, IInput, AbstractDialogHandler, DialogType, IPrompt, IAsyncPromptResult } from '../../../../platform/dialogs/common/dialogs.ts';
+import { ILayoutService } from '../../../../platform/layout/browser/layoutService.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import Severity from '../../../../base/common/severity.ts';
+import { Dialog, IDialogResult } from '../../../../base/browser/ui/dialog/dialog.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IClipboardService } from '../../../../platform/clipboard/common/clipboardService.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IMarkdownRendererService, openLinkFromMarkdown } from '../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IOpenerService } from '../../../../platform/opener/common/opener.ts';
+import { createWorkbenchDialogOptions } from '../../../../platform/dialogs/browser/dialog.ts';
 
 export class BrowserDialogHandler extends AbstractDialogHandler {
 

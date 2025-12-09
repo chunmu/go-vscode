@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { URI } from '../../../../base/common/uri.js';
-import { distinct, deepClone } from '../../../../base/common/objects.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { isObject, assertReturnsDefined } from '../../../../base/common/types.js';
-import { MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IEditorOpenContext, IEditorPaneSelection, EditorPaneSelectionCompareResult, EditorPaneSelectionChangeReason, IEditorPaneWithSelection, IEditorPaneSelectionChangeEvent, IEditorPaneScrollPosition, IEditorPaneWithScrolling } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { computeEditorAriaLabel } from '../../editor.js';
-import { AbstractEditorWithViewState } from './editorWithViewState.js';
-import { IEditorViewState } from '../../../../editor/common/editorCommon.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { ITextResourceConfigurationChangeEvent, ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.js';
-import { IEditorOptions as ICodeEditorOptions } from '../../../../editor/common/config/editorOptions.js';
-import { IEditorGroup, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IEditorOptions, ITextEditorOptions, TextEditorSelectionRevealType, TextEditorSelectionSource } from '../../../../platform/editor/common/editor.js';
-import { ICursorPositionChangedEvent } from '../../../../editor/common/cursorEvents.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
+import { localize } from '../../../../nls.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { distinct, deepClone } from '../../../../base/common/objects.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { isObject, assertReturnsDefined } from '../../../../base/common/types.ts';
+import { MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IEditorOpenContext, IEditorPaneSelection, EditorPaneSelectionCompareResult, EditorPaneSelectionChangeReason, IEditorPaneWithSelection, IEditorPaneSelectionChangeEvent, IEditorPaneScrollPosition, IEditorPaneWithScrolling } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { computeEditorAriaLabel } from '../../editor.ts';
+import { AbstractEditorWithViewState } from './editorWithViewState.ts';
+import { IEditorViewState } from '../../../../editor/common/editorCommon.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { ITextResourceConfigurationChangeEvent, ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.ts';
+import { IEditorOptions as ICodeEditorOptions } from '../../../../editor/common/config/editorOptions.ts';
+import { IEditorGroup, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IEditorOptions, ITextEditorOptions, TextEditorSelectionRevealType, TextEditorSelectionSource } from '../../../../platform/editor/common/editor.ts';
+import { ICursorPositionChangedEvent } from '../../../../editor/common/cursorEvents.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
 
 export interface IEditorConfiguration {
 	editor: object;

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { UriComponents } from '../../../../base/common/uri.js';
-import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.js';
-import type { Dto } from '../../../services/extensions/common/proxyIdentifier.js';
-import { ITaskExecution } from '../../../contrib/tasks/common/tasks.js';
+import { UriComponents } from '../../../../base/common/uri.ts';
+import { IExtensionDescription } from '../../../../platform/extensions/common/extensions.ts';
+import type { Dto } from '../../../services/extensions/common/proxyIdentifier.ts';
+import { ITaskExecution } from '../../../contrib/tasks/common/tasks.ts';
 
 export interface ITaskDefinitionDTO {
 	type: string;

@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { EditSuggestionId } from '../../../../../../editor/common/textModelEditSource.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ITelemetryService } from '../../../../../../platform/telemetry/common/telemetry.js';
-import { TelemetryTrustedValue } from '../../../../../../platform/telemetry/common/telemetryUtils.js';
-import { DataChannelForwardingTelemetryService, forwardToChannelIf, isCopilotLikeExtension } from '../../../../../../platform/dataChannel/browser/forwardingTelemetryService.js';
-import { IAiEditTelemetryService, IEditTelemetryCodeAcceptedData, IEditTelemetryCodeSuggestedData } from './aiEditTelemetryService.js';
-import { IRandomService } from '../../randomService.js';
+import { EditSuggestionId } from '../../../../../../editor/common/textModelEditSource.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ITelemetryService } from '../../../../../../platform/telemetry/common/telemetry.ts';
+import { TelemetryTrustedValue } from '../../../../../../platform/telemetry/common/telemetryUtils.ts';
+import { DataChannelForwardingTelemetryService, forwardToChannelIf, isCopilotLikeExtension } from '../../../../../../platform/dataChannel/browser/forwardingTelemetryService.ts';
+import { IAiEditTelemetryService, IEditTelemetryCodeAcceptedData, IEditTelemetryCodeSuggestedData } from './aiEditTelemetryService.ts';
+import { IRandomService } from '../../randomService.ts';
 
 export class AiEditTelemetryServiceImpl implements IAiEditTelemetryService {
 	declare readonly _serviceBrand: undefined;

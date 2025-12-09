@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { illegalState } from '../../../../base/common/errors.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { isEqual } from '../../../../base/common/resources.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { InlineChatController } from './inlineChatController.js';
-import { IInlineChatSessionService } from './inlineChatSessionService.js';
-import { INotebookEditorService } from '../../notebook/browser/services/notebookEditorService.js';
-import { CellUri } from '../../notebook/common/notebookCommon.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { NotebookTextDiffEditor } from '../../notebook/browser/diff/notebookDiffEditor.js';
-import { NotebookMultiTextDiffEditor } from '../../notebook/browser/diff/notebookMultiDiffEditor.js';
+import { illegalState } from '../../../../base/common/errors.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { isEqual } from '../../../../base/common/resources.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { InlineChatController } from './inlineChatController.ts';
+import { IInlineChatSessionService } from './inlineChatSessionService.ts';
+import { INotebookEditorService } from '../../notebook/browser/services/notebookEditorService.ts';
+import { CellUri } from '../../notebook/common/notebookCommon.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { NotebookTextDiffEditor } from '../../notebook/browser/diff/notebookDiffEditor.ts';
+import { NotebookMultiTextDiffEditor } from '../../notebook/browser/diff/notebookMultiDiffEditor.ts';
 
 export class InlineChatNotebookContribution {
 

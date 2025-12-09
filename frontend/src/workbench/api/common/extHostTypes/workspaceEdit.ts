@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { coalesceInPlace } from '../../../../base/common/arrays.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { URI } from '../../../../base/common/uri.js';
-import { CellEditType, ICellMetadataEdit, IDocumentMetadataEdit } from '../../../contrib/notebook/common/notebookCommon.js';
-import { NotebookEdit } from './notebooks.js';
-import { SnippetTextEdit } from './snippetTextEdit.js';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Position } from './position.js';
-import { Range } from './range.js';
-import { TextEdit } from './textEdit.js';
+import { coalesceInPlace } from '../../../../base/common/arrays.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { CellEditType, ICellMetadataEdit, IDocumentMetadataEdit } from '../../../contrib/notebook/common/notebookCommon.ts';
+import { NotebookEdit } from './notebooks.ts';
+import { SnippetTextEdit } from './snippetTextEdit.ts';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Position } from './position.ts';
+import { Range } from './range.ts';
+import { TextEdit } from './textEdit.ts';
 
 export interface IFileOperationOptions {
 	readonly overwrite?: boolean;

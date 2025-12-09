@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';
-import { BrowserResourcePerformanceMarks, BrowserStartupTimings } from './startupTimings.js';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.ts';
+import { BrowserResourcePerformanceMarks, BrowserStartupTimings } from './startupTimings.ts';
 
 // -- startup timings
 

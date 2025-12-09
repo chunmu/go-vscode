@@ -3,40 +3,40 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DataTransfers, IDragAndDropData } from '../../base/browser/dnd.js';
-import { DragAndDropObserver, EventType, addDisposableListener, onDidRegisterWindow } from '../../base/browser/dom.js';
-import { DragMouseEvent } from '../../base/browser/mouseEvent.js';
-import { IListDragAndDrop } from '../../base/browser/ui/list/list.js';
-import { ElementsDragAndDropData, ListViewTargetSector } from '../../base/browser/ui/list/listView.js';
-import { ITreeDragOverReaction } from '../../base/browser/ui/tree/tree.js';
-import { coalesce } from '../../base/common/arrays.js';
-import { UriList, VSDataTransfer } from '../../base/common/dataTransfer.js';
-import { Emitter, Event } from '../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable, markAsSingleton } from '../../base/common/lifecycle.js';
-import { stringify } from '../../base/common/marshalling.js';
-import { Mimes } from '../../base/common/mime.js';
-import { FileAccess, Schemas } from '../../base/common/network.js';
-import { isWindows } from '../../base/common/platform.js';
-import { basename, isEqual } from '../../base/common/resources.js';
-import { URI } from '../../base/common/uri.js';
-import { CodeDataTransfers, Extensions, IDragAndDropContributionRegistry, IDraggedResourceEditorInput, IResourceStat, LocalSelectionTransfer, createDraggedEditorInputFromRawResourcesData, extractEditorsAndFilesDropData } from '../../platform/dnd/browser/dnd.js';
-import { IFileService } from '../../platform/files/common/files.js';
-import { IInstantiationService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../platform/label/common/label.js';
-import { extractSelection, withSelection } from '../../platform/opener/common/opener.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { IWindowOpenable } from '../../platform/window/common/window.js';
-import { IWorkspaceContextService, hasWorkspaceFileExtension, isTemporaryWorkspace } from '../../platform/workspace/common/workspace.js';
-import { IWorkspaceFolderCreationData, IWorkspacesService } from '../../platform/workspaces/common/workspaces.js';
-import { EditorResourceAccessor, GroupIdentifier, IEditorIdentifier, isEditorIdentifier, isResourceDiffEditorInput, isResourceMergeEditorInput, isResourceSideBySideEditorInput } from '../common/editor.js';
-import { IEditorGroup } from '../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../services/editor/common/editorService.js';
-import { IHostService } from '../services/host/browser/host.js';
-import { ITextFileService } from '../services/textfile/common/textfiles.js';
-import { IWorkspaceEditingService } from '../services/workspaces/common/workspaceEditing.js';
-import { IEditorOptions } from '../../platform/editor/common/editor.js';
-import { mainWindow } from '../../base/browser/window.js';
-import { BroadcastDataChannel } from '../../base/browser/broadcast.js';
+import { DataTransfers, IDragAndDropData } from '../../base/browser/dnd.ts';
+import { DragAndDropObserver, EventType, addDisposableListener, onDidRegisterWindow } from '../../base/browser/dom.ts';
+import { DragMouseEvent } from '../../base/browser/mouseEvent.ts';
+import { IListDragAndDrop } from '../../base/browser/ui/list/list.ts';
+import { ElementsDragAndDropData, ListViewTargetSector } from '../../base/browser/ui/list/listView.ts';
+import { ITreeDragOverReaction } from '../../base/browser/ui/tree/tree.ts';
+import { coalesce } from '../../base/common/arrays.ts';
+import { UriList, VSDataTransfer } from '../../base/common/dataTransfer.ts';
+import { Emitter, Event } from '../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable, markAsSingleton } from '../../base/common/lifecycle.ts';
+import { stringify } from '../../base/common/marshalling.ts';
+import { Mimes } from '../../base/common/mime.ts';
+import { FileAccess, Schemas } from '../../base/common/network.ts';
+import { isWindows } from '../../base/common/platform.ts';
+import { basename, isEqual } from '../../base/common/resources.ts';
+import { URI } from '../../base/common/uri.ts';
+import { CodeDataTransfers, Extensions, IDragAndDropContributionRegistry, IDraggedResourceEditorInput, IResourceStat, LocalSelectionTransfer, createDraggedEditorInputFromRawResourcesData, extractEditorsAndFilesDropData } from '../../platform/dnd/browser/dnd.ts';
+import { IFileService } from '../../platform/files/common/files.ts';
+import { IInstantiationService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../platform/label/common/label.ts';
+import { extractSelection, withSelection } from '../../platform/opener/common/opener.ts';
+import { Registry } from '../../platform/registry/common/platform.ts';
+import { IWindowOpenable } from '../../platform/window/common/window.ts';
+import { IWorkspaceContextService, hasWorkspaceFileExtension, isTemporaryWorkspace } from '../../platform/workspace/common/workspace.ts';
+import { IWorkspaceFolderCreationData, IWorkspacesService } from '../../platform/workspaces/common/workspaces.ts';
+import { EditorResourceAccessor, GroupIdentifier, IEditorIdentifier, isEditorIdentifier, isResourceDiffEditorInput, isResourceMergeEditorInput, isResourceSideBySideEditorInput } from '../common/editor.ts';
+import { IEditorGroup } from '../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../services/editor/common/editorService.ts';
+import { IHostService } from '../services/host/browser/host.ts';
+import { ITextFileService } from '../services/textfile/common/textfiles.ts';
+import { IWorkspaceEditingService } from '../services/workspaces/common/workspaceEditing.ts';
+import { IEditorOptions } from '../../platform/editor/common/editor.ts';
+import { mainWindow } from '../../base/browser/window.ts';
+import { BroadcastDataChannel } from '../../base/browser/broadcast.ts';
 
 //#region Editor / Resources DND
 

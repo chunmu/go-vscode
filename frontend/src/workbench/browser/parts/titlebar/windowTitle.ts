@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { dirname, basename } from '../../../../base/common/resources.js';
-import { ITitleProperties, ITitleVariable } from './titlebarPart.js';
-import { IConfigurationService, IConfigurationChangeEvent } from '../../../../platform/configuration/common/configuration.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
-import { EditorResourceAccessor, Verbosity, SideBySideEditor } from '../../../common/editor.js';
-import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.js';
-import { IWorkspaceContextService, WorkbenchState, IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { isWindows, isWeb, isMacintosh, isNative } from '../../../../base/common/platform.js';
-import { URI } from '../../../../base/common/uri.js';
-import { trim } from '../../../../base/common/strings.js';
-import { template } from '../../../../base/common/labels.js';
-import { ILabelService, Verbosity as LabelVerbosity } from '../../../../platform/label/common/label.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { RunOnceScheduler } from '../../../../base/common/async.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { getVirtualWorkspaceLocation } from '../../../../platform/workspace/common/virtualWorkspace.js';
-import { IUserDataProfileService } from '../../../services/userDataProfile/common/userDataProfile.js';
-import { IViewsService } from '../../../services/views/common/viewsService.js';
-import { ICodeEditor, isCodeEditor, isDiffEditor } from '../../../../editor/browser/editorBrowser.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { getWindowById } from '../../../../base/browser/dom.js';
-import { CodeWindow } from '../../../../base/browser/window.js';
-import { IDecorationsService } from '../../../services/decorations/common/decorations.js';
-import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
+import { localize } from '../../../../nls.ts';
+import { dirname, basename } from '../../../../base/common/resources.ts';
+import { ITitleProperties, ITitleVariable } from './titlebarPart.ts';
+import { IConfigurationService, IConfigurationChangeEvent } from '../../../../platform/configuration/common/configuration.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { EditorResourceAccessor, Verbosity, SideBySideEditor } from '../../../common/editor.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.ts';
+import { IWorkspaceContextService, WorkbenchState, IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { isWindows, isWeb, isMacintosh, isNative } from '../../../../base/common/platform.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { trim } from '../../../../base/common/strings.ts';
+import { template } from '../../../../base/common/labels.ts';
+import { ILabelService, Verbosity as LabelVerbosity } from '../../../../platform/label/common/label.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { RunOnceScheduler } from '../../../../base/common/async.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { getVirtualWorkspaceLocation } from '../../../../platform/workspace/common/virtualWorkspace.ts';
+import { IUserDataProfileService } from '../../../services/userDataProfile/common/userDataProfile.ts';
+import { IViewsService } from '../../../services/views/common/viewsService.ts';
+import { ICodeEditor, isCodeEditor, isDiffEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { getWindowById } from '../../../../base/browser/dom.ts';
+import { CodeWindow } from '../../../../base/browser/window.ts';
+import { IDecorationsService } from '../../../services/decorations/common/decorations.ts';
+import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.ts';
 
 const enum WindowSettingNames {
 	titleSeparator = 'window.titleSeparator',

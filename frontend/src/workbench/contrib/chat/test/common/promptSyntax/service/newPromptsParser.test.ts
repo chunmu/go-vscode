@@ -5,10 +5,10 @@
 
 import assert from 'assert';
 
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.js';
-import { Range } from '../../../../../../../editor/common/core/range.js';
-import { URI } from '../../../../../../../base/common/uri.js';
-import { PromptFileParser } from '../../../../common/promptSyntax/promptFileParser.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../../base/test/common/utils.ts';
+import { Range } from '../../../../../../../editor/common/core/range.ts';
+import { URI } from '../../../../../../../base/common/uri.ts';
+import { PromptFileParser } from '../../../../common/promptSyntax/promptFileParser.ts';
 
 suite('NewPromptsParser', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

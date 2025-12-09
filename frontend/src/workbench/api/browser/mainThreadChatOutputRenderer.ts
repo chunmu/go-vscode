@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { Disposable, IDisposable } from '../../../base/common/lifecycle.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { IChatOutputRendererService } from '../../contrib/chat/browser/chatOutputItemRenderer.js';
-import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostChatOutputRendererShape, ExtHostContext, MainThreadChatOutputRendererShape } from '../common/extHost.protocol.js';
-import { MainThreadWebviews } from './mainThreadWebviews.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { Disposable, IDisposable } from '../../../base/common/lifecycle.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { IChatOutputRendererService } from '../../contrib/chat/browser/chatOutputItemRenderer.ts';
+import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostChatOutputRendererShape, ExtHostContext, MainThreadChatOutputRendererShape } from '../common/extHost.protocol.ts';
+import { MainThreadWebviews } from './mainThreadWebviews.ts';
 
 export class MainThreadChatOutputRenderer extends Disposable implements MainThreadChatOutputRendererShape {
 

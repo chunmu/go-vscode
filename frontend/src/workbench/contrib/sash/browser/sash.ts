@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { clamp } from '../../../../base/common/numbers.js';
-import { setGlobalSashSize, setGlobalHoverDelay } from '../../../../base/browser/ui/sash/sash.js';
-import { Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { createStyleSheet } from '../../../../base/browser/domStylesheets.js';
+import { clamp } from '../../../../base/common/numbers.ts';
+import { setGlobalSashSize, setGlobalHoverDelay } from '../../../../base/browser/ui/sash/sash.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { createStyleSheet } from '../../../../base/browser/domStylesheets.ts';
 
 export const minSize = 1;
 export const maxSize = 20; // see also https://ux.stackexchange.com/questions/39023/what-is-the-optimum-button-size-of-touch-screen-applications

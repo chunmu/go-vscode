@@ -3,41 +3,41 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../base/browser/dom.js';
-import * as nls from '../../../../../nls.js';
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { IEditorOptions } from '../../../../../platform/editor/common/editor.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IStorageService } from '../../../../../platform/storage/common/storage.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IThemeService } from '../../../../../platform/theme/common/themeService.js';
-import { IUriIdentityService } from '../../../../../platform/uriIdentity/common/uriIdentity.js';
-import { EditorPane } from '../../../../browser/parts/editor/editorPane.js';
-import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../../common/contributions.js';
-import { IEditorOpenContext } from '../../../../common/editor.js';
-import { IEditorGroup } from '../../../../services/editor/common/editorGroupsService.js';
-import { IEditorResolverService, RegisteredEditorPriority } from '../../../../services/editor/common/editorResolverService.js';
-import { CellUri, NOTEBOOK_OUTPUT_EDITOR_ID } from '../../common/notebookCommon.js';
-import { INotebookService } from '../../common/notebookService.js';
-import { CellEditState, IBaseCellEditorOptions, ICellOutputViewModel, ICommonCellInfo, IGenericCellViewModel, IInsetRenderOutput, INotebookEditorCreationOptions, RenderOutputType } from '../notebookBrowser.js';
-import { getDefaultNotebookCreationOptions } from '../notebookEditorWidget.js';
-import { NotebookOptions } from '../notebookOptions.js';
-import { BackLayerWebView, INotebookDelegateForWebview } from '../view/renderers/backLayerWebView.js';
-import { NotebookOutputEditorInput } from './notebookOutputEditorInput.js';
-import { FontInfo } from '../../../../../editor/common/config/fontInfo.js';
-import { createBareFontInfoFromRawSettings } from '../../../../../editor/common/config/fontInfoFromSettings.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IEditorOptions as ICodeEditorOptions } from '../../../../../editor/common/config/editorOptions.js';
-import { FontMeasurements } from '../../../../../editor/browser/config/fontMeasurements.js';
-import { PixelRatio } from '../../../../../base/browser/pixelRatio.js';
-import { NotebookViewModel } from '../viewModel/notebookViewModelImpl.js';
-import { NotebookEventDispatcher } from '../viewModel/eventDispatcher.js';
-import { ViewContext } from '../viewModel/viewContext.js';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import * as nls from '../../../../../nls.ts';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { IEditorOptions } from '../../../../../platform/editor/common/editor.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IStorageService } from '../../../../../platform/storage/common/storage.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IThemeService } from '../../../../../platform/theme/common/themeService.ts';
+import { IUriIdentityService } from '../../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { EditorPane } from '../../../../browser/parts/editor/editorPane.ts';
+import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../../common/contributions.ts';
+import { IEditorOpenContext } from '../../../../common/editor.ts';
+import { IEditorGroup } from '../../../../services/editor/common/editorGroupsService.ts';
+import { IEditorResolverService, RegisteredEditorPriority } from '../../../../services/editor/common/editorResolverService.ts';
+import { CellUri, NOTEBOOK_OUTPUT_EDITOR_ID } from '../../common/notebookCommon.ts';
+import { INotebookService } from '../../common/notebookService.ts';
+import { CellEditState, IBaseCellEditorOptions, ICellOutputViewModel, ICommonCellInfo, IGenericCellViewModel, IInsetRenderOutput, INotebookEditorCreationOptions, RenderOutputType } from '../notebookBrowser.ts';
+import { getDefaultNotebookCreationOptions } from '../notebookEditorWidget.ts';
+import { NotebookOptions } from '../notebookOptions.ts';
+import { BackLayerWebView, INotebookDelegateForWebview } from '../view/renderers/backLayerWebView.ts';
+import { NotebookOutputEditorInput } from './notebookOutputEditorInput.ts';
+import { FontInfo } from '../../../../../editor/common/config/fontInfo.ts';
+import { createBareFontInfoFromRawSettings } from '../../../../../editor/common/config/fontInfoFromSettings.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IEditorOptions as ICodeEditorOptions } from '../../../../../editor/common/config/editorOptions.ts';
+import { FontMeasurements } from '../../../../../editor/browser/config/fontMeasurements.ts';
+import { PixelRatio } from '../../../../../base/browser/pixelRatio.ts';
+import { NotebookViewModel } from '../viewModel/notebookViewModelImpl.ts';
+import { NotebookEventDispatcher } from '../viewModel/eventDispatcher.ts';
+import { ViewContext } from '../viewModel/viewContext.ts';
 
 export class NoopCellEditorOptions extends Disposable implements IBaseCellEditorOptions {
 	private static fixedEditorOptions: ICodeEditorOptions = {

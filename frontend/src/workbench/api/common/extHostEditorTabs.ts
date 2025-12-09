@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { diffSets } from '../../../base/common/collections.js';
-import { Emitter } from '../../../base/common/event.js';
-import { assertReturnsDefined } from '../../../base/common/types.js';
-import { URI } from '../../../base/common/uri.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { IEditorTabDto, IEditorTabGroupDto, IExtHostEditorTabsShape, MainContext, MainThreadEditorTabsShape, TabInputKind, TabModelOperationKind, TabOperation } from './extHost.protocol.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import * as typeConverters from './extHostTypeConverters.js';
-import { ChatEditorTabInput, CustomEditorTabInput, InteractiveWindowInput, NotebookDiffEditorTabInput, NotebookEditorTabInput, TerminalEditorTabInput, TextDiffTabInput, TextMergeTabInput, TextTabInput, WebviewEditorTabInput, TextMultiDiffTabInput } from './extHostTypes.js';
+import { diffSets } from '../../../base/common/collections.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { assertReturnsDefined } from '../../../base/common/types.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { IEditorTabDto, IEditorTabGroupDto, IExtHostEditorTabsShape, MainContext, MainThreadEditorTabsShape, TabInputKind, TabModelOperationKind, TabOperation } from './extHost.protocol.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import * as typeConverters from './extHostTypeConverters.ts';
+import { ChatEditorTabInput, CustomEditorTabInput, InteractiveWindowInput, NotebookDiffEditorTabInput, NotebookEditorTabInput, TerminalEditorTabInput, TextDiffTabInput, TextMergeTabInput, TextTabInput, WebviewEditorTabInput, TextMultiDiffTabInput } from './extHostTypes.ts';
 import type * as vscode from 'vscode';
 
 export interface IExtHostEditorTabs extends IExtHostEditorTabsShape {

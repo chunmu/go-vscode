@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ContextKeyExpr, ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ActiveEditorContext } from '../../../../common/contextkeys.js';
-import { ViewContainerLocation } from '../../../../common/views.js';
-import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { ACTIVE_GROUP, AUX_WINDOW_GROUP, IEditorService } from '../../../../services/editor/common/editorService.js';
-import { IViewsService } from '../../../../services/views/common/viewsService.js';
-import { isChatViewTitleActionContext } from '../../common/chatActions.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { ChatAgentLocation } from '../../common/constants.js';
-import { ChatViewId, IChatWidgetService } from '../chat.js';
-import { ChatEditor, IChatEditorOptions } from '../chatEditor.js';
-import { ChatEditorInput } from '../chatEditorInput.js';
-import { ChatViewPane } from '../chatViewPane.js';
-import { CHAT_CATEGORY } from './chatActions.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ContextKeyExpr, ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ActiveEditorContext } from '../../../../common/contextkeys.ts';
+import { ViewContainerLocation } from '../../../../common/views.ts';
+import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { ACTIVE_GROUP, AUX_WINDOW_GROUP, IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { IViewsService } from '../../../../services/views/common/viewsService.ts';
+import { isChatViewTitleActionContext } from '../../common/chatActions.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
+import { ChatViewId, IChatWidgetService } from '../chat.ts';
+import { ChatEditor, IChatEditorOptions } from '../chatEditor.ts';
+import { ChatEditorInput } from '../chatEditorInput.ts';
+import { ChatViewPane } from '../chatViewPane.ts';
+import { CHAT_CATEGORY } from './chatActions.ts';
 
 enum MoveToNewLocation {
 	Editor = 'Editor',

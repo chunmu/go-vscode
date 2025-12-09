@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { Button, IButtonOptions } from '../../../../../base/browser/ui/button/button.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.js';
-import { ChatErrorLevel, IChatResponseErrorDetailsConfirmationButton, IChatSendRequestOptions, IChatService } from '../../common/chatService.js';
-import { assertIsResponseVM, IChatErrorDetailsPart, IChatRendererContent } from '../../common/chatViewModel.js';
-import { IChatWidgetService } from '../chat.js';
-import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.js';
-import { ChatErrorWidget } from './chatErrorContentPart.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { Button, IButtonOptions } from '../../../../../base/browser/ui/button/button.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { IMarkdownRenderer } from '../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.ts';
+import { ChatErrorLevel, IChatResponseErrorDetailsConfirmationButton, IChatSendRequestOptions, IChatService } from '../../common/chatService.ts';
+import { assertIsResponseVM, IChatErrorDetailsPart, IChatRendererContent } from '../../common/chatViewModel.ts';
+import { IChatWidgetService } from '../chat.ts';
+import { IChatContentPart, IChatContentPartRenderContext } from './chatContentParts.ts';
+import { ChatErrorWidget } from './chatErrorContentPart.ts';
 
 const $ = dom.$;
 

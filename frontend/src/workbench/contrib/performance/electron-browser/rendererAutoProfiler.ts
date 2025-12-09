@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { timeout } from '../../../../base/common/async.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { joinPath } from '../../../../base/common/resources.js';
-import { generateUuid } from '../../../../base/common/uuid.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { IV8Profile } from '../../../../platform/profiling/common/profiling.js';
-import { IProfileAnalysisWorkerService, ProfilingOutput } from '../../../../platform/profiling/electron-browser/profileAnalysisWorkerService.js';
-import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.js';
-import { parseExtensionDevOptions } from '../../../services/extensions/common/extensionDevOptions.js';
-import { ITimerService } from '../../../services/timer/browser/timerService.js';
+import { timeout } from '../../../../base/common/async.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { joinPath } from '../../../../base/common/resources.ts';
+import { generateUuid } from '../../../../base/common/uuid.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { IV8Profile } from '../../../../platform/profiling/common/profiling.ts';
+import { IProfileAnalysisWorkerService, ProfilingOutput } from '../../../../platform/profiling/electron-browser/profileAnalysisWorkerService.ts';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-browser/environmentService.ts';
+import { parseExtensionDevOptions } from '../../../services/extensions/common/extensionDevOptions.ts';
+import { ITimerService } from '../../../services/timer/browser/timerService.ts';
 
 export class RendererProfiling {
 

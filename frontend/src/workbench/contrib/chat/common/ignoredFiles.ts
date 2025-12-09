@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
 
 export interface ILanguageModelIgnoredFileProvider {
 	isFileIgnored(uri: URI, token: CancellationToken): Promise<boolean>;

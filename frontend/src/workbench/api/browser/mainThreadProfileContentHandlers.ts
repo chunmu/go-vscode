@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Disposable, DisposableMap, IDisposable } from '../../../base/common/lifecycle.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { URI } from '../../../base/common/uri.js';
-import { ExtHostContext, ExtHostProfileContentHandlersShape, MainContext, MainThreadProfileContentHandlersShape } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ISaveProfileResult, IUserDataProfileImportExportService } from '../../services/userDataProfile/common/userDataProfile.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Disposable, DisposableMap, IDisposable } from '../../../base/common/lifecycle.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { ExtHostContext, ExtHostProfileContentHandlersShape, MainContext, MainThreadProfileContentHandlersShape } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ISaveProfileResult, IUserDataProfileImportExportService } from '../../services/userDataProfile/common/userDataProfile.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadProfileContentHandlers)
 export class MainThreadProfileContentHandlers extends Disposable implements MainThreadProfileContentHandlersShape {

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import './en.linux.js';
-import './es.linux.js';
-import './de.linux.js';
-import './fr.linux.js';
-import './ru.linux.js';
+import './en.linux.ts';
+import './es.linux.ts';
+import './de.linux.ts';
+import './fr.linux.ts';
+import './ru.linux.ts';
 
-export { KeyboardLayoutContribution } from './_.contribution.js';
+export { KeyboardLayoutContribution } from './_.contribution.ts';

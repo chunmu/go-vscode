@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { isEqual } from '../../../../../base/common/resources.js';
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { findDiffEditorContainingCodeEditor } from '../../../../../editor/browser/widget/diffEditor/commands.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IModifiedFileEntry } from '../../common/chatEditingService.js';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { findDiffEditorContainingCodeEditor } from '../../../../../editor/browser/widget/diffEditor/commands.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IModifiedFileEntry } from '../../common/chatEditingService.ts';
 
 export function isTextDiffEditorForEntry(accessor: ServicesAccessor, entry: IModifiedFileEntry, editor: ICodeEditor) {
 	const diffEditor = findDiffEditorContainingCodeEditor(accessor, editor);

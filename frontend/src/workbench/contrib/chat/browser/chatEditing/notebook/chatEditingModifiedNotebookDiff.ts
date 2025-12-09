@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { computeDiff } from '../../../../notebook/common/notebookDiff.js';
-import { INotebookEditorModelResolverService } from '../../../../notebook/common/notebookEditorModelResolverService.js';
-import { INotebookLoggingService } from '../../../../notebook/common/notebookLoggingService.js';
-import { INotebookEditorWorkerService } from '../../../../notebook/common/services/notebookWorkerService.js';
-import { IEditSessionEntryDiff, ISnapshotEntry } from '../../../common/chatEditingService.js';
+import { DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { computeDiff } from '../../../../notebook/common/notebookDiff.ts';
+import { INotebookEditorModelResolverService } from '../../../../notebook/common/notebookEditorModelResolverService.ts';
+import { INotebookLoggingService } from '../../../../notebook/common/notebookLoggingService.ts';
+import { INotebookEditorWorkerService } from '../../../../notebook/common/services/notebookWorkerService.ts';
+import { IEditSessionEntryDiff, ISnapshotEntry } from '../../../common/chatEditingService.ts';
 
 
 export class ChatEditingModifiedNotebookDiff {

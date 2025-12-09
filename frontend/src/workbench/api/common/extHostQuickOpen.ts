@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Emitter } from '../../../base/common/event.js';
-import { dispose, IDisposable } from '../../../base/common/lifecycle.js';
-import { ExtHostCommands } from './extHostCommands.js';
-import { IExtHostWorkspaceProvider } from './extHostWorkspace.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { dispose, IDisposable } from '../../../base/common/lifecycle.ts';
+import { ExtHostCommands } from './extHostCommands.ts';
+import { IExtHostWorkspaceProvider } from './extHostWorkspace.ts';
 import { InputBox, InputBoxOptions, InputBoxValidationMessage, QuickInput, QuickInputButton, QuickPick, QuickPickItem, QuickPickItemButtonEvent, QuickPickOptions, WorkspaceFolder, WorkspaceFolderPickOptions } from 'vscode';
-import { ExtHostQuickOpenShape, IMainContext, MainContext, TransferQuickInput, TransferQuickInputButton, TransferQuickPickItemOrSeparator } from './extHost.protocol.js';
-import { QuickInputButtons, QuickPickItemKind, InputBoxValidationSeverity, QuickInputButtonLocation } from './extHostTypes.js';
-import { isCancellationError } from '../../../base/common/errors.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { coalesce } from '../../../base/common/arrays.js';
-import Severity from '../../../base/common/severity.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { IconPath, MarkdownString } from './extHostTypeConverters.js';
+import { ExtHostQuickOpenShape, IMainContext, MainContext, TransferQuickInput, TransferQuickInputButton, TransferQuickPickItemOrSeparator } from './extHost.protocol.ts';
+import { QuickInputButtons, QuickPickItemKind, InputBoxValidationSeverity, QuickInputButtonLocation } from './extHostTypes.ts';
+import { isCancellationError } from '../../../base/common/errors.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { coalesce } from '../../../base/common/arrays.ts';
+import Severity from '../../../base/common/severity.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { IconPath, MarkdownString } from './extHostTypeConverters.ts';
 
 export type Item = string | QuickPickItem;
 

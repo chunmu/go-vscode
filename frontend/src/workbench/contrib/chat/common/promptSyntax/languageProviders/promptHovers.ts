@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { MarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { Hover, HoverContext, HoverProvider } from '../../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { localize } from '../../../../../../nls.js';
-import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../languageModels.js';
-import { ILanguageModelToolsService, ToolSet } from '../../languageModelToolsService.js';
-import { IChatModeService, isBuiltinChatMode } from '../../chatModes.js';
-import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.js';
-import { IPromptsService } from '../service/promptsService.js';
-import { IHeaderAttribute, PromptBody, PromptHeader, PromptHeaderAttributes, Target } from '../promptFileParser.js';
-import { isGithubTarget, knownGithubCopilotTools } from './promptValidator.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { MarkdownString } from '../../../../../../base/common/htmlContent.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { Hover, HoverContext, HoverProvider } from '../../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../languageModels.ts';
+import { ILanguageModelToolsService, ToolSet } from '../../languageModelToolsService.ts';
+import { IChatModeService, isBuiltinChatMode } from '../../chatModes.ts';
+import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.ts';
+import { IPromptsService } from '../service/promptsService.ts';
+import { IHeaderAttribute, PromptBody, PromptHeader, PromptHeaderAttributes, Target } from '../promptFileParser.ts';
+import { isGithubTarget, knownGithubCopilotTools } from './promptValidator.ts';
 
 export class PromptHoverProvider implements HoverProvider {
 	/**

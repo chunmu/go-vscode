@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IBulkEditService, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr, ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ActiveEditorContext } from '../../../../common/contextkeys.js';
-import { DiffElementCellViewModelBase, NotebookDocumentMetadataViewModel, SideBySideDiffElementViewModel } from './diffElementViewModel.js';
-import { INotebookTextDiffEditor, NOTEBOOK_DIFF_CELL_IGNORE_WHITESPACE_KEY, NOTEBOOK_DIFF_CELL_INPUT, NOTEBOOK_DIFF_CELL_PROPERTY, NOTEBOOK_DIFF_CELL_PROPERTY_EXPANDED, NOTEBOOK_DIFF_HAS_UNCHANGED_CELLS, NOTEBOOK_DIFF_ITEM_DIFF_STATE, NOTEBOOK_DIFF_ITEM_KIND, NOTEBOOK_DIFF_METADATA, NOTEBOOK_DIFF_UNCHANGED_CELLS_HIDDEN } from './notebookDiffEditorBrowser.js';
-import { NotebookTextDiffEditor } from './notebookDiffEditor.js';
-import { NotebookDiffEditorInput } from '../../common/notebookDiffEditorInput.js';
-import { nextChangeIcon, openAsTextIcon, previousChangeIcon, renderOutputIcon, revertIcon, toggleWhitespace } from '../notebookIcons.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../../platform/configuration/common/configurationRegistry.js';
-import { ICommandActionTitle } from '../../../../../platform/action/common/action.js';
-import { DEFAULT_EDITOR_ASSOCIATION } from '../../../../common/editor.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { CellEditType, ICellEditOperation, NOTEBOOK_DIFF_EDITOR_ID } from '../../common/notebookCommon.js';
-import { ITextResourceConfigurationService } from '../../../../../editor/common/services/textResourceConfiguration.js';
-import { NotebookMultiTextDiffEditor } from './notebookMultiDiffEditor.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import type { URI } from '../../../../../base/common/uri.js';
-import { TextEditorSelectionRevealType, type ITextEditorOptions } from '../../../../../platform/editor/common/editor.js';
-import product from '../../../../../platform/product/common/product.js';
-import { ctxHasEditorModification, ctxHasRequestInProgress } from '../../../chat/browser/chatEditing/chatEditingEditorContextKeys.js';
+import { IBulkEditService, ResourceTextEdit } from '../../../../../editor/browser/services/bulkEditService.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr, ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ActiveEditorContext } from '../../../../common/contextkeys.ts';
+import { DiffElementCellViewModelBase, NotebookDocumentMetadataViewModel, SideBySideDiffElementViewModel } from './diffElementViewModel.ts';
+import { INotebookTextDiffEditor, NOTEBOOK_DIFF_CELL_IGNORE_WHITESPACE_KEY, NOTEBOOK_DIFF_CELL_INPUT, NOTEBOOK_DIFF_CELL_PROPERTY, NOTEBOOK_DIFF_CELL_PROPERTY_EXPANDED, NOTEBOOK_DIFF_HAS_UNCHANGED_CELLS, NOTEBOOK_DIFF_ITEM_DIFF_STATE, NOTEBOOK_DIFF_ITEM_KIND, NOTEBOOK_DIFF_METADATA, NOTEBOOK_DIFF_UNCHANGED_CELLS_HIDDEN } from './notebookDiffEditorBrowser.ts';
+import { NotebookTextDiffEditor } from './notebookDiffEditor.ts';
+import { NotebookDiffEditorInput } from '../../common/notebookDiffEditorInput.ts';
+import { nextChangeIcon, openAsTextIcon, previousChangeIcon, renderOutputIcon, revertIcon, toggleWhitespace } from '../notebookIcons.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../../../platform/configuration/common/configurationRegistry.ts';
+import { ICommandActionTitle } from '../../../../../platform/action/common/action.ts';
+import { DEFAULT_EDITOR_ASSOCIATION } from '../../../../common/editor.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { CellEditType, ICellEditOperation, NOTEBOOK_DIFF_EDITOR_ID } from '../../common/notebookCommon.ts';
+import { ITextResourceConfigurationService } from '../../../../../editor/common/services/textResourceConfiguration.ts';
+import { NotebookMultiTextDiffEditor } from './notebookMultiDiffEditor.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import type { URI } from '../../../../../base/common/uri.ts';
+import { TextEditorSelectionRevealType, type ITextEditorOptions } from '../../../../../platform/editor/common/editor.ts';
+import product from '../../../../../platform/product/common/product.ts';
+import { ctxHasEditorModification, ctxHasRequestInProgress } from '../../../chat/browser/chatEditing/chatEditingEditorContextKeys.ts';
 
 // ActiveEditorContext.isEqualTo(SearchEditorConstants.SearchEditorID)
 

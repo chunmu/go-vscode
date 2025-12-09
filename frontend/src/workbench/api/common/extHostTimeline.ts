@@ -4,19 +4,19 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as vscode from 'vscode';
-import { UriComponents, URI } from '../../../base/common/uri.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { ExtHostTimelineShape, MainThreadTimelineShape, IMainContext, MainContext } from './extHost.protocol.js';
-import { Timeline, TimelineItem, TimelineOptions, TimelineProvider } from '../../contrib/timeline/common/timeline.js';
-import { IDisposable, toDisposable, DisposableStore } from '../../../base/common/lifecycle.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { CommandsConverter, ExtHostCommands } from './extHostCommands.js';
-import { ThemeIcon, MarkdownString as MarkdownStringType } from './extHostTypes.js';
-import { MarkdownString } from './extHostTypeConverters.js';
-import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { isString } from '../../../base/common/types.js';
-import { isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
+import { UriComponents, URI } from '../../../base/common/uri.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { ExtHostTimelineShape, MainThreadTimelineShape, IMainContext, MainContext } from './extHost.protocol.ts';
+import { Timeline, TimelineItem, TimelineOptions, TimelineProvider } from '../../contrib/timeline/common/timeline.ts';
+import { IDisposable, toDisposable, DisposableStore } from '../../../base/common/lifecycle.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { CommandsConverter, ExtHostCommands } from './extHostCommands.ts';
+import { ThemeIcon, MarkdownString as MarkdownStringType } from './extHostTypes.ts';
+import { MarkdownString } from './extHostTypeConverters.ts';
+import { ExtensionIdentifier } from '../../../platform/extensions/common/extensions.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { isString } from '../../../base/common/types.ts';
+import { isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
 
 export interface IExtHostTimeline extends ExtHostTimelineShape {
 	readonly _serviceBrand: undefined;

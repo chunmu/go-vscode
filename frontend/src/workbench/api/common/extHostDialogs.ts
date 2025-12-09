@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { URI } from '../../../base/common/uri.js';
-import { MainContext, MainThreadDiaglogsShape, IMainContext } from './extHost.protocol.js';
+import { URI } from '../../../base/common/uri.ts';
+import { MainContext, MainThreadDiaglogsShape, IMainContext } from './extHost.protocol.ts';
 
 export class ExtHostDialogs {
 

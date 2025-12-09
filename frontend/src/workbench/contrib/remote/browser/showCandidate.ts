@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.js';
-import { IRemoteExplorerService } from '../../../services/remote/common/remoteExplorerService.js';
-import { CandidatePort } from '../../../services/remote/common/tunnelModel.js';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../../../services/environment/browser/environmentService.ts';
+import { IRemoteExplorerService } from '../../../services/remote/common/remoteExplorerService.ts';
+import { CandidatePort } from '../../../services/remote/common/tunnelModel.ts';
 
 export class ShowCandidateContribution extends Disposable implements IWorkbenchContribution {
 

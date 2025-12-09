@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { Orientation, Sash } from '../../../../base/browser/ui/sash/sash.js';
-import { disposableTimeout } from '../../../../base/common/async.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { Disposable, DisposableStore, IDisposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../base/common/observable.js';
-import { URI } from '../../../../base/common/uri.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { localize } from '../../../../nls.js';
-import { MenuId } from '../../../../platform/actions/common/actions.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.js';
-import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.js';
-import product from '../../../../platform/product/common/product.js';
-import { IQuickInputService, IQuickWidget } from '../../../../platform/quickinput/common/quickInput.js';
-import { editorBackground, inputBackground, quickInputBackground, quickInputForeground } from '../../../../platform/theme/common/colorRegistry.js';
-import { EDITOR_DRAG_AND_DROP_BACKGROUND } from '../../../common/theme.js';
-import { IChatEntitlementService } from '../../../services/chat/common/chatEntitlementService.js';
-import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.js';
-import { isCellTextEditOperationArray } from '../common/chatModel.js';
-import { ChatMode } from '../common/chatModes.js';
-import { IParsedChatRequest } from '../common/chatParserTypes.js';
-import { IChatModelReference, IChatProgress, IChatService } from '../common/chatService.js';
-import { ChatAgentLocation } from '../common/constants.js';
-import { IChatWidgetService, IQuickChatOpenOptions, IQuickChatService } from './chat.js';
-import { ChatWidget } from './chatWidget.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { Orientation, Sash } from '../../../../base/browser/ui/sash/sash.ts';
+import { disposableTimeout } from '../../../../base/common/async.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Disposable, DisposableStore, IDisposable, MutableDisposable } from '../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../base/common/observable.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { localize } from '../../../../nls.ts';
+import { MenuId } from '../../../../platform/actions/common/actions.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../platform/instantiation/common/serviceCollection.ts';
+import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.ts';
+import product from '../../../../platform/product/common/product.ts';
+import { IQuickInputService, IQuickWidget } from '../../../../platform/quickinput/common/quickInput.ts';
+import { editorBackground, inputBackground, quickInputBackground, quickInputForeground } from '../../../../platform/theme/common/colorRegistry.ts';
+import { EDITOR_DRAG_AND_DROP_BACKGROUND } from '../../../common/theme.ts';
+import { IChatEntitlementService } from '../../../services/chat/common/chatEntitlementService.ts';
+import { IWorkbenchLayoutService } from '../../../services/layout/browser/layoutService.ts';
+import { isCellTextEditOperationArray } from '../common/chatModel.ts';
+import { ChatMode } from '../common/chatModes.ts';
+import { IParsedChatRequest } from '../common/chatParserTypes.ts';
+import { IChatModelReference, IChatProgress, IChatService } from '../common/chatService.ts';
+import { ChatAgentLocation } from '../common/constants.ts';
+import { IChatWidgetService, IQuickChatOpenOptions, IQuickChatService } from './chat.ts';
+import { ChatWidget } from './chatWidget.ts';
 
 export class QuickChatService extends Disposable implements IQuickChatService {
 	readonly _serviceBrand: undefined;

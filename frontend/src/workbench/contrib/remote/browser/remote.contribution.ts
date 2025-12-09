@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContributionsRegistry, WorkbenchPhase, Extensions as WorkbenchExtensions, registerWorkbenchContribution2 } from '../../../common/contributions.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { ShowCandidateContribution } from './showCandidate.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { TunnelFactoryContribution } from './tunnelFactory.js';
-import { RemoteAgentConnectionStatusListener, RemoteMarkers } from './remote.js';
-import { RemoteStatusIndicator } from './remoteIndicator.js';
-import { AutomaticPortForwarding, ForwardedPortsView, PortRestore } from './remoteExplorer.js';
-import { InitialRemoteConnectionHealthContribution } from './remoteConnectionHealth.js';
+import { IWorkbenchContributionsRegistry, WorkbenchPhase, Extensions as WorkbenchExtensions, registerWorkbenchContribution2 } from '../../../common/contributions.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { ShowCandidateContribution } from './showCandidate.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { TunnelFactoryContribution } from './tunnelFactory.ts';
+import { RemoteAgentConnectionStatusListener, RemoteMarkers } from './remote.ts';
+import { RemoteStatusIndicator } from './remoteIndicator.ts';
+import { AutomaticPortForwarding, ForwardedPortsView, PortRestore } from './remoteExplorer.ts';
+import { InitialRemoteConnectionHealthContribution } from './remoteConnectionHealth.ts';
 
 const workbenchContributionsRegistry = Registry.as<IWorkbenchContributionsRegistry>(WorkbenchExtensions.Workbench);
 registerWorkbenchContribution2(ShowCandidateContribution.ID, ShowCandidateContribution, WorkbenchPhase.BlockRestore);

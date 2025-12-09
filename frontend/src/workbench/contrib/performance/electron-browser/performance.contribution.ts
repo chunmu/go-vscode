@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';
-import { StartupProfiler } from './startupProfiler.js';
-import { NativeStartupTimings } from './startupTimings.js';
-import { RendererProfiling } from './rendererAutoProfiler.js';
-import { IConfigurationRegistry, Extensions as ConfigExt } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { localize } from '../../../../nls.js';
-import { applicationConfigurationNodeBase } from '../../../common/configuration.js';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.ts';
+import { StartupProfiler } from './startupProfiler.ts';
+import { NativeStartupTimings } from './startupTimings.ts';
+import { RendererProfiling } from './rendererAutoProfiler.ts';
+import { IConfigurationRegistry, Extensions as ConfigExt } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { localize } from '../../../../nls.ts';
+import { applicationConfigurationNodeBase } from '../../../common/configuration.ts';
 
 // -- auto profiler
 

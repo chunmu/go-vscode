@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../../nls.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { INotebookLoggingService } from '../../common/notebookLoggingService.js';
-import { ILogger, ILoggerService } from '../../../../../platform/log/common/log.js';
-import { windowLogGroup } from '../../../../services/log/common/logConstants.js';
+import * as nls from '../../../../../nls.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { INotebookLoggingService } from '../../common/notebookLoggingService.ts';
+import { ILogger, ILoggerService } from '../../../../../platform/log/common/log.ts';
+import { windowLogGroup } from '../../../../services/log/common/logConstants.ts';
 
 const logChannelId = 'notebook.rendering';
 

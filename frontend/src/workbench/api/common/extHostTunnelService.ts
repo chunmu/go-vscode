@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable, IDisposable, toDisposable } from '../../../base/common/lifecycle.js';
-import * as nls from '../../../nls.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { DisposableTunnel, ProvidedOnAutoForward, ProvidedPortAttributes, RemoteTunnel, TunnelCreationOptions, TunnelOptions, TunnelPrivacyId } from '../../../platform/tunnel/common/tunnel.js';
-import { ExtHostTunnelServiceShape, MainContext, MainThreadTunnelServiceShape, PortAttributesSelector, TunnelDto } from './extHost.protocol.js';
-import { IExtHostInitDataService } from './extHostInitDataService.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import * as types from './extHostTypes.js';
-import { CandidatePort } from '../../services/remote/common/tunnelModel.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable, IDisposable, toDisposable } from '../../../base/common/lifecycle.ts';
+import * as nls from '../../../nls.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { DisposableTunnel, ProvidedOnAutoForward, ProvidedPortAttributes, RemoteTunnel, TunnelCreationOptions, TunnelOptions, TunnelPrivacyId } from '../../../platform/tunnel/common/tunnel.ts';
+import { ExtHostTunnelServiceShape, MainContext, MainThreadTunnelServiceShape, PortAttributesSelector, TunnelDto } from './extHost.protocol.ts';
+import { IExtHostInitDataService } from './extHostInitDataService.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import * as types from './extHostTypes.ts';
+import { CandidatePort } from '../../services/remote/common/tunnelModel.ts';
 import * as vscode from 'vscode';
 
 class ExtensionTunnel extends DisposableTunnel implements vscode.Tunnel { }

@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ISequence, LcsDiff } from '../../../../../base/common/diff/diff.js';
-import { Emitter, Event, PauseableEmitter } from '../../../../../base/common/event.js';
-import { hash } from '../../../../../base/common/hash.js';
-import { Disposable, dispose, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { filter } from '../../../../../base/common/objects.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { hasKey, isDefined } from '../../../../../base/common/types.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { Position } from '../../../../../editor/common/core/position.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { FindMatch, ITextModel } from '../../../../../editor/common/model.js';
-import { TextModel } from '../../../../../editor/common/model/textModel.js';
-import { SearchParams } from '../../../../../editor/common/model/textModelSearch.js';
-import { IModelService } from '../../../../../editor/common/services/model.js';
-import { IModelContentChangedEvent } from '../../../../../editor/common/textModelEvents.js';
-import { IResourceUndoRedoElement, IUndoRedoElement, IUndoRedoService, IWorkspaceUndoRedoElement, UndoRedoElementType, UndoRedoGroup } from '../../../../../platform/undoRedo/common/undoRedo.js';
-import { ILanguageDetectionService } from '../../../../services/languageDetection/common/languageDetectionWorkerService.js';
-import { SnapshotContext } from '../../../../services/workingCopy/common/fileWorkingCopy.js';
-import { CellEditType, CellUri, diff, ICell, ICellDto2, ICellEditOperation, ICellOutput, INotebookSnapshotOptions, INotebookTextModel, IOutputDto, IOutputItemDto, ISelectionState, NotebookCellDefaultCollapseConfig, NotebookCellExecutionState, NotebookCellInternalMetadata, NotebookCellMetadata, NotebookCellOutputsSplice, NotebookCellsChangeType, NotebookCellTextModelSplice, NotebookData, NotebookDocumentMetadata, NotebookTextModelChangedEvent, NotebookTextModelWillAddRemoveEvent, NullablePartialNotebookCellInternalMetadata, NullablePartialNotebookCellMetadata, TransientOptions } from '../notebookCommon.js';
-import { INotebookExecutionStateService } from '../notebookExecutionStateService.js';
-import { INotebookLoggingService } from '../notebookLoggingService.js';
-import { CellMetadataEdit, MoveCellEdit, SpliceCellsEdit } from './cellEdit.js';
-import { NotebookCellOutputTextModel } from './notebookCellOutputTextModel.js';
-import { NotebookCellTextModel } from './notebookCellTextModel.js';
+import { ISequence, LcsDiff } from '../../../../../base/common/diff/diff.ts';
+import { Emitter, Event, PauseableEmitter } from '../../../../../base/common/event.ts';
+import { hash } from '../../../../../base/common/hash.ts';
+import { Disposable, dispose, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { filter } from '../../../../../base/common/objects.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { hasKey, isDefined } from '../../../../../base/common/types.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { Position } from '../../../../../editor/common/core/position.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { FindMatch, ITextModel } from '../../../../../editor/common/model.ts';
+import { TextModel } from '../../../../../editor/common/model/textModel.ts';
+import { SearchParams } from '../../../../../editor/common/model/textModelSearch.ts';
+import { IModelService } from '../../../../../editor/common/services/model.ts';
+import { IModelContentChangedEvent } from '../../../../../editor/common/textModelEvents.ts';
+import { IResourceUndoRedoElement, IUndoRedoElement, IUndoRedoService, IWorkspaceUndoRedoElement, UndoRedoElementType, UndoRedoGroup } from '../../../../../platform/undoRedo/common/undoRedo.ts';
+import { ILanguageDetectionService } from '../../../../services/languageDetection/common/languageDetectionWorkerService.ts';
+import { SnapshotContext } from '../../../../services/workingCopy/common/fileWorkingCopy.ts';
+import { CellEditType, CellUri, diff, ICell, ICellDto2, ICellEditOperation, ICellOutput, INotebookSnapshotOptions, INotebookTextModel, IOutputDto, IOutputItemDto, ISelectionState, NotebookCellDefaultCollapseConfig, NotebookCellExecutionState, NotebookCellInternalMetadata, NotebookCellMetadata, NotebookCellOutputsSplice, NotebookCellsChangeType, NotebookCellTextModelSplice, NotebookData, NotebookDocumentMetadata, NotebookTextModelChangedEvent, NotebookTextModelWillAddRemoveEvent, NullablePartialNotebookCellInternalMetadata, NullablePartialNotebookCellMetadata, TransientOptions } from '../notebookCommon.ts';
+import { INotebookExecutionStateService } from '../notebookExecutionStateService.ts';
+import { INotebookLoggingService } from '../notebookLoggingService.ts';
+import { CellMetadataEdit, MoveCellEdit, SpliceCellsEdit } from './cellEdit.ts';
+import { NotebookCellOutputTextModel } from './notebookCellOutputTextModel.ts';
+import { NotebookCellTextModel } from './notebookCellTextModel.ts';
 
 class StackOperation implements IWorkspaceUndoRedoElement {
 	type: UndoRedoElementType.Workspace;

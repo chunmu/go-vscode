@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { IObservable } from '../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { ColorIdentifier } from '../../../../platform/theme/common/colorUtils.js';
-import { ISCMRepository } from './scm.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { IObservable } from '../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { ColorIdentifier } from '../../../../platform/theme/common/colorUtils.ts';
+import { ISCMRepository } from './scm.ts';
 
 export const SCMIncomingHistoryItemId = 'scm-graph-incoming-changes';
 export const SCMOutgoingHistoryItemId = 'scm-graph-outgoing-changes';

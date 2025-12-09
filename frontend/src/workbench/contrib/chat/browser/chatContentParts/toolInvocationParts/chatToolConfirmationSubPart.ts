@@ -3,37 +3,37 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { Separator } from '../../../../../../base/common/actions.js';
-import { RunOnceScheduler } from '../../../../../../base/common/async.js';
-import { IMarkdownString, MarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { count } from '../../../../../../base/common/strings.js';
-import { isEmptyObject } from '../../../../../../base/common/types.js';
-import { generateUuid } from '../../../../../../base/common/uuid.js';
-import { ElementSizeObserver } from '../../../../../../editor/browser/config/elementSizeObserver.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { localize } from '../../../../../../nls.js';
-import { ICommandService } from '../../../../../../platform/commands/common/commands.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { IMarkdownRenderer } from '../../../../../../platform/markdown/browser/markdownRenderer.js';
-import { IMarkerData, IMarkerService, MarkerSeverity } from '../../../../../../platform/markers/common/markers.js';
-import { IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.js';
-import { CodeBlockModelCollection } from '../../../common/codeBlockModelCollection.js';
-import { createToolInputUri, createToolSchemaUri, ILanguageModelToolsService } from '../../../common/languageModelToolsService.js';
-import { ILanguageModelToolsConfirmationService } from '../../../common/languageModelToolsConfirmationService.js';
-import { AcceptToolConfirmationActionId, SkipToolConfirmationActionId } from '../../actions/chatToolActions.js';
-import { IChatCodeBlockInfo, IChatWidgetService } from '../../chat.js';
-import { renderFileWidgets } from '../../chatInlineAnchorWidget.js';
-import { ICodeBlockRenderOptions } from '../../codeBlockPart.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { IChatMarkdownAnchorService } from '../chatMarkdownAnchorService.js';
-import { ChatMarkdownContentPart } from '../chatMarkdownContentPart.js';
-import { AbstractToolConfirmationSubPart } from './abstractToolConfirmationSubPart.js';
-import { EditorPool } from '../chatContentCodePools.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { Separator } from '../../../../../../base/common/actions.ts';
+import { RunOnceScheduler } from '../../../../../../base/common/async.ts';
+import { IMarkdownString, MarkdownString } from '../../../../../../base/common/htmlContent.ts';
+import { toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { count } from '../../../../../../base/common/strings.ts';
+import { isEmptyObject } from '../../../../../../base/common/types.ts';
+import { generateUuid } from '../../../../../../base/common/uuid.ts';
+import { ElementSizeObserver } from '../../../../../../editor/browser/config/elementSizeObserver.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../../../../editor/common/services/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { ICommandService } from '../../../../../../platform/commands/common/commands.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { IMarkdownRenderer } from '../../../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IMarkerData, IMarkerService, MarkerSeverity } from '../../../../../../platform/markers/common/markers.ts';
+import { IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.ts';
+import { CodeBlockModelCollection } from '../../../common/codeBlockModelCollection.ts';
+import { createToolInputUri, createToolSchemaUri, ILanguageModelToolsService } from '../../../common/languageModelToolsService.ts';
+import { ILanguageModelToolsConfirmationService } from '../../../common/languageModelToolsConfirmationService.ts';
+import { AcceptToolConfirmationActionId, SkipToolConfirmationActionId } from '../../actions/chatToolActions.ts';
+import { IChatCodeBlockInfo, IChatWidgetService } from '../../chat.ts';
+import { renderFileWidgets } from '../../chatInlineAnchorWidget.ts';
+import { ICodeBlockRenderOptions } from '../../codeBlockPart.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { IChatMarkdownAnchorService } from '../chatMarkdownAnchorService.ts';
+import { ChatMarkdownContentPart } from '../chatMarkdownContentPart.ts';
+import { AbstractToolConfirmationSubPart } from './abstractToolConfirmationSubPart.ts';
+import { EditorPool } from '../chatContentCodePools.ts';
 
 const SHOW_MORE_MESSAGE_HEIGHT_TRIGGER = 45;
 

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Iterable } from '../../../../../base/common/iterator.js';
-import { dirname, joinPath } from '../../../../../base/common/resources.js';
-import { splitLinesIncludeSeparators } from '../../../../../base/common/strings.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { parse, YamlNode, YamlParseError, Position as YamlPosition } from '../../../../../base/common/yaml.js';
-import { Range } from '../../../../../editor/common/core/range.js';
+import { Iterable } from '../../../../../base/common/iterator.ts';
+import { dirname, joinPath } from '../../../../../base/common/resources.ts';
+import { splitLinesIncludeSeparators } from '../../../../../base/common/strings.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { parse, YamlNode, YamlParseError, Position as YamlPosition } from '../../../../../base/common/yaml.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
 
 export class PromptFileParser {
 	constructor() {

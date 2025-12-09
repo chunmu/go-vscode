@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../base/browser/dom.js';
-import { createFastDomNode, FastDomNode } from '../../../../../base/browser/fastDomNode.js';
-import { PixelRatio } from '../../../../../base/browser/pixelRatio.js';
-import { Color } from '../../../../../base/common/color.js';
-import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { defaultInsertColor, defaultRemoveColor, diffInserted, diffOverviewRulerInserted, diffOverviewRulerRemoved, diffRemoved } from '../../../../../platform/theme/common/colorRegistry.js';
-import { IColorTheme, IThemeService, Themable } from '../../../../../platform/theme/common/themeService.js';
-import { IDiffElementViewModelBase } from './diffElementViewModel.js';
-import { NotebookDiffEditorEventDispatcher } from './eventDispatcher.js';
-import { INotebookTextDiffEditor } from './notebookDiffEditorBrowser.js';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import { createFastDomNode, FastDomNode } from '../../../../../base/browser/fastDomNode.ts';
+import { PixelRatio } from '../../../../../base/browser/pixelRatio.ts';
+import { Color } from '../../../../../base/common/color.ts';
+import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { defaultInsertColor, defaultRemoveColor, diffInserted, diffOverviewRulerInserted, diffOverviewRulerRemoved, diffRemoved } from '../../../../../platform/theme/common/colorRegistry.ts';
+import { IColorTheme, IThemeService, Themable } from '../../../../../platform/theme/common/themeService.ts';
+import { IDiffElementViewModelBase } from './diffElementViewModel.ts';
+import { NotebookDiffEditorEventDispatcher } from './eventDispatcher.ts';
+import { INotebookTextDiffEditor } from './notebookDiffEditorBrowser.ts';
 
 const MINIMUM_SLIDER_SIZE = 20;
 

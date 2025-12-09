@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../base/browser/dom.js';
-import { renderLabelWithIcons } from '../../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { IAction } from '../../../../../base/common/actions.js';
-import { coalesce } from '../../../../../base/common/arrays.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { groupBy } from '../../../../../base/common/collections.js';
-import { IDisposable } from '../../../../../base/common/lifecycle.js';
-import { autorun, IObservable } from '../../../../../base/common/observable.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { ActionWidgetDropdownActionViewItem } from '../../../../../platform/actions/browser/actionWidgetDropdownActionViewItem.js';
-import { getFlatActionBarActions } from '../../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { IMenuService, MenuId, MenuItemAction } from '../../../../../platform/actions/common/actions.js';
-import { IActionWidgetService } from '../../../../../platform/actionWidget/browser/actionWidget.js';
-import { IActionWidgetDropdownAction, IActionWidgetDropdownActionProvider, IActionWidgetDropdownOptions } from '../../../../../platform/actionWidget/browser/actionWidgetDropdown.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
-import { IProductService } from '../../../../../platform/product/common/productService.js';
-import { IChatAgentService } from '../../common/chatAgents.js';
-import { ChatMode, IChatMode, IChatModeService } from '../../common/chatModes.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../../common/constants.js';
-import { PromptsStorage } from '../../common/promptSyntax/service/promptsService.js';
-import { getOpenChatActionIdForMode } from '../actions/chatActions.js';
-import { IToggleChatModeArgs, ToggleAgentModeActionId } from '../actions/chatExecuteActions.js';
+import * as dom from '../../../../../base/browser/dom.ts';
+import { renderLabelWithIcons } from '../../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { IAction } from '../../../../../base/common/actions.ts';
+import { coalesce } from '../../../../../base/common/arrays.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { groupBy } from '../../../../../base/common/collections.ts';
+import { IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { autorun, IObservable } from '../../../../../base/common/observable.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { ActionWidgetDropdownActionViewItem } from '../../../../../platform/actions/browser/actionWidgetDropdownActionViewItem.ts';
+import { getFlatActionBarActions } from '../../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { IMenuService, MenuId, MenuItemAction } from '../../../../../platform/actions/common/actions.ts';
+import { IActionWidgetService } from '../../../../../platform/actionWidget/browser/actionWidget.ts';
+import { IActionWidgetDropdownAction, IActionWidgetDropdownActionProvider, IActionWidgetDropdownOptions } from '../../../../../platform/actionWidget/browser/actionWidgetDropdown.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
+import { IProductService } from '../../../../../platform/product/common/productService.ts';
+import { IChatAgentService } from '../../common/chatAgents.ts';
+import { ChatMode, IChatMode, IChatModeService } from '../../common/chatModes.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../../common/constants.ts';
+import { PromptsStorage } from '../../common/promptSyntax/service/promptsService.ts';
+import { getOpenChatActionIdForMode } from '../actions/chatActions.ts';
+import { IToggleChatModeArgs, ToggleAgentModeActionId } from '../actions/chatExecuteActions.ts';
 
 export interface IModePickerDelegate {
 	readonly currentMode: IObservable<IChatMode>;

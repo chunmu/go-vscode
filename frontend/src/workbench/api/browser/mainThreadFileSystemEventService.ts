@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableMap, DisposableStore } from '../../../base/common/lifecycle.js';
-import { FileOperation, IFileService, IWatchOptions } from '../../../platform/files/common/files.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostFileSystemEventServiceShape, MainContext, MainThreadFileSystemEventServiceShape } from '../common/extHost.protocol.js';
-import { localize } from '../../../nls.js';
-import { IWorkingCopyFileOperationParticipant, IWorkingCopyFileService, SourceTargetPair, IFileOperationUndoRedoInfo } from '../../services/workingCopy/common/workingCopyFileService.js';
-import { IBulkEditService } from '../../../editor/browser/services/bulkEditService.js';
-import { IProgressService, ProgressLocation } from '../../../platform/progress/common/progress.js';
-import { raceCancellation } from '../../../base/common/async.js';
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { IDialogService } from '../../../platform/dialogs/common/dialogs.js';
-import Severity from '../../../base/common/severity.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../platform/storage/common/storage.js';
-import { Action2, registerAction2 } from '../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IEnvironmentService } from '../../../platform/environment/common/environment.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { reviveWorkspaceEditDto } from './mainThreadBulkEdits.js';
-import { UriComponents, URI } from '../../../base/common/uri.js';
+import { DisposableMap, DisposableStore } from '../../../base/common/lifecycle.ts';
+import { FileOperation, IFileService, IWatchOptions } from '../../../platform/files/common/files.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostFileSystemEventServiceShape, MainContext, MainThreadFileSystemEventServiceShape } from '../common/extHost.protocol.ts';
+import { localize } from '../../../nls.ts';
+import { IWorkingCopyFileOperationParticipant, IWorkingCopyFileService, SourceTargetPair, IFileOperationUndoRedoInfo } from '../../services/workingCopy/common/workingCopyFileService.ts';
+import { IBulkEditService } from '../../../editor/browser/services/bulkEditService.ts';
+import { IProgressService, ProgressLocation } from '../../../platform/progress/common/progress.ts';
+import { raceCancellation } from '../../../base/common/async.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { IDialogService } from '../../../platform/dialogs/common/dialogs.ts';
+import Severity from '../../../base/common/severity.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../platform/storage/common/storage.ts';
+import { Action2, registerAction2 } from '../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IEnvironmentService } from '../../../platform/environment/common/environment.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { reviveWorkspaceEditDto } from './mainThreadBulkEdits.ts';
+import { UriComponents, URI } from '../../../base/common/uri.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadFileSystemEventService)
 export class MainThreadFileSystemEventService implements MainThreadFileSystemEventServiceShape {

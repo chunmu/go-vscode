@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { distinct } from '../../../../base/common/arrays.js';
-import { Event } from '../../../../base/common/event.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { Constants } from '../../../../base/common/uint.js';
-import { ICodeEditor } from '../../../../editor/browser/editorBrowser.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { IEditorContribution, IEditorDecorationsCollection } from '../../../../editor/common/editorCommon.js';
-import { GlyphMarginLane, IModelDecorationOptions, IModelDeltaDecoration, OverviewRulerLane, TrackedRangeStickiness } from '../../../../editor/common/model.js';
-import { localize } from '../../../../nls.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { registerColor } from '../../../../platform/theme/common/colorRegistry.js';
-import { themeColorFromId } from '../../../../platform/theme/common/themeService.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.js';
-import { debugStackframe, debugStackframeFocused } from './debugIcons.js';
-import { IDebugService, IStackFrame } from '../common/debug.js';
+import { distinct } from '../../../../base/common/arrays.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { Constants } from '../../../../base/common/uint.ts';
+import { ICodeEditor } from '../../../../editor/browser/editorBrowser.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { IEditorContribution, IEditorDecorationsCollection } from '../../../../editor/common/editorCommon.ts';
+import { GlyphMarginLane, IModelDecorationOptions, IModelDeltaDecoration, OverviewRulerLane, TrackedRangeStickiness } from '../../../../editor/common/model.ts';
+import { localize } from '../../../../nls.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { registerColor } from '../../../../platform/theme/common/colorRegistry.ts';
+import { themeColorFromId } from '../../../../platform/theme/common/themeService.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { IUriIdentityService } from '../../../../platform/uriIdentity/common/uriIdentity.ts';
+import { debugStackframe, debugStackframeFocused } from './debugIcons.ts';
+import { IDebugService, IStackFrame } from '../common/debug.ts';
 import './media/callStackEditorContribution.css';
 
 export const topStackFrameColor = registerColor('editor.stackFrameHighlightBackground', { dark: '#ffff0033', light: '#ffff6673', hcDark: '#ffff0033', hcLight: '#ffff6673' }, localize('topStackFrameLineHighlight', 'Background color for the highlight of line at the top stack frame position.'));

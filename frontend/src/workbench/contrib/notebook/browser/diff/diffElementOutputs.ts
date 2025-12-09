@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../base/browser/dom.js';
-import * as nls from '../../../../../nls.js';
-import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { DiffElementCellViewModelBase, SideBySideDiffElementViewModel } from './diffElementViewModel.js';
-import { DiffSide, INotebookTextDiffEditor } from './notebookDiffEditorBrowser.js';
-import { ICellOutputViewModel, IInsetRenderOutput, RenderOutputType } from '../notebookBrowser.js';
-import { NotebookTextModel } from '../../common/model/notebookTextModel.js';
-import { NotebookCellOutputsSplice } from '../../common/notebookCommon.js';
-import { INotebookService } from '../../common/notebookService.js';
-import { DiffNestedCellViewModel } from './diffNestedCellViewModel.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { mimetypeIcon } from '../notebookIcons.js';
-import { StandardKeyboardEvent } from '../../../../../base/browser/keyboardEvent.js';
-import { KeyCode } from '../../../../../base/common/keyCodes.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.js';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import * as nls from '../../../../../nls.ts';
+import { Disposable, DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { DiffElementCellViewModelBase, SideBySideDiffElementViewModel } from './diffElementViewModel.ts';
+import { DiffSide, INotebookTextDiffEditor } from './notebookDiffEditorBrowser.ts';
+import { ICellOutputViewModel, IInsetRenderOutput, RenderOutputType } from '../notebookBrowser.ts';
+import { NotebookTextModel } from '../../common/model/notebookTextModel.ts';
+import { NotebookCellOutputsSplice } from '../../common/notebookCommon.ts';
+import { INotebookService } from '../../common/notebookService.ts';
+import { DiffNestedCellViewModel } from './diffNestedCellViewModel.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { mimetypeIcon } from '../notebookIcons.ts';
+import { StandardKeyboardEvent } from '../../../../../base/browser/keyboardEvent.ts';
+import { KeyCode } from '../../../../../base/common/keyCodes.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.ts';
 
 interface IMimeTypeRenderer extends IQuickPickItem {
 	index: number;

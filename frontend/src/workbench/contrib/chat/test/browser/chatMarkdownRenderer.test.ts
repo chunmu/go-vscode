@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MarkdownString } from '../../../../../base/common/htmlContent.js';
-import { assertSnapshot } from '../../../../../base/test/common/snapshot.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { ChatContentMarkdownRenderer } from '../../browser/chatContentMarkdownRenderer.js';
-import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.js';
+import { MarkdownString } from '../../../../../base/common/htmlContent.ts';
+import { assertSnapshot } from '../../../../../base/test/common/snapshot.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { ChatContentMarkdownRenderer } from '../../browser/chatContentMarkdownRenderer.ts';
+import { workbenchInstantiationService } from '../../../../test/browser/workbenchTestServices.ts';
 
 suite('ChatMarkdownRenderer', () => {
 	const store = ensureNoDisposablesAreLeakedInTestSuite();

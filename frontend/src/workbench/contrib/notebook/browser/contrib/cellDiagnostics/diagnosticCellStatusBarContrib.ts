@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { autorun } from '../../../../../../base/common/observable.js';
-import { localize } from '../../../../../../nls.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { OPEN_CELL_FAILURE_ACTIONS_COMMAND_ID } from './cellDiagnosticsActions.js';
-import { NotebookStatusBarController } from '../cellStatusBar/executionStatusBarItemController.js';
-import { INotebookEditor, INotebookEditorContribution, INotebookViewModel } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { INotebookCellStatusBarItem, CellStatusbarAlignment } from '../../../common/notebookCommon.js';
-import { ICellExecutionError } from '../../../common/notebookExecutionStateService.js';
-import { IChatAgentService } from '../../../../chat/common/chatAgents.js';
-import { ChatAgentLocation } from '../../../../chat/common/constants.js';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { autorun } from '../../../../../../base/common/observable.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { OPEN_CELL_FAILURE_ACTIONS_COMMAND_ID } from './cellDiagnosticsActions.ts';
+import { NotebookStatusBarController } from '../cellStatusBar/executionStatusBarItemController.ts';
+import { INotebookEditor, INotebookEditorContribution, INotebookViewModel } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { INotebookCellStatusBarItem, CellStatusbarAlignment } from '../../../common/notebookCommon.ts';
+import { ICellExecutionError } from '../../../common/notebookExecutionStateService.ts';
+import { IChatAgentService } from '../../../../chat/common/chatAgents.ts';
+import { ChatAgentLocation } from '../../../../chat/common/constants.ts';
 
 export class DiagnosticCellStatusBarContrib extends Disposable implements INotebookEditorContribution {
 	static id: string = 'workbench.notebook.statusBar.diagtnostic';

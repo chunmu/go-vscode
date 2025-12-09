@@ -3,40 +3,40 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../base/browser/dom.js';
-import * as domStylesheetsJs from '../../../../../base/browser/domStylesheets.js';
-import { IMouseWheelEvent } from '../../../../../base/browser/mouseEvent.js';
-import { IListRenderer, IListVirtualDelegate, ListError } from '../../../../../base/browser/ui/list/list.js';
-import { IListStyles, IStyleController } from '../../../../../base/browser/ui/list/listWidget.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore, IDisposable, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import { isMacintosh } from '../../../../../base/common/platform.js';
-import { ScrollEvent } from '../../../../../base/common/scrollable.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { Selection } from '../../../../../editor/common/core/selection.js';
-import { TrackedRangeStickiness } from '../../../../../editor/common/model.js';
-import { PrefixSumComputer } from '../../../../../editor/common/model/prefixSumComputer.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IListService, IWorkbenchListOptions, WorkbenchList } from '../../../../../platform/list/browser/listService.js';
-import { CursorAtBoundary, ICellViewModel, CellEditState, ICellOutputViewModel, CellRevealType, CellRevealRangeType, CursorAtLineBoundary, INotebookViewZoneChangeAccessor, INotebookCellOverlayChangeAccessor } from '../notebookBrowser.js';
-import { CellViewModel, NotebookViewModel } from '../viewModel/notebookViewModelImpl.js';
-import { diff, NOTEBOOK_EDITOR_CURSOR_BOUNDARY, CellKind, SelectionStateType, NOTEBOOK_EDITOR_CURSOR_LINE_BOUNDARY } from '../../common/notebookCommon.js';
-import { ICellRange, cellRangesToIndexes, reduceCellRanges, cellRangesEqual } from '../../common/notebookRange.js';
-import { NOTEBOOK_CELL_LIST_FOCUSED } from '../../common/notebookContextKeys.js';
-import { clamp } from '../../../../../base/common/numbers.js';
-import { ISplice } from '../../../../../base/common/sequence.js';
-import { BaseCellRenderTemplate, INotebookCellList } from './notebookRenderingCommon.js';
-import { FastDomNode } from '../../../../../base/browser/fastDomNode.js';
-import { MarkupCellViewModel } from '../viewModel/markupCellViewModel.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IListViewOptions, IListView } from '../../../../../base/browser/ui/list/listView.js';
-import { NotebookCellListView } from './notebookCellListView.js';
-import { NotebookOptions } from '../notebookOptions.js';
-import { INotebookExecutionStateService } from '../../common/notebookExecutionStateService.js';
-import { NotebookCellAnchor } from './notebookCellAnchor.js';
-import { NotebookViewZones } from '../viewParts/notebookViewZones.js';
-import { NotebookCellOverlays } from '../viewParts/notebookCellOverlays.js';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import * as domStylesheetsJs from '../../../../../base/browser/domStylesheets.ts';
+import { IMouseWheelEvent } from '../../../../../base/browser/mouseEvent.ts';
+import { IListRenderer, IListVirtualDelegate, ListError } from '../../../../../base/browser/ui/list/list.ts';
+import { IListStyles, IStyleController } from '../../../../../base/browser/ui/list/listWidget.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore, IDisposable, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import { isMacintosh } from '../../../../../base/common/platform.ts';
+import { ScrollEvent } from '../../../../../base/common/scrollable.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { Selection } from '../../../../../editor/common/core/selection.ts';
+import { TrackedRangeStickiness } from '../../../../../editor/common/model.ts';
+import { PrefixSumComputer } from '../../../../../editor/common/model/prefixSumComputer.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IListService, IWorkbenchListOptions, WorkbenchList } from '../../../../../platform/list/browser/listService.ts';
+import { CursorAtBoundary, ICellViewModel, CellEditState, ICellOutputViewModel, CellRevealType, CellRevealRangeType, CursorAtLineBoundary, INotebookViewZoneChangeAccessor, INotebookCellOverlayChangeAccessor } from '../notebookBrowser.ts';
+import { CellViewModel, NotebookViewModel } from '../viewModel/notebookViewModelImpl.ts';
+import { diff, NOTEBOOK_EDITOR_CURSOR_BOUNDARY, CellKind, SelectionStateType, NOTEBOOK_EDITOR_CURSOR_LINE_BOUNDARY } from '../../common/notebookCommon.ts';
+import { ICellRange, cellRangesToIndexes, reduceCellRanges, cellRangesEqual } from '../../common/notebookRange.ts';
+import { NOTEBOOK_CELL_LIST_FOCUSED } from '../../common/notebookContextKeys.ts';
+import { clamp } from '../../../../../base/common/numbers.ts';
+import { ISplice } from '../../../../../base/common/sequence.ts';
+import { BaseCellRenderTemplate, INotebookCellList } from './notebookRenderingCommon.ts';
+import { FastDomNode } from '../../../../../base/browser/fastDomNode.ts';
+import { MarkupCellViewModel } from '../viewModel/markupCellViewModel.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IListViewOptions, IListView } from '../../../../../base/browser/ui/list/listView.ts';
+import { NotebookCellListView } from './notebookCellListView.ts';
+import { NotebookOptions } from '../notebookOptions.ts';
+import { INotebookExecutionStateService } from '../../common/notebookExecutionStateService.ts';
+import { NotebookCellAnchor } from './notebookCellAnchor.ts';
+import { NotebookViewZones } from '../viewParts/notebookViewZones.ts';
+import { NotebookCellOverlays } from '../viewParts/notebookCellOverlays.ts';
 
 const enum CellRevealPosition {
 	Top,

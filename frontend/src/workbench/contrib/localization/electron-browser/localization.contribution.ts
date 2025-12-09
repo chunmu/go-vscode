@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize } from '../../../../nls.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';
-import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';
-import * as platform from '../../../../base/common/platform.js';
-import { IExtensionManagementService, IExtensionGalleryService, InstallOperation, ILocalExtension, InstallExtensionResult, DidUninstallExtensionEvent } from '../../../../platform/extensionManagement/common/extensionManagement.js';
-import { INotificationService, NeverShowAgainScope, NotificationPriority } from '../../../../platform/notification/common/notification.js';
-import Severity from '../../../../base/common/severity.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IExtensionsWorkbenchService } from '../../extensions/common/extensions.js';
-import { minimumTranslatedStrings } from './minimalTranslations.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { ILocaleService } from '../../../services/localization/common/locale.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { BaseLocalizationWorkbenchContribution } from '../common/localization.contribution.js';
+import { localize } from '../../../../nls.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.ts';
+import { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.ts';
+import * as platform from '../../../../base/common/platform.ts';
+import { IExtensionManagementService, IExtensionGalleryService, InstallOperation, ILocalExtension, InstallExtensionResult, DidUninstallExtensionEvent } from '../../../../platform/extensionManagement/common/extensionManagement.ts';
+import { INotificationService, NeverShowAgainScope, NotificationPriority } from '../../../../platform/notification/common/notification.ts';
+import Severity from '../../../../base/common/severity.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IExtensionsWorkbenchService } from '../../extensions/common/extensions.ts';
+import { minimumTranslatedStrings } from './minimalTranslations.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { ILocaleService } from '../../../services/localization/common/locale.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { BaseLocalizationWorkbenchContribution } from '../common/localization.contribution.ts';
 
 class NativeLocalizationWorkbenchContribution extends BaseLocalizationWorkbenchContribution {
 	private static LANGUAGEPACK_SUGGESTION_IGNORE_STORAGE_KEY = 'extensionsAssistant/languagePackSuggestionIgnore';

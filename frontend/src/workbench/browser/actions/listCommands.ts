@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { KeyMod, KeyCode, KeyChord } from '../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { List } from '../../../base/browser/ui/list/listWidget.js';
-import { WorkbenchListFocusContextKey, IListService, WorkbenchListSupportsMultiSelectContextKey, ListWidget, WorkbenchListHasSelectionOrFocus, getSelectionKeyboardEvent, WorkbenchListWidget, WorkbenchListSelectionNavigation, WorkbenchTreeElementCanCollapse, WorkbenchTreeElementHasParent, WorkbenchTreeElementHasChild, WorkbenchTreeElementCanExpand, RawWorkbenchListFocusContextKey, WorkbenchTreeFindOpen, WorkbenchListSupportsFind, WorkbenchListScrollAtBottomContextKey, WorkbenchListScrollAtTopContextKey, WorkbenchTreeStickyScrollFocused } from '../../../platform/list/browser/listService.js';
-import { PagedList } from '../../../base/browser/ui/list/listPaging.js';
-import { equals, range } from '../../../base/common/arrays.js';
-import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.js';
-import { ObjectTree } from '../../../base/browser/ui/tree/objectTree.js';
-import { AsyncDataTree } from '../../../base/browser/ui/tree/asyncDataTree.js';
-import { DataTree } from '../../../base/browser/ui/tree/dataTree.js';
-import { ITreeNode } from '../../../base/browser/ui/tree/tree.js';
-import { CommandsRegistry } from '../../../platform/commands/common/commands.js';
-import { Table } from '../../../base/browser/ui/table/tableWidget.js';
-import { AbstractTree, TreeFindMatchType, TreeFindMode } from '../../../base/browser/ui/tree/abstractTree.js';
-import { isActiveElement } from '../../../base/browser/dom.js';
-import { Action2, registerAction2 } from '../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { localize, localize2 } from '../../../nls.js';
-import { IHoverService } from '../../../platform/hover/browser/hover.js';
+import { KeyMod, KeyCode, KeyChord } from '../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { List } from '../../../base/browser/ui/list/listWidget.ts';
+import { WorkbenchListFocusContextKey, IListService, WorkbenchListSupportsMultiSelectContextKey, ListWidget, WorkbenchListHasSelectionOrFocus, getSelectionKeyboardEvent, WorkbenchListWidget, WorkbenchListSelectionNavigation, WorkbenchTreeElementCanCollapse, WorkbenchTreeElementHasParent, WorkbenchTreeElementHasChild, WorkbenchTreeElementCanExpand, RawWorkbenchListFocusContextKey, WorkbenchTreeFindOpen, WorkbenchListSupportsFind, WorkbenchListScrollAtBottomContextKey, WorkbenchListScrollAtTopContextKey, WorkbenchTreeStickyScrollFocused } from '../../../platform/list/browser/listService.ts';
+import { PagedList } from '../../../base/browser/ui/list/listPaging.ts';
+import { equals, range } from '../../../base/common/arrays.ts';
+import { ContextKeyExpr } from '../../../platform/contextkey/common/contextkey.ts';
+import { ObjectTree } from '../../../base/browser/ui/tree/objectTree.ts';
+import { AsyncDataTree } from '../../../base/browser/ui/tree/asyncDataTree.ts';
+import { DataTree } from '../../../base/browser/ui/tree/dataTree.ts';
+import { ITreeNode } from '../../../base/browser/ui/tree/tree.ts';
+import { CommandsRegistry } from '../../../platform/commands/common/commands.ts';
+import { Table } from '../../../base/browser/ui/table/tableWidget.ts';
+import { AbstractTree, TreeFindMatchType, TreeFindMode } from '../../../base/browser/ui/tree/abstractTree.ts';
+import { isActiveElement } from '../../../base/browser/dom.ts';
+import { Action2, registerAction2 } from '../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { localize, localize2 } from '../../../nls.ts';
+import { IHoverService } from '../../../platform/hover/browser/hover.ts';
 
 function ensureDOMFocus(widget: ListWidget | undefined): void {
 	// it can happen that one of the commands is executed while

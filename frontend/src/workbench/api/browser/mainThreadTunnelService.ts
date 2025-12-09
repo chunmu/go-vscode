@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../nls.js';
-import { MainThreadTunnelServiceShape, MainContext, ExtHostContext, ExtHostTunnelServiceShape, CandidatePortSource, PortAttributesSelector, TunnelDto } from '../common/extHost.protocol.js';
-import { TunnelDtoConverter } from '../common/extHostTunnelService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IRemoteExplorerService, PORT_AUTO_FORWARD_SETTING, PORT_AUTO_SOURCE_SETTING, PORT_AUTO_SOURCE_SETTING_HYBRID, PORT_AUTO_SOURCE_SETTING_OUTPUT, PortsEnablement } from '../../services/remote/common/remoteExplorerService.js';
-import { ITunnelProvider, ITunnelService, TunnelCreationOptions, TunnelProviderFeatures, TunnelOptions, RemoteTunnel, ProvidedPortAttributes, PortAttributesProvider, TunnelProtocol } from '../../../platform/tunnel/common/tunnel.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import type { TunnelDescription } from '../../../platform/remote/common/remoteAuthorityResolver.js';
-import { INotificationService, Severity } from '../../../platform/notification/common/notification.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IRemoteAgentService } from '../../services/remote/common/remoteAgentService.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Registry } from '../../../platform/registry/common/platform.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../platform/configuration/common/configurationRegistry.js';
-import { IContextKeyService } from '../../../platform/contextkey/common/contextkey.js';
-import { CandidatePort, TunnelCloseReason, TunnelSource, forwardedPortsFeaturesEnabled, makeAddress } from '../../services/remote/common/tunnelModel.js';
+import * as nls from '../../../nls.ts';
+import { MainThreadTunnelServiceShape, MainContext, ExtHostContext, ExtHostTunnelServiceShape, CandidatePortSource, PortAttributesSelector, TunnelDto } from '../common/extHost.protocol.ts';
+import { TunnelDtoConverter } from '../common/extHostTunnelService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IRemoteExplorerService, PORT_AUTO_FORWARD_SETTING, PORT_AUTO_SOURCE_SETTING, PORT_AUTO_SOURCE_SETTING_HYBRID, PORT_AUTO_SOURCE_SETTING_OUTPUT, PortsEnablement } from '../../services/remote/common/remoteExplorerService.ts';
+import { ITunnelProvider, ITunnelService, TunnelCreationOptions, TunnelProviderFeatures, TunnelOptions, RemoteTunnel, ProvidedPortAttributes, PortAttributesProvider, TunnelProtocol } from '../../../platform/tunnel/common/tunnel.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import type { TunnelDescription } from '../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { INotificationService, Severity } from '../../../platform/notification/common/notification.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IRemoteAgentService } from '../../services/remote/common/remoteAgentService.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Registry } from '../../../platform/registry/common/platform.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions } from '../../../platform/configuration/common/configurationRegistry.ts';
+import { IContextKeyService } from '../../../platform/contextkey/common/contextkey.ts';
+import { CandidatePort, TunnelCloseReason, TunnelSource, forwardedPortsFeaturesEnabled, makeAddress } from '../../services/remote/common/tunnelModel.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadTunnelService)
 export class MainThreadTunnelService extends Disposable implements MainThreadTunnelServiceShape, PortAttributesProvider {

@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../../../base/common/buffer.js';
-import { localize } from '../../../../../nls.js';
-import { IChatRequestVariableEntry } from '../../common/chatVariableEntries.js';
+import { VSBuffer } from '../../../../../base/common/buffer.ts';
+import { localize } from '../../../../../nls.ts';
+import { IChatRequestVariableEntry } from '../../common/chatVariableEntries.ts';
 
 export const ScreenshotVariableId = 'screenshot-focused-window';
 

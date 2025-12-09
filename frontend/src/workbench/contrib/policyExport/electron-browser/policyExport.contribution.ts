@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IWorkbenchConfigurationService } from '../../../services/configuration/common/configuration.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { INativeEnvironmentService } from '../../../../platform/environment/common/environment.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { INativeHostService } from '../../../../platform/native/common/native.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { Extensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
-import { URI } from '../../../../base/common/uri.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { PolicyCategory, PolicyCategoryData } from '../../../../base/common/policy.js';
-import { ExportedPolicyDataDto } from '../common/policyDto.js';
-import { join } from '../../../../base/common/path.js';
+import { IWorkbenchContribution, registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IWorkbenchConfigurationService } from '../../../services/configuration/common/configuration.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { INativeEnvironmentService } from '../../../../platform/environment/common/environment.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { INativeHostService } from '../../../../platform/native/common/native.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { Extensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { IProgressService, ProgressLocation } from '../../../../platform/progress/common/progress.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { PolicyCategory, PolicyCategoryData } from '../../../../base/common/policy.ts';
+import { ExportedPolicyDataDto } from '../common/policyDto.ts';
+import { join } from '../../../../base/common/path.ts';
 
 export class PolicyExportContribution extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'workbench.contrib.policyExport';

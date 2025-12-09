@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { StringSHA1 } from '../../../../../base/common/hash.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { TextEdit } from '../../../../../editor/common/languages.js';
-import { ICellEditOperation } from '../../../notebook/common/notebookCommon.js';
-import { IModifiedEntryTelemetryInfo } from '../../common/chatEditingService.js';
-import { LocalChatSessionUri } from '../../common/chatUri.js';
+import { StringSHA1 } from '../../../../../base/common/hash.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { TextEdit } from '../../../../../editor/common/languages.ts';
+import { ICellEditOperation } from '../../../notebook/common/notebookCommon.ts';
+import { IModifiedEntryTelemetryInfo } from '../../common/chatEditingService.ts';
+import { LocalChatSessionUri } from '../../common/chatUri.ts';
 
 export enum FileOperationType {
 	Create = 'create',

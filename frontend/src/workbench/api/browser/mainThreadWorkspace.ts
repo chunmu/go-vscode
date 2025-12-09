@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { isCancellationError } from '../../../base/common/errors.js';
-import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { isNative } from '../../../base/common/platform.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { IEnvironmentService } from '../../../platform/environment/common/environment.js';
-import { IFileService } from '../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../platform/label/common/label.js';
-import { INotificationService } from '../../../platform/notification/common/notification.js';
-import { AuthInfo, Credentials, IRequestService } from '../../../platform/request/common/request.js';
-import { WorkspaceTrustRequestOptions, IWorkspaceTrustManagementService, IWorkspaceTrustRequestService } from '../../../platform/workspace/common/workspaceTrust.js';
-import { IWorkspace, IWorkspaceContextService, WorkbenchState, isUntitledWorkspace, WorkspaceFolder } from '../../../platform/workspace/common/workspace.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { checkGlobFileExists } from '../../services/extensions/common/workspaceContains.js';
-import { IFileQueryBuilderOptions, ITextQueryBuilderOptions, QueryBuilder } from '../../services/search/common/queryBuilder.js';
-import { IEditorService, ISaveEditorsResult } from '../../services/editor/common/editorService.js';
-import { IFileMatch, IPatternInfo, ISearchProgressItem, ISearchService } from '../../services/search/common/search.js';
-import { IWorkspaceEditingService } from '../../services/workspaces/common/workspaceEditing.js';
-import { ExtHostContext, ExtHostWorkspaceShape, ITextSearchComplete, IWorkspaceData, MainContext, MainThreadWorkspaceShape } from '../common/extHost.protocol.js';
-import { IEditSessionIdentityService } from '../../../platform/workspace/common/editSessions.js';
-import { EditorResourceAccessor, SaveReason, SideBySideEditor } from '../../common/editor.js';
-import { coalesce } from '../../../base/common/arrays.js';
-import { ICanonicalUriService } from '../../../platform/workspace/common/canonicalUri.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { ITextFileService } from '../../services/textfile/common/textfiles.js';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { isCancellationError } from '../../../base/common/errors.ts';
+import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { isNative } from '../../../base/common/platform.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { IEnvironmentService } from '../../../platform/environment/common/environment.ts';
+import { IFileService } from '../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../platform/label/common/label.ts';
+import { INotificationService } from '../../../platform/notification/common/notification.ts';
+import { AuthInfo, Credentials, IRequestService } from '../../../platform/request/common/request.ts';
+import { WorkspaceTrustRequestOptions, IWorkspaceTrustManagementService, IWorkspaceTrustRequestService } from '../../../platform/workspace/common/workspaceTrust.ts';
+import { IWorkspace, IWorkspaceContextService, WorkbenchState, isUntitledWorkspace, WorkspaceFolder } from '../../../platform/workspace/common/workspace.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { checkGlobFileExists } from '../../services/extensions/common/workspaceContains.ts';
+import { IFileQueryBuilderOptions, ITextQueryBuilderOptions, QueryBuilder } from '../../services/search/common/queryBuilder.ts';
+import { IEditorService, ISaveEditorsResult } from '../../services/editor/common/editorService.ts';
+import { IFileMatch, IPatternInfo, ISearchProgressItem, ISearchService } from '../../services/search/common/search.ts';
+import { IWorkspaceEditingService } from '../../services/workspaces/common/workspaceEditing.ts';
+import { ExtHostContext, ExtHostWorkspaceShape, ITextSearchComplete, IWorkspaceData, MainContext, MainThreadWorkspaceShape } from '../common/extHost.protocol.ts';
+import { IEditSessionIdentityService } from '../../../platform/workspace/common/editSessions.ts';
+import { EditorResourceAccessor, SaveReason, SideBySideEditor } from '../../common/editor.ts';
+import { coalesce } from '../../../base/common/arrays.ts';
+import { ICanonicalUriService } from '../../../platform/workspace/common/canonicalUri.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { ITextFileService } from '../../services/textfile/common/textfiles.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadWorkspace)
 export class MainThreadWorkspace implements MainThreadWorkspaceShape {

@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken, CancellationTokenSource } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { Command } from '../../../../editor/common/languages.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { IAccessibilityInformation } from '../../../../platform/accessibility/common/accessibility.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
+import { CancellationToken, CancellationTokenSource } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { Command } from '../../../../editor/common/languages.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IAccessibilityInformation } from '../../../../platform/accessibility/common/accessibility.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
 
 export function toKey(extension: ExtensionIdentifier | string, source: string) {
 	return `${typeof extension === 'string' ? extension : ExtensionIdentifier.toKey(extension)}|${source}`;

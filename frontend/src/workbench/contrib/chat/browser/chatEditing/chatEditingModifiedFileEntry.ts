@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { RunOnceScheduler } from '../../../../../base/common/async.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable, DisposableMap, MutableDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { clamp } from '../../../../../base/common/numbers.js';
-import { autorun, derived, IObservable, ITransaction, observableValue, observableValueOpts, transaction } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { Location, TextEdit } from '../../../../../editor/common/languages.js';
-import { EditDeltaInfo } from '../../../../../editor/common/textModelEditSource.js';
-import { localize } from '../../../../../nls.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { observableConfigValue } from '../../../../../platform/observable/common/platformObservableUtils.js';
-import { editorBackground, registerColor, transparent } from '../../../../../platform/theme/common/colorRegistry.js';
-import { IUndoRedoElement, IUndoRedoService } from '../../../../../platform/undoRedo/common/undoRedo.js';
-import { IEditorPane } from '../../../../common/editor.js';
-import { IFilesConfigurationService } from '../../../../services/filesConfiguration/common/filesConfigurationService.js';
-import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.js';
-import { ICellEditOperation } from '../../../notebook/common/notebookCommon.js';
-import { ChatEditKind, IModifiedEntryTelemetryInfo, IModifiedFileEntry, IModifiedFileEntryEditorIntegration, ISnapshotEntry, ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { IChatResponseModel } from '../../common/chatModel.js';
-import { ChatUserAction, IChatService } from '../../common/chatService.js';
+import { RunOnceScheduler } from '../../../../../base/common/async.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableMap, MutableDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { clamp } from '../../../../../base/common/numbers.ts';
+import { autorun, derived, IObservable, ITransaction, observableValue, observableValueOpts, transaction } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { Location, TextEdit } from '../../../../../editor/common/languages.ts';
+import { EditDeltaInfo } from '../../../../../editor/common/textModelEditSource.ts';
+import { localize } from '../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { observableConfigValue } from '../../../../../platform/observable/common/platformObservableUtils.ts';
+import { editorBackground, registerColor, transparent } from '../../../../../platform/theme/common/colorRegistry.ts';
+import { IUndoRedoElement, IUndoRedoService } from '../../../../../platform/undoRedo/common/undoRedo.ts';
+import { IEditorPane } from '../../../../common/editor.ts';
+import { IFilesConfigurationService } from '../../../../services/filesConfiguration/common/filesConfigurationService.ts';
+import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts';
+import { ICellEditOperation } from '../../../notebook/common/notebookCommon.ts';
+import { ChatEditKind, IModifiedEntryTelemetryInfo, IModifiedFileEntry, IModifiedFileEntryEditorIntegration, ISnapshotEntry, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { IChatResponseModel } from '../../common/chatModel.ts';
+import { ChatUserAction, IChatService } from '../../common/chatService.ts';
 
 class AutoAcceptControl {
 	constructor(

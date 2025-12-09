@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction } from '../../../../base/common/actions.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { localize } from '../../../../nls.js';
-import { IAccessibleViewService, AccessibleViewProviderId, AccessibleViewType, AccessibleContentProvider } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { IAccessibilitySignalService, AccessibilitySignal } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IListService, WorkbenchList } from '../../../../platform/list/browser/listService.js';
-import { getNotificationFromContext } from './notificationsCommands.js';
-import { NotificationFocusedContext } from '../../../common/contextkeys.js';
-import { INotificationViewItem } from '../../../common/notifications.js';
-import { withSeverityPrefix } from '../../../../platform/notification/common/notification.js';
+import { IAction } from '../../../../base/common/actions.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { localize } from '../../../../nls.ts';
+import { IAccessibleViewService, AccessibleViewProviderId, AccessibleViewType, AccessibleContentProvider } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { IAccessibilitySignalService, AccessibilitySignal } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IListService, WorkbenchList } from '../../../../platform/list/browser/listService.ts';
+import { getNotificationFromContext } from './notificationsCommands.ts';
+import { NotificationFocusedContext } from '../../../common/contextkeys.ts';
+import { INotificationViewItem } from '../../../common/notifications.ts';
+import { withSeverityPrefix } from '../../../../platform/notification/common/notification.ts';
 
 export class NotificationAccessibleView implements IAccessibleViewImplementation {
 	readonly priority = 90;

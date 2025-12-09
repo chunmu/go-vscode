@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { es5ClassCompat } from './es5ClassCompat.js';
-import { Position } from './position.js';
-import { getDebugDescriptionOfRange, Range } from './range.js';
+import { es5ClassCompat } from './es5ClassCompat.ts';
+import { Position } from './position.ts';
+import { getDebugDescriptionOfRange, Range } from './range.ts';
 
 @es5ClassCompat
 export class Selection extends Range {

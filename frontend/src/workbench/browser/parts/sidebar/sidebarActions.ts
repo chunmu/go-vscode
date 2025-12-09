@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/sidebarpart.css';
-import { localize2 } from '../../../../nls.js';
-import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.js';
-import { KeyMod, KeyCode } from '../../../../base/common/keyCodes.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { Categories } from '../../../../platform/action/common/actionCommonCategories.js';
-import { IPaneCompositePartService } from '../../../services/panecomposite/browser/panecomposite.js';
-import { ViewContainerLocation } from '../../../common/views.js';
-import { SideBarVisibleContext } from '../../../common/contextkeys.js';
+import { localize2 } from '../../../../nls.ts';
+import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { IWorkbenchLayoutService, Parts } from '../../../services/layout/browser/layoutService.ts';
+import { KeyMod, KeyCode } from '../../../../base/common/keyCodes.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { Categories } from '../../../../platform/action/common/actionCommonCategories.ts';
+import { IPaneCompositePartService } from '../../../services/panecomposite/browser/panecomposite.ts';
+import { ViewContainerLocation } from '../../../common/views.ts';
+import { SideBarVisibleContext } from '../../../common/contextkeys.ts';
 
 registerAction2(class extends Action2 {
 

@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { localize } from '../../../nls.js';
-import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.js';
-import { IProgressStep, IProgress } from '../../../platform/progress/common/progress.js';
-import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostNotebookDocumentSaveParticipantShape } from '../common/extHost.protocol.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { raceCancellationError } from '../../../base/common/async.js';
-import { IStoredFileWorkingCopySaveParticipant, IStoredFileWorkingCopySaveParticipantContext, IWorkingCopyFileService } from '../../services/workingCopy/common/workingCopyFileService.js';
-import { IStoredFileWorkingCopy, IStoredFileWorkingCopyModel } from '../../services/workingCopy/common/storedFileWorkingCopy.js';
-import { NotebookFileWorkingCopyModel } from '../../contrib/notebook/common/notebookEditorModel.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { localize } from '../../../nls.ts';
+import { IInstantiationService } from '../../../platform/instantiation/common/instantiation.ts';
+import { IProgressStep, IProgress } from '../../../platform/progress/common/progress.ts';
+import { extHostCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostNotebookDocumentSaveParticipantShape } from '../common/extHost.protocol.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { raceCancellationError } from '../../../base/common/async.ts';
+import { IStoredFileWorkingCopySaveParticipant, IStoredFileWorkingCopySaveParticipantContext, IWorkingCopyFileService } from '../../services/workingCopy/common/workingCopyFileService.ts';
+import { IStoredFileWorkingCopy, IStoredFileWorkingCopyModel } from '../../services/workingCopy/common/storedFileWorkingCopy.ts';
+import { NotebookFileWorkingCopyModel } from '../../contrib/notebook/common/notebookEditorModel.ts';
 
 class ExtHostNotebookDocumentSaveParticipant implements IStoredFileWorkingCopySaveParticipant {
 

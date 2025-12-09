@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { raceCancellationError } from '../../../base/common/async.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Emitter } from '../../../base/common/event.js';
-import { IMarkdownString, MarkdownString } from '../../../base/common/htmlContent.js';
-import { Disposable, DisposableMap, DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../base/common/map.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { autorun, IObservable, observableValue } from '../../../base/common/observable.js';
-import { isEqual } from '../../../base/common/resources.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { IDialogService } from '../../../platform/dialogs/common/dialogs.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { IChatEditorOptions } from '../../contrib/chat/browser/chatEditor.js';
-import { ChatEditorInput } from '../../contrib/chat/browser/chatEditorInput.js';
-import { IChatAgentRequest } from '../../contrib/chat/common/chatAgents.js';
-import { IChatContentInlineReference, IChatProgress, IChatService } from '../../contrib/chat/common/chatService.js';
-import { IChatSession, IChatSessionContentProvider, IChatSessionHistoryItem, IChatSessionItem, IChatSessionItemProvider, IChatSessionProviderOptionItem, IChatSessionsService } from '../../contrib/chat/common/chatSessionsService.js';
-import { IChatRequestVariableEntry } from '../../contrib/chat/common/chatVariableEntries.js';
-import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { Dto } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostChatSessionsShape, ExtHostContext, IChatProgressDto, IChatSessionHistoryItemDto, MainContext, MainThreadChatSessionsShape } from '../common/extHost.protocol.js';
+import { raceCancellationError } from '../../../base/common/async.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { IMarkdownString, MarkdownString } from '../../../base/common/htmlContent.ts';
+import { Disposable, DisposableMap, DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../base/common/map.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { autorun, IObservable, observableValue } from '../../../base/common/observable.ts';
+import { isEqual } from '../../../base/common/resources.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { IDialogService } from '../../../platform/dialogs/common/dialogs.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { IChatEditorOptions } from '../../contrib/chat/browser/chatEditor.ts';
+import { ChatEditorInput } from '../../contrib/chat/browser/chatEditorInput.ts';
+import { IChatAgentRequest } from '../../contrib/chat/common/chatAgents.ts';
+import { IChatContentInlineReference, IChatProgress, IChatService } from '../../contrib/chat/common/chatService.ts';
+import { IChatSession, IChatSessionContentProvider, IChatSessionHistoryItem, IChatSessionItem, IChatSessionItemProvider, IChatSessionProviderOptionItem, IChatSessionsService } from '../../contrib/chat/common/chatSessionsService.ts';
+import { IChatRequestVariableEntry } from '../../contrib/chat/common/chatVariableEntries.ts';
+import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { Dto } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostChatSessionsShape, ExtHostContext, IChatProgressDto, IChatSessionHistoryItemDto, MainContext, MainThreadChatSessionsShape } from '../common/extHost.protocol.ts';
 
 export class ObservableChatSession extends Disposable implements IChatSession {
 

@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Delayer } from '../../../../base/common/async.js';
-import * as DOM from '../../../../base/browser/dom.js';
-import { IAction } from '../../../../base/common/actions.js';
-import { HistoryInputBox } from '../../../../base/browser/ui/inputbox/inputBox.js';
-import { KeyCode } from '../../../../base/common/keyCodes.js';
-import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
-import { IContextViewService } from '../../../../platform/contextview/browser/contextView.js';
-import { toDisposable } from '../../../../base/common/lifecycle.js';
-import { badgeBackground, badgeForeground, contrastBorder, asCssVariable } from '../../../../platform/theme/common/colorRegistry.js';
-import { localize } from '../../../../nls.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ContextScopedHistoryInputBox } from '../../../../platform/history/browser/contextScopedHistoryWidget.js';
-import { IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { showHistoryKeybindingHint } from '../../../../platform/history/browser/historyWidgetKeybindingHint.js';
-import { MenuId, MenuRegistry, SubmenuItemAction } from '../../../../platform/actions/common/actions.js';
-import { HiddenItemStrategy, MenuWorkbenchToolBar } from '../../../../platform/actions/browser/toolbar.js';
-import { SubmenuEntryActionViewItem } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
-import { Widget } from '../../../../base/browser/ui/widget.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { defaultInputBoxStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { IActionViewItemOptions } from '../../../../base/browser/ui/actionbar/actionViewItems.js';
+import { Delayer } from '../../../../base/common/async.ts';
+import * as DOM from '../../../../base/browser/dom.ts';
+import { IAction } from '../../../../base/common/actions.ts';
+import { HistoryInputBox } from '../../../../base/browser/ui/inputbox/inputBox.ts';
+import { KeyCode } from '../../../../base/common/keyCodes.ts';
+import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.ts';
+import { IContextViewService } from '../../../../platform/contextview/browser/contextView.ts';
+import { toDisposable } from '../../../../base/common/lifecycle.ts';
+import { badgeBackground, badgeForeground, contrastBorder, asCssVariable } from '../../../../platform/theme/common/colorRegistry.ts';
+import { localize } from '../../../../nls.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ContextScopedHistoryInputBox } from '../../../../platform/history/browser/contextScopedHistoryWidget.ts';
+import { IContextKey, IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { showHistoryKeybindingHint } from '../../../../platform/history/browser/historyWidgetKeybindingHint.ts';
+import { MenuId, MenuRegistry, SubmenuItemAction } from '../../../../platform/actions/common/actions.ts';
+import { HiddenItemStrategy, MenuWorkbenchToolBar } from '../../../../platform/actions/browser/toolbar.ts';
+import { SubmenuEntryActionViewItem } from '../../../../platform/actions/browser/menuEntryActionViewItem.ts';
+import { Widget } from '../../../../base/browser/ui/widget.ts';
+import { Emitter } from '../../../../base/common/event.ts';
+import { defaultInputBoxStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { IActionViewItemOptions } from '../../../../base/browser/ui/actionbar/actionViewItems.ts';
 
 const viewFilterMenu = new MenuId('menu.view.filter');
 export const viewFilterSubmenu = new MenuId('submenu.view.filter');

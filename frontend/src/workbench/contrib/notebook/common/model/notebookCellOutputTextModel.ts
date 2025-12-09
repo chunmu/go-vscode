@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../../../base/common/buffer.js';
-import { Emitter } from '../../../../../base/common/event.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { ICellOutput, IOutputDto, IOutputItemDto, compressOutputItemStreams } from '../notebookCommon.js';
-import { isTextStreamMime } from '../../../../../base/common/mime.js';
+import { VSBuffer } from '../../../../../base/common/buffer.ts';
+import { Emitter } from '../../../../../base/common/event.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { ICellOutput, IOutputDto, IOutputItemDto, compressOutputItemStreams } from '../notebookCommon.ts';
+import { isTextStreamMime } from '../../../../../base/common/mime.ts';
 
 export class NotebookCellOutputTextModel extends Disposable implements ICellOutput {
 

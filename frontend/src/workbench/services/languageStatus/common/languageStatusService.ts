@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Event } from '../../../../base/common/event.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import Severity from '../../../../base/common/severity.js';
-import { compare } from '../../../../base/common/strings.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { Command } from '../../../../editor/common/languages.js';
-import { LanguageFeatureRegistry } from '../../../../editor/common/languageFeatureRegistry.js';
-import { LanguageSelector } from '../../../../editor/common/languageSelector.js';
-import { IAccessibilityInformation } from '../../../../platform/accessibility/common/accessibility.js';
-import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import Severity from '../../../../base/common/severity.ts';
+import { compare } from '../../../../base/common/strings.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { Command } from '../../../../editor/common/languages.ts';
+import { LanguageFeatureRegistry } from '../../../../editor/common/languageFeatureRegistry.ts';
+import { LanguageSelector } from '../../../../editor/common/languageSelector.ts';
+import { IAccessibilityInformation } from '../../../../platform/accessibility/common/accessibility.ts';
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
 
 export interface ILanguageStatus {
 	readonly id: string;

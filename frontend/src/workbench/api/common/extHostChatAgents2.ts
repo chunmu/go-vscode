@@ -4,36 +4,36 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { coalesce } from '../../../base/common/arrays.js';
-import { timeout } from '../../../base/common/async.js';
-import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.js';
-import { toErrorMessage } from '../../../base/common/errorMessage.js';
-import { Emitter } from '../../../base/common/event.js';
-import { Iterable } from '../../../base/common/iterator.js';
-import { Disposable, DisposableMap, DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
-import { revive } from '../../../base/common/marshalling.js';
-import { StopWatch } from '../../../base/common/stopwatch.js';
-import { assertType } from '../../../base/common/types.js';
-import { URI } from '../../../base/common/uri.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { Location } from '../../../editor/common/languages.js';
-import { ExtensionIdentifier, IExtensionDescription, IRelaxedExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { isChatViewTitleActionContext } from '../../contrib/chat/common/chatActions.js';
-import { IChatAgentRequest, IChatAgentResult, IChatAgentResultTimings, UserSelectedTools } from '../../contrib/chat/common/chatAgents.js';
-import { IChatRelatedFile, IChatRequestDraft } from '../../contrib/chat/common/chatEditingService.js';
-import { ChatAgentVoteDirection, IChatContentReference, IChatFollowup, IChatResponseErrorDetails, IChatUserActionEvent, IChatVoteAction } from '../../contrib/chat/common/chatService.js';
-import { ChatAgentLocation } from '../../contrib/chat/common/constants.js';
-import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.js';
-import { Dto } from '../../services/extensions/common/proxyIdentifier.js';
-import { ExtHostChatAgentsShape2, IChatAgentCompletionItem, IChatAgentHistoryEntryDto, IChatAgentProgressShape, IChatProgressDto, IChatSessionContextDto, IExtensionChatAgentMetadata, IMainContext, MainContext, MainThreadChatAgentsShape2 } from './extHost.protocol.js';
-import { CommandsConverter, ExtHostCommands } from './extHostCommands.js';
-import { ExtHostDiagnostics } from './extHostDiagnostics.js';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import { ExtHostLanguageModels } from './extHostLanguageModels.js';
-import { ExtHostLanguageModelTools } from './extHostLanguageModelTools.js';
-import * as typeConvert from './extHostTypeConverters.js';
-import * as extHostTypes from './extHostTypes.js';
+import { coalesce } from '../../../base/common/arrays.ts';
+import { timeout } from '../../../base/common/async.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../base/common/cancellation.ts';
+import { toErrorMessage } from '../../../base/common/errorMessage.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { Iterable } from '../../../base/common/iterator.ts';
+import { Disposable, DisposableMap, DisposableStore, toDisposable } from '../../../base/common/lifecycle.ts';
+import { revive } from '../../../base/common/marshalling.ts';
+import { StopWatch } from '../../../base/common/stopwatch.ts';
+import { assertType } from '../../../base/common/types.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { Location } from '../../../editor/common/languages.ts';
+import { ExtensionIdentifier, IExtensionDescription, IRelaxedExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { isChatViewTitleActionContext } from '../../contrib/chat/common/chatActions.ts';
+import { IChatAgentRequest, IChatAgentResult, IChatAgentResultTimings, UserSelectedTools } from '../../contrib/chat/common/chatAgents.ts';
+import { IChatRelatedFile, IChatRequestDraft } from '../../contrib/chat/common/chatEditingService.ts';
+import { ChatAgentVoteDirection, IChatContentReference, IChatFollowup, IChatResponseErrorDetails, IChatUserActionEvent, IChatVoteAction } from '../../contrib/chat/common/chatService.ts';
+import { ChatAgentLocation } from '../../contrib/chat/common/constants.ts';
+import { checkProposedApiEnabled, isProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
+import { Dto } from '../../services/extensions/common/proxyIdentifier.ts';
+import { ExtHostChatAgentsShape2, IChatAgentCompletionItem, IChatAgentHistoryEntryDto, IChatAgentProgressShape, IChatProgressDto, IChatSessionContextDto, IExtensionChatAgentMetadata, IMainContext, MainContext, MainThreadChatAgentsShape2 } from './extHost.protocol.ts';
+import { CommandsConverter, ExtHostCommands } from './extHostCommands.ts';
+import { ExtHostDiagnostics } from './extHostDiagnostics.ts';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import { ExtHostLanguageModels } from './extHostLanguageModels.ts';
+import { ExtHostLanguageModelTools } from './extHostLanguageModelTools.ts';
+import * as typeConvert from './extHostTypeConverters.ts';
+import * as extHostTypes from './extHostTypes.ts';
 
 export class ChatAgentResponseStream {
 

@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAction } from '../../../../base/common/actions.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Color } from '../../../../base/common/color.js';
-import { Event } from '../../../../base/common/event.js';
-import { IJSONSchema, IJSONSchemaSnippet } from '../../../../base/common/jsonSchema.js';
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import severity from '../../../../base/common/severity.js';
-import { URI, UriComponents, URI as uri } from '../../../../base/common/uri.js';
-import { IPosition, Position } from '../../../../editor/common/core/position.js';
-import { IRange } from '../../../../editor/common/core/range.js';
-import * as editorCommon from '../../../../editor/common/editorCommon.js';
-import { ITextModel as EditorIModel } from '../../../../editor/common/model.js';
-import * as nls from '../../../../nls.js';
-import { ConfigurationTarget } from '../../../../platform/configuration/common/configuration.js';
-import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { ITelemetryEndpoint } from '../../../../platform/telemetry/common/telemetry.js';
-import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
-import { IEditorPane } from '../../../common/editor.js';
-import { DebugCompoundRoot } from './debugCompoundRoot.js';
-import { IDataBreakpointOptions, IFunctionBreakpointOptions, IInstructionBreakpointOptions } from './debugModel.js';
-import { Source } from './debugSource.js';
-import { ITaskIdentifier } from '../../tasks/common/tasks.js';
-import { LiveTestResult } from '../../testing/common/testResult.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IView } from '../../../common/views.js';
+import { IAction } from '../../../../base/common/actions.ts';
+import { VSBuffer } from '../../../../base/common/buffer.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Color } from '../../../../base/common/color.ts';
+import { Event } from '../../../../base/common/event.ts';
+import { IJSONSchema, IJSONSchemaSnippet } from '../../../../base/common/jsonSchema.ts';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import severity from '../../../../base/common/severity.ts';
+import { URI, UriComponents, URI as uri } from '../../../../base/common/uri.ts';
+import { IPosition, Position } from '../../../../editor/common/core/position.ts';
+import { IRange } from '../../../../editor/common/core/range.ts';
+import * as editorCommon from '../../../../editor/common/editorCommon.ts';
+import { ITextModel as EditorIModel } from '../../../../editor/common/model.ts';
+import * as nls from '../../../../nls.ts';
+import { ConfigurationTarget } from '../../../../platform/configuration/common/configuration.ts';
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ITelemetryEndpoint } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.ts';
+import { IEditorPane } from '../../../common/editor.ts';
+import { DebugCompoundRoot } from './debugCompoundRoot.ts';
+import { IDataBreakpointOptions, IFunctionBreakpointOptions, IInstructionBreakpointOptions } from './debugModel.ts';
+import { Source } from './debugSource.ts';
+import { ITaskIdentifier } from '../../tasks/common/tasks.ts';
+import { LiveTestResult } from '../../testing/common/testResult.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IView } from '../../../common/views.ts';
 
 export const VIEWLET_ID = 'workbench.view.debug';
 

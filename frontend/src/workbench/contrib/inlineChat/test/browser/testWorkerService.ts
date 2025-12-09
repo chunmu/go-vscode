@@ -2,20 +2,20 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-import { URI } from '../../../../../base/common/uri.js';
-import { mock } from '../../../../../base/test/common/mock.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { IModelService } from '../../../../../editor/common/services/model.js';
-import { assertType } from '../../../../../base/common/types.js';
-import { DiffAlgorithmName, IEditorWorkerService, ILineChange } from '../../../../../editor/common/services/editorWorker.js';
-import { IDocumentDiff, IDocumentDiffProviderOptions } from '../../../../../editor/common/diff/documentDiffProvider.js';
-import { EditorWorker } from '../../../../../editor/common/services/editorWebWorker.js';
-import { LineRange } from '../../../../../editor/common/core/ranges/lineRange.js';
-import { MovedText } from '../../../../../editor/common/diff/linesDiffComputer.js';
-import { LineRangeMapping, DetailedLineRangeMapping, RangeMapping } from '../../../../../editor/common/diff/rangeMapping.js';
-import { TextEdit } from '../../../../../editor/common/languages.js';
-import { disposableTimeout } from '../../../../../base/common/async.js';
-import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.js';
+import { URI } from '../../../../../base/common/uri.ts';
+import { mock } from '../../../../../base/test/common/mock.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { IModelService } from '../../../../../editor/common/services/model.ts';
+import { assertType } from '../../../../../base/common/types.ts';
+import { DiffAlgorithmName, IEditorWorkerService, ILineChange } from '../../../../../editor/common/services/editorWorker.ts';
+import { IDocumentDiff, IDocumentDiffProviderOptions } from '../../../../../editor/common/diff/documentDiffProvider.ts';
+import { EditorWorker } from '../../../../../editor/common/services/editorWebWorker.ts';
+import { LineRange } from '../../../../../editor/common/core/ranges/lineRange.ts';
+import { MovedText } from '../../../../../editor/common/diff/linesDiffComputer.ts';
+import { LineRangeMapping, DetailedLineRangeMapping, RangeMapping } from '../../../../../editor/common/diff/rangeMapping.ts';
+import { TextEdit } from '../../../../../editor/common/languages.ts';
+import { disposableTimeout } from '../../../../../base/common/async.ts';
+import { DisposableStore, IDisposable } from '../../../../../base/common/lifecycle.ts';
 
 
 export class TestWorkerService extends mock<IEditorWorkerService>() implements IDisposable {

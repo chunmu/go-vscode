@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MainContext, MainThreadLanguagesShape, IMainContext, ExtHostLanguagesShape } from './extHost.protocol.js';
+import { MainContext, MainThreadLanguagesShape, IMainContext, ExtHostLanguagesShape } from './extHost.protocol.ts';
 import type * as vscode from 'vscode';
-import { ExtHostDocuments } from './extHostDocuments.js';
-import * as typeConvert from './extHostTypeConverters.js';
-import { StandardTokenType, Range, Position, LanguageStatusSeverity } from './extHostTypes.js';
-import Severity from '../../../base/common/severity.js';
-import { disposableTimeout } from '../../../base/common/async.js';
-import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { CommandsConverter } from './extHostCommands.js';
-import { IURITransformer } from '../../../base/common/uriIpc.js';
-import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.js';
+import { ExtHostDocuments } from './extHostDocuments.ts';
+import * as typeConvert from './extHostTypeConverters.ts';
+import { StandardTokenType, Range, Position, LanguageStatusSeverity } from './extHostTypes.ts';
+import Severity from '../../../base/common/severity.ts';
+import { disposableTimeout } from '../../../base/common/async.ts';
+import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { CommandsConverter } from './extHostCommands.ts';
+import { IURITransformer } from '../../../base/common/uriIpc.ts';
+import { checkProposedApiEnabled } from '../../services/extensions/common/extensions.ts';
 
 export class ExtHostLanguages implements ExtHostLanguagesShape {
 

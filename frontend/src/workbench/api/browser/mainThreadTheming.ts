@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { MainContext, ExtHostThemingShape, ExtHostContext, MainThreadThemingShape } from '../common/extHost.protocol.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { IThemeService } from '../../../platform/theme/common/themeService.js';
+import { MainContext, ExtHostThemingShape, ExtHostContext, MainThreadThemingShape } from '../common/extHost.protocol.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { IThemeService } from '../../../platform/theme/common/themeService.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadTheming)
 export class MainThreadTheming implements MainThreadThemingShape {

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IDisposable } from '../../../../base/common/lifecycle.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { NotebookCellTextModel } from './model/notebookCellTextModel.js';
-import { INotebookTextModel, IOutputDto, IOutputItemDto } from './notebookCommon.js';
-import { INotebookCellExecution } from './notebookExecutionStateService.js';
+import { IDisposable } from '../../../../base/common/lifecycle.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { NotebookCellTextModel } from './model/notebookCellTextModel.ts';
+import { INotebookTextModel, IOutputDto, IOutputItemDto } from './notebookCommon.ts';
+import { INotebookCellExecution } from './notebookExecutionStateService.ts';
 
 export enum CellExecutionUpdateType {
 	Output = 1,

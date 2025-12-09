@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostSecretStateShape, MainContext, MainThreadSecretStateShape } from '../common/extHost.protocol.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { SequencerByKey } from '../../../base/common/async.js';
-import { ISecretStorageService } from '../../../platform/secrets/common/secrets.js';
-import { IBrowserWorkbenchEnvironmentService } from '../../services/environment/browser/environmentService.js';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostSecretStateShape, MainContext, MainThreadSecretStateShape } from '../common/extHost.protocol.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { SequencerByKey } from '../../../base/common/async.ts';
+import { ISecretStorageService } from '../../../platform/secrets/common/secrets.ts';
+import { IBrowserWorkbenchEnvironmentService } from '../../services/environment/browser/environmentService.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadSecretState)
 export class MainThreadSecretState extends Disposable implements MainThreadSecretStateShape {

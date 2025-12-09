@@ -4,18 +4,18 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { Event } from '../../../../../base/common/event.js';
-import { joinPath } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { Extensions, IConfigurationRegistry } from '../../../../../platform/configuration/common/configurationRegistry.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { DefaultConfiguration } from '../../browser/configuration.js';
-import { ConfigurationKey, IConfigurationCache } from '../../common/configuration.js';
-import { BrowserWorkbenchEnvironmentService } from '../../../environment/browser/environmentService.js';
-import { TestEnvironmentService } from '../../../../test/browser/workbenchTestServices.js';
-import { TestProductService } from '../../../../test/common/workbenchTestServices.js';
+import { Event } from '../../../../../base/common/event.ts';
+import { joinPath } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { Extensions, IConfigurationRegistry } from '../../../../../platform/configuration/common/configurationRegistry.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { DefaultConfiguration } from '../../browser/configuration.ts';
+import { ConfigurationKey, IConfigurationCache } from '../../common/configuration.ts';
+import { BrowserWorkbenchEnvironmentService } from '../../../environment/browser/environmentService.ts';
+import { TestEnvironmentService } from '../../../../test/browser/workbenchTestServices.ts';
+import { TestProductService } from '../../../../test/common/workbenchTestServices.ts';
 
 class ConfigurationCache implements IConfigurationCache {
 	private readonly cache = new Map<string, string>();

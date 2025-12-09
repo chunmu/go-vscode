@@ -4,22 +4,22 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { AsyncIterableSource, DeferredPromise, timeout } from '../../../../../base/common/async.js';
-import { CancellationToken, CancellationTokenSource } from '../../../../../base/common/cancellation.js';
-import { DisposableStore } from '../../../../../base/common/lifecycle.js';
-import { mock } from '../../../../../base/test/common/mock.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
-import { ChatMessageRole, languageModelChatProviderExtensionPoint, LanguageModelsService, IChatMessage, IChatResponsePart } from '../../common/languageModels.js';
-import { IExtensionService, nullExtensionDescription } from '../../../../services/extensions/common/extensions.js';
-import { ExtensionsRegistry } from '../../../../services/extensions/common/extensionsRegistry.js';
-import { DEFAULT_MODEL_PICKER_CATEGORY } from '../../common/modelPicker/modelPickerWidget.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { TestChatEntitlementService, TestStorageService } from '../../../../test/common/workbenchTestServices.js';
-import { Event } from '../../../../../base/common/event.js';
-import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.js';
-import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.js';
+import { AsyncIterableSource, DeferredPromise, timeout } from '../../../../../base/common/async.ts';
+import { CancellationToken, CancellationTokenSource } from '../../../../../base/common/cancellation.ts';
+import { DisposableStore } from '../../../../../base/common/lifecycle.ts';
+import { mock } from '../../../../../base/test/common/mock.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
+import { ChatMessageRole, languageModelChatProviderExtensionPoint, LanguageModelsService, IChatMessage, IChatResponsePart } from '../../common/languageModels.ts';
+import { IExtensionService, nullExtensionDescription } from '../../../../services/extensions/common/extensions.ts';
+import { ExtensionsRegistry } from '../../../../services/extensions/common/extensionsRegistry.ts';
+import { DEFAULT_MODEL_PICKER_CATEGORY } from '../../common/modelPicker/modelPickerWidget.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { TestChatEntitlementService, TestStorageService } from '../../../../test/common/workbenchTestServices.ts';
+import { Event } from '../../../../../base/common/event.ts';
+import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.ts';
+import { TestConfigurationService } from '../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.ts';
 
 suite('LanguageModels', function () {
 

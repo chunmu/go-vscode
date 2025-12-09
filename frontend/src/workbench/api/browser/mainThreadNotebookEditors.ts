@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DisposableStore, dispose } from '../../../base/common/lifecycle.js';
-import { equals } from '../../../base/common/objects.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IConfigurationService } from '../../../platform/configuration/common/configuration.js';
-import { EditorActivation } from '../../../platform/editor/common/editor.js';
-import { getNotebookEditorFromEditorPane, INotebookEditor, INotebookEditorOptions } from '../../contrib/notebook/browser/notebookBrowser.js';
-import { INotebookEditorService } from '../../contrib/notebook/browser/services/notebookEditorService.js';
-import { ICellRange } from '../../contrib/notebook/common/notebookRange.js';
-import { columnToEditorGroup, editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.js';
-import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostNotebookEditorsShape, INotebookDocumentShowOptions, INotebookEditorViewColumnInfo, MainThreadNotebookEditorsShape, NotebookEditorRevealType } from '../common/extHost.protocol.js';
+import { DisposableStore, dispose } from '../../../base/common/lifecycle.ts';
+import { equals } from '../../../base/common/objects.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IConfigurationService } from '../../../platform/configuration/common/configuration.ts';
+import { EditorActivation } from '../../../platform/editor/common/editor.ts';
+import { getNotebookEditorFromEditorPane, INotebookEditor, INotebookEditorOptions } from '../../contrib/notebook/browser/notebookBrowser.ts';
+import { INotebookEditorService } from '../../contrib/notebook/browser/services/notebookEditorService.ts';
+import { ICellRange } from '../../contrib/notebook/common/notebookRange.ts';
+import { columnToEditorGroup, editorGroupToColumn } from '../../services/editor/common/editorGroupColumn.ts';
+import { IEditorGroupsService } from '../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostNotebookEditorsShape, INotebookDocumentShowOptions, INotebookEditorViewColumnInfo, MainThreadNotebookEditorsShape, NotebookEditorRevealType } from '../common/extHost.protocol.ts';
 
 class MainThreadNotebook {
 

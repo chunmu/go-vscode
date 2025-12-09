@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as extensionsRegistry from '../../../services/extensions/common/extensionsRegistry.js';
-import * as nls from '../../../../nls.js';
-import { IDebuggerContribution, ICompound, IBreakpointContribution } from './debug.js';
-import { launchSchemaId } from '../../../services/configuration/common/configuration.js';
-import { IJSONSchema } from '../../../../base/common/jsonSchema.js';
-import { inputsSchema } from '../../../services/configurationResolver/common/configurationResolverSchema.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.js';
-import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.js';
-import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
+import * as extensionsRegistry from '../../../services/extensions/common/extensionsRegistry.ts';
+import * as nls from '../../../../nls.ts';
+import { IDebuggerContribution, ICompound, IBreakpointContribution } from './debug.ts';
+import { launchSchemaId } from '../../../services/configuration/common/configuration.ts';
+import { IJSONSchema } from '../../../../base/common/jsonSchema.ts';
+import { inputsSchema } from '../../../services/configurationResolver/common/configurationResolverSchema.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { Extensions, IExtensionFeatureTableRenderer, IExtensionFeaturesRegistry, IRenderedData, IRowData, ITableData } from '../../../services/extensionManagement/common/extensionFeatures.ts';
+import { IExtensionManifest } from '../../../../platform/extensions/common/extensions.ts';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
 
 // debuggers extension point
 export const debuggersExtPoint = extensionsRegistry.ExtensionsRegistry.registerExtensionPoint<IDebuggerContribution[]>({

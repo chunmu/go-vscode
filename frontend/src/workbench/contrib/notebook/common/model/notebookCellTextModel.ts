@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { hash, StringSHA1 } from '../../../../../base/common/hash.js';
-import { Disposable, DisposableStore, dispose } from '../../../../../base/common/lifecycle.js';
-import { URI } from '../../../../../base/common/uri.js';
-import * as UUID from '../../../../../base/common/uuid.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import * as model from '../../../../../editor/common/model.js';
-import { PieceTreeTextBuffer } from '../../../../../editor/common/model/pieceTreeTextBuffer/pieceTreeTextBuffer.js';
-import { createTextBuffer, TextModel } from '../../../../../editor/common/model/textModel.js';
-import { PLAINTEXT_LANGUAGE_ID } from '../../../../../editor/common/languages/modesRegistry.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { NotebookCellOutputTextModel } from './notebookCellOutputTextModel.js';
-import { CellInternalMetadataChangedEvent, CellKind, ICell, ICellDto2, ICellOutput, IOutputItemDto, NotebookCellCollapseState, NotebookCellDefaultCollapseConfig, NotebookCellInternalMetadata, NotebookCellMetadata, NotebookCellOutputsSplice, TransientCellMetadata, TransientOptions } from '../notebookCommon.js';
-import { ThrottledDelayer } from '../../../../../base/common/async.js';
-import { ILanguageDetectionService } from '../../../../services/languageDetection/common/languageDetectionWorkerService.js';
-import { toFormattedString } from '../../../../../base/common/jsonFormatter.js';
-import { IModelContentChangedEvent } from '../../../../../editor/common/textModelEvents.js';
-import { splitLines } from '../../../../../base/common/strings.js';
-import { INotebookLoggingService } from '../notebookLoggingService.js';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { hash, StringSHA1 } from '../../../../../base/common/hash.ts';
+import { Disposable, DisposableStore, dispose } from '../../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import * as UUID from '../../../../../base/common/uuid.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import * as model from '../../../../../editor/common/model.ts';
+import { PieceTreeTextBuffer } from '../../../../../editor/common/model/pieceTreeTextBuffer/pieceTreeTextBuffer.ts';
+import { createTextBuffer, TextModel } from '../../../../../editor/common/model/textModel.ts';
+import { PLAINTEXT_LANGUAGE_ID } from '../../../../../editor/common/languages/modesRegistry.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { NotebookCellOutputTextModel } from './notebookCellOutputTextModel.ts';
+import { CellInternalMetadataChangedEvent, CellKind, ICell, ICellDto2, ICellOutput, IOutputItemDto, NotebookCellCollapseState, NotebookCellDefaultCollapseConfig, NotebookCellInternalMetadata, NotebookCellMetadata, NotebookCellOutputsSplice, TransientCellMetadata, TransientOptions } from '../notebookCommon.ts';
+import { ThrottledDelayer } from '../../../../../base/common/async.ts';
+import { ILanguageDetectionService } from '../../../../services/languageDetection/common/languageDetectionWorkerService.ts';
+import { toFormattedString } from '../../../../../base/common/jsonFormatter.ts';
+import { IModelContentChangedEvent } from '../../../../../editor/common/textModelEvents.ts';
+import { splitLines } from '../../../../../base/common/strings.ts';
+import { INotebookLoggingService } from '../notebookLoggingService.ts';
 
 export class NotebookCellTextModel extends Disposable implements ICell {
 	private readonly _onDidChangeTextModel = this._register(new Emitter<void>());

@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onUnexpectedError } from '../../../../../base/common/errors.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IObservable, runOnChange } from '../../../../../base/common/observable.js';
-import { AnnotatedStringEdit } from '../../../../../editor/common/core/edits/stringEdit.js';
-import { EditDeltaInfo, EditSuggestionId, ITextModelEditSourceMetadata } from '../../../../../editor/common/textModelEditSource.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { EditSourceData, IDocumentWithAnnotatedEdits, createDocWithJustReason } from '../helpers/documentWithAnnotatedEdits.js';
-import { IAiEditTelemetryService } from './aiEditTelemetry/aiEditTelemetryService.js';
-import type { ScmRepoAdapter } from './scmAdapter.js';
-import { forwardToChannelIf, isCopilotLikeExtension } from '../../../../../platform/dataChannel/browser/forwardingTelemetryService.js';
-import { ProviderId } from '../../../../../editor/common/languages.js';
-import { ArcTelemetryReporter } from './arcTelemetryReporter.js';
-import { IRandomService } from '../randomService.js';
+import { onUnexpectedError } from '../../../../../base/common/errors.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IObservable, runOnChange } from '../../../../../base/common/observable.ts';
+import { AnnotatedStringEdit } from '../../../../../editor/common/core/edits/stringEdit.ts';
+import { EditDeltaInfo, EditSuggestionId, ITextModelEditSourceMetadata } from '../../../../../editor/common/textModelEditSource.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { EditSourceData, IDocumentWithAnnotatedEdits, createDocWithJustReason } from '../helpers/documentWithAnnotatedEdits.ts';
+import { IAiEditTelemetryService } from './aiEditTelemetry/aiEditTelemetryService.ts';
+import type { ScmRepoAdapter } from './scmAdapter.ts';
+import { forwardToChannelIf, isCopilotLikeExtension } from '../../../../../platform/dataChannel/browser/forwardingTelemetryService.ts';
+import { ProviderId } from '../../../../../editor/common/languages.ts';
+import { ArcTelemetryReporter } from './arcTelemetryReporter.ts';
+import { IRandomService } from '../randomService.ts';
 
 export class EditTelemetryReportInlineEditArcSender extends Disposable {
 	constructor(

@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { WorkbenchState, IWorkspace } from '../../../../platform/workspace/common/workspace.js';
-import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
-import { URI } from '../../../../base/common/uri.js';
-import { getRemotes } from '../../../../platform/extensionManagement/common/configRemotes.js';
+import { WorkbenchState, IWorkspace } from '../../../../platform/workspace/common/workspace.ts';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { getRemotes } from '../../../../platform/extensionManagement/common/configRemotes.ts';
 
 export type Tags = { [index: string]: boolean | number | string | undefined };
 

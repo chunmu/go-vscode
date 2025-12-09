@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { ICodeEditor, IPasteEvent } from '../../../../editor/browser/editorBrowser.js';
-import { IEditorOpenContext, isTextEditorViewState } from '../../../common/editor.js';
-import { EditorInput } from '../../../common/editor/editorInput.js';
-import { applyTextEditorOptions } from '../../../common/editor/editorOptions.js';
-import { AbstractTextResourceEditorInput, TextResourceEditorInput } from '../../../common/editor/textResourceEditorInput.js';
-import { BaseTextEditorModel } from '../../../common/editor/textEditorModel.js';
-import { UntitledTextEditorInput } from '../../../services/untitled/common/untitledTextEditorInput.js';
-import { AbstractTextCodeEditor } from './textCodeEditor.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { IStorageService } from '../../../../platform/storage/common/storage.js';
-import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { ScrollType, ICodeEditorViewState } from '../../../../editor/common/editorCommon.js';
-import { IEditorGroup, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IModelService } from '../../../../editor/common/services/model.js';
-import { ILanguageService } from '../../../../editor/common/languages/language.js';
-import { PLAINTEXT_LANGUAGE_ID } from '../../../../editor/common/languages/modesRegistry.js';
-import { EditorOption, IEditorOptions as ICodeEditorOptions } from '../../../../editor/common/config/editorOptions.js';
-import { ModelConstants } from '../../../../editor/common/model.js';
-import { ITextEditorOptions } from '../../../../platform/editor/common/editor.js';
-import { IFileService } from '../../../../platform/files/common/files.js';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { ICodeEditor, IPasteEvent } from '../../../../editor/browser/editorBrowser.ts';
+import { IEditorOpenContext, isTextEditorViewState } from '../../../common/editor.ts';
+import { EditorInput } from '../../../common/editor/editorInput.ts';
+import { applyTextEditorOptions } from '../../../common/editor/editorOptions.ts';
+import { AbstractTextResourceEditorInput, TextResourceEditorInput } from '../../../common/editor/textResourceEditorInput.ts';
+import { BaseTextEditorModel } from '../../../common/editor/textEditorModel.ts';
+import { UntitledTextEditorInput } from '../../../services/untitled/common/untitledTextEditorInput.ts';
+import { AbstractTextCodeEditor } from './textCodeEditor.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { IStorageService } from '../../../../platform/storage/common/storage.ts';
+import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { ScrollType, ICodeEditorViewState } from '../../../../editor/common/editorCommon.ts';
+import { IEditorGroup, IEditorGroupsService } from '../../../services/editor/common/editorGroupsService.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IModelService } from '../../../../editor/common/services/model.ts';
+import { ILanguageService } from '../../../../editor/common/languages/language.ts';
+import { PLAINTEXT_LANGUAGE_ID } from '../../../../editor/common/languages/modesRegistry.ts';
+import { EditorOption, IEditorOptions as ICodeEditorOptions } from '../../../../editor/common/config/editorOptions.ts';
+import { ModelConstants } from '../../../../editor/common/model.ts';
+import { ITextEditorOptions } from '../../../../platform/editor/common/editor.ts';
+import { IFileService } from '../../../../platform/files/common/files.ts';
 
 /**
  * An editor implementation that is capable of showing the contents of resource inputs. Uses

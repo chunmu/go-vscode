@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../nls.js';
-import { INativeHostService } from '../../../platform/native/common/native.js';
-import { IEditorService } from '../../services/editor/common/editorService.js';
-import { Action2, MenuId } from '../../../platform/actions/common/actions.js';
-import { Categories } from '../../../platform/action/common/actionCommonCategories.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IsDevelopmentContext } from '../../../platform/contextkey/common/contextkeys.js';
-import { KeyCode, KeyMod } from '../../../base/common/keyCodes.js';
-import { INativeWorkbenchEnvironmentService } from '../../services/environment/electron-browser/environmentService.js';
-import { URI } from '../../../base/common/uri.js';
-import { getActiveWindow } from '../../../base/browser/dom.js';
-import { IDialogService } from '../../../platform/dialogs/common/dialogs.js';
-import { INativeEnvironmentService } from '../../../platform/environment/common/environment.js';
-import { IProgressService, ProgressLocation } from '../../../platform/progress/common/progress.js';
+import { localize, localize2 } from '../../../nls.ts';
+import { INativeHostService } from '../../../platform/native/common/native.ts';
+import { IEditorService } from '../../services/editor/common/editorService.ts';
+import { Action2, MenuId } from '../../../platform/actions/common/actions.ts';
+import { Categories } from '../../../platform/action/common/actionCommonCategories.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { KeybindingWeight } from '../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IsDevelopmentContext } from '../../../platform/contextkey/common/contextkeys.ts';
+import { KeyCode, KeyMod } from '../../../base/common/keyCodes.ts';
+import { INativeWorkbenchEnvironmentService } from '../../services/environment/electron-browser/environmentService.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { getActiveWindow } from '../../../base/browser/dom.ts';
+import { IDialogService } from '../../../platform/dialogs/common/dialogs.ts';
+import { INativeEnvironmentService } from '../../../platform/environment/common/environment.ts';
+import { IProgressService, ProgressLocation } from '../../../platform/progress/common/progress.ts';
 
 export class ToggleDevToolsAction extends Action2 {
 

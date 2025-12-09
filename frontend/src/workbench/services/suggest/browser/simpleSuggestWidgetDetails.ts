@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { DomScrollableElement } from '../../../../base/browser/ui/scrollbar/scrollableElement.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { ResizableHTMLElement } from '../../../../base/browser/ui/resizable/resizable.js';
-import * as nls from '../../../../nls.js';
-import { SimpleCompletionItem } from './simpleCompletionItem.js';
-import { MarkdownString } from '../../../../base/common/htmlContent.js';
-import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ISimpleSuggestWidgetFontInfo } from './simpleSuggestWidgetRenderer.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { DomScrollableElement } from '../../../../base/browser/ui/scrollbar/scrollableElement.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { ResizableHTMLElement } from '../../../../base/browser/ui/resizable/resizable.ts';
+import * as nls from '../../../../nls.ts';
+import { SimpleCompletionItem } from './simpleCompletionItem.ts';
+import { MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { IMarkdownRendererService } from '../../../../platform/markdown/browser/markdownRenderer.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ISimpleSuggestWidgetFontInfo } from './simpleSuggestWidgetRenderer.ts';
 
 export function canExpandCompletionItem(item: SimpleCompletionItem | undefined): boolean {
 	return !!item && Boolean(item.completion.documentation || item.completion.detail && item.completion.detail !== item.completion.label);

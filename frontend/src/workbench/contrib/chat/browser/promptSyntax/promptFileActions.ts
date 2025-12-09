@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { registerAttachPromptActions } from './attachInstructionsAction.js';
-import { registerAgentActions } from './chatModeActions.js';
-import { registerRunPromptActions } from './runPromptAction.js';
-import { registerNewPromptFileActions } from './newPromptFileActions.js';
-import { registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { SaveAsAgentFileAction, SaveAsInstructionsFileAction, SaveAsPromptFileAction } from './saveAsPromptFileActions.js';
+import { registerAttachPromptActions } from './attachInstructionsAction.ts';
+import { registerAgentActions } from './chatModeActions.ts';
+import { registerRunPromptActions } from './runPromptAction.ts';
+import { registerNewPromptFileActions } from './newPromptFileActions.ts';
+import { registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { SaveAsAgentFileAction, SaveAsInstructionsFileAction, SaveAsPromptFileAction } from './saveAsPromptFileActions.ts';
 
 
 /**

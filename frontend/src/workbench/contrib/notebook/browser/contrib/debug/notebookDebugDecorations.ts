@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Delayer } from '../../../../../../base/common/async.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { IRange, Range } from '../../../../../../editor/common/core/range.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { debugIconBreakpointForeground } from '../../../../debug/browser/breakpointEditorContribution.js';
-import { focusedStackFrameColor, topStackFrameColor } from '../../../../debug/browser/callStackEditorContribution.js';
-import { IDebugService, IStackFrame } from '../../../../debug/common/debug.js';
-import { INotebookCellDecorationOptions, INotebookDeltaCellDecoration, INotebookEditor, INotebookEditorContribution, NotebookOverviewRulerLane } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { runningCellRulerDecorationColor } from '../../notebookEditorWidget.js';
-import { CellUri, NotebookCellExecutionState } from '../../../common/notebookCommon.js';
-import { INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.js';
+import { Delayer } from '../../../../../../base/common/async.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { IRange, Range } from '../../../../../../editor/common/core/range.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { debugIconBreakpointForeground } from '../../../../debug/browser/breakpointEditorContribution.ts';
+import { focusedStackFrameColor, topStackFrameColor } from '../../../../debug/browser/callStackEditorContribution.ts';
+import { IDebugService, IStackFrame } from '../../../../debug/common/debug.ts';
+import { INotebookCellDecorationOptions, INotebookDeltaCellDecoration, INotebookEditor, INotebookEditorContribution, NotebookOverviewRulerLane } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { runningCellRulerDecorationColor } from '../../notebookEditorWidget.ts';
+import { CellUri, NotebookCellExecutionState } from '../../../common/notebookCommon.ts';
+import { INotebookExecutionStateService, NotebookExecutionType } from '../../../common/notebookExecutionStateService.ts';
 
 interface ICellAndRange {
 	handle: number;

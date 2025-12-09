@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../base/common/uri.js';
-import { UnchangedRegion } from '../../../../../editor/browser/widget/diffEditor/diffEditorViewModel.js';
-import { IEditorWorkerService } from '../../../../../editor/common/services/editorWorker.js';
-import { ITextModelService } from '../../../../../editor/common/services/resolverService.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { getEditorPadding } from './diffCellEditorOptions.js';
-import { HeightOfHiddenLinesRegionInDiffEditor } from './diffElementViewModel.js';
+import { URI } from '../../../../../base/common/uri.ts';
+import { UnchangedRegion } from '../../../../../editor/browser/widget/diffEditor/diffEditorViewModel.ts';
+import { IEditorWorkerService } from '../../../../../editor/common/services/editorWorker.ts';
+import { ITextModelService } from '../../../../../editor/common/services/resolverService.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { getEditorPadding } from './diffCellEditorOptions.ts';
+import { HeightOfHiddenLinesRegionInDiffEditor } from './diffElementViewModel.ts';
 
 export interface IDiffEditorHeightCalculatorService {
 	diffAndComputeHeight(original: URI, modified: URI): Promise<number>;

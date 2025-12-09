@@ -3,31 +3,31 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Iterable } from '../../../../../base/common/iterator.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { isEqual } from '../../../../../base/common/resources.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI, UriComponents } from '../../../../../base/common/uri.js';
-import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { ILanguageService } from '../../../../../editor/common/languages/language.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IDebugService } from '../../../debug/common/debug.js';
-import { CTX_INLINE_CHAT_FOCUSED } from '../../../inlineChat/common/inlineChat.js';
-import { insertCell } from './cellOperations.js';
-import { CELL_TITLE_CELL_GROUP_ID, CellToolbarOrder, INotebookActionContext, INotebookCellActionContext, INotebookCellToolbarActionContext, INotebookCommandContext, NOTEBOOK_EDITOR_WIDGET_ACTION_WEIGHT, NotebookAction, NotebookCellAction, NotebookMultiCellAction, cellExecutionArgs, getContextFromActiveEditor, getContextFromUri, parseMultiCellExecutionArgs } from './coreActions.js';
-import { CellEditState, CellFocusMode, EXECUTE_CELL_COMMAND_ID, IActiveNotebookEditor, ICellViewModel, IFocusNotebookCellOptions, ScrollToRevealBehavior } from '../notebookBrowser.js';
-import * as icons from '../notebookIcons.js';
-import { CellKind, CellUri, NotebookSetting } from '../../common/notebookCommon.js';
-import { NOTEBOOK_CELL_EXECUTING, NOTEBOOK_CELL_EXECUTION_STATE, NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_CELL_TYPE, NOTEBOOK_HAS_RUNNING_CELL, NOTEBOOK_HAS_SOMETHING_RUNNING, NOTEBOOK_INTERRUPTIBLE_KERNEL, NOTEBOOK_IS_ACTIVE_EDITOR, NOTEBOOK_KERNEL_COUNT, NOTEBOOK_KERNEL_SOURCE_COUNT, NOTEBOOK_LAST_CELL_FAILED, NOTEBOOK_MISSING_KERNEL_EXTENSION } from '../../common/notebookContextKeys.js';
-import { NotebookEditorInput } from '../../common/notebookEditorInput.js';
-import { INotebookExecutionStateService } from '../../common/notebookExecutionStateService.js';
-import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { CodeCellViewModel } from '../viewModel/codeCellViewModel.js';
+import { Iterable } from '../../../../../base/common/iterator.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { isEqual } from '../../../../../base/common/resources.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI, UriComponents } from '../../../../../base/common/uri.ts';
+import { ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { ILanguageService } from '../../../../../editor/common/languages/language.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { MenuId, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IDebugService } from '../../../debug/common/debug.ts';
+import { CTX_INLINE_CHAT_FOCUSED } from '../../../inlineChat/common/inlineChat.ts';
+import { insertCell } from './cellOperations.ts';
+import { CELL_TITLE_CELL_GROUP_ID, CellToolbarOrder, INotebookActionContext, INotebookCellActionContext, INotebookCellToolbarActionContext, INotebookCommandContext, NOTEBOOK_EDITOR_WIDGET_ACTION_WEIGHT, NotebookAction, NotebookCellAction, NotebookMultiCellAction, cellExecutionArgs, getContextFromActiveEditor, getContextFromUri, parseMultiCellExecutionArgs } from './coreActions.ts';
+import { CellEditState, CellFocusMode, EXECUTE_CELL_COMMAND_ID, IActiveNotebookEditor, ICellViewModel, IFocusNotebookCellOptions, ScrollToRevealBehavior } from '../notebookBrowser.ts';
+import * as icons from '../notebookIcons.ts';
+import { CellKind, CellUri, NotebookSetting } from '../../common/notebookCommon.ts';
+import { NOTEBOOK_CELL_EXECUTING, NOTEBOOK_CELL_EXECUTION_STATE, NOTEBOOK_CELL_LIST_FOCUSED, NOTEBOOK_CELL_TYPE, NOTEBOOK_HAS_RUNNING_CELL, NOTEBOOK_HAS_SOMETHING_RUNNING, NOTEBOOK_INTERRUPTIBLE_KERNEL, NOTEBOOK_IS_ACTIVE_EDITOR, NOTEBOOK_KERNEL_COUNT, NOTEBOOK_KERNEL_SOURCE_COUNT, NOTEBOOK_LAST_CELL_FAILED, NOTEBOOK_MISSING_KERNEL_EXTENSION } from '../../common/notebookContextKeys.ts';
+import { NotebookEditorInput } from '../../common/notebookEditorInput.ts';
+import { INotebookExecutionStateService } from '../../common/notebookExecutionStateService.ts';
+import { IEditorGroupsService } from '../../../../services/editor/common/editorGroupsService.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { CodeCellViewModel } from '../viewModel/codeCellViewModel.ts';
 
 const EXECUTE_NOTEBOOK_COMMAND_ID = 'notebook.execute';
 const CANCEL_NOTEBOOK_COMMAND_ID = 'notebook.cancelExecution';

@@ -4,30 +4,30 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { Disposable, DisposableStore, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { constObservable, IObservable, IObservableWithChange, ISettableObservable, ITransaction, observableValue, subtransaction } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { StringEdit, StringReplacement } from '../../../../../editor/common/core/edits/stringEdit.js';
-import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.js';
-import { StringText } from '../../../../../editor/common/core/text/abstractText.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { AnnotatedDocument, AnnotatedDocuments, IAnnotatedDocuments, UriVisibilityProvider } from '../../browser/helpers/annotatedDocuments.js';
-import { IObservableDocument, ObservableWorkspace, StringEditWithReason } from '../../browser/helpers/observableWorkspace.js';
-import { EditSourceTrackingImpl } from '../../browser/telemetry/editSourceTrackingImpl.js';
-import { ScmAdapter } from '../../browser/telemetry/scmAdapter.js';
-import { EditSources } from '../../../../../editor/common/textModelEditSource.js';
-import { DiffService } from '../../browser/helpers/documentWithAnnotatedEdits.js';
-import { computeStringDiff } from '../../../../../editor/common/services/editorWebWorker.js';
-import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.js';
-import { timeout } from '../../../../../base/common/async.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IAiEditTelemetryService } from '../../browser/telemetry/aiEditTelemetry/aiEditTelemetryService.js';
-import { Random } from '../../../../../editor/test/common/core/random.js';
-import { AiEditTelemetryServiceImpl } from '../../browser/telemetry/aiEditTelemetry/aiEditTelemetryServiceImpl.js';
-import { IRandomService, RandomService } from '../../browser/randomService.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.js';
+import { Disposable, DisposableStore, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { constObservable, IObservable, IObservableWithChange, ISettableObservable, ITransaction, observableValue, subtransaction } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { StringEdit, StringReplacement } from '../../../../../editor/common/core/edits/stringEdit.ts';
+import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.ts';
+import { StringText } from '../../../../../editor/common/core/text/abstractText.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { AnnotatedDocument, AnnotatedDocuments, IAnnotatedDocuments, UriVisibilityProvider } from '../../browser/helpers/annotatedDocuments.ts';
+import { IObservableDocument, ObservableWorkspace, StringEditWithReason } from '../../browser/helpers/observableWorkspace.ts';
+import { EditSourceTrackingImpl } from '../../browser/telemetry/editSourceTrackingImpl.ts';
+import { ScmAdapter } from '../../browser/telemetry/scmAdapter.ts';
+import { EditSources } from '../../../../../editor/common/textModelEditSource.ts';
+import { DiffService } from '../../browser/helpers/documentWithAnnotatedEdits.ts';
+import { computeStringDiff } from '../../../../../editor/common/services/editorWebWorker.ts';
+import { runWithFakedTimers } from '../../../../../base/test/common/timeTravelScheduler.ts';
+import { timeout } from '../../../../../base/common/async.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IAiEditTelemetryService } from '../../browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts';
+import { Random } from '../../../../../editor/test/common/core/random.ts';
+import { AiEditTelemetryServiceImpl } from '../../browser/telemetry/aiEditTelemetry/aiEditTelemetryServiceImpl.ts';
+import { IRandomService, RandomService } from '../../browser/randomService.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.ts';
 
 suite('Edit Telemetry', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();

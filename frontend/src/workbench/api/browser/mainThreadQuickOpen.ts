@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Toggle } from '../../../base/browser/ui/toggle/toggle.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Lazy } from '../../../base/common/lazy.js';
-import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';
-import { basenameOrAuthority, dirname, hasTrailingPathSeparator } from '../../../base/common/resources.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { isUriComponents, URI } from '../../../base/common/uri.js';
-import { ILanguageService } from '../../../editor/common/languages/language.js';
-import { getIconClasses } from '../../../editor/common/services/getIconClasses.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { FileKind } from '../../../platform/files/common/files.js';
-import { ILabelService } from '../../../platform/label/common/label.js';
-import { IInputOptions, IPickOptions, IQuickInput, IQuickInputService, IQuickPick, IQuickPickItem, QuickInputButtonLocation } from '../../../platform/quickinput/common/quickInput.js';
-import { asCssVariable, inputActiveOptionBackground, inputActiveOptionBorder, inputActiveOptionForeground } from '../../../platform/theme/common/colorRegistry.js';
-import { ICustomEditorLabelService } from '../../services/editor/common/customEditorLabelService.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostContext, ExtHostQuickOpenShape, IInputBoxOptions, MainContext, MainThreadQuickOpenShape, TransferQuickInput, TransferQuickInputButton, TransferQuickPickItem, TransferQuickPickItemOrSeparator } from '../common/extHost.protocol.js';
+import { Toggle } from '../../../base/browser/ui/toggle/toggle.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Lazy } from '../../../base/common/lazy.ts';
+import { DisposableStore, IDisposable } from '../../../base/common/lifecycle.ts';
+import { basenameOrAuthority, dirname, hasTrailingPathSeparator } from '../../../base/common/resources.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { isUriComponents, URI } from '../../../base/common/uri.ts';
+import { ILanguageService } from '../../../editor/common/languages/language.ts';
+import { getIconClasses } from '../../../editor/common/services/getIconClasses.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { FileKind } from '../../../platform/files/common/files.ts';
+import { ILabelService } from '../../../platform/label/common/label.ts';
+import { IInputOptions, IPickOptions, IQuickInput, IQuickInputService, IQuickPick, IQuickPickItem, QuickInputButtonLocation } from '../../../platform/quickinput/common/quickInput.ts';
+import { asCssVariable, inputActiveOptionBackground, inputActiveOptionBorder, inputActiveOptionForeground } from '../../../platform/theme/common/colorRegistry.ts';
+import { ICustomEditorLabelService } from '../../services/editor/common/customEditorLabelService.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostContext, ExtHostQuickOpenShape, IInputBoxOptions, MainContext, MainThreadQuickOpenShape, TransferQuickInput, TransferQuickInputButton, TransferQuickPickItem, TransferQuickPickItemOrSeparator } from '../common/extHost.protocol.ts';
 
 interface QuickInputSession {
 	input: IQuickInput;

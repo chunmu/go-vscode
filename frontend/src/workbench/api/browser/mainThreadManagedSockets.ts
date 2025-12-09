@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { VSBuffer } from '../../../base/common/buffer.js';
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable, IDisposable } from '../../../base/common/lifecycle.js';
-import { ISocket, SocketCloseEventType } from '../../../base/parts/ipc/common/ipc.net.js';
-import { ManagedSocket, RemoteSocketHalf, connectManagedSocket } from '../../../platform/remote/common/managedSocket.js';
-import { ManagedRemoteConnection, RemoteConnectionType } from '../../../platform/remote/common/remoteAuthorityResolver.js';
-import { IRemoteSocketFactoryService, ISocketFactory } from '../../../platform/remote/common/remoteSocketFactoryService.js';
-import { ExtHostContext, ExtHostManagedSocketsShape, MainContext, MainThreadManagedSocketsShape } from '../common/extHost.protocol.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
+import { VSBuffer } from '../../../base/common/buffer.ts';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable, IDisposable } from '../../../base/common/lifecycle.ts';
+import { ISocket, SocketCloseEventType } from '../../../base/parts/ipc/common/ipc.net.ts';
+import { ManagedSocket, RemoteSocketHalf, connectManagedSocket } from '../../../platform/remote/common/managedSocket.ts';
+import { ManagedRemoteConnection, RemoteConnectionType } from '../../../platform/remote/common/remoteAuthorityResolver.ts';
+import { IRemoteSocketFactoryService, ISocketFactory } from '../../../platform/remote/common/remoteSocketFactoryService.ts';
+import { ExtHostContext, ExtHostManagedSocketsShape, MainContext, MainThreadManagedSocketsShape } from '../common/extHost.protocol.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadManagedSockets)
 export class MainThreadManagedSockets extends Disposable implements MainThreadManagedSocketsShape {

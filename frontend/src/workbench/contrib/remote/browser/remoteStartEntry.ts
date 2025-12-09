@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../nls.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { IWorkbenchContribution } from '../../../common/contributions.js';
-import { ICommandService } from '../../../../platform/commands/common/commands.js';
-import { IProductService } from '../../../../platform/product/common/productService.js';
-import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { IExtensionManagementService } from '../../../../platform/extensionManagement/common/extensionManagement.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
-import { IWorkbenchExtensionEnablementService } from '../../../services/extensionManagement/common/extensionManagement.js';
-import { IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
-import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../base/common/actions.js';
+import * as nls from '../../../../nls.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { IWorkbenchContribution } from '../../../common/contributions.ts';
+import { ICommandService } from '../../../../platform/commands/common/commands.ts';
+import { IProductService } from '../../../../platform/product/common/productService.ts';
+import { Action2, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { IExtensionManagementService } from '../../../../platform/extensionManagement/common/extensionManagement.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.ts';
+import { IWorkbenchExtensionEnablementService } from '../../../services/extensionManagement/common/extensionManagement.ts';
+import { IContextKeyService, RawContextKey } from '../../../../platform/contextkey/common/contextkey.ts';
+import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../base/common/actions.ts';
 
 export const showStartEntryInWeb = new RawContextKey<boolean>('showRemoteStartEntryInWeb', false);
 export class RemoteStartEntry extends Disposable implements IWorkbenchContribution {

@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Toggle } from '../../../../base/browser/ui/toggle/toggle.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { Lazy } from '../../../../base/common/lazy.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { LRUCache } from '../../../../base/common/map.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { localize } from '../../../../nls.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IQuickInputService, IQuickTreeItem } from '../../../../platform/quickinput/common/quickInput.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { inputActiveOptionBackground, inputActiveOptionBorder, inputActiveOptionForeground } from '../../../../platform/theme/common/colorRegistry.js';
-import { asCssVariable } from '../../../../platform/theme/common/colorUtils.js';
-import { ConfirmedReason, ToolConfirmKind } from '../common/chatService.js';
-import { ILanguageModelToolConfirmationActions, ILanguageModelToolConfirmationContribution, ILanguageModelToolConfirmationContributionQuickTreeItem, ILanguageModelToolConfirmationRef, ILanguageModelToolsConfirmationService } from '../common/languageModelToolsConfirmationService.js';
-import { IToolData, ToolDataSource } from '../common/languageModelToolsService.js';
+import { Toggle } from '../../../../base/browser/ui/toggle/toggle.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { Lazy } from '../../../../base/common/lazy.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { LRUCache } from '../../../../base/common/map.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { localize } from '../../../../nls.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IQuickInputService, IQuickTreeItem } from '../../../../platform/quickinput/common/quickInput.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { inputActiveOptionBackground, inputActiveOptionBorder, inputActiveOptionForeground } from '../../../../platform/theme/common/colorRegistry.ts';
+import { asCssVariable } from '../../../../platform/theme/common/colorUtils.ts';
+import { ConfirmedReason, ToolConfirmKind } from '../common/chatService.ts';
+import { ILanguageModelToolConfirmationActions, ILanguageModelToolConfirmationContribution, ILanguageModelToolConfirmationContributionQuickTreeItem, ILanguageModelToolConfirmationRef, ILanguageModelToolsConfirmationService } from '../common/languageModelToolsConfirmationService.ts';
+import { IToolData, ToolDataSource } from '../common/languageModelToolsService.ts';
 
 const RUN_WITHOUT_APPROVAL = localize('runWithoutApproval', "without approval");
 const CONTINUE_WITHOUT_REVIEWING_RESULTS = localize('continueWithoutReviewingResults', "without reviewing result");

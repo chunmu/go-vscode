@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { CodeLens, CodeLensList, CodeLensProvider } from '../../../../../editor/common/languages.js';
-import { isITextModel, ITextModel } from '../../../../../editor/common/model.js';
-import { ILanguageFeaturesService } from '../../../../../editor/common/services/languageFeatures.js';
-import { localize } from '../../../../../nls.js';
-import { CommandsRegistry } from '../../../../../platform/commands/common/commands.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { showToolsPicker } from '../actions/chatToolPicker.js';
-import { ILanguageModelToolsService } from '../../common/languageModelToolsService.js';
-import { ALL_PROMPTS_LANGUAGE_SELECTOR, getPromptsTypeForLanguageId, PromptsType } from '../../common/promptSyntax/promptTypes.js';
-import { IPromptsService } from '../../common/promptSyntax/service/promptsService.js';
-import { registerEditorFeature } from '../../../../../editor/common/editorFeatures.js';
-import { PromptFileRewriter } from './promptFileRewriter.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { IEditorModel } from '../../../../../editor/common/editorCommon.js';
-import { PromptHeaderAttributes } from '../../common/promptSyntax/promptFileParser.js';
-import { isGithubTarget } from '../../common/promptSyntax/languageProviders/promptValidator.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { CodeLens, CodeLensList, CodeLensProvider } from '../../../../../editor/common/languages.ts';
+import { isITextModel, ITextModel } from '../../../../../editor/common/model.ts';
+import { ILanguageFeaturesService } from '../../../../../editor/common/services/languageFeatures.ts';
+import { localize } from '../../../../../nls.ts';
+import { CommandsRegistry } from '../../../../../platform/commands/common/commands.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { showToolsPicker } from '../actions/chatToolPicker.ts';
+import { ILanguageModelToolsService } from '../../common/languageModelToolsService.ts';
+import { ALL_PROMPTS_LANGUAGE_SELECTOR, getPromptsTypeForLanguageId, PromptsType } from '../../common/promptSyntax/promptTypes.ts';
+import { IPromptsService } from '../../common/promptSyntax/service/promptsService.ts';
+import { registerEditorFeature } from '../../../../../editor/common/editorFeatures.ts';
+import { PromptFileRewriter } from './promptFileRewriter.ts';
+import { Range } from '../../../../../editor/common/core/range.ts';
+import { IEditorModel } from '../../../../../editor/common/editorCommon.ts';
+import { PromptHeaderAttributes } from '../../common/promptSyntax/promptFileParser.ts';
+import { isGithubTarget } from '../../common/promptSyntax/languageProviders/promptValidator.ts';
 
 class PromptToolsCodeLensProvider extends Disposable implements CodeLensProvider {
 

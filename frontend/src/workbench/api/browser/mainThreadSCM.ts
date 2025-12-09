@@ -3,34 +3,34 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Barrier } from '../../../base/common/async.js';
-import { isUriComponents, URI, UriComponents } from '../../../base/common/uri.js';
-import { Event, Emitter } from '../../../base/common/event.js';
-import { IObservable, observableValue, observableValueOpts, transaction } from '../../../base/common/observable.js';
-import { IDisposable, DisposableStore, combinedDisposable, dispose, Disposable } from '../../../base/common/lifecycle.js';
-import { ISCMService, ISCMRepository, ISCMProvider, ISCMResource, ISCMResourceGroup, ISCMResourceDecorations, IInputValidation, ISCMViewService, InputValidationType, ISCMActionButtonDescriptor } from '../../contrib/scm/common/scm.js';
-import { ExtHostContext, MainThreadSCMShape, ExtHostSCMShape, SCMProviderFeatures, SCMRawResourceSplices, SCMGroupFeatures, MainContext, SCMHistoryItemDto, SCMHistoryItemRefsChangeEventDto, SCMHistoryItemRefDto } from '../common/extHost.protocol.js';
-import { Command } from '../../../editor/common/languages.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { MarshalledId } from '../../../base/common/marshallingIds.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { IMarkdownString } from '../../../base/common/htmlContent.js';
-import { IQuickDiffService } from '../../contrib/scm/common/quickDiff.js';
-import { ISCMHistoryItem, ISCMHistoryItemChange, ISCMHistoryItemRef, ISCMHistoryItemRefsChangeEvent, ISCMHistoryOptions, ISCMHistoryProvider } from '../../contrib/scm/common/history.js';
-import { ResourceTree } from '../../../base/common/resourceTree.js';
-import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.js';
-import { IWorkspaceContextService } from '../../../platform/workspace/common/workspace.js';
-import { basename } from '../../../base/common/resources.js';
-import { ILanguageService } from '../../../editor/common/languages/language.js';
-import { IModelService } from '../../../editor/common/services/model.js';
-import { ITextModelContentProvider, ITextModelService } from '../../../editor/common/services/resolverService.js';
-import { Schemas } from '../../../base/common/network.js';
-import { ITextModel } from '../../../editor/common/model.js';
-import { structuralEquals } from '../../../base/common/equals.js';
-import { historyItemBaseRefColor, historyItemRefColor, historyItemRemoteRefColor } from '../../contrib/scm/browser/scmHistory.js';
-import { ColorIdentifier } from '../../../platform/theme/common/colorUtils.js';
-import { ISCMArtifact, ISCMArtifactGroup, ISCMArtifactProvider } from '../../contrib/scm/common/artifact.js';
+import { Barrier } from '../../../base/common/async.ts';
+import { isUriComponents, URI, UriComponents } from '../../../base/common/uri.ts';
+import { Event, Emitter } from '../../../base/common/event.ts';
+import { IObservable, observableValue, observableValueOpts, transaction } from '../../../base/common/observable.ts';
+import { IDisposable, DisposableStore, combinedDisposable, dispose, Disposable } from '../../../base/common/lifecycle.ts';
+import { ISCMService, ISCMRepository, ISCMProvider, ISCMResource, ISCMResourceGroup, ISCMResourceDecorations, IInputValidation, ISCMViewService, InputValidationType, ISCMActionButtonDescriptor } from '../../contrib/scm/common/scm.ts';
+import { ExtHostContext, MainThreadSCMShape, ExtHostSCMShape, SCMProviderFeatures, SCMRawResourceSplices, SCMGroupFeatures, MainContext, SCMHistoryItemDto, SCMHistoryItemRefsChangeEventDto, SCMHistoryItemRefDto } from '../common/extHost.protocol.ts';
+import { Command } from '../../../editor/common/languages.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { MarshalledId } from '../../../base/common/marshallingIds.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { IMarkdownString } from '../../../base/common/htmlContent.ts';
+import { IQuickDiffService } from '../../contrib/scm/common/quickDiff.ts';
+import { ISCMHistoryItem, ISCMHistoryItemChange, ISCMHistoryItemRef, ISCMHistoryItemRefsChangeEvent, ISCMHistoryOptions, ISCMHistoryProvider } from '../../contrib/scm/common/history.ts';
+import { ResourceTree } from '../../../base/common/resourceTree.ts';
+import { IUriIdentityService } from '../../../platform/uriIdentity/common/uriIdentity.ts';
+import { IWorkspaceContextService } from '../../../platform/workspace/common/workspace.ts';
+import { basename } from '../../../base/common/resources.ts';
+import { ILanguageService } from '../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../editor/common/services/model.ts';
+import { ITextModelContentProvider, ITextModelService } from '../../../editor/common/services/resolverService.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { ITextModel } from '../../../editor/common/model.ts';
+import { structuralEquals } from '../../../base/common/equals.ts';
+import { historyItemBaseRefColor, historyItemRefColor, historyItemRemoteRefColor } from '../../contrib/scm/browser/scmHistory.ts';
+import { ColorIdentifier } from '../../../platform/theme/common/colorUtils.ts';
+import { ISCMArtifact, ISCMArtifactGroup, ISCMArtifactProvider } from '../../contrib/scm/common/artifact.ts';
 
 function getIconFromIconDto(iconDto?: UriComponents | { light: UriComponents; dark: UriComponents } | ThemeIcon): URI | { light: URI; dark: URI } | ThemeIcon | undefined {
 	if (iconDto === undefined) {

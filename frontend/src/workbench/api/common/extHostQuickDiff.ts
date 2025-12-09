@@ -4,13 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 
 import type * as vscode from 'vscode';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { ExtHostQuickDiffShape, IMainContext, MainContext, MainThreadQuickDiffShape } from './extHost.protocol.js';
-import { asPromise } from '../../../base/common/async.js';
-import { DocumentSelector } from './extHostTypeConverters.js';
-import { IURITransformer } from '../../../base/common/uriIpc.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { ExtHostQuickDiffShape, IMainContext, MainContext, MainThreadQuickDiffShape } from './extHost.protocol.ts';
+import { asPromise } from '../../../base/common/async.ts';
+import { DocumentSelector } from './extHostTypeConverters.ts';
+import { IURITransformer } from '../../../base/common/uriIpc.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
 
 export class ExtHostQuickDiff implements ExtHostQuickDiffShape {
 	private static handlePool: number = 0;

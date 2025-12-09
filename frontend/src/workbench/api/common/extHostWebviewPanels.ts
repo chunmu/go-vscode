@@ -5,18 +5,18 @@
 
 /* eslint-disable local/code-no-native-private */
 
-import { Emitter } from '../../../base/common/event.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { URI } from '../../../base/common/uri.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import * as typeConverters from './extHostTypeConverters.js';
-import { serializeWebviewOptions, ExtHostWebview, ExtHostWebviews, toExtensionData, shouldSerializeBuffersForPostMessage } from './extHostWebview.js';
-import { IExtHostWorkspace } from './extHostWorkspace.js';
-import { EditorGroupColumn } from '../../services/editor/common/editorGroupColumn.js';
+import { Emitter } from '../../../base/common/event.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { URI } from '../../../base/common/uri.ts';
+import { generateUuid } from '../../../base/common/uuid.ts';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import * as typeConverters from './extHostTypeConverters.ts';
+import { serializeWebviewOptions, ExtHostWebview, ExtHostWebviews, toExtensionData, shouldSerializeBuffersForPostMessage } from './extHostWebview.ts';
+import { IExtHostWorkspace } from './extHostWorkspace.ts';
+import { EditorGroupColumn } from '../../services/editor/common/editorGroupColumn.ts';
 import type * as vscode from 'vscode';
-import * as extHostProtocol from './extHost.protocol.js';
-import * as extHostTypes from './extHostTypes.js';
+import * as extHostProtocol from './extHost.protocol.ts';
+import * as extHostTypes from './extHostTypes.ts';
 
 
 type IconPath = URI | { readonly light: URI; readonly dark: URI };

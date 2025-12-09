@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { $, append } from '../../../../../base/browser/dom.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../base/common/actions.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { localize } from '../../../../../nls.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.js';
-import { IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.js';
-import { IChatErrorDetailsPart, IChatRendererContent } from '../../common/chatViewModel.js';
-import { IChatContentPart } from './chatContentParts.js';
+import { $, append } from '../../../../../base/browser/dom.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { WorkbenchActionExecutedClassification, WorkbenchActionExecutedEvent } from '../../../../../base/common/actions.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { Disposable, IDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { localize } from '../../../../../nls.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { defaultButtonStyles } from '../../../../../platform/theme/browser/defaultStyles.ts';
+import { IChatEntitlementService } from '../../../../services/chat/common/chatEntitlementService.ts';
+import { IChatErrorDetailsPart, IChatRendererContent } from '../../common/chatViewModel.ts';
+import { IChatContentPart } from './chatContentParts.ts';
 
 export class ChatAnonymousRateLimitedPart extends Disposable implements IChatContentPart {
 

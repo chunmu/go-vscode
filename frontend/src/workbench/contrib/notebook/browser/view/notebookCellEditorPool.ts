@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../base/browser/dom.js';
-import { CancelablePromise, createCancelablePromise } from '../../../../../base/common/async.js';
-import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import { CodeEditorWidget } from '../../../../../editor/browser/widget/codeEditor/codeEditorWidget.js';
-import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.js';
-import { ITextModelService } from '../../../../../editor/common/services/resolverService.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IContextKeyService, IScopedContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { CellFocusMode, ICellViewModel, INotebookEditorDelegate } from '../notebookBrowser.js';
-import { CellEditorOptions } from './cellParts/cellEditorOptions.js';
+import * as DOM from '../../../../../base/browser/dom.ts';
+import { CancelablePromise, createCancelablePromise } from '../../../../../base/common/async.ts';
+import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import { CodeEditorWidget } from '../../../../../editor/browser/widget/codeEditor/codeEditorWidget.ts';
+import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.ts';
+import { ITextModelService } from '../../../../../editor/common/services/resolverService.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IContextKeyService, IScopedContextKeyService } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { CellFocusMode, ICellViewModel, INotebookEditorDelegate } from '../notebookBrowser.ts';
+import { CellEditorOptions } from './cellParts/cellEditorOptions.ts';
 
 export class NotebookCellEditorPool extends Disposable {
 	private readonly _focusedEditorDOM: HTMLElement;

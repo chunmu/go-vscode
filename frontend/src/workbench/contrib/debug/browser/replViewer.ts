@@ -3,33 +3,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../base/browser/dom.js';
-import { CountBadge } from '../../../../base/browser/ui/countBadge/countBadge.js';
-import { HighlightedLabel, IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.js';
-import { IManagedHover } from '../../../../base/browser/ui/hover/hover.js';
-import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.js';
-import { CachedListVirtualDelegate } from '../../../../base/browser/ui/list/list.js';
-import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.js';
-import { IAsyncDataSource, ITreeNode, ITreeRenderer } from '../../../../base/browser/ui/tree/tree.js';
-import { createMatches, FuzzyScore } from '../../../../base/common/filters.js';
-import { Disposable, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';
-import { basename } from '../../../../base/common/path.js';
-import severity from '../../../../base/common/severity.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IContextViewService } from '../../../../platform/contextview/browser/contextView.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { defaultCountBadgeStyles } from '../../../../platform/theme/browser/defaultStyles.js';
-import { IEditorService } from '../../../services/editor/common/editorService.js';
-import { IDebugConfiguration, IDebugService, IDebugSession, IExpression, IExpressionContainer, INestingReplElement, IReplElement, IReplElementSource, IReplOptions } from '../common/debug.js';
-import { Variable } from '../common/debugModel.js';
-import { RawObjectReplElement, ReplEvaluationInput, ReplEvaluationResult, ReplGroup, ReplOutputElement, ReplVariableElement } from '../common/replModel.js';
-import { AbstractExpressionsRenderer, IExpressionTemplateData, IInputBoxOptions } from './baseDebugView.js';
-import { DebugExpressionRenderer } from './debugExpressionRenderer.js';
-import { debugConsoleEvaluationInput } from './debugIcons.js';
+import * as dom from '../../../../base/browser/dom.ts';
+import { CountBadge } from '../../../../base/browser/ui/countBadge/countBadge.ts';
+import { HighlightedLabel, IHighlight } from '../../../../base/browser/ui/highlightedlabel/highlightedLabel.ts';
+import { IManagedHover } from '../../../../base/browser/ui/hover/hover.ts';
+import { getDefaultHoverDelegate } from '../../../../base/browser/ui/hover/hoverDelegateFactory.ts';
+import { CachedListVirtualDelegate } from '../../../../base/browser/ui/list/list.ts';
+import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.ts';
+import { IAsyncDataSource, ITreeNode, ITreeRenderer } from '../../../../base/browser/ui/tree/tree.ts';
+import { createMatches, FuzzyScore } from '../../../../base/common/filters.ts';
+import { Disposable, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.ts';
+import { basename } from '../../../../base/common/path.ts';
+import severity from '../../../../base/common/severity.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IContextViewService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { defaultCountBadgeStyles } from '../../../../platform/theme/browser/defaultStyles.ts';
+import { IEditorService } from '../../../services/editor/common/editorService.ts';
+import { IDebugConfiguration, IDebugService, IDebugSession, IExpression, IExpressionContainer, INestingReplElement, IReplElement, IReplElementSource, IReplOptions } from '../common/debug.ts';
+import { Variable } from '../common/debugModel.ts';
+import { RawObjectReplElement, ReplEvaluationInput, ReplEvaluationResult, ReplGroup, ReplOutputElement, ReplVariableElement } from '../common/replModel.ts';
+import { AbstractExpressionsRenderer, IExpressionTemplateData, IInputBoxOptions } from './baseDebugView.ts';
+import { DebugExpressionRenderer } from './debugExpressionRenderer.ts';
+import { debugConsoleEvaluationInput } from './debugIcons.ts';
 
 const $ = dom.$;
 

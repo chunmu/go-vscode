@@ -4,18 +4,18 @@
  *--------------------------------------------------------------------------------------------*/
 
 
-import { Disposable } from '../../../../../base/common/lifecycle.js';
-import { IHoverService } from '../../../../../platform/hover/browser/hover.js';
-import { IChatAgentCommand } from '../../common/chatAgents.js';
-import { chatSubcommandLeader } from '../../common/chatParserTypes.js';
-import { IChatRendererContent } from '../../common/chatViewModel.js';
-import { ChatTreeItem } from '../chat.js';
-import { IChatContentPart } from './chatContentParts.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { localize } from '../../../../../nls.js';
-import { Button } from '../../../../../base/browser/ui/button/button.js';
-import { generateUuid } from '../../../../../base/common/uuid.js';
-import { HoverStyle } from '../../../../../base/browser/ui/hover/hover.js';
+import { Disposable } from '../../../../../base/common/lifecycle.ts';
+import { IHoverService } from '../../../../../platform/hover/browser/hover.ts';
+import { IChatAgentCommand } from '../../common/chatAgents.ts';
+import { chatSubcommandLeader } from '../../common/chatParserTypes.ts';
+import { IChatRendererContent } from '../../common/chatViewModel.ts';
+import { ChatTreeItem } from '../chat.ts';
+import { IChatContentPart } from './chatContentParts.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { localize } from '../../../../../nls.ts';
+import { Button } from '../../../../../base/browser/ui/button/button.ts';
+import { generateUuid } from '../../../../../base/common/uuid.ts';
+import { HoverStyle } from '../../../../../base/browser/ui/hover/hover.ts';
 
 
 export class ChatAgentCommandContentPart extends Disposable implements IChatContentPart {

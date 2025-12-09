@@ -3,28 +3,28 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { KeyChord, KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.js';
-import { localize, localize2 } from '../../../../../../nls.js';
-import { MenuId, MenuRegistry, registerAction2 } from '../../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { InputFocusedContextKey } from '../../../../../../platform/contextkey/common/contextkeys.js';
-import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { CTX_INLINE_CHAT_REQUEST_IN_PROGRESS, CTX_INLINE_CHAT_RESPONSE_TYPE, CTX_INLINE_CHAT_VISIBLE, InlineChatResponseType, MENU_INLINE_CHAT_WIDGET_STATUS } from '../../../../inlineChat/common/inlineChat.js';
-import { CTX_NOTEBOOK_CHAT_HAS_AGENT } from './notebookChatContext.js';
-import { INotebookActionContext, NotebookAction, getContextFromActiveEditor, getEditorFromArgsOrActivePane } from '../coreActions.js';
-import { insertNewCell } from '../insertCellActions.js';
-import { CellKind, NotebookSetting } from '../../../common/notebookCommon.js';
-import { NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_EDITOR_FOCUSED } from '../../../common/notebookContextKeys.js';
-import { Iterable } from '../../../../../../base/common/iterator.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { ChatContextKeys } from '../../../../chat/common/chatContextKeys.js';
-import { InlineChatController } from '../../../../inlineChat/browser/inlineChatController.js';
-import { EditorAction2 } from '../../../../../../editor/browser/editorExtensions.js';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { KeyChord, KeyCode, KeyMod } from '../../../../../../base/common/keyCodes.ts';
+import { localize, localize2 } from '../../../../../../nls.ts';
+import { MenuId, MenuRegistry, registerAction2 } from '../../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { InputFocusedContextKey } from '../../../../../../platform/contextkey/common/contextkeys.ts';
+import { ServicesAccessor } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { CTX_INLINE_CHAT_REQUEST_IN_PROGRESS, CTX_INLINE_CHAT_RESPONSE_TYPE, CTX_INLINE_CHAT_VISIBLE, InlineChatResponseType, MENU_INLINE_CHAT_WIDGET_STATUS } from '../../../../inlineChat/common/inlineChat.ts';
+import { CTX_NOTEBOOK_CHAT_HAS_AGENT } from './notebookChatContext.ts';
+import { INotebookActionContext, NotebookAction, getContextFromActiveEditor, getEditorFromArgsOrActivePane } from '../coreActions.ts';
+import { insertNewCell } from '../insertCellActions.ts';
+import { CellKind, NotebookSetting } from '../../../common/notebookCommon.ts';
+import { NOTEBOOK_EDITOR_EDITABLE, NOTEBOOK_EDITOR_FOCUSED } from '../../../common/notebookContextKeys.ts';
+import { Iterable } from '../../../../../../base/common/iterator.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { ChatContextKeys } from '../../../../chat/common/chatContextKeys.ts';
+import { InlineChatController } from '../../../../inlineChat/browser/inlineChatController.ts';
+import { EditorAction2 } from '../../../../../../editor/browser/editorExtensions.ts';
 
 interface IInsertCellWithChatArgs extends INotebookActionContext {
 	input?: string;

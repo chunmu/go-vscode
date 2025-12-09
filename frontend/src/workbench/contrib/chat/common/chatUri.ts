@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { encodeBase64, VSBuffer, decodeBase64 } from '../../../../base/common/buffer.js';
-import { Schemas } from '../../../../base/common/network.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localChatSessionType } from './chatSessionsService.js';
+import { encodeBase64, VSBuffer, decodeBase64 } from '../../../../base/common/buffer.ts';
+import { Schemas } from '../../../../base/common/network.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localChatSessionType } from './chatSessionsService.ts';
 
 type ChatSessionIdentifier = {
 	readonly chatSessionType: string;

@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { reverseOrder, compareBy, numberComparator, sumBy } from '../../../../../base/common/arrays.js';
-import { IntervalTimer, TimeoutTimer } from '../../../../../base/common/async.js';
-import { toDisposable, Disposable } from '../../../../../base/common/lifecycle.js';
-import { mapObservableArrayCached, derived, IObservable, observableSignal, runOnChange, autorun } from '../../../../../base/common/observable.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { AnnotatedDocument, IAnnotatedDocuments } from '../helpers/annotatedDocuments.js';
-import { CreateSuggestionIdForChatOrInlineChatCaller, EditTelemetryReportEditArcForChatOrInlineChatSender, EditTelemetryReportInlineEditArcSender } from './arcTelemetrySender.js';
-import { createDocWithJustReason, EditSource } from '../helpers/documentWithAnnotatedEdits.js';
-import { DocumentEditSourceTracker, TrackedEdit } from './editTracker.js';
-import { sumByCategory } from '../helpers/utils.js';
-import { ScmAdapter, ScmRepoAdapter } from './scmAdapter.js';
-import { IRandomService } from '../randomService.js';
+import { reverseOrder, compareBy, numberComparator, sumBy } from '../../../../../base/common/arrays.ts';
+import { IntervalTimer, TimeoutTimer } from '../../../../../base/common/async.ts';
+import { toDisposable, Disposable } from '../../../../../base/common/lifecycle.ts';
+import { mapObservableArrayCached, derived, IObservable, observableSignal, runOnChange, autorun } from '../../../../../base/common/observable.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { AnnotatedDocument, IAnnotatedDocuments } from '../helpers/annotatedDocuments.ts';
+import { CreateSuggestionIdForChatOrInlineChatCaller, EditTelemetryReportEditArcForChatOrInlineChatSender, EditTelemetryReportInlineEditArcSender } from './arcTelemetrySender.ts';
+import { createDocWithJustReason, EditSource } from '../helpers/documentWithAnnotatedEdits.ts';
+import { DocumentEditSourceTracker, TrackedEdit } from './editTracker.ts';
+import { sumByCategory } from '../helpers/utils.ts';
+import { ScmAdapter, ScmRepoAdapter } from './scmAdapter.ts';
+import { IRandomService } from '../randomService.ts';
 
 export class EditSourceTrackingImpl extends Disposable {
 	public readonly docsState;

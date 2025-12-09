@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ISettableObservable, ObservablePromise } from '../../../../../../base/common/observable.js';
-import { IDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.js';
-import { DetailedLineRangeMapping } from '../../../../../../editor/common/diff/rangeMapping.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
+import { ISettableObservable, ObservablePromise } from '../../../../../../base/common/observable.ts';
+import { IDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.ts';
+import { DetailedLineRangeMapping } from '../../../../../../editor/common/diff/rangeMapping.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
 
 
 /**

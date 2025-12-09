@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { onUnexpectedError } from '../../../base/common/errors.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
-import { Disposable } from './extHostTypes.js';
+import { onUnexpectedError } from '../../../base/common/errors.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { IDisposable } from '../../../base/common/lifecycle.ts';
+import { Disposable } from './extHostTypes.ts';
 import type * as vscode from 'vscode';
-import { MainContext, ExtHostDocumentContentProvidersShape, MainThreadDocumentContentProvidersShape, IMainContext } from './extHost.protocol.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
-import { Schemas } from '../../../base/common/network.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { splitLines } from '../../../base/common/strings.js';
+import { MainContext, ExtHostDocumentContentProvidersShape, MainThreadDocumentContentProvidersShape, IMainContext } from './extHost.protocol.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
+import { Schemas } from '../../../base/common/network.ts';
+import { ILogService } from '../../../platform/log/common/log.ts';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { splitLines } from '../../../base/common/strings.ts';
 
 export class ExtHostDocumentContentProvider implements ExtHostDocumentContentProvidersShape {
 

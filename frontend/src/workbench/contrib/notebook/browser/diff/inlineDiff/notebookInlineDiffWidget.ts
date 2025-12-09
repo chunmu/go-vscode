@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { CodeWindow } from '../../../../../../base/browser/window.js';
-import { Disposable } from '../../../../../../base/common/lifecycle.js';
-import { EditorExtensionsRegistry } from '../../../../../../editor/browser/editorExtensions.js';
-import { MenuId } from '../../../../../../platform/actions/common/actions.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { NotebookDiffEditorInput } from '../../../common/notebookDiffEditorInput.js';
-import { NotebookInlineDiffDecorationContribution } from './notebookInlineDiff.js';
-import { INotebookEditorOptions } from '../../notebookBrowser.js';
-import { NotebookEditorExtensionsRegistry } from '../../notebookEditorExtensions.js';
-import { NotebookEditorWidget } from '../../notebookEditorWidget.js';
-import { NotebookOptions } from '../../notebookOptions.js';
-import { IBorrowValue, INotebookEditorService } from '../../services/notebookEditorService.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { CodeWindow } from '../../../../../../base/browser/window.ts';
+import { Disposable } from '../../../../../../base/common/lifecycle.ts';
+import { EditorExtensionsRegistry } from '../../../../../../editor/browser/editorExtensions.ts';
+import { MenuId } from '../../../../../../platform/actions/common/actions.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { NotebookDiffEditorInput } from '../../../common/notebookDiffEditorInput.ts';
+import { NotebookInlineDiffDecorationContribution } from './notebookInlineDiff.ts';
+import { INotebookEditorOptions } from '../../notebookBrowser.ts';
+import { NotebookEditorExtensionsRegistry } from '../../notebookEditorExtensions.ts';
+import { NotebookEditorWidget } from '../../notebookEditorWidget.ts';
+import { NotebookOptions } from '../../notebookOptions.ts';
+import { IBorrowValue, INotebookEditorService } from '../../services/notebookEditorService.ts';
 
 export class NotebookInlineDiffWidget extends Disposable {
 

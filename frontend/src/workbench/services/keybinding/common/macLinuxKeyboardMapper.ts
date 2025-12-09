@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CharCode } from '../../../../base/common/charCode.js';
-import { KeyCode, KeyCodeUtils, IMMUTABLE_CODE_TO_KEY_CODE, IMMUTABLE_KEY_CODE_TO_CODE, ScanCode, ScanCodeUtils, isModifierKey } from '../../../../base/common/keyCodes.js';
-import { ResolvedKeybinding, KeyCodeChord, SingleModifierChord, ScanCodeChord, Keybinding, Chord } from '../../../../base/common/keybindings.js';
-import { OperatingSystem } from '../../../../base/common/platform.js';
-import { IKeyboardEvent } from '../../../../platform/keybinding/common/keybinding.js';
-import { IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.js';
-import { BaseResolvedKeybinding } from '../../../../platform/keybinding/common/baseResolvedKeybinding.js';
-import { IMacLinuxKeyboardMapping, IMacLinuxKeyMapping } from '../../../../platform/keyboardLayout/common/keyboardLayout.js';
+import { CharCode } from '../../../../base/common/charCode.ts';
+import { KeyCode, KeyCodeUtils, IMMUTABLE_CODE_TO_KEY_CODE, IMMUTABLE_KEY_CODE_TO_CODE, ScanCode, ScanCodeUtils, isModifierKey } from '../../../../base/common/keyCodes.ts';
+import { ResolvedKeybinding, KeyCodeChord, SingleModifierChord, ScanCodeChord, Keybinding, Chord } from '../../../../base/common/keybindings.ts';
+import { OperatingSystem } from '../../../../base/common/platform.ts';
+import { IKeyboardEvent } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IKeyboardMapper } from '../../../../platform/keyboardLayout/common/keyboardMapper.ts';
+import { BaseResolvedKeybinding } from '../../../../platform/keybinding/common/baseResolvedKeybinding.ts';
+import { IMacLinuxKeyboardMapping, IMacLinuxKeyMapping } from '../../../../platform/keyboardLayout/common/keyboardLayout.ts';
 
 /**
  * A map from character to key codes.

@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
-import { MainContext, MainThreadBulkEditsShape } from './extHost.protocol.js';
-import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.js';
-import { IExtHostRpcService } from './extHostRpcService.js';
-import { WorkspaceEdit } from './extHostTypeConverters.js';
-import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.js';
+import { IExtensionDescription } from '../../../platform/extensions/common/extensions.ts';
+import { MainContext, MainThreadBulkEditsShape } from './extHost.protocol.ts';
+import { ExtHostDocumentsAndEditors } from './extHostDocumentsAndEditors.ts';
+import { IExtHostRpcService } from './extHostRpcService.ts';
+import { WorkspaceEdit } from './extHostTypeConverters.ts';
+import { SerializableObjectWithBuffers } from '../../services/extensions/common/proxyIdentifier.ts';
 import type * as vscode from 'vscode';
 
 export class ExtHostBulkEdits {

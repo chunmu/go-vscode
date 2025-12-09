@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../base/common/uri.js';
-import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';
-import { INotebookDiffResult } from '../notebookCommon.js';
+import { URI } from '../../../../../base/common/uri.ts';
+import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { INotebookDiffResult } from '../notebookCommon.ts';
 
 export const ID_NOTEBOOK_EDITOR_WORKER_SERVICE = 'notebookEditorWorkerService';
 export const INotebookEditorWorkerService = createDecorator<INotebookEditorWorkerService>(ID_NOTEBOOK_EDITOR_WORKER_SERVICE);

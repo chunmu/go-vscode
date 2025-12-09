@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Schemas } from '../../../base/common/network.js';
-import { isWeb } from '../../../base/common/platform.js';
-import { isString } from '../../../base/common/types.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { localize } from '../../../nls.js';
-import { CommandsRegistry, ICommandService } from '../../../platform/commands/common/commands.js';
-import { IExtensionGalleryService, IExtensionManagementService } from '../../../platform/extensionManagement/common/extensionManagement.js';
-import { ExtensionManagementCLI } from '../../../platform/extensionManagement/common/extensionManagementCLI.js';
-import { getExtensionId } from '../../../platform/extensionManagement/common/extensionManagementUtil.js';
-import { IExtensionManifest } from '../../../platform/extensions/common/extensions.js';
-import { IInstantiationService, ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../../platform/instantiation/common/serviceCollection.js';
-import { ILabelService } from '../../../platform/label/common/label.js';
-import { AbstractMessageLogger, ILogger, LogLevel } from '../../../platform/log/common/log.js';
-import { IOpenerService } from '../../../platform/opener/common/opener.js';
-import { IOpenWindowOptions, IWindowOpenable } from '../../../platform/window/common/window.js';
-import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.js';
-import { IExtensionManagementServerService } from '../../services/extensionManagement/common/extensionManagement.js';
-import { IExtensionManifestPropertiesService } from '../../services/extensions/common/extensionManifestPropertiesService.js';
+import { Schemas } from '../../../base/common/network.ts';
+import { isWeb } from '../../../base/common/platform.ts';
+import { isString } from '../../../base/common/types.ts';
+import { URI, UriComponents } from '../../../base/common/uri.ts';
+import { localize } from '../../../nls.ts';
+import { CommandsRegistry, ICommandService } from '../../../platform/commands/common/commands.ts';
+import { IExtensionGalleryService, IExtensionManagementService } from '../../../platform/extensionManagement/common/extensionManagement.ts';
+import { ExtensionManagementCLI } from '../../../platform/extensionManagement/common/extensionManagementCLI.ts';
+import { getExtensionId } from '../../../platform/extensionManagement/common/extensionManagementUtil.ts';
+import { IExtensionManifest } from '../../../platform/extensions/common/extensions.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { ServiceCollection } from '../../../platform/instantiation/common/serviceCollection.ts';
+import { ILabelService } from '../../../platform/label/common/label.ts';
+import { AbstractMessageLogger, ILogger, LogLevel } from '../../../platform/log/common/log.ts';
+import { IOpenerService } from '../../../platform/opener/common/opener.ts';
+import { IOpenWindowOptions, IWindowOpenable } from '../../../platform/window/common/window.ts';
+import { IWorkbenchEnvironmentService } from '../../services/environment/common/environmentService.ts';
+import { IExtensionManagementServerService } from '../../services/extensionManagement/common/extensionManagement.ts';
+import { IExtensionManifestPropertiesService } from '../../services/extensions/common/extensionManifestPropertiesService.ts';
 
 
 // this class contains the commands that the CLI server is reying on

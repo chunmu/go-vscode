@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../../../base/common/uri.js';
-import { VSBuffer } from '../../../../../../../base/common/buffer.js';
-import { IFileService } from '../../../../../../../platform/files/common/files.js';
-import { dirname } from '../../../../../../../base/common/resources.js';
+import { URI } from '../../../../../../../base/common/uri.ts';
+import { VSBuffer } from '../../../../../../../base/common/buffer.ts';
+import { IFileService } from '../../../../../../../platform/files/common/files.ts';
+import { dirname } from '../../../../../../../base/common/resources.ts';
 
 /**
  * Represents a generic file system node.

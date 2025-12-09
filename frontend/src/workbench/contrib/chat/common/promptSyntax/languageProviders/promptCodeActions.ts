@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { Range } from '../../../../../../editor/common/core/range.js';
-import { CodeAction, CodeActionContext, CodeActionList, CodeActionProvider, IWorkspaceFileEdit, IWorkspaceTextEdit, TextEdit } from '../../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { localize } from '../../../../../../nls.js';
-import { ILanguageModelToolsService } from '../../languageModelToolsService.js';
-import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.js';
-import { IPromptsService } from '../service/promptsService.js';
-import { ParsedPromptFile, PromptHeaderAttributes } from '../promptFileParser.js';
-import { Selection } from '../../../../../../editor/common/core/selection.js';
-import { Lazy } from '../../../../../../base/common/lazy.js';
-import { LEGACY_MODE_FILE_EXTENSION } from '../config/promptFileLocations.js';
-import { IFileService } from '../../../../../../platform/files/common/files.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { isGithubTarget } from './promptValidator.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { Range } from '../../../../../../editor/common/core/range.ts';
+import { CodeAction, CodeActionContext, CodeActionList, CodeActionProvider, IWorkspaceFileEdit, IWorkspaceTextEdit, TextEdit } from '../../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { ILanguageModelToolsService } from '../../languageModelToolsService.ts';
+import { getPromptsTypeForLanguageId, PromptsType } from '../promptTypes.ts';
+import { IPromptsService } from '../service/promptsService.ts';
+import { ParsedPromptFile, PromptHeaderAttributes } from '../promptFileParser.ts';
+import { Selection } from '../../../../../../editor/common/core/selection.ts';
+import { Lazy } from '../../../../../../base/common/lazy.ts';
+import { LEGACY_MODE_FILE_EXTENSION } from '../config/promptFileLocations.ts';
+import { IFileService } from '../../../../../../platform/files/common/files.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { isGithubTarget } from './promptValidator.ts';
 
 export class PromptCodeActionProvider implements CodeActionProvider {
 	/**

@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as nls from '../../../../../../nls.js';
-import { Disposable, DisposableStore, IDisposable, MutableDisposable } from '../../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../../base/common/network.js';
-import { ILanguageFeaturesService } from '../../../../../../editor/common/services/languageFeatures.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { ILogService } from '../../../../../../platform/log/common/log.js';
-import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.js';
-import { CENTER_ACTIVE_CELL } from '../navigation/arrow.js';
-import { SELECT_KERNEL_ID } from '../../controller/coreActions.js';
-import { SELECT_NOTEBOOK_INDENTATION_ID } from '../../controller/editActions.js';
-import { INotebookEditor, getNotebookEditorFromEditorPane } from '../../notebookBrowser.js';
-import { NotebookTextModel } from '../../../common/model/notebookTextModel.js';
-import { NotebookCellsChangeType } from '../../../common/notebookCommon.js';
-import { INotebookKernel, INotebookKernelService } from '../../../common/notebookKernelService.js';
-import { IEditorService } from '../../../../../services/editor/common/editorService.js';
-import { IStatusbarEntry, IStatusbarEntryAccessor, IStatusbarService, StatusbarAlignment } from '../../../../../services/statusbar/browser/statusbar.js';
-import { IEditorGroupsService, IEditorPart } from '../../../../../services/editor/common/editorGroupsService.js';
-import { Event } from '../../../../../../base/common/event.js';
+import * as nls from '../../../../../../nls.ts';
+import { Disposable, DisposableStore, IDisposable, MutableDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../../base/common/network.ts';
+import { ILanguageFeaturesService } from '../../../../../../editor/common/services/languageFeatures.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { ILogService } from '../../../../../../platform/log/common/log.ts';
+import { IWorkbenchContribution, WorkbenchPhase, registerWorkbenchContribution2 } from '../../../../../common/contributions.ts';
+import { CENTER_ACTIVE_CELL } from '../navigation/arrow.ts';
+import { SELECT_KERNEL_ID } from '../../controller/coreActions.ts';
+import { SELECT_NOTEBOOK_INDENTATION_ID } from '../../controller/editActions.ts';
+import { INotebookEditor, getNotebookEditorFromEditorPane } from '../../notebookBrowser.ts';
+import { NotebookTextModel } from '../../../common/model/notebookTextModel.ts';
+import { NotebookCellsChangeType } from '../../../common/notebookCommon.ts';
+import { INotebookKernel, INotebookKernelService } from '../../../common/notebookKernelService.ts';
+import { IEditorService } from '../../../../../services/editor/common/editorService.ts';
+import { IStatusbarEntry, IStatusbarEntryAccessor, IStatusbarService, StatusbarAlignment } from '../../../../../services/statusbar/browser/statusbar.ts';
+import { IEditorGroupsService, IEditorPart } from '../../../../../services/editor/common/editorGroupsService.ts';
+import { Event } from '../../../../../../base/common/event.ts';
 
 class ImplictKernelSelector implements IDisposable {
 

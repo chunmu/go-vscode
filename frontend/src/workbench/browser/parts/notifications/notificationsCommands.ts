@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
-import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
-import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { KeyChord, KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
-import { INotificationViewItem, isNotificationViewItem, NotificationsModel } from '../../../common/notifications.js';
-import { MenuRegistry, MenuId } from '../../../../platform/actions/common/actions.js';
-import { localize, localize2 } from '../../../../nls.js';
-import { IListService, WorkbenchList } from '../../../../platform/list/browser/listService.js';
-import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
-import { NotificationFocusedContext, NotificationsCenterVisibleContext, NotificationsToastsVisibleContext } from '../../../common/contextkeys.js';
-import { INotificationService, INotificationSourceFilter, NotificationsFilter } from '../../../../platform/notification/common/notification.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ActionRunner, IAction, WorkbenchActionExecutedEvent, WorkbenchActionExecutedClassification } from '../../../../base/common/actions.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../platform/quickinput/common/quickInput.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.ts';
+import { ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.ts';
+import { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { KeyChord, KeyCode, KeyMod } from '../../../../base/common/keyCodes.ts';
+import { INotificationViewItem, isNotificationViewItem, NotificationsModel } from '../../../common/notifications.ts';
+import { MenuRegistry, MenuId } from '../../../../platform/actions/common/actions.ts';
+import { localize, localize2 } from '../../../../nls.ts';
+import { IListService, WorkbenchList } from '../../../../platform/list/browser/listService.ts';
+import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.ts';
+import { NotificationFocusedContext, NotificationsCenterVisibleContext, NotificationsToastsVisibleContext } from '../../../common/contextkeys.ts';
+import { INotificationService, INotificationSourceFilter, NotificationsFilter } from '../../../../platform/notification/common/notification.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ActionRunner, IAction, WorkbenchActionExecutedEvent, WorkbenchActionExecutedClassification } from '../../../../base/common/actions.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../platform/quickinput/common/quickInput.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.ts';
 
 // Center
 export const SHOW_NOTIFICATIONS_CENTER = 'notifications.showList';

@@ -4,19 +4,19 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { CancellationToken, CancellationTokenSource } from '../../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { DisposableStore, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.js';
-import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.js';
-import { nullExtensionDescription } from '../../../../services/extensions/common/extensions.js';
-import { ISpeechProvider, ISpeechService, ISpeechToTextEvent, ISpeechToTextSession, ITextToSpeechSession, KeywordRecognitionStatus, SpeechToTextStatus } from '../../../speech/common/speechService.js';
-import { IChatAgent, IChatAgentCommand, IChatAgentCompletionItem, IChatAgentData, IChatAgentHistoryEntry, IChatAgentImplementation, IChatAgentMetadata, IChatAgentRequest, IChatAgentResult, IChatAgentService, IChatParticipantDetectionProvider, UserSelectedTools } from '../../common/chatAgents.js';
-import { IChatModel } from '../../common/chatModel.js';
-import { IChatFollowup, IChatProgress } from '../../common/chatService.js';
-import { ChatAgentLocation, ChatModeKind } from '../../common/constants.js';
-import { IVoiceChatSessionOptions, IVoiceChatTextEvent, VoiceChatService } from '../../common/voiceChatService.js';
+import { CancellationToken, CancellationTokenSource } from '../../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { DisposableStore, IDisposable, toDisposable } from '../../../../../base/common/lifecycle.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { ExtensionIdentifier } from '../../../../../platform/extensions/common/extensions.ts';
+import { MockContextKeyService } from '../../../../../platform/keybinding/test/common/mockKeybindingService.ts';
+import { nullExtensionDescription } from '../../../../services/extensions/common/extensions.ts';
+import { ISpeechProvider, ISpeechService, ISpeechToTextEvent, ISpeechToTextSession, ITextToSpeechSession, KeywordRecognitionStatus, SpeechToTextStatus } from '../../../speech/common/speechService.ts';
+import { IChatAgent, IChatAgentCommand, IChatAgentCompletionItem, IChatAgentData, IChatAgentHistoryEntry, IChatAgentImplementation, IChatAgentMetadata, IChatAgentRequest, IChatAgentResult, IChatAgentService, IChatParticipantDetectionProvider, UserSelectedTools } from '../../common/chatAgents.ts';
+import { IChatModel } from '../../common/chatModel.ts';
+import { IChatFollowup, IChatProgress } from '../../common/chatService.ts';
+import { ChatAgentLocation, ChatModeKind } from '../../common/constants.ts';
+import { IVoiceChatSessionOptions, IVoiceChatTextEvent, VoiceChatService } from '../../common/voiceChatService.ts';
 
 suite('VoiceChat', () => {
 

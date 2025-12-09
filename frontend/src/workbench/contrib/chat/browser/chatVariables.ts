@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IChatVariablesService, IDynamicVariable } from '../common/chatVariables.js';
-import { IToolAndToolSetEnablementMap } from '../common/languageModelToolsService.js';
-import { IChatWidgetService } from './chat.js';
-import { ChatDynamicVariableModel } from './contrib/chatDynamicVariables.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { URI } from '../../../../base/common/uri.js';
+import { IChatVariablesService, IDynamicVariable } from '../common/chatVariables.ts';
+import { IToolAndToolSetEnablementMap } from '../common/languageModelToolsService.ts';
+import { IChatWidgetService } from './chat.ts';
+import { ChatDynamicVariableModel } from './contrib/chatDynamicVariables.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { URI } from '../../../../base/common/uri.ts';
 
 export class ChatVariablesService implements IChatVariablesService {
 	declare _serviceBrand: undefined;

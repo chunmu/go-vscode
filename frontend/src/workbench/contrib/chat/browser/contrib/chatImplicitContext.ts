@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationTokenSource } from '../../../../../base/common/cancellation.js';
-import { Emitter, Event } from '../../../../../base/common/event.js';
-import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { autorun } from '../../../../../base/common/observable.js';
-import { basename, isEqual } from '../../../../../base/common/resources.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { getCodeEditor, ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.js';
-import { Location } from '../../../../../editor/common/languages.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IWorkbenchContribution } from '../../../../common/contributions.js';
-import { EditorsOrder } from '../../../../common/editor.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { getNotebookEditorFromEditorPane, INotebookEditor } from '../../../notebook/browser/notebookBrowser.js';
-import { WebviewEditor } from '../../../webviewPanel/browser/webviewEditor.js';
-import { WebviewInput } from '../../../webviewPanel/browser/webviewEditorInput.js';
-import { IChatEditingService } from '../../common/chatEditingService.js';
-import { IChatService } from '../../common/chatService.js';
-import { IChatRequestImplicitVariableEntry, IChatRequestVariableEntry, isStringImplicitContextValue, StringChatContextValue } from '../../common/chatVariableEntries.js';
-import { ChatAgentLocation } from '../../common/constants.js';
-import { ILanguageModelIgnoredFilesService } from '../../common/ignoredFiles.js';
-import { getPromptsTypeForLanguageId } from '../../common/promptSyntax/promptTypes.js';
-import { IChatWidget, IChatWidgetService } from '../chat.js';
-import { IChatContextService } from '../chatContextService.js';
+import { CancellationTokenSource } from '../../../../../base/common/cancellation.ts';
+import { Emitter, Event } from '../../../../../base/common/event.ts';
+import { Disposable, DisposableStore, MutableDisposable } from '../../../../../base/common/lifecycle.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { autorun } from '../../../../../base/common/observable.ts';
+import { basename, isEqual } from '../../../../../base/common/resources.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { getCodeEditor, ICodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { ICodeEditorService } from '../../../../../editor/browser/services/codeEditorService.ts';
+import { Location } from '../../../../../editor/common/languages.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IWorkbenchContribution } from '../../../../common/contributions.ts';
+import { EditorsOrder } from '../../../../common/editor.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { getNotebookEditorFromEditorPane, INotebookEditor } from '../../../notebook/browser/notebookBrowser.ts';
+import { WebviewEditor } from '../../../webviewPanel/browser/webviewEditor.ts';
+import { WebviewInput } from '../../../webviewPanel/browser/webviewEditorInput.ts';
+import { IChatEditingService } from '../../common/chatEditingService.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { IChatRequestImplicitVariableEntry, IChatRequestVariableEntry, isStringImplicitContextValue, StringChatContextValue } from '../../common/chatVariableEntries.ts';
+import { ChatAgentLocation } from '../../common/constants.ts';
+import { ILanguageModelIgnoredFilesService } from '../../common/ignoredFiles.ts';
+import { getPromptsTypeForLanguageId } from '../../common/promptSyntax/promptTypes.ts';
+import { IChatWidget, IChatWidgetService } from '../chat.ts';
+import { IChatContextService } from '../chatContextService.ts';
 
 export class ChatImplicitContextContribution extends Disposable implements IWorkbenchContribution {
 	static readonly ID = 'chat.implicitContext';

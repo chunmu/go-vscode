@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IAsyncDataSource, ITreeRenderer, ITreeNode, ITreeSorter } from '../../../../base/browser/ui/tree/tree.js';
-import { CallHierarchyItem, CallHierarchyDirection, CallHierarchyModel, } from '../common/callHierarchy.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { IIdentityProvider, IListVirtualDelegate } from '../../../../base/browser/ui/list/list.js';
-import { FuzzyScore, createMatches } from '../../../../base/common/filters.js';
-import { IconLabel } from '../../../../base/browser/ui/iconLabel/iconLabel.js';
-import { SymbolKinds, Location, SymbolTag } from '../../../../editor/common/languages.js';
-import { compare } from '../../../../base/common/strings.js';
-import { Range } from '../../../../editor/common/core/range.js';
-import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.js';
-import { localize } from '../../../../nls.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
+import { IAsyncDataSource, ITreeRenderer, ITreeNode, ITreeSorter } from '../../../../base/browser/ui/tree/tree.ts';
+import { CallHierarchyItem, CallHierarchyDirection, CallHierarchyModel, } from '../common/callHierarchy.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { IIdentityProvider, IListVirtualDelegate } from '../../../../base/browser/ui/list/list.ts';
+import { FuzzyScore, createMatches } from '../../../../base/common/filters.ts';
+import { IconLabel } from '../../../../base/browser/ui/iconLabel/iconLabel.ts';
+import { SymbolKinds, Location, SymbolTag } from '../../../../editor/common/languages.ts';
+import { compare } from '../../../../base/common/strings.ts';
+import { Range } from '../../../../editor/common/core/range.ts';
+import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.ts';
+import { localize } from '../../../../nls.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
 
 export class Call {
 	constructor(

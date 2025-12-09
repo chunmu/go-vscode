@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../nls.js';
-import { Action2 } from '../../../platform/actions/common/actions.js';
-import { ILocalizedString } from '../../../platform/action/common/action.js';
-import product from '../../../platform/product/common/product.js';
-import { IDialogService } from '../../../platform/dialogs/common/dialogs.js';
-import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.js';
-import { INativeHostService } from '../../../platform/native/common/native.js';
-import { toErrorMessage } from '../../../base/common/errorMessage.js';
-import { IProductService } from '../../../platform/product/common/productService.js';
-import { isCancellationError } from '../../../base/common/errors.js';
+import { localize, localize2 } from '../../../nls.ts';
+import { Action2 } from '../../../platform/actions/common/actions.ts';
+import { ILocalizedString } from '../../../platform/action/common/action.ts';
+import product from '../../../platform/product/common/product.ts';
+import { IDialogService } from '../../../platform/dialogs/common/dialogs.ts';
+import { ServicesAccessor } from '../../../platform/instantiation/common/instantiation.ts';
+import { INativeHostService } from '../../../platform/native/common/native.ts';
+import { toErrorMessage } from '../../../base/common/errorMessage.ts';
+import { IProductService } from '../../../platform/product/common/productService.ts';
+import { isCancellationError } from '../../../base/common/errors.ts';
 
 const shellCommandCategory: ILocalizedString = localize2('shellCommand', 'Shell Command');
 

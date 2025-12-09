@@ -4,31 +4,31 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { CancellationToken } from '../../../../../../base/common/cancellation.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
-import { Position } from '../../../../../../editor/common/core/position.js';
-import { ContextKeyService } from '../../../../../../platform/contextkey/browser/contextKeyService.js';
-import { TestConfigurationService } from '../../../../../../platform/configuration/test/common/testConfigurationService.js';
-import { ExtensionIdentifier } from '../../../../../../platform/extensions/common/extensions.js';
-import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { workbenchInstantiationService } from '../../../../../test/browser/workbenchTestServices.js';
-import { LanguageModelToolsService } from '../../../browser/languageModelToolsService.js';
-import { ChatMode, CustomChatMode, IChatModeService } from '../../../common/chatModes.js';
-import { IChatService } from '../../../common/chatService.js';
-import { ChatConfiguration } from '../../../common/constants.js';
-import { ILanguageModelToolsService, IToolData, ToolDataSource } from '../../../common/languageModelToolsService.js';
-import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../../common/languageModels.js';
-import { PromptHoverProvider } from '../../../common/promptSyntax/languageProviders/promptHovers.js';
-import { IPromptsService, PromptsStorage } from '../../../common/promptSyntax/service/promptsService.js';
-import { MockChatModeService } from '../../common/mockChatModeService.js';
-import { MockChatService } from '../../common/mockChatService.js';
-import { createTextModel } from '../../../../../../editor/test/common/testTextModel.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { PromptFileParser } from '../../../common/promptSyntax/promptFileParser.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { MarkdownString } from '../../../../../../base/common/htmlContent.js';
-import { getLanguageIdForPromptsType, PromptsType } from '../../../common/promptSyntax/promptTypes.js';
-import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.js';
+import { CancellationToken } from '../../../../../../base/common/cancellation.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.ts';
+import { Position } from '../../../../../../editor/common/core/position.ts';
+import { ContextKeyService } from '../../../../../../platform/contextkey/browser/contextKeyService.ts';
+import { TestConfigurationService } from '../../../../../../platform/configuration/test/common/testConfigurationService.ts';
+import { ExtensionIdentifier } from '../../../../../../platform/extensions/common/extensions.ts';
+import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { workbenchInstantiationService } from '../../../../../test/browser/workbenchTestServices.ts';
+import { LanguageModelToolsService } from '../../../browser/languageModelToolsService.ts';
+import { ChatMode, CustomChatMode, IChatModeService } from '../../../common/chatModes.ts';
+import { IChatService } from '../../../common/chatService.ts';
+import { ChatConfiguration } from '../../../common/constants.ts';
+import { ILanguageModelToolsService, IToolData, ToolDataSource } from '../../../common/languageModelToolsService.ts';
+import { ILanguageModelChatMetadata, ILanguageModelsService } from '../../../common/languageModels.ts';
+import { PromptHoverProvider } from '../../../common/promptSyntax/languageProviders/promptHovers.ts';
+import { IPromptsService, PromptsStorage } from '../../../common/promptSyntax/service/promptsService.ts';
+import { MockChatModeService } from '../../common/mockChatModeService.ts';
+import { MockChatService } from '../../common/mockChatService.ts';
+import { createTextModel } from '../../../../../../editor/test/common/testTextModel.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { PromptFileParser } from '../../../common/promptSyntax/promptFileParser.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { MarkdownString } from '../../../../../../base/common/htmlContent.ts';
+import { getLanguageIdForPromptsType, PromptsType } from '../../../common/promptSyntax/promptTypes.ts';
+import { getPromptFileExtension } from '../../../common/promptSyntax/config/promptFileLocations.ts';
 
 suite('PromptHoverProvider', () => {
 	const disposables = ensureNoDisposablesAreLeakedInTestSuite();

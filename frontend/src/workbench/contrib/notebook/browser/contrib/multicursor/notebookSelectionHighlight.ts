@@ -3,15 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event } from '../../../../../../base/common/event.js';
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.js';
-import { Selection, SelectionDirection } from '../../../../../../editor/common/core/selection.js';
-import { CursorChangeReason } from '../../../../../../editor/common/cursorEvents.js';
-import { FindMatch, IModelDeltaDecoration, ITextModel } from '../../../../../../editor/common/model.js';
-import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
-import { IActiveNotebookEditor, ICellViewModel, INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
+import { Event } from '../../../../../../base/common/event.ts';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { ICodeEditor } from '../../../../../../editor/browser/editorBrowser.ts';
+import { Selection, SelectionDirection } from '../../../../../../editor/common/core/selection.ts';
+import { CursorChangeReason } from '../../../../../../editor/common/cursorEvents.ts';
+import { FindMatch, IModelDeltaDecoration, ITextModel } from '../../../../../../editor/common/model.ts';
+import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.ts';
+import { IActiveNotebookEditor, ICellViewModel, INotebookEditor, INotebookEditorContribution } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
 
 class NotebookSelectionHighlighter extends Disposable implements INotebookEditorContribution {
 

@@ -3,23 +3,23 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AriaRole } from '../../../../base/browser/ui/aria/aria.js';
-import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.js';
-import { marked } from '../../../../base/common/marked/marked.js';
-import { isDefined } from '../../../../base/common/types.js';
-import { localize } from '../../../../nls.js';
-import { IAccessibleViewService } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { migrateLegacyTerminalToolSpecificData } from '../common/chat.js';
-import { IChatToolInvocation } from '../common/chatService.js';
-import { IChatResponseViewModel, isRequestVM, isResponseVM } from '../common/chatViewModel.js';
-import { toolContentToA11yString } from '../common/languageModelToolsService.js';
-import { CancelChatActionId } from './actions/chatExecuteActions.js';
-import { AcceptToolConfirmationActionId } from './actions/chatToolActions.js';
-import { ChatTreeItem } from './chat.js';
+import { AriaRole } from '../../../../base/browser/ui/aria/aria.ts';
+import { IListAccessibilityProvider } from '../../../../base/browser/ui/list/listWidget.ts';
+import { marked } from '../../../../base/common/marked/marked.ts';
+import { isDefined } from '../../../../base/common/types.ts';
+import { localize } from '../../../../nls.ts';
+import { IAccessibleViewService } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService, ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { migrateLegacyTerminalToolSpecificData } from '../common/chat.ts';
+import { IChatToolInvocation } from '../common/chatService.ts';
+import { IChatResponseViewModel, isRequestVM, isResponseVM } from '../common/chatViewModel.ts';
+import { toolContentToA11yString } from '../common/languageModelToolsService.ts';
+import { CancelChatActionId } from './actions/chatExecuteActions.ts';
+import { AcceptToolConfirmationActionId } from './actions/chatToolActions.ts';
+import { ChatTreeItem } from './chat.ts';
 
 export const getToolConfirmationAlert = (accessor: ServicesAccessor, toolInvocation: IChatToolInvocation[]) => {
 	const keybindingService = accessor.get(IKeybindingService);

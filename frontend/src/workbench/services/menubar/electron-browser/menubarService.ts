@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IMenubarService } from '../../../../platform/menubar/electron-browser/menubar.js';
-import { registerMainProcessRemoteService } from '../../../../platform/ipc/electron-browser/services.js';
+import { IMenubarService } from '../../../../platform/menubar/electron-browser/menubar.ts';
+import { registerMainProcessRemoteService } from '../../../../platform/ipc/electron-browser/services.ts';
 
 registerMainProcessRemoteService(IMenubarService, 'menubar');

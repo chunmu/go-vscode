@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Throttler } from '../../../../../../base/common/async.js';
-import { CancellationTokenSource } from '../../../../../../base/common/cancellation.js';
-import { Disposable, toDisposable } from '../../../../../../base/common/lifecycle.js';
-import { NotebookVisibleCellObserver } from './notebookVisibleCellObserver.js';
-import { ICellViewModel, INotebookEditor, INotebookEditorContribution, INotebookViewModel } from '../../notebookBrowser.js';
-import { registerNotebookContribution } from '../../notebookEditorExtensions.js';
-import { INotebookCellStatusBarService } from '../../../common/notebookCellStatusBarService.js';
-import { INotebookCellStatusBarItemList } from '../../../common/notebookCommon.js';
+import { Throttler } from '../../../../../../base/common/async.ts';
+import { CancellationTokenSource } from '../../../../../../base/common/cancellation.ts';
+import { Disposable, toDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { NotebookVisibleCellObserver } from './notebookVisibleCellObserver.ts';
+import { ICellViewModel, INotebookEditor, INotebookEditorContribution, INotebookViewModel } from '../../notebookBrowser.ts';
+import { registerNotebookContribution } from '../../notebookEditorExtensions.ts';
+import { INotebookCellStatusBarService } from '../../../common/notebookCellStatusBarService.ts';
+import { INotebookCellStatusBarItemList } from '../../../common/notebookCommon.ts';
 
 export class ContributedStatusBarItemController extends Disposable implements INotebookEditorContribution {
 	static id: string = 'workbench.notebook.statusBar.contributed';

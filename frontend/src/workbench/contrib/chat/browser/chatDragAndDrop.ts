@@ -3,29 +3,29 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { DataTransfers } from '../../../../base/browser/dnd.js';
-import { $, DragAndDropObserver } from '../../../../base/browser/dom.js';
-import { renderLabelWithIcons } from '../../../../base/browser/ui/iconLabel/iconLabels.js';
-import { coalesce } from '../../../../base/common/arrays.js';
-import { CancellationToken } from '../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../base/common/codicons.js';
-import { UriList } from '../../../../base/common/dataTransfer.js';
-import { IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
-import { Mimes } from '../../../../base/common/mime.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { CodeDataTransfers, containsDragType, extractEditorsDropData, extractMarkerDropData, extractNotebookCellOutputDropData, extractSymbolDropData } from '../../../../platform/dnd/browser/dnd.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.js';
-import { ISharedWebContentExtractorService } from '../../../../platform/webContentExtractor/common/webContentExtractor.js';
-import { IExtensionService, isProposedApiEnabled } from '../../../services/extensions/common/extensions.js';
-import { extractSCMHistoryItemDropData } from '../../scm/browser/scmHistoryChatContext.js';
-import { IChatRequestVariableEntry } from '../common/chatVariableEntries.js';
-import { IChatWidget } from './chat.js';
-import { ChatAttachmentModel } from './chatAttachmentModel.js';
-import { IChatAttachmentResolveService, ImageTransferData } from './chatAttachmentResolveService.js';
-import { IChatInputStyles } from './chatInputPart.js';
-import { convertStringToUInt8Array } from './imageUtils.js';
+import { DataTransfers } from '../../../../base/browser/dnd.ts';
+import { $, DragAndDropObserver } from '../../../../base/browser/dom.ts';
+import { renderLabelWithIcons } from '../../../../base/browser/ui/iconLabel/iconLabels.ts';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { CancellationToken } from '../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { UriList } from '../../../../base/common/dataTransfer.ts';
+import { IDisposable, toDisposable } from '../../../../base/common/lifecycle.ts';
+import { Mimes } from '../../../../base/common/mime.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { CodeDataTransfers, containsDragType, extractEditorsDropData, extractMarkerDropData, extractNotebookCellOutputDropData, extractSymbolDropData } from '../../../../platform/dnd/browser/dnd.ts';
+import { ILogService } from '../../../../platform/log/common/log.ts';
+import { IThemeService, Themable } from '../../../../platform/theme/common/themeService.ts';
+import { ISharedWebContentExtractorService } from '../../../../platform/webContentExtractor/common/webContentExtractor.ts';
+import { IExtensionService, isProposedApiEnabled } from '../../../services/extensions/common/extensions.ts';
+import { extractSCMHistoryItemDropData } from '../../scm/browser/scmHistoryChatContext.ts';
+import { IChatRequestVariableEntry } from '../common/chatVariableEntries.ts';
+import { IChatWidget } from './chat.ts';
+import { ChatAttachmentModel } from './chatAttachmentModel.ts';
+import { IChatAttachmentResolveService, ImageTransferData } from './chatAttachmentResolveService.ts';
+import { IChatInputStyles } from './chatInputPart.ts';
+import { convertStringToUInt8Array } from './imageUtils.ts';
 
 enum ChatDragAndDropType {
 	FILE_INTERNAL,

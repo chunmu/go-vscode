@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../base/common/htmlContent.js';
-import { Disposable, IReference } from '../../../../base/common/lifecycle.js';
-import { basename } from '../../../../base/common/path.js';
-import { isEqual } from '../../../../base/common/resources.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IResolvedTextEditorModel, ITextModelService } from '../../../../editor/common/services/resolverService.js';
-import { localize } from '../../../../nls.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { ILabelService } from '../../../../platform/label/common/label.js';
-import { IRevertOptions, ISaveOptions } from '../../../common/editor.js';
-import { ICustomEditorModel } from './customEditor.js';
-import { IExtensionService } from '../../../../workbench/services/extensions/common/extensions.js';
-import { ITextFileEditorModel, ITextFileService, TextFileEditorModelState } from '../../../services/textfile/common/textfiles.js';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { IMarkdownString } from '../../../../base/common/htmlContent.ts';
+import { Disposable, IReference } from '../../../../base/common/lifecycle.ts';
+import { basename } from '../../../../base/common/path.ts';
+import { isEqual } from '../../../../base/common/resources.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IResolvedTextEditorModel, ITextModelService } from '../../../../editor/common/services/resolverService.ts';
+import { localize } from '../../../../nls.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { ILabelService } from '../../../../platform/label/common/label.ts';
+import { IRevertOptions, ISaveOptions } from '../../../common/editor.ts';
+import { ICustomEditorModel } from './customEditor.ts';
+import { IExtensionService } from '../../../../workbench/services/extensions/common/extensions.ts';
+import { ITextFileEditorModel, ITextFileService, TextFileEditorModelState } from '../../../services/textfile/common/textfiles.ts';
 
 export class CustomTextEditorModel extends Disposable implements ICustomEditorModel {
 

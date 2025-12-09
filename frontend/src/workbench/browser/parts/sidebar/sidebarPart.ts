@@ -4,34 +4,34 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './media/sidebarpart.css';
-import './sidebarActions.js';
-import { ActivityBarPosition, IWorkbenchLayoutService, LayoutSettings, Parts, Position as SideBarPosition } from '../../../services/layout/browser/layoutService.js';
-import { SidebarFocusContext, ActiveViewletContext } from '../../../common/contextkeys.js';
-import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.js';
-import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
-import { IThemeService } from '../../../../platform/theme/common/themeService.js';
-import { contrastBorder } from '../../../../platform/theme/common/colorRegistry.js';
-import { SIDE_BAR_TITLE_FOREGROUND, SIDE_BAR_TITLE_BORDER, SIDE_BAR_BACKGROUND, SIDE_BAR_FOREGROUND, SIDE_BAR_BORDER, SIDE_BAR_DRAG_AND_DROP_BACKGROUND, ACTIVITY_BAR_BADGE_BACKGROUND, ACTIVITY_BAR_BADGE_FOREGROUND, ACTIVITY_BAR_TOP_FOREGROUND, ACTIVITY_BAR_TOP_ACTIVE_BORDER, ACTIVITY_BAR_TOP_INACTIVE_FOREGROUND, ACTIVITY_BAR_TOP_DRAG_AND_DROP_BORDER } from '../../../common/theme.js';
-import { INotificationService } from '../../../../platform/notification/common/notification.js';
-import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
-import { AnchorAlignment } from '../../../../base/browser/ui/contextview/contextview.js';
-import { IExtensionService } from '../../../services/extensions/common/extensions.js';
-import { LayoutPriority } from '../../../../base/browser/ui/grid/grid.js';
-import { assertReturnsDefined } from '../../../../base/common/types.js';
-import { IViewDescriptorService } from '../../../common/views.js';
-import { AbstractPaneCompositePart, CompositeBarPosition } from '../paneCompositePart.js';
-import { ActivityBarCompositeBar, ActivitybarPart } from '../activitybar/activitybarPart.js';
-import { ActionsOrientation } from '../../../../base/browser/ui/actionbar/actionbar.js';
-import { HoverPosition } from '../../../../base/browser/ui/hover/hoverWidget.js';
-import { IPaneCompositeBarOptions } from '../paneCompositeBar.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { Action2, IMenuService, registerAction2 } from '../../../../platform/actions/common/actions.js';
-import { Separator } from '../../../../base/common/actions.js';
-import { ToggleActivityBarVisibilityActionId } from '../../actions/layoutActions.js';
-import { localize2 } from '../../../../nls.js';
-import { IHoverService } from '../../../../platform/hover/browser/hover.js';
+import './sidebarActions.ts';
+import { ActivityBarPosition, IWorkbenchLayoutService, LayoutSettings, Parts, Position as SideBarPosition } from '../../../services/layout/browser/layoutService.ts';
+import { SidebarFocusContext, ActiveViewletContext } from '../../../common/contextkeys.ts';
+import { IStorageService, StorageScope, StorageTarget } from '../../../../platform/storage/common/storage.ts';
+import { IContextMenuService } from '../../../../platform/contextview/browser/contextView.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.ts';
+import { IThemeService } from '../../../../platform/theme/common/themeService.ts';
+import { contrastBorder } from '../../../../platform/theme/common/colorRegistry.ts';
+import { SIDE_BAR_TITLE_FOREGROUND, SIDE_BAR_TITLE_BORDER, SIDE_BAR_BACKGROUND, SIDE_BAR_FOREGROUND, SIDE_BAR_BORDER, SIDE_BAR_DRAG_AND_DROP_BACKGROUND, ACTIVITY_BAR_BADGE_BACKGROUND, ACTIVITY_BAR_BADGE_FOREGROUND, ACTIVITY_BAR_TOP_FOREGROUND, ACTIVITY_BAR_TOP_ACTIVE_BORDER, ACTIVITY_BAR_TOP_INACTIVE_FOREGROUND, ACTIVITY_BAR_TOP_DRAG_AND_DROP_BORDER } from '../../../common/theme.ts';
+import { INotificationService } from '../../../../platform/notification/common/notification.ts';
+import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.ts';
+import { AnchorAlignment } from '../../../../base/browser/ui/contextview/contextview.ts';
+import { IExtensionService } from '../../../services/extensions/common/extensions.ts';
+import { LayoutPriority } from '../../../../base/browser/ui/grid/grid.ts';
+import { assertReturnsDefined } from '../../../../base/common/types.ts';
+import { IViewDescriptorService } from '../../../common/views.ts';
+import { AbstractPaneCompositePart, CompositeBarPosition } from '../paneCompositePart.ts';
+import { ActivityBarCompositeBar, ActivitybarPart } from '../activitybar/activitybarPart.ts';
+import { ActionsOrientation } from '../../../../base/browser/ui/actionbar/actionbar.ts';
+import { HoverPosition } from '../../../../base/browser/ui/hover/hoverWidget.ts';
+import { IPaneCompositeBarOptions } from '../paneCompositeBar.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { Action2, IMenuService, registerAction2 } from '../../../../platform/actions/common/actions.ts';
+import { Separator } from '../../../../base/common/actions.ts';
+import { ToggleActivityBarVisibilityActionId } from '../../actions/layoutActions.ts';
+import { localize2 } from '../../../../nls.ts';
+import { IHoverService } from '../../../../platform/hover/browser/hover.ts';
 
 export class SidebarPart extends AbstractPaneCompositePart {
 

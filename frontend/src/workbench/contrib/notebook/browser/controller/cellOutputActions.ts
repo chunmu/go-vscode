@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { localize } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.js';
-import { IOpenerService } from '../../../../../platform/opener/common/opener.js';
-import { INotebookOutputActionContext, NOTEBOOK_ACTIONS_CATEGORY } from './coreActions.js';
-import { NOTEBOOK_CELL_HAS_HIDDEN_OUTPUTS, NOTEBOOK_CELL_HAS_OUTPUTS, NOTEBOOK_CELL_OUTPUT_MIMETYPE } from '../../common/notebookContextKeys.js';
-import * as icons from '../notebookIcons.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { copyCellOutput } from '../viewModel/cellOutputTextHelper.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { ICellOutputViewModel, ICellViewModel, INotebookEditor, getNotebookEditorFromEditorPane } from '../notebookBrowser.js';
-import { CellKind, CellUri } from '../../common/notebookCommon.js';
-import { CodeCellViewModel } from '../viewModel/codeCellViewModel.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { INotebookEditorModelResolverService } from '../../common/notebookEditorModelResolverService.js';
-import { IFileDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { URI } from '../../../../../base/common/uri.js';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { localize } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { IClipboardService } from '../../../../../platform/clipboard/common/clipboardService.ts';
+import { IOpenerService } from '../../../../../platform/opener/common/opener.ts';
+import { INotebookOutputActionContext, NOTEBOOK_ACTIONS_CATEGORY } from './coreActions.ts';
+import { NOTEBOOK_CELL_HAS_HIDDEN_OUTPUTS, NOTEBOOK_CELL_HAS_OUTPUTS, NOTEBOOK_CELL_OUTPUT_MIMETYPE } from '../../common/notebookContextKeys.ts';
+import * as icons from '../notebookIcons.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { copyCellOutput } from '../viewModel/cellOutputTextHelper.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { ICellOutputViewModel, ICellViewModel, INotebookEditor, getNotebookEditorFromEditorPane } from '../notebookBrowser.ts';
+import { CellKind, CellUri } from '../../common/notebookCommon.ts';
+import { CodeCellViewModel } from '../viewModel/codeCellViewModel.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { INotebookEditorModelResolverService } from '../../common/notebookEditorModelResolverService.ts';
+import { IFileDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { URI } from '../../../../../base/common/uri.ts';
 
 export const COPY_OUTPUT_COMMAND_ID = 'notebook.cellOutput.copy';
 

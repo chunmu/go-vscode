@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../base/common/codicons.js';
-import { DisposableStore } from '../../../../base/common/lifecycle.js';
-import { ResourceMap } from '../../../../base/common/map.js';
-import { ThemeIcon } from '../../../../base/common/themables.js';
-import { URI } from '../../../../base/common/uri.js';
-import { localize } from '../../../../nls.js';
-import { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { IQuickInputButton, IQuickInputService, IQuickTreeItem } from '../../../../platform/quickinput/common/quickInput.js';
-import { IPreferencesService } from '../../../services/preferences/common/preferences.js';
-import { ConfirmedReason, ToolConfirmKind } from './chatService.js';
-import { ChatConfiguration } from './constants.js';
+import { Codicon } from '../../../../base/common/codicons.ts';
+import { DisposableStore } from '../../../../base/common/lifecycle.ts';
+import { ResourceMap } from '../../../../base/common/map.ts';
+import { ThemeIcon } from '../../../../base/common/themables.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { localize } from '../../../../nls.ts';
+import { IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { IQuickInputButton, IQuickInputService, IQuickTreeItem } from '../../../../platform/quickinput/common/quickInput.ts';
+import { IPreferencesService } from '../../../services/preferences/common/preferences.ts';
+import { ConfirmedReason, ToolConfirmKind } from './chatService.ts';
+import { ChatConfiguration } from './constants.ts';
 import {
 	ILanguageModelToolConfirmationActions,
 	ILanguageModelToolConfirmationContribution,
 	ILanguageModelToolConfirmationContributionQuickTreeItem,
 	ILanguageModelToolConfirmationRef
-} from './languageModelToolsConfirmationService.js';
-import { extractUrlPatterns, getPatternLabel, isUrlApproved, IUrlApprovalSettings } from './chatUrlFetchingPatterns.js';
+} from './languageModelToolsConfirmationService.ts';
+import { extractUrlPatterns, getPatternLabel, isUrlApproved, IUrlApprovalSettings } from './chatUrlFetchingPatterns.ts';
 
 const trashButton: IQuickInputButton = {
 	iconClass: ThemeIcon.asClassName(Codicon.trash),

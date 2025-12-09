@@ -4,23 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import * as uuid from '../../../../../base/common/uuid.js';
-import { OS, OperatingSystem } from '../../../../../base/common/platform.js';
-import { KeyCode } from '../../../../../base/common/keyCodes.js';
-import { KeyCodeChord } from '../../../../../base/common/keybindings.js';
-import { CommandsRegistry } from '../../../../../platform/commands/common/commands.js';
-import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.js';
-import { IExtensionService } from '../../../extensions/common/extensions.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { KeybindingsEditorModel } from '../../browser/keybindingsEditorModel.js';
-import { ResolvedKeybindingItem } from '../../../../../platform/keybinding/common/resolvedKeybindingItem.js';
-import { USLayoutResolvedKeybinding } from '../../../../../platform/keybinding/common/usLayoutResolvedKeybinding.js';
+import * as uuid from '../../../../../base/common/uuid.ts';
+import { OS, OperatingSystem } from '../../../../../base/common/platform.ts';
+import { KeyCode } from '../../../../../base/common/keyCodes.ts';
+import { KeyCodeChord } from '../../../../../base/common/keybindings.ts';
+import { CommandsRegistry } from '../../../../../platform/commands/common/commands.ts';
+import { IKeybindingService } from '../../../../../platform/keybinding/common/keybinding.ts';
+import { IExtensionService } from '../../../extensions/common/extensions.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { KeybindingsEditorModel } from '../../browser/keybindingsEditorModel.ts';
+import { ResolvedKeybindingItem } from '../../../../../platform/keybinding/common/resolvedKeybindingItem.ts';
+import { USLayoutResolvedKeybinding } from '../../../../../platform/keybinding/common/usLayoutResolvedKeybinding.ts';
 
-import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { IKeybindingItemEntry } from '../../common/preferences.js';
-import { Action2, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ExtensionIdentifier, IExtensionDescription } from '../../../../../platform/extensions/common/extensions.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { TestInstantiationService } from '../../../../../platform/instantiation/test/common/instantiationServiceMock.ts';
+import { IKeybindingItemEntry } from '../../common/preferences.ts';
+import { Action2, MenuRegistry, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ExtensionIdentifier, IExtensionDescription } from '../../../../../platform/extensions/common/extensions.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
 
 interface Modifiers {
 	metaKey?: boolean;

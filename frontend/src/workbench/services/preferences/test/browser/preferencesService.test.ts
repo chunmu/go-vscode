@@ -4,22 +4,22 @@
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { TestCommandService } from '../../../../../editor/test/browser/editorTestServices.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.js';
-import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.js';
-import { IURLService } from '../../../../../platform/url/common/url.js';
-import { DEFAULT_EDITOR_ASSOCIATION, IEditorPane } from '../../../../common/editor.js';
-import { IJSONEditingService } from '../../../configuration/common/jsonEditing.js';
-import { TestJSONEditingService } from '../../../configuration/test/common/testServices.js';
-import { PreferencesService } from '../../browser/preferencesService.js';
-import { IPreferencesService, ISettingsEditorOptions } from '../../common/preferences.js';
-import { IRemoteAgentService } from '../../../remote/common/remoteAgentService.js';
-import { TestRemoteAgentService, ITestInstantiationService, workbenchInstantiationService, TestEditorGroupView, TestEditorGroupsService } from '../../../../test/browser/workbenchTestServices.js';
-import { IEditorGroupsService } from '../../../editor/common/editorGroupsService.js';
-import { IEditorOptions } from '../../../../../platform/editor/common/editor.js';
-import { SettingsEditor2Input } from '../../common/preferencesEditorInput.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { TestCommandService } from '../../../../../editor/test/browser/editorTestServices.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { SyncDescriptor } from '../../../../../platform/instantiation/common/descriptors.ts';
+import { ServiceCollection } from '../../../../../platform/instantiation/common/serviceCollection.ts';
+import { IURLService } from '../../../../../platform/url/common/url.ts';
+import { DEFAULT_EDITOR_ASSOCIATION, IEditorPane } from '../../../../common/editor.ts';
+import { IJSONEditingService } from '../../../configuration/common/jsonEditing.ts';
+import { TestJSONEditingService } from '../../../configuration/test/common/testServices.ts';
+import { PreferencesService } from '../../browser/preferencesService.ts';
+import { IPreferencesService, ISettingsEditorOptions } from '../../common/preferences.ts';
+import { IRemoteAgentService } from '../../../remote/common/remoteAgentService.ts';
+import { TestRemoteAgentService, ITestInstantiationService, workbenchInstantiationService, TestEditorGroupView, TestEditorGroupsService } from '../../../../test/browser/workbenchTestServices.ts';
+import { IEditorGroupsService } from '../../../editor/common/editorGroupsService.ts';
+import { IEditorOptions } from '../../../../../platform/editor/common/editor.ts';
+import { SettingsEditor2Input } from '../../common/preferencesEditorInput.ts';
 
 suite('PreferencesService', () => {
 	let testInstantiationService: ITestInstantiationService;

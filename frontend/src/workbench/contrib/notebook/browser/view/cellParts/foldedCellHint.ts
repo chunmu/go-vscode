@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { Codicon } from '../../../../../../base/common/codicons.js';
-import { ThemeIcon } from '../../../../../../base/common/themables.js';
-import { localize } from '../../../../../../nls.js';
-import { FoldingController } from '../../controller/foldingController.js';
-import { CellEditState, CellFoldingState, INotebookEditor } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
-import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.js';
-import { ICellRange } from '../../../common/notebookRange.js';
-import { executingStateIcon } from '../../notebookIcons.js';
-import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.js';
-import { CellKind, NotebookCellExecutionState } from '../../../common/notebookCommon.js';
-import { MutableDisposable } from '../../../../../../base/common/lifecycle.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { Codicon } from '../../../../../../base/common/codicons.ts';
+import { ThemeIcon } from '../../../../../../base/common/themables.ts';
+import { localize } from '../../../../../../nls.ts';
+import { FoldingController } from '../../controller/foldingController.ts';
+import { CellEditState, CellFoldingState, INotebookEditor } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.ts';
+import { ICellRange } from '../../../common/notebookRange.ts';
+import { executingStateIcon } from '../../notebookIcons.ts';
+import { INotebookExecutionStateService } from '../../../common/notebookExecutionStateService.ts';
+import { CellKind, NotebookCellExecutionState } from '../../../common/notebookCommon.ts';
+import { MutableDisposable } from '../../../../../../base/common/lifecycle.ts';
 
 export class FoldedCellHint extends CellContentPart {
 

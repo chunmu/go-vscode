@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import type { PerformanceMark } from '../../base/common/performance.js';
-import type { UriComponents, URI } from '../../base/common/uri.js';
-import type { IWebSocketFactory } from '../../platform/remote/browser/browserSocketFactory.js';
-import type { IURLCallbackProvider } from '../services/url/browser/urlService.js';
-import type { LogLevel } from '../../platform/log/common/log.js';
-import type { IUpdateProvider } from '../services/update/browser/updateService.js';
-import type { Event } from '../../base/common/event.js';
-import type { IProductConfiguration } from '../../base/common/product.js';
-import type { ISecretStorageProvider } from '../../platform/secrets/common/secrets.js';
-import type { TunnelProviderFeatures } from '../../platform/tunnel/common/tunnel.js';
-import type { IProgress, IProgressCompositeOptions, IProgressDialogOptions, IProgressNotificationOptions, IProgressOptions, IProgressStep, IProgressWindowOptions } from '../../platform/progress/common/progress.js';
-import type { ITextEditorOptions } from '../../platform/editor/common/editor.js';
-import type { IFolderToOpen, IWorkspaceToOpen } from '../../platform/window/common/window.js';
-import type { EditorGroupLayout } from '../services/editor/common/editorGroupsService.js';
-import type { IEmbedderTerminalOptions } from '../services/terminal/common/embedderTerminalService.js';
-import type { IAuthenticationProvider } from '../services/authentication/common/authentication.js';
+import type { PerformanceMark } from '../../base/common/performance.ts';
+import type { UriComponents, URI } from '../../base/common/uri.ts';
+import type { IWebSocketFactory } from '../../platform/remote/browser/browserSocketFactory.ts';
+import type { IURLCallbackProvider } from '../services/url/browser/urlService.ts';
+import type { LogLevel } from '../../platform/log/common/log.ts';
+import type { IUpdateProvider } from '../services/update/browser/updateService.ts';
+import type { Event } from '../../base/common/event.ts';
+import type { IProductConfiguration } from '../../base/common/product.ts';
+import type { ISecretStorageProvider } from '../../platform/secrets/common/secrets.ts';
+import type { TunnelProviderFeatures } from '../../platform/tunnel/common/tunnel.ts';
+import type { IProgress, IProgressCompositeOptions, IProgressDialogOptions, IProgressNotificationOptions, IProgressOptions, IProgressStep, IProgressWindowOptions } from '../../platform/progress/common/progress.ts';
+import type { ITextEditorOptions } from '../../platform/editor/common/editor.ts';
+import type { IFolderToOpen, IWorkspaceToOpen } from '../../platform/window/common/window.ts';
+import type { EditorGroupLayout } from '../services/editor/common/editorGroupsService.ts';
+import type { IEmbedderTerminalOptions } from '../services/terminal/common/embedderTerminalService.ts';
+import type { IAuthenticationProvider } from '../services/authentication/common/authentication.ts';
 
 /**
  * The `IWorkbench` interface is the API facade for web embedders

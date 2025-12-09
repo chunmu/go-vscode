@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2 } from '../../../../../platform/actions/common/actions.js';
-import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
-import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.js';
-import { IDynamicAuthenticationProviderStorageService, DynamicAuthenticationProviderInfo } from '../../../../services/authentication/common/dynamicAuthenticationProviderStorage.js';
-import { IAuthenticationService } from '../../../../services/authentication/common/authentication.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2 } from '../../../../../platform/actions/common/actions.ts';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { IQuickInputService, IQuickPickItem } from '../../../../../platform/quickinput/common/quickInput.ts';
+import { IDynamicAuthenticationProviderStorageService, DynamicAuthenticationProviderInfo } from '../../../../services/authentication/common/dynamicAuthenticationProviderStorage.ts';
+import { IAuthenticationService } from '../../../../services/authentication/common/authentication.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
 
 interface IDynamicProviderQuickPickItem extends IQuickPickItem {
 	provider: DynamicAuthenticationProviderInfo;

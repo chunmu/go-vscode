@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import { ExtHostAiRelatedInformationShape, ExtHostContext, MainContext, MainThreadAiRelatedInformationShape } from '../common/extHost.protocol.js';
-import { RelatedInformationType } from '../common/extHostTypes.js';
-import { IAiRelatedInformationProvider, IAiRelatedInformationService, RelatedInformationResult } from '../../services/aiRelatedInformation/common/aiRelatedInformation.js';
-import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Disposable, DisposableMap } from '../../../base/common/lifecycle.ts';
+import { ExtHostAiRelatedInformationShape, ExtHostContext, MainContext, MainThreadAiRelatedInformationShape } from '../common/extHost.protocol.ts';
+import { RelatedInformationType } from '../common/extHostTypes.ts';
+import { IAiRelatedInformationProvider, IAiRelatedInformationService, RelatedInformationResult } from '../../services/aiRelatedInformation/common/aiRelatedInformation.ts';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadAiRelatedInformation)
 export class MainThreadAiRelatedInformation extends Disposable implements MainThreadAiRelatedInformationShape {

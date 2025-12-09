@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../../../../../../base/browser/dom.js';
-import { Separator } from '../../../../../../base/common/actions.js';
-import { getExtensionForMimeType } from '../../../../../../base/common/mime.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { localize } from '../../../../../../nls.js';
-import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.js';
-import { ChatResponseResource } from '../../../common/chatModel.js';
-import { IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.js';
-import { ILanguageModelToolsConfirmationService } from '../../../common/languageModelToolsConfirmationService.js';
-import { ILanguageModelToolsService, IToolResultDataPart, IToolResultPromptTsxPart, IToolResultTextPart, stringifyPromptTsxPart } from '../../../common/languageModelToolsService.js';
-import { AcceptToolPostConfirmationActionId, SkipToolPostConfirmationActionId } from '../../actions/chatToolActions.js';
-import { IChatCodeBlockInfo, IChatWidgetService } from '../../chat.js';
-import { IChatContentPartRenderContext } from '../chatContentParts.js';
-import { ChatCollapsibleIOPart } from '../chatToolInputOutputContentPart.js';
-import { ChatToolOutputContentSubPart } from '../chatToolOutputContentSubPart.js';
-import { AbstractToolConfirmationSubPart } from './abstractToolConfirmationSubPart.js';
+import * as dom from '../../../../../../base/browser/dom.ts';
+import { Separator } from '../../../../../../base/common/actions.ts';
+import { getExtensionForMimeType } from '../../../../../../base/common/mime.ts';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.ts';
+import { IModelService } from '../../../../../../editor/common/services/model.ts';
+import { localize } from '../../../../../../nls.ts';
+import { IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { IKeybindingService } from '../../../../../../platform/keybinding/common/keybinding.ts';
+import { ChatResponseResource } from '../../../common/chatModel.ts';
+import { IChatToolInvocation, ToolConfirmKind } from '../../../common/chatService.ts';
+import { ILanguageModelToolsConfirmationService } from '../../../common/languageModelToolsConfirmationService.ts';
+import { ILanguageModelToolsService, IToolResultDataPart, IToolResultPromptTsxPart, IToolResultTextPart, stringifyPromptTsxPart } from '../../../common/languageModelToolsService.ts';
+import { AcceptToolPostConfirmationActionId, SkipToolPostConfirmationActionId } from '../../actions/chatToolActions.ts';
+import { IChatCodeBlockInfo, IChatWidgetService } from '../../chat.ts';
+import { IChatContentPartRenderContext } from '../chatContentParts.ts';
+import { ChatCollapsibleIOPart } from '../chatToolInputOutputContentPart.ts';
+import { ChatToolOutputContentSubPart } from '../chatToolOutputContentSubPart.ts';
+import { AbstractToolConfirmationSubPart } from './abstractToolConfirmationSubPart.ts';
 
 export class ChatToolPostExecuteConfirmationPart extends AbstractToolConfirmationSubPart {
 	private _codeblocks: IChatCodeBlockInfo[] = [];

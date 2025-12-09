@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.js';
-import { IObservable, observableValue, transaction } from '../../../../../../base/common/observable.js';
-import { URI } from '../../../../../../base/common/uri.js';
-import { IRange } from '../../../../../../editor/common/core/range.js';
-import { IDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.js';
-import { DetailedLineRangeMapping } from '../../../../../../editor/common/diff/rangeMapping.js';
-import { TextEdit } from '../../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.js';
-import { CellEditState } from '../../../../notebook/browser/notebookBrowser.js';
-import { INotebookEditorService } from '../../../../notebook/browser/services/notebookEditorService.js';
-import { NotebookCellTextModel } from '../../../../notebook/common/model/notebookCellTextModel.js';
-import { CellKind } from '../../../../notebook/common/notebookCommon.js';
-import { ModifiedFileEntryState } from '../../../common/chatEditingService.js';
-import { IChatResponseModel } from '../../../common/chatModel.js';
-import { ChatEditingTextModelChangeService } from '../chatEditingTextModelChangeService.js';
+import { Disposable, DisposableStore } from '../../../../../../base/common/lifecycle.ts';
+import { IObservable, observableValue, transaction } from '../../../../../../base/common/observable.ts';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { IRange } from '../../../../../../editor/common/core/range.ts';
+import { IDocumentDiff } from '../../../../../../editor/common/diff/documentDiffProvider.ts';
+import { DetailedLineRangeMapping } from '../../../../../../editor/common/diff/rangeMapping.ts';
+import { TextEdit } from '../../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../../editor/common/model.ts';
+import { IInstantiationService } from '../../../../../../platform/instantiation/common/instantiation.ts';
+import { CellEditState } from '../../../../notebook/browser/notebookBrowser.ts';
+import { INotebookEditorService } from '../../../../notebook/browser/services/notebookEditorService.ts';
+import { NotebookCellTextModel } from '../../../../notebook/common/model/notebookCellTextModel.ts';
+import { CellKind } from '../../../../notebook/common/notebookCommon.ts';
+import { ModifiedFileEntryState } from '../../../common/chatEditingService.ts';
+import { IChatResponseModel } from '../../../common/chatModel.ts';
+import { ChatEditingTextModelChangeService } from '../chatEditingTextModelChangeService.ts';
 
 
 /**

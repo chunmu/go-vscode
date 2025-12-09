@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 import assert from 'assert';
-import { Registry } from '../../../../../platform/registry/common/platform.js';
-import { StandaloneConfigurationModelParser, Configuration } from '../../common/configurationModels.js';
-import { ConfigurationModelParser, ConfigurationModel, ConfigurationParseOptions } from '../../../../../platform/configuration/common/configurationModels.js';
-import { IConfigurationRegistry, Extensions as ConfigurationExtensions, ConfigurationScope } from '../../../../../platform/configuration/common/configurationRegistry.js';
-import { ResourceMap } from '../../../../../base/common/map.js';
-import { WorkspaceFolder } from '../../../../../platform/workspace/common/workspace.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { Workspace } from '../../../../../platform/workspace/test/common/testWorkspace.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
-import { NullLogService } from '../../../../../platform/log/common/log.js';
+import { Registry } from '../../../../../platform/registry/common/platform.ts';
+import { StandaloneConfigurationModelParser, Configuration } from '../../common/configurationModels.ts';
+import { ConfigurationModelParser, ConfigurationModel, ConfigurationParseOptions } from '../../../../../platform/configuration/common/configurationModels.ts';
+import { IConfigurationRegistry, Extensions as ConfigurationExtensions, ConfigurationScope } from '../../../../../platform/configuration/common/configurationRegistry.ts';
+import { ResourceMap } from '../../../../../base/common/map.ts';
+import { WorkspaceFolder } from '../../../../../platform/workspace/common/workspace.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { Workspace } from '../../../../../platform/workspace/test/common/testWorkspace.ts';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.ts';
+import { NullLogService } from '../../../../../platform/log/common/log.ts';
 
 suite('FolderSettingsModelParser', () => {
 

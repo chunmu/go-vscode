@@ -3,35 +3,35 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { basename } from '../../../../../base/common/resources.js';
-import { ThemeIcon } from '../../../../../base/common/themables.js';
-import { assertType } from '../../../../../base/common/types.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { ICommandService } from '../../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { IChatMode, IChatModeService } from '../../common/chatModes.js';
-import { chatVariableLeader } from '../../common/chatParserTypes.js';
-import { IChatService } from '../../common/chatService.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind, } from '../../common/constants.js';
-import { ILanguageModelChatMetadata } from '../../common/languageModels.js';
-import { ILanguageModelToolsService } from '../../common/languageModelToolsService.js';
-import { IChatWidget, IChatWidgetService } from '../chat.js';
-import { getEditingSessionContext } from '../chatEditing/chatEditingActions.js';
-import { ctxHasEditorModification } from '../chatEditing/chatEditingEditorContextKeys.js';
-import { ACTION_ID_NEW_CHAT, CHAT_CATEGORY, handleCurrentEditingSession, handleModeSwitch } from './chatActions.js';
-import { ContinueChatInSessionAction } from './chatContinueInAction.js';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { basename } from '../../../../../base/common/resources.ts';
+import { ThemeIcon } from '../../../../../base/common/themables.ts';
+import { assertType } from '../../../../../base/common/types.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { ICommandService } from '../../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { IChatMode, IChatModeService } from '../../common/chatModes.ts';
+import { chatVariableLeader } from '../../common/chatParserTypes.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind, } from '../../common/constants.ts';
+import { ILanguageModelChatMetadata } from '../../common/languageModels.ts';
+import { ILanguageModelToolsService } from '../../common/languageModelToolsService.ts';
+import { IChatWidget, IChatWidgetService } from '../chat.ts';
+import { getEditingSessionContext } from '../chatEditing/chatEditingActions.ts';
+import { ctxHasEditorModification } from '../chatEditing/chatEditingEditorContextKeys.ts';
+import { ACTION_ID_NEW_CHAT, CHAT_CATEGORY, handleCurrentEditingSession, handleModeSwitch } from './chatActions.ts';
+import { ContinueChatInSessionAction } from './chatContinueInAction.ts';
 
 export interface IVoiceChatExecuteActionContext {
 	readonly disableTimeout?: boolean;

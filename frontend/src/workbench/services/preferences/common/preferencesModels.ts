@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { coalesce } from '../../../../base/common/arrays.js';
-import { IStringDictionary } from '../../../../base/common/collections.js';
-import { Emitter, Event } from '../../../../base/common/event.js';
-import { JSONVisitor, visit } from '../../../../base/common/json.js';
-import { Disposable, IReference } from '../../../../base/common/lifecycle.js';
-import { URI } from '../../../../base/common/uri.js';
-import { IRange, Range } from '../../../../editor/common/core/range.js';
-import { Selection } from '../../../../editor/common/core/selection.js';
-import { ITextModel } from '../../../../editor/common/model.js';
-import { ISingleEditOperation } from '../../../../editor/common/core/editOperation.js';
-import { ITextEditorModel } from '../../../../editor/common/services/resolverService.js';
-import * as nls from '../../../../nls.js';
-import { ConfigurationTarget, IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
-import { ConfigurationDefaultValueSource, ConfigurationScope, Extensions, IConfigurationNode, IConfigurationRegistry, IRegisteredConfigurationPropertySchema, OVERRIDE_PROPERTY_REGEX } from '../../../../platform/configuration/common/configurationRegistry.js';
-import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.js';
-import { Registry } from '../../../../platform/registry/common/platform.js';
-import { EditorModel } from '../../../common/editor/editorModel.js';
-import { IFilterMetadata, IFilterResult, IGroupFilter, IKeybindingsEditorModel, ISearchResultGroup, ISetting, ISettingMatch, ISettingMatcher, ISettingsEditorModel, ISettingsGroup, SettingMatchType } from './preferences.js';
-import { FOLDER_SCOPES, WORKSPACE_SCOPES } from '../../configuration/common/configuration.js';
-import { createValidator } from './preferencesValidation.js';
+import { coalesce } from '../../../../base/common/arrays.ts';
+import { IStringDictionary } from '../../../../base/common/collections.ts';
+import { Emitter, Event } from '../../../../base/common/event.ts';
+import { JSONVisitor, visit } from '../../../../base/common/json.ts';
+import { Disposable, IReference } from '../../../../base/common/lifecycle.ts';
+import { URI } from '../../../../base/common/uri.ts';
+import { IRange, Range } from '../../../../editor/common/core/range.ts';
+import { Selection } from '../../../../editor/common/core/selection.ts';
+import { ITextModel } from '../../../../editor/common/model.ts';
+import { ISingleEditOperation } from '../../../../editor/common/core/editOperation.ts';
+import { ITextEditorModel } from '../../../../editor/common/services/resolverService.ts';
+import * as nls from '../../../../nls.ts';
+import { ConfigurationTarget, IConfigurationService } from '../../../../platform/configuration/common/configuration.ts';
+import { ConfigurationDefaultValueSource, ConfigurationScope, Extensions, IConfigurationNode, IConfigurationRegistry, IRegisteredConfigurationPropertySchema, OVERRIDE_PROPERTY_REGEX } from '../../../../platform/configuration/common/configurationRegistry.ts';
+import { IKeybindingService } from '../../../../platform/keybinding/common/keybinding.ts';
+import { Registry } from '../../../../platform/registry/common/platform.ts';
+import { EditorModel } from '../../../common/editor/editorModel.ts';
+import { IFilterMetadata, IFilterResult, IGroupFilter, IKeybindingsEditorModel, ISearchResultGroup, ISetting, ISettingMatch, ISettingMatcher, ISettingsEditorModel, ISettingsGroup, SettingMatchType } from './preferences.ts';
+import { FOLDER_SCOPES, WORKSPACE_SCOPES } from '../../configuration/common/configuration.ts';
+import { createValidator } from './preferencesValidation.ts';
 
 export const nullRange: IRange = { startLineNumber: -1, startColumn: -1, endLineNumber: -1, endColumn: -1 };
 function isNullRange(range: IRange): boolean { return range.startLineNumber === -1 && range.startColumn === -1 && range.endLineNumber === -1 && range.endColumn === -1; }

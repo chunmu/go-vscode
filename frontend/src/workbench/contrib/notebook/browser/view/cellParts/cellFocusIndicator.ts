@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as DOM from '../../../../../../base/browser/dom.js';
-import { FastDomNode } from '../../../../../../base/browser/fastDomNode.js';
-import { CodeCellLayoutInfo, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.js';
-import { CellContentPart } from '../cellPart.js';
-import { CellTitleToolbarPart } from './cellToolbars.js';
-import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.js';
-import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.js';
-import { CellKind } from '../../../common/notebookCommon.js';
+import * as DOM from '../../../../../../base/browser/dom.ts';
+import { FastDomNode } from '../../../../../../base/browser/fastDomNode.ts';
+import { CodeCellLayoutInfo, ICellViewModel, INotebookEditorDelegate } from '../../notebookBrowser.ts';
+import { CellContentPart } from '../cellPart.ts';
+import { CellTitleToolbarPart } from './cellToolbars.ts';
+import { CodeCellViewModel } from '../../viewModel/codeCellViewModel.ts';
+import { MarkupCellViewModel } from '../../viewModel/markupCellViewModel.ts';
+import { CellKind } from '../../../common/notebookCommon.ts';
 
 export class CellFocusIndicator extends CellContentPart {
 	public codeFocusIndicator: FastDomNode<HTMLElement>;

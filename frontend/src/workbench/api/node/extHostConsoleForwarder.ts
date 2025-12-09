@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AbstractExtHostConsoleForwarder } from '../common/extHostConsoleForwarder.js';
-import { IExtHostInitDataService } from '../common/extHostInitDataService.js';
-import { IExtHostRpcService } from '../common/extHostRpcService.js';
-import { NativeLogMarkers } from '../../services/extensions/common/extensionHostProtocol.js';
+import { AbstractExtHostConsoleForwarder } from '../common/extHostConsoleForwarder.ts';
+import { IExtHostInitDataService } from '../common/extHostInitDataService.ts';
+import { IExtHostRpcService } from '../common/extHostRpcService.ts';
+import { NativeLogMarkers } from '../../services/extensions/common/extensionHostProtocol.ts';
 
 const MAX_STREAM_BUFFER_LENGTH = 1024 * 1024;
 

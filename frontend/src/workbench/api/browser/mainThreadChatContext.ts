@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../base/common/cancellation.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { ThemeIcon } from '../../../base/common/themables.js';
-import { IChatContextItem, IChatContextSupport } from '../../contrib/chat/common/chatContext.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { ExtHostChatContextShape, ExtHostContext, IDocumentFilterDto, MainContext, MainThreadChatContextShape } from '../common/extHost.protocol.js';
-import { IChatContextService } from '../../contrib/chat/browser/chatContextService.js';
-import { URI } from '../../../base/common/uri.js';
+import { CancellationToken } from '../../../base/common/cancellation.ts';
+import { Disposable } from '../../../base/common/lifecycle.ts';
+import { ThemeIcon } from '../../../base/common/themables.ts';
+import { IChatContextItem, IChatContextSupport } from '../../contrib/chat/common/chatContext.ts';
+import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.ts';
+import { ExtHostChatContextShape, ExtHostContext, IDocumentFilterDto, MainContext, MainThreadChatContextShape } from '../common/extHost.protocol.ts';
+import { IChatContextService } from '../../contrib/chat/browser/chatContextService.ts';
+import { URI } from '../../../base/common/uri.ts';
 
 @extHostNamedCustomer(MainContext.MainThreadChatContext)
 export class MainThreadChatContext extends Disposable implements MainThreadChatContextShape {

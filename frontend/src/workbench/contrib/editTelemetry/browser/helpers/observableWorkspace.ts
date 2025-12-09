@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { IObservableWithChange, derivedHandleChanges, observableValue, runOnChange, IObservable, autorun, derived } from '../../../../../base/common/observable.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { StringEdit, StringReplacement } from '../../../../../editor/common/core/edits/stringEdit.js';
-import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.js';
-import { StringText } from '../../../../../editor/common/core/text/abstractText.js';
-import { EditSources, TextModelEditSource } from '../../../../../editor/common/textModelEditSource.js';
+import { IObservableWithChange, derivedHandleChanges, observableValue, runOnChange, IObservable, autorun, derived } from '../../../../../base/common/observable.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { StringEdit, StringReplacement } from '../../../../../editor/common/core/edits/stringEdit.ts';
+import { OffsetRange } from '../../../../../editor/common/core/ranges/offsetRange.ts';
+import { StringText } from '../../../../../editor/common/core/text/abstractText.ts';
+import { EditSources, TextModelEditSource } from '../../../../../editor/common/textModelEditSource.ts';
 
 export abstract class ObservableWorkspace {
 	abstract get documents(): IObservable<readonly IObservableDocument[]>;

@@ -3,37 +3,37 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { Codicon } from '../../../../../base/common/codicons.js';
-import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.js';
-import { basename } from '../../../../../base/common/resources.js';
-import { URI, UriComponents } from '../../../../../base/common/uri.js';
-import { isCodeEditor } from '../../../../../editor/browser/editorBrowser.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
-import { Position } from '../../../../../editor/common/core/position.js';
-import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.js';
-import { isLocation, Location } from '../../../../../editor/common/languages.js';
-import { ITextModel } from '../../../../../editor/common/model.js';
-import { ILanguageFeaturesService } from '../../../../../editor/common/services/languageFeatures.js';
-import { ITextModelService } from '../../../../../editor/common/services/resolverService.js';
-import { localize, localize2 } from '../../../../../nls.js';
-import { Action2, IAction2Options, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
-import { CommandsRegistry } from '../../../../../platform/commands/common/commands.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
-import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
-import { EditorActivation } from '../../../../../platform/editor/common/editor.js';
-import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.js';
-import { IEditorPane } from '../../../../common/editor.js';
-import { IEditorService } from '../../../../services/editor/common/editorService.js';
-import { isChatViewTitleActionContext } from '../../common/chatActions.js';
-import { ChatContextKeys } from '../../common/chatContextKeys.js';
-import { applyingChatEditsFailedContextKey, CHAT_EDITING_MULTI_DIFF_SOURCE_RESOLVER_SCHEME, chatEditingResourceContextKey, chatEditingWidgetFileStateContextKey, decidedChatEditingResourceContextKey, hasAppliedChatEditsContextKey, hasUndecidedChatEditingResourceContextKey, IChatEditingService, IChatEditingSession, ModifiedFileEntryState } from '../../common/chatEditingService.js';
-import { IChatService } from '../../common/chatService.js';
-import { isChatTreeItem, isRequestVM, isResponseVM } from '../../common/chatViewModel.js';
-import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../../common/constants.js';
-import { CHAT_CATEGORY } from '../actions/chatActions.js';
-import { ChatTreeItem, IChatWidget, IChatWidgetService } from '../chat.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { Codicon } from '../../../../../base/common/codicons.ts';
+import { KeyCode, KeyMod } from '../../../../../base/common/keyCodes.ts';
+import { basename } from '../../../../../base/common/resources.ts';
+import { URI, UriComponents } from '../../../../../base/common/uri.ts';
+import { isCodeEditor } from '../../../../../editor/browser/editorBrowser.ts';
+import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.ts';
+import { Position } from '../../../../../editor/common/core/position.ts';
+import { EditorContextKeys } from '../../../../../editor/common/editorContextKeys.ts';
+import { isLocation, Location } from '../../../../../editor/common/languages.ts';
+import { ITextModel } from '../../../../../editor/common/model.ts';
+import { ILanguageFeaturesService } from '../../../../../editor/common/services/languageFeatures.ts';
+import { ITextModelService } from '../../../../../editor/common/services/resolverService.ts';
+import { localize, localize2 } from '../../../../../nls.ts';
+import { Action2, IAction2Options, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.ts';
+import { CommandsRegistry } from '../../../../../platform/commands/common/commands.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.ts';
+import { IDialogService } from '../../../../../platform/dialogs/common/dialogs.ts';
+import { EditorActivation } from '../../../../../platform/editor/common/editor.ts';
+import { KeybindingWeight } from '../../../../../platform/keybinding/common/keybindingsRegistry.ts';
+import { IEditorPane } from '../../../../common/editor.ts';
+import { IEditorService } from '../../../../services/editor/common/editorService.ts';
+import { isChatViewTitleActionContext } from '../../common/chatActions.ts';
+import { ChatContextKeys } from '../../common/chatContextKeys.ts';
+import { applyingChatEditsFailedContextKey, CHAT_EDITING_MULTI_DIFF_SOURCE_RESOLVER_SCHEME, chatEditingResourceContextKey, chatEditingWidgetFileStateContextKey, decidedChatEditingResourceContextKey, hasAppliedChatEditsContextKey, hasUndecidedChatEditingResourceContextKey, IChatEditingService, IChatEditingSession, ModifiedFileEntryState } from '../../common/chatEditingService.ts';
+import { IChatService } from '../../common/chatService.ts';
+import { isChatTreeItem, isRequestVM, isResponseVM } from '../../common/chatViewModel.ts';
+import { ChatAgentLocation, ChatConfiguration, ChatModeKind } from '../../common/constants.ts';
+import { CHAT_CATEGORY } from '../actions/chatActions.ts';
+import { ChatTreeItem, IChatWidget, IChatWidgetService } from '../chat.ts';
 
 export abstract class EditingSessionAction extends Action2 {
 

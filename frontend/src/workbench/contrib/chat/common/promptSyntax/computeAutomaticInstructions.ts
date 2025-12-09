@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken } from '../../../../../base/common/cancellation.js';
-import { match, splitGlobAware } from '../../../../../base/common/glob.js';
-import { ResourceMap, ResourceSet } from '../../../../../base/common/map.js';
-import { Schemas } from '../../../../../base/common/network.js';
-import { basename, dirname } from '../../../../../base/common/resources.js';
-import { URI } from '../../../../../base/common/uri.js';
-import { localize } from '../../../../../nls.js';
-import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
-import { IFileService } from '../../../../../platform/files/common/files.js';
-import { ILabelService } from '../../../../../platform/label/common/label.js';
-import { ILogService } from '../../../../../platform/log/common/log.js';
-import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
-import { IWorkspaceContextService } from '../../../../../platform/workspace/common/workspace.js';
-import { ChatRequestVariableSet, IChatRequestVariableEntry, isPromptFileVariableEntry, toPromptFileVariableEntry, toPromptTextVariableEntry, PromptFileVariableKind } from '../chatVariableEntries.js';
-import { IToolData } from '../languageModelToolsService.js';
-import { PromptsConfig } from './config/config.js';
-import { isPromptOrInstructionsFile } from './config/promptFileLocations.js';
-import { PromptsType } from './promptTypes.js';
-import { ParsedPromptFile } from './promptFileParser.js';
-import { IPromptPath, IPromptsService } from './service/promptsService.js';
+import { CancellationToken } from '../../../../../base/common/cancellation.ts';
+import { match, splitGlobAware } from '../../../../../base/common/glob.ts';
+import { ResourceMap, ResourceSet } from '../../../../../base/common/map.ts';
+import { Schemas } from '../../../../../base/common/network.ts';
+import { basename, dirname } from '../../../../../base/common/resources.ts';
+import { URI } from '../../../../../base/common/uri.ts';
+import { localize } from '../../../../../nls.ts';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.ts';
+import { IFileService } from '../../../../../platform/files/common/files.ts';
+import { ILabelService } from '../../../../../platform/label/common/label.ts';
+import { ILogService } from '../../../../../platform/log/common/log.ts';
+import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.ts';
+import { IWorkspaceContextService } from '../../../../../platform/workspace/common/workspace.ts';
+import { ChatRequestVariableSet, IChatRequestVariableEntry, isPromptFileVariableEntry, toPromptFileVariableEntry, toPromptTextVariableEntry, PromptFileVariableKind } from '../chatVariableEntries.ts';
+import { IToolData } from '../languageModelToolsService.ts';
+import { PromptsConfig } from './config/config.ts';
+import { isPromptOrInstructionsFile } from './config/promptFileLocations.ts';
+import { PromptsType } from './promptTypes.ts';
+import { ParsedPromptFile } from './promptFileParser.ts';
+import { IPromptPath, IPromptsService } from './service/promptsService.ts';
 
 export type InstructionsCollectionEvent = {
 	applyingInstructionsCount: number;

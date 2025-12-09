@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { renderAsPlaintext } from '../../../../base/browser/markdownRenderer.js';
-import { isMarkdownString, MarkdownString } from '../../../../base/common/htmlContent.js';
-import { stripIcons } from '../../../../base/common/iconLabels.js';
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { localize } from '../../../../nls.js';
-import { AccessibleViewProviderId, AccessibleViewType, IAccessibleViewContentProvider } from '../../../../platform/accessibility/browser/accessibleView.js';
-import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
-import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
-import { migrateLegacyTerminalToolSpecificData } from '../common/chat.js';
-import { ChatContextKeys } from '../common/chatContextKeys.js';
-import { IChatToolInvocation } from '../common/chatService.js';
-import { isResponseVM } from '../common/chatViewModel.js';
-import { toolContentToA11yString } from '../common/languageModelToolsService.js';
-import { ChatTreeItem, IChatWidget, IChatWidgetService } from './chat.js';
+import { renderAsPlaintext } from '../../../../base/browser/markdownRenderer.ts';
+import { isMarkdownString, MarkdownString } from '../../../../base/common/htmlContent.ts';
+import { stripIcons } from '../../../../base/common/iconLabels.ts';
+import { Disposable } from '../../../../base/common/lifecycle.ts';
+import { localize } from '../../../../nls.ts';
+import { AccessibleViewProviderId, AccessibleViewType, IAccessibleViewContentProvider } from '../../../../platform/accessibility/browser/accessibleView.ts';
+import { IAccessibleViewImplementation } from '../../../../platform/accessibility/browser/accessibleViewRegistry.ts';
+import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.ts';
+import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.ts';
+import { migrateLegacyTerminalToolSpecificData } from '../common/chat.ts';
+import { ChatContextKeys } from '../common/chatContextKeys.ts';
+import { IChatToolInvocation } from '../common/chatService.ts';
+import { isResponseVM } from '../common/chatViewModel.ts';
+import { toolContentToA11yString } from '../common/languageModelToolsService.ts';
+import { ChatTreeItem, IChatWidget, IChatWidgetService } from './chat.ts';
 
 export class ChatResponseAccessibleView implements IAccessibleViewImplementation {
 	readonly priority = 100;
